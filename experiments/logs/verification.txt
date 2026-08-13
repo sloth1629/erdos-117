@@ -10,9 +10,13 @@ test_group_axioms_and_basic_centers (test_exact_computation.GroupConstructionTes
 test_exact_small_group_log_is_self_consistent (test_exact_computation.LogCertificateTests) ... ok
 test_gap_smallgroups_logs (test_exact_computation.LogCertificateTests) ... ok
 test_graph_product_log_certificates (test_exact_computation.LogCertificateTests) ... ok
+test_h5_exterior_square_scan_certificates (test_exact_computation.ScalarSymplecticLogTests) ... ok
+test_order128_small_n_prefilter_certificates (test_exact_computation.ScalarSymplecticLogTests) ... ok
 test_p3_rank2_group_graph_clique_coloring_and_spread (test_exact_computation.ScalarSymplecticLogTests) ... ok
+test_p5_rank2_symmetry_reduced_certificate_and_spread (test_exact_computation.ScalarSymplecticLogTests) ... ok
+test_p7_rank2_rigorous_bounded_record (test_exact_computation.ScalarSymplecticLogTests) ... ok
 
 ----------------------------------------------------------------------
-Ran 11 tests in 17.275s
+Ran 15 tests in 32.275s
 
 OK

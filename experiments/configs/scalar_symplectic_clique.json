@@ -1,0 +1,23 @@
+{
+  "description": "Exact symmetry-reduced clique certificates beyond the p=3 rank-2 scalar-symplectic record.",
+  "groups": [
+    {
+      "prime": 5,
+      "rank": 2,
+      "known_clique_lower_bound": 18,
+      "clique_projective_vertices": [147, 16, 42, 92, 79, 151, 80, 20, 54, 4, 8, 7, 146, 49, 97, 19, 34, 40]
+    },
+    {
+      "prime": 3,
+      "rank": 3,
+      "known_clique_lower_bound": 13,
+      "clique_projective_vertices": [218, 114, 182, 111, 30, 43, 56, 304, 287, 187, 315, 339, 338]
+    },
+    {
+      "prime": 3,
+      "rank": 2,
+      "known_clique_lower_bound": 7,
+      "clique_projective_vertices": [0, 4, 8, 23, 26, 6, 29]
+    }
+  ]
+}

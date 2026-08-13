@@ -24,6 +24,19 @@ The bootstrap implementation uses only the Python standard library.
   compression, and a second include/exclude clique decision certificate.
 - `run_scalar_symplectic_experiments.py` writes the redundant witnesses used
   for the prime-3 rank-2 record.
+- `run_scalar_symplectic_clique.py` compiles the dependency-free C clique
+  solver, checks its four symmetry-reduced upper searches, and independently
+  verifies saved clique and spread witnesses for the prime-5 rank-2 and
+  prime-3 rank-3 records.
+- `run_scalar_symplectic_bounds.py` verifies constructive cliques, strongly
+  regular/Delsarte upper bounds, and isotropic spreads for rigorously bounded
+  cases such as prime 7, rank 2.
+- `analyze_gap_small_n.py` exactly verifies clique/coloring certificates in a
+  central-coset graph prefilter export such as the order-128, \(\nu\leq6\)
+  scan.
+- `analyze_h5_exterior_scan.py` verifies every graph and kernel serial range
+  in the Schur-cover/exterior-square export used for the computer-assisted
+  \(h(5)=5\) conclusion.
 
 From the repository root:
 
@@ -69,4 +82,51 @@ PYTHONPYCACHEPREFIX=/tmp/erdos117-pycache \
 python3 src/python/run_scalar_symplectic_experiments.py \
   --config experiments/configs/scalar_symplectic.json \
   --output experiments/logs/scalar_symplectic_p3_m2.json
+```
+
+For the extended symmetry-reduced certificates (requires an ISO C11 compiler
+but no third-party library):
+
+```bash
+PYTHONPYCACHEPREFIX=/tmp/erdos117-pycache \
+python3 src/python/run_scalar_symplectic_clique.py \
+  --config experiments/configs/scalar_symplectic_clique.json \
+  --output experiments/logs/scalar_symplectic_extended.json \
+  --stdout-log experiments/logs/scalar_symplectic_extended.stdout.txt
+```
+
+For the rigorous larger-case interval:
+
+```bash
+PYTHONPYCACHEPREFIX=/tmp/erdos117-pycache \
+python3 src/python/run_scalar_symplectic_bounds.py \
+  --config experiments/configs/scalar_symplectic_bounds.json \
+  --output experiments/logs/scalar_symplectic_bounds.json \
+  --stdout-log experiments/logs/scalar_symplectic_bounds.stdout.txt
+```
+
+For the order-128 cutoff scan, first generate the GAP prefilter export:
+
+```bash
+work/gap-4.16.0/gap -l 'work/gap-4.16.0;' -q \
+  -c 'ERDOS117_ORDER:=128;; ERDOS117_CLIQUE_CUTOFF:=6;; ERDOS117_OUTPUT:="experiments/logs/gap_smallgroups_order128_nu_le6.tsv";; Read("experiments/configs/gap_small_n_export.g");'
+PYTHONPYCACHEPREFIX=/tmp/erdos117-pycache \
+python3 src/python/analyze_gap_small_n.py \
+  --input experiments/logs/gap_smallgroups_order128_nu_le6.tsv \
+  --output experiments/logs/gap_smallgroups_order128_nu_le6.json \
+  --order 128 --total-groups 2328 --clique-cutoff 6
+```
+
+For the exterior-square cutoff-five certificate:
+
+```bash
+work/gap-4.16.0/gap -l 'work/gap-4.16.0;' -q \
+  -c 'ERDOS117_MAX_Q_ORDER:=16;; ERDOS117_OUTPUT:="experiments/logs/h5_exterior.tsv";; Read("experiments/configs/h5_exterior_scan.g");'
+PYTHONPYCACHEPREFIX=/tmp/erdos117-pycache \
+python3 src/python/analyze_h5_exterior_scan.py \
+  --input experiments/logs/h5_exterior.tsv \
+  --gap-script experiments/configs/h5_exterior_scan.g \
+  --output experiments/logs/h5_exterior.json \
+  --stdout-log experiments/logs/h5_exterior.stdout.txt \
+  --clique-cutoff 5
 ```

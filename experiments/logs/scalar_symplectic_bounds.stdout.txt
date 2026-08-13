@@ -1,0 +1,2 @@
+p=7 m=2: 33<=nu<=50, a=50, projective_vertices=400
+wrote 1 bounded records to experiments/logs/scalar_symplectic_bounds.json

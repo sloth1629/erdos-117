@@ -1,0 +1,10 @@
+{
+  "description": "Rigorous constructive bounds where the exact clique upper search was not completed.",
+  "groups": [
+    {
+      "prime": 7,
+      "rank": 2,
+      "clique_projective_vertices": [213, 156, 215, 269, 155, 279, 392, 21, 185, 177, 372, 96, 114, 138, 173, 99, 74, 128, 84, 194, 316, 221, 315, 111, 369, 313, 219, 261, 287, 26, 366, 157, 389]
+    }
+  ]
+}

@@ -1,0 +1,22 @@
+graph prime=5 rank=2 projective_vertices=156 nonsquare=2 known_lower=18
+case tail=zero scalar=square residual_vertices=75 maximum_at_most=18 search_nodes=18509 cpu_seconds=0.023001
+case tail=zero scalar=nonsquare residual_vertices=75 maximum_at_most=18 search_nodes=19101 cpu_seconds=0.024713
+case tail=nonzero scalar=square residual_vertices=80 maximum_at_most=18 search_nodes=40198 cpu_seconds=0.049021
+case tail=nonzero scalar=nonsquare residual_vertices=80 maximum_at_most=18 search_nodes=39252 cpu_seconds=0.047935
+result maximum=18 total_search_nodes=117060 total_cpu_seconds=0.144827
+verified p=5 m=2: nu=18 a=26 wall_seconds=0.556417
+graph prime=3 rank=3 projective_vertices=364 nonsquare=2 known_lower=13
+case tail=zero scalar=square residual_vertices=81 maximum_at_most=13 search_nodes=437 cpu_seconds=0.000735
+case tail=zero scalar=nonsquare residual_vertices=81 maximum_at_most=13 search_nodes=437 cpu_seconds=0.000588
+case tail=nonzero scalar=square residual_vertices=108 maximum_at_most=13 search_nodes=55623 cpu_seconds=0.038738
+case tail=nonzero scalar=nonsquare residual_vertices=108 maximum_at_most=13 search_nodes=55039 cpu_seconds=0.037304
+result maximum=13 total_search_nodes=111536 total_cpu_seconds=0.078064
+verified p=3 m=3: nu=13 a=28 wall_seconds=0.082073
+graph prime=3 rank=2 projective_vertices=40 nonsquare=2 known_lower=7
+case tail=zero scalar=square residual_vertices=9 maximum_at_most=7 search_nodes=1 cpu_seconds=0.000000
+case tail=zero scalar=nonsquare residual_vertices=9 maximum_at_most=7 search_nodes=1 cpu_seconds=0.000001
+case tail=nonzero scalar=square residual_vertices=12 maximum_at_most=7 search_nodes=8 cpu_seconds=0.000004
+case tail=nonzero scalar=nonsquare residual_vertices=12 maximum_at_most=7 search_nodes=12 cpu_seconds=0.000002
+result maximum=7 total_search_nodes=22 total_cpu_seconds=0.000035
+verified p=3 m=2: nu=7 a=10 wall_seconds=0.004128
+wrote 3 certified records to experiments/logs/scalar_symplectic_extended.json

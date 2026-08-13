@@ -38,6 +38,7 @@ from scalar_symplectic import (  # noqa: E402
     fixed_size_clique,
     multiplication_table_sha256,
     projective_symplectic_graph,
+    quotient_vectors,
     scalar_symplectic_adjacency,
     symplectic_spread,
 )
@@ -475,6 +476,246 @@ class ScalarSymplecticLogTests(unittest.TestCase):
         self.assertEqual(-1, record["candidate_bound_slack"])
         self.assertEqual("[DISPROVED]", record["candidate_bound_status"])
         self.assertGreater(record["a"], candidate_bound)
+
+    def test_p5_rank2_symmetry_reduced_certificate_and_spread(self):
+        log_path = REPOSITORY / "experiments" / "logs" / "scalar_symplectic_extended.json"
+        document = json.loads(log_path.read_text(encoding="utf-8"))
+        config_path = REPOSITORY / document["configuration"]
+        source_path = REPOSITORY / document["solver_source"]
+        self.assertEqual(
+            document["configuration_sha256"],
+            hashlib.sha256(config_path.read_bytes()).hexdigest(),
+        )
+        self.assertEqual(
+            document["solver_source_sha256"],
+            hashlib.sha256(source_path.read_bytes()).hexdigest(),
+        )
+        record = document["records"][0]
+        self.assertEqual((5, 2, 18, 26), (
+            record["prime"], record["rank"], record["nu"], record["a"]
+        ))
+        vectors, adjacency = projective_symplectic_graph(5, 2)
+        clique = tuple(record["clique_certificate"]["projective_vertices"])
+        self.assertEqual(
+            tuple(vectors[vertex] for vertex in clique),
+            tuple(tuple(vector) for vector in record["clique_certificate"]["vectors"]),
+        )
+        self.assertTrue(verify_clique(adjacency, clique))
+        upper = record["clique_upper_certificate"]
+        self.assertEqual(4, len(upper["cases"]))
+        self.assertEqual({18}, {case["maximum_at_most"] for case in upper["cases"]})
+        self.assertEqual(117060, upper["total_search_nodes"])
+        self.assertEqual(18, upper["maximum"])
+
+        quotient, compressed = scalar_symplectic_adjacency(5, 2)
+        spread = symplectic_spread(5, 2, quotient)
+        spread_record = record["spread_certificate"]
+        self.assertEqual(spread.subspaces, tuple(
+            tuple(space) for space in spread_record["subspace_vertices"]
+        ))
+        self.assertEqual(spread.colors, tuple(spread_record["colors"]))
+        self.assertEqual(26, len(spread.subspaces))
+        self.assertEqual({25}, {len(space) for space in spread.subspaces})
+        self.assertTrue(verify_coloring(compressed, spread.colors))
+
+        # Independent Python upper checks on the four canonical residual
+        # graphs.  These do not execute or import the C search implementation.
+        for prime, rank, expected_orders, expected_maxima in [
+            (5, 2, (75, 75, 80, 80), (15, 15, 15, 15)),
+            (3, 3, (81, 81, 108, 108), (7, 7, 10, 10)),
+        ]:
+            canonical_vectors, canonical_adjacency = projective_symplectic_graph(prime, rank)
+            index = {vector: vertex for vertex, vector in enumerate(canonical_vectors)}
+            first = (1,) + (0,) * (2 * rank - 1)
+            second = (0,) * rank + (1,) + (0,) * (rank - 1)
+            nonsquare = next(
+                value
+                for value in range(2, prime)
+                if pow(value, (prime - 1) // 2, prime) == prime - 1
+            )
+            observed_orders = []
+            observed_maxima = []
+            for nonzero_tail in (False, True):
+                for scalar in (1, nonsquare):
+                    third = [0] * (2 * rank)
+                    third[0] = 1
+                    third[rank] = scalar
+                    if nonzero_tail:
+                        third[1] = 1
+                    prefix = (index[first], index[second], index[tuple(third)])
+                    common = (1 << len(canonical_vectors)) - 1
+                    for vertex in prefix:
+                        common &= canonical_adjacency[vertex]
+                    residual_vertices = tuple(
+                        vertex
+                        for vertex in range(len(canonical_vectors))
+                        if common & (1 << vertex)
+                    )
+                    residual_adjacency = tuple(
+                        sum(
+                            1 << target
+                            for target, full_target in enumerate(residual_vertices)
+                            if canonical_adjacency[full_source] & (1 << full_target)
+                        )
+                        for full_source in residual_vertices
+                    )
+                    observed_orders.append(len(residual_vertices))
+                    observed_maxima.append(maximum_clique(residual_adjacency).size)
+            self.assertEqual(expected_orders, tuple(observed_orders))
+            self.assertEqual(expected_maxima, tuple(observed_maxima))
+
+        rank3 = document["records"][1]
+        self.assertEqual((3, 3, 13, 28), (
+            rank3["prime"], rank3["rank"], rank3["nu"], rank3["a"]
+        ))
+        rank3_vectors, rank3_adjacency = projective_symplectic_graph(3, 3)
+        rank3_clique = tuple(rank3["clique_certificate"]["projective_vertices"])
+        self.assertTrue(verify_clique(rank3_adjacency, rank3_clique))
+        self.assertEqual(
+            tuple(rank3_vectors[vertex] for vertex in rank3_clique),
+            tuple(tuple(vector) for vector in rank3["clique_certificate"]["vectors"]),
+        )
+        rank3_upper = rank3["clique_upper_certificate"]
+        self.assertEqual(13, rank3_upper["maximum"])
+        self.assertEqual(111536, rank3_upper["total_search_nodes"])
+        self.assertEqual({13}, {
+            case["maximum_at_most"] for case in rank3_upper["cases"]
+        })
+        rank3_quotient, rank3_compressed = scalar_symplectic_adjacency(3, 3)
+        rank3_spread = symplectic_spread(3, 3, rank3_quotient)
+        self.assertEqual(28, len(rank3_spread.subspaces))
+        self.assertTrue(verify_coloring(rank3_compressed, rank3_spread.colors))
+
+    def test_p7_rank2_rigorous_bounded_record(self):
+        log_path = REPOSITORY / "experiments" / "logs" / "scalar_symplectic_bounds.json"
+        document = json.loads(log_path.read_text(encoding="utf-8"))
+        config_path = REPOSITORY / document["configuration"]
+        self.assertEqual(
+            document["configuration_sha256"],
+            hashlib.sha256(config_path.read_bytes()).hexdigest(),
+        )
+        record = document["records"][0]
+        self.assertEqual((7, 2, 33, 50, 50), (
+            record["prime"], record["rank"], record["nu_lower_bound"],
+            record["nu_upper_bound"], record["a"],
+        ))
+        vectors, adjacency = projective_symplectic_graph(7, 2)
+        clique = tuple(record["clique_certificate"]["projective_vertices"])
+        self.assertTrue(verify_clique(adjacency, clique))
+        self.assertEqual(
+            tuple(vectors[vertex] for vertex in clique),
+            tuple(tuple(vector) for vector in record["clique_certificate"]["vectors"]),
+        )
+        parameters = record["strongly_regular_certificate"]
+        self.assertEqual((343, 294, -7, 50), (
+            parameters["degree"],
+            parameters["common_neighbors_for_every_distinct_pair"],
+            parameters["least_eigenvalue"],
+            parameters["delsarte_clique_upper_bound"],
+        ))
+        quotient = quotient_vectors(7, 2)
+        spread = symplectic_spread(7, 2, quotient)
+        self.assertEqual(50, len(spread.subspaces))
+        self.assertEqual({49}, {len(space) for space in spread.subspaces})
+
+    def test_order128_small_n_prefilter_certificates(self):
+        log_path = (
+            REPOSITORY / "experiments" / "logs" / "gap_smallgroups_order128_nu_le6.json"
+        )
+        document = json.loads(log_path.read_text(encoding="utf-8"))
+        input_path = REPOSITORY / document["input"]
+        self.assertEqual(
+            document["input_sha256"], hashlib.sha256(input_path.read_bytes()).hexdigest()
+        )
+        self.assertEqual((128, 2328, 6, 418, 1910), (
+            document["order"], document["total_smallgroups"], document["clique_cutoff"],
+            document["survivor_count"], document["excluded_count"],
+        ))
+        with input_path.open(newline="", encoding="utf-8") as handle:
+            rows = {row["group_id"]: row for row in csv.DictReader(handle, delimiter="\t")}
+        self.assertEqual(418, len(rows))
+        distribution = {}
+        non_ac = {}
+        for record in document["records"]:
+            row = rows[record["group_id"]]
+            raw_rows = row["adjacency"].split(";")
+            adjacency = tuple(
+                sum(1 << (int(value) - 1) for value in raw.split(",") if value)
+                for raw in raw_rows
+            )
+            self.assertTrue(verify_clique(adjacency, record["clique_certificate"]))
+            self.assertTrue(verify_coloring(adjacency, record["coloring_certificate"]))
+            self.assertEqual(record["nu"], len(record["clique_certificate"]))
+            self.assertEqual(record["a"], max(record["coloring_certificate"]) + 1)
+            pair = (record["nu"], record["a"])
+            distribution[pair] = distribution.get(pair, 0) + 1
+            if not record["is_ac_group"]:
+                non_ac[record["nu"]] = non_ac.get(record["nu"], 0) + 1
+        self.assertEqual({(1, 1): 15, (3, 3): 60, (5, 5): 199, (6, 6): 144}, distribution)
+        self.assertEqual({5: 21, 6: 144}, non_ac)
+        self.assertEqual([], document["strict_a_greater_nu"])
+
+    def test_h5_exterior_square_scan_certificates(self):
+        log_path = REPOSITORY / "experiments" / "logs" / "h5_exterior.json"
+        document = json.loads(log_path.read_text(encoding="utf-8"))
+        input_path = REPOSITORY / document["input"]
+        gap_script = REPOSITORY / document["gap_script"]
+        self.assertEqual(
+            document["input_sha256"], hashlib.sha256(input_path.read_bytes()).hexdigest()
+        )
+        self.assertEqual(
+            document["gap_script_sha256"], hashlib.sha256(gap_script.read_bytes()).hexdigest()
+        )
+        self.assertEqual({
+            "GAP_VERSION": "4.16.0",
+            "SMALLGRP_VERSION": "1.5.4",
+            "MAX_Q_ORDER": "16",
+        }, document["gap_metadata"])
+        self.assertEqual((42, 2986, 2396, 5), (
+            document["quotient_count"], document["record_count"],
+            document["unique_graph_count"], document["clique_cutoff"],
+        ))
+        lines = [
+            line
+            for line in input_path.read_text(encoding="utf-8").splitlines()
+            if line and not line.startswith("# ")
+        ]
+        rows = list(csv.DictReader(lines, delimiter="\t"))
+        self.assertEqual(len(rows), len(document["records"]))
+        serials = {}
+        distribution = {}
+        eligible = {}
+        for row, record in zip(rows, document["records"]):
+            self.assertEqual(int(row["q_order"]), record["q_order"])
+            self.assertEqual(int(row["q_id"]), record["q_id"])
+            raw_rows = row["adjacency"].split(";")
+            adjacency = tuple(
+                sum(1 << (int(value) - 1) for value in raw.split(",") if value)
+                for raw in raw_rows
+            )
+            self.assertTrue(verify_clique(adjacency, record["clique_certificate"]))
+            self.assertTrue(verify_coloring(adjacency, record["coloring_certificate"]))
+            self.assertEqual(record["nu"], len(record["clique_certificate"]))
+            self.assertEqual(record["a"], max(record["coloring_certificate"], default=-1) + 1)
+            pair = (record["nu"], record["a"])
+            distribution[pair] = distribution.get(pair, 0) + 1
+            if record["nu"] <= 5:
+                eligible[pair] = eligible.get(pair, 0) + 1
+                self.assertLessEqual(record["a"], 5)
+            key = (record["q_order"], record["q_id"])
+            serials.setdefault(key, set()).add(record["kernel_serial"])
+        for record in document["records"]:
+            key = (record["q_order"], record["q_id"])
+            self.assertEqual(
+                set(range(1, record["normal_kernel_count"] + 1)), serials[key]
+            )
+        self.assertEqual({
+            (1, 1): 42, (3, 3): 84, (4, 4): 4, (5, 5): 234,
+            (6, 6): 215, (7, 7): 22, (8, 8): 1, (9, 9): 1492,
+            (11, 11): 492, (13, 13): 315, (15, 15): 85,
+        }, distribution)
+        self.assertEqual({(1, 1): 42, (3, 3): 84, (4, 4): 4, (5, 5): 234}, eligible)
+        self.assertEqual([], document["eligible_failure_rows"])
 
 
 if __name__ == "__main__":

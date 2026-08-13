@@ -1,0 +1,5 @@
+order=128 total=2328 survivors=418 excluded_by_clique=1910
+distribution=[((1, 1), 15), ((3, 3), 60), ((5, 5), 199), ((6, 6), 144)]
+non_ac_by_nu=[(5, 21), (6, 144)]
+strict_a_greater_nu=[]
+wrote 418 exact records to experiments/logs/gap_smallgroups_order128_nu_le6.json

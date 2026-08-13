@@ -1,0 +1,5 @@
+records=2986 unique_graphs=2396 quotients=42
+distribution=[((1, 1), 42), ((3, 3), 84), ((4, 4), 4), ((5, 5), 234), ((6, 6), 215), ((7, 7), 22), ((8, 8), 1), ((9, 9), 1492), ((11, 11), 492), ((13, 13), 315), ((15, 15), 85)]
+eligible=[((1, 1), 42), ((3, 3), 84), ((4, 4), 4), ((5, 5), 234)]
+eligible_failures=[]
+wrote exact certificates to experiments/logs/h5_exterior.json
