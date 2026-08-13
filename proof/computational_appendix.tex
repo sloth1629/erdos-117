@@ -1,1 +1,113 @@
-% Reproducible computational methods and certificates will be documented here.
+\appendix
+\section{Reproducible exact computation}\label{app:computation}
+
+\subsection{Algorithms and independent checks}
+
+All Python programs use only the standard library. A finite group is stored
+as a complete integer multiplication table. Before analysis, the code checks
+closure, identity, inverses, and every associativity triple. It computes the
+center, verifies that commutation is constant on central cosets, and builds
+the compressed graph \(\Delta_G\).
+
+Maximum clique is solved by branch and bound with a greedy-color upper bound.
+Chromatic number is solved by exact DSATUR decision searches at successive
+numbers of colors. Returned clique and coloring witnesses are checked edge
+by edge. When enabled for the configured small explicit groups (all except
+\(E_3\)), a second cover route enumerates subgroups, retains the maximal
+abelian ones, and solves an exact set-cover instance. Every selected cover
+member is rechecked for subgroup closure, commutativity, and complete
+coverage.
+
+The verifier compares both optimized graph solvers with naive exhaustive
+enumeration for every one of the \(33{,}868\) labeled simple graphs having at
+most six vertices. It also reconstructs every saved group and certificate.
+The final audit on Python 3.9.6 passed all 11 tests.
+
+\subsection{Saved exact records}
+
+The explicit suite includes \(S_3,D_8,Q_8,S_4\), dihedral and Heisenberg
+groups, \(E_m\) for \(m\le3\), and \(D_8\times S_3\). Representative exact
+values are
+\[
+\begin{array}{c|cccccc}
+G&S_3&D_8&Q_8&E_2&E_3&D_8\times S_3\\ \hline
+(\nu(G),a(G))&(4,4)&(3,3)&(3,3)&(5,5)&(7,9)&(12,12).
+\end{array}
+\]
+
+GAP 4.16.0 with SmallGrp 1.5.4 exported complete multiplication tables for
+all groups of orders \(8,32,64\); Python performed all subsequent graph and
+cover calculations independently. For the 267 groups of order 64 the exact
+distribution was
+\[
+\begin{array}{c|rrrrrrrr}
+(\nu,a)&(1,1)&(3,3)&(5,5)&(6,6)&(7,7)&(9,9)&(11,11)&(17,17)\\ \hline
+\#&11&31&72&38&10&69&33&3.
+\end{array}
+\]
+Every one of these records has a clique and a same-size coloring, together
+with a checked abelian-subgroup cover. This bounded census found no
+\(a>\nu\); it is not evidence of equality in general, since \(E_3\) and
+\(S(3,2)\) already have \(a>\nu\).
+
+For \(S(3,2)\), the code checks all \(14{,}348{,}907\) associativity triples,
+the 81-vertex compressed graph, a seven-clique, and an independent
+include/exclude exclusion of an eight-clique on 40 projective twin classes.
+Exact DSATUR rejects 7, 8, and 9 colors. Independently, a ten-plane
+\(\mathbb F_9/\mathbb F_3\) symplectic spread gives ten abelian subgroups of
+order 27 whose union is the group.
+
+\subsection{Commands}
+
+From the repository root, the canonical computations are
+\begin{verbatim}
+PYTHONPYCACHEPREFIX=/tmp/erdos117-pycache \
+python3 src/python/run_exact_experiments.py \
+  --config experiments/configs/exact_small_groups.json \
+  --output experiments/logs/exact_small_groups.json \
+  --group-csv results/group_invariants.csv
+
+PYTHONPYCACHEPREFIX=/tmp/erdos117-pycache \
+python3 src/python/run_graph_product_experiments.py \
+  --config experiments/configs/graph_products.json \
+  --output experiments/logs/graph_products.json
+
+PYTHONPYCACHEPREFIX=/tmp/erdos117-pycache \
+python3 src/python/run_scalar_symplectic_experiments.py \
+  --config experiments/configs/scalar_symplectic.json \
+  --output experiments/logs/scalar_symplectic_p3_m2.json
+
+PYTHONPYCACHEPREFIX=/tmp/erdos117-pycache \
+python3 -m unittest discover -s src/verification -p 'test_*.py' -v
+\end{verbatim}
+
+To regenerate a SmallGroups census after building GAP at the recorded local
+path, replace \(N\) by \(8\), \(32\), or \(64\) in both filenames:
+\begin{verbatim}
+work/gap-4.16.0/gap -l 'work/gap-4.16.0;' -q \
+  -c 'ERDOS117_ORDER:=N;; ERDOS117_OUTPUT:=
+  "experiments/logs/gap_smallgroups_orderN.tsv";;
+  Read("experiments/configs/gap_export.g");'
+
+PYTHONPYCACHEPREFIX=/tmp/erdos117-pycache \
+python3 src/python/analyze_gap_export.py \
+  --input experiments/logs/gap_smallgroups_orderN.tsv \
+  --output experiments/logs/gap_smallgroups_orderN.json \
+  --omit-multiplication-tables
+\end{verbatim}
+The omission option was used for order 64; it may be omitted at orders 8
+and 32 to embed the multiplication tables in both TSV and JSON.
+
+The raw GAP TSV SHA-256 digests at orders \(8,32,64\), respectively, are
+\begin{verbatim}
+68a347f6a0ade373aafca577b9a3d04138e7607136ec17fee4aff023cee36575
+de5c457611a4b04d4f391bc49356defc5733df3a19fef5f1b537798689bb34be
+4047bc195b59a9e3c631a31499bf93bf0f4c577dbbded558249bc5f3dda54b27
+\end{verbatim}
+and the order-243 multiplication-table digest is
+\begin{verbatim}
+1ea70ac5aecdb0088d33df420e03c3d81f37fa518844b22a65f5afa50bd6aba3
+\end{verbatim}
+Configuration files, concise stdout, complete witnesses, search-node counts,
+and the audit narrative are versioned under \path{experiments/},
+\path{results/}, and \path{audit/computation_audit.md}.

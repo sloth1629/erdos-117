@@ -52,6 +52,16 @@ python3 src/python/analyze_gap_export.py \
   --omit-multiplication-tables
 ```
 
+To regenerate a SmallGroups export from the locally built GAP 4.16.0 bundle,
+use this template from the repository root, substituting N=8, 32, or 64:
+
+    work/gap-4.16.0/gap -l 'work/gap-4.16.0;' -q \
+      -c 'ERDOS117_ORDER:=N;; ERDOS117_OUTPUT:="experiments/logs/gap_smallgroups_orderN.tsv";; Read("experiments/configs/gap_export.g");'
+
+Then run the analyzer shown above with matching input and output names. Use
+the omit-multiplication-tables option for order 64; omit it for orders 8 and
+32 if duplicate tables in JSON are desired.
+
 For the scalar-symplectic record:
 
 ```bash

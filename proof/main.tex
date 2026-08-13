@@ -1,16 +1,531 @@
 \documentclass[11pt]{article}
-\usepackage{amsmath,amssymb,amsthm}
+
+\usepackage[T1]{fontenc}
+\usepackage{amsmath,amssymb,amsthm,mathtools}
 \usepackage[margin=1in]{geometry}
-\title{Abelian Covers and Pairwise Noncommuting Sets in Groups}
+\usepackage[hidelinks]{hyperref}
+\usepackage{microtype}
+
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{corollary}[theorem]{Corollary}
+\theoremstyle{remark}
+\newtheorem{remark}[theorem]{Remark}
+
+\newcommand{\nuG}{\nu}
+\newcommand{\aG}{a}
+\newcommand{\F}{\mathbb F}
+\newcommand{\Z}{\mathrm Z}
+\newcommand{\CG}{\mathrm C}
+\newcommand{\Span}{\operatorname{span}}
+\newcommand{\Tr}{\operatorname{Tr}}
+
+\title{Abelian Covers and Pairwise Noncommuting Sets in Groups:\\
+       Structural Reductions, Self-Contained Bounds, and a Counterexample}
 \author{Research draft}
-\date{August 13, 2026}
+\date{13 August 2026}
+
 \begin{document}
 \maketitle
+
 \begin{abstract}
-This is a research scaffold. No complete solution of Erd\H{o}s Problem~117 is currently claimed.
+For a group $G$, let $\nuG(G)$ be the largest size of a pairwise
+noncommuting set and let $\aG(G)$ be the least number of abelian subgroups
+covering $G$.  Erd\H{o}s asked for the extremal function
+$h(n)=\sup\{\aG(G):\nuG(G)\le n\}$.  We do not determine $h(n)$ and hence
+do not claim a complete solution of Erd\H{o}s Problem~117.  We do give a
+self-contained exact reduction from arbitrary groups to finite groups that
+preserves the entire central-coset commutation graph; prove
+$\nuG(\CG_G(x))\le\nuG(G)-2$ for every noncentral $x$, and consequently
+$h(n)\le n h(n-2)$; determine $h(1)=h(2)=1$, $h(3)=3$, and $h(4)=4$; and
+construct scalar symplectic groups $S(q,m)$ with
+$\aG(S(q,m))=q^m+1$.  A complete calculation in $S(3,2)$ gives
+$(\nuG,\aG)=(7,10)$, disproving the candidate formula considered here,
+$h(n)=\max\{n,2^{\lfloor(n-1)/2\rfloor}+1\}$.  Exact computations provide
+independent checks but are not dependencies of these proofs.
 \end{abstract}
-\section{Problem statement}
-Content will be promoted from the audited research notes only after verification.
+
+\section{Problem and status}
+
+For a nonempty group $G$, define
+\[
+ \nuG(G)=\max\{|X|:xy\ne yx\text{ for all distinct }x,y\in X\}
+\]
+when this maximum is finite, and let $\aG(G)$ be the minimum cardinality of
+a family of abelian subgroups whose union is $G$.  The object of the problem
+is
+\[
+ h(n)=\sup\{\aG(G):G\text{ a group and }\nuG(G)\le n\}.
+\]
+Erd\H{o}s's Problem~26 asks for this function and records two-sided
+exponential estimates attributed to earlier work
+\cite[p.~8]{erdos_1997}. Neumann's Theorem~6 proves the underlying
+arbitrary-group central-by-finite theorem \cite[p.~470]{neumann_1976}, and
+Faber, Laver and McKenzie give the graph-cover correspondence and qualitative
+equivalences \cite[p.~933 and Theorem~3, pp.~936--937]
+{faber_laver_mckenzie_1978}. Pyber's publisher abstract records, for finite
+groups, an absolute constant $c$ such that
+$[G:\Z(G)]\le c^{\nuG(G)}$ \cite{pyber_1987}; its full proof was not audited.
+We use none of those results as a
+load-bearing step below: the qualitative reduction and all displayed
+quantitative bounds are proved here.
+
+The exact asymptotic growth of $h$ remains unresolved in this manuscript.
+In particular, we prove only
+\[
+ \liminf_{n\to\infty}h(n)^{1/n}\ge\sqrt2
+\]
+and a superexponential self-contained upper bound.  The fixed-base upper
+bound reported by Pyber is historically stronger, but its proof is not
+reproduced here.
+
+\section{The noncommuting graph and central-coset compression}
+
+Let $\Gamma_G$ be the graph with vertex set $G$, where distinct vertices are
+adjacent when they do not commute.
+
+\begin{proposition}[Graph/group dictionary]\label{prop:dictionary}
+For every group $G$,
+\[
+ \omega(\Gamma_G)=\nuG(G),\qquad \chi(\Gamma_G)=\aG(G),
+\]
+with the natural cardinal interpretation before finiteness is known.
+\end{proposition}
+
+\begin{proof}
+The first equality is the definition.  Every abelian-subgroup cover gives a
+proper coloring by assigning each element one subgroup containing it.
+Conversely, each color class is a pairwise commuting set and therefore
+generates an abelian subgroup.  These generated subgroups form a cover.
+\end{proof}
+
+Define $\Delta_G$ on $G/\Z(G)$, retaining the identity coset, by joining
+$x\Z(G)$ and $y\Z(G)$ exactly when $xy\ne yx$.
+
+\begin{proposition}[Exact central-coset compression]\label{prop:compression}
+The graph $\Delta_G$ is well defined and
+\[
+ \omega(\Delta_G)=\nuG(G),\qquad\chi(\Delta_G)=\aG(G).
+\]
+\end{proposition}
+
+\begin{proof}
+For $z,w\in\Z(G)$, the elements $xz$ and $yw$ commute exactly when $x$ and
+$y$ commute.  Thus $\Gamma_G$ is obtained from $\Delta_G$ by replacing every
+vertex with an independent set of cardinality $|\Z(G)|$, with complete or
+empty bipartite connections between fibers according to the base graph.
+A clique uses at most one point in each fiber and every clique of the base
+lifts.  A coloring of the base pulls back, while restricting a coloring to
+a transversal gives the reverse chromatic inequality.
+\end{proof}
+
+The graph $\Delta_G$ is generally \emph{not} the noncommuting graph of
+$G/\Z(G)$: quotient commutation asks only whether $[x,y]\in\Z(G)$.  For
+example, $D_8/\Z(D_8)$ is abelian while $\Delta_{D_8}$ consists of an
+isolated vertex and a triangle.
+
+\section{A self-contained finite model}
+
+We first obtain finite center index without invoking the qualitative
+literature.  Write $R(s,t)$ for the Ramsey number.
+
+\begin{lemma}[Uniform centralizer index]\label{lem:bfc}
+If $\nuG(G)=n<\infty$, then
+\[
+ [G:\CG_G(g)]\le R(n+1,n+1)-1
+\]
+for every $g\in G$.
+\end{lemma}
+
+\begin{proof}
+If the conjugacy class of $g$ had at least $R(n+1,n+1)$ elements, choose a
+set $T$ of that size giving distinct conjugates $t^{-1}gt$.  Ramsey's theorem
+cannot return $n+1$ pairwise noncommuting members of $T$, so it returns
+commuting $t_1,\dots,t_{n+1}$.  For distinct commuting $u,v\in T$, equality
+$(gu)(gv)=(gv)(gu)$ is equivalent to $u^{-1}gu=v^{-1}gv$.  The latter is
+false, so $gT$ contains $n+1$ pairwise noncommuting elements, a contradiction.
+\end{proof}
+
+\begin{lemma}[A maximum clique detects the center]\label{lem:center}
+If $X=\{x_1,\dots,x_n\}$ is a maximum pairwise noncommuting set, then
+\[
+ \bigcap_{i=1}^n\CG_G(x_i)=\Z(G).
+\]
+\end{lemma}
+
+\begin{proof}
+Only the reverse inclusion needs proof.  Suppose $c$ centralizes $X$ but is
+not central, and choose $y$ not commuting with $c$.  Replace $x_i$ by
+$x_ic$ precisely when $x_i$ commutes with $y$.  Multiplication by the common
+element $c$, which centralizes every $x_i$, preserves all pairwise
+noncommutation inside $X$, while each modified element fails to commute with
+$y$.  Adjoining $y$ gives a larger noncommuting set.
+\end{proof}
+
+Lemmas~\ref{lem:bfc} and \ref{lem:center} show that $\Z(G)$ is a finite
+intersection of finite-index subgroups, hence has finite index.
+
+\begin{theorem}[Exact finite commutation model]\label{thm:finite-model}
+If $[G:\Z(G)]<\infty$, there is a finite group $K$ for which
+\[
+ \Delta_K\cong\Delta_G,\qquad \nuG(K)=\nuG(G),\qquad \aG(K)=\aG(G).
+\]
+Consequently, for every $n\ge1$, the supremum defining $h(n)$ is attained
+by a finite group.
+\end{theorem}
+
+\begin{proof}
+Let $Z=\Z(G)$, choose a finite transversal for the central subgroup
+$T=\{t_1=1,t_2,\dots,t_q\}$, put $H=\langle T\rangle$ and $C=H\cap Z$.
+Then $H/C\cong G/Z$ and $C$ has finite index in the finitely generated group
+$H$.  Schreier rewriting shows that $C$ is finitely generated; it is
+abelian because $C\le Z$.  Let
+\[
+ D=\{[t_i,t_j]:[t_i,t_j]\ne1\text{ and }[t_i,t_j]\in C\}.
+\]
+This is finite.  A finitely generated abelian group is residually finite on
+finite sets, so there is a finite-index $N\le C$ with $N\cap D=\varnothing$.
+For completeness, after writing $C\cong\mathbb Z^r\oplus F$, one may take
+$N=M\mathbb Z^r\oplus0$, where $M$ is divisible by the exponent of $F$ and
+larger than the absolute value of every nonzero free coordinate appearing
+in $D$.
+
+Set $K=H/N$.  It is finite.  Since $C$ is central, the commutator of
+$t_ic$ and $t_jd$ is $[t_i,t_j]$.  A nontrivial such commutator is not in
+$N$: either it lies outside $C$, or it belongs to $D$.  Thus the quotient
+creates no new commuting pair between transversal cosets.  Moreover
+$Z(K)=C/N$: if $t_icN$ is central, then every $[t_i,t_j]$ lies in $N$;
+commutation preservation forces all of them to be trivial. Thus $t_i$
+centralizes $H$. Conversely this condition plainly makes the coset central.
+Since $G=HZ$, it is equivalent to $t_i\in Z$, which forces $i=1$.
+Therefore $K/Z(K)\cong H/C\cong G/Z$, preserving every edge of $\Delta$.
+Proposition~\ref{prop:compression} proves the invariant equalities.
+
+For the last assertion, first apply Lemmas~\ref{lem:bfc} and
+\ref{lem:center}.  The bounds below show that $h(n)$ is a finite integer.
+A bounded nonempty set of integers attains its supremum, and the preceding
+construction replaces any extremizer by a finite one.
+\end{proof}
+
+\section{Universal upper bounds}
+
+\begin{lemma}[Two-step centralizer drop]\label{lem:drop}
+If $x\notin\Z(G)$ and $\nuG(G)<\infty$, then
+\[
+ \nuG(\CG_G(x))\le\nuG(G)-2.
+\]
+\end{lemma}
+
+\begin{proof}
+Let $a_1,\dots,a_\ell$ be pairwise noncommuting elements of $\CG_G(x)$,
+and choose $y$ with $xy\ne yx$.  Put
+\[
+ b_i=\begin{cases}a_i,&a_iy\ne ya_i,\\ xa_i,&a_iy=ya_i.\end{cases}
+\]
+Because every $a_i$ commutes with $x$, multiplying selected $a_i$'s by $x$
+preserves pairwise noncommutation among them.  If $a_i$ does not commute with
+$y$, it cannot commute with $xy$.  If it does commute with $y$, then $xa_i$
+commutes with neither $y$ nor $xy$, since either equality would imply
+$xy=yx$.  Finally $y$ and $xy$ do not commute.  Hence
+$\{b_1,\dots,b_\ell,y,xy\}$ is pairwise noncommuting, proving
+$\ell+2\le\nuG(G)$.
+\end{proof}
+
+\begin{theorem}[Recursive upper bound]\label{thm:recurrence}
+For $n\ge3$,
+\[
+ h(n)\le n h(n-2).
+\]
+In particular, for $m\ge1$,
+\[
+ h(2m+1)\le(2m+1)!!,\qquad
+ h(2m)\le\frac{(2m)!!}{2}=2^{m-1}m!.
+\]
+\end{theorem}
+
+\begin{proof}
+If $G$ is abelian, then $\aG(G)=1$ and there is nothing to prove. Otherwise,
+if $S$ is a maximum noncommuting set, then maximality gives
+$G=\bigcup_{x\in S}\CG_G(x)$.  Each $x\in S$ is noncentral.  If
+$|S|=r\le n$, Lemma~\ref{lem:drop} and monotonicity of $h$ give
+\[
+ \aG(G)\le\sum_{x\in S}\aG(\CG_G(x))
+ \le r h(r-2)\le n h(n-2).
+\]
+A nonabelian group contains the pairwise noncommuting triple $x,y,xy$;
+hence $h(1)=h(2)=1$.  Iteration proves the stated bounds.
+\end{proof}
+
+We also record a second, independent quantitative route.  It is weaker than
+Theorem~\ref{thm:recurrence} as a bound for $h$, but gives useful structural
+control of conjugacy classes.
+
+\begin{proposition}[Conjugacy and center index]\label{prop:conjugacy}
+If $\nuG(G)=n<\infty$, then every conjugacy class has size at most $4n^2$ and
+\[
+ [G:\Z(G)]\le(4n^2)^n,\qquad \aG(G)\le(4n^2)^n-1.
+\]
+\end{proposition}
+
+\begin{proof}
+First suppose $G$ finite.  List its conjugacy classes $D_1,\dots,D_s$ in
+nondecreasing order, and choose minimal $r$ with
+$|Y|:=\sum_{i\le r}|D_i|>|G|/2$.  The complement of
+$D_1\cup\cdots\cup D_{r-1}$ has size at least $|G|/2$. Choose an
+inclusion-maximal clique in the induced graph; it has at most $n$ elements,
+and its centralizers cover that complement. Some such
+centralizer has size at least $|G|/(2n)$, whence $|D_r|\le2n$.
+For each $g$, the sets $Y$ and $gY$ intersect, so $g\in D_iD_j^{-1}$ for
+some $i,j\le r$.  This product is conjugacy invariant; consequently
+$|g^G|\le|D_i||D_j|\le4n^2$.
+
+For arbitrary $G$, Theorem~\ref{thm:finite-model} produces a finite $K$
+with the same central-coset graph.  The closed non-neighborhood of a coset
+records its centralizer cosets, so corresponding elements have equal
+centralizer index.  The finite bound transfers.  Finally apply
+Lemma~\ref{lem:center} and the elementary inequality for an intersection of
+finite-index subgroups:
+\[
+ [G:\Z(G)]\le\prod_{i=1}^n[G:\CG_G(x_i)]\le(4n^2)^n.
+\]
+If $G$ is nonabelian, one abelian subgroup
+$\langle t,\Z(G)\rangle$ for each nonidentity central coset covers $G$,
+giving the last inequality. If $G$ is abelian, the inequality follows
+directly from $\aG(G)=1$.
+\end{proof}
+
+\begin{corollary}[Small exact values]\label{cor:small}
+\[
+ h(1)=h(2)=1,\qquad h(3)=3,\qquad h(4)=4.
+\]
+\end{corollary}
+
+\begin{proof}
+The first two values were proved above.  Theorem~\ref{thm:recurrence} gives
+$h(3)\le3$ and $h(4)\le4$.  The group $D_8$ has central-coset graph an
+isolated vertex plus a triangle, so $(\nuG,\aG)=(3,3)$.  In $S_3$, the
+three transpositions and either nonidentity $3$-cycle form a clique of size
+four, while the three reflection subgroups and the subgroup of order three
+form a cover of size four.
+\end{proof}
+
+\section{Scalar symplectic groups}
+
+Let $q$ be a prime power and $m\ge1$.  On
+\[
+ S(q,m)=\F_q^m\times\F_q^m\times\F_q
+\]
+define
+\[
+ (x,y,z)(x',y',z')=(x+x',y+y',z+z'+x\mathbin\cdot y').
+\]
+Bilinearity gives associativity and
+$(x,y,z)^{-1}=(-x,-y,-z+x\cdot y)$.  The center is the last coordinate,
+and commutation on $V=\F_q^m\oplus\F_q^m$ is orthogonality for
+\[
+ B((x,y),(x',y'))=x\cdot y'-x'\cdot y.
+\]
+Let $\pi(q,m)$ be the maximum number of projective points of $V$ that are
+pairwise nonorthogonal.
+
+\begin{theorem}[Symplectic parameters]\label{thm:symplectic}
+For every prime power $q$ and $m\ge1$,
+\[
+ \nuG(S(q,m))=\pi(q,m),\qquad \aG(S(q,m))=q^m+1.
+\]
+Moreover $\pi(2,m)=2m+1$.
+\end{theorem}
+
+\begin{proof}
+The first equality follows because nonzero scalar multiples are orthogonal
+and have identical orthogonality relations to every other vector.
+
+The image of an abelian subgroup in $V$ is an additive set on which $B$
+vanishes; its $\F_q$-span is totally isotropic.  Such a subspace has
+dimension at most $m$, so each cover member contains at most $q^m-1$ of the
+$q^{2m}-1$ nonzero central cosets.  Hence $\aG\ge q^m+1$.  For the reverse
+inequality, identify $V$ symplectically with $\F_{q^m}^2$ endowed with
+\[
+ ((u,v),(u',v'))\longmapsto\Tr_{\F_{q^m}/\F_q}(uv'-u'v).
+\]
+The $q^m+1$ one-dimensional $\F_{q^m}$-subspaces are totally isotropic,
+meet pairwise only in zero, and partition the nonzero vectors.  Their full
+preimages give an abelian cover.
+
+To justify the identification explicitly, the trace map of a finite-field
+extension is a nonzero $\F_q$-linear functional. If $u\ne0$, choose $w$ with
+$\Tr(w)\ne0$ and take $v'=u^{-1}w$. Hence the trace pairing, and therefore
+the displayed alternating form, is nondegenerate. The symplectic-basis
+induction identifies any two nondegenerate alternating forms of dimension
+$2m$.
+
+When $q=2$, a pairwise nonorthogonal set $v_1,\dots,v_r$ has Gram matrix
+with zero diagonal and one off the diagonal.  Its rank over $\F_2$ is $r$
+for even $r$ and $r-1$ for odd $r$, so $r\le2m+1$.  Conversely the
+$2m\times2m$ such matrix is nondegenerate alternating and hence isometric
+to $B$. Under such an isometry, the standard ordered basis gives vectors
+$v_1,\dots,v_{2m}$ with that Gram matrix; put
+$v_{2m+1}=\sum_i v_i$; all pairings are one.  Thus $\pi(2,m)=2m+1$.
+\end{proof}
+
+\begin{corollary}[Exponential lower bound]\label{cor:lower}
+For $m\ge1$,
+\[
+ h(2m+1)\ge2^m+1,\qquad
+ \liminf_{n\to\infty}h(n)^{1/n}\ge\sqrt2.
+\]
+\end{corollary}
+
+\begin{proof}
+The first inequality follows from Theorem~\ref{thm:symplectic} with $q=2$.
+Monotonicity transfers it from $n=2m+1$ to the following even index, and
+taking roots along the two interlaced subsequences gives the limit inferior.
+\end{proof}
+
+\section{A counterexample to the binary exact candidate}
+
+The binary family suggests the tempting formula
+\[
+ h(n)=\max\{n,2^{\lfloor(n-1)/2\rfloor}+1\}.\tag{$*$}
+\]
+It already gives the wrong value $2$ at $n=1,2$.  More substantially, its
+restriction to $n\ge3$ is also false.
+
+\begin{theorem}\label{thm:counterexample}
+The group $S(3,2)$ has order $3^5$ and
+\[
+ (\nuG(S(3,2)),\aG(S(3,2)))=(7,10).
+\]
+Consequently $h(7)\ge10$ and $h(8)\ge10$, whereas $(*)$ gives $9$ at both
+indices.
+\end{theorem}
+
+\begin{proof}
+The cover number is Theorem~\ref{thm:symplectic}.  We prove the clique
+number in the interleaved coordinates $v=(a,b,c,d)$ with
+$B(v,v')=ab'-ba'+cd'-dc'$.  The seven vectors
+\[
+\begin{gathered}
+(1,0,0,0),(0,1,0,0),(1,1,0,0),\\
+(-1,1,0,1),(-1,1,1,0),(-1,1,1,1),(-1,1,1,-1)
+\end{gathered}
+\]
+are pairwise nonorthogonal: the last four use the four projective directions
+of $\F_3^2$ in their final coordinates, and their identical first
+coordinates contribute zero to mutual pairings; pairings with the first
+three are immediate.
+
+For the upper bound, there is nothing to show for fewer than two points.
+Otherwise rescale and order two nonorthogonal vectors so their pairing is
+one, then extend them to a symplectic basis, normalizing them to
+$(1,0,0,0)$ and $(0,1,0,0)$.
+Every remaining projective point has a unique representative
+$(\epsilon,1,u)$ with $\epsilon\in\{1,-1\}$ and $u\in\F_3^2$.  Let $P$ and
+$M$ be the $u$'s belonging respectively to $\epsilon=1$ and $-1$.  They
+satisfy
+\[
+ \det(p,p')\ne0,\quad\det(m,m')\ne0,\quad\det(p,m)\ne1.\tag{1}
+\]
+Each of $P,M$ uses at most one vector in each of the four directions.  If
+one has size at most one, then immediately $|P|+|M|\le5$. If both have size
+at least two, reorder two members of $P$ so their determinant is $-1$ and
+apply an element of $\mathrm{SL}_2(3)$ sending them to
+$(0,1),(1,0)$. Condition (1) restricts $M$ to
+\[
+ (0,-1),\quad(1,0),\quad(1,-1).
+\]
+If $|P|=2$, this gives $|P|+|M|\le5$. A third member $p=(x,y)$ of $P$ is
+one of the following four vectors; the final column lists candidates
+excluded by $\det(p,m)\ne1$:
+\[
+\begin{array}{c|c}
+p&\text{excluded candidates}\\ \hline
+(1,1)&(1,-1)\\
+(1,-1)&(1,0)\\
+(-1,1)&(0,-1)\\
+(-1,-1)&(0,-1),(1,0)
+\end{array}
+\]
+Thus $|M|\le2$. If $|P|=4$, its two additional directions have
+representatives in $\{(1,1),(-1,-1)\}$ and
+$\{(1,-1),(-1,1)\}$; substituting the four choices leaves at most one
+candidate in $M$.  Thus always $|P|+|M|\le5$, and the original set has at
+most $2+5=7$ points.
+\end{proof}
+
+\section{Direct products and why they do not settle the problem}
+
+For graphs $X,Y$, their OR product $X\vee Y$ joins two product vertices
+when at least one coordinate is adjacent.
+
+\begin{proposition}\label{prop:products}
+For groups $G,H$,
+\[
+ \Gamma_{G\times H}=\Gamma_G\vee\Gamma_H.
+\]
+For every nonempty finite graph $X$,
+\[
+ \lim_{k\to\infty}\chi(X^{\vee k})^{1/k}=\chi_f(X),\qquad
+ \lim_{k\to\infty}\omega(X^{\vee k})^{1/k}=\Theta(\overline X),
+\]
+where $\chi_f$ is fractional chromatic number and $\Theta$ is Shannon
+capacity.
+\end{proposition}
+
+\begin{proof}
+Two product-group elements fail to commute exactly when one coordinate pair
+fails to commute.  Fractional chromatic number is multiplicative under OR
+product by the primal and dual set-cover linear programs.  The standard
+greedy set-cover inequality
+$\chi(Y)\le(1+\log|V(Y)|)\chi_f(Y)$ removes only a subexponential factor
+from powers.  Finally
+$\overline{X\vee Y}=\overline X\boxtimes\overline Y$, so the clique sequence
+is exactly the independence sequence defining $\Theta(\overline X)$.
+\end{proof}
+
+Thus powers of any fixed finite nonabelian group have both $\aG(G^k)$ and
+$\nuG(G^k)$ exponential in $k$, making $\aG(G^k)$ only a power of
+$\nuG(G^k)$.  Fixed-seed direct powers cannot produce a lower bound
+$h(n)\ge c^n$; the varying scalar commutator geometry above can.
+
+\section{Computational corroboration}
+
+The repository contains dependency-free group implementations, exact
+branch-and-bound clique search, exact DSATUR coloring, generated abelian
+subgroup covers, an independent maximal-abelian set-cover formulation, and
+certificate verification.  The structural theorem above for $S(3,2)$ was
+discovered computationally and then proved independently.  The computation
+excludes an eighth projective clique and colorings with at most nine colors,
+and verifies a ten-subgroup symplectic-spread cover.  Full saved-data scope,
+hashes, and commands are recorded in Appendix~\ref{app:computation}.
+
+\section{What remains open}
+
+The manuscript does not determine $h(n)$ beyond $n=4$, does not determine
+the optimal exponential base, and does not prove that such a base exists.
+The most concrete geometric subproblem is to control $\pi(q,m)$, the maximum
+partial-ovoid size in a symplectic polar space, relative to the exact cover
+number $q^m+1$.  More generally one must decide whether odd-characteristic
+scalar forms, vector-valued commutator maps, solvable groups, or semisimple
+groups can improve the efficiency achieved by the constructions above. An
+upper bound near $2^{n/2}$ would require substantial new structure beyond
+the recurrence in Theorem~\ref{thm:recurrence}.
+
+Erd\H{o}s--Straus report that Isaacs obtained a factorial upper estimate and
+finite examples with exponential cover size
+\cite[p.~311]{erdos_straus_1976}. Later sources report the extraspecial
+$2$-group construction and trace it through Bertram to an Isaacs personal
+communication \cite[Example~4.5, p.~488]
+{abdollahi_akbari_maimani_2006}\cite[ref.~6]{bertram_1983}. These are reports
+rather than a checked primary proof. I\c{s}{\i}k, Theorem~12, pp.~6--7,
+proves $\nuG(S(2,m))=2m+1$, but not the cover lower bound
+\cite{isik_2005}. All claims in this paper that are needed for its
+mathematical conclusions have instead been proved above.
+
+\input{computational_appendix}
+
 \bibliographystyle{plain}
 \bibliography{main}
+
 \end{document}
