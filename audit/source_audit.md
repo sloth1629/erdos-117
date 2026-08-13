@@ -12,6 +12,7 @@ Research cut-off: 2026-08-13.  Source PDFs, extracted text, and rendered page im
 | [UNVERIFIED] | Mason (1978), DOI `10.1017/S0305004100054463` | Publisher extract and metadata only, pp. 205–209 | Official page is paywalled; no theorem from it is used as load-bearing evidence.  This DOI corrects a wrong DOI encountered in secondary search results. |
 | [CITED-VERIFIED] | Bertram (1983), DOI `10.1016/0012-365X(83)90004-3` | Official metadata and reference [6] = Isaacs, personal communication | Printed p. 40/full article remained inaccessible; ScienceDirect PDF returned 403 and the located ResearchGate PDF endpoint did not yield a file. |
 | [CITED-VERIFIED] | Pyber (1987), DOI `10.1112/jlms/s2-35.2.287` | Official publisher abstract and bibliographic data | Full paper remained inaccessible through Wiley/OUP, OpenAlex OA locations, CiteSeer, and archive/mirror searches; the exact Theorem 6.1 was not verified. |
+| [CITED-VERIFIED] | Brown–Johnson–Robertson (1987), DOI `10.1016/0021-8693(87)90248-1` | Exterior-square/commutator map p. 181; Proposition 7 p. 182; Corollary 2 pp. 182–183 | Complete author-hosted primary PDF read.  Corollary 2 gives \(Q\wedge Q\cong S'\) for a covering group when \(H_2(Q)\) is finitely generated, hence for finite \(Q\). |
 | [CITED-VERIFIED] | Erdős (1997), DOI `10.1017/CBO9780511662034.004` | Problem 26, printed p. 8 | Full scanned volume read; formula checked on rendered physical PDF page 31. |
 | [CITED-VERIFIED] | Pakianathan–Yalçın (2001), DOI `10.1006/jabr.1999.8501`, arXiv `math/0005301` | Introductory Isaacs/Pyber claims, pp. 396–397; bibliography | Full primary text read; the Isaacs pointer `[J]` was checked and found to be Jacobson. |
 | [CITED-VERIFIED] | Işık (2005), `https://www.math.ucla.edu/~tao/preprints/nc.pdf` | Theorem 12 and proof, pp. 6–7; bibliography pp. 8–9 | Full public manuscript read.  Unpublished status is recorded. |
@@ -20,6 +21,19 @@ Research cut-off: 2026-08-13.  Source PDFs, extracted text, and rendered page im
 | [UNVERIFIED] | Saccochi (2015), DOI `10.26512/2015.12.D.22224` | Theorem 4.1.1 p. 34; Pyber formula p. 36; Theorem 4.3.2 pp. 48–50; Theorem 5.2.7 pp. 56–59 | Full dissertation PDF read and critical formulas visually rendered.  It is secondary evidence for Pyber/Isaacs. |
 | [CITED-VERIFIED] | Darafsheh–Ghorbani–Prajapati (2015), DOI `10.1017/S0004972715000830` | Extraspecial/Isaacs attribution p. 381 and reference list | Full official Cambridge PDF read. |
 | [CITED-VERIFIED] | Maróti–Martínez–Moretó (2025), DOI `10.1016/j.jcta.2024.105954` | Pyber discussion p. 2 and the scope of the full paper | Full primary PDF read. |
+| [CITED-VERIFIED] | Bryce–Fedri–Serena (1997), DOI `10.1017/S0004972700034109` | Definition of \(f(n)\) and Theorems 1.1–1.2, pp. 469–470; proof of \(f(5)=16\), pp. 475–476 | Full official Cambridge PDF read and all eight pages visually inspected. |
+| [CITED-VERIFIED] | Abdollahi–Ataei–Jafarian Amiri–Mohammadi Hassanabadi (2005), DOI `10.1081/AGB-200066157` | Exact \(f(6)=36\) statement in official journal abstract and Theorem D, printed p. 72, of the authors' 2004 extended abstract | The primary extended abstract gives theorem and proof outline.  The full 2005 journal proof remained paywalled/WAF-blocked and was not audited line by line. |
+| [CITED-VERIFIED] | Abdollahi–Jafarian Amiri–Mohammadi Hassanabadi (2007), *Houston J. Math.* 33(1), 43–57 | Introduction, printed p. 44: report of Ashrafi's four-quotient classification for finite 6-centralizer groups | Exact wording and scope checked in indexed primary full text.  The underlying Ashrafi proof-bearing 2000 papers were not acquired. |
+| [UNVERIFIED] | Jafarian Amiri–Madadi (2016), DOI `10.1142/S0219498816501978` | Publisher preview p. 1: finite nonabelian hypothesis and abstract saying the paper describes structural properties of groups with \(\omega(G)=5\) | Full article is closed in OpenAlex and the World Scientific PDF returned HTTP 403; theorem statements after p. 1 and their proofs were not accessible. |
+| [UNVERIFIED] | Jafarian Amiri–Madadi–Rostami (2017), DOI `10.1515/ms-2017-0038` | Official metadata/abstract: finite F-groups with \(|G:Z(G)|=p^4\); computes centralizer count and maximum noncommuting-set size in that class | Full article is closed in OpenAlex; De Gruyter's PDF endpoint returned a WAF challenge.  Exact theorems and proofs were not read. |
+| [CITED-VERIFIED] | Jafarian Amiri–Rostami (2017), Hacettepe J. Math. Stat. 46(2), 193–198 | Introduction p. 194 reports that its references [17,20] determined all groups with \(\omega(G)=5\); reference identities checked | Full official Dergipark PDF read.  This is only a secondary report about the two inaccessible primary papers. |
+| [CITED-VERIFIED] | Blokhuis–Moorhouse (1995), DOI `10.1023/A:1022477715988` | Theorems 1.1 and 1.6, pp. 296–297; polar-space cap definition p. 315; Proposition 4.1 p. 316 | Full author-hosted primary PDF read; formulas and proof-bearing pages rendered and visually checked. |
+| [CITED-VERIFIED] | Klein–Metsch (2005), DOI `10.2140/IIG.2005.1.19` | Theorem 3.3 and proof, author-manuscript p. 8: partial spreads of \(Q(4,q)\) | Full public journal PDF read; critical theorem page rendered. |
+| [CITED-VERIFIED] | Klein–Metsch correction (2010), *IIG* 11, 237–240 | Printed p. 237: original lemma defect, replacement scope, and confirmation of main results | Full public journal PDF read; all four pages rendered.  This correction is co-cited with the 2005 bound. |
+| [CITED-VERIFIED] | Cimráková–De Winter–Fack–Storme (2007), DOI `10.1016/j.ejc.2006.11.001` | Remark 2.11(2); §4.1 and Table 1, author-manuscript pp. 5, 8–9 | Full author-hosted primary manuscript read; computation scope and table rendered.  The external Java code/certificates were not acquired. |
+| [CITED-VERIFIED] | De Beule–Klein–Metsch–Storme (2008), DOI `10.1016/j.ejc.2007.06.004` | Theorem 3.2 and proof pp. 8–9; Theorem 6.1 and proof pp. 18–19; Corollary 6.3 p. 19 | Full final author manuscript read; each critical formula/proof page rendered. |
+| [CITED-VERIFIED] | Ceria–De Beule–Pavese–Smaldore (2023), DOI `10.1002/jcd.21864`, arXiv `2203.04553` | Theorem 3.3 p. 7; Theorem 3.12 p. 11; Remark 3.13 p. 12 | Full accepted manuscript read; pages rendered.  The reported Magma value \(\pi(3,3)=13\) has no repository-side certificate. |
+| [CITED-VERIFIED] | Bamberg–Bishnoi–Ihringer–Ravi (2024), arXiv `2406.03043v2` | §2 definition/equivalence p. 4; Theorem 2.1 | Full primary preprint read.  Used for terminology only; direct 1995 indexing controls the p-rank formula. |
 | [UNVERIFIED] | Erdős Problems, `https://www.erdosproblems.com/117` | Indexed status and last-edit date | Search index said OPEN/no claimed solutions/last edited 2026-01-23; direct page returned HTTP 403. |
 
 ## Backward-source audit
@@ -45,6 +59,52 @@ Research cut-off: 2026-08-13.  Source PDFs, extracted text, and rendered page im
 2^{2^{25}m}\,2^{3(2+2\log_2m)^5}.
 \]
 The dissertation's preceding page specifies base-2 logarithms.  This transcription should be compared directly with Pyber Theorem 6.1 once access is obtained.
+
+## Finite-geometry acquisition and terminology audit
+
+[PROVED] In \(W(2m-1,q)\), a repository set of pairwise nonorthogonal projective points is exactly a partial ovoid.  The equivalence was checked in both directions from the alternating-form definition: every point is isotropic, collinearity is orthogonality, and an isotropic line extends to a generator.  Bamberg–Bishnoi–Ihringer–Ravi, §2, p. 4, explicitly corroborates that a partial ovoid is a set of pairwise nonorthogonal points.
+
+[CITED-VERIFIED] Searches covered `maximum/largest partial ovoid`, `symplectic cap`, `nonpolar points`, `pairwise nonorthogonal projective points`, `W(3,q)`, `W(q)`, `Q(4,q) partial spread`, and exact small fields \(q=3,5,7\).  The 2007 primary computation paper was read beyond the abstract: §4.1, p. 8 says exactly which runs were exhaustive, and Table 1, p. 9 gives the spectra.  It establishes \(\pi(3,2)=7\), \(\pi(5,2)=18\), and \(\pi(7,2)=33\) as reported exhaustive results.  Since code and certificates are not in this repository, only the paper's report is `[CITED-VERIFIED]`; it is not repository `[COMPUTED]` evidence.
+
+[CITED-VERIFIED] The theoretical route to \(\pi(3,2)=7\) was independently checked: Cimráková et al. construct \(2q+1\) points; De Beule–Klein–Metsch–Storme, author-manuscript p. 8, states the odd-\(q\) upper \(q^2-q+1\); and Klein–Metsch Theorem 3.3 gives its partial-spread proof route after duality with \(Q(4,q)\).  The Klein–Metsch 2010 correction was acquired because the 2005 paper contained an incorrect lemma; printed p. 237 says that only the proof of Proposition 3.2 required replacement and that the main results remain true.
+
+[CITED-VERIFIED] The same De Beule–Klein–Metsch–Storme page gives the complementary exact even-field statement \(\pi(q,2)=q^2+1\), using \(W(3,q)\cong Q(4,q)\) and an elliptic-quadric ovoid.  Hence the rank-two efficiency comparison covers every prime power, not just odd \(q\).
+
+[UNVERIFIED] De Beule et al. cite Tallini, “Blocking sets with respect to planes in \(PG(3,q)\) and maximal spreads of a nonsingular quadric in \(PG(4,q)\),” *Mitt. Math. Sem. Giessen* 201 (1991), 141–147, as the older odd-\(q\) source.  Ceria et al. instead give a related Tallini citation with a different title/year.  Neither Tallini full text was acquired, so historical priority and exact theorem provenance remain `[UNVERIFIED]`; the load-bearing bound uses the accessible Klein–Metsch proof and correction.
+
+[CITED-VERIFIED] The general-rank search located two independent upper-bound mechanisms and their proofs: the geometric recurrence and \(W(5,q)\) bound in De Beule–Klein–Metsch–Storme (2008), and the characteristic-dependent incidence-rank bound in Blokhuis–Moorhouse (1995).  For \(W(2m-1,p^e)\), direct substitution into the latter's projective-dimension parameter gives \(\binom{p+2m-2}{p-1}^{e}+1\).  This direct primary formula was preferred over a weaker vector-dimension restatement in the 2024 preprint.
+
+[CITED-VERIFIED] Ceria–De Beule–Pavese–Smaldore (2023) was read at proof level for Theorem 3.3 and at the exact statement of Remark 3.13.  It gives a large rank-two construction for odd square \(q\not\equiv0\pmod3\) and reports, from Magma, \(\pi(3,3)=13\).  The computation is not independently certified here.
+
+[UNVERIFIED] Searches under `S(3,2)`, order \(3^5\), Heisenberg/extraspecial \(3\)-group, symplectic clique, noncommuting graph, abelian cover, and partial ovoid found the finite-geometric fact \(\pi(3,2)=7\), but no source for the combined group invariant \((\nu,a)=(7,10)\).  The clique component is therefore known; absence of the cover component remains an index-bounded negative result.
+
+## Five-subgroup-cover audit
+
+[CITED-VERIFIED] Bryce–Fedri–Serena's official Cambridge PDF was read in full.  Their \(f(n)\) is the maximum \([G:D]\) where \(D\) is the intersection of an irredundant \(n\)-subgroup cover.  Theorem 1.2, p. 470, says \(f(5)=16\), and the complete proof is on pp. 475–476.  It is not a theorem about abelian covers or noncommuting graphs.
+
+[PROVED] The application to \(\nu(G)=5\) is separately checked in `literature/review.md`: maximum-clique centralizers form an irredundant five-cover, and repository Lemma CB.2 makes their intersection exactly \(Z(G)\).  This yields \([G:Z(G)]\le16\).  Sharpness of Bryce–Fedri–Serena's general cover bound does not, without an example, establish sharpness within the \(\nu=5\) class.
+
+## Exterior-square source audit
+
+[CITED-VERIFIED] Brown–Johnson–Robertson's full author-hosted PDF is the original *Journal of Algebra* article.  Printed p. 181 defines \(Q\wedge Q\) and its commutator map; Proposition 7 on p. 182 supplies the lift-commutator map for a central extension; Corollary 2 on pp. 182–183 says that the resulting \(Q\wedge Q\to S'\) is an isomorphism for a covering group \(S\) when \(H_2(Q)\) is finitely generated.  This exactly supports the repository's use for finite \(Q\).  The DOI suffix is `90248-1`, not `90295-1` or another nearby article code.
+
+## \(\omega(G)=5\) classification-lead audit
+
+[CITED-VERIFIED] The Hacettepe paper's introduction, printed p. 194, really does say that references [17,20] “determined all groups \(G\) with \(\omega(G)=5\).”  Its bibliography identifies [17] and [20] as the two Jafarian Amiri papers listed in the access matrix.  The bibliographic data in that prepublication bibliography are imperfect: Crossref and the published issue give Jafarian Amiri–Madadi as volume 15(10), 1650197 (2016), and the Mathematica Slovaca DOI is `10.1515/ms-2017-0038`.
+
+[UNVERIFIED] Neither proof-bearing paper could be read beyond the publisher preview/official abstract.  OpenAlex marks both closed with no repository full text.  World Scientific returned HTTP 403; De Gruyter returned an AWS WAF challenge.  Therefore the exact classification, its converse, and its hypotheses remain unverified despite the later introduction's broad wording.
+
+[CITED-VERIFIED] The proposed quotient list \(D_8,C_2^3,A_4,C_2^4\) was recovered, but it belongs to a different theorem.  Abdollahi–Jafarian Amiri–Mohammadi Hassanabadi (2007), printed p. 44, report Ashrafi's result that every **finite 6-centralizer group** has one of these central quotients.  That checked sentence does not claim to classify all finite groups with \(\omega(G)=5\).  Since Ashrafi's original 2000 proofs were not read, their theorem itself remains `[UNVERIFIED]` as load-bearing evidence.
+
+[UNVERIFIED] No inference \(a(G)=5\) is authorized from this lead.  A group with \(\omega(G)=5\) is not automatically known to have exactly six element-centralizers; that implication requires additional structure such as the CA condition.  An F-group merely has incomparable proper element-centralizers and need not be CA.  Moreover, \(G/Z(G)\) does not preserve commutation.  A proof that the relevant five covering centralizers are abelian would still be required.
+
+## Six-subgroup-cover and \(h(6)\) audit
+
+[CITED-VERIFIED] The authors' 2004 extended abstract states as Theorem D, printed p. 72, that the largest \(|G:D|\) for an irredundant six-subgroup cover with intersection \(D\) is 36.  The official 2005 journal abstract states the same exact result.  The extended abstract also lists the core-free classification and embedding/elimination lemmas used in the proof, but it is not the complete 14-page journal proof; attempts at the Taylor & Francis PDF/EPDF and CiteSeer archive paths produced access barriers rather than the full article.
+
+[PROVED] The repository bridge is the same one used at five: maximum-clique centralizers give an irredundant cover, and Lemma CB.2 forces their intersection to be \(Z(G)\).  Therefore \(\nu(G)=6\) implies \([G:Z(G)]\le36\).  Neither the source nor this bridge proves an abelian six-cover.
+
+[UNVERIFIED] Searches under `omega(G)=6`, `maximum pairwise noncommuting six`, `chromatic number noncommuting graph clique six`, `perfect commuting graph`, `minimal imperfect`, and classifications by numbers of centralizers found no theorem covering every group with \(\nu\le6\).  Narrow results for CA/F-groups, prescribed centralizer counts, and globally perfect commuting graphs do not imply \(h(6)=6\).  This negative search is not an absence proof.
 
 ## Exact-formula and alternate-terminology search
 

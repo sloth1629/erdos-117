@@ -56,6 +56,113 @@ for groups with finite \(\omega(G)\) (the final strict factorial inequality is f
 
 [CITED-VERIFIED] Pakianathan and Yalçın (2001), pp. 396–397, state the Isaacs inequality \(nc(G)\le cc(G)\le(nc(G)!)^2\), but their pointer “[J]” resolves to Jacobson's *Basic Algebra I*, not to a source for this theorem.  This is a citation defect and cannot repair the Isaacs provenance gap.
 
+## Finite-geometry translation: symplectic partial ovoids
+
+[PROVED] Let \(\pi(q,m)\) denote the maximum number of pairwise nonorthogonal projective points in a nondegenerate \(2m\)-dimensional symplectic space over \(\mathbb F_q\).  This is exactly the maximum size of a partial ovoid of the polar space \(W(2m-1,q)\).  Indeed, every projective point is isotropic for an alternating form; two points lie on a totally isotropic line exactly when their representatives are orthogonal; and every such line extends to a generator.  Thus “at most one point on every generator” is equivalent to pairwise nonorthogonality.  Bamberg–Bishnoi–Ihringer–Ravi (2024), §2, author-manuscript p. 4, states the same equivalence explicitly.
+
+[CITED-VERIFIED] The finite-geometry word *cap* is potentially ambiguous.  Blokhuis–Moorhouse (1995), §4, printed p. 315, uses *cap in a polar space* for a set of pairwise nonorthogonal points, hence for the object counted by \(\pi(q,m)\).  An ambient projective cap usually means a set with no three collinear points and is a different object.  Also, *maximal* means inclusion-maximal, whereas \(\pi(q,m)\) asks for *maximum* cardinality.
+
+[PROVED] In rank one, \(\pi(q,1)=q+1\).  A point of the symplectic projective line is orthogonal only to itself, so all \(q+1\) projective points are pairwise nonorthogonal.
+
+## Exact rank-two data and the status of \(S(3,2)\)
+
+[CITED-VERIFIED] If \(q\) is even, De Beule–Klein–Metsch–Storme (2008), author-manuscript p. 8, records that \(W(3,q)\cong Q(4,q)\) contains an elliptic-quadric ovoid and hence
+\[
+ \pi(q,2)=q^2+1.
+\]
+The right side is the ovoid number, hence the general counting upper bound as well as the exhibited size.
+
+[CITED-VERIFIED] For odd \(q\), the accessible primary sources give
+\[
+ 2q+1\le \pi(q,2)\le q^2-q+1.
+\]
+The lower construction is described in Cimráková–De Winter–Fack–Storme (2007), Remark 2.11(2) and §4.1, author-manuscript pp. 5 and 8: delete one point \(r\) from a hyperbolic line and choose one suitable point on each of the \(q+1\) isotropic lines through \(r\).  De Beule–Klein–Metsch–Storme (2008), author-manuscript p. 8, states the upper bound explicitly and cites Tallini and a different proof by Klein–Metsch.  In that proof, duality identifies partial ovoids of \(W(3,q)\) with partial spreads of \(Q(4,q)\); Klein–Metsch (2005), Theorem 3.3, author-manuscript p. 8, proves that a maximal partial spread of \(Q(4,q)\) is either a spread or has size at most \(q^2-q+1\), and the standard odd-\(q\) nonexistence of a spread gives the displayed bound.  The 2010 Klein–Metsch correction, printed p. 237, records that the original Lemma 1.2 was false as stated, replaces the affected proof of Proposition 3.2, and explicitly confirms that the two main results remain true; the correction must be cited with the 2005 paper.
+
+[CITED-VERIFIED] Consequently \(\pi(3,2)=7\) follows theoretically, with no computation: both sides of the preceding inequality equal 7.  Cimráková–De Winter–Fack–Storme also report an exhaustive Java search in §4.1 and Table 1, author-manuscript pp. 8–9, that determines the following maximum values:
+
+| \(q\) | \(\pi(q,2)\) | source status |
+|---:|---:|---|
+| 3 | 7 | theoretical equality above; also exhaustive complete spectrum |
+| 5 | 18 | exhaustive complete spectrum and largest-value search |
+| 7 | 33 | exhaustive largest-value search |
+
+[CITED-VERIFIED] The paper says explicitly that the spectra for \(q=2,3,4,5\) are complete and that the largest values for \(W(3,5)\) and \(W(3,7)\) were confirmed by exhaustive search.  Since every maximum partial ovoid is inclusion-maximal, the largest maximal value is \(\pi(q,2)\).  These are verified reports in a primary paper, but the external Java program and independent certificates are not archived in this repository; therefore the \(q=5,7\) rows are not labelled `[COMPUTED]` here.
+
+[CITED-VERIFIED] The seven-point nonorthogonal configuration used for the repository group \(S(3,2)\) is therefore a previously known finite-geometric extremum: it is a maximum partial ovoid of \(W(3,3)\).  The repository's exact group statement \((\nu,a)=(7,10)\), and hence its use against the proposed formula for \(h\), is stronger than this geometric input.
+
+[UNVERIFIED] Searches by `S(3,2)`, order \(3^5\), Heisenberg/extraspecial group, noncommuting graph, symplectic clique, partial ovoid, and abelian cover did not locate a publication giving the combined group invariant \((\nu,a)=(7,10)\).  Thus the seven-point clique ingredient is not novel, while no global novelty claim is made for the cover-number computation or counterexample.
+
+## Higher-rank bounds and constructions
+
+[CITED-VERIFIED] De Beule–Klein–Metsch–Storme (2008), Theorem 3.2 and its proof, author-manuscript pp. 8–9, proves the inductive bound
+\[
+ \pi(q,m)\le 2+(q-1)\pi(q,m-1)\qquad(m\ge3).
+\]
+Their proof chooses two points of the partial ovoid, partitions the remaining points according to the unique point of their secant line to which they are perpendicular, and passes to a quotient symplectic space.  For \(q>2\), iteration gives
+\[
+ \pi(q,m)\le (q-1)^{m-2}\pi(q,2)
+ +2\frac{(q-1)^{m-2}-1}{q-2}.
+\]
+
+[CITED-VERIFIED] The same paper, Theorem 6.1 and proof, author-manuscript pp. 18–19, gives the sharper small-rank estimate
+\[
+ \pi(q,3)\le
+ 1+\frac q2\!\left(\sqrt{5q^4+6q^3+7q^2+6q+1}-q^2-q-1\right).
+\]
+Its Corollary 6.3 combines this \(W(5,q)\) base with Theorem 3.2 in all higher ranks.  Remark 6.2 notes that for \(q=3\) the rank-two inductive base is better, while Theorem 6.1 becomes better for larger \(q\).
+
+[CITED-VERIFIED] Blokhuis–Moorhouse (1995), Theorems 1.1 and 1.6 (printed pp. 296–297) and Proposition 4.1 (printed p. 316), proves a characteristic-dependent polynomial bound.  If \(q=p^e\), then
+\[
+ \pi(q,m)\le \binom{p+2m-2}{p-1}^{e}+1.
+\]
+The proof orders point-hyperplane incidence by the polarity: a polar-space cap gives an identity principal submatrix, so its size is at most the \(p\)-rank of the point-hyperplane incidence matrix of \(PG(2m-1,q)\), whose rank is \(\binom{p+2m-2}{p-1}^{e}+1\).  This direct primary-source indexing is one smaller than the convenient weaker vector-dimension restatement in Bamberg et al. (2024), Theorem 2.1.
+
+[CITED-VERIFIED] For \(q=2\), the preceding bound is \(\pi(2,m)\le2m+1\).  Işık (2005), Theorem 12, pp. 6–7, supplies an explicit \(2m+1\)-point symplectic construction and a matching linear-dependence upper proof, hence
+\[
+ \pi(2,m)=2m+1\qquad(m\ge1).
+\]
+This exact binary result is proof-verified from an accessible but unpublished manuscript.
+
+[PROVED] Over every finite field, \(\pi(q,m)\ge2m+1\).  On \(V=\mathbb F_q^{2m+1}\), let \(A\) be the alternating matrix with \(A_{ij}=1\) for \(i<j\), \(A_{ij}=-1\) for \(i>j\), and zero diagonal.  If \(Ax=0\), subtracting consecutive row equations gives \(x_{i+1}=-x_i\), and the first row then vanishes automatically; hence \(\operatorname{rad}(A)\) is one-dimensional and \(A\) has rank \(2m\).  The quotient \(V/\operatorname{rad}(A)\) is a nondegenerate symplectic space, and the images of the \(2m+1\) coordinate points are nonzero and pairwise nonorthogonal because their mutual pairings are \(\pm1\).  Identifying this quotient with the standard symplectic space proves the bound.
+
+[CITED-VERIFIED] Ceria–De Beule–Pavese–Smaldore (2023), Theorem 3.3, author-manuscript p. 7, constructs for every odd square \(q\not\equiv0\pmod3\) a partial ovoid of \(W(3,q)\) of size
+\[
+ \frac{q^{3/2}+3q-q^{1/2}+3}{3}.
+\]
+Remark 3.13, author-manuscript p. 12, reports Magma computations that the maximum partial-ovoid size in \(W(5,3)\) is 13, i.e. \(\pi(3,3)=13\).  The article does not provide a repository-verifiable exhaustive certificate, so this is `[CITED-VERIFIED]` as a primary-source computational report, not `[COMPUTED]`.
+
+## Consequences for the scalar-symplectic efficiency
+
+[PROVED] For
+\[
+ E(q,m)=\frac{\log(q^m+1)}{\pi(q,m)},
+\]
+the verified bounds imply, for \(q=p^e\),
+\[
+ \frac{\log(q^m+1)}{\binom{p+2m-2}{p-1}^{e}+1}
+ \le E(q,m)\le
+ \frac{\log(q^m+1)}{2m+1}.
+\]
+For \(q=2\) equality \(\pi(2,m)=2m+1\) gives
+\[
+ E(2,m)\longrightarrow\frac{\log2}{2},
+ \qquad (2^m+1)^{1/\pi(2,m)}\longrightarrow\sqrt2.
+\]
+For fixed \(q>2\), the located general bounds do not determine the limit: the lower efficiency bound is polynomially small while the upper bound tends to \((\log q)/2\).
+
+[PROVED] At rank two and odd \(q\), the verified interval \(2q+1\le\pi(q,2)\le q^2-q+1\) gives
+\[
+ \frac{\log(q^2+1)}{q^2-q+1}
+ \le E(q,2)\le
+ \frac{\log(q^2+1)}{2q+1},
+\]
+so \(E(q,2)\to0\) as odd \(q\to\infty\).  For even \(q\), the exact identity \(\pi(q,2)=q^2+1\) gives \(E(q,2)=\log(q^2+1)/(q^2+1)\to0\).  Thus rank-two efficiency tends to zero through all prime powers.  Using the exact values above (natural logarithm),
+\[
+ E(2,2)=0.32188758,\quad E(3,2)=0.32894073,\quad
+ E(5,2)=0.18100536,\quad E(7,2)=0.11854615.
+\]
+Thus \(S(3,2)\) slightly improves the rank-two binary efficiency, but remains below the binary large-rank limit \((\log2)/2\approx0.34657359\).
+
 ## Search for the proposed sharp formula
 
 [DISPROVED] As a formula for all \(n\ge1\) under the repository's definition of \(h\),
@@ -93,6 +200,56 @@ h(n)\le n\,h(n-2)\quad(n\ge3),
 hence \(h(2r+1)\le(2r+1)!!\) and \(h(2r)\le(2r)!!/2=2^{r-1}r!\).
 
 [UNVERIFIED] Full-text and exact/alternate-term searches found no earlier source for this two-step centralizer drop or recurrence.  The nearest located antecedent is the different Isaacs argument reconstructed by Saccochi, pp. 48–50, which proves only \(\omega(C_G(x)\cap C_G(y))<\omega(G)\) and yields \(f(n)=n+\binom n2f(n-1)\).  “Repository-new relative to the located corpus” is not a global novelty claim.
+
+## Exterior-square source used by the finite reduction
+
+[CITED-VERIFIED] Brown–Johnson–Robertson (1987), printed p. 181, define the nonabelian exterior square \(Q\wedge Q\) and the commutator homomorphism \(Q\wedge Q\to Q'\), whose kernel is the Schur multiplier.  Proposition 7, printed p. 182, constructs the lift-commutator crossed pairing for a central extension.  Corollary 2, printed pp. 182–183, then states that for a covering group \(S\) of \(Q\) the induced map
+\[
+ Q\wedge Q\longrightarrow S'
+\]
+is an isomorphism whenever \(H_2(Q)\) is finitely generated.  In particular it applies to the finite groups \(Q\) used in the repository enumeration.  The checked DOI is `10.1016/0021-8693(87)90248-1`; the complete author-hosted primary PDF was read.
+
+## An exact five-subgroup-cover theorem
+
+[CITED-VERIFIED] Bryce–Fedri–Serena (1997) define \(f(k)\) as the largest index \([G:D]\), over groups \(G\) with an irredundant cover by \(k\) subgroups whose intersection is \(D\).  Theorem 1.2, printed p. 470, proves
+\[
+ f(5)=16.
+\]
+The proof on printed pp. 475–476 first classifies maximal irredundant core-free five-covers in Theorem 1.1 and then handles nonmaximal covers by replacing one member with a maximal subgroup and reducing to irredundant three- or four-covers.  The theorem is about arbitrary subgroup covers, not specifically abelian or centralizer covers.
+
+[PROVED] If \(\nu(G)=5\), choose a maximum pairwise noncommuting set \(X=\{x_1,\ldots,x_5\}\).  The centralizers \(C_G(x_i)\) cover \(G\), since otherwise an element outside their union could be adjoined to \(X\); the cover is irredundant because \(x_i\) belongs to no \(C_G(x_j)\) for \(j\ne i\).  Its intersection is exactly \(Z(G)\): if \(y\) centralizes every \(x_i\), then \(X\subseteq C_G(y)\), while repository Lemma CB.2 gives \(\nu(C_G(y))\le3\) for every noncentral \(y\), a contradiction.  Applying Bryce–Fedri–Serena therefore yields the exact-cover consequence
+\[
+ [G:Z(G)]\le16\qquad\text{when }\nu(G)=5.
+\]
+Only the five-cover index theorem is `[CITED-VERIFIED]`; the bridge from a maximum noncommuting set to intersection \(Z(G)\) is the displayed repository proof.
+
+### What the later \(\omega(G)=5\) classification lead does—and does not—verify
+
+[UNVERIFIED] Jafarian Amiri–Rostami (2017), introduction, printed p. 194, says that its references [17] and [20] “determined all groups \(G\) with \(\omega(G)=5\).”  The two referenced primary papers are Jafarian Amiri–Madadi (2016), DOI `10.1142/S0219498816501978`, and Jafarian Amiri–Madadi–Rostami (2017), DOI `10.1515/ms-2017-0038`.  The first paper's publisher preview (printed p. 1) says only that it describes *structural properties* of all such finite groups; the second paper's official abstract treats only finite F-groups with \(|G:Z(G)|=p^4\).  Neither full proof-bearing article was accessible in this audit, so the secondary phrase “determined all groups” is not promoted to a classification theorem here.
+
+[CITED-VERIFIED] The list
+\[
+ G/Z(G)\cong D_8,\ C_2^3,\ A_4,\text{ or }C_2^4
+\]
+was located in Abdollahi–Jafarian Amiri–Mohammadi Hassanabadi (2007), printed p. 44, but with a different scope: that paper reports Ashrafi's earlier result that a **finite 6-centralizer group** has one of exactly these four central quotients.  It is not stated there as a classification of all groups with \(\omega(G)=5\).  The original Ashrafi proof-bearing papers were not acquired, so the underlying classification remains `[UNVERIFIED]` even though the 2007 report and its scope are checked.
+
+[UNVERIFIED] The 6-centralizer list cannot be transferred to every group with \(\omega(G)=5\): the equality “number of element-centralizers = \(\omega(G)+1\)” needs additional conditions (for example the CA setting), and a bare central-factor isomorphism does not preserve commutation in \(G\).  The official abstract of the Mathematica Slovaca paper moreover assumes that \(G\) is a finite F-group with \(|G:Z(G)|=p^4\); an F-group need not be a CA-group by definition.  Thus neither lead currently proves that five clique-centralizers are abelian or that \(a(G)=5\).  The load-bearing conclusion from the audited literature is the proved center-index bound \([G:Z(G)]\le16\), not an externally verified value of \(h(5)\).
+
+## Six-subgroup covers and the remaining \(h(6)\) gap
+
+[CITED-VERIFIED] Abdollahi–Ataei–Jafarian Amiri–Mohammadi Hassanabadi, “Groups with a Maximal Irredundant 6-Cover,” determine the corresponding cover index as
+\[
+ f(6)=36.
+\]
+The exact hypothesis and conclusion appear as Theorem D on printed p. 72 of the authors' 2004 seminar extended abstract: 36 is the largest \(|G:D|\) over groups having an irredundant six-subgroup cover with intersection \(D\).  The official abstract of the 2005 *Communications in Algebra* article states the same result.  The extended abstract exposes the proof outline and intermediate classification lemmas, but the complete journal proof remained closed; this citation verifies the exact primary theorem statement, not a line-by-line audit of its full proof.
+
+[PROVED] If \(\nu(G)=6\), the centralizers of a maximum noncommuting set form an irredundant six-cover.  If their intersection contained a noncentral \(y\), all six clique elements would lie in \(C_G(y)\), contradicting repository Lemma CB.2, which gives \(\nu(C_G(y))\le4\).  Hence the intersection is \(Z(G)\), and the six-cover theorem gives
+\[
+ [G:Z(G)]\le36\qquad\text{when }\nu(G)=6.
+\]
+This is a center-index reduction only; it does not say that the six centralizers are abelian or that \(a(G)=6\).
+
+[UNVERIFIED] Searches for a classification of all finite groups with \(\omega(G)=6\), a theorem that group noncommuting graphs satisfy \(\chi=\omega\) through clique number six, and a minimal-imperfect commuting/noncommuting-graph result implying such a theorem found no universal result.  Located papers on perfect commuting graphs and on groups with prescribed numbers of centralizers have narrower hypotheses.  Thus the exact value of \(h(6)\) is not settled by the audited literature; the bound \([G:Z(G)]\le36\) instead makes a finite central-quotient audit feasible.
 
 ## Forward citations and possible later resolutions
 
