@@ -37,6 +37,17 @@ The bootstrap implementation uses only the Python standard library.
 - `analyze_h5_exterior_scan.py` verifies every graph and kernel serial range
   in the Schur-cover/exterior-square export used for the computer-assisted
   \(h(5)=5\) conclusion.
+- `h6_c2_5.py` and `run_h6_c2_5.py` give independent alternating-form orbit,
+  rank-two-subspace, and C exhaustive checks for the exceptional central
+  quotient \(C_2^5\).
+- `analyze_h6_exterior_scan.py` verifies all normal-kernel serial ranges,
+  radical exclusions, seven-clique exclusions, and exact surviving
+  clique/coloring witnesses for every other SmallGroup quotient of order at
+  most 36.
+- `analyze_f6_maximal_cover_audit.py` reparses GAP multiplication tables,
+  independently enumerates every subgroup and maximal subgroup, and exhausts
+  every six-subset to recheck cover, private-element irredundancy, intersection,
+  and corefreeness for the finite \(f(6)\) audit.
 
 From the repository root:
 
@@ -129,4 +140,40 @@ python3 src/python/analyze_h5_exterior_scan.py \
   --output experiments/logs/h5_exterior.json \
   --stdout-log experiments/logs/h5_exterior.stdout.txt \
   --clique-cutoff 5
+```
+
+For the cutoff-six certificate, first run the separate \(C_2^5\) check, then
+the GAP enumeration of all other quotients, and finally the exact analyzer:
+
+```bash
+PYTHONPYCACHEPREFIX=/tmp/erdos117-pycache \
+python3 src/python/run_h6_c2_5.py \
+  --config experiments/configs/h6_c2_5.json \
+  --output experiments/logs/h6_c2_5.json \
+  --stdout-log experiments/logs/h6_c2_5.stdout.txt
+work/gap-4.16.0/gap -q -b \
+  -c 'ERDOS117_OUTPUT:="experiments/logs/h6_exterior.tsv";; ERDOS117_STDOUT_LOG:="experiments/logs/h6_exterior_gap.stdout.txt";; ERDOS117_MAX_Q_ORDER:=36;; Read("experiments/configs/h6_exterior_scan.g");'
+PYTHONPYCACHEPREFIX=/tmp/erdos117-pycache \
+python3 src/python/analyze_h6_exterior_scan.py \
+  --input experiments/logs/h6_exterior.tsv \
+  --gap-script experiments/configs/h6_exterior_scan.g \
+  --c2-5-certificate experiments/logs/h6_c2_5.json \
+  --output experiments/logs/h6_exterior.json \
+  --stdout-log experiments/logs/h6_exterior.stdout.txt
+```
+
+For the finite maximal-cover audit used in the reconstructed \(f(6)=36\)
+argument:
+
+```bash
+work/gap-4.16.0/gap -q \
+  -c 'ERDOS117_CLASS_OUTPUT:="experiments/logs/f6_maximal_cover_classes.tsv";; ERDOS117_COVER_OUTPUT:="experiments/logs/f6_maximal_cover_groups.tsv";; ERDOS117_STDOUT_LOG:="experiments/logs/f6_maximal_cover_gap.stdout.txt";; Read("experiments/configs/f6_maximal_cover_audit.g");'
+PYTHONPYCACHEPREFIX=/tmp/erdos117-pycache \
+python3 src/python/analyze_f6_maximal_cover_audit.py \
+  --classes experiments/logs/f6_maximal_cover_classes.tsv \
+  --groups experiments/logs/f6_maximal_cover_groups.tsv \
+  --gap-script experiments/configs/f6_maximal_cover_audit.g \
+  --gap-stdout experiments/logs/f6_maximal_cover_gap.stdout.txt \
+  --output experiments/logs/f6_maximal_cover.json \
+  --stdout-log experiments/logs/f6_maximal_cover.stdout.txt
 ```

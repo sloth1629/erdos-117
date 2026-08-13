@@ -158,12 +158,115 @@ five. Each result is
 certified by a checked clique and coloring; the verifier also checks all
 kernel serial ranges and the checksums of the GAP script and raw export.
 
-[COMPUTED] Combining this exhaustive finite lemma with the cited-verified
+[PROVED] Combining this exhaustive finite lemma with the cited-verified
 Bryce--Fedri--Serena theorem \(f(5)=16\), the repository bridge
 \(\nu(G)=5\Rightarrow[G:Z(G)]\le16\), the already proved \(h(4)=4\), and the
 explicit \(E_2\) lower witness yields the computer-assisted conclusion
 \(h(5)=5\). The argument covers arbitrary groups, because only the finite
 central quotient \(Q\) and its finite exterior square enter the enumeration.
+
+## Finite maximal-six-cover audit underlying \(f(6)=36\)
+
+[CITED-VERIFIED] Alencar (2011), Lemma 4.1, pp. 51--59, states the finite
+maximal irredundant core-free six-cover assertions used in the published
+\(f(6)\) argument. Its final computation uses inconsistent \(L_i\) labels on
+p. 59. The reconstruction therefore uses no numbered subgroup labels: every
+group is identified by `IdGroup`, and every maximal subgroup and qualifying
+six-subset is exported as an exact element bitmask.
+
+[COMPUTED] GAP 4.16.0 with SmallGrp 1.5.4 enumerated 165 ambient subgroup
+conjugacy-class records and reduced them, by isomorphism ID only, to 48 group
+types. The census includes all three order-72 and seven order-108 subgroup
+classes of \(S_3^3\), all 21 order-48 and 15 order-96 subgroup classes of
+\(S_4^2\), all 14 subdirect classes of \(S_3^3\), all 69 subgroup classes of
+\(C_2\times S_3\times S_3\), all SmallGroups of orders 50 and 100 with
+centerless cases selected, \(A_5,S_5\), and all 11 subgroup classes of
+\(S_4\). Class sizes certify respectively 9, 7, 88, 44, 90, 206, and 30
+concrete subgroups in the ambient families just listed.
+
+[COMPUTED] A standard-library Python verifier reparses every complete
+multiplication table, exhaustively checks the group axioms, independently
+enumerates 5,257 subgroups, recovers the complete maximal-subgroup sets, and
+recomputes union, private-element irredundancy, intersection, and conjugate
+core for all 5,545,351 six-subsets. It agrees with GAP on 100,483 covers,
+10,308 irredundant covers, and 6,678 irredundant core-free covers. Thus the
+certificate does not depend on GAP's cover filtering or maximal-subgroup
+ordering.
+
+[COMPUTED] The subdirect products of \(S_3^3\) with qualifying covers are
+exactly `SmallGroup(18,4)`, with 234 covers and \(|D|=1\), and
+`SmallGroup(54,14)`, with 6,318 covers and \(|D|=2\). The order-50 and
+order-100 positive cases are exactly `SmallGroup(50,4)`, with 25 covers and
+\(|D|=2\), and `SmallGroup(100,11)`, with 25 covers and \(|D|=4\). Every
+requested \(A_5,S_5,S_3^3,C_2\times C_3\times S_3\), order-72/108, and
+order-48/96 negative case has zero qualifying covers. All nine abstract
+subgroup types occurring in \(S_4\) also have zero.
+
+[COMPUTED] Two useful corrections are fixed as regression assertions.
+`SmallGroup(36,10)=S_3\times S_3` has 38 six-covers, but none is
+irredundant. The audited index-36 witness is instead
+`SmallGroup(36,13)=C_2\times((C_3^2):C_2)`, with 72 qualifying covers and
+trivial intersection. The finite certificate supplies the enumerative edge
+of the reconstructed \(f(6)\) proof; its structural reductions are audited
+separately and are not inferred from this computation.
+
+## Exterior-square enumeration at clique cutoff six
+
+[PROVED] The cited-verified six-cover theorem \(f(6)=36\), together with the
+repository's irredundant-centralizer bridge, gives
+\(\nu(G)=6\Rightarrow [G:Z(G)]\le36\), for finite or infinite \(G\). Thus it is
+enough to inspect the 162 isomorphism types of finite central quotients of
+order at most 36 and every action-invariant exterior-square kernel.
+
+[PROVED] The exceptional quotient \(Q=C_2^5\) does not require enumeration of
+its 229,755,605 exterior-square subspaces. The self-contained alternating-form
+argument in `notes/exact_h6.md` proves that every commutator map on
+\(\mathbb F_2^5\) with zero radical has a nine-clique: a rank-four scalar form
+gives an explicit nine-clique, while the all-rank-two decomposable-subspace
+dichotomy gives at least sixteen. An actual quotient \(G/Z(G)\) has zero
+commutator radical, so \(C_2^5\) is impossible when \(\nu(G)\le6\).
+
+[COMPUTED] As a redundant check of this structural exclusion, dependency-free
+C enumerated all
+\({10\brack2}_2=174{,}251\) alternating-form pencils. Exactly 156,240 have
+zero common radical, split into 52,080 pencils with nonzero-form rank profile
+\((2,4,4)\) and 104,160 with profile \((4,4,4)\). It constructed a nine-clique
+for every one in 1,482,030 search nodes, at most 36 per pencil. Independent
+Python transvection orbits reproduce the two complete profile sets and exact
+representatives \((\omega,\chi)=(11,11)\) and \((9,9)\). Python also enumerates
+all 1,892 subspaces whose nonzero forms have rank two; the 31 with zero common
+radical form one orbit and have representative \((\omega,\chi)=(17,17)\).
+
+[COMPUTED] GAP 4.16.0 with SmallGrp 1.5.4 scanned every chosen Schur cover for
+the other 161 quotients and every one of their 23,527 \(S\)-normal kernels.
+The complete serial ranges split into 18,231 graphs with nontrivial
+commutator radical, 4,982 faithful graphs carrying a checked seven-clique, and
+314 faithful candidate graphs. There are 4,045 distinct faithful adjacency
+tuples. Exact clique/coloring certificates for the candidates have distribution
+
+\[
+(1,1):1,\quad(3,3):1,\quad(4,4):2,\quad(5,5):93,\quad(6,6):217.
+\]
+
+No candidate has chromatic number greater than six. The largest normal-kernel
+enumeration is 5,276 for `SmallGroup(32,46)`; six further quotients have 2,825
+kernels each. Every radical, clique, coloring, and serial-range certificate is
+reparsed by the verification suite.
+
+[PROVED] Combining the preceding exhaustive finite lemma, the structural
+\(C_2^5\) exclusion, the cited-verified \(f(6)=36\) bridge, the already exact
+value \(h(5)=5\), and the checked Heisenberg witness
+\((\nu(H_5),a(H_5))=(6,6)\) yields the following computer-assisted exact
+conclusion:
+
+\[
+h(6)=6.
+\]
+
+The upper bound applies to arbitrary groups because the reduction passes only
+to the finite central quotient. The computation is not promoted to a
+classification of extensions: enumerating all \(S\)-normal kernels is a safe
+overcount.
 
 [DISPROVED] This group refutes
 \(a\leq\max\{\nu,2^{\lfloor(\nu-1)/2\rfloor}+1\}\): at \(\nu=7\) the proposed
@@ -175,7 +278,7 @@ labeled simple graphs on at most six vertices, and also checks group axioms,
 coset invariance, named records, direct-product/OR compatibility, witnesses,
 and the \(E_m\) symplectic model for \(m=1,2,3\). It also reparses and verifies
 every saved Python and GAP certificate. The latest 2026-08-13 run passed all
-15 tests under Python 3.9.6. The extended tests independently rebuild the
+18 tests under Python 3.9.6. The extended tests independently rebuild the
 scalar graphs, four residual searches, strongly regular parameters, spreads,
 the order-128 prefilter survivors, and every exterior-square graph witness.
 Exact output and timing are preserved in verification.txt.
@@ -232,6 +335,34 @@ Its raw TSV SHA-256 is
 the certified JSON, concise Python output, and GAP regeneration transcript are
 experiments/logs/h5_exterior.{json,stdout.txt} and
 experiments/logs/h5_exterior_gap.stdout.txt.
+
+[COMPUTED] The cutoff-six exterior run is configured by
+experiments/configs/h6_exterior_scan.g (SHA-256
+6e65e93760d37fb4afad4722e38aa7ec67dfb1e4bcfb1ed6ea121f3bba92e2f1).
+The compact raw TSV SHA-256 is
+142224d5416787eadd3e9126f2203b6d0895a5ce2d078713fa8cc87af5ce60a7;
+its decimal adjacency bitmasks retain every graph while reducing the raw log
+to about 9 MB. The certified JSON, concise analyzer output, and GAP transcript
+are `h6_exterior.{json,stdout.txt}` and `h6_exterior_gap.stdout.txt`.
+
+[COMPUTED] The finite maximal-cover audit is configured by
+experiments/configs/f6_maximal_cover_audit.g (SHA-256
+81674bcbcefa95caa62bf67aa2067b9628c96e2d3179fe6db55696d675185af8).
+The class-census and complete multiplication-table TSV SHA-256 values are
+18864118296e8d517d7e662edc1e94bcbbacd385cce6ea27645abe68c6acf86f
+and 30eec574a216b234dfa20c0fa3d8369788ba5cfa463a8849dfc1ba4219c9ca8e.
+The independent verifier is `src/python/analyze_f6_maximal_cover_audit.py`;
+the resulting JSON, concise output, and GAP transcript are
+`f6_maximal_cover.{json,stdout.txt}` and
+`f6_maximal_cover_gap.stdout.txt`.
+
+[COMPUTED] The redundant \(C_2^5\) run is configured by
+experiments/configs/h6_c2_5.json (SHA-256
+0f9f635bbfed250f50b02a6bde478b3ede0a93bc6e561f382c17aaba71be7b1e).
+Its C source SHA-256 is
+6e5c6ba2a82a51bef5527443f97778c15b617706a2f04f34daebc789d4626872,
+and `h6_c2_5.json` stores both the C exhaustive record and the independent
+Python reconstruction.
 
 [COMPUTED] GAP 4.16.0 with SmallGrp 1.5.4 independently supplied all complete
 multiplication tables at orders 8, 32, and 64. The Python analyzer validated

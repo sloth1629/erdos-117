@@ -1,0 +1,7 @@
+quotients=162 gap_scanned=161 normal_kernels=23527
+statuses=[('candidate', 314), ('clique_ge_7', 4982), ('nonfaithful_radical', 18231), ('special_c2_5', 1)]
+faithful_unique_graphs=4045 candidates=314
+eligible=[((1, 1), 1), ((3, 3), 1), ((4, 4), 2), ((5, 5), 93), ((6, 6), 217)]
+eligible_failures=[]
+largest_kernel_counts=[(5276, 32, 46, 'C2 x C2 x D8'), (2825, 32, 50, '(C2 x Q8) : C2'), (2825, 32, 49, '(C2 x C2 x C2) : (C2 x C2)'), (2825, 32, 48, 'C2 x ((C4 x C2) : C2)'), (2825, 32, 47, 'C2 x C2 x Q8'), (2825, 32, 45, 'C4 x C2 x C2 x C2'), (2825, 16, 14, 'C2 x C2 x C2 x C2'), (105, 32, 27, '(C2 x C2 x C2 x C2) : C2'), (78, 32, 22, 'C2 x ((C4 x C2) : C2)'), (65, 32, 34, '(C4 x C4) : C2'), (46, 32, 28, '(C4 x C2 x C2) : C2'), (38, 32, 39, 'C2 x D16')]
+wrote exact certificates to experiments/logs/h6_exterior.json

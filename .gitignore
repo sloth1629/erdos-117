@@ -13,4 +13,8 @@ venv/
 *.out
 *.pdf
 work/
+tmp/
 outputs/
+experiments/configs/h7_exterior_inventory.g
+experiments/logs/h7_exterior_inventory*.tsv
+experiments/logs/h7_exterior_inventory*.stdout.txt

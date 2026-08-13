@@ -1,22 +1,7 @@
 Python 3.9.6
-COMMAND: PYTHONPYCACHEPREFIX=/tmp/erdos117-final-pycache python3 -m unittest discover -s src/verification -p 'test_*.py' -v
-test_algorithms_against_brute_force_all_graphs_through_six_vertices (test_exact_computation.ExactGraphTests) ... ok
-test_direct_product_is_graph_or_product (test_exact_computation.ExactGraphTests) ... ok
-test_named_group_invariants_and_independent_covers (test_exact_computation.ExactGraphTests) ... ok
-test_or_product_multiplicativity_fails_for_general_graphs (test_exact_computation.ExactGraphTests) ... ok
-test_symplectic_adjacency_and_exact_m_1_to_3 (test_exact_computation.ExtraspecialGeometryTests) ... ok
-test_center_cosets_partition_and_commutation_invariance (test_exact_computation.GroupConstructionTests) ... ok
-test_group_axioms_and_basic_centers (test_exact_computation.GroupConstructionTests) ... ok
-test_exact_small_group_log_is_self_consistent (test_exact_computation.LogCertificateTests) ... ok
-test_gap_smallgroups_logs (test_exact_computation.LogCertificateTests) ... ok
-test_graph_product_log_certificates (test_exact_computation.LogCertificateTests) ... ok
-test_h5_exterior_square_scan_certificates (test_exact_computation.ScalarSymplecticLogTests) ... ok
-test_order128_small_n_prefilter_certificates (test_exact_computation.ScalarSymplecticLogTests) ... ok
-test_p3_rank2_group_graph_clique_coloring_and_spread (test_exact_computation.ScalarSymplecticLogTests) ... ok
-test_p5_rank2_symmetry_reduced_certificate_and_spread (test_exact_computation.ScalarSymplecticLogTests) ... ok
-test_p7_rank2_rigorous_bounded_record (test_exact_computation.ScalarSymplecticLogTests) ... ok
-
+COMMAND: PYTHONPYCACHEPREFIX=work/pycache python3 -m unittest discover -s src/verification -p 'test_*.py'
+..................
 ----------------------------------------------------------------------
-Ran 15 tests in 32.275s
+Ran 18 tests in 60.955s
 
 OK

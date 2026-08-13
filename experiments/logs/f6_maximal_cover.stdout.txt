@@ -1,0 +1,7 @@
+ambient_class_records=165 audited_group_types=48
+independent_subgroups=5257 six_subsets=5545351 covers=100483 irredundant=10308 qualifying=6678
+positive_groups=[('18,4', 234, {1: 234}), ('24,14', 4, {1: 4}), ('36,13', 72, {1: 72}), ('50,4', 25, {2: 25}), ('54,14', 6318, {2: 6318}), ('100,11', 25, {4: 25})]
+S4_subgroups=11_classes/30_concrete/9_types; all qualifying=0
+regressions=SmallGroup(36,10):0; SmallGroup(36,13):72
+input_hashes={'gap_script': 'experiments/configs/f6_maximal_cover_audit.g', 'gap_script_sha256': '81674bcbcefa95caa62bf67aa2067b9628c96e2d3179fe6db55696d675185af8', 'class_tsv': 'experiments/logs/f6_maximal_cover_classes.tsv', 'class_tsv_sha256': '18864118296e8d517d7e662edc1e94bcbbacd385cce6ea27645abe68c6acf86f', 'group_tsv': 'experiments/logs/f6_maximal_cover_groups.tsv', 'group_tsv_sha256': '30eec574a216b234dfa20c0fa3d8369788ba5cfa463a8849dfc1ba4219c9ca8e', 'gap_stdout': 'experiments/logs/f6_maximal_cover_gap.stdout.txt', 'gap_stdout_sha256': '0e6de866d523133820d9f2b9351f54eebbc069bd572699f52ceb0b312839c98f'}
+wrote independent certificate to experiments/logs/f6_maximal_cover.json

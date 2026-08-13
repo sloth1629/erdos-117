@@ -40,7 +40,28 @@ No complete solution of Erdos Problem 117 is claimed.
             |                 +-- binary exact candidate is false
             +-- pi(q,m) >= mq+1
 
-External sources are not load-bearing in this graph. Neumann (1976) is
+      +-- Bryce--Fedri--Serena irredundant-cover theorem f(5)=16 [external]
+            +-- nu(G)=5 implies [G:Z(G)] <= 16
+            +-- central-extension commutators factor through Q wedge Q
+                  +-- Schur-cover normal-kernel enumeration [computer]
+                        +-- omega <= 5 implies chi <= 5 for |Q| <= 16
+                              +-- h(5)=5
+
+      +-- six-cover theorem f(6)=36
+            |-- maximal/nonmaximal structural reduction [proved/audited]
+            |-- finite maximal-cover leaves [computer + independent verifier]
+            `-- nu(G)=6 implies [G:Z(G)] <= 36
+                  +-- C2^5 zero-radical obstruction [proved]
+                  +-- Schur-cover normal-kernel enumeration [computer]
+                        +-- omega <= 6 implies chi <= 6 for |Q| <= 36
+                              +-- h(6)=6
+
+The \(h(5)\) and \(h(6)\) branches are explicitly computer-assisted.  Their
+load-bearing external dependencies are the audited subgroup-cover theorems
+and the standard nonabelian-exterior-square/Schur-cover construction; the
+repository contains repaired structural reductions and independent finite
+certificates for the six-cover leaves.  All other branches displayed above
+are computation-independent. Neumann (1976) is
 primary-verified historical corroboration. Pyber's fixed-base exponential
 upper bound remains inaccessible at proof level and therefore lies outside
 the proved dependency graph.

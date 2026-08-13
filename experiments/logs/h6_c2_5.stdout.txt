@@ -1,0 +1,7 @@
+enumeration pencils=174251 common_radical_zero=156240
+profiles rank_244=52080 rank_444=104160
+search target=9 witnesses=156240 total_nodes=1482030 maximum_nodes=36 hardest=1,136 digest=f15376640e6d5965 cpu_seconds=0.158637
+representative profile=244 a=1 b=136 clique=1,3,17,23,27,31,6,10,14
+representative profile=444 a=20 b=40 clique=1,17,13,29,10,22,14,18,8
+independent_python pencils=174251 radical_zero=156240 pencil_orbits=[([2, 4, 4], 52080, 11), ([4, 4, 4], 104160, 9)] rank_two_subspaces=1892 rank_two_radical_zero=31 elapsed_wall_seconds=3.302972
+wrote certificate to experiments/logs/h6_c2_5.json

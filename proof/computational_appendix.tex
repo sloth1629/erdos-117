@@ -21,7 +21,7 @@ coverage.
 The verifier compares both optimized graph solvers with naive exhaustive
 enumeration for every one of the \(33{,}868\) labeled simple graphs having at
 most six vertices. It also reconstructs every saved group and certificate.
-The final audit on Python 3.9.6 passed all 11 tests.
+The final audit on Python 3.9.6 passed all 18 tests.
 
 \subsection{Saved exact records}
 
@@ -50,12 +50,83 @@ with a checked abelian-subgroup cover. This bounded census found no
 \(a>\nu\); it is not evidence of equality in general, since \(E_3\) and
 \(S(3,2)\) already have \(a>\nu\).
 
+A separate cutoff scan inspected all 2,328 SmallGroups of order 128. A
+checked greedy clique excluded 1,910 groups from the range \(\nu\le6\); exact
+clique and coloring witnesses for all 418 survivors have distribution
+\[
+ (\nu,a)=(1,1)^{15},(3,3)^{60},(5,5)^{199},(6,6)^{144}.
+\]
+This is a bounded census, not a classification theorem.
+
 For \(S(3,2)\), the code checks all \(14{,}348{,}907\) associativity triples,
 the 81-vertex compressed graph, a seven-clique, and an independent
 include/exclude exclusion of an eight-clique on 40 projective twin classes.
 Exact DSATUR rejects 7, 8, and 9 colors. Independently, a ten-plane
 \(\mathbb F_9/\mathbb F_3\) symplectic spread gives ten abelian subgroups of
 order 27 whose union is the group.
+
+The symmetry-reduced projective solver also certifies
+\[
+ (\nu(S(5,2)),a(S(5,2)))=(18,26),\qquad
+ (\nu(S(3,3)),a(S(3,3)))=(13,28).
+\]
+For each instance, pair transitivity reduces exclusion of a larger clique to
+four stabilizer-orbit cases; a dependency-free C branch-and-bound solver
+checks the residual graphs, while Python independently checks the saved
+clique and symplectic-spread witnesses. At \((q,m)=(7,2)\) only the rigorous
+interval \(33\le\nu\le50\) is claimed.
+
+For the exact value \(h(5)=5\), the GAP export covers all 42 quotient groups
+\(Q\) of order at most 16 and all 2,986 subgroups \(K\le S'\) normal in the
+chosen Schur cover \(S\twoheadrightarrow Q\). There are 2,396 distinct
+labeled adjacency tuples. Exact witnesses give
+\[
+\begin{array}{c|rrrrrrrrrrr}
+(\omega,\chi)&(1,1)&(3,3)&(4,4)&(5,5)&(6,6)&(7,7)&(8,8)&(9,9)&(11,11)&(13,13)&(15,15)\\ \hline
+\#&42&84&4&234&215&22&1&1492&492&315&85.
+\end{array}
+\]
+Thus all 364 records with \(\omega\le5\) are 5-colorable. The raw file records
+the total subgroup count, retained normal-kernel count, and complete kernel
+serial range for each quotient; the Python verifier checks all serial ranges,
+graphs, cliques, and colorings.
+
+For the finite leaves in the reconstructed proof of $f(6)=36$, GAP exports
+165 ambient subgroup conjugacy-class records, reduced by isomorphism ID to
+48 group types.  The independent verifier rebuilds 5,257 subgroups from the
+complete multiplication tables, recovers every maximal subgroup, and tests
+all 5,545,351 six-subsets.  It finds 100,483 covers, 10,308 irredundant
+covers, and 6,678 whose intersection is core-free.  In particular,
+$\operatorname{SmallGroup}(36,10)=S_3\times S_3$ has 38 covers and no
+irredundant one, whereas $\operatorname{SmallGroup}(36,13)$ has 72
+qualifying covers with trivial intersection.
+
+For $h(6)$, all 162 quotient types of order at most 36 are represented.
+The 161 nonexceptional types give 23,527 normal-kernel records: 18,231 have
+nontrivial radical, 4,982 have a saved seven-clique, and the 314 exact
+survivors have distribution
+\[
+ (\omega,\chi)=(1,1)^1,(3,3)^1,(4,4)^2,(5,5)^{93},(6,6)^{217}.
+\]
+The structural $C_2^5$ exception is redundantly checked by enumerating all
+174,251 alternating-form pencils; each of the 156,240 zero-radical pencils
+has a verified nine-clique.
+
+The load-bearing SHA-256 digests for the six-cover producer, its class and
+group exports, the cutoff-six producer and raw export, its independent
+analyzer and certified JSON, and the redundant $C_2^5$ C source and JSON are,
+in that order,
+\begin{verbatim}
+81674bcbcefa95caa62bf67aa2067b9628c96e2d3179fe6db55696d675185af8
+18864118296e8d517d7e662edc1e94bcbbacd385cce6ea27645abe68c6acf86f
+30eec574a216b234dfa20c0fa3d8369788ba5cfa463a8849dfc1ba4219c9ca8e
+6e65e93760d37fb4afad4722e38aa7ec67dfb1e4bcfb1ed6ea121f3bba92e2f1
+142224d5416787eadd3e9126f2203b6d0895a5ce2d078713fa8cc87af5ce60a7
+f0090cde8899b82e9fcbec5845419dc45e8b3e1852ec30fc124faf0ec531f376
+d350e66ac16cdf3459ed24b0cb1e18ba730331663ff379ece4c6d9f50fee4eb9
+6e5c6ba2a82a51bef5527443f97778c15b617706a2f04f34daebc789d4626872
+83a946a36ee17d1523b1b1c6b3d9eda96606389bdbc0cca5e23d1905c85bc971
+\end{verbatim}
 
 \subsection{Commands}
 
@@ -78,6 +149,18 @@ python3 src/python/run_scalar_symplectic_experiments.py \
   --output experiments/logs/scalar_symplectic_p3_m2.json
 
 PYTHONPYCACHEPREFIX=/tmp/erdos117-pycache \
+python3 src/python/run_scalar_symplectic_clique.py \
+  --config experiments/configs/scalar_symplectic_clique.json \
+  --output experiments/logs/scalar_symplectic_extended.json \
+  --stdout-log experiments/logs/scalar_symplectic_extended.stdout.txt
+
+PYTHONPYCACHEPREFIX=/tmp/erdos117-pycache \
+python3 src/python/run_scalar_symplectic_bounds.py \
+  --config experiments/configs/scalar_symplectic_bounds.json \
+  --output experiments/logs/scalar_symplectic_bounds.json \
+  --stdout-log experiments/logs/scalar_symplectic_bounds.stdout.txt
+
+PYTHONPYCACHEPREFIX=/tmp/erdos117-pycache \
 python3 -m unittest discover -s src/verification -p 'test_*.py' -v
 \end{verbatim}
 
@@ -97,6 +180,75 @@ python3 src/python/analyze_gap_export.py \
 \end{verbatim}
 The omission option was used for order 64; it may be omitted at orders 8
 and 32 to embed the multiplication tables in both TSV and JSON.
+
+The order-128 cutoff census is regenerated by
+\begin{verbatim}
+work/gap-4.16.0/gap -l 'work/gap-4.16.0;' -q \
+  -c 'ERDOS117_ORDER:=128;; ERDOS117_CLIQUE_CUTOFF:=6;;
+  ERDOS117_OUTPUT:="experiments/logs/gap_smallgroups_order128_nu_le6.tsv";;
+  Read("experiments/configs/gap_small_n_export.g");'
+
+PYTHONPYCACHEPREFIX=/tmp/erdos117-pycache \
+python3 src/python/analyze_gap_small_n.py \
+  --input experiments/logs/gap_smallgroups_order128_nu_le6.tsv \
+  --output experiments/logs/gap_smallgroups_order128_nu_le6.json \
+  --order 128 --total-groups 2328 --clique-cutoff 6
+\end{verbatim}
+
+The exterior-square enumeration used for \(h(5)\) is regenerated by
+\begin{verbatim}
+work/gap-4.16.0/gap -l 'work/gap-4.16.0;' -q \
+  -c 'ERDOS117_MAX_Q_ORDER:=16;;
+  ERDOS117_OUTPUT:="experiments/logs/h5_exterior.tsv";;
+  Read("experiments/configs/h5_exterior_scan.g");'
+
+PYTHONPYCACHEPREFIX=/tmp/erdos117-pycache \
+python3 src/python/analyze_h5_exterior_scan.py \
+  --input experiments/logs/h5_exterior.tsv \
+  --gap-script experiments/configs/h5_exterior_scan.g \
+  --output experiments/logs/h5_exterior.json \
+  --stdout-log experiments/logs/h5_exterior.stdout.txt \
+  --clique-cutoff 5
+\end{verbatim}
+
+The maximal-six-cover certificate and the cutoff-six exterior enumeration
+are regenerated and independently checked by
+\begin{verbatim}
+work/gap-4.16.0/gap -q \
+  -c 'ERDOS117_CLASS_OUTPUT:="experiments/logs/f6_maximal_cover_classes.tsv";;
+  ERDOS117_COVER_OUTPUT:="experiments/logs/f6_maximal_cover_groups.tsv";;
+  ERDOS117_STDOUT_LOG:="experiments/logs/f6_maximal_cover_gap.stdout.txt";;
+  Read("experiments/configs/f6_maximal_cover_audit.g");'
+
+PYTHONPYCACHEPREFIX=/tmp/erdos117-pycache \
+python3 src/python/analyze_f6_maximal_cover_audit.py \
+  --classes experiments/logs/f6_maximal_cover_classes.tsv \
+  --groups experiments/logs/f6_maximal_cover_groups.tsv \
+  --gap-script experiments/configs/f6_maximal_cover_audit.g \
+  --gap-stdout experiments/logs/f6_maximal_cover_gap.stdout.txt \
+  --output experiments/logs/f6_maximal_cover.json \
+  --stdout-log experiments/logs/f6_maximal_cover.stdout.txt
+
+PYTHONPYCACHEPREFIX=/tmp/erdos117-pycache \
+python3 src/python/run_h6_c2_5.py \
+  --config experiments/configs/h6_c2_5.json \
+  --output experiments/logs/h6_c2_5.json \
+  --stdout-log experiments/logs/h6_c2_5.stdout.txt
+
+work/gap-4.16.0/gap -q -b \
+  -c 'ERDOS117_OUTPUT:="experiments/logs/h6_exterior.tsv";;
+  ERDOS117_STDOUT_LOG:="experiments/logs/h6_exterior_gap.stdout.txt";;
+  ERDOS117_MAX_Q_ORDER:=36;;
+  Read("experiments/configs/h6_exterior_scan.g");'
+
+PYTHONPYCACHEPREFIX=/tmp/erdos117-pycache \
+python3 src/python/analyze_h6_exterior_scan.py \
+  --input experiments/logs/h6_exterior.tsv \
+  --gap-script experiments/configs/h6_exterior_scan.g \
+  --c2-5-certificate experiments/logs/h6_c2_5.json \
+  --output experiments/logs/h6_exterior.json \
+  --stdout-log experiments/logs/h6_exterior.stdout.txt
+\end{verbatim}
 
 The raw GAP TSV SHA-256 digests at orders \(8,32,64\), respectively, are
 \begin{verbatim}

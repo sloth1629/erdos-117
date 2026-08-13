@@ -22,7 +22,7 @@
 \newcommand{\Tr}{\operatorname{Tr}}
 
 \title{Abelian Covers and Pairwise Noncommuting Sets in Groups:\\
-       Structural Reductions, Self-Contained Bounds, and a Counterexample}
+       Structural Reductions, an Exact Small Value, and a Counterexample}
 \author{Research draft}
 \date{13 August 2026}
 
@@ -38,12 +38,15 @@ do not claim a complete solution of Erd\H{o}s Problem~117.  We do give a
 self-contained exact reduction from arbitrary groups to finite groups that
 preserves the entire central-coset commutation graph; prove
 $\nuG(\CG_G(x))\le\nuG(G)-2$ for every noncentral $x$, and consequently
-$h(n)\le n h(n-2)$; determine $h(1)=h(2)=1$, $h(3)=3$, and $h(4)=4$; and
-construct scalar symplectic groups $S(q,m)$ with
+$h(n)\le n h(n-2)$; determine
+$h(1)=h(2)=1$, $h(3)=3$, $h(4)=4$, and, by exhaustive
+computer-assisted arguments, $h(5)=5$ and $h(6)=6$; and construct scalar symplectic groups $S(q,m)$ with
 $\aG(S(q,m))=q^m+1$.  A complete calculation in $S(3,2)$ gives
 $(\nuG,\aG)=(7,10)$, disproving the candidate formula considered here,
-$h(n)=\max\{n,2^{\lfloor(n-1)/2\rfloor}+1\}$.  Exact computations provide
-independent checks but are not dependencies of these proofs.
+$h(n)=\max\{n,2^{\lfloor(n-1)/2\rfloor}+1\}$.  The two computer-assisted
+values use the subgroup-cover bounds $f(5)=16$ and $f(6)=36$, followed by
+complete Schur-cover/exterior-square enumerations.  The remaining structural
+results and the counterexample have computation-independent proofs.
 \end{abstract}
 
 \section{Problem and status}
@@ -310,6 +313,222 @@ four, while the three reflection subgroups and the subgroup of order three
 form a cover of size four.
 \end{proof}
 
+\section{A computer-assisted exact value at five}
+
+We isolate the external theorem and the finite calculation on which this
+section depends.  If a group is the irredundant union of five subgroups
+$A_1,\ldots,A_5$, Bryce, Fedri and Serena prove that
+\[
+ [G:A_1\cap\cdots\cap A_5]\le16,
+\]
+and that 16 is the best general five-cover bound
+\cite[Theorem~1.2, pp.~470, 475--476]{bryce_fedri_serena_1997}.
+
+\begin{lemma}[Five-clique center bound]\label{lem:index-five}
+If $\nuG(G)=5$, then $[G:\Z(G)]\le16$.
+\end{lemma}
+
+\begin{proof}
+Let $x_1,\ldots,x_5$ be a maximum pairwise noncommuting set.  Maximality
+gives $G=\bigcup_i\CG_G(x_i)$.  This cover is irredundant, since $x_i$ is
+in no $\CG_G(x_j)$ for $j\ne i$, and Lemma~\ref{lem:center} says that its
+intersection is $\Z(G)$.  Apply the cited five-cover theorem.
+\end{proof}
+
+For completeness, we state precisely how central extensions are reduced to
+the finite calculation.  Let $Q$ be finite and let $Q\wedge Q$ denote its
+nonabelian exterior square.  If
+$1\to A\to E\to Q\to1$ is a central extension, the commutator of chosen
+lifts of $q,r\in Q$ is independent of the choices.  The defining crossed-pairing
+relations give a homomorphism
+\[
+ \kappa_E:Q\wedge Q\longrightarrow E',\qquad
+ q\wedge r\longmapsto[\widehat q,\widehat r].                 \tag{1}
+\]
+The construction is $Q$-equivariant for conjugation, so its kernel is
+invariant under the natural $Q$-action. If
+$S\twoheadrightarrow Q$ is a Schur cover, the corresponding map identifies
+$Q\wedge Q$ with $S'$ compatibly with lifted commutators because $Q$ is finite
+\cite[Proposition~7 and Corollary~2, pp.~182--183]
+{brown_johnson_robertson_1987}. Thus every central extension
+commutation graph is determined by an $S$-normal subgroup $K\le S'$:
+two vertices $q,r$ are adjacent exactly when
+$[\widehat q,\widehat r]\notin K$.
+
+\begin{lemma}[Certified exterior-square enumeration]
+\label{lem:h5-enumeration}
+For every group $Q$ of order at most 16, fix the Schur cover
+$S_Q\twoheadrightarrow Q$ constructed in the enumeration. For every
+$S_Q$-normal subgroup $K\le S_Q'$, let
+$\Lambda(Q,K)$ be the graph just described.  Then
+\[
+ \omega(\Lambda(Q,K))\le5\quad\Longrightarrow\quad
+ \chi(\Lambda(Q,K))\le5.                                    \tag{2}
+\]
+\end{lemma}
+
+\begin{proof}[Computer-assisted proof]
+GAP 4.16.0 with SmallGrp 1.5.4 enumerates the 42 groups $Q$ of orders at
+most 16.  For each it constructs a Schur cover $S$, forms $S'$, enumerates
+every subgroup of $S'$, and retains every subgroup normal in $S$.  There
+are 2,986 resulting records and 2,396 distinct labeled adjacency tuples.
+An independent standard-library Python verifier reparses every tuple,
+checks symmetry, and reruns exact branch-and-bound clique search and exact
+DSATUR coloring.  The 364 records with clique number at most five have
+distribution
+\[
+ (\omega,\chi)=(1,1)^{42},(3,3)^{84},(4,4)^4,(5,5)^{234};
+\]
+in particular none violates (2).  Each record stores a clique witness and
+a coloring witness.  The raw export stores, for each $Q$, the total number
+of exterior-square subgroups, the number retained as $S$-normal, and the
+complete retained-kernel serial range.  Source hashes, all records, the
+regeneration commands, and the independent checks are specified in
+Appendix~\ref{app:computation}.
+
+The enumeration is intentionally an overcount: not every $S$-normal $K$
+need arise from a central extension.  Equation~(1) proves that every kernel
+which does arise is included, which is the direction required for (2).
+\end{proof}
+
+\begin{theorem}[Exact value at five]\label{thm:h5}
+\[
+ h(5)=5.
+\]
+\end{theorem}
+
+\begin{proof}
+Let $G$ satisfy $\nuG(G)\le5$.  If $\nuG(G)\le4$, then
+Corollary~\ref{cor:small} gives $\aG(G)\le4$.  Otherwise
+Lemma~\ref{lem:index-five} gives $|Q|\le16$ for $Q=G/\Z(G)$.
+Apply (1) to the central extension $G\to Q$.  Its compressed graph
+$\Delta_G$ is one of the graphs covered, possibly redundantly, by
+Lemma~\ref{lem:h5-enumeration}; hence
+$\aG(G)=\chi(\Delta_G)\le5$.  The extraspecial binary group $S(2,2)$ has
+$(\nuG,\aG)=(5,5)$ by Theorem~\ref{thm:symplectic}, proving equality.
+\end{proof}
+
+\section{A computer-assisted exact value at six}
+
+Write $f(r)$ for the largest possible index of the intersection of an
+irredundant cover by $r$ proper subgroups.  Abdollahi, Ataei, Jafarian Amiri
+and Mohammadi Hassanabadi proved $f(6)=36$
+\cite{abdollahi_ataei_jafarian_hassanabadi_2005}.  Alencar's dissertation
+gives the full maximal/nonmaximal reduction
+\cite[Chapters~2--5]{alencar_2011}.  We audited that proof and replaced its
+old GAP leaves by the finite certificate described below.  The audit also
+corrects a harmless false positive in a later version of the classification:
+$S_3\times S_3$ has 38 six-subgroup covers but none is irredundant.  The
+actual index-36 witness is
+$\operatorname{SmallGroup}(36,13)\cong
+C_2\times((C_3^2)\rtimes C_2)$.
+
+\begin{lemma}[Six-clique center bound]\label{lem:index-six}
+If $\nuG(G)=6$, then $[G:\Z(G)]\le36$.
+\end{lemma}
+
+\begin{proof}
+For a maximum noncommuting set $x_1,\ldots,x_6$, the six centralizers cover
+$G$ irredundantly and have intersection $\Z(G)$ by
+Lemma~\ref{lem:center}.  Apply $f(6)=36$.  This argument does not assume that
+$G$ itself is finite.
+\end{proof}
+
+One center quotient requires a structural argument before the finite
+enumeration.  If $V$ and $W$ are vector spaces over $\F_2$ and
+$B:\bigwedge^2V\to W$ is alternating, write
+$\operatorname{rad}B=\{v:B(v,V)=0\}$.
+
+\begin{lemma}[The exceptional binary quotient]\label{lem:c2five}
+Let $V=\F_2^5$ and suppose $\operatorname{rad}B=0$.  The graph joining
+distinct $v,w$ when $B(v,w)\ne0$ has a clique of size at least nine.
+Consequently $G/\Z(G)\cong C_2^5$ implies $\nuG(G)\ge9$.
+\end{lemma}
+
+\begin{proof}
+Let $L\le\bigwedge^2V^*$ be the image of the dual map $B^*$.  Then
+$\bigcap_{\beta\in L}\operatorname{rad}\beta=0$.
+Suppose first that $L$ contains a rank-four form $\beta$, with radical
+$\langle r\rangle$.  Choose $\gamma\in L$ with $\gamma(r,-)\ne0$ and a
+complement $V=U\oplus\langle r\rangle$.  There is a nonzero $t\in U$ such
+that $\gamma(r,u)=\beta(t,u)$ for $u\in U$.  Extend $t=e_1$ to a symplectic
+basis $e_1,f_1,e_2,f_2$ of $U$, and put
+\[
+ x_1=f_1,\quad x_2=e_1+f_1+e_2,\quad
+ x_3=e_1+f_1+f_2,\quad x_4=e_1+f_1+e_2+f_2.
+\]
+The form $\beta$ is nonzero on every distinct pair in
+$\{t\}\cup\{x_i,x_i+r:1\le i\le4\}$ except possibly
+$\{x_i,x_i+r\}$; those four pairs are detected by $\gamma$, since
+$\gamma(x_i,x_i+r)=\beta(t,x_i)=1$.  This is a nine-clique for $B$.
+
+Otherwise every nonzero member of $L$ has rank two and is decomposable.
+Associate to $a\wedge b$ its two-dimensional support
+$\langle a,b\rangle\le V^*$.  Since the sum of any two distinct members is
+again decomposable, their supports meet in a line.  The elementary
+pairwise-intersecting-plane argument says that either all these supports
+contain one fixed line $\langle a\rangle$, or all lie in one
+three-dimensional subspace of $V^*$.  The latter alternative gives a
+two-dimensional common radical.  In the former, $L\le a\wedge V^*$, and
+zero common radical forces $L=a\wedge V^*$.  The sixteen vectors satisfying
+$a(v)=1$ form a clique: for distinct $v,w$, choose $b$ with
+$b(v+w)=1$, and then $(a\wedge b)(v,w)=1$.  This proves the first claim.
+
+For the consequence, the commutator on $G/\Z(G)$ is an alternating
+$\F_2$-bilinear map with zero radical; a nonzero radical coset would have a
+central representative.  Apply the first claim.
+\end{proof}
+
+\begin{lemma}[Certified exterior-square enumeration at six]
+\label{lem:h6-enumeration}
+Let $Q$ be a group of order at most 36 other than $C_2^5$, let
+$S_Q\twoheadrightarrow Q$ be the fixed Schur cover used in the enumeration,
+and let $K\le S_Q'$ be normal in $S_Q$.  If the graph $\Lambda(Q,K)$ defined
+above has only the identity as an isolated vertex, then
+\[
+ \omega(\Lambda(Q,K))\le6\quad\Longrightarrow\quad
+ \chi(\Lambda(Q,K))\le6.                                   \tag{3}
+\]
+\end{lemma}
+
+\begin{proof}[Computer-assisted proof]
+GAP 4.16.0 with SmallGrp 1.5.4 enumerates all 162 group types of order at
+most 36.  The exceptional $C_2^5$ row is discharged by
+Lemma~\ref{lem:c2five}.  For the other 161 quotients it enumerates every
+$S_Q$-normal subgroup of $S_Q'$, giving 23,527 records with complete serial
+ranges.  Of these, 18,231 have a nontrivial commutator radical and therefore
+cannot be the exact quotient by the center; 4,982 carry a saved seven-clique.
+An independent standard-library Python verifier reparses every adjacency
+tuple and exactly solves all 314 remaining cases.  Their distribution is
+\[
+ (\omega,\chi)=(1,1)^1,(3,3)^1,(4,4)^2,(5,5)^{93},(6,6)^{217}.
+\]
+It also verifies every radical, clique and coloring witness.  As a redundant
+check of Lemma~\ref{lem:c2five}, dependency-free C code enumerates all
+$174{,}251$ two-dimensional pencils of alternating forms on $\F_2^5$; all
+156,240 pencils with zero common radical have a certified nine-clique, and
+an independent Python orbit calculation reproduces the census.  Raw exports,
+hashes, exact witnesses and regeneration commands appear in
+Appendix~\ref{app:computation}.
+\end{proof}
+
+\begin{theorem}[Exact value at six]\label{thm:h6}
+\[
+ h(6)=6.
+\]
+\end{theorem}
+
+\begin{proof}
+Let $G$ satisfy $\nuG(G)\le6$.  The case $\nuG(G)\le5$ is
+Theorem~\ref{thm:h5}.  Otherwise Lemma~\ref{lem:index-six} makes
+$Q=G/\Z(G)$ finite of order at most 36.  Its central-extension commutator
+kernel is one of the $S_Q$-normal kernels described after (1), and its graph
+has only the identity as an isolated vertex.  Lemma~\ref{lem:c2five} rules
+out $Q=C_2^5$; Lemma~\ref{lem:h6-enumeration} gives
+$\aG(G)=\chi(\Delta_G)\le6$.  Finally $S(5,1)$ has
+$(\nuG,\aG)=(6,6)$ by Theorem~\ref{thm:symplectic}, so equality is attained.
+\end{proof}
+
 \section{Scalar symplectic groups}
 
 Let $q$ be a prime power and $m\ge1$.  On
@@ -499,10 +718,14 @@ discovered computationally and then proved independently.  The computation
 excludes an eighth projective clique and colorings with at most nine colors,
 and verifies a ten-subgroup symplectic-spread cover.  Full saved-data scope,
 hashes, and commands are recorded in Appendix~\ref{app:computation}.
+The same verifier checks the load-bearing exterior-square enumerations in
+Lemmas~\ref{lem:h5-enumeration} and~\ref{lem:h6-enumeration}.  Separate symmetry-reduced exact searches
+give $(\nuG,\aG)=(18,26)$ for $S(5,2)$ and $(13,28)$ for $S(3,3)$; these
+larger scalar cases do not improve the lower-bound efficiency of $S(3,2)$.
 
 \section{What remains open}
 
-The manuscript does not determine $h(n)$ beyond $n=4$, does not determine
+The manuscript does not determine $h(n)$ beyond $n=6$, does not determine
 the optimal exponential base, and does not prove that such a base exists.
 The most concrete geometric subproblem is to control $\pi(q,m)$, the maximum
 partial-ovoid size in a symplectic polar space, relative to the exact cover
@@ -521,7 +744,8 @@ communication \cite[Example~4.5, p.~488]
 rather than a checked primary proof. I\c{s}{\i}k, Theorem~12, pp.~6--7,
 proves $\nuG(S(2,m))=2m+1$, but not the cover lower bound
 \cite{isik_2005}. All claims in this paper that are needed for its
-mathematical conclusions have instead been proved above.
+mathematical conclusions have instead been proved above or supplied by the
+verified cited theorems stated with their exact hypotheses.
 
 \input{computational_appendix}
 

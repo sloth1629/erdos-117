@@ -13,7 +13,7 @@ These boxes remain open, so no complete solution is claimed.
 
 ## Passed release checks
 
-- [x] Definitions, boundary conventions, and \(n=1,2,3,4\) checked.
+- [x] Definitions, boundary conventions, and \(n=1,2,3,4,5,6\) checked.
 - [x] Arbitrary and finite groups distinguished and connected by a proved
   exact finite commutation model.
 - [x] Central elements, central cosets, and the false quotient shortcut
@@ -22,11 +22,19 @@ These boxes remain open, so no complete solution is claimed.
   are not load-bearing.
 - [x] The \(S(3,2)\) counterexample has a full structural proof and an
   independent exact computation.
+- [x] The computer-assisted proof of \(h(5)=5\) records its primary-source
+  cover theorem, Schur-cover reduction, complete GAP export, checksums, and
+  independently checked clique/coloring certificates.
+- [x] The computer-assisted proof of \(h(6)=6\) records its repaired
+  six-cover proof, independently reconstructed finite leaves, the structural
+  \(C_2^5\) exclusion, complete exterior-square export, and independently
+  checked radical/clique/coloring certificates.
 - [x] Product and limit assertions audited without assuming one-shot
   multiplicativity.
 - [x] Computational witnesses, configurations, versions, hashes, and
   independent verifiers committed.
-- [x] Full verification suite passes 11/11 tests.
+- [x] Full verification suite passes; exact count, output, and runtime are
+  committed for this milestone.
 - [x] Proof dependency graph is acyclic.
 - [x] Backward/forward source audit completed to the stated search boundary;
   negative novelty claims remain qualified.
@@ -39,4 +47,5 @@ These boxes remain open, so no complete solution is claimed.
 - [ ] Bertram (1983), printed p. 40, acquired.
 - [ ] Manuscript PDF compiled and visually inspected. TeX was not installed;
   only the source artifact is delivered.
-- [ ] \(p=5,m=2\) scalar-symplectic clique number determined.
+- [x] \(p=5,m=2\) and \(p=3,m=3\) scalar-symplectic clique numbers
+  determined by symmetry-reduced exact searches.

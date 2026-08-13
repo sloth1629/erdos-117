@@ -211,7 +211,7 @@ count, every retained normal-kernel count, and a serial number for every
 kernel; the serial ranges are complete. The Python verifier reparses all
 2,986 graphs and checks every clique and coloring witness.
 
-[COMPUTED] Combining this exhaustive lemma with the cited-verified
+[PROVED] Combining this exhaustive lemma with the cited-verified
 Bryce--Fedri--Serena value \(f(5)=16\) and the repository proof that
 \(\nu(G)=5\) implies \([G:Z(G)]\le16\) yields the computer-assisted exact
 conclusion
@@ -223,6 +223,42 @@ h(5)=5.
 Indeed groups with \(\nu\le4\) satisfy the already proved \(h(4)=4\); groups
 with \(\nu=5\) have one of the enumerated central-coset graphs and hence
 \(a(G)=\chi\le5\). The extraspecial group \(E_2\) supplies equality.
+
+### Exterior-square enumeration for \(h(6)\)
+
+[PROVED] The cited-verified value \(f(6)=36\) and the repository's
+irredundant-centralizer bridge imply
+\[
+\nu(G)=6\quad\Longrightarrow\quad [G:Z(G)]\le36
+\]
+for arbitrary groups. The self-contained alternating-form proof in
+`notes/exact_h6.md` separately excludes the only infeasible exterior-square
+enumeration case: if \(G/Z(G)\cong C_2^5\), then \(\nu(G)\ge9\).
+
+[COMPUTED] GAP 4.16.0 and SmallGrp 1.5.4 enumerated all 162 quotient types of
+order at most 36. For the 161 nonexceptional quotients it enumerated every one
+of 23,527 action-invariant exterior-square kernels. Exact verification splits
+them into 18,231 nonfaithful-radical graphs, 4,982 graphs with a saved
+seven-clique, and 314 faithful candidates. The candidates have distribution
+
+| \((\omega,\chi)\) | (1,1) | (3,3) | (4,4) | (5,5) | (6,6) |
+|:---|---:|---:|---:|---:|---:|
+| records | 1 | 1 | 2 | 93 | 217 |
+
+[COMPUTED] A redundant \(C_2^5\) certificate enumerates all 174,251
+two-dimensional pencils of alternating forms on \(\mathbb F_2^5\). All
+156,240 pencils with zero common radical have a checked nine-clique, and an
+independent Python transvection-orbit reconstruction verifies the complete
+split 52,080 of rank profile \((2,4,4)\) and 104,160 of profile \((4,4,4)\).
+
+[PROVED] Consequently every group with \(\nu(G)\le6\) has \(a(G)\le6\).
+The already exact \(h(5)=5\) handles the smaller-clique case, and the
+Heisenberg group \(H_5\) has \((\nu,a)=(6,6)\). Therefore the
+computer-assisted exact value is
+
+\[
+h(6)=6.
+\]
 
 ### Direct SmallGroups scans
 

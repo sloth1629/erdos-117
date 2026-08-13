@@ -1,0 +1,1208 @@
+{
+  "ambient_class_record_count": 165,
+  "ambient_families": [
+    {
+      "ambient": [
+        "C2xS3xS3"
+      ],
+      "class_serials_complete": true,
+      "concrete_subgroup_count": 206,
+      "conjugacy_class_count": 69,
+      "duplicate_class_count": 51,
+      "family": "auxiliary_C2S3square_all",
+      "id_multiplicities": {
+        "1,1": 1,
+        "12,4": 13,
+        "12,5": 2,
+        "18,3": 4,
+        "18,4": 2,
+        "18,5": 1,
+        "2,1": 7,
+        "24,14": 2,
+        "3,1": 3,
+        "36,10": 4,
+        "36,12": 2,
+        "36,13": 1,
+        "4,2": 7,
+        "6,1": 10,
+        "6,2": 7,
+        "72,46": 1,
+        "8,5": 1,
+        "9,2": 1
+      },
+      "isomorphism_type_count": 18
+    },
+    {
+      "ambient": [
+        "S4"
+      ],
+      "class_serials_complete": true,
+      "concrete_subgroup_count": 30,
+      "conjugacy_class_count": 11,
+      "duplicate_class_count": 2,
+      "family": "auxiliary_S4_all",
+      "id_multiplicities": {
+        "1,1": 1,
+        "12,3": 1,
+        "2,1": 2,
+        "24,12": 1,
+        "3,1": 1,
+        "4,1": 1,
+        "4,2": 2,
+        "6,1": 1,
+        "8,3": 1
+      },
+      "isomorphism_type_count": 9
+    },
+    {
+      "ambient": [
+        "C2xC3xS3"
+      ],
+      "class_serials_complete": true,
+      "concrete_subgroup_count": 1,
+      "conjugacy_class_count": 1,
+      "duplicate_class_count": 0,
+      "family": "lemma_1a_C2C3S3",
+      "id_multiplicities": {
+        "36,12": 1
+      },
+      "isomorphism_type_count": 1
+    },
+    {
+      "ambient": [
+        "S3^3"
+      ],
+      "class_serials_complete": true,
+      "concrete_subgroup_count": 1,
+      "conjugacy_class_count": 1,
+      "duplicate_class_count": 0,
+      "family": "lemma_1a_S3cube",
+      "id_multiplicities": {
+        "216,162": 1
+      },
+      "isomorphism_type_count": 1
+    },
+    {
+      "ambient": [
+        "S3^3"
+      ],
+      "class_serials_complete": true,
+      "concrete_subgroup_count": 7,
+      "conjugacy_class_count": 7,
+      "duplicate_class_count": 4,
+      "family": "lemma_1b_S3cube_order108",
+      "id_multiplicities": {
+        "108,38": 3,
+        "108,39": 3,
+        "108,40": 1
+      },
+      "isomorphism_type_count": 3
+    },
+    {
+      "ambient": [
+        "S3^3"
+      ],
+      "class_serials_complete": true,
+      "concrete_subgroup_count": 9,
+      "conjugacy_class_count": 3,
+      "duplicate_class_count": 2,
+      "family": "lemma_1b_S3cube_order72",
+      "id_multiplicities": {
+        "72,46": 3
+      },
+      "isomorphism_type_count": 1
+    },
+    {
+      "ambient": [
+        "S4^2"
+      ],
+      "class_serials_complete": true,
+      "concrete_subgroup_count": 88,
+      "conjugacy_class_count": 21,
+      "duplicate_class_count": 15,
+      "family": "lemma_1c_S4square_order48",
+      "id_multiplicities": {
+        "48,30": 2,
+        "48,31": 2,
+        "48,38": 2,
+        "48,48": 10,
+        "48,49": 4,
+        "48,50": 1
+      },
+      "isomorphism_type_count": 6
+    },
+    {
+      "ambient": [
+        "S4^2"
+      ],
+      "class_serials_complete": true,
+      "concrete_subgroup_count": 44,
+      "conjugacy_class_count": 15,
+      "duplicate_class_count": 9,
+      "family": "lemma_1c_S4square_order96",
+      "id_multiplicities": {
+        "96,186": 2,
+        "96,187": 2,
+        "96,195": 4,
+        "96,197": 2,
+        "96,226": 4,
+        "96,227": 1
+      },
+      "isomorphism_type_count": 6
+    },
+    {
+      "ambient": [
+        "SmallGroups(100)"
+      ],
+      "class_serials_complete": true,
+      "concrete_subgroup_count": 16,
+      "conjugacy_class_count": 16,
+      "duplicate_class_count": 0,
+      "family": "lemma_2_order100",
+      "id_multiplicities": {
+        "100,1": 1,
+        "100,10": 1,
+        "100,11": 1,
+        "100,12": 1,
+        "100,13": 1,
+        "100,14": 1,
+        "100,15": 1,
+        "100,16": 1,
+        "100,2": 1,
+        "100,3": 1,
+        "100,4": 1,
+        "100,5": 1,
+        "100,6": 1,
+        "100,7": 1,
+        "100,8": 1,
+        "100,9": 1
+      },
+      "isomorphism_type_count": 16
+    },
+    {
+      "ambient": [
+        "SmallGroups(50)"
+      ],
+      "class_serials_complete": true,
+      "concrete_subgroup_count": 5,
+      "conjugacy_class_count": 5,
+      "duplicate_class_count": 0,
+      "family": "lemma_2_order50",
+      "id_multiplicities": {
+        "50,1": 1,
+        "50,2": 1,
+        "50,3": 1,
+        "50,4": 1,
+        "50,5": 1
+      },
+      "isomorphism_type_count": 5
+    },
+    {
+      "ambient": [
+        "S3^3"
+      ],
+      "class_serials_complete": true,
+      "concrete_subgroup_count": 90,
+      "conjugacy_class_count": 14,
+      "duplicate_class_count": 7,
+      "family": "lemma_3_S3cube_subdirect",
+      "id_multiplicities": {
+        "108,39": 3,
+        "108,40": 1,
+        "18,4": 4,
+        "216,162": 1,
+        "36,10": 3,
+        "54,14": 1,
+        "6,1": 1
+      },
+      "isomorphism_type_count": 7
+    },
+    {
+      "ambient": [
+        "A5"
+      ],
+      "class_serials_complete": true,
+      "concrete_subgroup_count": 1,
+      "conjugacy_class_count": 1,
+      "duplicate_class_count": 0,
+      "family": "semisimple_A5",
+      "id_multiplicities": {
+        "60,5": 1
+      },
+      "isomorphism_type_count": 1
+    },
+    {
+      "ambient": [
+        "S5"
+      ],
+      "class_serials_complete": true,
+      "concrete_subgroup_count": 1,
+      "conjugacy_class_count": 1,
+      "duplicate_class_count": 0,
+      "family": "semisimple_S5",
+      "id_multiplicities": {
+        "120,34": 1
+      },
+      "isomorphism_type_count": 1
+    }
+  ],
+  "audited_isomorphism_type_count": 48,
+  "case_conclusions": {
+    "S4_subgroup_gap": "all 11 conjugacy classes, 30 subgroups, and 9 isomorphism types have no qualifying covers",
+    "lemma_4_1_1a": "no qualifying covers in S3^3 or C2xC3xS3",
+    "lemma_4_1_1b": "no qualifying covers in order-72/108 subgroups of S3^3",
+    "lemma_4_1_1c": "no qualifying covers in order-48/96 subgroups of S4^2",
+    "lemma_4_1_2d": "SmallGroup(50,4): 25 qualifying covers, all |D|=2",
+    "lemma_4_1_2e": "SmallGroup(100,11): 25 qualifying covers, all |D|=4",
+    "lemma_4_1_3": "S3^3 subdirect positives are exactly SmallGroup(18,4) and SmallGroup(54,14)",
+    "semisimple": "A5 and S5 have no qualifying covers"
+  },
+  "corrections": [
+    "SmallGroup(36,10)=S3xS3 has 38 six-covers but none is irredundant; it is not the index-36 witness.",
+    "SmallGroup(36,13)=C2x((C3xC3):C2) has 72 qualifying covers with trivial intersection and is the audited index-36 witness.",
+    "SmallGroup IDs and exact subgroup masks replace the dissertation's inconsistent L_i indexing on page 59."
+  ],
+  "gap_metadata": {
+    "COVER_SIZE": "6",
+    "GAP_VERSION": "4.16.0",
+    "SMALLGRP_VERSION": "1.5.4"
+  },
+  "generated_at_utc": "2026-08-13T13:04:51+00:00",
+  "groups": [
+    {
+      "case_tags": [
+        "auxiliary_S4_all",
+        "auxiliary_C2S3square_all"
+      ],
+      "cover_count": 0,
+      "group_id": "1,1",
+      "intersection_distribution": {},
+      "irredundant_cover_count": 0,
+      "maximal_count": 0,
+      "order": 1,
+      "qualifying_certificate_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "qualifying_count": 0,
+      "six_combinations": 0,
+      "structure": "1",
+      "subgroup_count": 1
+    },
+    {
+      "case_tags": [
+        "auxiliary_S4_all",
+        "auxiliary_C2S3square_all"
+      ],
+      "cover_count": 0,
+      "group_id": "2,1",
+      "intersection_distribution": {},
+      "irredundant_cover_count": 0,
+      "maximal_count": 1,
+      "order": 2,
+      "qualifying_certificate_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "qualifying_count": 0,
+      "six_combinations": 0,
+      "structure": "C2",
+      "subgroup_count": 2
+    },
+    {
+      "case_tags": [
+        "auxiliary_S4_all",
+        "auxiliary_C2S3square_all"
+      ],
+      "cover_count": 0,
+      "group_id": "3,1",
+      "intersection_distribution": {},
+      "irredundant_cover_count": 0,
+      "maximal_count": 1,
+      "order": 3,
+      "qualifying_certificate_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "qualifying_count": 0,
+      "six_combinations": 0,
+      "structure": "C3",
+      "subgroup_count": 2
+    },
+    {
+      "case_tags": [
+        "auxiliary_S4_all"
+      ],
+      "cover_count": 0,
+      "group_id": "4,1",
+      "intersection_distribution": {},
+      "irredundant_cover_count": 0,
+      "maximal_count": 1,
+      "order": 4,
+      "qualifying_certificate_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "qualifying_count": 0,
+      "six_combinations": 0,
+      "structure": "C4",
+      "subgroup_count": 3
+    },
+    {
+      "case_tags": [
+        "auxiliary_S4_all",
+        "auxiliary_C2S3square_all"
+      ],
+      "cover_count": 0,
+      "group_id": "4,2",
+      "intersection_distribution": {},
+      "irredundant_cover_count": 0,
+      "maximal_count": 3,
+      "order": 4,
+      "qualifying_certificate_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "qualifying_count": 0,
+      "six_combinations": 0,
+      "structure": "C2 x C2",
+      "subgroup_count": 5
+    },
+    {
+      "case_tags": [
+        "auxiliary_S4_all",
+        "lemma_3_S3cube_subdirect",
+        "auxiliary_C2S3square_all"
+      ],
+      "cover_count": 0,
+      "group_id": "6,1",
+      "intersection_distribution": {},
+      "irredundant_cover_count": 0,
+      "maximal_count": 4,
+      "order": 6,
+      "qualifying_certificate_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "qualifying_count": 0,
+      "six_combinations": 0,
+      "structure": "S3",
+      "subgroup_count": 6
+    },
+    {
+      "case_tags": [
+        "auxiliary_C2S3square_all"
+      ],
+      "cover_count": 0,
+      "group_id": "6,2",
+      "intersection_distribution": {},
+      "irredundant_cover_count": 0,
+      "maximal_count": 2,
+      "order": 6,
+      "qualifying_certificate_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "qualifying_count": 0,
+      "six_combinations": 0,
+      "structure": "C6",
+      "subgroup_count": 4
+    },
+    {
+      "case_tags": [
+        "auxiliary_S4_all"
+      ],
+      "cover_count": 0,
+      "group_id": "8,3",
+      "intersection_distribution": {},
+      "irredundant_cover_count": 0,
+      "maximal_count": 3,
+      "order": 8,
+      "qualifying_certificate_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "qualifying_count": 0,
+      "six_combinations": 0,
+      "structure": "D8",
+      "subgroup_count": 10
+    },
+    {
+      "case_tags": [
+        "auxiliary_C2S3square_all"
+      ],
+      "cover_count": 7,
+      "group_id": "8,5",
+      "intersection_distribution": {},
+      "irredundant_cover_count": 0,
+      "maximal_count": 7,
+      "order": 8,
+      "qualifying_certificate_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "qualifying_count": 0,
+      "six_combinations": 7,
+      "structure": "C2 x C2 x C2",
+      "subgroup_count": 16
+    },
+    {
+      "case_tags": [
+        "auxiliary_C2S3square_all"
+      ],
+      "cover_count": 0,
+      "group_id": "9,2",
+      "intersection_distribution": {},
+      "irredundant_cover_count": 0,
+      "maximal_count": 4,
+      "order": 9,
+      "qualifying_certificate_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "qualifying_count": 0,
+      "six_combinations": 0,
+      "structure": "C3 x C3",
+      "subgroup_count": 6
+    },
+    {
+      "case_tags": [
+        "auxiliary_S4_all"
+      ],
+      "cover_count": 0,
+      "group_id": "12,3",
+      "intersection_distribution": {},
+      "irredundant_cover_count": 0,
+      "maximal_count": 5,
+      "order": 12,
+      "qualifying_certificate_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "qualifying_count": 0,
+      "six_combinations": 0,
+      "structure": "A4",
+      "subgroup_count": 10
+    },
+    {
+      "case_tags": [
+        "auxiliary_C2S3square_all"
+      ],
+      "cover_count": 1,
+      "group_id": "12,4",
+      "intersection_distribution": {},
+      "irredundant_cover_count": 0,
+      "maximal_count": 6,
+      "order": 12,
+      "qualifying_certificate_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "qualifying_count": 0,
+      "six_combinations": 1,
+      "structure": "D12",
+      "subgroup_count": 16
+    },
+    {
+      "case_tags": [
+        "auxiliary_C2S3square_all"
+      ],
+      "cover_count": 0,
+      "group_id": "12,5",
+      "intersection_distribution": {},
+      "irredundant_cover_count": 0,
+      "maximal_count": 4,
+      "order": 12,
+      "qualifying_certificate_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "qualifying_count": 0,
+      "six_combinations": 0,
+      "structure": "C6 x C2",
+      "subgroup_count": 10
+    },
+    {
+      "case_tags": [
+        "auxiliary_C2S3square_all"
+      ],
+      "cover_count": 0,
+      "group_id": "18,3",
+      "intersection_distribution": {},
+      "irredundant_cover_count": 0,
+      "maximal_count": 5,
+      "order": 18,
+      "qualifying_certificate_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "qualifying_count": 0,
+      "six_combinations": 0,
+      "structure": "C3 x S3",
+      "subgroup_count": 14
+    },
+    {
+      "case_tags": [
+        "lemma_3_S3cube_subdirect",
+        "auxiliary_C2S3square_all"
+      ],
+      "cover_count": 702,
+      "group_id": "18,4",
+      "intersection_distribution": {
+        "1": 234
+      },
+      "irredundant_cover_count": 234,
+      "maximal_count": 13,
+      "order": 18,
+      "qualifying_certificate_sha256": "f8ea8ea021fed9ab2e524e1ef20cfe3e9c82b2f99ee0fb1e9e877b183a2adbbc",
+      "qualifying_count": 234,
+      "six_combinations": 1716,
+      "structure": "(C3 x C3) : C2",
+      "subgroup_count": 28
+    },
+    {
+      "case_tags": [
+        "auxiliary_C2S3square_all"
+      ],
+      "cover_count": 0,
+      "group_id": "18,5",
+      "intersection_distribution": {},
+      "irredundant_cover_count": 0,
+      "maximal_count": 5,
+      "order": 18,
+      "qualifying_certificate_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "qualifying_count": 0,
+      "six_combinations": 0,
+      "structure": "C6 x C3",
+      "subgroup_count": 12
+    },
+    {
+      "case_tags": [
+        "auxiliary_S4_all"
+      ],
+      "cover_count": 6,
+      "group_id": "24,12",
+      "intersection_distribution": {},
+      "irredundant_cover_count": 0,
+      "maximal_count": 8,
+      "order": 24,
+      "qualifying_certificate_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "qualifying_count": 0,
+      "six_combinations": 28,
+      "structure": "S4",
+      "subgroup_count": 30
+    },
+    {
+      "case_tags": [
+        "auxiliary_C2S3square_all"
+      ],
+      "cover_count": 177,
+      "group_id": "24,14",
+      "intersection_distribution": {
+        "1": 4
+      },
+      "irredundant_cover_count": 4,
+      "maximal_count": 10,
+      "order": 24,
+      "qualifying_certificate_sha256": "996b04288bf881b9a7baff0e89858ef72085f1083c042a36afa380b8a3cf1916",
+      "qualifying_count": 4,
+      "six_combinations": 210,
+      "structure": "C2 x C2 x S3",
+      "subgroup_count": 54
+    },
+    {
+      "case_tags": [
+        "lemma_3_S3cube_subdirect",
+        "auxiliary_C2S3square_all"
+      ],
+      "cover_count": 38,
+      "group_id": "36,10",
+      "intersection_distribution": {},
+      "irredundant_cover_count": 0,
+      "maximal_count": 9,
+      "order": 36,
+      "qualifying_certificate_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "qualifying_count": 0,
+      "six_combinations": 84,
+      "structure": "S3 x S3",
+      "subgroup_count": 60
+    },
+    {
+      "case_tags": [
+        "lemma_1a_C2C3S3",
+        "auxiliary_C2S3square_all"
+      ],
+      "cover_count": 6,
+      "group_id": "36,12",
+      "intersection_distribution": {},
+      "irredundant_cover_count": 0,
+      "maximal_count": 7,
+      "order": 36,
+      "qualifying_certificate_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "qualifying_count": 0,
+      "six_combinations": 7,
+      "structure": "C6 x S3",
+      "subgroup_count": 36
+    },
+    {
+      "case_tags": [
+        "auxiliary_C2S3square_all"
+      ],
+      "cover_count": 1237,
+      "group_id": "36,13",
+      "intersection_distribution": {
+        "1": 72
+      },
+      "irredundant_cover_count": 306,
+      "maximal_count": 15,
+      "order": 36,
+      "qualifying_certificate_sha256": "3733dc3fba9c0f36d1089ea496aa812bd1d431b168f2148bc09b362e805e3c06",
+      "qualifying_count": 72,
+      "six_combinations": 5005,
+      "structure": "C2 x ((C3 x C3) : C2)",
+      "subgroup_count": 78
+    },
+    {
+      "case_tags": [
+        "lemma_1c_S4square_order48"
+      ],
+      "cover_count": 6,
+      "group_id": "48,30",
+      "intersection_distribution": {},
+      "irredundant_cover_count": 0,
+      "maximal_count": 8,
+      "order": 48,
+      "qualifying_certificate_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "qualifying_count": 0,
+      "six_combinations": 28,
+      "structure": "A4 : C4",
+      "subgroup_count": 52
+    },
+    {
+      "case_tags": [
+        "lemma_1c_S4square_order48"
+      ],
+      "cover_count": 1,
+      "group_id": "48,31",
+      "intersection_distribution": {},
+      "irredundant_cover_count": 0,
+      "maximal_count": 6,
+      "order": 48,
+      "qualifying_certificate_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "qualifying_count": 0,
+      "six_combinations": 1,
+      "structure": "C4 x A4",
+      "subgroup_count": 42
+    },
+    {
+      "case_tags": [
+        "lemma_1c_S4square_order48"
+      ],
+      "cover_count": 177,
+      "group_id": "48,38",
+      "intersection_distribution": {},
+      "irredundant_cover_count": 4,
+      "maximal_count": 10,
+      "order": 48,
+      "qualifying_certificate_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "qualifying_count": 0,
+      "six_combinations": 210,
+      "structure": "D8 x S3",
+      "subgroup_count": 120
+    },
+    {
+      "case_tags": [
+        "lemma_1c_S4square_order48"
+      ],
+      "cover_count": 49,
+      "group_id": "48,48",
+      "intersection_distribution": {},
+      "irredundant_cover_count": 0,
+      "maximal_count": 10,
+      "order": 48,
+      "qualifying_certificate_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "qualifying_count": 0,
+      "six_combinations": 210,
+      "structure": "C2 x S4",
+      "subgroup_count": 98
+    },
+    {
+      "case_tags": [
+        "lemma_1c_S4square_order48"
+      ],
+      "cover_count": 13,
+      "group_id": "48,49",
+      "intersection_distribution": {},
+      "irredundant_cover_count": 0,
+      "maximal_count": 8,
+      "order": 48,
+      "qualifying_certificate_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "qualifying_count": 0,
+      "six_combinations": 28,
+      "structure": "C2 x C2 x A4",
+      "subgroup_count": 92
+    },
+    {
+      "case_tags": [
+        "lemma_1c_S4square_order48"
+      ],
+      "cover_count": 336,
+      "group_id": "48,50",
+      "intersection_distribution": {},
+      "irredundant_cover_count": 0,
+      "maximal_count": 21,
+      "order": 48,
+      "qualifying_certificate_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "qualifying_count": 0,
+      "six_combinations": 54264,
+      "structure": "(C2 x C2 x C2 x C2) : C3",
+      "subgroup_count": 104
+    },
+    {
+      "case_tags": [
+        "lemma_2_order50"
+      ],
+      "cover_count": 1,
+      "group_id": "50,1",
+      "intersection_distribution": {},
+      "irredundant_cover_count": 1,
+      "maximal_count": 6,
+      "order": 50,
+      "qualifying_certificate_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "qualifying_count": 0,
+      "six_combinations": 1,
+      "structure": "D50",
+      "subgroup_count": 34
+    },
+    {
+      "case_tags": [
+        "lemma_2_order50"
+      ],
+      "cover_count": 31,
+      "group_id": "50,4",
+      "intersection_distribution": {
+        "2": 25
+      },
+      "irredundant_cover_count": 31,
+      "maximal_count": 31,
+      "order": 50,
+      "qualifying_certificate_sha256": "2bffb34fddb4b0b3226cc24623a99cf57ca9622c48fe5580eb5aa942a29be906",
+      "qualifying_count": 25,
+      "six_combinations": 736281,
+      "structure": "(C5 x C5) : C2",
+      "subgroup_count": 64
+    },
+    {
+      "case_tags": [
+        "lemma_3_S3cube_subdirect"
+      ],
+      "cover_count": 91260,
+      "group_id": "54,14",
+      "intersection_distribution": {
+        "2": 6318
+      },
+      "irredundant_cover_count": 9360,
+      "maximal_count": 40,
+      "order": 54,
+      "qualifying_certificate_sha256": "e4bb07de8abfe415481047a0e4f304e99bd83c1049bbeb9a9692cc65e7280f89",
+      "qualifying_count": 6318,
+      "six_combinations": 3838380,
+      "structure": "(C3 x C3 x C3) : C2",
+      "subgroup_count": 212
+    },
+    {
+      "case_tags": [
+        "semisimple_A5"
+      ],
+      "cover_count": 0,
+      "group_id": "60,5",
+      "intersection_distribution": {},
+      "irredundant_cover_count": 0,
+      "maximal_count": 21,
+      "order": 60,
+      "qualifying_certificate_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "qualifying_count": 0,
+      "six_combinations": 54264,
+      "structure": "A5",
+      "subgroup_count": 59
+    },
+    {
+      "case_tags": [
+        "lemma_1b_S3cube_order72",
+        "auxiliary_C2S3square_all"
+      ],
+      "cover_count": 767,
+      "group_id": "72,46",
+      "intersection_distribution": {},
+      "irredundant_cover_count": 8,
+      "maximal_count": 13,
+      "order": 72,
+      "qualifying_certificate_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "qualifying_count": 0,
+      "six_combinations": 1716,
+      "structure": "C2 x S3 x S3",
+      "subgroup_count": 206
+    },
+    {
+      "case_tags": [
+        "lemma_1c_S4square_order96"
+      ],
+      "cover_count": 49,
+      "group_id": "96,186",
+      "intersection_distribution": {},
+      "irredundant_cover_count": 0,
+      "maximal_count": 10,
+      "order": 96,
+      "qualifying_certificate_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "qualifying_count": 0,
+      "six_combinations": 210,
+      "structure": "C4 x S4",
+      "subgroup_count": 172
+    },
+    {
+      "case_tags": [
+        "lemma_1c_S4square_order96"
+      ],
+      "cover_count": 49,
+      "group_id": "96,187",
+      "intersection_distribution": {},
+      "irredundant_cover_count": 0,
+      "maximal_count": 10,
+      "order": 96,
+      "qualifying_certificate_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "qualifying_count": 0,
+      "six_combinations": 210,
+      "structure": "C4 : S4",
+      "subgroup_count": 218
+    },
+    {
+      "case_tags": [
+        "lemma_1c_S4square_order96"
+      ],
+      "cover_count": 49,
+      "group_id": "96,195",
+      "intersection_distribution": {},
+      "irredundant_cover_count": 0,
+      "maximal_count": 10,
+      "order": 96,
+      "qualifying_certificate_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "qualifying_count": 0,
+      "six_combinations": 210,
+      "structure": "(C2 x C2) : S4",
+      "subgroup_count": 234
+    },
+    {
+      "case_tags": [
+        "lemma_1c_S4square_order96"
+      ],
+      "cover_count": 13,
+      "group_id": "96,197",
+      "intersection_distribution": {},
+      "irredundant_cover_count": 0,
+      "maximal_count": 8,
+      "order": 96,
+      "qualifying_certificate_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "qualifying_count": 0,
+      "six_combinations": 28,
+      "structure": "D8 x A4",
+      "subgroup_count": 208
+    },
+    {
+      "case_tags": [
+        "lemma_1c_S4square_order96"
+      ],
+      "cover_count": 1033,
+      "group_id": "96,226",
+      "intersection_distribution": {},
+      "irredundant_cover_count": 4,
+      "maximal_count": 14,
+      "order": 96,
+      "qualifying_certificate_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "qualifying_count": 0,
+      "six_combinations": 3003,
+      "structure": "C2 x C2 x S4",
+      "subgroup_count": 420
+    },
+    {
+      "case_tags": [
+        "lemma_1c_S4square_order96"
+      ],
+      "cover_count": 66,
+      "group_id": "96,227",
+      "intersection_distribution": {},
+      "irredundant_cover_count": 0,
+      "maximal_count": 16,
+      "order": 96,
+      "qualifying_certificate_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "qualifying_count": 0,
+      "six_combinations": 8008,
+      "structure": "(C2 x C2) : S4",
+      "subgroup_count": 250
+    },
+    {
+      "case_tags": [
+        "lemma_2_order100"
+      ],
+      "cover_count": 1,
+      "group_id": "100,3",
+      "intersection_distribution": {},
+      "irredundant_cover_count": 1,
+      "maximal_count": 6,
+      "order": 100,
+      "qualifying_certificate_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "qualifying_count": 0,
+      "six_combinations": 1,
+      "structure": "C25 : C4",
+      "subgroup_count": 65
+    },
+    {
+      "case_tags": [
+        "lemma_2_order100"
+      ],
+      "cover_count": 2,
+      "group_id": "100,10",
+      "intersection_distribution": {},
+      "irredundant_cover_count": 2,
+      "maximal_count": 11,
+      "order": 100,
+      "qualifying_certificate_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "qualifying_count": 0,
+      "six_combinations": 462,
+      "structure": "(C5 x C5) : C4",
+      "subgroup_count": 56
+    },
+    {
+      "case_tags": [
+        "lemma_2_order100"
+      ],
+      "cover_count": 31,
+      "group_id": "100,11",
+      "intersection_distribution": {
+        "4": 25
+      },
+      "irredundant_cover_count": 31,
+      "maximal_count": 31,
+      "order": 100,
+      "qualifying_certificate_sha256": "9ffaf879f464dd9ec05b9b263c5f0f8965a02d9ac2569cb5439ab051328af2e7",
+      "qualifying_count": 25,
+      "six_combinations": 736281,
+      "structure": "(C5 x C5) : C4",
+      "subgroup_count": 120
+    },
+    {
+      "case_tags": [
+        "lemma_2_order100"
+      ],
+      "cover_count": 2,
+      "group_id": "100,12",
+      "intersection_distribution": {},
+      "irredundant_cover_count": 2,
+      "maximal_count": 11,
+      "order": 100,
+      "qualifying_certificate_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "qualifying_count": 0,
+      "six_combinations": 462,
+      "structure": "(C5 x C5) : C4",
+      "subgroup_count": 100
+    },
+    {
+      "case_tags": [
+        "lemma_2_order100"
+      ],
+      "cover_count": 122,
+      "group_id": "100,13",
+      "intersection_distribution": {},
+      "irredundant_cover_count": 2,
+      "maximal_count": 13,
+      "order": 100,
+      "qualifying_certificate_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "qualifying_count": 0,
+      "six_combinations": 1716,
+      "structure": "D10 x D10",
+      "subgroup_count": 124
+    },
+    {
+      "case_tags": [
+        "lemma_1b_S3cube_order108"
+      ],
+      "cover_count": 63,
+      "group_id": "108,38",
+      "intersection_distribution": {},
+      "irredundant_cover_count": 0,
+      "maximal_count": 10,
+      "order": 108,
+      "qualifying_certificate_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "qualifying_count": 0,
+      "six_combinations": 210,
+      "structure": "C3 x S3 x S3",
+      "subgroup_count": 152
+    },
+    {
+      "case_tags": [
+        "lemma_1b_S3cube_order108",
+        "lemma_3_S3cube_subdirect"
+      ],
+      "cover_count": 2030,
+      "group_id": "108,39",
+      "intersection_distribution": {},
+      "irredundant_cover_count": 306,
+      "maximal_count": 18,
+      "order": 108,
+      "qualifying_certificate_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "qualifying_count": 0,
+      "six_combinations": 18564,
+      "structure": "((C3 x C3) : C2) x S3",
+      "subgroup_count": 368
+    },
+    {
+      "case_tags": [
+        "lemma_1b_S3cube_order108",
+        "lemma_3_S3cube_subdirect"
+      ],
+      "cover_count": 165,
+      "group_id": "108,40",
+      "intersection_distribution": {},
+      "irredundant_cover_count": 0,
+      "maximal_count": 12,
+      "order": 108,
+      "qualifying_certificate_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "qualifying_count": 0,
+      "six_combinations": 924,
+      "structure": "(C3 x C3 x C3) : (C2 x C2)",
+      "subgroup_count": 224
+    },
+    {
+      "case_tags": [
+        "semisimple_S5"
+      ],
+      "cover_count": 0,
+      "group_id": "120,34",
+      "intersection_distribution": {},
+      "irredundant_cover_count": 0,
+      "maximal_count": 22,
+      "order": 120,
+      "qualifying_certificate_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "qualifying_count": 0,
+      "six_combinations": 74613,
+      "structure": "S5",
+      "subgroup_count": 156
+    },
+    {
+      "case_tags": [
+        "lemma_1a_S3cube",
+        "lemma_3_S3cube_subdirect"
+      ],
+      "cover_count": 1993,
+      "group_id": "216,162",
+      "intersection_distribution": {},
+      "irredundant_cover_count": 12,
+      "maximal_count": 16,
+      "order": 216,
+      "qualifying_certificate_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "qualifying_count": 0,
+      "six_combinations": 8008,
+      "structure": "S3 x S3 x S3",
+      "subgroup_count": 904
+    }
+  ],
+  "inputs": {
+    "class_tsv": "experiments/logs/f6_maximal_cover_classes.tsv",
+    "class_tsv_sha256": "18864118296e8d517d7e662edc1e94bcbbacd385cce6ea27645abe68c6acf86f",
+    "gap_script": "experiments/configs/f6_maximal_cover_audit.g",
+    "gap_script_sha256": "81674bcbcefa95caa62bf67aa2067b9628c96e2d3179fe6db55696d675185af8",
+    "gap_stdout": "experiments/logs/f6_maximal_cover_gap.stdout.txt",
+    "gap_stdout_sha256": "0e6de866d523133820d9f2b9351f54eebbc069bd572699f52ceb0b312839c98f",
+    "group_tsv": "experiments/logs/f6_maximal_cover_groups.tsv",
+    "group_tsv_sha256": "30eec574a216b234dfa20c0fa3d8369788ba5cfa463a8849dfc1ba4219c9ca8e"
+  },
+  "positive_groups": [
+    {
+      "case_tags": [
+        "lemma_3_S3cube_subdirect",
+        "auxiliary_C2S3square_all"
+      ],
+      "cover_count": 702,
+      "group_id": "18,4",
+      "intersection_distribution": {
+        "1": 234
+      },
+      "irredundant_cover_count": 234,
+      "maximal_count": 13,
+      "order": 18,
+      "qualifying_certificate_sha256": "f8ea8ea021fed9ab2e524e1ef20cfe3e9c82b2f99ee0fb1e9e877b183a2adbbc",
+      "qualifying_count": 234,
+      "six_combinations": 1716,
+      "structure": "(C3 x C3) : C2",
+      "subgroup_count": 28
+    },
+    {
+      "case_tags": [
+        "auxiliary_C2S3square_all"
+      ],
+      "cover_count": 177,
+      "group_id": "24,14",
+      "intersection_distribution": {
+        "1": 4
+      },
+      "irredundant_cover_count": 4,
+      "maximal_count": 10,
+      "order": 24,
+      "qualifying_certificate_sha256": "996b04288bf881b9a7baff0e89858ef72085f1083c042a36afa380b8a3cf1916",
+      "qualifying_count": 4,
+      "six_combinations": 210,
+      "structure": "C2 x C2 x S3",
+      "subgroup_count": 54
+    },
+    {
+      "case_tags": [
+        "auxiliary_C2S3square_all"
+      ],
+      "cover_count": 1237,
+      "group_id": "36,13",
+      "intersection_distribution": {
+        "1": 72
+      },
+      "irredundant_cover_count": 306,
+      "maximal_count": 15,
+      "order": 36,
+      "qualifying_certificate_sha256": "3733dc3fba9c0f36d1089ea496aa812bd1d431b168f2148bc09b362e805e3c06",
+      "qualifying_count": 72,
+      "six_combinations": 5005,
+      "structure": "C2 x ((C3 x C3) : C2)",
+      "subgroup_count": 78
+    },
+    {
+      "case_tags": [
+        "lemma_2_order50"
+      ],
+      "cover_count": 31,
+      "group_id": "50,4",
+      "intersection_distribution": {
+        "2": 25
+      },
+      "irredundant_cover_count": 31,
+      "maximal_count": 31,
+      "order": 50,
+      "qualifying_certificate_sha256": "2bffb34fddb4b0b3226cc24623a99cf57ca9622c48fe5580eb5aa942a29be906",
+      "qualifying_count": 25,
+      "six_combinations": 736281,
+      "structure": "(C5 x C5) : C2",
+      "subgroup_count": 64
+    },
+    {
+      "case_tags": [
+        "lemma_3_S3cube_subdirect"
+      ],
+      "cover_count": 91260,
+      "group_id": "54,14",
+      "intersection_distribution": {
+        "2": 6318
+      },
+      "irredundant_cover_count": 9360,
+      "maximal_count": 40,
+      "order": 54,
+      "qualifying_certificate_sha256": "e4bb07de8abfe415481047a0e4f304e99bd83c1049bbeb9a9692cc65e7280f89",
+      "qualifying_count": 6318,
+      "six_combinations": 3838380,
+      "structure": "(C3 x C3 x C3) : C2",
+      "subgroup_count": 212
+    },
+    {
+      "case_tags": [
+        "lemma_2_order100"
+      ],
+      "cover_count": 31,
+      "group_id": "100,11",
+      "intersection_distribution": {
+        "4": 25
+      },
+      "irredundant_cover_count": 31,
+      "maximal_count": 31,
+      "order": 100,
+      "qualifying_certificate_sha256": "9ffaf879f464dd9ec05b9b263c5f0f8965a02d9ac2569cb5439ab051328af2e7",
+      "qualifying_count": 25,
+      "six_combinations": 736281,
+      "structure": "(C5 x C5) : C4",
+      "subgroup_count": 120
+    }
+  ],
+  "schema_version": 1,
+  "software": {
+    "external_dependencies": [],
+    "implementation": "CPython",
+    "python": "3.9.6"
+  },
+  "status": "[COMPUTED]",
+  "total_covers": 100483,
+  "total_irredundant_covers": 10308,
+  "total_qualifying_covers": 6678,
+  "total_six_subsets": 5545351,
+  "total_subgroups_independently_enumerated": 5257,
+  "verification": {
+    "corefree": "all conjugates of every intersection element checked",
+    "cover": "bitwise union equals the full group",
+    "group_axioms": "exhaustive multiplication-table check",
+    "irredundancy": "each member has a private element",
+    "maximality": "independent complete maximal-subgroup recovery",
+    "six_subsets": "independent exhaustive combinations",
+    "subgroups": "independent closure enumeration from each table"
+  }
+}

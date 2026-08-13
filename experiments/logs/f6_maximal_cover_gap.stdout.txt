@@ -1,0 +1,49 @@
+group=SmallGroup(1,1) structure=1 order=1 maximals=0 combinations=0 covers=0 irredundant=0 qualifying=0 intersections=[  ] runtime_ms=0
+group=SmallGroup(2,1) structure=C2 order=2 maximals=1 combinations=0 covers=0 irredundant=0 qualifying=0 intersections=[  ] runtime_ms=1
+group=SmallGroup(3,1) structure=C3 order=3 maximals=1 combinations=0 covers=0 irredundant=0 qualifying=0 intersections=[  ] runtime_ms=1
+group=SmallGroup(4,1) structure=C4 order=4 maximals=1 combinations=0 covers=0 irredundant=0 qualifying=0 intersections=[  ] runtime_ms=1
+group=SmallGroup(4,2) structure=C2 x C2 order=4 maximals=3 combinations=0 covers=0 irredundant=0 qualifying=0 intersections=[  ] runtime_ms=0
+group=SmallGroup(6,1) structure=S3 order=6 maximals=4 combinations=0 covers=0 irredundant=0 qualifying=0 intersections=[  ] runtime_ms=1
+group=SmallGroup(6,2) structure=C6 order=6 maximals=2 combinations=0 covers=0 irredundant=0 qualifying=0 intersections=[  ] runtime_ms=1
+group=SmallGroup(8,3) structure=D8 order=8 maximals=3 combinations=0 covers=0 irredundant=0 qualifying=0 intersections=[  ] runtime_ms=0
+group=SmallGroup(8,5) structure=C2 x C2 x C2 order=8 maximals=7 combinations=7 covers=7 irredundant=0 qualifying=0 intersections=[  ] runtime_ms=2
+group=SmallGroup(9,2) structure=C3 x C3 order=9 maximals=4 combinations=0 covers=0 irredundant=0 qualifying=0 intersections=[  ] runtime_ms=1
+group=SmallGroup(12,3) structure=A4 order=12 maximals=5 combinations=0 covers=0 irredundant=0 qualifying=0 intersections=[  ] runtime_ms=1
+group=SmallGroup(12,4) structure=D12 order=12 maximals=6 combinations=1 covers=1 irredundant=0 qualifying=0 intersections=[  ] runtime_ms=2
+group=SmallGroup(12,5) structure=C6 x C2 order=12 maximals=4 combinations=0 covers=0 irredundant=0 qualifying=0 intersections=[  ] runtime_ms=2
+group=SmallGroup(18,3) structure=C3 x S3 order=18 maximals=5 combinations=0 covers=0 irredundant=0 qualifying=0 intersections=[  ] runtime_ms=1
+group=SmallGroup(18,4) structure=(C3 x C3) : C2 order=18 maximals=13 combinations=1716 covers=702 irredundant=234 qualifying=234 intersections=[ [ 1, 234 ] ] runtime_ms=18
+group=SmallGroup(18,5) structure=C6 x C3 order=18 maximals=5 combinations=0 covers=0 irredundant=0 qualifying=0 intersections=[  ] runtime_ms=1
+group=SmallGroup(24,12) structure=S4 order=24 maximals=8 combinations=28 covers=6 irredundant=0 qualifying=0 intersections=[  ] runtime_ms=1
+group=SmallGroup(24,14) structure=C2 x C2 x S3 order=24 maximals=10 combinations=210 covers=177 irredundant=4 qualifying=4 intersections=[ [ 1, 4 ] ] runtime_ms=2
+group=SmallGroup(36,10) structure=S3 x S3 order=36 maximals=9 combinations=84 covers=38 irredundant=0 qualifying=0 intersections=[  ] runtime_ms=2
+group=SmallGroup(36,12) structure=C6 x S3 order=36 maximals=7 combinations=7 covers=6 irredundant=0 qualifying=0 intersections=[  ] runtime_ms=1
+group=SmallGroup(36,13) structure=C2 x ((C3 x C3) : C2) order=36 maximals=15 combinations=5005 covers=1237 irredundant=306 qualifying=72 intersections=[ [ 1, 72 ] ] runtime_ms=43
+group=SmallGroup(48,30) structure=A4 : C4 order=48 maximals=8 combinations=28 covers=6 irredundant=0 qualifying=0 intersections=[  ] runtime_ms=2
+group=SmallGroup(48,31) structure=C4 x A4 order=48 maximals=6 combinations=1 covers=1 irredundant=0 qualifying=0 intersections=[  ] runtime_ms=1
+group=SmallGroup(48,38) structure=D8 x S3 order=48 maximals=10 combinations=210 covers=177 irredundant=4 qualifying=0 intersections=[  ] runtime_ms=3
+group=SmallGroup(48,48) structure=C2 x S4 order=48 maximals=10 combinations=210 covers=49 irredundant=0 qualifying=0 intersections=[  ] runtime_ms=1
+group=SmallGroup(48,49) structure=C2 x C2 x A4 order=48 maximals=8 combinations=28 covers=13 irredundant=0 qualifying=0 intersections=[  ] runtime_ms=2
+group=SmallGroup(48,50) structure=(C2 x C2 x C2 x C2) : C3 order=48 maximals=21 combinations=54264 covers=336 irredundant=0 qualifying=0 intersections=[  ] runtime_ms=13
+group=SmallGroup(50,1) structure=D50 order=50 maximals=6 combinations=1 covers=1 irredundant=1 qualifying=0 intersections=[  ] runtime_ms=1
+group=SmallGroup(50,4) structure=(C5 x C5) : C2 order=50 maximals=31 combinations=736281 covers=31 irredundant=31 qualifying=25 intersections=[ [ 2, 25 ] ] runtime_ms=163
+group=SmallGroup(54,14) structure=(C3 x C3 x C3) : C2 order=54 maximals=40 combinations=3838380 covers=91260 irredundant=9360 qualifying=6318 intersections=[ [ 2, 6318 ] ] runtime_ms=2662
+group=SmallGroup(60,5) structure=A5 order=60 maximals=21 combinations=54264 covers=0 irredundant=0 qualifying=0 intersections=[  ] runtime_ms=21
+group=SmallGroup(72,46) structure=C2 x S3 x S3 order=72 maximals=13 combinations=1716 covers=767 irredundant=8 qualifying=0 intersections=[  ] runtime_ms=10
+group=SmallGroup(96,186) structure=C4 x S4 order=96 maximals=10 combinations=210 covers=49 irredundant=0 qualifying=0 intersections=[  ] runtime_ms=2
+group=SmallGroup(96,187) structure=C4 : S4 order=96 maximals=10 combinations=210 covers=49 irredundant=0 qualifying=0 intersections=[  ] runtime_ms=2
+group=SmallGroup(96,195) structure=(C2 x C2) : S4 order=96 maximals=10 combinations=210 covers=49 irredundant=0 qualifying=0 intersections=[  ] runtime_ms=2
+group=SmallGroup(96,197) structure=D8 x A4 order=96 maximals=8 combinations=28 covers=13 irredundant=0 qualifying=0 intersections=[  ] runtime_ms=2
+group=SmallGroup(96,226) structure=C2 x C2 x S4 order=96 maximals=14 combinations=3003 covers=1033 irredundant=4 qualifying=0 intersections=[  ] runtime_ms=11
+group=SmallGroup(96,227) structure=(C2 x C2) : S4 order=96 maximals=16 combinations=8008 covers=66 irredundant=0 qualifying=0 intersections=[  ] runtime_ms=4
+group=SmallGroup(100,3) structure=C25 : C4 order=100 maximals=6 combinations=1 covers=1 irredundant=1 qualifying=0 intersections=[  ] runtime_ms=1
+group=SmallGroup(100,10) structure=(C5 x C5) : C4 order=100 maximals=11 combinations=462 covers=2 irredundant=2 qualifying=0 intersections=[  ] runtime_ms=2
+group=SmallGroup(100,11) structure=(C5 x C5) : C4 order=100 maximals=31 combinations=736281 covers=31 irredundant=31 qualifying=25 intersections=[ [ 4, 25 ] ] runtime_ms=182
+group=SmallGroup(100,12) structure=(C5 x C5) : C4 order=100 maximals=11 combinations=462 covers=2 irredundant=2 qualifying=0 intersections=[  ] runtime_ms=3
+group=SmallGroup(100,13) structure=D10 x D10 order=100 maximals=13 combinations=1716 covers=122 irredundant=2 qualifying=0 intersections=[  ] runtime_ms=3
+group=SmallGroup(108,38) structure=C3 x S3 x S3 order=108 maximals=10 combinations=210 covers=63 irredundant=0 qualifying=0 intersections=[  ] runtime_ms=2
+group=SmallGroup(108,39) structure=((C3 x C3) : C2) x S3 order=108 maximals=18 combinations=18564 covers=2030 irredundant=306 qualifying=0 intersections=[  ] runtime_ms=117
+group=SmallGroup(108,40) structure=(C3 x C3 x C3) : (C2 x C2) order=108 maximals=12 combinations=924 covers=165 irredundant=0 qualifying=0 intersections=[  ] runtime_ms=3
+group=SmallGroup(120,34) structure=S5 order=120 maximals=22 combinations=74613 covers=0 irredundant=0 qualifying=0 intersections=[  ] runtime_ms=25
+group=SmallGroup(216,162) structure=S3 x S3 x S3 order=216 maximals=16 combinations=8008 covers=1993 irredundant=12 qualifying=0 intersections=[  ] runtime_ms=11
+completed finite maximal-cover audit; unique_groups=48

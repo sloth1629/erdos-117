@@ -6,28 +6,29 @@ Research cut-off: 2026-08-13.  An arrow means “cites or explicitly attributes 
 
 ```text
 Isaacs, personal communication [UNVERIFIED]
-  |-- reported directly by Erdos--Straus 1976, p.311 [CITED-VERIFIED report]
-  `-- Bertram 1983, p.40; ref.[6] = personal communication [page UNVERIFIED]
-        |-- Abdollahi--Akbari--Maimani 2006, Ex.4.5 p.488 [CITED-VERIFIED report]
-        |-- Darafsheh--Ghorbani--Prajapati 2015, p.381 [CITED-VERIFIED report]
-        |-- Azad--Iranmanesh--Praeger--Spiga 2011, p.685 [CITED-VERIFIED report]
-        `-- Saccochi 2015, Thms.4.3.2 and 5.2.7 [UNVERIFIED secondary reconstruction]
+  |-- reported directly by Erdos--Straus 1976, p.311 [CITED-VERIFIED] (report)
+  `-- Bertram 1983, p.40; ref.[6] = personal communication [UNVERIFIED] (page)
+        |-- Abdollahi--Akbari--Maimani 2006, Ex.4.5 p.488 [CITED-VERIFIED] (report)
+        |-- Darafsheh--Ghorbani--Prajapati 2015, p.381 [CITED-VERIFIED] (report)
+        |-- Azad--Iranmanesh--Praeger--Spiga 2011, p.685 [CITED-VERIFIED] (report)
+        `-- Saccochi 2015, Thms.4.3.2 and 5.2.7 [UNVERIFIED] (secondary reconstruction)
 
 Neumann 1976, Thm.6 and p.471 [CITED-VERIFIED]
   `-- Faber--Laver--McKenzie 1978, p.933 and Thm.3 [CITED-VERIFIED]
 
-Macdonald 1961, section 2 [UNVERIFIED: inaccessible]
-  `-- Saccochi 2015, Thm.4.1.1 p.34 [UNVERIFIED secondary report]
+Macdonald 1961, section 2 [UNVERIFIED] (inaccessible)
+  `-- Saccochi 2015, Thm.4.1.1 p.34 [UNVERIFIED] (secondary report)
 
-Pyber 1987 [abstract CITED-VERIFIED; full theorem UNVERIFIED]
-  |-- Erdos 1997, Problem 26 p.8 [CITED-VERIFIED report]
-  |-- Pakianathan--Yalcin 2001, pp.396--397 [CITED-VERIFIED report]
-  |-- Isik 2005, pp.1 and 8--9 [CITED-VERIFIED report]
-  |-- Azad--Iranmanesh--Praeger--Spiga 2011, p.685 [CITED-VERIFIED report]
-  |-- Saccochi 2015, p.36 [UNVERIFIED secondary formula]
-  `-- Maroti--Martinez--Moreto 2025, p.2 [CITED-VERIFIED, different local problem]
+Pyber 1987 abstract [CITED-VERIFIED]
+  |-- full theorem/proof [UNVERIFIED]
+  |-- Erdos 1997, Problem 26 p.8 [CITED-VERIFIED] (report)
+  |-- Pakianathan--Yalcin 2001, pp.396--397 [CITED-VERIFIED] (report)
+  |-- Isik 2005, pp.1 and 8--9 [CITED-VERIFIED] (report)
+  |-- Azad--Iranmanesh--Praeger--Spiga 2011, p.685 [CITED-VERIFIED] (report)
+  |-- Saccochi 2015, p.36 [UNVERIFIED] (secondary formula)
+  `-- Maroti--Martinez--Moreto 2025, p.2 [CITED-VERIFIED] (different local problem)
 
-Isik 2005, Thm.12 pp.6--7 [CITED-VERIFIED independent accessible proof]
+Isik 2005, Thm.12 pp.6--7 [CITED-VERIFIED] (independent accessible proof)
   `-- omega(S(2,r)) = 2r+1 only; no abelian-cover lower-bound proof
 ```
 
@@ -59,12 +60,12 @@ Isik 2005, Thm.12 pp.6--7 [CITED-VERIFIED independent accessible proof]
 
 ```text
 pairwise nonorthogonal projective points in F_q^(2m)
-  = partial ovoids of W(2m-1,q) [PROVED translation]
+  = partial ovoids of W(2m-1,q) [PROVED] (translation)
   |
   |-- Blokhuis--Moorhouse 1995, Thms.1.1,1.6; Prop.4.1
   |     `-- p-rank bound pi(q,m) <= binom(p+2m-2,p-1)^e+1
   |
-  |-- Tallini 1991 [UNVERIFIED original historical source]
+  |-- Tallini 1991 [UNVERIFIED] (original historical source)
   |     `-- odd-q W(3,q) upper q^2-q+1, later cited by DKMS 2008
   |           `-- accessible independent proof: Klein--Metsch 2005,
   |               Thm.3.3 + Klein--Metsch 2010 correction [CITED-VERIFIED]
@@ -121,13 +122,13 @@ maximum noncommuting set X={x1,...,x5}
   |-- centralizers C_G(xi) form an irredundant 5-cover [PROVED]
   |-- Lemma CB.2 forces intersection_i C_G(xi)=Z(G) [PROVED]
   `-- Bryce--Fedri--Serena 1997, Thm.1.2: f(5)=16 [CITED-VERIFIED]
-        `-- [G:Z(G)] <= 16 when nu(G)=5 [PROVED + cited input]
+        `-- [G:Z(G)] <= 16 when nu(G)=5 [PROVED] (uses cited input)
 ```
 
 [CITED-VERIFIED] Bryce–Fedri–Serena's theorem is exactly about the index of the intersection of an irredundant five-subgroup cover.  The centralizer/intersection bridge is not attributed to that paper and is supplied separately by the repository.  The source's sharpness example for \(f(5)\) does not by itself prove sharpness of the resulting center-index bound within groups having \(\nu=5\).
 
 ```text
-Jafarian Amiri--Rostami 2017, introduction p.194 [CITED-VERIFIED report]
+Jafarian Amiri--Rostami 2017, introduction p.194 [CITED-VERIFIED] (report)
   |-- Jafarian Amiri--Madadi 2016 [publisher preview only]
   |     `-- claims structural properties of finite groups with omega=5
   `-- Jafarian Amiri--Madadi--Rostami 2017 [official abstract only]
@@ -135,7 +136,7 @@ Jafarian Amiri--Rostami 2017, introduction p.194 [CITED-VERIFIED report]
 
 Abdollahi--Jafarian Amiri--Mohammadi Hassanabadi 2007, p.44
   `-- reports Ashrafi: finite 6-centralizer groups have quotient
-      D8, A4, C2^3, or C2^4 [CITED-VERIFIED report]
+      D8, A4, C2^3, or C2^4 [CITED-VERIFIED] (report)
 ```
 
 [UNVERIFIED] The four-quotient list has now been located, but its checked scope is finite **6-centralizer groups**, not every group with \(\omega(G)=5\); the original Ashrafi proof was not read.  A central-factor list alone cannot be used as a commutation classification, while the F-group hypothesis in the second paper is weaker than having all proper centralizers abelian.  These edges therefore remain outside the proof graph for \(h(5)\).
@@ -146,10 +147,89 @@ Abdollahi--Jafarian Amiri--Mohammadi Hassanabadi 2007, p.44
 maximum noncommuting set X={x1,...,x6}
   |-- centralizers C_G(xi) form an irredundant 6-cover [PROVED]
   |-- Lemma CB.2 forces intersection_i C_G(xi)=Z(G) [PROVED]
-  `-- Abdollahi et al. 2005: f(6)=36 [CITED-VERIFIED statement]
-        `-- [G:Z(G)] <= 36 when nu(G)=6 [PROVED + cited input]
+  `-- Abdollahi et al. 2005: f(6)=36 [CITED-VERIFIED] (statement)
+        `-- [G:Z(G)] <= 36 when nu(G)=6 [PROVED] (uses cited input)
 ```
 
 [CITED-VERIFIED] Theorem D on printed p. 72 of the authors' 2004 extended abstract gives the exact six-cover theorem, and the official 2005 journal abstract agrees.  The complete journal proof was not accessible, so the checked edge is the primary theorem statement and proof outline rather than a line-by-line full-proof audit.
 
-[UNVERIFIED] No located classification of all \(\omega(G)=6\) groups or small-clique perfect-graph theorem turns this center-index bound into \(a(G)\le6\).  Thus this branch reduces the finite search but does not determine \(h(6)\).
+[UNVERIFIED] No located **external** classification of all \(\omega(G)=6\) groups or small-clique perfect-graph theorem directly gives \(a(G)\le6\).  The repository independently completes this branch by the exterior-square proof and finite certificate below.
+
+## Six-cover proof-dependency refinement
+
+```text
+Bryce--Fedri--Serena Prop. 2.3, Prop. 2.4, Thm. 1.2 [CITED-VERIFIED]
+  + factorial coset lemma [PROVED]
+  + maximal core-free structural reduction [PROVED]
+  + every residual finite leaf [COMPUTED]
+  `-- full nonmaximal f(6) reduction [PROVED]
+       |-- f(6)=36 [PROVED] (repository theorem)
+       `-- f(6)=36 [CITED-VERIFIED] (external theorem)
+```
+
+[PROVED] `notes/exact_h6.md` now reconstructs every maximal structural branch, repairs the two defective source reductions, and maps each residual leaf to a complete finite family.  The independent multiplication-table verifier then exhausts those families.  Thus the universal upper edge is closed in the repository by a computer-assisted proof; the external numerical theorem retains its separate `[CITED-VERIFIED]` historical status.
+
+[DISPROVED] One classification leaf is definitely false.  The 2005 paper's Lemma 4.1(3) (publicly quoted with the paper's GAP code) and Ataei's 2018 restatement assert that \(S_3\times S_3\) has a maximal irredundant core-free six-cover, whereas the exact repository enumeration gives 38 six-covers and zero irredundant ones.  The accessible 2004 extended abstract Theorem C omits this item.  This false positive is removed from the proof graph.
+
+```text
+SmallGroup(36,13) = C2 x ((C3^2):C2)
+  `-- 72 maximal irredundant six-covers with D=1 [COMPUTED]
+       `-- f(6) >= 36 [COMPUTED]
+
+published/restated S3 x S3 item
+  `-- zero irredundant six-covers [DISPROVED]
+```
+
+[PROVED] The corrected witness, the reconstructed maximal upper bound, and the checked nonmaximal reduction prove \(f(6)=36\).  The finite leaves are certified by `experiments/logs/f6_maximal_cover.json` and independently regenerated from the multiplication tables by `src/python/analyze_f6_maximal_cover_audit.py`.
+
+## Exact-six exterior-square node
+
+```text
+f(6)=36 + maximum-clique centralizer bridge [PROVED]
+  `-- |G/Z(G)|<=36 when nu(G)=6 [PROVED]
+       |-- Q wedge Q commutator classification [PROVED] (uses BJR cited input)
+       |-- 161 quotient types / 23527 kernels [COMPUTED]
+       |-- Q=C2^5 alternating-map exclusion [PROVED]
+       `-- h(6)=6 [PROVED]
+```
+
+[PROVED] The graph/exterior-square reduction and Theorem H6.3 are in `notes/exact_h6.md`.  The complete scan certificate is `experiments/logs/h6_exterior.json`, with `experiments/logs/h6_c2_5.json` for the omitted elementary-abelian quotient.  No external perfect-graph result is being imported as the coloring step.
+
+## Seven-cover node
+
+```text
+Abdollahi--Jafarian Amiri 2007, Theorem A [CITED-VERIFIED]
+  `-- maximal core-free seven-cover index <=81
+       |-- classification proof uses GAP 4.3 (not repository `[COMPUTED]`)
+       `-- explicit (C3)^4 cover gives 81
+
+Theorem A + f(6)=36 + f(5)=16 + Greco/Scorza + factorial lemma
+  `-- conditional implication from Theorem A, pp. 299--300 [PROVED] (reconstruction)
+       `-- f(7)=81, Theorem B [CITED-VERIFIED]
+            `-- nu(G)=7 => [G:Z(G)]<=81 [PROVED] (uses cited input)
+```
+
+[CITED-VERIFIED] The entire author-uploaded primary article was read.  The exact f(7) theorem is Theorem B on p. 292, its lower witness is on pp. 292–293, and the final reduction is on pp. 299–300.  The maximal classification proof on pp. 292–299 is not repository `[COMPUTED]` because the GAP 4.3 enumerations have no archived code/output certificate.
+
+## Seven-clique scope and exclusion nodes
+
+```text
+Zarrin 2016, Lem.2.1 + Thm.1.1 pp.43--44 [CITED-VERIFIED]
+  `-- finite isoclinic representative with the same nu
+       `-- compressed graphs are isomorphic, hence same a [PROVED]
+
+Zarrin 2016, Thm.1.2 pp.43--44 [CITED-VERIFIED]
+  + Abdollahi--Azad--Hassanabadi--Zarrin 2010, Thm.1.1 pp.2,4--9
+  `-- nu(G)=7 implies G soluble [CITED-VERIFIED]
+
+Darafsheh--Ghorbani--Prajapati 2015
+  |-- central quotient p^2 or p^3 => AC, exact conditional omega formulas
+  `-- a(G)=nu(G) only on this AC slice [CITED-VERIFIED]
+
+7-centralizer / 10-centralizer classifications
+  `-- prescribed |C(G)|, not classifications of nu(G)=7 [CITED-VERIFIED] (scope)
+```
+
+[PROVED] Zarrin supplies the finite isoclinic representative and compatible commutator maps as cited-verified input.  The repository's exact central-coset translation then identifies the compressed noncommuting graphs, so both \(\nu\) and \(a\) are preserved.  The solvability theorem and small-central-quotient paper add structural pruning but no universal upper bound \(a\le10\); the latter leaves the non-AC order-\(3^5\) repository example untouched.
+
+[UNVERIFIED] No located edge states exact \(h(7)\), a universal \(h(7)\le10\), or a full classification of \(\nu=7\).  Exact searches excluded automorphism-orbit \(\omega(G)=7\), prescribed-centralizer results, and generating-graph clique/chromatic results.  This is an index-bounded negative search.

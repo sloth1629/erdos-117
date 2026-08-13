@@ -19,7 +19,10 @@ No complete resolution is claimed. The strongest repository results are:
 - [PROVED] For noncentral \(x\),
   \(\nu(C_G(x))\le\nu(G)-2\), hence
   \(h(n)\le n h(n-2)\).
-- [PROVED] \(h(1)=h(2)=1\), \(h(3)=3\), and \(h(4)=4\).
+- [PROVED] By a computer-assisted proof, \(h(n)=n\) for \(3\le n\le6\), while
+  \(h(1)=h(2)=1\).  The values at five and six combine audited
+  irredundant-cover bounds \(f(5)=16\), \(f(6)=36\) with complete
+  Schur-cover/exterior-square enumerations.
 - [PROVED] Scalar symplectic groups satisfy
   \(a(S(q,m))=q^m+1\), with clique number equal to a partial-ovoid
   parameter.
@@ -30,8 +33,11 @@ No complete resolution is claimed. The strongest repository results are:
   \(h(2m+1)\ge2^m+1\) and
   \(\liminf h(n)^{1/n}\ge\sqrt2\).
 - [COMPUTED] Exact, independently verified certificates cover explicit
-  families and every SmallGroup of orders 8, 32, and 64. The final test
-  suite passes 11/11 tests.
+  families, every SmallGroup of orders 8, 32, and 64, all order-128 groups
+  surviving a rigorous \(\nu\le6\) prefilter, all 2,986 exterior-square
+  cases used for \(h(5)\), and all 23,527 normal-kernel records used for
+  \(h(6)\).  Further exact records are
+  \((\nu,a)=(18,26)\) for \(S(5,2)\) and \((13,28)\) for \(S(3,3)\).
 
 The publication-style synthesis is in
 [`proof/main.tex`](proof/main.tex), and the concise state of the problem is
@@ -55,7 +61,7 @@ See [`AGENTS.md`](AGENTS.md) for evidence labels and proof discipline.
 
 ## Reproduce the exact verification
 
-Python 3.9 or later is sufficient:
+Python 3.9 or later is sufficient to verify the committed certificates:
 
 ```bash
 PYTHONPYCACHEPREFIX=/tmp/erdos117-pycache \
@@ -64,8 +70,10 @@ python3 -m unittest discover -s src/verification -p 'test_*.py' -v
 
 The canonical experiment commands are documented in
 [`src/python/README.md`](src/python/README.md). GAP is needed only to
-regenerate the SmallGroups multiplication-table exports; the committed
-tables and all Python verification are self-contained.
+regenerate the SmallGroups and exterior-square exports; the committed
+exports and all Python certificate checks are self-contained.  The proofs of
+\(h(5)=5\) and \(h(6)=6\) are explicitly computer-assisted: their exhaustiveness also relies
+on GAP's SmallGroups, Schur-cover, and subgroup-enumeration algorithms.
 
 To build the manuscript when a TeX distribution is available:
 

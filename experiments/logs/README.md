@@ -34,3 +34,18 @@ Store reproducible text logs here; large or licensed artifacts must not be commi
   all 2,986 action-invariant exterior-square kernel records for the 42
   SmallGroups of order at most 16, including complete kernel serial ranges and
   exact clique/coloring witnesses.
+- `h6_c2_5.json` and stdout: exhaustive C witnesses for all 156,240
+  common-radical-zero alternating-form pencils on \(\mathbb F_2^5\), plus an
+  independent Python transvection-orbit and rank-two-subspace reconstruction.
+- `h6_exterior.tsv`, `.json`, the concise stdout, and the GAP transcript:
+  23,527 action-invariant exterior-square kernels for 161 quotient groups and
+  one special \(C_2^5\) row, covering all 162 SmallGroups of order at most 36.
+  Decimal adjacency bitmasks keep the canonical raw export near 9 MB. The
+  analyzer verifies 18,231 nonfaithful-radical exclusions, 4,982 seven-clique
+  exclusions, and 314 exact survivors.
+- `f6_maximal_cover_classes.tsv` and `f6_maximal_cover_groups.tsv`: the
+  complete ambient subgroup-class census and multiplication-table/maximal-mask
+  export for the bounded \(f(6)\) audit. The paired JSON and concise stdout
+  record an independent Python reconstruction of all 5,257 subgroups, all
+  maximal subgroups, and all 5,545,351 six-subsets across 48 isomorphism
+  types. The GAP transcript is `f6_maximal_cover_gap.stdout.txt`.

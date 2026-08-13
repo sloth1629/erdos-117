@@ -42,6 +42,11 @@ from scalar_symplectic import (  # noqa: E402
     scalar_symplectic_adjacency,
     symplectic_spread,
 )
+from h6_c2_5 import form_graph, independent_certificate  # noqa: E402
+from analyze_f6_maximal_cover_audit import (  # noqa: E402
+    parse_tsv as parse_f6_cover_tsv,
+    verify_group_row as verify_f6_cover_group_row,
+)
 
 
 def brute_force_clique(adjacency):
@@ -384,6 +389,51 @@ class LogCertificateTests(unittest.TestCase):
 
 
 class ScalarSymplecticLogTests(unittest.TestCase):
+    def test_h6_c2_5_alternating_form_certificate(self):
+        log_path = REPOSITORY / "experiments" / "logs" / "h6_c2_5.json"
+        document = json.loads(log_path.read_text(encoding="utf-8"))
+        config_path = REPOSITORY / document["configuration"]
+        source_path = REPOSITORY / document["solver_source"]
+        self.assertEqual(
+            document["configuration_sha256"],
+            hashlib.sha256(config_path.read_bytes()).hexdigest(),
+        )
+        self.assertEqual(
+            document["solver_source_sha256"],
+            hashlib.sha256(source_path.read_bytes()).hexdigest(),
+        )
+        c_record = document["c_exhaustive_certificate"]
+        self.assertEqual((174251, 156240), (
+            c_record["pencil_count"], c_record["common_radical_zero_pencil_count"]
+        ))
+        self.assertEqual({"244": 52080, "444": 104160}, c_record["rank_profile_counts"])
+        self.assertEqual((9, 156240, 1482030, 36), (
+            c_record["search"]["target_clique_size"],
+            c_record["search"]["witness_count"],
+            c_record["search"]["total_search_nodes"],
+            c_record["search"]["maximum_search_nodes"],
+        ))
+        for representative in c_record["representatives"]:
+            adjacency = form_graph(representative["pencil"])
+            vertices = tuple(value - 1 for value in representative["clique_vectors"])
+            self.assertEqual(9, len(vertices))
+            self.assertTrue(verify_clique(adjacency, vertices))
+
+        rebuilt = independent_certificate()
+        saved = document["independent_python_certificate"]
+        # Search-node counts and every saved witness are deterministic, so the
+        # complete pure-Python reconstruction should match byte-level data
+        # except for no runtime fields (none are stored in this subrecord).
+        self.assertEqual(saved, rebuilt)
+        self.assertEqual([(2, 4, 4, 52080, 11), (4, 4, 4, 104160, 9)], [
+            tuple(record["rank_profile"]) + (record["pencil_count"], record["omega"])
+            for record in rebuilt["pencil_orbits"]
+        ])
+        rank_two = rebuilt["rank_two_radical_zero_orbit"]
+        self.assertEqual((31, 17, 17), (
+            rank_two["subspace_count"], rank_two["omega"], rank_two["chi"]
+        ))
+
     def test_p3_rank2_group_graph_clique_coloring_and_spread(self):
         log_path = REPOSITORY / "experiments" / "logs" / "scalar_symplectic_p3_m2.json"
         document = json.loads(log_path.read_text(encoding="utf-8"))
@@ -717,6 +767,177 @@ class ScalarSymplecticLogTests(unittest.TestCase):
         self.assertEqual({(1, 1): 42, (3, 3): 84, (4, 4): 4, (5, 5): 234}, eligible)
         self.assertEqual([], document["eligible_failure_rows"])
 
+    def test_h6_exterior_square_scan_certificates(self):
+        log_path = REPOSITORY / "experiments" / "logs" / "h6_exterior.json"
+        document = json.loads(log_path.read_text(encoding="utf-8"))
+        input_path = REPOSITORY / document["input"]
+        gap_script = REPOSITORY / document["gap_script"]
+        c2_path = REPOSITORY / document["c2_5_certificate"]
+        self.assertEqual(
+            document["input_sha256"], hashlib.sha256(input_path.read_bytes()).hexdigest()
+        )
+        self.assertEqual(
+            document["gap_script_sha256"], hashlib.sha256(gap_script.read_bytes()).hexdigest()
+        )
+        self.assertEqual(
+            document["c2_5_certificate_sha256"], hashlib.sha256(c2_path.read_bytes()).hexdigest()
+        )
+        self.assertEqual({
+            "GAP_VERSION": "4.16.0",
+            "SMALLGRP_VERSION": "1.5.4",
+            "MAX_Q_ORDER": "36",
+            "CLIQUE_CUTOFF": "6",
+            "SPECIAL_QUOTIENT": "SmallGroup(32,51)",
+        }, document["gap_metadata"])
+        self.assertEqual((162, 161, 23527, 314, 4045), (
+            document["quotient_count"], document["gap_scanned_quotient_count"],
+            document["normal_kernel_record_count"],
+            document["status_distribution"]["candidate"],
+            document["unique_faithful_graph_count"],
+        ))
+        lines = [
+            line
+            for line in input_path.read_text(encoding="utf-8").splitlines()
+            if line and not line.startswith("# ")
+        ]
+        rows = list(csv.DictReader(lines, delimiter="\t"))
+        self.assertEqual(23528, len(rows))
+        candidate_records = {
+            record["row_number"]: record for record in document["candidate_records"]
+        }
+        statuses = {}
+        serials = {}
+        normal_counts = {}
+        eligible = {}
+        special = []
+        for row_number, row in enumerate(rows, 1):
+            status = row["status"]
+            statuses[status] = statuses.get(status, 0) + 1
+            q_order = int(row["q_order"])
+            key = (q_order, int(row["q_id"]))
+            if status == "special_c2_5":
+                special.append(key)
+                self.assertEqual((32, 51), key)
+                self.assertEqual("", row["adjacency"])
+                continue
+            count = int(row["normal_kernel_count"])
+            normal_counts[key] = count
+            serials.setdefault(key, set()).add(int(row["kernel_serial"]))
+            adjacency = tuple(int(mask) for mask in row["adjacency"].split(","))
+            self.assertEqual(q_order, len(adjacency))
+            for source, mask in enumerate(adjacency):
+                self.assertFalse(mask & (1 << source))
+                for target in range(q_order):
+                    self.assertEqual(
+                        bool(mask & (1 << target)),
+                        bool(adjacency[target] & (1 << source)),
+                    )
+            radical = tuple(vertex for vertex, mask in enumerate(adjacency) if mask == 0)
+            self.assertEqual(int(row["radical_count"]), len(radical))
+            witness = tuple(int(value) - 1 for value in row["witness"].split(",") if value)
+            if status == "nonfaithful_radical":
+                self.assertGreater(len(radical), 1)
+                self.assertEqual(radical, witness)
+            elif status == "clique_ge_7":
+                self.assertEqual(7, len(witness))
+                self.assertTrue(verify_clique(adjacency, witness))
+            else:
+                self.assertEqual("candidate", status)
+                self.assertEqual(1, len(radical))
+                record = candidate_records[row_number]
+                clique = tuple(record["clique_certificate"])
+                colors = tuple(record["coloring_certificate"])
+                self.assertTrue(verify_clique(adjacency, clique))
+                self.assertTrue(verify_coloring(adjacency, colors))
+                self.assertEqual(record["nu"], len(clique))
+                self.assertEqual(record["a"], max(colors, default=-1) + 1)
+                pair = (record["nu"], record["a"])
+                eligible[pair] = eligible.get(pair, 0) + 1
+        self.assertEqual([(32, 51)], special)
+        self.assertEqual({
+            "candidate": 314,
+            "clique_ge_7": 4982,
+            "nonfaithful_radical": 18231,
+            "special_c2_5": 1,
+        }, statuses)
+        self.assertEqual(23527, sum(normal_counts.values()))
+        for key, count in normal_counts.items():
+            self.assertEqual(set(range(1, count + 1)), serials[key])
+        self.assertEqual({
+            (1, 1): 1, (3, 3): 1, (4, 4): 2, (5, 5): 93, (6, 6): 217,
+        }, eligible)
+        self.assertEqual([], document["eligible_failure_rows"])
+
+    def test_f6_maximal_cover_audit_certificates(self):
+        log_path = REPOSITORY / "experiments" / "logs" / "f6_maximal_cover.json"
+        document = json.loads(log_path.read_text(encoding="utf-8"))
+        inputs = document["inputs"]
+        for name in ("gap_script", "class_tsv", "group_tsv", "gap_stdout"):
+            path = REPOSITORY / inputs[name]
+            self.assertEqual(
+                inputs[name + "_sha256"], hashlib.sha256(path.read_bytes()).hexdigest()
+            )
+        class_path = REPOSITORY / inputs["class_tsv"]
+        group_path = REPOSITORY / inputs["group_tsv"]
+        class_metadata, class_rows = parse_f6_cover_tsv(class_path)
+        group_metadata, group_rows = parse_f6_cover_tsv(group_path)
+        self.assertEqual(class_metadata, group_metadata)
+        self.assertEqual({
+            "GAP_VERSION": "4.16.0",
+            "SMALLGRP_VERSION": "1.5.4",
+            "COVER_SIZE": "6",
+        }, class_metadata)
+        self.assertEqual((165, 48), (len(class_rows), len(group_rows)))
+
+        # Re-run the dependency-free table verifier, including all subgroup
+        # closures, all maximal subgroups, and all 5,545,351 six-subsets.
+        independently_verified = {
+            record["group_id"]: record
+            for record in (verify_f6_cover_group_row(row) for row in group_rows)
+        }
+        self.assertEqual(48, len(independently_verified))
+        self.assertEqual(5545351, sum(
+            record["six_combinations"] for record in independently_verified.values()
+        ))
+        self.assertEqual((38, 0, 0), (
+            independently_verified["36,10"]["cover_count"],
+            independently_verified["36,10"]["irredundant_cover_count"],
+            independently_verified["36,10"]["qualifying_count"],
+        ))
+        self.assertEqual((72, {1: 72}), (
+            independently_verified["36,13"]["qualifying_count"],
+            independently_verified["36,13"]["intersection_distribution"],
+        ))
+        positives = {
+            group_id: (
+                record["qualifying_count"], record["intersection_distribution"]
+            )
+            for group_id, record in independently_verified.items()
+            if record["qualifying_count"]
+        }
+        self.assertEqual({
+            "18,4": (234, {1: 234}),
+            "24,14": (4, {1: 4}),
+            "36,13": (72, {1: 72}),
+            "50,4": (25, {2: 25}),
+            "54,14": (6318, {2: 6318}),
+            "100,11": (25, {4: 25}),
+        }, positives)
+        s4_ids = {
+            row["group_id"] for row in class_rows
+            if row["family"] == "auxiliary_S4_all"
+        }
+        self.assertEqual(9, len(s4_ids))
+        self.assertTrue(all(
+            independently_verified[group_id]["qualifying_count"] == 0
+            for group_id in s4_ids
+        ))
+        self.assertEqual((5257, 100483, 10308, 6678), (
+            document["total_subgroups_independently_enumerated"],
+            document["total_covers"],
+            document["total_irredundant_covers"],
+            document["total_qualifying_covers"],
+        ))
 
 if __name__ == "__main__":
     unittest.main()

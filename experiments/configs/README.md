@@ -26,3 +26,13 @@ Version all search parameters and solver settings here.
   action-invariant commutator kernel for all quotient groups through the
   configured order bound; used at order 16 for the computer-assisted
   \(h(5)=5\) result.
+- `h6_c2_5.json`: expected pencil, rank-profile, and clique counts for the
+  alternating-form certificate that excludes \(C_2^5\) at clique cutoff six.
+- `h6_exterior_scan.g`: complete chosen-Schur-cover scan through quotient
+  order 36, with the structurally excluded \(C_2^5\) represented by one
+  explicit special row rather than 229,755,605 exterior subspaces.
+- `f6_maximal_cover_audit.g`: modern GAP reconstruction of the finite
+  maximal irredundant core-free six-cover assertions used at the \(f(6)=36\)
+  edge. It exports complete multiplication tables and exact maximal-subgroup
+  masks for an independent Python verifier, avoiding the dissertation's
+  inconsistent subgroup labels.

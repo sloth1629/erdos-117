@@ -1,0 +1,15 @@
+{
+  "description": "Complete alternating-form obstruction for the C2^5 central quotient in the h(6) exterior-square reduction.",
+  "c_source": "src/c/h6_c2_5_pencils.c",
+  "vector_dimension": 5,
+  "form_dimension": 10,
+  "expected": {
+    "pencil_count": 174251,
+    "common_radical_zero_pencil_count": 156240,
+    "rank_profile_counts": {
+      "244": 52080,
+      "444": 104160
+    },
+    "target_clique_size": 9
+  }
+}
