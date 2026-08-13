@@ -1,0 +1,25 @@
+{
+  "description": "Deterministic exact central-coset graph computations for bootstrap examples and the extraspecial 2-group geometry family.",
+  "groups": [
+    {"id": "C1", "independent_cover": true},
+    {"id": "C5", "independent_cover": true},
+    {"id": "S3", "independent_cover": true},
+    {"id": "D8", "independent_cover": true},
+    {"id": "Q8", "independent_cover": true},
+    {"id": "S4", "independent_cover": true},
+    {"id": "D6", "independent_cover": true},
+    {"id": "D10", "independent_cover": true},
+    {"id": "D12", "independent_cover": true},
+    {"id": "D14", "independent_cover": true},
+    {"id": "D16", "independent_cover": true},
+    {"id": "D18", "independent_cover": true},
+    {"id": "D20", "independent_cover": true},
+    {"id": "Heis2", "independent_cover": true},
+    {"id": "Heis3", "independent_cover": true},
+    {"id": "Heis5", "independent_cover": true},
+    {"id": "E1", "independent_cover": true},
+    {"id": "E2", "independent_cover": true},
+    {"id": "E3", "independent_cover": false},
+    {"id": "D8xS3", "independent_cover": true}
+  ]
+}

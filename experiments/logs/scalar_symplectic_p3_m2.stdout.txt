@@ -1,0 +1,2 @@
+E_p3_m2: |G|=243 |Z|=3 compressed=81 nu=7 a=10; no 8-clique on 40 projective points (10912 nodes)
+wrote 1 certified records to experiments/logs/scalar_symplectic_p3_m2.json

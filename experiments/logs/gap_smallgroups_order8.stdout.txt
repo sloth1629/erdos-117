@@ -1,0 +1,6 @@
+SmallGroup(8,1): nu=1 a=1
+SmallGroup(8,2): nu=1 a=1
+SmallGroup(8,3): nu=3 a=3
+SmallGroup(8,4): nu=3 a=3
+SmallGroup(8,5): nu=1 a=1
+wrote 5 verified records to experiments/logs/gap_smallgroups_order8.json

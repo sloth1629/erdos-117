@@ -1,1 +1,11 @@
 n,h_lower_bound,group_id,nu,a,proof_or_certificate,status,notes
+1,1,C1,1,1,experiments/logs/exact_small_groups.json,[COMPUTED],trivial finite group edge case
+3,3,D8,3,3,experiments/logs/exact_small_groups.json,[COMPUTED],also witnessed by Q8 and E1
+4,4,S3,4,4,experiments/logs/exact_small_groups.json,[COMPUTED],also witnessed by Heis3 and D6
+5,5,E2,5,5,experiments/logs/exact_small_groups.json,[COMPUTED],extraspecial group of order 32
+6,6,D10,6,6,experiments/logs/exact_small_groups.json,[COMPUTED],dihedral group of order 10
+7,10,E_p3_m2,7,10,experiments/logs/scalar_symplectic_p3_m2.json,[COMPUTED],extraspecial group of order 243; disproves the candidate value 9
+8,10,E_p3_m2,7,10,experiments/logs/scalar_symplectic_p3_m2.json,[COMPUTED],monotonic consequence from the same witness
+9,10,E_p3_m2,7,10,experiments/logs/scalar_symplectic_p3_m2.json,[COMPUTED],monotonic consequence from the same witness
+10,10,S4,10,10,experiments/logs/exact_small_groups.json,[COMPUTED],also witnessed by D18
+12,12,D8xS3,12,12,experiments/logs/exact_small_groups.json,[COMPUTED],direct-product check

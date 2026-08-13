@@ -1,0 +1,2 @@
+compressed(D8) OR compressed(S3): (omega,chi)=(3,3) OR (4,4) -> (12,12)
+C5 OR C5: (omega,chi)=(2,3) OR (2,3) -> (5,8)

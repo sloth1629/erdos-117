@@ -1,0 +1,15 @@
+{
+  "description": "Exact OR-product checks: one direct-product group identity and one graph-level warning against multiplicativity.",
+  "experiments": [
+    {
+      "id": "compressed(D8) OR compressed(S3)",
+      "left": {"type": "compressed_group", "id": "D8"},
+      "right": {"type": "compressed_group", "id": "S3"}
+    },
+    {
+      "id": "C5 OR C5",
+      "left": {"type": "cycle", "n": 5},
+      "right": {"type": "cycle", "n": 5}
+    }
+  ]
+}

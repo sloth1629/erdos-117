@@ -1,0 +1,6 @@
+{
+  "description": "Exact scalar-symplectic extraspecial group computation requested after the candidate-bound counterexample.",
+  "groups": [
+    {"prime": 3, "rank": 2}
+  ]
+}

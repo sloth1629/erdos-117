@@ -1,3 +1,21 @@
 # Independent verification
 
-Small dependency-light verifiers and regression tests belong here. Record exact witnesses for every extremal claim.
+`test_exact_computation.py` checks group axioms, central-coset partitions and
+commutation invariance, witness validity, exact named-group records, direct
+product/OR-product compatibility, and the symplectic quotient model for
+extraspecial 2-groups.  As an implementation-independent optimizer check it
+also compares both exact graph algorithms against naive enumeration on every
+labeled simple graph with at most six vertices. Saved GAP logs at orders 8,
+32, and 64 are reparsed from their checksummed TSV sources: all 323
+multiplication tables, compressed graphs, clique/coloring witnesses, candidate
+bounds, and generated abelian subgroup covers are rechecked.
+
+The scalar-symplectic test reconstructs the order-243 group and its 81-vertex
+graph, reruns exact clique and coloring, independently excludes an 8-clique on
+the 40 projective twin classes, and checks every finite-field spread subspace
+and both saved abelian subgroup covers.
+
+```bash
+PYTHONPYCACHEPREFIX=/tmp/erdos117-pycache \
+python3 -m unittest discover -s src/verification -p 'test_*.py' -v
+```
