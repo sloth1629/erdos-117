@@ -39,7 +39,9 @@ No complete resolution is claimed. The strongest repository results are:
   \(\liminf h(n)^{1/n}\ge\sqrt2\).
 - [PROVED] Two cutoff-eight structural obstructions are now explicit.  If
   \(Q=G/Z(G)\) is nonabelian and \(\nu(G)\le8\), then
-  \(|Z(Q)|\le225\cdot2^{28}\).  If \(P\) is a finite class-two \(p\)-group
+  \(|Z(Q)|\le14{,}400\).  More precisely, the binary elementary layer of
+  \(Z(Q)\) has rank at most three, and rank three forces the centralizer of
+  its full preimage in \(G\) to be abelian.  If \(P\) is a finite class-two \(p\)-group
   and \(A\ge Z(P)\) is abelian, then
   \([A:Z(P)]\le p^{\nu(P)/p}\); a relative version charges the exponent to
   \(\nu(P)-\nu(H)\) for \(A=Z(H)\).

@@ -708,7 +708,7 @@ Indeed, the Sylow \(3\)- and \(5\)-subgroups of \(Z(Q)\) have exponent
 \(3\) and \(5\), respectively, so they are exactly the elementary abelian
 spaces \(A_3\) and \(A_5\) just bounded.
 
-### [PROVED] The binary central layer has rank at most fourteen
+### [PROVED] The binary central layer has rank at most three
 
 Assume that \(Q=G/Z(G)\) is finite and nonabelian and that
 \(\nu(G)\leq8\). Put
@@ -721,8 +721,8 @@ A=A_2=\{a\in Z(Q):a^2=1\},
 Then
 
 \[
-d_2\leq14,
-\qquad |Z(Q)_2|\leq2^{28}.
+d_2\leq3,
+\qquad |Z(Q)_2|\leq2^6.
 \tag{SR.12}
 \]
 
@@ -805,72 +805,116 @@ fiber would give a nine-clique in \(G\), a contradiction. Therefore
 \tag{SR.12c}
 \]
 
-We next bound the evaluation ranks. By (SR.4), every \(T_q|_A\) has rank
-at most three; by (SR.5), it has rank at most two when \(q\notin Z(Q)\).
-Suppose that a central \(z\in Q\) has \(\operatorname{rank}T_z=3\), and
-put \(K=\ker T_z\). One representative from each coset of \(K\) in
-\(A\) gives an eight-clique in the \(Az\)-fiber. If a noncentral
-\(q\in Q\) did not annihilate \(K\), then inside each coset of \(K\) we
-could choose its representative so that the corresponding lift in
-\(Az\) does not commute with a fixed lift of \(q\): the commutator changes
-by the nonzero map \(T_q|_K\), whereas all pairwise edges inside the fiber
-depend only on the distinct \(T_z\)-values. This would adjoin \(q\) to the
-eight-clique. Consequently every noncentral \(q\) annihilates \(K\).
-Fix one noncentral \(q_0\). For every \(c\in Z(Q)\), the element \(q_0c\)
-is noncentral and
+We use the following charged centralizer-chain lemma. It does not require
+\(G\) to be finite or nilpotent. Let \(M\) be any group with
+\(m=\nu(M)<\infty\), and suppose that
 
 \[
-T_{q_0c}|_K=T_{q_0}|_K+T_c|_K.
+Z(M)\leq H\leq Z_2(M),\qquad H\text{ is abelian},
+\qquad H/Z(M)\cong C_p^d.
 \]
 
-Thus every central element also annihilates \(K\). The zero-left-radical
-property (SR.2) now gives \(K=0\), so a rank-three evaluation can occur
-only when \(d_2=3\). In particular, if \(d_2\geq4\), every evaluation has
-rank at most two.
-
-Choose a maximum noncommuting set
-\(X=\{x_1,\ldots,x_m\}\) in \(G\), so \(m\leq8\), and put
-\(q_i=x_iZ(G)\) and \(K_i=\ker T_{q_i}\leq A\). Here \(X\) is a clique
-in the exact central-coset commutation graph of \(G\), not in the ordinary
-noncommuting graph of \(Q\). The kernels cover \(A\): otherwise a lift of
-an \(a\in A\setminus\bigcup_iK_i\) could be adjoined to \(X\). Their
-intersection is zero: a lift of an element in every \(K_i\) commutes with
-all of \(X\), and the maximum-clique center lemma then places it in
-\(Z(G)\).
-
-Assume \(d_2\geq4\), and consider the injective map
+Put \(r=\nu(C_M(H))\). Then
 
 \[
-\Phi:A\longrightarrow\bigoplus_{i=1}^m\operatorname{im}T_{q_i},
-\qquad a\longmapsto(T_{q_1}(a),\ldots,T_{q_m}(a)).
+d\leq\frac{m-r}{p}.
 \tag{SR.12d}
 \]
 
-Every block on the right has dimension at most two, and the kernel-cover
-property says that \(\operatorname{im}\Phi\) contains no vector that is
-nonzero in every block. If \(m\leq7\), or if one block is zero, the target
-of (SR.12d) has dimension at most fourteen. Suppose instead that \(m=8\)
-and every block is nonzero. If \(d_2\geq15\), the target dimension is
-fifteen or sixteen. In dimension fifteen, injectivity makes
-\(\operatorname{im}\Phi\) the whole target, which plainly contains a
-full-support vector. In dimension sixteen, the image is either the whole
-target or a hyperplane. Write a functional defining the latter hyperplane
-blockwise as \(\ell_1+\cdots+\ell_8\). Each two-dimensional block contains
-a nonzero vector in \(\ker\ell_i\); their direct sum is a full-support
-vector in the hyperplane. Every possibility is contradictory, proving
-\(d_2\leq14\).
+Indeed, for \(h\in H\), the map \(g\mapsto[h,g]\) is a homomorphism
+from \(M\) into \(Z(M)\), because \(H\leq Z_2(M)\). It therefore kills
+\(M'\), so
+
+\[
+[H,M'] = 1.
+\tag{SR.12e}
+\]
+
+Choose a maximum \(r\)-clique \(Y\) in \(C_M(H)\). Since \(H/Z(M)\)
+is finite, elements \(x_1,\ldots,x_t\in M\) can be chosen so that
+
+\[
+K_0=H,\qquad K_i=K_{i-1}\cap C_H(x_i),\qquad
+H=K_0>K_1>\cdots>K_t=Z(M).
+\]
+
+Write \(q_i=[K_{i-1}:K_i]=p^{e_i}\), where \(e_i\geq1\). Starting from
+\(Y\), we inductively construct a clique of size
+
+\[
+r+q_1+\cdots+q_i
+\]
+
+centralized by \(K_i\). Suppose the old clique is centralized by
+\(K=K_{i-1}\), put \(x=x_i\), and let \(T\) be a transversal for
+\(K_i=C_K(x)\) in \(K\). The set \(\{xt:t\in T\}\) is a \(q_i\)-clique:
+for distinct \(t,u\), its commutator is, up to inversion,
+\([tu^{-1},x]\ne1\).
+
+For every old vertex \(s\), choose \(a_s\in K\) with
+\([s a_s,x]\ne1\). By (SR.12e),
+\([s a,x]=[s,x][a,x]\) for \(a\in K\). The required choice is possible
+because the homomorphism \(a\mapsto[a,x]\) has \(q_i\geq p\) values,
+while at most one can cancel \([s,x]\). Replacing \(s\) by \(s a_s\)
+preserves all old edges: \(K\) centralizes the old clique and is abelian.
+Moreover, (SR.12e) and \([K,x]\leq Z(M)\) give, for every \(t\in T\),
+
+\[
+[s a_s,xt]=[s a_s,x]^t=[s a_s,x]\ne1.
+\]
+
+Thus the new block is completely joined to the modified old clique, and
+\(K_i\) centralizes every resulting vertex. This proves the induction.
+At the end,
+
+\[
+r+\sum_iq_i\leq m,
+\qquad
+d=\sum_i e_i\leq\frac1p\sum_iq_i,
+\]
+
+where the last inequality uses \(e_i\leq p^{e_i-1}=q_i/p\). This proves
+(SR.12d). Notice that finiteness of \(M\) was never used; finiteness of
+\(H/Z(M)\) is enough to make the chain finite.
+
+Return now to \(M=G\). If \(d_2\geq3\), equation (SR.12c) says that the
+full preimage
+
+\[
+H=\pi^{-1}(A)
+\]
+
+is abelian. Since \(A\leq Z(Q)\), one also has
+\(Z(G)\leq H\leq Z_2(G)\) and \(H/Z(G)\cong C_2^{d_2}\). Apply
+(SR.12d). The group \(C_G(H)\) contains a one-element clique, so
+\(r\geq1\); hence
+
+\[
+d_2\leq\frac{8-1}{2}<4.
+\]
+
+The same conclusion is automatic when \(d_2<3\), proving \(d_2\leq3\).
+There is also a useful equality-case restriction. If \(d_2=3\), then
+(SR.12d) gives \(r\leq2\). Every nonabelian group contains the
+three-clique \(\{x,y,xy\}\) for any noncommuting \(x,y\). Therefore
+
+\[
+d_2=3\quad\Longrightarrow\quad C_G\bigl(\pi^{-1}(A)\bigr)
+\text{ is abelian}.
+\tag{SR.12f}
+\]
 
 The central-exponent restriction gives \(\exp Z(Q)_2\leq4\). Therefore
 \(Z(Q)_2\cong C_4^u\times C_2^v\), with \(u+v=d_2\), and
 
 \[
-|Z(Q)_2|=2^{2u+v}\leq2^{2d_2}\leq2^{28}.
+|Z(Q)_2|=2^{2u+v}\leq2^{2d_2}\leq2^6.
 \]
 
 Together with (SR.11), this also gives
 
 \[
-|Z(Q)|\leq225\cdot2^{28}.
+|Z(Q)|\leq225\cdot2^6=14\,400.
 \]
 
 ### [PROVED] Coprime abelian central direct factors cross cutoff nine

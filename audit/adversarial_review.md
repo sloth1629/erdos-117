@@ -27,16 +27,16 @@ Continue auditing quantifiers, finite/infinite scope, central-coset arguments, p
   internal map forces a triangle in each of three mutually joined quotient
   fibers and hence a nine-clique.  Thus the internal map is zero when the
   binary central rank is at least three.
-- [PROVED] The remaining rank argument was also reconstructed independently.
-  A rank-three central evaluation either has zero kernel or permits its
-  eight-clique representatives to be adjusted independently against a
-  noncentral vertex.  For a maximum clique in the exact central-coset graph
-  of \(G\), the evaluation kernels cover the binary layer and have zero
-  common intersection.  The resulting injective block map contains no
-  full-support vector; the dimension-fifteen and dimension-sixteen cases
-  both contradict this.  Hence
-  \(\dim_{\mathbf F_2}\Omega_1(Z(G/Z(G)))\le14\), and the already proved
-  exponent-four restriction gives \(|Z(G/Z(G))_2|\le2^{28}\).
+- [PROVED] The sharper charged second-center argument was reconstructed
+  independently.  For an arbitrary group \(M\), if
+  \(Z(M)\le H\le Z_2(M)\), \(H\) is abelian, and
+  \(H/Z(M)\cong C_p^d\), the block-replacement centralizer chain gives
+  \(d\le(\nu(M)-\nu(C_M(H)))/p\).  No finiteness of \(M\) is used.  Applied
+  after the preceding binary internal-map reduction, this proves
+  \(\dim_{\mathbf F_2}\Omega_1(Z(G/Z(G)))\le3\); rank three can occur only
+  when the full preimage of this binary layer has abelian centralizer.  The
+  exponent-four restriction consequently gives
+  \(|Z(G/Z(G))_2|\le2^6\).
 - [UNVERIFIED] As a redundant scratch stress check rather than a proof
   dependency, all
   nonzero three-space alternating maps with codomain dimensions one, two,
