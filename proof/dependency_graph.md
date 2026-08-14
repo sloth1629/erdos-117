@@ -1,6 +1,7 @@
 # Proof Dependency Graph
 
-No complete solution of Erdos Problem 117 is claimed.
+No complete solution of Erdos Problem 117 is claimed; the exact range proved
+here is now \(1\le n\le7\).
 
     elementary group and graph definitions
       +-- graph/group dictionary: omega(Gamma_G)=nu(G), chi(Gamma_G)=a(G)
@@ -56,12 +57,33 @@ No complete solution of Erdos Problem 117 is claimed.
                         +-- omega <= 6 implies chi <= 6 for |Q| <= 36
                               +-- h(6)=6
 
-The \(h(5)\) and \(h(6)\) branches are explicitly computer-assisted.  Their
+      +-- Abdollahi--Jafarian Amiri seven-cover theorem f(7)=81 [external]
+            +-- self-contained finite center-index bound for arbitrary G
+            +-- maximum-clique centralizers descend to a finite irredundant
+            |   seven-cover with trivial intersection
+            +-- nu(G)=7 implies |G:Z(G)| <= 81
+                  +-- complete 738-type SmallGroups inventory [computer]
+                  |     +-- 660 ordinary types / 55,970 normal kernels
+                  |     +-- C2^5 nine-clique obstruction [proved]
+                  |     +-- C3^4 exact GL(4,3)-orbit certificate [computer]
+                  |     +-- 62 explicit nonidentity zero exterior rows
+                  |     +-- 11 complete character-annihilator BFS scans
+                  |     +-- C4^2 x C2^2 subgroup certificate [computer]
+                  |     +-- C2^3 x D8 affine-dual certificate [computer]
+                  |     +-- C2^6 alternating-pencil classification
+                  |           +-- every cutoff-seven graph is 9-colorable
+                  +-- S(3,2) has (nu,a)=(7,10) [proved]
+                        +-- h(7)=10
+
+The \(h(5)\), \(h(6)\), and \(h(7)\) branches are explicitly
+computer-assisted.  Their
 load-bearing external dependencies are the audited subgroup-cover theorems
 and the standard nonabelian-exterior-square/Schur-cover construction; the
 repository contains repaired structural reductions and independent finite
-certificates for the six-cover leaves.  All other branches displayed above
-are computation-independent. Neumann (1976) is
+certificates for the six-cover leaves.  At seven, the external dependency is
+Theorem B (p. 292, proof pp. 299--300) of Abdollahi--Jafarian Amiri; the
+repository independently certifies every post-reduction finite case.  All
+other branches displayed above are computation-independent. Neumann (1976) is
 primary-verified historical corroboration. Pyber's fixed-base exponential
 upper bound remains inaccessible at proof level and therefore lies outside
 the proved dependency graph.

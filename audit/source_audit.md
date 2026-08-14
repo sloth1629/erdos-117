@@ -128,7 +128,13 @@ The dissertation's preceding page specifies base-2 logarithms.  This transcripti
 
 [PROVED] Assuming Theorem A's maximal-case consequence, the nonmaximal reduction on pp. 299–300 has been reconstructed independently.  After core reduction and maximal-member replacement, essential subcovers of sizes 6, 5, 4, and 3 are bounded using \(f(6)=36\), \(f(5)=16\), the factorial intersection lemma, Greco's four-cover cases, and induced covers inside a maximal subgroup.  The six- and three-subcover branches give 72; the five-subcover branch's sole candidate 96 is eliminated by subgroup-index constraints; and the four-subcover branches are at most 81 or contradictory.  This conditional implication is fully proved; only Theorem A's seven-cover maximal classification remains outside a repository proof, while the \(f(6)\) input is proved above.
 
-[PROVED] Maximum-clique centralizers plus repository Lemma CB.2 give \([G:Z(G)]\le81\) for \(\nu(G)=7\).  This is compatible with the repository's \((\nu,a)=(7,10)\) example and gives no conclusion \(a(G)\le7\).
+[PROVED] For arbitrary \(G\) with \(\nu(G)=7\), the repository's universal
+center-index theorem first makes \(Q=G/Z(G)\) finite.  The seven
+maximum-clique centralizers then descend to an irredundant cover of finite
+\(Q\), and repository Lemma CB.2 makes its intersection trivial.  Applying
+the cited finite seven-cover theorem gives \([G:Z(G)]\le81\).  This is
+compatible with the repository's \((\nu,a)=(7,10)\) example and gives no
+conclusion \(a(G)\le7\) by itself.
 
 ## Exact \(h(7)\) and \(\nu=7\) classification audit
 
@@ -153,6 +159,29 @@ The dissertation's preceding page specifies base-2 logarithms.  This transcripti
 [COMPUTED] The producer `experiments/configs/f6_maximal_cover_audit.g`, tables `experiments/logs/f6_maximal_cover_classes.tsv` and `experiments/logs/f6_maximal_cover_groups.tsv`, independent verifier `src/python/analyze_f6_maximal_cover_audit.py`, and certificate `experiments/logs/f6_maximal_cover.json` cover every finite leaf.  The multiplication-table verifier reconstructs 5,257 subgroups in 48 isomorphism types and checks 5,545,351 six-subsets, including all \(A_5/S_5\), \(S_3^3\) subdirect, order-48/96 \(S_4^2\), and order-50/100 branches.
 
 [PROVED] The center-index bridge and complete exterior-square audit now prove \(h(6)=6\) for arbitrary groups.  The proof is Theorem H6.3 in `notes/exact_h6.md`; the finite producer/raw/verifier/certificate chain is `experiments/configs/h6_exterior_scan.g`, `experiments/logs/h6_exterior.tsv`, `src/python/analyze_h6_exterior_scan.py`, and `experiments/logs/h6_exterior.json`.  The excluded \(C_2^5\) quotient has a self-contained alternating-map proof and auxiliary certificate `experiments/logs/h6_c2_5.json`.  The scan checks all 23,527 action-invariant exterior-square kernels for the other 161 quotient types of order at most 36.
+
+## Completed repository audit for \(h(7)\)
+
+[PROVED] Theorem H7.19 in `notes/exact_h7.md` proves \(h(7)=10\) for
+arbitrary groups by a computer-assisted proof.  The arbitrary-group bridge,
+finite seven-cover input, universal exterior-square map, exact-radical
+criterion, one-way exterior-zero obstruction, and the lower witness
+\(S(3,2)\) are all stated with their dependencies there.
+
+[COMPUTED] The finite upper-bound audit disposes of all 738 group types of
+order at most 81 in the disjoint partition
+\[
+660+2+62+11+3=738.
+\]
+The five ordinary exterior-kernel batches check 55,970 kernels: 40,664 have
+nontrivial radical, 14,989 have a certified eight-clique, and the remaining
+317 are solved exactly.  Dedicated certificates handle \(C_2^5\),
+\(C_3^4\), 62 exterior-zero order-64 quotients, eleven generic dual cases,
+and the three special IDs 192, 261, and 267.  Complete serial ranges,
+commutator tables, actions, witnesses, artifact hashes, and a global
+pairwise-disjoint partition assertion are verified by
+`src/verification/test_exact_computation.py`; canonical commands and hashes
+are listed in `proof/computational_appendix.tex`.
 
 ## Exact-formula and alternate-terminology search
 

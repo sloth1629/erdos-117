@@ -21,6 +21,10 @@ notes/known_bounds.md.
   noncommuting triple \(x,y,xy\).
 - [PROVED] \(h(3)=3\), attained by \(D_8\).
 - [PROVED] \(h(4)=4\), attained by \(S_3\).
+- [PROVED] \(h(5)=5\) and \(h(6)=6\), by the complete exterior-square
+  certificates in `notes/exact_h5.md` and `notes/exact_h6.md`.
+- [PROVED] \(h(7)=10\), by the computer-assisted proof in
+  `notes/exact_h7.md`; the lower witness is \(S(3,2)\).
 - [PROVED] Central elements remain vertices of the full noncommuting graph
   and are isolated. This makes the abelian case agree exactly with
   \(a(G)=\nu(G)=1\).
@@ -36,7 +40,8 @@ determine the sharp asymptotic behavior explicitly asked for in a defensible
 reformulation, with matching constructions and universal upper bounds. It
 must include arbitrary groups, all boundary cases, and every constant.
 
-[UNVERIFIED] This repository has not achieved that objective. It proves new
-reductions and bounds and disproves one natural exact candidate, but the
-optimal exponential rate and the values \(h(n)\) for \(n\geq5\) remain open
-except for lower and upper bounds.
+[UNVERIFIED] This repository has not achieved that objective. It determines
+\(h(n)\) through \(n=7\), proves new general reductions and bounds, and
+disproves one natural exact candidate, but the optimal exponential rate and
+the values \(h(n)\) for \(n\geq8\) remain open except for lower and upper
+bounds.

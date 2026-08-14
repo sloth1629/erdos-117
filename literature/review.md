@@ -2,11 +2,17 @@
 
 Research cut-off: 2026-08-13.  Here \(\omega(G)=\nu(G)\) is the largest size of a pairwise noncommuting subset and \(a(G)\) is the least number of abelian subgroups covering \(G\).  Statements about what a paper *reports* are kept separate from the truth of the reported theorem when the proof-bearing source was not available.
 
-## Current problem status
+## External problem-status snapshot
 
 [CITED-VERIFIED] Erdős's Problem 26 in *Some Unsolved Problems* (1997), printed p. 8, asks for the least universal abelian-cover bound \(h(n)\) for groups having no pairwise noncommuting set larger than \(n\).  The same paragraph reports Pyber's two-sided exponential estimate \((1+c_1)^n<h(n)<(1+c_2)^n\), for positive constants \(c_1,c_2\), and says the lower bound was already known to Isaacs.  This verifies Erdős's wording and attribution, not the proofs behind it.
 
-[UNVERIFIED] The indexed snapshot of the current Erdős Problems page for Problem 117 labels the problem OPEN, says that no complete or partial solution is claimed in its comments, and gives 23 January 2026 as its last edit.  The page itself returned HTTP 403 during this audit, so the status is recorded as a search-index observation rather than a verified primary mathematical source.
+[UNVERIFIED] The indexed snapshot of the Erdős Problems page for Problem 117,
+last edited 23 January 2026, labels the problem OPEN and says that no complete
+or partial solution is claimed in its comments.  This is a historical
+external-index snapshot predating the repository's exact-seven proof, not a
+current audit of this repository.  The page itself returned HTTP 403, so the
+status is recorded as a search-index observation rather than a verified
+primary mathematical source.
 
 ## Graph/group translation and the qualitative theorem
 
@@ -295,7 +301,11 @@ The complete published article was read through the author's public ResearchGate
 
 [PROVED] Assuming Theorem A's maximal-case consequence, the final reduction on pp. 299–300 has been reconstructed and checked.  Quotient first by the core of the cover intersection.  From a putative irredundant seven-cover with \(|G:D|>81\), choose one with as many maximal members as possible and enlarge a nonmaximal member.  The enlarged cover is redundant.  An essential six-subcover gives \(|G:D|\le f(6)\cdot2=72\).  An essential five-subcover uses \(f(5)=16\) and the factorial intersection bound \(|D_1:D|\le3!=6\); the only nominal value above 81 is 96, and the index analysis on pp. 299–300 excludes it.  An essential four-subcover is split using Greco into indices \(9,6,8\) and induces covers inside the enlarged maximal subgroup; all branches are at most 81 or contradictory.  Finally an essential three-subcover induces a six-cover in that maximal subgroup and yields at most \(2f(6)=72\).  Consequently the only unaudited repository edge in this reduction is the external/computational seven-cover maximal-case classification; the formerly open \(f(6)=36\) repository edge is now closed above.
 
-[PROVED] Applying the same maximum-clique centralizer argument as above, repository Lemma CB.2 makes the intersection of the seven centralizers exactly \(Z(G)\).  Hence the cited seven-cover theorem gives
+[PROVED] For an arbitrary group with \(\nu(G)=7\), the repository's universal
+center-index bound first makes \(Q=G/Z(G)\) finite.  Maximum-clique
+centralizers contain the center, descend to an irredundant seven-subgroup
+cover of this finite \(Q\), and repository Lemma CB.2 makes their intersection
+trivial in \(Q\).  The cited finite seven-cover theorem therefore gives
 \[
  [G:Z(G)]\le81\qquad\text{when }\nu(G)=7.
 \]
@@ -313,7 +323,16 @@ This is a center-index bound, not an abelian-cover theorem; it does not contradi
 
 [CITED-VERIFIED] Results for groups with a prescribed **number of element-centralizers** must not be substituted for results about \(\nu\).  Zarrin, Theorem 3.5(4), printed p. 45, classifies 7-centralizer groups by three central quotients, but the same page proves only \(1+\nu(G)\le |\mathcal C(G)|\).  Thus a group with \(\nu=7\) has at least eight element-centralizers and need not be a 7-centralizer group.  Likewise, Jafarian Amiri--Madadi--Rostami, Lemma 3.1, in the published open article on 10-centralizer groups, gives \(|G/Z(G)|=16\) under the joint hypotheses \(|\mathcal C(G)|=10\) and \(\nu\in\{5,6,7,8\}\); it is only a conditional order-16 slice, not a classification of all \(\nu=7\) groups.
 
-[UNVERIFIED] Exact-title, formula, and terminology searches through the 2026-08-13 research cut-off found no primary source claiming the exact value of \(h(7)\), a direct universal bound \(h(7)\le10\), or a classification of all groups with \(\nu=7\).  Searches separately excluded papers in which “\(\omega(G)=7\)” counts automorphism orbits, papers about 7-centralizer groups, and papers whose \(\omega\) and \(\chi\) refer to a generating graph.  In particular, a located statement \(\omega=\chi\) for finite nilpotent groups belongs to the generating graph defined immediately before it and supplies no noncommuting-graph theorem.  This is an index-bounded negative result, not a proof of absence.  The strongest verified universal facts currently are solvability and the repository bound \([G:Z(G)]\le81\); neither determines \(a(G)\).  The repository construction gives the separate lower bound \(h(7)\ge10\).
+[UNVERIFIED] Exact-title, formula, and terminology searches through the 2026-08-13 research cut-off found no primary source claiming the exact value of \(h(7)\), a direct universal bound \(h(7)\le10\), or a classification of all groups with \(\nu=7\).  Searches separately excluded papers in which “\(\omega(G)=7\)” counts automorphism orbits, papers about 7-centralizer groups, and papers whose \(\omega\) and \(\chi\) refer to a generating graph.  In particular, a located statement \(\omega=\chi\) for finite nilpotent groups belongs to the generating graph defined immediately before it and supplies no noncommuting-graph theorem.  This is an index-bounded negative result about the external literature, not a proof of absence.
+
+[PROVED] Independently of that negative literature search, repository Theorem
+H7.19 proves \(h(7)=10\) for arbitrary groups.  The upper bound first reduces
+to a finite center quotient of order at most 81, then gives a disjoint exact
+disposition of all 738 quotient types through exterior-square kernels,
+zero-row obstructions, dual-character searches, and three dedicated
+order-64 certificates.  The group \(S(3,2)\) supplies the matching lower
+witness \((\nu,a)=(7,10)\).  The complete proof and dependency labels are in
+`notes/exact_h7.md`.
 
 ## Forward citations and possible later resolutions
 

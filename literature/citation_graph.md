@@ -206,7 +206,8 @@ Abdollahi--Jafarian Amiri 2007, Theorem A [CITED-VERIFIED]
 Theorem A + f(6)=36 + f(5)=16 + Greco/Scorza + factorial lemma
   `-- conditional implication from Theorem A, pp. 299--300 [PROVED] (reconstruction)
        `-- f(7)=81, Theorem B [CITED-VERIFIED]
-            `-- nu(G)=7 => [G:Z(G)]<=81 [PROVED] (uses cited input)
+            `-- universal center-index bound first makes Q=G/Z finite
+                 `-- finite-Q seven-cover bridge gives |Q|<=81 [PROVED]
 ```
 
 [CITED-VERIFIED] The entire author-uploaded primary article was read.  The exact f(7) theorem is Theorem B on p. 292, its lower witness is on pp. 292–293, and the final reduction is on pp. 299–300.  The maximal classification proof on pp. 292–299 is not repository `[COMPUTED]` because the GAP 4.3 enumerations have no archived code/output certificate.
@@ -232,4 +233,28 @@ Darafsheh--Ghorbani--Prajapati 2015
 
 [PROVED] Zarrin supplies the finite isoclinic representative and compatible commutator maps as cited-verified input.  The repository's exact central-coset translation then identifies the compressed noncommuting graphs, so both \(\nu\) and \(a\) are preserved.  The solvability theorem and small-central-quotient paper add structural pruning but no universal upper bound \(a\le10\); the latter leaves the non-AC order-\(3^5\) repository example untouched.
 
-[UNVERIFIED] No located edge states exact \(h(7)\), a universal \(h(7)\le10\), or a full classification of \(\nu=7\).  Exact searches excluded automorphism-orbit \(\omega(G)=7\), prescribed-centralizer results, and generating-graph clique/chromatic results.  This is an index-bounded negative search.
+[UNVERIFIED] No located external-literature edge states exact \(h(7)\), a universal \(h(7)\le10\), or a full classification of \(\nu=7\).  Exact searches excluded automorphism-orbit \(\omega(G)=7\), prescribed-centralizer results, and generating-graph clique/chromatic results.  This is an index-bounded negative search.
+
+## Exact-seven exterior-square node
+
+```text
+universal center-index theorem + finite f(7)=81 [PROVED + CITED-VERIFIED]
+  `-- |Q=G/Z(G)|<=81 for nu(G)=7 [PROVED]
+       `-- universal exterior-kernel graph and exact-radical criterion [PROVED]
+            |-- 660 ordinary quotient types / 55970 kernels [COMPUTED]
+            |-- C2^5 and C3^4 delegated cases [PROVED + COMPUTED]
+            |-- 62 nonidentity exterior-zero rows [COMPUTED]
+            |-- 11 generic dual-character cases [COMPUTED]
+            |-- IDs 192, 261, 267 [PROVED + COMPUTED]
+            `-- every faithful graph with omega<=7 has chi<=10 [PROVED]
+
+S(3,2): (nu,a)=(7,10) [PROVED]
+  `-- h(7)=10, Theorem H7.19 [PROVED] (computer-assisted)
+```
+
+[PROVED] The exact-seven proof is `notes/exact_h7.md`.  Its computation
+partition is pairwise disjoint and exhaustive,
+\(660+2+62+11+3=738\), and the global assertion is rechecked by the saved
+verification suite.  The cited seven-cover theorem supplies only the finite
+center-index cutoff; all coloring work is performed by repository proofs and
+certificates.

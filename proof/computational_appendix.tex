@@ -21,7 +21,7 @@ coverage.
 The verifier compares both optimized graph solvers with naive exhaustive
 enumeration for every one of the \(33{,}868\) labeled simple graphs having at
 most six vertices. It also reconstructs every saved group and certificate.
-The final audit on Python 3.9.6 passed all 18 tests.
+The final audit on Python 3.9.6 passed all 25 tests in 211.839 seconds.
 
 \subsection{Saved exact records}
 
@@ -128,6 +128,56 @@ d350e66ac16cdf3459ed24b0cb1e18ba730331663ff379ece4c6d9f50fee4eb9
 83a946a36ee17d1523b1b1c6b3d9eda96606389bdbc0cca5e23d1905c85bc971
 \end{verbatim}
 
+For $h(7)$, the complete SmallGroups inventory has 738 quotient types of
+order at most 81.  The five ordinary batches cover 660 types and 55,970
+normal kernels: 40,664 have nontrivial radical, 14,989 have a verified
+eight-clique, and the 317 exact survivors have distribution
+\[
+ (\omega,\chi)=(1,1)^1,(3,3)^1,(4,4)^2,(5,5)^{93},
+ (6,6)^{217},(7,7)^3.
+\]
+The remaining inventory keys split disjointly as
+\[
+ 660+2+62+11+3=738.
+\]
+The two delegated elementary-abelian cases are $C_2^5$ and $C_3^4$; the
+latter search enumerates all 56,632 alternating-form subspaces and leaves
+one eligible orbit, of size 234 and invariants $(7,10)$.  For 62 order-64
+types, 126 nonidentity witnesses have complete 64-entry zero exterior rows.
+The eleven generic character-dual searches retain 5,206 no-eight invariant
+subgroups, all nonfaithful.  The three special order-64 IDs are 192, 261,
+and 267.  Their respective certificates enumerate 5,276 subgroups of
+$C_4\times C_2^5$, classify 26,387 odd-containing affine-dual subgroups for
+$C_2^3\times D_8$, and exhaust the relevant rank-six and rank-four
+alternating pencils for $C_2^6$.  Every boundary exclusion has a checked
+eight-clique, and the verifier checks the pairwise-disjoint global partition.
+
+The SHA-256 digests below correspond, in order, to the quotient inventory,
+the five ordinary batch aggregates, the zero-exterior-row aggregate, the
+eleven-case dual aggregate, and the four special certificates for IDs 192,
+261, 267, and the delegated $C_3^4$ case:
+\begin{verbatim}
+9d25ca77b3b931fd558d45a6f4afb5d9dbd6174f1725a87235c62803776b3941
+ccb9d1d75ce927aa05769908140a9c8624baf43177716f2217473ac555cef8bf
+e7265c232fddbf4cd5538b9e2f6f74e07458473043d1420f6d2047cd8667e070
+69f3e4e39543ffb316798dec5df3dd220bdbd61b11a67c0bd07bdccdbdaa70a0
+7db888ca666d9de78813e1470da8a979dbc85a29997c269725f291fa59f9ef34
+ac9f750b88879ff3fecd03d6baf18f2d0cc8487cf5a597d6a4a1be884433e8b4
+bb8e8f416e6b19ec0fdb9586b7fa1e04579aa66baa5554769c62a4fcdbd6198e
+ed7eec0f57631c6dd2461d6f27b3e83949e0d2df5170209a7335114ffe694fe8
+b5fbb5cdcacc3af14b9589a73ff345294b2246ca6c5af240ef50b1aa146f6f81
+669e6d07149371114ea1d56ec6efd07946746db4faea576b9a93e4c8b2ff8dc1
+7ce95c5c98ab265ccee87cfa53c30ffe781fb1ea6f77e13c1ced0cbf75482855
+e6f11f3e313308ffc5f9b80871a31a6ea724e5e4599a256cd011fa5947b4ced9
+78092bc9d4f2bb1cc59e139662bf7702b8fcac761d5529647c5248ae9295a043
+\end{verbatim}
+The corresponding JSON filenames are, respectively,
+\path{h7_quotient_inventory}, the five \path{h7_exterior_*} batches,
+\path{h7_capability_order64}, \path{h7_order64_dual},
+\path{h7_c4_2_c2_2}, \path{h7_c2_3_d8}, the two
+\path{h7_c2_6_*_pencils} files, and \path{h7_c3_4}, all under
+\path{experiments/logs/} with extension \path{.json}.
+
 \subsection{Commands}
 
 From the repository root, the canonical computations are
@@ -163,6 +213,11 @@ python3 src/python/run_scalar_symplectic_bounds.py \
 PYTHONPYCACHEPREFIX=/tmp/erdos117-pycache \
 python3 -m unittest discover -s src/verification -p 'test_*.py' -v
 \end{verbatim}
+
+The complete cutoff-seven regeneration commands, including all GAP batch
+parameters and the eleven raw dual inputs, are kept in
+\path{src/python/README.md}; the final verification transcript is
+\path{experiments/logs/verification.txt}.
 
 To regenerate a SmallGroups census after building GAP at the recorded local
 path, replace \(N\) by \(8\), \(32\), or \(64\) in both filenames:

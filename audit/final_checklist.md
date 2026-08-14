@@ -13,7 +13,7 @@ These boxes remain open, so no complete solution is claimed.
 
 ## Passed release checks
 
-- [x] Definitions, boundary conventions, and \(n=1,2,3,4,5,6\) checked.
+- [x] Definitions, boundary conventions, and \(n=1,2,3,4,5,6,7\) checked.
 - [x] Arbitrary and finite groups distinguished and connected by a proved
   exact finite commutation model.
 - [x] Central elements, central cosets, and the false quotient shortcut
@@ -29,6 +29,10 @@ These boxes remain open, so no complete solution is claimed.
   six-cover proof, independently reconstructed finite leaves, the structural
   \(C_2^5\) exclusion, complete exterior-square export, and independently
   checked radical/clique/coloring certificates.
+- [x] The computer-assisted proof of \(h(7)=10\) records the verified
+  seven-cover input, the complete 738-type partition, all ordinary and
+  character-dual scans, explicit exterior-zero rows, special quotient
+  certificates, final hashes, and independent reconstruction tests.
 - [x] Product and limit assertions audited without assuming one-shot
   multiplicativity.
 - [x] Computational witnesses, configurations, versions, hashes, and

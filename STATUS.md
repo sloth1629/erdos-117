@@ -1,21 +1,28 @@
 # Status
 
-Updated: 2026-08-13
+Updated: 2026-08-14
 
 ## Current outcome
 
 `[UNVERIFIED]` Erdős Problem 117 is not completely resolved here. The exact
-function \(h(n)\) is known in this repository only for \(1\le n\le6\), and
-the optimal exponential rate is not determined.
+function \(h(n)\) is known in this repository for \(1\le n\le7\), but the
+general function and optimal exponential rate are not determined.
 
-The research pass did decisively refute the proposed binary-symplectic
-formula. The order-\(3^5\) group \(S(3,2)\) satisfies
+The exact cutoff-seven audit now matches the earlier lower witness.  The
+order-\(3^5\) group \(S(3,2)\) satisfies
 
 \[
 \nu(S(3,2))=7,\qquad a(S(3,2))=10,
 \]
 
-so \(h(7)\ge10\), whereas the proposal gives 9.
+and the complete upper proof gives
+
+\[
+h(7)=10.
+\]
+
+This also decisively refutes the proposed binary-symplectic formula, which
+gives 9 at seven.
 
 ## Proved advances
 
@@ -26,10 +33,11 @@ so \(h(7)\ge10\), whereas the proposal gives 9.
    \(h(n)\le n h(n-2)\).
 4. Self-contained conjugacy-class bound \(4n^2\) and
    \([G:Z(G)]\le(4n^2)^n\).
-5. Exact values \(h(1)=h(2)=1\) and \(h(n)=n\) for \(3\le n\le6\).
-   The values at five and six are computer-assisted.  They use audited
-   irredundant-cover bounds \(f(5)=16\), \(f(6)=36\), followed by exhaustive
-   exterior-square computations over all possible finite center quotients.
+5. Exact values \(h(1)=h(2)=1\), \(h(n)=n\) for \(3\le n\le6\), and
+   \(h(7)=10\).  The values at five through seven are computer-assisted.
+   At seven, the primary-verified theorem \(f(7)=81\) reduces the problem to
+   738 center quotients; structural and exact exterior-square certificates
+   exhaust every one.
 6. Exact scalar symplectic cover formula
    \(a(S(q,m))=q^m+1\), binary lower construction, and the
    \(S(3,2)\) counterexample.
@@ -38,8 +46,8 @@ so \(h(7)\ge10\), whereas the proposal gives 9.
 
 ## Computation status
 
-- The complete verification suite passes; its saved output records the exact
-  test count and runtime for this milestone.
+- The complete verification suite passes: 25 tests in 211.839 seconds under
+  Python 3.9.6, with the transcript saved for this milestone.
 - Both optimized graph algorithms agree with brute force on all 33,868
   labeled graphs with at most six vertices.
 - All SmallGroups of orders 8, 32, and 64 were exported by GAP 4.16.0 /
@@ -55,6 +63,13 @@ so \(h(7)\ge10\), whereas the proposal gives 9.
   a structural lemma and a redundant 174,251-pencil census handle
   \(C_2^5\).  All 314 faithful candidates not already excluded by a
   seven-clique are six-colorable.
+- The \(h(7)\) proof inventories all 738 quotient types of order at most 81.
+  Ordinary bounded batches scan 660 types and 55,970 normal kernels.  The
+  remaining cases are partitioned into two delegated elementary-abelian
+  quotients, 62 explicit nonidentity zero exterior rows, eleven complete
+  character-dual searches, and three special order-64 certificates.  The
+  only eligible \(C_3^4\) orbit has \((\nu,a)=(7,10)\); no other case exceeds
+  ten at clique cutoff seven.
 - The reconstructed finite edge of the \(f(6)=36\) proof independently
   rebuilds 5,257 subgroups in 48 group types and tests 5,545,351 six-subsets
   of maximal subgroups.  It corrects the published false positive
@@ -71,6 +86,9 @@ so \(h(7)\ge10\), whereas the proposal gives 9.
 - Neumann (1976) and Faber–Laver–McKenzie (1978) were primary-verified.
 - Bryce–Fedri–Serena (1997), including the proof that \(f(5)=16\), was
   primary-verified from the complete official PDF.
+- Abdollahi–Jafarian Amiri (2007), Theorem B on p. 292 with proof on
+  pp. 299--300, was primary-verified and supplies the load-bearing
+  seven-cover bound \(f(7)=81\).
 - The primary statement \(f(6)=36\), Alencar's full proof reconstruction,
   and every finite classification leaf used in that reconstruction were
   audited; the finite leaves have modern GAP exports and an independent
@@ -96,8 +114,7 @@ so \(h(7)\ge10\), whereas the proposal gives 9.
    a larger exponential constant.
 4. Establish existence and value of an asymptotic exponential rate, or
    formulate the correct limsup/liminf answer.
-5. Determine \(h(7)\) and the next exact values; the current lower bound is
-   \(h(7)\ge10\).
+5. Determine \(h(8)\) and the next exact values.
 6. Acquire and audit Pyber's full primary proof for historical completeness.
 
 ## Environment

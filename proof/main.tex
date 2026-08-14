@@ -22,9 +22,9 @@
 \newcommand{\Tr}{\operatorname{Tr}}
 
 \title{Abelian Covers and Pairwise Noncommuting Sets in Groups:\\
-       Structural Reductions, an Exact Small Value, and a Counterexample}
+       Structural Reductions, Exact Values Through Seven, and a Counterexample}
 \author{Research draft}
-\date{13 August 2026}
+\date{14 August 2026}
 
 \begin{document}
 \maketitle
@@ -40,13 +40,15 @@ preserves the entire central-coset commutation graph; prove
 $\nuG(\CG_G(x))\le\nuG(G)-2$ for every noncentral $x$, and consequently
 $h(n)\le n h(n-2)$; determine
 $h(1)=h(2)=1$, $h(3)=3$, $h(4)=4$, and, by exhaustive
-computer-assisted arguments, $h(5)=5$ and $h(6)=6$; and construct scalar symplectic groups $S(q,m)$ with
+computer-assisted arguments, $h(5)=5$, $h(6)=6$, and $h(7)=10$; and
+construct scalar symplectic groups $S(q,m)$ with
 $\aG(S(q,m))=q^m+1$.  A complete calculation in $S(3,2)$ gives
 $(\nuG,\aG)=(7,10)$, disproving the candidate formula considered here,
-$h(n)=\max\{n,2^{\lfloor(n-1)/2\rfloor}+1\}$.  The two computer-assisted
-values use the subgroup-cover bounds $f(5)=16$ and $f(6)=36$, followed by
-complete Schur-cover/exterior-square enumerations.  The remaining structural
-results and the counterexample have computation-independent proofs.
+$h(n)=\max\{n,2^{\lfloor(n-1)/2\rfloor}+1\}$.  The three
+computer-assisted values use the subgroup-cover bounds $f(5)=16$,
+$f(6)=36$, and $f(7)=81$, followed by complete
+Schur-cover/exterior-square analyses.  The remaining structural results and
+the counterexample have computation-independent proofs.
 \end{abstract}
 
 \section{Problem and status}
@@ -644,13 +646,13 @@ $(\epsilon,1,u)$ with $\epsilon\in\{1,-1\}$ and $u\in\F_3^2$.  Let $P$ and
 $M$ be the $u$'s belonging respectively to $\epsilon=1$ and $-1$.  They
 satisfy
 \[
- \det(p,p')\ne0,\quad\det(m,m')\ne0,\quad\det(p,m)\ne1.\tag{1}
+ \det(p,p')\ne0,\quad\det(m,m')\ne0,\quad\det(p,m)\ne1.\tag{C}
 \]
 Each of $P,M$ uses at most one vector in each of the four directions.  If
 one has size at most one, then immediately $|P|+|M|\le5$. If both have size
 at least two, reorder two members of $P$ so their determinant is $-1$ and
 apply an element of $\mathrm{SL}_2(3)$ sending them to
-$(0,1),(1,0)$. Condition (1) restricts $M$ to
+$(0,1),(1,0)$. Condition (C) restricts $M$ to
 \[
  (0,-1),\quad(1,0),\quad(1,-1).
 \]
@@ -671,6 +673,144 @@ representatives in $\{(1,1),(-1,-1)\}$ and
 $\{(1,-1),(-1,1)\}$; substituting the four choices leaves at most one
 candidate in $M$.  Thus always $|P|+|M|\le5$, and the original set has at
 most $2+5=7$ points.
+\end{proof}
+
+\section{A computer-assisted exact value at seven}
+
+Abdollahi and Jafarian Amiri prove that the intersection of an irredundant
+seven-subgroup cover has index at most $81$, and that the bound is sharp
+\cite[Theorem~B, p.~292; proof pp.~299--300]
+{abdollahi_jafarian_amiri_2007_seven_cover}.
+
+\begin{lemma}[Seven-clique center bound]\label{lem:index-seven}
+If $\nuG(G)=7$, then $[G:\Z(G)]\le81$.
+\end{lemma}
+
+\begin{proof}
+Proposition~\ref{prop:conjugacy} first makes $Q=G/\Z(G)$ finite, without
+using the external cover theorem.  For a maximum noncommuting set
+$x_1,\ldots,x_7$, the centralizers cover $G$ irredundantly and have
+intersection $\Z(G)$ by Lemma~\ref{lem:center}.  Since they contain the
+center, their images form an irredundant seven-subgroup cover of the finite
+group $Q$ with trivial intersection.  Apply the cited theorem.  This also
+covers an infinite original group.
+\end{proof}
+
+We use two elementary consequences of the exterior-square model.  First, an
+enumerated graph can represent the exact quotient $G/\Z(G)$ only when its
+only isolated vertex is the identity.  Second, if $1\ne q\in Q$ satisfies
+$q\wedge r=1$ for every $r\in Q$, then no exact center quotient can be
+isomorphic to $Q$: equation~(1) makes every lift of $q$ central.  This is a
+one-way obstruction and requires no converse capability theorem.
+
+For the large abelian exterior squares it is useful to dualize.  If
+$E=Q\wedge Q$ is finite abelian and $K\le E$, put
+$L=K^\perp\le E^*=\operatorname{Hom}(E,\mathbb Q/\mathbb Z)$.  Character
+separation gives an inclusion-reversing bijection $K\leftrightarrow L$,
+preserving action invariance contragrediently, and
+\[
+ q\wedge r\notin K
+ \quad\Longleftrightarrow\quad
+ \lambda(q\wedge r)\ne0\text{ for some }\lambda\in L.       \tag{4}
+\]
+Thus the graph for $K$ is the union of the scalar character graphs in $L$.
+In particular, a union graph without an eight-clique can contain only
+characters whose individual scalar graphs have no eight-clique.
+
+\begin{lemma}[Certified cutoff-seven analysis]\label{lem:h7-enumeration}
+Let $Q$ be a group of order at most $81$, and let $K\le S_Q'$ be normal in
+the fixed Schur cover used for $Q$.  If the graph $\Lambda(Q,K)$ has only
+the identity as an isolated vertex, then
+\[
+ \omega(\Lambda(Q,K))\le7\quad\Longrightarrow\quad
+ \chi(\Lambda(Q,K))\le10.                                  \tag{5}
+\]
+\end{lemma}
+
+\begin{proof}[Computer-assisted proof]
+GAP 4.16.0 with SmallGrp 1.5.4 inventories exactly $738$ group types of
+order at most $81$.  Five ordinary batches scan $660$ types and all
+$55{,}970$ normal exterior kernels.  Of these, $40{,}664$ have nontrivial
+radical, $14{,}989$ have a saved eight-clique, and the remaining $317$ are
+solved exactly, with distribution
+\[
+\begin{array}{c|rrrrrr}
+(\omega,\chi)&(1,1)&(3,3)&(4,4)&(5,5)&(6,6)&(7,7)\\ \hline
+\#&1&1&2&93&217&3.
+\end{array}
+\]
+
+The two quotients delegated from those batches are $C_2^5$ and $C_3^4$.
+Lemma~\ref{lem:c2five} excludes the former by a nine-clique.  For the
+latter, the verifier enumerates all $56{,}632$ subspaces of
+$\operatorname{Alt}(4,3)$: $691$ have nonzero common radical, and the
+$55{,}941$ faithful spaces form $16$ checked $\operatorname{GL}(4,3)$
+orbits.  Exactly one eligible orbit remains, of size $234$, and its exact
+invariants are $(\omega,\chi)=(7,10)$.  Projective compression to $40$
+points preserves both invariants because the two nonzero vectors on each
+$\F_3$-line are independent twins.
+
+It remains to describe the $76$ order-$64$ IDs not in the ordinary batch.
+For $62$ of them the selected Schur-cover export gives a nonidentity $q$ and
+its complete $64$-entry exterior row, identically zero; the one-way
+obstruction above excludes every one.  Eleven further IDs
+\[
+193,195,202,203,207,211,216,226,236,242,250
+\]
+are handled by (4).  A no-automorphism-quotient breadth-first search reaches
+every action-invariant character subgroup whose union graph has no
+eight-clique: inside a target $L$, adjoining $\lambda\in L$ and taking
+invariant closure stays inside $L$, so it cannot cross a pruned boundary.
+Across the eleven quotients, all $5{,}206$ retained subgroups have radical
+size at least four; every boundary has a verified eight-clique.  This
+includes ID 250, for which $E\cong C_8\times C_2^5$ and the characters are
+evaluated in $\mathbb Z/8\mathbb Z$.
+
+The final three IDs have separate certificates.  For
+$Q=C_4^2\times C_2^2$ (ID 192), every subgroup of
+$E\cong C_4\times C_2^5$ is listed once by its $C_4$ projection.  Of all
+$5{,}276$ subgroups, $2{,}925$ have nontrivial radical and all $2{,}351$
+faithful cases have an eight-clique.  For
+$Q=C_2^3\times D_8$ (ID 261), $E^*\cong C_2^9\times C_4$.  The complete
+scalar-good set consists of all $1{,}024$ even characters and an affine
+seven-space of $128$ odd characters.  Closure reduces every subgroup
+containing an odd character to one of exactly
+\[
+ \sum_{r=0}^{6}{6\brack r}_2\,2^{6-r}=26{,}387
+\]
+RREF/coset cases; $26{,}323$ have a verified eight-clique and the other
+$64$ have nontrivial radical.  Every all-even subgroup has an explicit
+nonidentity radical vertex whose complete commutator row is
+$\{0,2e_{10}\}$.  Finally, for $Q=C_2^6$ (ID 267), the exact alternating
+form-space analysis shows that the only faithful graph at cutoff seven is
+the scalar nondegenerate symplectic graph, with
+$(\omega,\chi)=(7,9)$.  Its finite inputs exhaust the $16{,}383$ pencils
+through a rank-six form and the $5{,}471$ relevant pencils through a
+rank-four form; the remaining all-rank-two branch is structural.
+
+The disjoint arithmetic is
+\[
+660+2+62+11+3=738.
+\]
+Independent Python verification checks complete serial ranges, radicals,
+every clique and coloring witness, the character actions, and the full
+commutator tables.  Canonical files, hashes, and regeneration commands are
+listed in Appendix~\ref{app:computation}.
+\end{proof}
+
+\begin{theorem}[Exact value at seven]\label{thm:h7}
+\[
+ h(7)=10.
+\]
+\end{theorem}
+
+\begin{proof}
+Let $\nuG(G)\le7$.  The case $\nuG(G)\le6$ is
+Theorem~\ref{thm:h6}.  Otherwise Lemma~\ref{lem:index-seven} gives the
+finite quotient $Q=G/\Z(G)$ of order at most $81$.  Equation~(1) places its
+compressed graph among the faithful cases of
+Lemma~\ref{lem:h7-enumeration}, so $\aG(G)\le10$.  Theorem~\ref{thm:counterexample}
+gives $\nuG(S(3,2))=7$ and $\aG(S(3,2))=10$, proving equality.
 \end{proof}
 
 \section{Direct products and why they do not settle the problem}
@@ -719,13 +859,14 @@ excludes an eighth projective clique and colorings with at most nine colors,
 and verifies a ten-subgroup symplectic-spread cover.  Full saved-data scope,
 hashes, and commands are recorded in Appendix~\ref{app:computation}.
 The same verifier checks the load-bearing exterior-square enumerations in
-Lemmas~\ref{lem:h5-enumeration} and~\ref{lem:h6-enumeration}.  Separate symmetry-reduced exact searches
+Lemmas~\ref{lem:h5-enumeration}, \ref{lem:h6-enumeration}, and
+\ref{lem:h7-enumeration}.  Separate symmetry-reduced exact searches
 give $(\nuG,\aG)=(18,26)$ for $S(5,2)$ and $(13,28)$ for $S(3,3)$; these
 larger scalar cases do not improve the lower-bound efficiency of $S(3,2)$.
 
 \section{What remains open}
 
-The manuscript does not determine $h(n)$ beyond $n=6$, does not determine
+The manuscript does not determine $h(n)$ beyond $n=7$, does not determine
 the optimal exponential base, and does not prove that such a base exists.
 The most concrete geometric subproblem is to control $\pi(q,m)$, the maximum
 partial-ovoid size in a symplectic polar space, relative to the exact cover

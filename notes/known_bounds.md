@@ -252,6 +252,23 @@ subgroups, giving an abelian cover of size four. Its three reflections
 together with a nonidentity rotation are pairwise noncommuting, so
 \(\nu(S_3)=a(S_3)=4\). Hence \(h(4)=4\).
 
+### [PROVED] Exact values through seven
+
+The computer-assisted proofs in `notes/exact_h5.md`, `notes/exact_h6.md`,
+and `notes/exact_h7.md` give
+
+\[
+h(5)=5,\qquad h(6)=6,\qquad h(7)=10.
+\]
+
+At cutoffs five, six, and seven, audited irredundant-cover bounds reduce the
+center quotient to orders at most 16, 36, and 81, respectively.  Complete
+Schur-cover/exterior-square certificates then give the upper bounds.  The
+matching witnesses are the scalar symplectic groups used in those notes.
+The cutoff-seven proof exhausts a disjoint 738-type quotient inventory; its
+finite certificates and final verification hashes are recorded in
+`proof/computational_appendix.tex`.
+
 ## Stronger reported bounds still under audit
 
 ### [UNVERIFIED] Pyber's exponential center-index theorem

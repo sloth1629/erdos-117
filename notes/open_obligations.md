@@ -15,12 +15,15 @@
   \(f(6)=36\), a repaired structural proof and independently verified finite
   leaves for its maximal-cover step, the structural \(C_2^5\) obstruction,
   and the complete exterior-square certificate through quotient order 36.
+- `[PROVED]` A computer-assisted proof gives \(h(7)=10\).  The
+  primary-verified seven-cover theorem \(f(7)=81\) bounds the center quotient;
+  a 738-type inventory, 55,970 ordinary normal-kernel records, 62 explicit
+  exterior-zero witnesses, eleven character-dual searches, and the special
+  \(C_2^6\), \(C_4^2\times C_2^2\), \(C_2^3\times D_8\), and \(C_3^4\)
+  analyses complete the upper bound.  The group \(S(3,2)\) supplies equality.
 - `[PROVED]` Direct-product OR identity and fixed-seed asymptotic parameters; audit for strict one-shot inequalities remains computational.
 - `[PROVED]` Explicit class-two groups give \((\nu,a)=(2m+1,2^m+1)\) and exponential lower constant \(\sqrt2\).
 - `[DISPROVED]` The simplest binary-symplectic exact formula fails: \(S(3,2)\) has \((\nu,a)=(7,10)\).
 - `[UNVERIFIED]` Determine whether odd-characteristic scalar forms, higher-codomain alternating maps, solvable groups, or semisimple groups beat the asymptotic binary efficiency.
 - `[UNVERIFIED]` Prove an upper bound with base \(\sqrt2\), or find a construction disproving that candidate constant.
-- `[UNVERIFIED]` Determine \(h(7)\).  The exact group \(S(3,2)\) gives
-  \(h(7)\ge10\), and the audited seven-cover theorem reduces the upper problem
-  to finite center quotients of order at most 81, but the exterior-square
-  audit at that cutoff is not complete.
+- `[UNVERIFIED]` Determine \(h(8)\) and subsequent exact values.

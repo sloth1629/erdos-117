@@ -23,6 +23,11 @@ No complete resolution is claimed. The strongest repository results are:
   \(h(1)=h(2)=1\).  The values at five and six combine audited
   irredundant-cover bounds \(f(5)=16\), \(f(6)=36\) with complete
   Schur-cover/exterior-square enumerations.
+- [PROVED] By a computer-assisted proof, \(h(7)=10\).  The verified
+  seven-cover theorem \(f(7)=81\) reduces the upper bound to 738 finite
+  center quotients; bounded kernel batches, explicit exterior-zero
+  witnesses, character-annihilator searches, and three special order-64
+  certificates exhaust them.  The matching lower witness is \(S(3,2)\).
 - [PROVED] Scalar symplectic groups satisfy
   \(a(S(q,m))=q^m+1\), with clique number equal to a partial-ovoid
   parameter.
@@ -38,6 +43,9 @@ No complete resolution is claimed. The strongest repository results are:
   cases used for \(h(5)\), and all 23,527 normal-kernel records used for
   \(h(6)\).  Further exact records are
   \((\nu,a)=(18,26)\) for \(S(5,2)\) and \((13,28)\) for \(S(3,3)\).
+  At cutoff seven they additionally cover all 738 possible center quotients
+  of order at most 81, including 55,970 ordinary normal-kernel records and
+  eleven complete character-dual searches.
 
 The publication-style synthesis is in
 [`proof/main.tex`](proof/main.tex), and the concise state of the problem is
@@ -68,11 +76,15 @@ PYTHONPYCACHEPREFIX=/tmp/erdos117-pycache \
 python3 -m unittest discover -s src/verification -p 'test_*.py' -v
 ```
 
+The saved final run passed all 25 tests in 211.839 seconds under Python
+3.9.6.
+
 The canonical experiment commands are documented in
 [`src/python/README.md`](src/python/README.md). GAP is needed only to
 regenerate the SmallGroups and exterior-square exports; the committed
 exports and all Python certificate checks are self-contained.  The proofs of
-\(h(5)=5\) and \(h(6)=6\) are explicitly computer-assisted: their exhaustiveness also relies
+\(h(5)=5\), \(h(6)=6\), and \(h(7)=10\) are explicitly computer-assisted:
+their exhaustiveness also relies
 on GAP's SmallGroups, Schur-cover, and subgroup-enumeration algorithms.
 
 To build the manuscript when a TeX distribution is available:

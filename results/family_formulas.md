@@ -260,6 +260,45 @@ computer-assisted exact value is
 h(6)=6.
 \]
 
+### Exterior-square enumeration for \(h(7)\)
+
+[CITED-VERIFIED] Abdollahi--Jafarian Amiri, Theorem B (p. 292, proof
+pp. 299--300), gives the sharp irredundant-cover bound \(f(7)=81\).  After
+the repository's universal center-index bound first makes \(G/Z(G)\) finite,
+the maximum-clique centralizer cover applies this theorem inside that finite
+quotient.  Hence \(\nu(G)=7\) implies \([G:Z(G)]\le81\) for arbitrary
+groups.
+
+[COMPUTED] The exact quotient inventory has 738 types and the verified
+disjoint partition
+
+\[
+660\text{ ordinary}+2\text{ delegated}+62\text{ exterior-zero}
++11\text{ character-dual}+3\text{ special}=738.
+\]
+
+The ordinary batches scan all 55,970 normal kernels, of which 40,664 have
+nontrivial radical, 14,989 have a checked eight-clique, and the 317 exact
+candidates have distribution
+
+| \((\omega,\chi)\) | (1,1) | (3,3) | (4,4) | (5,5) | (6,6) | (7,7) |
+|:---|---:|---:|---:|---:|---:|---:|
+| records | 1 | 1 | 2 | 93 | 217 | 3 |
+
+The delegated \(C_2^5\) case is structurally excluded and the \(C_3^4\)
+certificate has a unique eligible orbit with \((\omega,\chi)=(7,10)\).
+The 62 zero-row quotients are impossible exact center quotients; all 5,206
+retained subgroups in the eleven dual scans are nonfaithful.  The three
+special IDs 192, 261, and 267 are disposed of by the
+\(C_4^2\times C_2^2\), \(C_2^3\times D_8\), and \(C_2^6\) certificates.
+
+[PROVED] The preceding exhaustive upper bound and the structural witness
+\((\nu,a)(S(3,2))=(7,10)\) give the computer-assisted exact value
+
+\[
+h(7)=10.
+\]
+
 ### Direct SmallGroups scans
 
 [COMPUTED] GAP 4.16.0 with SmallGrp 1.5.4 exported all finite groups of orders
