@@ -1,0 +1,12 @@
+test_every_small_cover_contains_a_pencil (src.verification.test_f5_small_hyperplane_cover.F5SmallHyperplaneCoverTests) ... ok
+
+----------------------------------------------------------------------
+Ran 1 test in 0.048s
+
+OK
+
+certificate summary:
+dimension 2: 16 subfamilies, 1 cover, 0 line failures
+dimension 3: 122438 subfamilies, 87 covers, 0 line failures
+dimension 4: 10626 subfamilies, 6 covers, 0 line failures
+dimensions 5--8: excluded by the analytic torus-incidence bound
