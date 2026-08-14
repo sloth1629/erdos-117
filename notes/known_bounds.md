@@ -186,6 +186,31 @@ h(8)\leq1+7h(6)=43,
 
 in place of the preceding recurrence's bound \(h(8)\leq8h(6)=48\).
 
+## Specialized class-two bounds
+
+### [PROVED] Charged abelian and relative-center layers
+
+Let \(P\) be a finite \(p\)-group of nilpotency class at most two and put
+\(m=\nu(P)\).  The centralizer-chain block construction in
+`class_two_abelian_layer.md` proves, for every abelian subgroup
+\(A\ge Z(P)\),
+
+\[
+[A:Z(P)]\le p^{m/p}\le3^{m/3}.
+\]
+
+More generally, if \(Z(P)\le H\le P\) and \(r=\nu(H)\), then
+
+\[
+[Z(H):Z(P)]\le p^{(m-r)/p}\le3^{(m-r)/3}.
+\]
+
+The proof builds a genuine clique block of size equal to each strict
+centralizer-chain index, so the sum of those indices is charged to \(m\),
+or to \(m-r\) in the relative form.  It does not bound the complementary
+index \([P:H]\); that is the explicitly recorded remaining local obstacle
+to a fixed-base class-two theorem.
+
 ## The quadratic conjugacy-class mechanism
 
 ### [PROVED] Finite-group conjugacy-class bound

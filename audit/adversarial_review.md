@@ -16,6 +16,53 @@ independent audit recorded below.
 
 Continue auditing quantifiers, finite/infinite scope, central-coset arguments, product claims, source dependence, and computational certificates.
 
+## Independent structural audits at cutoff eight (2026-08-14)
+
+### Binary central layer
+
+- [PROVED] The proof of `notes/structural_reductions.md`, (SR.12), was
+  independently reconstructed.  On every three-dimensional binary central
+  subspace, the affine-fiber argument was checked separately when the
+  internal alternating map has ranks one, two, and three.  Every nonzero
+  internal map forces a triangle in each of three mutually joined quotient
+  fibers and hence a nine-clique.  Thus the internal map is zero when the
+  binary central rank is at least three.
+- [PROVED] The remaining rank argument was also reconstructed independently.
+  A rank-three central evaluation either has zero kernel or permits its
+  eight-clique representatives to be adjusted independently against a
+  noncentral vertex.  For a maximum clique in the exact central-coset graph
+  of \(G\), the evaluation kernels cover the binary layer and have zero
+  common intersection.  The resulting injective block map contains no
+  full-support vector; the dimension-fifteen and dimension-sixteen cases
+  both contradict this.  Hence
+  \(\dim_{\mathbf F_2}\Omega_1(Z(G/Z(G)))\le14\), and the already proved
+  exponent-four restriction gives \(|Z(G/Z(G))_2|\le2^{28}\).
+- [UNVERIFIED] As a redundant scratch stress check rather than a proof
+  dependency, all
+  nonzero three-space alternating maps with codomain dimensions one, two,
+  and three were enumerated against every evaluation map; none of the
+  \(56+4{,}032+261{,}632\) affine fibers was triangle-free.  Exact extension
+  graphs in the available SmallGroups scan likewise supplied nine-cliques
+  whenever the filtered binary central rank was at least three.  These
+  scratch runs are not canonical certificates and are not used in the proof.
+
+### Abelian layers in class-two \(p\)-groups
+
+- [PROVED] The charged centralizer-chain construction in
+  `notes/class_two_abelian_layer.md` was reconstructed with the repository's
+  commutator convention.  At a chain step of index
+  \(q_i=[K_{i-1}:K_i]\), the new fiber really is a \(q_i\)-clique; multiplying
+  each old vertex by a separately chosen element of \(K_{i-1}\) preserves
+  every old edge and makes every cross edge noncommuting.  The smaller
+  subgroup \(K_i\) continues to centralize the enlarged clique.  Therefore
+  \(\sum_iq_i\le\nu(P)\), while
+  \([A:Z(P)]=\prod_iq_i\le p^{\sum_iq_i/p}\).
+- [PROVED] Starting the same invariant with a maximum clique in
+  \(H\ge Z(P)\) proves the relative form
+  \([Z(H):Z(P)]\le p^{(\nu(P)-\nu(H))/p}\).  This controls the central layer
+  but not the complementary index \([P:C_P(x)]\); the note correctly leaves
+  that drop-sensitive local bound as [UNVERIFIED].
+
 ## Independent cutoff-seven audit (2026-08-14)
 
 ### Dependency chain and global coverage

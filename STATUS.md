@@ -43,6 +43,12 @@ gives 9 at seven.
    \(S(3,2)\) counterexample.
 7. Direct-product OR identity and correct direct-power rates via fractional
    chromatic number and complementary Shannon capacity.
+8. At cutoff eight, every nonabelian exact center quotient satisfies
+   \(|Z(G/Z(G))|\le225\cdot2^{28}\).  For finite class-two \(p\)-groups,
+   every abelian \(A\ge Z(P)\) satisfies
+   \([A:Z(P)]\le p^{\nu(P)/p}\), with a drop-sensitive relative-center
+   form.  These are structural reductions, not a determination of \(h(8)\)
+   or a fixed-base global upper bound.
 
 ## Computation status
 

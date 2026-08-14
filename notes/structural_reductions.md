@@ -706,8 +706,172 @@ odd-center bound
 
 Indeed, the Sylow \(3\)- and \(5\)-subgroups of \(Z(Q)\) have exponent
 \(3\) and \(5\), respectively, so they are exactly the elementary abelian
-spaces \(A_3\) and \(A_5\) just bounded.  The present argument does not
-give an analogous rank bound for the exponent-at-most-four binary part.
+spaces \(A_3\) and \(A_5\) just bounded.
+
+### [PROVED] The binary central layer has rank at most fourteen
+
+Assume that \(Q=G/Z(G)\) is finite and nonabelian and that
+\(\nu(G)\leq8\). Put
+
+\[
+A=A_2=\{a\in Z(Q):a^2=1\},
+\qquad d_2=\dim_{\mathbf F_2}A.
+\]
+
+Then
+
+\[
+d_2\leq14,
+\qquad |Z(Q)_2|\leq2^{28}.
+\tag{SR.12}
+\]
+
+We prove first that the internal alternating map
+\(\beta=b|_{A\times A}\) from (SR.3) vanishes whenever \(d_2\geq3\).
+Suppose instead that some three-dimensional \(U\leq A\) has
+\(\beta|_{U\times U}\ne0\). For fixed \(q\in Q\), identify the eight
+vertices in the \(Uq\)-fiber with the elements of \(U\). By (SR.3), the
+vertices \(a,a'\) commute precisely when
+
+\[
+\beta(a,a')+T_q(a+a')=0.
+\tag{SR.12a}
+\]
+
+Let \(\lambda:\bigwedge^2U\to W\) be induced by \(\beta\), and for
+\(0\ne v\in U\) put \(L_v(a)=\beta(a,v)\). The unordered pairs with
+difference \(v\) that satisfy (SR.12a) are the solutions of
+\(L_v(a)=T_q(v)\), modulo the two-element fibers \(\{a,a+v\}\). Hence
+their number is either zero or
+
+\[
+2^{\dim\ker L_v-1}.
+\tag{SR.12b}
+\]
+
+If \(\operatorname{rank}\lambda=3\), every \(L_v\) has rank two, so the
+fiber graph has at most seven nonedges. If
+\(\operatorname{rank}\lambda=2\), the kernel of \(\lambda\) is generated
+by the exterior square of a two-plane \(P\leq U\). The maps \(L_v\) have
+rank one for the three nonzero \(v\in P\), and rank two for the other four
+directions. Thus there are at most
+\(3\cdot2+4\cdot1=10\) nonedges. In either case the graph has at least
+eighteen edges. A triangle-free graph on eight vertices has at most sixteen
+edges: for every edge \(uv\), the disjointness of the two open neighborhoods
+gives \(\deg u+\deg v\leq8\); summing over edges and applying Cauchy--Schwarz
+gives
+\(4|E|^2/8\leq\sum_v(\deg v)^2\leq8|E|\), hence \(|E|\leq16\).
+Thus the fiber contains a triangle.
+
+It remains to handle \(\operatorname{rank}\lambda=1\). Write
+\(L=\operatorname{im}\lambda\). If the composite of \(T_q|_U\) with
+\(W\to W/L\) is nonzero, a commuting difference must lie in its kernel,
+which has dimension at most two. The radical direction of the scalar
+alternating form can contribute at most four nonedges, and each of the
+other two directions when the kernel contains it contributes at most two.
+If the radical direction is absent, all three directions contribute at most
+two. There are therefore at most eight nonedges, and again a triangle exists.
+
+Finally suppose that \(T_q(U)\leq L\), and identify \(L\) with
+\(\mathbf F_2\). Choose a basis \(e,f,r\) of \(U\) with
+
+\[
+\beta(e,f)=1,
+\qquad r\in\operatorname{rad}\beta.
+\]
+
+If \(T_q(r)=0\), there is a \(t\in\langle e,f\rangle\) such that
+\(T_q(u)=\beta(t,u)\) for every \(u\in U\). Translation by \(t\)
+identifies (SR.12a) with the graph of \(\beta\), which contains the triangle
+\(\{e,f,e+f\}\). If \(T_q(r)=1\), put
+
+\[
+u=e+(1+T_q(e))r,
+\qquad v=f+(1+T_q(f))r.
+\]
+
+Then \(T_q(u)=T_q(v)=1\) and \(\beta(u,v)=1\), so
+\(\{0,u,v\}\) is a triangle in the fiber. We have proved that every
+\(Uq\)-fiber contains a triangle whenever \(\beta|_U\ne0\).
+
+Choose noncommuting \(q,s\in Q\). The quotient elements \(q,s,qs\) are
+pairwise noncommuting, and centrality of \(U\) makes the three fibers
+\(Uq,Us,Uqs\) completely joined to one another. A triangle from each
+fiber would give a nine-clique in \(G\), a contradiction. Therefore
+\(\beta|_U=0\) for every three-space \(U\), and hence
+
+\[
+\beta=0\quad\text{on }A\times A.
+\tag{SR.12c}
+\]
+
+We next bound the evaluation ranks. By (SR.4), every \(T_q|_A\) has rank
+at most three; by (SR.5), it has rank at most two when \(q\notin Z(Q)\).
+Suppose that a central \(z\in Q\) has \(\operatorname{rank}T_z=3\), and
+put \(K=\ker T_z\). One representative from each coset of \(K\) in
+\(A\) gives an eight-clique in the \(Az\)-fiber. If a noncentral
+\(q\in Q\) did not annihilate \(K\), then inside each coset of \(K\) we
+could choose its representative so that the corresponding lift in
+\(Az\) does not commute with a fixed lift of \(q\): the commutator changes
+by the nonzero map \(T_q|_K\), whereas all pairwise edges inside the fiber
+depend only on the distinct \(T_z\)-values. This would adjoin \(q\) to the
+eight-clique. Consequently every noncentral \(q\) annihilates \(K\).
+Fix one noncentral \(q_0\). For every \(c\in Z(Q)\), the element \(q_0c\)
+is noncentral and
+
+\[
+T_{q_0c}|_K=T_{q_0}|_K+T_c|_K.
+\]
+
+Thus every central element also annihilates \(K\). The zero-left-radical
+property (SR.2) now gives \(K=0\), so a rank-three evaluation can occur
+only when \(d_2=3\). In particular, if \(d_2\geq4\), every evaluation has
+rank at most two.
+
+Choose a maximum noncommuting set
+\(X=\{x_1,\ldots,x_m\}\) in \(G\), so \(m\leq8\), and put
+\(q_i=x_iZ(G)\) and \(K_i=\ker T_{q_i}\leq A\). Here \(X\) is a clique
+in the exact central-coset commutation graph of \(G\), not in the ordinary
+noncommuting graph of \(Q\). The kernels cover \(A\): otherwise a lift of
+an \(a\in A\setminus\bigcup_iK_i\) could be adjoined to \(X\). Their
+intersection is zero: a lift of an element in every \(K_i\) commutes with
+all of \(X\), and the maximum-clique center lemma then places it in
+\(Z(G)\).
+
+Assume \(d_2\geq4\), and consider the injective map
+
+\[
+\Phi:A\longrightarrow\bigoplus_{i=1}^m\operatorname{im}T_{q_i},
+\qquad a\longmapsto(T_{q_1}(a),\ldots,T_{q_m}(a)).
+\tag{SR.12d}
+\]
+
+Every block on the right has dimension at most two, and the kernel-cover
+property says that \(\operatorname{im}\Phi\) contains no vector that is
+nonzero in every block. If \(m\leq7\), or if one block is zero, the target
+of (SR.12d) has dimension at most fourteen. Suppose instead that \(m=8\)
+and every block is nonzero. If \(d_2\geq15\), the target dimension is
+fifteen or sixteen. In dimension fifteen, injectivity makes
+\(\operatorname{im}\Phi\) the whole target, which plainly contains a
+full-support vector. In dimension sixteen, the image is either the whole
+target or a hyperplane. Write a functional defining the latter hyperplane
+blockwise as \(\ell_1+\cdots+\ell_8\). Each two-dimensional block contains
+a nonzero vector in \(\ker\ell_i\); their direct sum is a full-support
+vector in the hyperplane. Every possibility is contradictory, proving
+\(d_2\leq14\).
+
+The central-exponent restriction gives \(\exp Z(Q)_2\leq4\). Therefore
+\(Z(Q)_2\cong C_4^u\times C_2^v\), with \(u+v=d_2\), and
+
+\[
+|Z(Q)_2|=2^{2u+v}\leq2^{2d_2}\leq2^{28}.
+\]
+
+Together with (SR.11), this also gives
+
+\[
+|Z(Q)|\leq225\cdot2^{28}.
+\]
 
 ### [PROVED] Coprime abelian central direct factors cross cutoff nine
 
@@ -723,7 +887,7 @@ where \(Q\) is finite, \(1\ne A\) is abelian, \(H\) is nonabelian, and
 
 \[
 \nu(G)\geq3\nu(H)\geq9.
-\tag{SR.12}
+\tag{SR.13}
 \]
 
 Indeed, the central commutator pairing restricted to \(A\times H\) is
@@ -739,7 +903,7 @@ Let \(h_1,\ldots,h_t\) be a maximum noncommuting set in \(H\).  In each
 fiber \(Ah_i\), use this same three-clique.  The same-fiber commutators are
 unchanged because the cross pairing \(b(A,H)\) is zero.  Points in two
 different fibers are noncommuting already in the quotient \(H\).  Their
-union is therefore a clique of size \(3t\), proving (SR.12).
+union is therefore a clique of size \(3t\), proving (SR.13).
 
 If \(A\cong C_p^2\), the sharper projective-line construction gives
 \(\nu(G)\geq(p+1)\nu(H)\).
@@ -754,7 +918,7 @@ nonabelian, a three-clique in each would give a nine-clique in their direct
 product already in \(Q\).  If exactly one Sylow subgroup \(H\) were
 nonabelian and another Sylow factor \(A\) were nontrivial, that \(A\) would
 be an abelian central direct factor coprime to \(H_{\mathrm{ab}}\), and
-(SR.12) would give the same contradiction.
+(SR.13) would give the same contradiction.
 
 ## Isoclinism and stem groups
 

@@ -37,6 +37,12 @@ No complete resolution is claimed. The strongest repository results are:
 - [PROVED] Binary symplectic groups give
   \(h(2m+1)\ge2^m+1\) and
   \(\liminf h(n)^{1/n}\ge\sqrt2\).
+- [PROVED] Two cutoff-eight structural obstructions are now explicit.  If
+  \(Q=G/Z(G)\) is nonabelian and \(\nu(G)\le8\), then
+  \(|Z(Q)|\le225\cdot2^{28}\).  If \(P\) is a finite class-two \(p\)-group
+  and \(A\ge Z(P)\) is abelian, then
+  \([A:Z(P)]\le p^{\nu(P)/p}\); a relative version charges the exponent to
+  \(\nu(P)-\nu(H)\) for \(A=Z(H)\).
 - [COMPUTED] Exact, independently verified certificates cover explicit
   families, every SmallGroup of orders 8, 32, and 64, all order-128 groups
   surviving a rigorous \(\nu\le6\) prefilter, all 2,986 exterior-square
