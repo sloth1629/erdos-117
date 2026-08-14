@@ -1,0 +1,3 @@
+[COMPUTED] exported Q=SmallGroup(64,261) chosen-cover data
+cover_order=65536 exterior_order=2048 exterior_orders=2,2,2,2,2,2,2,2,2,4
+actions=16 commutator_rows=64

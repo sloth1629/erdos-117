@@ -1,0 +1,1250 @@
+{
+  "abelian_quotient_count": 150,
+  "conclusion": "The complete 738-quotient multiplier inventory is exact.  A raw all-kernel h7 scan is unsafe: C2^6 alone has 623476476706836148 kernels.  No h(7)<=10 conclusion is inferred.",
+  "configuration": "experiments/configs/h7_quotient_inventory.g",
+  "configuration_sha256": "af04818b65ab57a7245615301b4167a622dd092315310d058fc44b8caae74b06",
+  "cumulative_exterior_order_tiers": {
+    "1": 81,
+    "1024": 736,
+    "128": 710,
+    "16": 395,
+    "2": 111,
+    "256": 724,
+    "32": 542,
+    "32768": 738,
+    "4": 162,
+    "4096": 737,
+    "512": 727,
+    "64": 662,
+    "8": 265
+  },
+  "elementary_abelian_exterior_cases": [
+    {
+      "exact_raw_kernel_count": 2,
+      "exterior_dimension": 1,
+      "exterior_order": 2,
+      "field_order": 2,
+      "q_id": 2,
+      "q_order": 4,
+      "structure": "C2 x C2"
+    },
+    {
+      "exact_raw_kernel_count": 2,
+      "exterior_dimension": 1,
+      "exterior_order": 2,
+      "field_order": 2,
+      "q_id": 2,
+      "q_order": 8,
+      "structure": "C4 x C2"
+    },
+    {
+      "exact_raw_kernel_count": 16,
+      "exterior_dimension": 3,
+      "exterior_order": 8,
+      "field_order": 2,
+      "q_id": 5,
+      "q_order": 8,
+      "structure": "C2 x C2 x C2"
+    },
+    {
+      "exact_raw_kernel_count": 2,
+      "exterior_dimension": 1,
+      "exterior_order": 3,
+      "field_order": 3,
+      "q_id": 2,
+      "q_order": 9,
+      "structure": "C3 x C3"
+    },
+    {
+      "exact_raw_kernel_count": 2,
+      "exterior_dimension": 1,
+      "exterior_order": 2,
+      "field_order": 2,
+      "q_id": 5,
+      "q_order": 12,
+      "structure": "C6 x C2"
+    },
+    {
+      "exact_raw_kernel_count": 2,
+      "exterior_dimension": 1,
+      "exterior_order": 2,
+      "field_order": 2,
+      "q_id": 5,
+      "q_order": 16,
+      "structure": "C8 x C2"
+    },
+    {
+      "exact_raw_kernel_count": 16,
+      "exterior_dimension": 3,
+      "exterior_order": 8,
+      "field_order": 2,
+      "q_id": 10,
+      "q_order": 16,
+      "structure": "C4 x C2 x C2"
+    },
+    {
+      "exact_raw_kernel_count": 2825,
+      "exterior_dimension": 6,
+      "exterior_order": 64,
+      "field_order": 2,
+      "q_id": 14,
+      "q_order": 16,
+      "structure": "C2 x C2 x C2 x C2"
+    },
+    {
+      "exact_raw_kernel_count": 2,
+      "exterior_dimension": 1,
+      "exterior_order": 3,
+      "field_order": 3,
+      "q_id": 5,
+      "q_order": 18,
+      "structure": "C6 x C3"
+    },
+    {
+      "exact_raw_kernel_count": 2,
+      "exterior_dimension": 1,
+      "exterior_order": 2,
+      "field_order": 2,
+      "q_id": 5,
+      "q_order": 20,
+      "structure": "C10 x C2"
+    },
+    {
+      "exact_raw_kernel_count": 2,
+      "exterior_dimension": 1,
+      "exterior_order": 2,
+      "field_order": 2,
+      "q_id": 9,
+      "q_order": 24,
+      "structure": "C12 x C2"
+    },
+    {
+      "exact_raw_kernel_count": 16,
+      "exterior_dimension": 3,
+      "exterior_order": 8,
+      "field_order": 2,
+      "q_id": 15,
+      "q_order": 24,
+      "structure": "C6 x C2 x C2"
+    },
+    {
+      "exact_raw_kernel_count": 2,
+      "exterior_dimension": 1,
+      "exterior_order": 5,
+      "field_order": 5,
+      "q_id": 2,
+      "q_order": 25,
+      "structure": "C5 x C5"
+    },
+    {
+      "exact_raw_kernel_count": 2,
+      "exterior_dimension": 1,
+      "exterior_order": 3,
+      "field_order": 3,
+      "q_id": 2,
+      "q_order": 27,
+      "structure": "C9 x C3"
+    },
+    {
+      "exact_raw_kernel_count": 28,
+      "exterior_dimension": 3,
+      "exterior_order": 27,
+      "field_order": 3,
+      "q_id": 5,
+      "q_order": 27,
+      "structure": "C3 x C3 x C3"
+    },
+    {
+      "exact_raw_kernel_count": 2,
+      "exterior_dimension": 1,
+      "exterior_order": 2,
+      "field_order": 2,
+      "q_id": 4,
+      "q_order": 28,
+      "structure": "C14 x C2"
+    },
+    {
+      "exact_raw_kernel_count": 2,
+      "exterior_dimension": 1,
+      "exterior_order": 2,
+      "field_order": 2,
+      "q_id": 16,
+      "q_order": 32,
+      "structure": "C16 x C2"
+    },
+    {
+      "exact_raw_kernel_count": 16,
+      "exterior_dimension": 3,
+      "exterior_order": 8,
+      "field_order": 2,
+      "q_id": 36,
+      "q_order": 32,
+      "structure": "C8 x C2 x C2"
+    },
+    {
+      "exact_raw_kernel_count": 2825,
+      "exterior_dimension": 6,
+      "exterior_order": 64,
+      "field_order": 2,
+      "q_id": 45,
+      "q_order": 32,
+      "structure": "C4 x C2 x C2 x C2"
+    },
+    {
+      "exact_raw_kernel_count": 229755605,
+      "exterior_dimension": 10,
+      "exterior_order": 1024,
+      "field_order": 2,
+      "q_id": 51,
+      "q_order": 32,
+      "structure": "C2 x C2 x C2 x C2 x C2"
+    },
+    {
+      "exact_raw_kernel_count": 2,
+      "exterior_dimension": 1,
+      "exterior_order": 2,
+      "field_order": 2,
+      "q_id": 5,
+      "q_order": 36,
+      "structure": "C18 x C2"
+    },
+    {
+      "exact_raw_kernel_count": 2,
+      "exterior_dimension": 1,
+      "exterior_order": 3,
+      "field_order": 3,
+      "q_id": 8,
+      "q_order": 36,
+      "structure": "C12 x C3"
+    },
+    {
+      "exact_raw_kernel_count": 2,
+      "exterior_dimension": 1,
+      "exterior_order": 2,
+      "field_order": 2,
+      "q_id": 9,
+      "q_order": 40,
+      "structure": "C20 x C2"
+    },
+    {
+      "exact_raw_kernel_count": 16,
+      "exterior_dimension": 3,
+      "exterior_order": 8,
+      "field_order": 2,
+      "q_id": 14,
+      "q_order": 40,
+      "structure": "C10 x C2 x C2"
+    },
+    {
+      "exact_raw_kernel_count": 2,
+      "exterior_dimension": 1,
+      "exterior_order": 2,
+      "field_order": 2,
+      "q_id": 4,
+      "q_order": 44,
+      "structure": "C22 x C2"
+    },
+    {
+      "exact_raw_kernel_count": 2,
+      "exterior_dimension": 1,
+      "exterior_order": 3,
+      "field_order": 3,
+      "q_id": 2,
+      "q_order": 45,
+      "structure": "C15 x C3"
+    },
+    {
+      "exact_raw_kernel_count": 2,
+      "exterior_dimension": 1,
+      "exterior_order": 2,
+      "field_order": 2,
+      "q_id": 23,
+      "q_order": 48,
+      "structure": "C24 x C2"
+    },
+    {
+      "exact_raw_kernel_count": 16,
+      "exterior_dimension": 3,
+      "exterior_order": 8,
+      "field_order": 2,
+      "q_id": 44,
+      "q_order": 48,
+      "structure": "C12 x C2 x C2"
+    },
+    {
+      "exact_raw_kernel_count": 2825,
+      "exterior_dimension": 6,
+      "exterior_order": 64,
+      "field_order": 2,
+      "q_id": 52,
+      "q_order": 48,
+      "structure": "C6 x C2 x C2 x C2"
+    },
+    {
+      "exact_raw_kernel_count": 2,
+      "exterior_dimension": 1,
+      "exterior_order": 7,
+      "field_order": 7,
+      "q_id": 2,
+      "q_order": 49,
+      "structure": "C7 x C7"
+    },
+    {
+      "exact_raw_kernel_count": 2,
+      "exterior_dimension": 1,
+      "exterior_order": 5,
+      "field_order": 5,
+      "q_id": 5,
+      "q_order": 50,
+      "structure": "C10 x C5"
+    },
+    {
+      "exact_raw_kernel_count": 2,
+      "exterior_dimension": 1,
+      "exterior_order": 2,
+      "field_order": 2,
+      "q_id": 5,
+      "q_order": 52,
+      "structure": "C26 x C2"
+    },
+    {
+      "exact_raw_kernel_count": 2,
+      "exterior_dimension": 1,
+      "exterior_order": 3,
+      "field_order": 3,
+      "q_id": 9,
+      "q_order": 54,
+      "structure": "C18 x C3"
+    },
+    {
+      "exact_raw_kernel_count": 28,
+      "exterior_dimension": 3,
+      "exterior_order": 27,
+      "field_order": 3,
+      "q_id": 15,
+      "q_order": 54,
+      "structure": "C6 x C3 x C3"
+    },
+    {
+      "exact_raw_kernel_count": 2,
+      "exterior_dimension": 1,
+      "exterior_order": 2,
+      "field_order": 2,
+      "q_id": 8,
+      "q_order": 56,
+      "structure": "C28 x C2"
+    },
+    {
+      "exact_raw_kernel_count": 16,
+      "exterior_dimension": 3,
+      "exterior_order": 8,
+      "field_order": 2,
+      "q_id": 13,
+      "q_order": 56,
+      "structure": "C14 x C2 x C2"
+    },
+    {
+      "exact_raw_kernel_count": 2,
+      "exterior_dimension": 1,
+      "exterior_order": 2,
+      "field_order": 2,
+      "q_id": 13,
+      "q_order": 60,
+      "structure": "C30 x C2"
+    },
+    {
+      "exact_raw_kernel_count": 2,
+      "exterior_dimension": 1,
+      "exterior_order": 3,
+      "field_order": 3,
+      "q_id": 4,
+      "q_order": 63,
+      "structure": "C21 x C3"
+    },
+    {
+      "exact_raw_kernel_count": 2,
+      "exterior_dimension": 1,
+      "exterior_order": 2,
+      "field_order": 2,
+      "q_id": 50,
+      "q_order": 64,
+      "structure": "C32 x C2"
+    },
+    {
+      "exact_raw_kernel_count": 16,
+      "exterior_dimension": 3,
+      "exterior_order": 8,
+      "field_order": 2,
+      "q_id": 183,
+      "q_order": 64,
+      "structure": "C16 x C2 x C2"
+    },
+    {
+      "exact_raw_kernel_count": 2825,
+      "exterior_dimension": 6,
+      "exterior_order": 64,
+      "field_order": 2,
+      "q_id": 246,
+      "q_order": 64,
+      "structure": "C8 x C2 x C2 x C2"
+    },
+    {
+      "exact_raw_kernel_count": 229755605,
+      "exterior_dimension": 10,
+      "exterior_order": 1024,
+      "field_order": 2,
+      "q_id": 260,
+      "q_order": 64,
+      "structure": "C4 x C2 x C2 x C2 x C2"
+    },
+    {
+      "exact_raw_kernel_count": 623476476706836148,
+      "exterior_dimension": 15,
+      "exterior_order": 32768,
+      "field_order": 2,
+      "q_id": 267,
+      "q_order": 64,
+      "structure": "C2 x C2 x C2 x C2 x C2 x C2"
+    },
+    {
+      "exact_raw_kernel_count": 2,
+      "exterior_dimension": 1,
+      "exterior_order": 2,
+      "field_order": 2,
+      "q_id": 5,
+      "q_order": 68,
+      "structure": "C34 x C2"
+    },
+    {
+      "exact_raw_kernel_count": 2,
+      "exterior_dimension": 1,
+      "exterior_order": 2,
+      "field_order": 2,
+      "q_id": 9,
+      "q_order": 72,
+      "structure": "C36 x C2"
+    },
+    {
+      "exact_raw_kernel_count": 2,
+      "exterior_dimension": 1,
+      "exterior_order": 3,
+      "field_order": 3,
+      "q_id": 14,
+      "q_order": 72,
+      "structure": "C24 x C3"
+    },
+    {
+      "exact_raw_kernel_count": 16,
+      "exterior_dimension": 3,
+      "exterior_order": 8,
+      "field_order": 2,
+      "q_id": 18,
+      "q_order": 72,
+      "structure": "C18 x C2 x C2"
+    },
+    {
+      "exact_raw_kernel_count": 2,
+      "exterior_dimension": 1,
+      "exterior_order": 5,
+      "field_order": 5,
+      "q_id": 3,
+      "q_order": 75,
+      "structure": "C15 x C5"
+    },
+    {
+      "exact_raw_kernel_count": 2,
+      "exterior_dimension": 1,
+      "exterior_order": 2,
+      "field_order": 2,
+      "q_id": 4,
+      "q_order": 76,
+      "structure": "C38 x C2"
+    },
+    {
+      "exact_raw_kernel_count": 2,
+      "exterior_dimension": 1,
+      "exterior_order": 2,
+      "field_order": 2,
+      "q_id": 23,
+      "q_order": 80,
+      "structure": "C40 x C2"
+    },
+    {
+      "exact_raw_kernel_count": 16,
+      "exterior_dimension": 3,
+      "exterior_order": 8,
+      "field_order": 2,
+      "q_id": 45,
+      "q_order": 80,
+      "structure": "C20 x C2 x C2"
+    },
+    {
+      "exact_raw_kernel_count": 2825,
+      "exterior_dimension": 6,
+      "exterior_order": 64,
+      "field_order": 2,
+      "q_id": 52,
+      "q_order": 80,
+      "structure": "C10 x C2 x C2 x C2"
+    },
+    {
+      "exact_raw_kernel_count": 2,
+      "exterior_dimension": 1,
+      "exterior_order": 3,
+      "field_order": 3,
+      "q_id": 5,
+      "q_order": 81,
+      "structure": "C27 x C3"
+    },
+    {
+      "exact_raw_kernel_count": 28,
+      "exterior_dimension": 3,
+      "exterior_order": 27,
+      "field_order": 3,
+      "q_id": 11,
+      "q_order": 81,
+      "structure": "C9 x C3 x C3"
+    },
+    {
+      "exact_raw_kernel_count": 56632,
+      "exterior_dimension": 6,
+      "exterior_order": 729,
+      "field_order": 3,
+      "q_id": 15,
+      "q_order": 81,
+      "structure": "C3 x C3 x C3 x C3"
+    }
+  ],
+  "elementary_abelian_quotient_count": 33,
+  "exact_raw_kernel_explosions": [
+    {
+      "exact_raw_kernel_count": 623476476706836148,
+      "exterior_dimension": 15,
+      "exterior_order": 32768,
+      "field_order": 2,
+      "q_id": 267,
+      "q_order": 64,
+      "structure": "C2 x C2 x C2 x C2 x C2 x C2"
+    },
+    {
+      "exact_raw_kernel_count": 229755605,
+      "exterior_dimension": 10,
+      "exterior_order": 1024,
+      "field_order": 2,
+      "q_id": 51,
+      "q_order": 32,
+      "structure": "C2 x C2 x C2 x C2 x C2"
+    },
+    {
+      "exact_raw_kernel_count": 229755605,
+      "exterior_dimension": 10,
+      "exterior_order": 1024,
+      "field_order": 2,
+      "q_id": 260,
+      "q_order": 64,
+      "structure": "C4 x C2 x C2 x C2 x C2"
+    }
+  ],
+  "exterior_order_distribution": {
+    "1": 81,
+    "2": 30,
+    "3": 25,
+    "4": 26,
+    "5": 15,
+    "6": 16,
+    "7": 10,
+    "8": 62,
+    "9": 9,
+    "10": 14,
+    "11": 4,
+    "12": 13,
+    "13": 7,
+    "14": 4,
+    "15": 3,
+    "16": 76,
+    "17": 3,
+    "18": 8,
+    "19": 3,
+    "20": 12,
+    "21": 2,
+    "22": 1,
+    "23": 1,
+    "24": 23,
+    "25": 1,
+    "26": 1,
+    "27": 20,
+    "28": 2,
+    "29": 1,
+    "30": 2,
+    "31": 1,
+    "32": 66,
+    "33": 1,
+    "34": 1,
+    "35": 1,
+    "36": 5,
+    "37": 1,
+    "38": 1,
+    "39": 1,
+    "40": 14,
+    "48": 4,
+    "54": 6,
+    "56": 1,
+    "64": 84,
+    "72": 3,
+    "80": 3,
+    "81": 2,
+    "108": 2,
+    "120": 1,
+    "125": 2,
+    "128": 35,
+    "192": 1,
+    "216": 2,
+    "243": 1,
+    "256": 10,
+    "320": 1,
+    "512": 2,
+    "729": 2,
+    "1024": 7,
+    "2048": 1,
+    "32768": 1
+  },
+  "generated_at_utc": "2026-08-13T13:45:38+00:00",
+  "inventory": "experiments/logs/h7_quotient_inventory.tsv",
+  "inventory_metadata": {
+    "GAP_VERSION": "4.16.0",
+    "IDENTITY": "|Q_wedge_Q|=|M(Q)|*|Q'|",
+    "MAX_Q_ORDER": "81",
+    "NO_SCHUR_COVER_CONSTRUCTED": "true",
+    "SMALLGRP_VERSION": "1.5.4"
+  },
+  "inventory_sha256": "d633a02c5b915f639ae494276f6e70134ab6fbb8f3c4b02646806a4c056b80c1",
+  "largest_exterior_orders": [
+    {
+      "exterior_order": 32768,
+      "multiplier_invariants": [
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2
+      ],
+      "q_abelian": true,
+      "q_derived_order": 1,
+      "q_id": 267,
+      "q_order": 64,
+      "structure": "C2 x C2 x C2 x C2 x C2 x C2"
+    },
+    {
+      "exterior_order": 2048,
+      "multiplier_invariants": [
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2
+      ],
+      "q_abelian": false,
+      "q_derived_order": 2,
+      "q_id": 261,
+      "q_order": 64,
+      "structure": "C2 x C2 x C2 x D8"
+    },
+    {
+      "exterior_order": 1024,
+      "multiplier_invariants": [
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2
+      ],
+      "q_abelian": false,
+      "q_derived_order": 2,
+      "q_id": 266,
+      "q_order": 64,
+      "structure": "((C4 x C2) : C2) : (C2 x C2)"
+    },
+    {
+      "exterior_order": 1024,
+      "multiplier_invariants": [
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2
+      ],
+      "q_abelian": false,
+      "q_derived_order": 2,
+      "q_id": 265,
+      "q_order": 64,
+      "structure": "C2 x ((C2 x Q8) : C2)"
+    },
+    {
+      "exterior_order": 1024,
+      "multiplier_invariants": [
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2
+      ],
+      "q_abelian": false,
+      "q_derived_order": 2,
+      "q_id": 264,
+      "q_order": 64,
+      "structure": "C2 x ((C2 x C2 x C2) : (C2 x C2))"
+    },
+    {
+      "exterior_order": 1024,
+      "multiplier_invariants": [
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2
+      ],
+      "q_abelian": false,
+      "q_derived_order": 2,
+      "q_id": 263,
+      "q_order": 64,
+      "structure": "C2 x C2 x ((C4 x C2) : C2)"
+    },
+    {
+      "exterior_order": 1024,
+      "multiplier_invariants": [
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2
+      ],
+      "q_abelian": false,
+      "q_derived_order": 2,
+      "q_id": 262,
+      "q_order": 64,
+      "structure": "C2 x C2 x C2 x Q8"
+    },
+    {
+      "exterior_order": 1024,
+      "multiplier_invariants": [
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2
+      ],
+      "q_abelian": true,
+      "q_derived_order": 1,
+      "q_id": 260,
+      "q_order": 64,
+      "structure": "C4 x C2 x C2 x C2 x C2"
+    },
+    {
+      "exterior_order": 1024,
+      "multiplier_invariants": [
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2
+      ],
+      "q_abelian": true,
+      "q_derived_order": 1,
+      "q_id": 51,
+      "q_order": 32,
+      "structure": "C2 x C2 x C2 x C2 x C2"
+    },
+    {
+      "exterior_order": 729,
+      "multiplier_invariants": [
+        3,
+        3,
+        3,
+        3,
+        3,
+        3
+      ],
+      "q_abelian": true,
+      "q_derived_order": 1,
+      "q_id": 15,
+      "q_order": 81,
+      "structure": "C3 x C3 x C3 x C3"
+    },
+    {
+      "exterior_order": 729,
+      "multiplier_invariants": [
+        3,
+        3,
+        3
+      ],
+      "q_abelian": false,
+      "q_derived_order": 27,
+      "q_id": 14,
+      "q_order": 54,
+      "structure": "(C3 x C3 x C3) : C2"
+    },
+    {
+      "exterior_order": 512,
+      "multiplier_invariants": [
+        2,
+        2,
+        2,
+        2,
+        2,
+        4
+      ],
+      "q_abelian": false,
+      "q_derived_order": 4,
+      "q_id": 211,
+      "q_order": 64,
+      "structure": "C2 x ((C4 x C4) : C2)"
+    },
+    {
+      "exterior_order": 512,
+      "multiplier_invariants": [
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2
+      ],
+      "q_abelian": false,
+      "q_derived_order": 4,
+      "q_id": 202,
+      "q_order": 64,
+      "structure": "C2 x ((C2 x C2 x C2 x C2) : C2)"
+    },
+    {
+      "exterior_order": 320,
+      "multiplier_invariants": [
+        2,
+        2,
+        2,
+        2,
+        2,
+        2
+      ],
+      "q_abelian": false,
+      "q_derived_order": 5,
+      "q_id": 51,
+      "q_order": 80,
+      "structure": "C2 x C2 x C2 x D10"
+    },
+    {
+      "exterior_order": 256,
+      "multiplier_invariants": [
+        2,
+        2,
+        2,
+        2,
+        2,
+        2
+      ],
+      "q_abelian": false,
+      "q_derived_order": 4,
+      "q_id": 250,
+      "q_order": 64,
+      "structure": "C2 x C2 x D16"
+    },
+    {
+      "exterior_order": 256,
+      "multiplier_invariants": [
+        2,
+        2,
+        4,
+        4
+      ],
+      "q_abelian": false,
+      "q_derived_order": 4,
+      "q_id": 242,
+      "q_order": 64,
+      "structure": "((C4 x C2) : C2) : (C2 x C2)"
+    },
+    {
+      "exterior_order": 256,
+      "multiplier_invariants": [
+        2,
+        2,
+        2,
+        2,
+        2,
+        2
+      ],
+      "q_abelian": false,
+      "q_derived_order": 4,
+      "q_id": 226,
+      "q_order": 64,
+      "structure": "D8 x D8"
+    },
+    {
+      "exterior_order": 256,
+      "multiplier_invariants": [
+        2,
+        2,
+        2,
+        2,
+        4
+      ],
+      "q_abelian": false,
+      "q_derived_order": 4,
+      "q_id": 216,
+      "q_order": 64,
+      "structure": "(C4 x C2) : D8"
+    },
+    {
+      "exterior_order": 256,
+      "multiplier_invariants": [
+        2,
+        2,
+        2,
+        2,
+        4
+      ],
+      "q_abelian": false,
+      "q_derived_order": 4,
+      "q_id": 207,
+      "q_order": 64,
+      "structure": "C2 x ((C4 x C4) : C2)"
+    },
+    {
+      "exterior_order": 256,
+      "multiplier_invariants": [
+        2,
+        2,
+        2,
+        2,
+        2,
+        2
+      ],
+      "q_abelian": false,
+      "q_derived_order": 4,
+      "q_id": 203,
+      "q_order": 64,
+      "structure": "C2 x ((C4 x C2 x C2) : C2)"
+    },
+    {
+      "exterior_order": 256,
+      "multiplier_invariants": [
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2
+      ],
+      "q_abelian": false,
+      "q_derived_order": 2,
+      "q_id": 193,
+      "q_order": 64,
+      "structure": "C2 x C2 x ((C4 x C2) : C2)"
+    },
+    {
+      "exterior_order": 256,
+      "multiplier_invariants": [
+        2,
+        2,
+        2,
+        2,
+        2
+      ],
+      "q_abelian": false,
+      "q_derived_order": 8,
+      "q_id": 73,
+      "q_order": 64,
+      "structure": "(C4 x C2) : D8"
+    },
+    {
+      "exterior_order": 256,
+      "multiplier_invariants": [
+        2,
+        2,
+        2,
+        2,
+        2,
+        2
+      ],
+      "q_abelian": false,
+      "q_derived_order": 4,
+      "q_id": 60,
+      "q_order": 64,
+      "structure": "(C2 x C2) : ((C4 x C2) : C2)"
+    },
+    {
+      "exterior_order": 256,
+      "multiplier_invariants": [
+        2,
+        2,
+        2,
+        2
+      ],
+      "q_abelian": false,
+      "q_derived_order": 16,
+      "q_id": 50,
+      "q_order": 48,
+      "structure": "(C2 x C2 x C2 x C2) : C3"
+    },
+    {
+      "exterior_order": 243,
+      "multiplier_invariants": [
+        3,
+        3,
+        3,
+        3
+      ],
+      "q_abelian": false,
+      "q_derived_order": 3,
+      "q_id": 12,
+      "q_order": 81,
+      "structure": "C3 x ((C3 x C3) : C3)"
+    },
+    {
+      "exterior_order": 216,
+      "multiplier_invariants": [
+        2,
+        2,
+        2,
+        3
+      ],
+      "q_abelian": false,
+      "q_derived_order": 9,
+      "q_id": 49,
+      "q_order": 72,
+      "structure": "C2 x C2 x ((C3 x C3) : C2)"
+    },
+    {
+      "exterior_order": 216,
+      "multiplier_invariants": [
+        2,
+        3
+      ],
+      "q_abelian": false,
+      "q_derived_order": 36,
+      "q_id": 43,
+      "q_order": 72,
+      "structure": "(C3 x A4) : C2"
+    },
+    {
+      "exterior_order": 192,
+      "multiplier_invariants": [
+        2,
+        2,
+        2,
+        2,
+        2,
+        2
+      ],
+      "q_abelian": false,
+      "q_derived_order": 3,
+      "q_id": 51,
+      "q_order": 48,
+      "structure": "C2 x C2 x C2 x S3"
+    },
+    {
+      "exterior_order": 128,
+      "multiplier_invariants": [
+        2,
+        2,
+        2,
+        2,
+        2
+      ],
+      "q_abelian": false,
+      "q_derived_order": 4,
+      "q_id": 259,
+      "q_order": 64,
+      "structure": "(C2 x Q16) : C2"
+    },
+    {
+      "exterior_order": 128,
+      "multiplier_invariants": [
+        2,
+        2,
+        2,
+        2,
+        2
+      ],
+      "q_abelian": false,
+      "q_derived_order": 4,
+      "q_id": 258,
+      "q_order": 64,
+      "structure": "QD16 : (C2 x C2)"
+    }
+  ],
+  "planned_separation": {
+    "direct_elementary_case": {
+      "description": "C3^4",
+      "plan": "direct finite-field subspace scan with GL(4,3) orbit deduplication",
+      "quotient": [
+        81,
+        15
+      ],
+      "raw_kernel_count": 56632
+    },
+    "mandatory_orbit_case": {
+      "description": "C2^6",
+      "plan": "classify GL(6,2)-orbits of common-radical-zero dual subspaces; raw scan impossible",
+      "quotient": [
+        64,
+        267
+      ],
+      "raw_kernel_count": 623476476706836148
+    },
+    "previously_excluded_case": {
+      "description": "C2^5",
+      "plan": "reuse the proved >=9-clique exclusion from exact_h6",
+      "quotient": [
+        32,
+        51
+      ],
+      "raw_kernel_count": 229755605
+    },
+    "second_mandatory_orbit_case": {
+      "description": "C4 x C2^4 with elementary exterior C2^10",
+      "plan": "derive faithful alternating-map reduction before enumeration",
+      "quotient": [
+        64,
+        260
+      ],
+      "raw_kernel_count": 229755605
+    }
+  },
+  "quotient_count": 738,
+  "schema_version": 1,
+  "smallgroup_counts_by_order": {
+    "1": 1,
+    "2": 1,
+    "3": 1,
+    "4": 2,
+    "5": 1,
+    "6": 2,
+    "7": 1,
+    "8": 5,
+    "9": 2,
+    "10": 2,
+    "11": 1,
+    "12": 5,
+    "13": 1,
+    "14": 2,
+    "15": 1,
+    "16": 14,
+    "17": 1,
+    "18": 5,
+    "19": 1,
+    "20": 5,
+    "21": 2,
+    "22": 2,
+    "23": 1,
+    "24": 15,
+    "25": 2,
+    "26": 2,
+    "27": 5,
+    "28": 4,
+    "29": 1,
+    "30": 4,
+    "31": 1,
+    "32": 51,
+    "33": 1,
+    "34": 2,
+    "35": 1,
+    "36": 14,
+    "37": 1,
+    "38": 2,
+    "39": 2,
+    "40": 14,
+    "41": 1,
+    "42": 6,
+    "43": 1,
+    "44": 4,
+    "45": 2,
+    "46": 2,
+    "47": 1,
+    "48": 52,
+    "49": 2,
+    "50": 5,
+    "51": 1,
+    "52": 5,
+    "53": 1,
+    "54": 15,
+    "55": 2,
+    "56": 13,
+    "57": 2,
+    "58": 2,
+    "59": 1,
+    "60": 13,
+    "61": 1,
+    "62": 2,
+    "63": 4,
+    "64": 267,
+    "65": 1,
+    "66": 4,
+    "67": 1,
+    "68": 5,
+    "69": 1,
+    "70": 4,
+    "71": 1,
+    "72": 50,
+    "73": 1,
+    "74": 2,
+    "75": 3,
+    "76": 4,
+    "77": 1,
+    "78": 6,
+    "79": 1,
+    "80": 52,
+    "81": 15
+  },
+  "software": {
+    "external_dependencies": [],
+    "implementation": "CPython",
+    "python": "3.9.6"
+  },
+  "status": "[COMPUTED] inventory; no h(7) upper bound claimed"
+}

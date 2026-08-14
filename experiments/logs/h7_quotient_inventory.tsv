@@ -1,0 +1,744 @@
+# GAP_VERSION=4.16.0
+# SMALLGRP_VERSION=1.5.4
+# MAX_Q_ORDER=81
+# IDENTITY=|Q_wedge_Q|=|M(Q)|*|Q'|
+# NO_SCHUR_COVER_CONSTRUCTED=true
+q_order	q_id	structure	q_abelian	q_elementary_abelian	q_exponent	q_derived_order	q_center_order	multiplier_order	multiplier_invariants	multiplier_generator_count	exterior_order	about_exterior_structure	runtime_ms
+1	1	1	true	true	1	1	1	1		0	1	multiplier_is_exact_exterior_structure	1
+2	1	C2	true	true	2	1	2	1		0	1	multiplier_is_exact_exterior_structure	1
+3	1	C3	true	true	3	1	3	1		0	1	multiplier_is_exact_exterior_structure	1
+4	1	C4	true	false	4	1	4	1		0	1	multiplier_is_exact_exterior_structure	0
+4	2	C2 x C2	true	true	2	1	4	2	2	1	2	multiplier_is_exact_exterior_structure	0
+5	1	C5	true	true	5	1	5	1		0	1	multiplier_is_exact_exterior_structure	1
+6	1	S3	false	false	6	3	1	1		0	3	extension_of_Qprime_by_multiplier	1
+6	2	C6	true	false	6	1	6	1		0	1	multiplier_is_exact_exterior_structure	2
+7	1	C7	true	true	7	1	7	1		0	1	multiplier_is_exact_exterior_structure	2
+8	1	C8	true	false	8	1	8	1		0	1	multiplier_is_exact_exterior_structure	3
+8	2	C4 x C2	true	false	4	1	8	2	2	1	2	multiplier_is_exact_exterior_structure	3
+8	3	D8	false	false	4	2	2	2	2	1	4	extension_of_Qprime_by_multiplier	2
+8	4	Q8	false	false	4	2	2	1		0	2	extension_of_Qprime_by_multiplier	1
+8	5	C2 x C2 x C2	true	true	2	1	8	8	2,2,2	3	8	multiplier_is_exact_exterior_structure	1
+9	1	C9	true	false	9	1	9	1		0	1	multiplier_is_exact_exterior_structure	1
+9	2	C3 x C3	true	true	3	1	9	3	3	1	3	multiplier_is_exact_exterior_structure	1
+10	1	D10	false	false	10	5	1	1		0	5	extension_of_Qprime_by_multiplier	0
+10	2	C10	true	false	10	1	10	1		0	1	multiplier_is_exact_exterior_structure	1
+11	1	C11	true	true	11	1	11	1		0	1	multiplier_is_exact_exterior_structure	1
+12	1	C3 : C4	false	false	12	3	2	1		0	3	extension_of_Qprime_by_multiplier	2
+12	2	C12	true	false	12	1	12	1		0	1	multiplier_is_exact_exterior_structure	1
+12	3	A4	false	false	6	4	1	2	2	1	8	extension_of_Qprime_by_multiplier	2
+12	4	D12	false	false	6	3	2	2	2	1	6	extension_of_Qprime_by_multiplier	2
+12	5	C6 x C2	true	false	6	1	12	2	2	1	2	multiplier_is_exact_exterior_structure	3
+13	1	C13	true	true	13	1	13	1		0	1	multiplier_is_exact_exterior_structure	2
+14	1	D14	false	false	14	7	1	1		0	7	extension_of_Qprime_by_multiplier	1
+14	2	C14	true	false	14	1	14	1		0	1	multiplier_is_exact_exterior_structure	2
+15	1	C15	true	false	15	1	15	1		0	1	multiplier_is_exact_exterior_structure	3
+16	1	C16	true	false	16	1	16	1		0	1	multiplier_is_exact_exterior_structure	4
+16	2	C4 x C4	true	false	4	1	16	4	4	1	4	multiplier_is_exact_exterior_structure	3
+16	3	(C4 x C2) : C2	false	false	4	2	4	4	2,2	2	8	extension_of_Qprime_by_multiplier	4
+16	4	C4 : C4	false	false	4	2	4	2	2	1	4	extension_of_Qprime_by_multiplier	2
+16	5	C8 x C2	true	false	8	1	16	2	2	1	2	multiplier_is_exact_exterior_structure	2
+16	6	C8 : C2	false	false	8	2	4	1		0	2	extension_of_Qprime_by_multiplier	2
+16	7	D16	false	false	8	4	2	2	2	1	8	extension_of_Qprime_by_multiplier	3
+16	8	QD16	false	false	8	4	2	1		0	4	extension_of_Qprime_by_multiplier	2
+16	9	Q16	false	false	8	4	2	1		0	4	extension_of_Qprime_by_multiplier	2
+16	10	C4 x C2 x C2	true	false	4	1	16	8	2,2,2	3	8	multiplier_is_exact_exterior_structure	3
+16	11	C2 x D8	false	false	4	2	4	8	2,2,2	3	16	extension_of_Qprime_by_multiplier	2
+16	12	C2 x Q8	false	false	4	2	4	4	2,2	2	8	extension_of_Qprime_by_multiplier	3
+16	13	(C4 x C2) : C2	false	false	4	2	4	4	2,2	2	8	extension_of_Qprime_by_multiplier	1
+16	14	C2 x C2 x C2 x C2	true	true	2	1	16	64	2,2,2,2,2,2	6	64	multiplier_is_exact_exterior_structure	2
+17	1	C17	true	true	17	1	17	1		0	1	multiplier_is_exact_exterior_structure	1
+18	1	D18	false	false	18	9	1	1		0	9	extension_of_Qprime_by_multiplier	2
+18	2	C18	true	false	18	1	18	1		0	1	multiplier_is_exact_exterior_structure	3
+18	3	C3 x S3	false	false	6	3	3	1		0	3	extension_of_Qprime_by_multiplier	2
+18	4	(C3 x C3) : C2	false	false	6	9	1	3	3	1	27	extension_of_Qprime_by_multiplier	2
+18	5	C6 x C3	true	false	6	1	18	3	3	1	3	multiplier_is_exact_exterior_structure	2
+19	1	C19	true	true	19	1	19	1		0	1	multiplier_is_exact_exterior_structure	2
+20	1	C5 : C4	false	false	20	5	2	1		0	5	extension_of_Qprime_by_multiplier	2
+20	2	C20	true	false	20	1	20	1		0	1	multiplier_is_exact_exterior_structure	3
+20	3	C5 : C4	false	false	20	5	1	1		0	5	extension_of_Qprime_by_multiplier	3
+20	4	D20	false	false	10	5	2	2	2	1	10	extension_of_Qprime_by_multiplier	3
+20	5	C10 x C2	true	false	10	1	20	2	2	1	2	multiplier_is_exact_exterior_structure	4
+21	1	C7 : C3	false	false	21	7	1	1		0	7	extension_of_Qprime_by_multiplier	2
+21	2	C21	true	false	21	1	21	1		0	1	multiplier_is_exact_exterior_structure	2
+22	1	D22	false	false	22	11	1	1		0	11	extension_of_Qprime_by_multiplier	1
+22	2	C22	true	false	22	1	22	1		0	1	multiplier_is_exact_exterior_structure	1
+23	1	C23	true	true	23	1	23	1		0	1	multiplier_is_exact_exterior_structure	1
+24	1	C3 : C8	false	false	24	3	4	1		0	3	extension_of_Qprime_by_multiplier	2
+24	2	C24	true	false	24	1	24	1		0	1	multiplier_is_exact_exterior_structure	3
+24	3	SL(2,3)	false	false	12	8	2	1		0	8	extension_of_Qprime_by_multiplier	4
+24	4	C3 : Q8	false	false	12	6	2	1		0	6	extension_of_Qprime_by_multiplier	3
+24	5	C4 x S3	false	false	12	3	4	2	2	1	6	extension_of_Qprime_by_multiplier	3
+24	6	D24	false	false	12	6	2	2	2	1	12	extension_of_Qprime_by_multiplier	3
+24	7	C2 x (C3 : C4)	false	false	12	3	4	2	2	1	6	extension_of_Qprime_by_multiplier	2
+24	8	(C6 x C2) : C2	false	false	12	6	2	2	2	1	12	extension_of_Qprime_by_multiplier	2
+24	9	C12 x C2	true	false	12	1	24	2	2	1	2	multiplier_is_exact_exterior_structure	2
+24	10	C3 x D8	false	false	12	2	6	2	2	1	4	extension_of_Qprime_by_multiplier	2
+24	11	C3 x Q8	false	false	12	2	6	1		0	2	extension_of_Qprime_by_multiplier	3
+24	12	S4	false	false	12	12	1	2	2	1	24	extension_of_Qprime_by_multiplier	4
+24	13	C2 x A4	false	false	6	4	2	2	2	1	8	extension_of_Qprime_by_multiplier	4
+24	14	C2 x C2 x S3	false	false	6	3	4	8	2,2,2	3	24	extension_of_Qprime_by_multiplier	3
+24	15	C6 x C2 x C2	true	false	6	1	24	8	2,2,2	3	8	multiplier_is_exact_exterior_structure	4
+25	1	C25	true	false	25	1	25	1		0	1	multiplier_is_exact_exterior_structure	1
+25	2	C5 x C5	true	true	5	1	25	5	5	1	5	multiplier_is_exact_exterior_structure	7
+26	1	D26	false	false	26	13	1	1		0	13	extension_of_Qprime_by_multiplier	2
+26	2	C26	true	false	26	1	26	1		0	1	multiplier_is_exact_exterior_structure	1
+27	1	C27	true	false	27	1	27	1		0	1	multiplier_is_exact_exterior_structure	1
+27	2	C9 x C3	true	false	9	1	27	3	3	1	3	multiplier_is_exact_exterior_structure	2
+27	3	(C3 x C3) : C3	false	false	3	3	3	9	3,3	2	27	extension_of_Qprime_by_multiplier	3
+27	4	C9 : C3	false	false	9	3	3	1		0	3	extension_of_Qprime_by_multiplier	1
+27	5	C3 x C3 x C3	true	true	3	1	27	27	3,3,3	3	27	multiplier_is_exact_exterior_structure	2
+28	1	C7 : C4	false	false	28	7	2	1		0	7	extension_of_Qprime_by_multiplier	1
+28	2	C28	true	false	28	1	28	1		0	1	multiplier_is_exact_exterior_structure	2
+28	3	D28	false	false	14	7	2	2	2	1	14	extension_of_Qprime_by_multiplier	4
+28	4	C14 x C2	true	false	14	1	28	2	2	1	2	multiplier_is_exact_exterior_structure	3
+29	1	C29	true	true	29	1	29	1		0	1	multiplier_is_exact_exterior_structure	0
+30	1	C5 x S3	false	false	30	3	5	1		0	3	extension_of_Qprime_by_multiplier	2
+30	2	C3 x D10	false	false	30	5	3	1		0	5	extension_of_Qprime_by_multiplier	2
+30	3	D30	false	false	30	15	1	1		0	15	extension_of_Qprime_by_multiplier	3
+30	4	C30	true	false	30	1	30	1		0	1	multiplier_is_exact_exterior_structure	2
+31	1	C31	true	true	31	1	31	1		0	1	multiplier_is_exact_exterior_structure	1
+32	1	C32	true	false	32	1	32	1		0	1	multiplier_is_exact_exterior_structure	4
+32	2	(C4 x C2) : C4	false	false	4	2	8	8	2,2,2	3	16	extension_of_Qprime_by_multiplier	5
+32	3	C8 x C4	true	false	8	1	32	4	4	1	4	multiplier_is_exact_exterior_structure	3
+32	4	C8 : C4	false	false	8	2	8	2	2	1	4	extension_of_Qprime_by_multiplier	3
+32	5	(C8 x C2) : C2	false	false	8	2	8	4	2,2	2	8	extension_of_Qprime_by_multiplier	5
+32	6	(C2 x C2 x C2) : C4	false	false	4	4	2	4	2,2	2	16	extension_of_Qprime_by_multiplier	4
+32	7	(C8 : C2) : C2	false	false	8	4	2	2	2	1	8	extension_of_Qprime_by_multiplier	4
+32	8	C2 . ((C4 x C2) : C2) = (C2 x C2) . (C4 x C2)	false	false	8	4	2	2	2	1	8	extension_of_Qprime_by_multiplier	5
+32	9	(C8 x C2) : C2	false	false	8	4	4	4	2,2	2	16	extension_of_Qprime_by_multiplier	4
+32	10	Q8 : C4	false	false	8	4	4	2	2	1	8	extension_of_Qprime_by_multiplier	2
+32	11	(C4 x C4) : C2	false	false	8	4	4	2	2	1	8	extension_of_Qprime_by_multiplier	2
+32	12	C4 : C8	false	false	8	2	8	2	2	1	4	extension_of_Qprime_by_multiplier	4
+32	13	C8 : C4	false	false	8	4	4	2	2	1	8	extension_of_Qprime_by_multiplier	6
+32	14	C8 : C4	false	false	8	4	4	2	2	1	8	extension_of_Qprime_by_multiplier	3
+32	15	C4 . D8 = C4 . (C4 x C2)	false	false	8	4	4	1		0	4	extension_of_Qprime_by_multiplier	4
+32	16	C16 x C2	true	false	16	1	32	2	2	1	2	multiplier_is_exact_exterior_structure	4
+32	17	C16 : C2	false	false	16	2	8	1		0	2	extension_of_Qprime_by_multiplier	3
+32	18	D32	false	false	16	8	2	2	2	1	16	extension_of_Qprime_by_multiplier	6
+32	19	QD32	false	false	16	8	2	1		0	8	extension_of_Qprime_by_multiplier	5
+32	20	Q32	false	false	16	8	2	1		0	8	extension_of_Qprime_by_multiplier	5
+32	21	C4 x C4 x C2	true	false	4	1	32	16	2,2,4	3	16	multiplier_is_exact_exterior_structure	4
+32	22	C2 x ((C4 x C2) : C2)	false	false	4	2	8	16	2,2,2,2	4	32	extension_of_Qprime_by_multiplier	7
+32	23	C2 x (C4 : C4)	false	false	4	2	8	8	2,2,2	3	16	extension_of_Qprime_by_multiplier	3
+32	24	(C4 x C4) : C2	false	false	4	2	8	8	2,4	2	16	extension_of_Qprime_by_multiplier	6
+32	25	C4 x D8	false	false	4	2	8	8	2,2,2	3	16	extension_of_Qprime_by_multiplier	3
+32	26	C4 x Q8	false	false	4	2	8	4	2,2	2	8	extension_of_Qprime_by_multiplier	3
+32	27	(C2 x C2 x C2 x C2) : C2	false	false	4	4	4	16	2,2,2,2	4	64	extension_of_Qprime_by_multiplier	5
+32	28	(C4 x C2 x C2) : C2	false	false	4	4	4	8	2,2,2	3	32	extension_of_Qprime_by_multiplier	5
+32	29	(C2 x Q8) : C2	false	false	4	4	4	4	2,2	2	16	extension_of_Qprime_by_multiplier	7
+32	30	(C4 x C2 x C2) : C2	false	false	4	4	4	4	2,2	2	16	extension_of_Qprime_by_multiplier	5
+32	31	(C4 x C4) : C2	false	false	4	4	4	8	2,4	2	32	extension_of_Qprime_by_multiplier	3
+32	32	(C2 x C2) . (C2 x C2 x C2)	false	false	4	4	4	2	2	1	8	extension_of_Qprime_by_multiplier	6
+32	33	(C4 x C4) : C2	false	false	4	4	4	2	2	1	8	extension_of_Qprime_by_multiplier	4
+32	34	(C4 x C4) : C2	false	false	4	4	4	16	2,2,4	3	64	extension_of_Qprime_by_multiplier	5
+32	35	C4 : Q8	false	false	4	4	4	4	2,2	2	16	extension_of_Qprime_by_multiplier	4
+32	36	C8 x C2 x C2	true	false	8	1	32	8	2,2,2	3	8	multiplier_is_exact_exterior_structure	2
+32	37	C2 x (C8 : C2)	false	false	8	2	8	4	2,2	2	8	extension_of_Qprime_by_multiplier	3
+32	38	(C8 x C2) : C2	false	false	8	2	8	4	2,2	2	8	extension_of_Qprime_by_multiplier	3
+32	39	C2 x D16	false	false	8	4	4	8	2,2,2	3	32	extension_of_Qprime_by_multiplier	6
+32	40	C2 x QD16	false	false	8	4	4	4	2,2	2	16	extension_of_Qprime_by_multiplier	5
+32	41	C2 x Q16	false	false	8	4	4	4	2,2	2	16	extension_of_Qprime_by_multiplier	3
+32	42	(C8 x C2) : C2	false	false	8	4	4	4	2,2	2	16	extension_of_Qprime_by_multiplier	3
+32	43	C8 : (C2 x C2)	false	false	8	4	2	4	2,2	2	16	extension_of_Qprime_by_multiplier	4
+32	44	(C2 x Q8) : C2	false	false	8	4	2	4	2,2	2	16	extension_of_Qprime_by_multiplier	7
+32	45	C4 x C2 x C2 x C2	true	false	4	1	32	64	2,2,2,2,2,2	6	64	multiplier_is_exact_exterior_structure	7
+32	46	C2 x C2 x D8	false	false	4	2	8	64	2,2,2,2,2,2	6	128	extension_of_Qprime_by_multiplier	6
+32	47	C2 x C2 x Q8	false	false	4	2	8	32	2,2,2,2,2	5	64	extension_of_Qprime_by_multiplier	7
+32	48	C2 x ((C4 x C2) : C2)	false	false	4	2	8	32	2,2,2,2,2	5	64	extension_of_Qprime_by_multiplier	4
+32	49	(C2 x C2 x C2) : (C2 x C2)	false	false	4	2	2	32	2,2,2,2,2	5	64	extension_of_Qprime_by_multiplier	3
+32	50	(C2 x Q8) : C2	false	false	4	2	2	32	2,2,2,2,2	5	64	extension_of_Qprime_by_multiplier	7
+32	51	C2 x C2 x C2 x C2 x C2	true	true	2	1	32	1024	2,2,2,2,2,2,2,2,2,2	10	1024	multiplier_is_exact_exterior_structure	12
+33	1	C33	true	false	33	1	33	1		0	1	multiplier_is_exact_exterior_structure	1
+34	1	D34	false	false	34	17	1	1		0	17	extension_of_Qprime_by_multiplier	4
+34	2	C34	true	false	34	1	34	1		0	1	multiplier_is_exact_exterior_structure	1
+35	1	C35	true	false	35	1	35	1		0	1	multiplier_is_exact_exterior_structure	1
+36	1	C9 : C4	false	false	36	9	2	1		0	9	extension_of_Qprime_by_multiplier	4
+36	2	C36	true	false	36	1	36	1		0	1	multiplier_is_exact_exterior_structure	2
+36	3	(C2 x C2) : C9	false	false	18	4	3	2	2	1	8	extension_of_Qprime_by_multiplier	3
+36	4	D36	false	false	18	9	2	2	2	1	18	extension_of_Qprime_by_multiplier	3
+36	5	C18 x C2	true	false	18	1	36	2	2	1	2	multiplier_is_exact_exterior_structure	1
+36	6	C3 x (C3 : C4)	false	false	12	3	6	1		0	3	extension_of_Qprime_by_multiplier	2
+36	7	(C3 x C3) : C4	false	false	12	9	2	3	3	1	27	extension_of_Qprime_by_multiplier	2
+36	8	C12 x C3	true	false	12	1	36	3	3	1	3	multiplier_is_exact_exterior_structure	4
+36	9	(C3 x C3) : C4	false	false	12	9	1	3	3	1	27	extension_of_Qprime_by_multiplier	4
+36	10	S3 x S3	false	false	6	9	1	2	2	1	18	extension_of_Qprime_by_multiplier	2
+36	11	C3 x A4	false	false	6	4	3	6	2,3	2	24	extension_of_Qprime_by_multiplier	2
+36	12	C6 x S3	false	false	6	3	6	2	2	1	6	extension_of_Qprime_by_multiplier	2
+36	13	C2 x ((C3 x C3) : C2)	false	false	6	9	2	6	2,3	2	54	extension_of_Qprime_by_multiplier	2
+36	14	C6 x C6	true	false	6	1	36	6	2,3	2	6	multiplier_is_exact_exterior_structure	2
+37	1	C37	true	true	37	1	37	1		0	1	multiplier_is_exact_exterior_structure	0
+38	1	D38	false	false	38	19	1	1		0	19	extension_of_Qprime_by_multiplier	14
+38	2	C38	true	false	38	1	38	1		0	1	multiplier_is_exact_exterior_structure	1
+39	1	C13 : C3	false	false	39	13	1	1		0	13	extension_of_Qprime_by_multiplier	1
+39	2	C39	true	false	39	1	39	1		0	1	multiplier_is_exact_exterior_structure	1
+40	1	C5 : C8	false	false	40	5	4	1		0	5	extension_of_Qprime_by_multiplier	2
+40	2	C40	true	false	40	1	40	1		0	1	multiplier_is_exact_exterior_structure	2
+40	3	C5 : C8	false	false	40	5	2	1		0	5	extension_of_Qprime_by_multiplier	2
+40	4	C5 : Q8	false	false	20	10	2	1		0	10	extension_of_Qprime_by_multiplier	4
+40	5	C4 x D10	false	false	20	5	4	2	2	1	10	extension_of_Qprime_by_multiplier	3
+40	6	D40	false	false	20	10	2	2	2	1	20	extension_of_Qprime_by_multiplier	2
+40	7	C2 x (C5 : C4)	false	false	20	5	4	2	2	1	10	extension_of_Qprime_by_multiplier	2
+40	8	(C10 x C2) : C2	false	false	20	10	2	2	2	1	20	extension_of_Qprime_by_multiplier	2
+40	9	C20 x C2	true	false	20	1	40	2	2	1	2	multiplier_is_exact_exterior_structure	2
+40	10	C5 x D8	false	false	20	2	10	2	2	1	4	extension_of_Qprime_by_multiplier	3
+40	11	C5 x Q8	false	false	20	2	10	1		0	2	extension_of_Qprime_by_multiplier	2
+40	12	C2 x (C5 : C4)	false	false	20	5	2	2	2	1	10	extension_of_Qprime_by_multiplier	2
+40	13	C2 x C2 x D10	false	false	10	5	4	8	2,2,2	3	40	extension_of_Qprime_by_multiplier	8
+40	14	C10 x C2 x C2	true	false	10	1	40	8	2,2,2	3	8	multiplier_is_exact_exterior_structure	2
+41	1	C41	true	true	41	1	41	1		0	1	multiplier_is_exact_exterior_structure	1
+42	1	C7 : C6	false	false	42	7	1	1		0	7	extension_of_Qprime_by_multiplier	1
+42	2	C2 x (C7 : C3)	false	false	42	7	2	1		0	7	extension_of_Qprime_by_multiplier	2
+42	3	C7 x S3	false	false	42	3	7	1		0	3	extension_of_Qprime_by_multiplier	1
+42	4	C3 x D14	false	false	42	7	3	1		0	7	extension_of_Qprime_by_multiplier	1
+42	5	D42	false	false	42	21	1	1		0	21	extension_of_Qprime_by_multiplier	2
+42	6	C42	true	false	42	1	42	1		0	1	multiplier_is_exact_exterior_structure	1
+43	1	C43	true	true	43	1	43	1		0	1	multiplier_is_exact_exterior_structure	1
+44	1	C11 : C4	false	false	44	11	2	1		0	11	extension_of_Qprime_by_multiplier	2
+44	2	C44	true	false	44	1	44	1		0	1	multiplier_is_exact_exterior_structure	1
+44	3	D44	false	false	22	11	2	2	2	1	22	extension_of_Qprime_by_multiplier	3
+44	4	C22 x C2	true	false	22	1	44	2	2	1	2	multiplier_is_exact_exterior_structure	2
+45	1	C45	true	false	45	1	45	1		0	1	multiplier_is_exact_exterior_structure	1
+45	2	C15 x C3	true	false	15	1	45	3	3	1	3	multiplier_is_exact_exterior_structure	2
+46	1	D46	false	false	46	23	1	1		0	23	extension_of_Qprime_by_multiplier	18
+46	2	C46	true	false	46	1	46	1		0	1	multiplier_is_exact_exterior_structure	1
+47	1	C47	true	true	47	1	47	1		0	1	multiplier_is_exact_exterior_structure	0
+48	1	C3 : C16	false	false	48	3	8	1		0	3	extension_of_Qprime_by_multiplier	4
+48	2	C48	true	false	48	1	48	1		0	1	multiplier_is_exact_exterior_structure	6
+48	3	(C4 x C4) : C3	false	false	12	16	1	4	4	1	64	extension_of_Qprime_by_multiplier	19
+48	4	C8 x S3	false	false	24	3	8	2	2	1	6	extension_of_Qprime_by_multiplier	3
+48	5	C24 : C2	false	false	24	6	4	1		0	6	extension_of_Qprime_by_multiplier	3
+48	6	C24 : C2	false	false	24	12	2	1		0	12	extension_of_Qprime_by_multiplier	2
+48	7	D48	false	false	24	12	2	2	2	1	24	extension_of_Qprime_by_multiplier	2
+48	8	C3 : Q16	false	false	24	12	2	1		0	12	extension_of_Qprime_by_multiplier	3
+48	9	C2 x (C3 : C8)	false	false	24	3	8	2	2	1	6	extension_of_Qprime_by_multiplier	3
+48	10	(C3 : C8) : C2	false	false	24	6	4	1		0	6	extension_of_Qprime_by_multiplier	3
+48	11	C4 x (C3 : C4)	false	false	12	3	8	4	4	1	12	extension_of_Qprime_by_multiplier	8
+48	12	(C3 : C4) : C4	false	false	12	6	4	2	2	1	12	extension_of_Qprime_by_multiplier	6
+48	13	C12 : C4	false	false	12	6	4	2	2	1	12	extension_of_Qprime_by_multiplier	2
+48	14	(C12 x C2) : C2	false	false	12	6	4	4	2,2	2	24	extension_of_Qprime_by_multiplier	2
+48	15	(C3 x D8) : C2	false	false	24	12	2	2	2	1	24	extension_of_Qprime_by_multiplier	2
+48	16	(C3 : Q8) : C2	false	false	24	12	2	1		0	12	extension_of_Qprime_by_multiplier	3
+48	17	(C3 x Q8) : C2	false	false	24	12	2	1		0	12	extension_of_Qprime_by_multiplier	3
+48	18	C3 : Q16	false	false	24	12	2	1		0	12	extension_of_Qprime_by_multiplier	3
+48	19	(C6 x C2) : C4	false	false	12	6	4	4	2,2	2	24	extension_of_Qprime_by_multiplier	3
+48	20	C12 x C4	true	false	12	1	48	4	4	1	4	multiplier_is_exact_exterior_structure	3
+48	21	C3 x ((C4 x C2) : C2)	false	false	12	2	12	4	2,2	2	8	extension_of_Qprime_by_multiplier	4
+48	22	C3 x (C4 : C4)	false	false	12	2	12	2	2	1	4	extension_of_Qprime_by_multiplier	3
+48	23	C24 x C2	true	false	24	1	48	2	2	1	2	multiplier_is_exact_exterior_structure	2
+48	24	C3 x (C8 : C2)	false	false	24	2	12	1		0	2	extension_of_Qprime_by_multiplier	2
+48	25	C3 x D16	false	false	24	4	6	2	2	1	8	extension_of_Qprime_by_multiplier	3
+48	26	C3 x QD16	false	false	24	4	6	1		0	4	extension_of_Qprime_by_multiplier	4
+48	27	C3 x Q16	false	false	24	4	6	1		0	4	extension_of_Qprime_by_multiplier	2
+48	28	C2 . S4 = SL(2,3) . C2	false	false	24	24	2	1		0	24	extension_of_Qprime_by_multiplier	5
+48	29	GL(2,3)	false	false	24	24	2	1		0	24	extension_of_Qprime_by_multiplier	6
+48	30	A4 : C4	false	false	12	12	2	2	2	1	24	extension_of_Qprime_by_multiplier	3
+48	31	C4 x A4	false	false	12	4	4	2	2	1	8	extension_of_Qprime_by_multiplier	3
+48	32	C2 x SL(2,3)	false	false	12	8	4	1		0	8	extension_of_Qprime_by_multiplier	5
+48	33	((C4 x C2) : C2) : C3	false	false	12	8	4	1		0	8	extension_of_Qprime_by_multiplier	3
+48	34	C2 x (C3 : Q8)	false	false	12	6	4	4	2,2	2	24	extension_of_Qprime_by_multiplier	10
+48	35	C2 x C4 x S3	false	false	12	3	8	8	2,2,2	3	24	extension_of_Qprime_by_multiplier	3
+48	36	C2 x D24	false	false	12	6	4	8	2,2,2	3	48	extension_of_Qprime_by_multiplier	3
+48	37	(C12 x C2) : C2	false	false	12	6	4	4	2,2	2	24	extension_of_Qprime_by_multiplier	2
+48	38	D8 x S3	false	false	12	6	2	8	2,2,2	3	48	extension_of_Qprime_by_multiplier	4
+48	39	(C4 x S3) : C2	false	false	12	6	2	4	2,2	2	24	extension_of_Qprime_by_multiplier	4
+48	40	Q8 x S3	false	false	12	6	2	4	2,2	2	24	extension_of_Qprime_by_multiplier	4
+48	41	(C4 x S3) : C2	false	false	12	6	2	4	2,2	2	24	extension_of_Qprime_by_multiplier	8
+48	42	C2 x C2 x (C3 : C4)	false	false	12	3	8	8	2,2,2	3	24	extension_of_Qprime_by_multiplier	7
+48	43	C2 x ((C6 x C2) : C2)	false	false	12	6	4	8	2,2,2	3	48	extension_of_Qprime_by_multiplier	3
+48	44	C12 x C2 x C2	true	false	12	1	48	8	2,2,2	3	8	multiplier_is_exact_exterior_structure	5
+48	45	C6 x D8	false	false	12	2	12	8	2,2,2	3	16	extension_of_Qprime_by_multiplier	7
+48	46	C6 x Q8	false	false	12	2	12	4	2,2	2	8	extension_of_Qprime_by_multiplier	5
+48	47	C3 x ((C4 x C2) : C2)	false	false	12	2	12	4	2,2	2	8	extension_of_Qprime_by_multiplier	6
+48	48	C2 x S4	false	false	12	12	2	4	2,2	2	48	extension_of_Qprime_by_multiplier	5
+48	49	C2 x C2 x A4	false	false	6	4	4	4	2,2	2	16	extension_of_Qprime_by_multiplier	3
+48	50	(C2 x C2 x C2 x C2) : C3	false	false	6	16	1	16	2,2,2,2	4	256	extension_of_Qprime_by_multiplier	5
+48	51	C2 x C2 x C2 x S3	false	false	6	3	8	64	2,2,2,2,2,2	6	192	extension_of_Qprime_by_multiplier	3
+48	52	C6 x C2 x C2 x C2	true	false	6	1	48	64	2,2,2,2,2,2	6	64	multiplier_is_exact_exterior_structure	6
+49	1	C49	true	false	49	1	49	1		0	1	multiplier_is_exact_exterior_structure	1
+49	2	C7 x C7	true	true	7	1	49	7	7	1	7	multiplier_is_exact_exterior_structure	2
+50	1	D50	false	false	50	25	1	1		0	25	extension_of_Qprime_by_multiplier	4
+50	2	C50	true	false	50	1	50	1		0	1	multiplier_is_exact_exterior_structure	1
+50	3	C5 x D10	false	false	10	5	5	1		0	5	extension_of_Qprime_by_multiplier	2
+50	4	(C5 x C5) : C2	false	false	10	25	1	5	5	1	125	extension_of_Qprime_by_multiplier	1
+50	5	C10 x C5	true	false	10	1	50	5	5	1	5	multiplier_is_exact_exterior_structure	3
+51	1	C51	true	false	51	1	51	1		0	1	multiplier_is_exact_exterior_structure	1
+52	1	C13 : C4	false	false	52	13	2	1		0	13	extension_of_Qprime_by_multiplier	7
+52	2	C52	true	false	52	1	52	1		0	1	multiplier_is_exact_exterior_structure	1
+52	3	C13 : C4	false	false	52	13	1	1		0	13	extension_of_Qprime_by_multiplier	12
+52	4	D52	false	false	26	13	2	2	2	1	26	extension_of_Qprime_by_multiplier	2
+52	5	C26 x C2	true	false	26	1	52	2	2	1	2	multiplier_is_exact_exterior_structure	2
+53	1	C53	true	true	53	1	53	1		0	1	multiplier_is_exact_exterior_structure	0
+54	1	D54	false	false	54	27	1	1		0	27	extension_of_Qprime_by_multiplier	2
+54	2	C54	true	false	54	1	54	1		0	1	multiplier_is_exact_exterior_structure	3
+54	3	C3 x D18	false	false	18	9	3	1		0	9	extension_of_Qprime_by_multiplier	4
+54	4	C9 x S3	false	false	18	3	9	1		0	3	extension_of_Qprime_by_multiplier	3
+54	5	(C3 x C3) : C6	false	false	6	9	1	3	3	1	27	extension_of_Qprime_by_multiplier	3
+54	6	C9 : C6	false	false	18	9	1	1		0	9	extension_of_Qprime_by_multiplier	3
+54	7	(C9 x C3) : C2	false	false	18	27	1	3	3	1	81	extension_of_Qprime_by_multiplier	3
+54	8	((C3 x C3) : C3) : C2	false	false	6	27	3	1		0	27	extension_of_Qprime_by_multiplier	2
+54	9	C18 x C3	true	false	18	1	54	3	3	1	3	multiplier_is_exact_exterior_structure	2
+54	10	C2 x ((C3 x C3) : C3)	false	false	6	3	6	9	3,3	2	27	extension_of_Qprime_by_multiplier	4
+54	11	C2 x (C9 : C3)	false	false	18	3	6	1		0	3	extension_of_Qprime_by_multiplier	3
+54	12	C3 x C3 x S3	false	false	6	3	9	3	3	1	9	extension_of_Qprime_by_multiplier	3
+54	13	C3 x ((C3 x C3) : C2)	false	false	6	9	3	3	3	1	27	extension_of_Qprime_by_multiplier	4
+54	14	(C3 x C3 x C3) : C2	false	false	6	27	1	27	3,3,3	3	729	extension_of_Qprime_by_multiplier	4
+54	15	C6 x C3 x C3	true	false	6	1	54	27	3,3,3	3	27	multiplier_is_exact_exterior_structure	4
+55	1	C11 : C5	false	false	55	11	1	1		0	11	extension_of_Qprime_by_multiplier	4
+55	2	C55	true	false	55	1	55	1		0	1	multiplier_is_exact_exterior_structure	2
+56	1	C7 : C8	false	false	56	7	4	1		0	7	extension_of_Qprime_by_multiplier	3
+56	2	C56	true	false	56	1	56	1		0	1	multiplier_is_exact_exterior_structure	2
+56	3	C7 : Q8	false	false	28	14	2	1		0	14	extension_of_Qprime_by_multiplier	3
+56	4	C4 x D14	false	false	28	7	4	2	2	1	14	extension_of_Qprime_by_multiplier	2
+56	5	D56	false	false	28	14	2	2	2	1	28	extension_of_Qprime_by_multiplier	3
+56	6	C2 x (C7 : C4)	false	false	28	7	4	2	2	1	14	extension_of_Qprime_by_multiplier	8
+56	7	(C14 x C2) : C2	false	false	28	14	2	2	2	1	28	extension_of_Qprime_by_multiplier	2
+56	8	C28 x C2	true	false	28	1	56	2	2	1	2	multiplier_is_exact_exterior_structure	4
+56	9	C7 x D8	false	false	28	2	14	2	2	1	4	extension_of_Qprime_by_multiplier	4
+56	10	C7 x Q8	false	false	28	2	14	1		0	2	extension_of_Qprime_by_multiplier	2
+56	11	(C2 x C2 x C2) : C7	false	false	14	8	1	1		0	8	extension_of_Qprime_by_multiplier	2
+56	12	C2 x C2 x D14	false	false	14	7	4	8	2,2,2	3	56	extension_of_Qprime_by_multiplier	2
+56	13	C14 x C2 x C2	true	false	14	1	56	8	2,2,2	3	8	multiplier_is_exact_exterior_structure	3
+57	1	C19 : C3	false	false	57	19	1	1		0	19	extension_of_Qprime_by_multiplier	1
+57	2	C57	true	false	57	1	57	1		0	1	multiplier_is_exact_exterior_structure	1
+58	1	D58	false	false	58	29	1	1		0	29	extension_of_Qprime_by_multiplier	41
+58	2	C58	true	false	58	1	58	1		0	1	multiplier_is_exact_exterior_structure	1
+59	1	C59	true	true	59	1	59	1		0	1	multiplier_is_exact_exterior_structure	0
+60	1	C5 x (C3 : C4)	false	false	60	3	10	1		0	3	extension_of_Qprime_by_multiplier	3
+60	2	C3 x (C5 : C4)	false	false	60	5	6	1		0	5	extension_of_Qprime_by_multiplier	2
+60	3	C15 : C4	false	false	60	15	2	1		0	15	extension_of_Qprime_by_multiplier	3
+60	4	C60	true	false	60	1	60	1		0	1	multiplier_is_exact_exterior_structure	7
+60	5	A5	false	false	30	60	1	2	2	1	120	extension_of_Qprime_by_multiplier	1
+60	6	C3 x (C5 : C4)	false	false	60	5	3	1		0	5	extension_of_Qprime_by_multiplier	1
+60	7	C15 : C4	false	false	60	15	1	1		0	15	extension_of_Qprime_by_multiplier	2
+60	8	S3 x D10	false	false	30	15	1	2	2	1	30	extension_of_Qprime_by_multiplier	3
+60	9	C5 x A4	false	false	30	4	5	2	2	1	8	extension_of_Qprime_by_multiplier	5
+60	10	C6 x D10	false	false	30	5	6	2	2	1	10	extension_of_Qprime_by_multiplier	4
+60	11	C10 x S3	false	false	30	3	10	2	2	1	6	extension_of_Qprime_by_multiplier	5
+60	12	D60	false	false	30	15	2	2	2	1	30	extension_of_Qprime_by_multiplier	5
+60	13	C30 x C2	true	false	30	1	60	2	2	1	2	multiplier_is_exact_exterior_structure	4
+61	1	C61	true	true	61	1	61	1		0	1	multiplier_is_exact_exterior_structure	1
+62	1	D62	false	false	62	31	1	1		0	31	extension_of_Qprime_by_multiplier	73
+62	2	C62	true	false	62	1	62	1		0	1	multiplier_is_exact_exterior_structure	2
+63	1	C7 : C9	false	false	63	7	3	1		0	7	extension_of_Qprime_by_multiplier	5
+63	2	C63	true	false	63	1	63	1		0	1	multiplier_is_exact_exterior_structure	3
+63	3	C3 x (C7 : C3)	false	false	21	7	3	3	3	1	21	extension_of_Qprime_by_multiplier	3
+63	4	C21 x C3	true	false	21	1	63	3	3	1	3	multiplier_is_exact_exterior_structure	2
+64	1	C64	true	false	64	1	64	1		0	1	multiplier_is_exact_exterior_structure	4
+64	2	C8 x C8	true	false	8	1	64	8	8	1	8	multiplier_is_exact_exterior_structure	12
+64	3	C8 : C8	false	false	8	2	16	4	4	1	8	extension_of_Qprime_by_multiplier	5
+64	4	(C2 x C2 x C2) : C8	false	false	8	4	4	4	2,2	2	16	extension_of_Qprime_by_multiplier	5
+64	5	(C4 x C2) : C8	false	false	8	4	4	4	2,2	2	16	extension_of_Qprime_by_multiplier	5
+64	6	D8 : C8	false	false	8	4	8	4	2,2	2	16	extension_of_Qprime_by_multiplier	5
+64	7	Q8 : C8	false	false	8	4	8	2	2	1	8	extension_of_Qprime_by_multiplier	5
+64	8	(C4 : C4) : C4	false	false	8	8	4	4	2,2	2	32	extension_of_Qprime_by_multiplier	5
+64	9	(C2 x Q8) : C4	false	false	8	8	4	2	2	1	16	extension_of_Qprime_by_multiplier	4
+64	10	(C8 : C4) : C2	false	false	8	8	4	2	2	1	16	extension_of_Qprime_by_multiplier	4
+64	11	(C2 x C2) . ((C4 x C2) : C2) = (C4 x C2) . (C4 x C2)	false	false	8	8	4	1		0	8	extension_of_Qprime_by_multiplier	6
+64	12	(C4 : C8) : C2	false	false	8	8	4	4	2,2	2	32	extension_of_Qprime_by_multiplier	5
+64	13	(C2 x C2) . ((C4 x C2) : C2) = (C4 x C2) . (C4 x C2)	false	false	8	8	4	2	2	1	16	extension_of_Qprime_by_multiplier	7
+64	14	(C2 x C2) . ((C4 x C2) : C2) = (C4 x C2) . (C4 x C2)	false	false	8	8	4	2	2	1	16	extension_of_Qprime_by_multiplier	8
+64	15	C8 : C8	false	false	8	4	8	2	2	1	8	extension_of_Qprime_by_multiplier	4
+64	16	C8 : C8	false	false	8	4	8	2	2	1	8	extension_of_Qprime_by_multiplier	4
+64	17	(C4 x C2) : C8	false	false	8	2	16	8	2,2,2	3	16	extension_of_Qprime_by_multiplier	5
+64	18	(C8 x C2) : C4	false	false	8	4	4	8	2,4	2	32	extension_of_Qprime_by_multiplier	7
+64	19	C4 . (C4 x C4)	false	false	8	4	4	4	2,2	2	16	extension_of_Qprime_by_multiplier	5
+64	20	(C8 : C2) : C4	false	false	8	4	8	4	2,2	2	16	extension_of_Qprime_by_multiplier	7
+64	21	(C4 : C4) : C4	false	false	8	4	8	8	2,2,2	3	32	extension_of_Qprime_by_multiplier	6
+64	22	(C4 x C2) . D8 = C4 . (C4 x C4)	false	false	8	4	8	4	2,2	2	16	extension_of_Qprime_by_multiplier	4
+64	23	((C4 x C2) : C2) : C4	false	false	4	4	4	8	2,2,2	3	32	extension_of_Qprime_by_multiplier	8
+64	24	(C8 : C2) : C4	false	false	8	4	4	4	2,2	2	16	extension_of_Qprime_by_multiplier	5
+64	25	(C8 : C2) : C4	false	false	8	4	4	4	2,2	2	16	extension_of_Qprime_by_multiplier	10
+64	26	C16 x C4	true	false	16	1	64	4	4	1	4	multiplier_is_exact_exterior_structure	5
+64	27	C16 : C4	false	false	16	2	16	2	2	1	4	extension_of_Qprime_by_multiplier	3
+64	28	C16 : C4	false	false	16	4	4	1		0	4	extension_of_Qprime_by_multiplier	8
+64	29	(C2 x C2) : C16	false	false	16	2	16	4	2,2	2	8	extension_of_Qprime_by_multiplier	10
+64	30	(C16 : C2) : C2	false	false	16	4	4	2	2	1	8	extension_of_Qprime_by_multiplier	9
+64	31	(C16 : C2) : C2	false	false	16	4	8	2	2	1	8	extension_of_Qprime_by_multiplier	5
+64	32	((C4 x C2) : C2) : C4	false	false	8	8	2	4	2,2	2	32	extension_of_Qprime_by_multiplier	13
+64	33	((C4 x C2) : C2) : C4	false	false	8	8	2	2	2	1	16	extension_of_Qprime_by_multiplier	4
+64	34	(C4 x C4) : C4	false	false	4	8	2	8	2,4	2	64	extension_of_Qprime_by_multiplier	6
+64	35	(C4 x C4) : C4	false	false	4	8	2	4	2,2	2	32	extension_of_Qprime_by_multiplier	5
+64	36	(C2 . ((C4 x C2) : C2) = (C2 x C2) . (C4 x C2)) : C2	false	false	8	8	2	2	2	1	16	extension_of_Qprime_by_multiplier	5
+64	37	C2 . ((C2 x C2 x C2) : C4) = (C4 x C2) . (C4 x C2)	false	false	8	8	2	2	2	1	16	extension_of_Qprime_by_multiplier	7
+64	38	D16 : C4	false	false	16	8	4	4	2,2	2	32	extension_of_Qprime_by_multiplier	8
+64	39	Q16 : C4	false	false	16	8	4	2	2	1	16	extension_of_Qprime_by_multiplier	11
+64	40	(C16 x C2) : C2	false	false	16	8	4	2	2	1	16	extension_of_Qprime_by_multiplier	5
+64	41	Q16 : C4	false	false	16	8	2	2	2	1	16	extension_of_Qprime_by_multiplier	5
+64	42	(C16 : C2) : C2	false	false	16	8	2	2	2	1	16	extension_of_Qprime_by_multiplier	9
+64	43	C2 . ((C8 x C2) : C2) = C8 . (C4 x C2)	false	false	16	8	2	2	2	1	16	extension_of_Qprime_by_multiplier	4
+64	44	C4 : C16	false	false	16	2	16	2	2	1	4	extension_of_Qprime_by_multiplier	5
+64	45	C8 . D8 = C4 . (C8 x C2)	false	false	16	4	8	1		0	4	extension_of_Qprime_by_multiplier	5
+64	46	C16 : C4	false	false	16	8	2	1		0	8	extension_of_Qprime_by_multiplier	4
+64	47	C16 : C4	false	false	16	8	4	2	2	1	16	extension_of_Qprime_by_multiplier	6
+64	48	C16 : C4	false	false	16	8	4	2	2	1	16	extension_of_Qprime_by_multiplier	5
+64	49	C4 . D16 = C8 . (C4 x C2)	false	false	16	8	4	1		0	8	extension_of_Qprime_by_multiplier	5
+64	50	C32 x C2	true	false	32	1	64	2	2	1	2	multiplier_is_exact_exterior_structure	4
+64	51	C32 : C2	false	false	32	2	16	1		0	2	extension_of_Qprime_by_multiplier	7
+64	52	D64	false	false	32	16	2	2	2	1	32	extension_of_Qprime_by_multiplier	9
+64	53	QD64	false	false	32	16	2	1		0	16	extension_of_Qprime_by_multiplier	9
+64	54	Q64	false	false	32	16	2	1		0	16	extension_of_Qprime_by_multiplier	8
+64	55	C4 x C4 x C4	true	false	4	1	64	64	4,4,4	3	64	multiplier_is_exact_exterior_structure	12
+64	56	C2 x ((C4 x C2) : C4)	false	false	4	2	16	32	2,2,2,2,2	5	64	extension_of_Qprime_by_multiplier	9
+64	57	(C4 x C4) : C4	false	false	4	2	16	32	2,4,4	3	64	extension_of_Qprime_by_multiplier	7
+64	58	C4 x ((C4 x C2) : C2)	false	false	4	2	16	32	2,2,2,4	4	64	extension_of_Qprime_by_multiplier	11
+64	59	C4 x (C4 : C4)	false	false	4	2	16	16	2,2,4	3	32	extension_of_Qprime_by_multiplier	9
+64	60	(C2 x C2) : ((C4 x C2) : C2)	false	false	4	4	8	64	2,2,2,2,2,2	6	256	extension_of_Qprime_by_multiplier	7
+64	61	C4 : ((C4 x C2) : C2)	false	false	4	4	8	16	2,2,2,2	4	64	extension_of_Qprime_by_multiplier	5
+64	62	(C4 x C2 x C2) : C4	false	false	4	4	8	16	2,2,2,2	4	64	extension_of_Qprime_by_multiplier	8
+64	63	(C4 x C4) : C4	false	false	4	4	8	16	2,2,4	3	64	extension_of_Qprime_by_multiplier	12
+64	64	(C4 x C4) : C4	false	false	4	4	8	8	2,2,2	3	32	extension_of_Qprime_by_multiplier	6
+64	65	C4 : (C4 : C4)	false	false	4	4	8	16	2,2,4	3	64	extension_of_Qprime_by_multiplier	5
+64	66	(C2 x C2) : (C4 : C4)	false	false	4	4	8	16	2,2,2,2	4	64	extension_of_Qprime_by_multiplier	7
+64	67	(C2 x C2) : ((C4 x C2) : C2)	false	false	4	4	8	32	2,2,2,2,2	5	128	extension_of_Qprime_by_multiplier	12
+64	68	(C4 : C4) : C4	false	false	4	4	8	8	2,4	2	32	extension_of_Qprime_by_multiplier	7
+64	69	((C4 x C2) : C2) : C4	false	false	4	4	8	16	2,2,4	3	64	extension_of_Qprime_by_multiplier	6
+64	70	C4 : (C4 : C4)	false	false	4	4	8	8	2,2,2	3	32	extension_of_Qprime_by_multiplier	7
+64	71	C4 : ((C4 x C2) : C2)	false	false	4	4	8	32	2,2,2,4	4	128	extension_of_Qprime_by_multiplier	10
+64	72	(C4 x C2) : Q8	false	false	4	4	8	16	2,2,4	3	64	extension_of_Qprime_by_multiplier	10
+64	73	(C4 x C2) : D8	false	false	4	8	8	32	2,2,2,2,2	5	256	extension_of_Qprime_by_multiplier	8
+64	74	(C2 x C2 x C2) : Q8	false	false	4	8	8	16	2,2,2,2	4	128	extension_of_Qprime_by_multiplier	9
+64	75	(C4 x C2) : D8	false	false	4	8	8	16	2,2,2,2	4	128	extension_of_Qprime_by_multiplier	10
+64	76	(C4 x C2) : Q8	false	false	4	8	8	8	2,2,2	3	64	extension_of_Qprime_by_multiplier	8
+64	77	((C4 x C2) : C4) : C2	false	false	4	8	8	8	2,2,2	3	64	extension_of_Qprime_by_multiplier	9
+64	78	((C4 x C2) : C4) : C2	false	false	4	8	8	8	2,2,2	3	64	extension_of_Qprime_by_multiplier	5
+64	79	(C2 x C2 x C2) . (C2 x C2 x C2)	false	false	4	8	8	4	2,2	2	32	extension_of_Qprime_by_multiplier	8
+64	80	(C2 x (C4 : C4)) : C2	false	false	4	8	8	8	2,2,2	3	64	extension_of_Qprime_by_multiplier	9
+64	81	(C2 x C2 x C2) . (C2 x C2 x C2)	false	false	4	8	8	4	2,2	2	32	extension_of_Qprime_by_multiplier	5
+64	82	(C2 x C2 x C2) . (C2 x C2 x C2)	false	false	4	8	8	4	2,2	2	32	extension_of_Qprime_by_multiplier	10
+64	83	C8 x C4 x C2	true	false	8	1	64	16	2,2,4	3	16	multiplier_is_exact_exterior_structure	10
+64	84	C2 x (C8 : C4)	false	false	8	2	16	8	2,2,2	3	16	extension_of_Qprime_by_multiplier	10
+64	85	C4 x (C8 : C2)	false	false	8	2	16	8	2,4	2	16	extension_of_Qprime_by_multiplier	7
+64	86	(C8 : C2) : C4	false	false	8	2	16	8	2,4	2	16	extension_of_Qprime_by_multiplier	6
+64	87	C2 x ((C8 x C2) : C2)	false	false	8	2	16	16	2,2,2,2	4	32	extension_of_Qprime_by_multiplier	7
+64	88	(C2 x C2) : (C8 : C2)	false	false	8	4	8	8	2,2,2	3	32	extension_of_Qprime_by_multiplier	10
+64	89	((C8 x C2) : C2) : C2	false	false	8	4	8	8	2,2,2	3	32	extension_of_Qprime_by_multiplier	5
+64	90	C2 x ((C2 x C2 x C2) : C4)	false	false	4	4	4	16	2,2,2,2	4	64	extension_of_Qprime_by_multiplier	12
+64	91	(C2 x Q8) : C4	false	false	4	4	4	16	2,2,4	3	64	extension_of_Qprime_by_multiplier	6
+64	92	C2 x ((C8 : C2) : C2)	false	false	8	4	4	8	2,2,2	3	32	extension_of_Qprime_by_multiplier	5
+64	93	C2 x (C2 . ((C4 x C2) : C2) = (C2 x C2) . (C4 x C2))	false	false	8	4	4	8	2,2,2	3	32	extension_of_Qprime_by_multiplier	9
+64	94	(C2 . ((C4 x C2) : C2) = (C2 x C2) . (C4 x C2)) : C2	false	false	8	4	4	8	2,2,2	3	32	extension_of_Qprime_by_multiplier	12
+64	95	C2 x ((C8 x C2) : C2)	false	false	8	4	8	16	2,2,2,2	4	64	extension_of_Qprime_by_multiplier	7
+64	96	C2 x (Q8 : C4)	false	false	8	4	8	8	2,2,2	3	32	extension_of_Qprime_by_multiplier	7
+64	97	((C4 x C2) : C2) : C4	false	false	8	4	8	8	2,2,2	3	32	extension_of_Qprime_by_multiplier	10
+64	98	Q8 : (C4 x C2)	false	false	8	4	4	8	2,2,2	3	32	extension_of_Qprime_by_multiplier	8
+64	99	(C2 x D8) : C4	false	false	8	4	4	16	2,2,4	3	64	extension_of_Qprime_by_multiplier	11
+64	100	(C2 x Q8) : C4	false	false	8	4	4	8	2,2,2	3	32	extension_of_Qprime_by_multiplier	6
+64	101	C2 x ((C4 x C4) : C2)	false	false	8	4	8	8	2,2,2	3	32	extension_of_Qprime_by_multiplier	5
+64	102	(C2 x Q8) : C4	false	false	8	4	4	8	2,2,2	3	32	extension_of_Qprime_by_multiplier	6
+64	103	C2 x (C4 : C8)	false	false	8	2	16	8	2,2,2	3	16	extension_of_Qprime_by_multiplier	6
+64	104	C4 : (C8 : C2)	false	false	8	4	8	4	2,2	2	16	extension_of_Qprime_by_multiplier	8
+64	105	(C4 : C8) : C2	false	false	8	4	8	4	2,2	2	16	extension_of_Qprime_by_multiplier	6
+64	106	C2 x (C8 : C4)	false	false	8	4	8	8	2,2,2	3	32	extension_of_Qprime_by_multiplier	5
+64	107	C2 x (C8 : C4)	false	false	8	4	8	8	2,2,2	3	32	extension_of_Qprime_by_multiplier	5
+64	108	(C8 x C2) : C4	false	false	8	4	8	8	2,4	2	32	extension_of_Qprime_by_multiplier	5
+64	109	C8 : (C4 x C2)	false	false	8	4	4	4	2,2	2	16	extension_of_Qprime_by_multiplier	10
+64	110	C2 x (C4 . D8 = C4 . (C4 x C2))	false	false	8	4	8	4	2,2	2	16	extension_of_Qprime_by_multiplier	6
+64	111	(C4 . D8 = C4 . (C4 x C2)) : C2	false	false	8	4	4	4	2,2	2	16	extension_of_Qprime_by_multiplier	7
+64	112	(C4 x C2) : C8	false	false	8	2	16	8	2,4	2	16	extension_of_Qprime_by_multiplier	10
+64	113	(C4 : C8) : C2	false	false	8	4	8	4	2,2	2	16	extension_of_Qprime_by_multiplier	5
+64	114	(C4 : C8) : C2	false	false	8	4	8	4	4	1	16	extension_of_Qprime_by_multiplier	9
+64	115	C8 x D8	false	false	8	2	16	8	2,2,2	3	16	extension_of_Qprime_by_multiplier	6
+64	116	(C2 x C2) : (C8 : C2)	false	false	8	4	8	4	2,2	2	16	extension_of_Qprime_by_multiplier	7
+64	117	C4 : (C8 : C2)	false	false	8	4	8	4	2,2	2	16	extension_of_Qprime_by_multiplier	6
+64	118	C4 x D16	false	false	8	4	8	8	2,2,2	3	32	extension_of_Qprime_by_multiplier	9
+64	119	C4 x QD16	false	false	8	4	8	4	2,2	2	16	extension_of_Qprime_by_multiplier	6
+64	120	C4 x Q16	false	false	8	4	8	4	2,2	2	16	extension_of_Qprime_by_multiplier	5
+64	121	C8 : (C4 x C2)	false	false	8	4	4	4	2,2	2	16	extension_of_Qprime_by_multiplier	7
+64	122	Q16 : C4	false	false	8	4	4	4	2,2	2	16	extension_of_Qprime_by_multiplier	6
+64	123	C8 : (C4 x C2)	false	false	8	4	4	8	2,2,2	3	32	extension_of_Qprime_by_multiplier	6
+64	124	QD16 : C4	false	false	8	4	8	4	2,2	2	16	extension_of_Qprime_by_multiplier	9
+64	125	Q16 : C4	false	false	8	4	4	4	2,2	2	16	extension_of_Qprime_by_multiplier	10
+64	126	C8 x Q8	false	false	8	2	16	4	2,2	2	8	extension_of_Qprime_by_multiplier	6
+64	127	C8 : Q8	false	false	8	4	8	2	2	1	8	extension_of_Qprime_by_multiplier	6
+64	128	(C2 x C2) : D16	false	false	8	8	4	16	2,2,2,2	4	128	extension_of_Qprime_by_multiplier	9
+64	129	(C2 x C2) : QD16	false	false	8	8	4	8	2,2,2	3	64	extension_of_Qprime_by_multiplier	11
+64	130	Q8 : D8	false	false	8	8	4	8	2,2,2	3	64	extension_of_Qprime_by_multiplier	8
+64	131	(C2 x C2) : QD16	false	false	8	8	4	8	2,2,2	3	64	extension_of_Qprime_by_multiplier	5
+64	132	(C2 x C2) : Q16	false	false	8	8	4	8	2,2,2	3	64	extension_of_Qprime_by_multiplier	6
+64	133	(Q8 : C4) : C2	false	false	8	8	4	8	2,2,2	3	64	extension_of_Qprime_by_multiplier	6
+64	134	Q8 : D8	false	false	8	8	2	8	2,2,2	3	64	extension_of_Qprime_by_multiplier	5
+64	135	((C4 x C4) : C2) : C2	false	false	8	8	2	8	2,2,2	3	64	extension_of_Qprime_by_multiplier	10
+64	136	(C8 : C2) : (C2 x C2)	false	false	8	8	2	8	2,2,2	3	64	extension_of_Qprime_by_multiplier	8
+64	137	((C4 x C4) : C2) : C2	false	false	8	8	2	8	2,2,2	3	64	extension_of_Qprime_by_multiplier	5
+64	138	(C4 x C2) : D8	false	false	4	8	2	16	2,2,2,2	4	128	extension_of_Qprime_by_multiplier	11
+64	139	((C4 x C2) : C2) : (C2 x C2)	false	false	4	8	2	8	2,2,2	3	64	extension_of_Qprime_by_multiplier	8
+64	140	C4 : D16	false	false	8	8	4	8	2,2,2	3	64	extension_of_Qprime_by_multiplier	7
+64	141	C4 : QD16	false	false	8	8	4	4	2,2	2	32	extension_of_Qprime_by_multiplier	5
+64	142	C4 : QD16	false	false	8	8	4	4	2,2	2	32	extension_of_Qprime_by_multiplier	4
+64	143	C4 : Q16	false	false	8	8	4	4	2,2	2	32	extension_of_Qprime_by_multiplier	11
+64	144	(Q8 : C4) : C2	false	false	8	8	4	4	2,2	2	32	extension_of_Qprime_by_multiplier	11
+64	145	(Q8 : C4) : C2	false	false	8	8	4	4	2,2	2	32	extension_of_Qprime_by_multiplier	5
+64	146	(C2 x C2) : QD16	false	false	8	8	4	4	2,2	2	32	extension_of_Qprime_by_multiplier	5
+64	147	(C2 x C2) : D16	false	false	8	8	4	8	2,2,2	3	64	extension_of_Qprime_by_multiplier	5
+64	148	(C2 x C2) : Q16	false	false	8	8	4	4	2,2	2	32	extension_of_Qprime_by_multiplier	7
+64	149	C8 : D8	false	false	8	8	4	4	2,2	2	32	extension_of_Qprime_by_multiplier	5
+64	150	C8 : D8	false	false	8	8	4	8	2,4	2	64	extension_of_Qprime_by_multiplier	6
+64	151	(Q8 : C4) : C2	false	false	8	8	4	4	2,2	2	32	extension_of_Qprime_by_multiplier	5
+64	152	(C2 . ((C4 x C2) : C2) = (C2 x C2) . (C4 x C2)) : C2	false	false	8	8	2	4	2,2	2	32	extension_of_Qprime_by_multiplier	5
+64	153	((C8 : C2) : C2) : C2	false	false	8	8	2	4	2,2	2	32	extension_of_Qprime_by_multiplier	7
+64	154	(C2 . ((C4 x C2) : C2) = (C2 x C2) . (C4 x C2)) : C2	false	false	8	8	2	4	2,2	2	32	extension_of_Qprime_by_multiplier	9
+64	155	D8 : Q8	false	false	8	8	4	4	2,2	2	32	extension_of_Qprime_by_multiplier	7
+64	156	Q8 : Q8	false	false	8	8	4	2	2	1	16	extension_of_Qprime_by_multiplier	4
+64	157	D8 : Q8	false	false	8	8	4	4	2,2	2	32	extension_of_Qprime_by_multiplier	6
+64	158	Q8 : Q8	false	false	8	8	4	2	2	1	16	extension_of_Qprime_by_multiplier	7
+64	159	(C8 : C4) : C2	false	false	8	8	4	2	2	1	16	extension_of_Qprime_by_multiplier	5
+64	160	(C2 x C2) . (C2 x D8) = (C4 x C2) . (C2 x C2 x C2)	false	false	8	8	4	2	2	1	16	extension_of_Qprime_by_multiplier	8
+64	161	(C8 : C4) : C2	false	false	8	8	4	4	2,2	2	32	extension_of_Qprime_by_multiplier	13
+64	162	(C8 : C4) : C2	false	false	8	8	4	4	2,2	2	32	extension_of_Qprime_by_multiplier	5
+64	163	(C8 : C4) : C2	false	false	8	8	4	4	4	1	32	extension_of_Qprime_by_multiplier	11
+64	164	(C8 : C4) : C2	false	false	8	8	4	2	2	1	16	extension_of_Qprime_by_multiplier	6
+64	165	(C8 : C4) : C2	false	false	8	8	4	2	2	1	16	extension_of_Qprime_by_multiplier	4
+64	166	(C8 : C4) : C2	false	false	8	8	4	2	2	1	16	extension_of_Qprime_by_multiplier	7
+64	167	(C4 : Q8) : C2	false	false	8	8	4	8	2,4	2	64	extension_of_Qprime_by_multiplier	9
+64	168	(C2 x C2) . (C2 x D8) = (C4 x C2) . (C2 x C2 x C2)	false	false	8	8	4	4	4	1	32	extension_of_Qprime_by_multiplier	5
+64	169	((C2 x C2) . (C2 x C2 x C2)) : C2	false	false	8	8	4	4	4	1	32	extension_of_Qprime_by_multiplier	5
+64	170	(C4 : Q8) : C2	false	false	8	8	4	4	4	1	32	extension_of_Qprime_by_multiplier	10
+64	171	((C2 x C2) . (C2 x C2 x C2)) : C2	false	false	8	8	4	4	4	1	32	extension_of_Qprime_by_multiplier	11
+64	172	(C2 x C2) . (C2 x D8) = (C4 x C2) . (C2 x C2 x C2)	false	false	8	8	4	4	4	1	32	extension_of_Qprime_by_multiplier	6
+64	173	C4 : QD16	false	false	8	8	4	8	2,4	2	64	extension_of_Qprime_by_multiplier	11
+64	174	C4 : D16	false	false	8	8	4	16	2,2,4	3	128	extension_of_Qprime_by_multiplier	6
+64	175	C4 : Q16	false	false	8	8	4	8	2,4	2	64	extension_of_Qprime_by_multiplier	6
+64	176	(C2 x Q16) : C2	false	false	8	8	4	8	2,4	2	64	extension_of_Qprime_by_multiplier	7
+64	177	C8 : D8	false	false	8	8	4	8	2,4	2	64	extension_of_Qprime_by_multiplier	9
+64	178	(C2 x Q16) : C2	false	false	8	8	4	8	2,4	2	64	extension_of_Qprime_by_multiplier	7
+64	179	C8 : Q8	false	false	8	8	4	4	4	1	32	extension_of_Qprime_by_multiplier	11
+64	180	(C2 x C2) . (C2 x D8) = (C4 x C2) . (C2 x C2 x C2)	false	false	8	8	4	2	2	1	16	extension_of_Qprime_by_multiplier	9
+64	181	C8 : Q8	false	false	8	8	4	4	2,2	2	32	extension_of_Qprime_by_multiplier	5
+64	182	C8 : Q8	false	false	8	8	4	2	2	1	16	extension_of_Qprime_by_multiplier	6
+64	183	C16 x C2 x C2	true	false	16	1	64	8	2,2,2	3	8	multiplier_is_exact_exterior_structure	5
+64	184	C2 x (C16 : C2)	false	false	16	2	16	4	2,2	2	8	extension_of_Qprime_by_multiplier	4
+64	185	(C16 : C2) : C2	false	false	16	2	16	4	2,2	2	8	extension_of_Qprime_by_multiplier	7
+64	186	C2 x D32	false	false	16	8	4	8	2,2,2	3	64	extension_of_Qprime_by_multiplier	7
+64	187	C2 x QD32	false	false	16	8	4	4	2,2	2	32	extension_of_Qprime_by_multiplier	4
+64	188	C2 x Q32	false	false	16	8	4	4	2,2	2	32	extension_of_Qprime_by_multiplier	8
+64	189	Q32 : C2	false	false	16	8	4	4	2,2	2	32	extension_of_Qprime_by_multiplier	6
+64	190	C16 : (C2 x C2)	false	false	16	8	2	4	2,2	2	32	extension_of_Qprime_by_multiplier	5
+64	191	Q32 : C2	false	false	16	8	2	4	2,2	2	32	extension_of_Qprime_by_multiplier	9
+64	192	C4 x C4 x C2 x C2	true	false	4	1	64	128	2,2,2,2,2,4	6	128	multiplier_is_exact_exterior_structure	10
+64	193	C2 x C2 x ((C4 x C2) : C2)	false	false	4	2	16	128	2,2,2,2,2,2,2	7	256	extension_of_Qprime_by_multiplier	8
+64	194	C2 x C2 x (C4 : C4)	false	false	4	2	16	64	2,2,2,2,2,2	6	128	extension_of_Qprime_by_multiplier	5
+64	195	C2 x ((C4 x C4) : C2)	false	false	4	2	16	64	2,2,2,2,4	5	128	extension_of_Qprime_by_multiplier	8
+64	196	C2 x C4 x D8	false	false	4	2	16	64	2,2,2,2,2,2	6	128	extension_of_Qprime_by_multiplier	17
+64	197	C2 x C4 x Q8	false	false	4	2	16	32	2,2,2,2,2	5	64	extension_of_Qprime_by_multiplier	6
+64	198	C4 x ((C4 x C2) : C2)	false	false	4	2	16	32	2,2,2,2,2	5	64	extension_of_Qprime_by_multiplier	13
+64	199	D8 : (C4 x C2)	false	false	4	2	4	32	2,2,2,2,2	5	64	extension_of_Qprime_by_multiplier	10
+64	200	(C2 x Q8) : C4	false	false	4	2	4	32	2,2,2,2,2	5	64	extension_of_Qprime_by_multiplier	7
+64	201	Q8 : (C4 x C2)	false	false	4	2	4	32	2,2,2,2,2	5	64	extension_of_Qprime_by_multiplier	13
+64	202	C2 x ((C2 x C2 x C2 x C2) : C2)	false	false	4	4	8	128	2,2,2,2,2,2,2	7	512	extension_of_Qprime_by_multiplier	7
+64	203	C2 x ((C4 x C2 x C2) : C2)	false	false	4	4	8	64	2,2,2,2,2,2	6	256	extension_of_Qprime_by_multiplier	10
+64	204	C2 x ((C2 x Q8) : C2)	false	false	4	4	8	32	2,2,2,2,2	5	128	extension_of_Qprime_by_multiplier	9
+64	205	C2 x ((C4 x C2 x C2) : C2)	false	false	4	4	8	32	2,2,2,2,2	5	128	extension_of_Qprime_by_multiplier	5
+64	206	(C2 x C2) : ((C4 x C2) : C2)	false	false	4	4	8	32	2,2,2,2,2	5	128	extension_of_Qprime_by_multiplier	5
+64	207	C2 x ((C4 x C4) : C2)	false	false	4	4	8	64	2,2,2,2,4	5	256	extension_of_Qprime_by_multiplier	6
+64	208	C2 x ((C2 x C2) . (C2 x C2 x C2))	false	false	4	4	8	16	2,2,2,2	4	64	extension_of_Qprime_by_multiplier	7
+64	209	C2 x ((C4 x C4) : C2)	false	false	4	4	8	16	2,2,2,2	4	64	extension_of_Qprime_by_multiplier	8
+64	210	((C4 x C4) : C2) : C2	false	false	4	4	8	16	2,2,2,2	4	64	extension_of_Qprime_by_multiplier	7
+64	211	C2 x ((C4 x C4) : C2)	false	false	4	4	8	128	2,2,2,2,2,4	6	512	extension_of_Qprime_by_multiplier	7
+64	212	C2 x (C4 : Q8)	false	false	4	4	8	32	2,2,2,2,2	5	128	extension_of_Qprime_by_multiplier	6
+64	213	C4 : ((C4 x C2) : C2)	false	false	4	4	8	32	2,2,2,2,2	5	128	extension_of_Qprime_by_multiplier	6
+64	214	(C4 x C2) : Q8	false	false	4	4	8	16	2,2,2,2	4	64	extension_of_Qprime_by_multiplier	10
+64	215	(C2 x C2 x C2) : D8	false	false	4	4	4	32	2,2,2,2,2	5	128	extension_of_Qprime_by_multiplier	9
+64	216	(C4 x C2) : D8	false	false	4	4	4	64	2,2,2,2,4	5	256	extension_of_Qprime_by_multiplier	9
+64	217	((C2 x Q8) : C2) : C2	false	false	4	4	4	32	2,2,2,2,2	5	128	extension_of_Qprime_by_multiplier	12
+64	218	(C4 x C2) : D8	false	false	4	4	4	32	2,2,2,2,2	5	128	extension_of_Qprime_by_multiplier	11
+64	219	(C2 x Q8) : (C2 x C2)	false	false	4	4	4	16	2,2,2,2	4	64	extension_of_Qprime_by_multiplier	6
+64	220	((C4 x C4) : C2) : C2	false	false	4	4	4	16	2,2,2,2	4	64	extension_of_Qprime_by_multiplier	9
+64	221	((C4 x C2 x C2) : C2) : C2	false	false	4	4	4	16	2,2,2,2	4	64	extension_of_Qprime_by_multiplier	10
+64	222	((C2 x C2) . (C2 x C2 x C2)) : C2	false	false	4	4	4	16	2,2,2,2	4	64	extension_of_Qprime_by_multiplier	7
+64	223	((C2 x Q8) : C2) : C2	false	false	4	4	4	16	2,2,2,2	4	64	extension_of_Qprime_by_multiplier	12
+64	224	(C2 x C2 x C2) : Q8	false	false	4	4	4	16	2,2,2,2	4	64	extension_of_Qprime_by_multiplier	9
+64	225	(C4 x C2) : Q8	false	false	4	4	4	16	2,2,2,2	4	64	extension_of_Qprime_by_multiplier	10
+64	226	D8 x D8	false	false	4	4	4	64	2,2,2,2,2,2	6	256	extension_of_Qprime_by_multiplier	11
+64	227	D8 : D8	false	false	4	4	4	32	2,2,2,2,2	5	128	extension_of_Qprime_by_multiplier	11
+64	228	D8 : D8	false	false	4	4	4	32	2,2,2,2,2	5	128	extension_of_Qprime_by_multiplier	9
+64	229	Q8 : D8	false	false	4	4	4	32	2,2,2,2,2	5	128	extension_of_Qprime_by_multiplier	11
+64	230	Q8 x D8	false	false	4	4	4	32	2,2,2,2,2	5	128	extension_of_Qprime_by_multiplier	9
+64	231	Q8 : D8	false	false	4	4	4	32	2,2,2,2,2	5	128	extension_of_Qprime_by_multiplier	9
+64	232	(C4 : C4) : (C2 x C2)	false	false	4	4	4	16	2,2,2,2	4	64	extension_of_Qprime_by_multiplier	8
+64	233	((C4 x C4) : C2) : C2	false	false	4	4	4	16	2,2,2,2	4	64	extension_of_Qprime_by_multiplier	7
+64	234	((C4 x C4) : C2) : C2	false	false	4	4	4	16	2,2,2,2	4	64	extension_of_Qprime_by_multiplier	7
+64	235	D8 : Q8	false	false	4	4	4	16	2,2,2,2	4	64	extension_of_Qprime_by_multiplier	7
+64	236	((C4 x C4) : C2) : C2	false	false	4	4	4	32	2,2,2,4	4	128	extension_of_Qprime_by_multiplier	9
+64	237	((C4 x C4) : C2) : C2	false	false	4	4	4	16	2,2,2,2	4	64	extension_of_Qprime_by_multiplier	10
+64	238	Q8 : Q8	false	false	4	4	4	16	2,2,2,2	4	64	extension_of_Qprime_by_multiplier	11
+64	239	Q8 x Q8	false	false	4	4	4	16	2,2,2,2	4	64	extension_of_Qprime_by_multiplier	7
+64	240	((C4 x C2 x C2) : C2) : C2	false	false	4	4	4	16	2,2,2,2	4	64	extension_of_Qprime_by_multiplier	17
+64	241	(C4 : C4) : (C2 x C2)	false	false	4	4	4	16	2,2,2,2	4	64	extension_of_Qprime_by_multiplier	17
+64	242	((C4 x C2) : C2) : (C2 x C2)	false	false	4	4	4	64	2,2,4,4	4	256	extension_of_Qprime_by_multiplier	18
+64	243	((C2 x C2) . (C2 x C2 x C2)) : C2	false	false	4	4	4	16	2,2,2,2	4	64	extension_of_Qprime_by_multiplier	8
+64	244	((C4 x C4) : C2) : C2	false	false	4	4	4	16	2,2,2,2	4	64	extension_of_Qprime_by_multiplier	14
+64	245	(C2 x C2) . (C2 x C2 x C2 x C2)	false	false	4	4	4	16	2,2,2,2	4	64	extension_of_Qprime_by_multiplier	12
+64	246	C8 x C2 x C2 x C2	true	false	8	1	64	64	2,2,2,2,2,2	6	64	multiplier_is_exact_exterior_structure	5
+64	247	C2 x C2 x (C8 : C2)	false	false	8	2	16	32	2,2,2,2,2	5	64	extension_of_Qprime_by_multiplier	9
+64	248	C2 x ((C8 x C2) : C2)	false	false	8	2	16	32	2,2,2,2,2	5	64	extension_of_Qprime_by_multiplier	8
+64	249	(C8 x C2) : (C2 x C2)	false	false	8	2	4	32	2,2,2,2,2	5	64	extension_of_Qprime_by_multiplier	7
+64	250	C2 x C2 x D16	false	false	8	4	8	64	2,2,2,2,2,2	6	256	extension_of_Qprime_by_multiplier	9
+64	251	C2 x C2 x QD16	false	false	8	4	8	32	2,2,2,2,2	5	128	extension_of_Qprime_by_multiplier	7
+64	252	C2 x C2 x Q16	false	false	8	4	8	32	2,2,2,2,2	5	128	extension_of_Qprime_by_multiplier	7
+64	253	C2 x ((C8 x C2) : C2)	false	false	8	4	8	32	2,2,2,2,2	5	128	extension_of_Qprime_by_multiplier	12
+64	254	C2 x (C8 : (C2 x C2))	false	false	8	4	4	32	2,2,2,2,2	5	128	extension_of_Qprime_by_multiplier	9
+64	255	C2 x ((C2 x Q8) : C2)	false	false	8	4	4	32	2,2,2,2,2	5	128	extension_of_Qprime_by_multiplier	11
+64	256	QD16 : (C2 x C2)	false	false	8	4	4	32	2,2,2,2,2	5	128	extension_of_Qprime_by_multiplier	7
+64	257	Q16 : (C2 x C2)	false	false	8	4	2	32	2,2,2,2,2	5	128	extension_of_Qprime_by_multiplier	9
+64	258	QD16 : (C2 x C2)	false	false	8	4	2	32	2,2,2,2,2	5	128	extension_of_Qprime_by_multiplier	13
+64	259	(C2 x Q16) : C2	false	false	8	4	2	32	2,2,2,2,2	5	128	extension_of_Qprime_by_multiplier	15
+64	260	C4 x C2 x C2 x C2 x C2	true	false	4	1	64	1024	2,2,2,2,2,2,2,2,2,2	10	1024	multiplier_is_exact_exterior_structure	7
+64	261	C2 x C2 x C2 x D8	false	false	4	2	16	1024	2,2,2,2,2,2,2,2,2,2	10	2048	extension_of_Qprime_by_multiplier	7
+64	262	C2 x C2 x C2 x Q8	false	false	4	2	16	512	2,2,2,2,2,2,2,2,2	9	1024	extension_of_Qprime_by_multiplier	7
+64	263	C2 x C2 x ((C4 x C2) : C2)	false	false	4	2	16	512	2,2,2,2,2,2,2,2,2	9	1024	extension_of_Qprime_by_multiplier	11
+64	264	C2 x ((C2 x C2 x C2) : (C2 x C2))	false	false	4	2	4	512	2,2,2,2,2,2,2,2,2	9	1024	extension_of_Qprime_by_multiplier	9
+64	265	C2 x ((C2 x Q8) : C2)	false	false	4	2	4	512	2,2,2,2,2,2,2,2,2	9	1024	extension_of_Qprime_by_multiplier	7
+64	266	((C4 x C2) : C2) : (C2 x C2)	false	false	4	2	4	512	2,2,2,2,2,2,2,2,2	9	1024	extension_of_Qprime_by_multiplier	8
+64	267	C2 x C2 x C2 x C2 x C2 x C2	true	true	2	1	64	32768	2,2,2,2,2,2,2,2,2,2,2,2,2,2,2	15	32768	multiplier_is_exact_exterior_structure	16
+65	1	C65	true	false	65	1	65	1		0	1	multiplier_is_exact_exterior_structure	1
+66	1	C11 x S3	false	false	66	3	11	1		0	3	extension_of_Qprime_by_multiplier	1
+66	2	C3 x D22	false	false	66	11	3	1		0	11	extension_of_Qprime_by_multiplier	3
+66	3	D66	false	false	66	33	1	1		0	33	extension_of_Qprime_by_multiplier	3
+66	4	C66	true	false	66	1	66	1		0	1	multiplier_is_exact_exterior_structure	2
+67	1	C67	true	true	67	1	67	1		0	1	multiplier_is_exact_exterior_structure	1
+68	1	C17 : C4	false	false	68	17	2	1		0	17	extension_of_Qprime_by_multiplier	9
+68	2	C68	true	false	68	1	68	1		0	1	multiplier_is_exact_exterior_structure	3
+68	3	C17 : C4	false	false	68	17	1	1		0	17	extension_of_Qprime_by_multiplier	15
+68	4	D68	false	false	34	17	2	2	2	1	34	extension_of_Qprime_by_multiplier	6
+68	5	C34 x C2	true	false	34	1	68	2	2	1	2	multiplier_is_exact_exterior_structure	3
+69	1	C69	true	false	69	1	69	1		0	1	multiplier_is_exact_exterior_structure	1
+70	1	C7 x D10	false	false	70	5	7	1		0	5	extension_of_Qprime_by_multiplier	2
+70	2	C5 x D14	false	false	70	7	5	1		0	7	extension_of_Qprime_by_multiplier	3
+70	3	D70	false	false	70	35	1	1		0	35	extension_of_Qprime_by_multiplier	2
+70	4	C70	true	false	70	1	70	1		0	1	multiplier_is_exact_exterior_structure	2
+71	1	C71	true	true	71	1	71	1		0	1	multiplier_is_exact_exterior_structure	1
+72	1	C9 : C8	false	false	72	9	4	1		0	9	extension_of_Qprime_by_multiplier	6
+72	2	C72	true	false	72	1	72	1		0	1	multiplier_is_exact_exterior_structure	5
+72	3	Q8 : C9	false	false	36	8	6	1		0	8	extension_of_Qprime_by_multiplier	3
+72	4	C9 : Q8	false	false	36	18	2	1		0	18	extension_of_Qprime_by_multiplier	10
+72	5	C4 x D18	false	false	36	9	4	2	2	1	18	extension_of_Qprime_by_multiplier	5
+72	6	D72	false	false	36	18	2	2	2	1	36	extension_of_Qprime_by_multiplier	8
+72	7	C2 x (C9 : C4)	false	false	36	9	4	2	2	1	18	extension_of_Qprime_by_multiplier	3
+72	8	(C18 x C2) : C2	false	false	36	18	2	2	2	1	36	extension_of_Qprime_by_multiplier	4
+72	9	C36 x C2	true	false	36	1	72	2	2	1	2	multiplier_is_exact_exterior_structure	4
+72	10	C9 x D8	false	false	36	2	18	2	2	1	4	extension_of_Qprime_by_multiplier	4
+72	11	C9 x Q8	false	false	36	2	18	1		0	2	extension_of_Qprime_by_multiplier	4
+72	12	C3 x (C3 : C8)	false	false	24	3	12	1		0	3	extension_of_Qprime_by_multiplier	2
+72	13	(C3 x C3) : C8	false	false	24	9	4	3	3	1	27	extension_of_Qprime_by_multiplier	6
+72	14	C24 x C3	true	false	24	1	72	3	3	1	3	multiplier_is_exact_exterior_structure	11
+72	15	((C2 x C2) : C9) : C2	false	false	36	36	1	2	2	1	72	extension_of_Qprime_by_multiplier	3
+72	16	C2 x ((C2 x C2) : C9)	false	false	18	4	6	2	2	1	8	extension_of_Qprime_by_multiplier	4
+72	17	C2 x C2 x D18	false	false	18	9	4	8	2,2,2	3	72	extension_of_Qprime_by_multiplier	5
+72	18	C18 x C2 x C2	true	false	18	1	72	8	2,2,2	3	8	multiplier_is_exact_exterior_structure	3
+72	19	(C3 x C3) : C8	false	false	24	9	2	3	3	1	27	extension_of_Qprime_by_multiplier	11
+72	20	(C3 : C4) x S3	false	false	12	9	2	2	2	1	18	extension_of_Qprime_by_multiplier	13
+72	21	(C3 x C3) : (C4 x C2)	false	false	12	9	2	2	2	1	18	extension_of_Qprime_by_multiplier	3
+72	22	(C6 x S3) : C2	false	false	12	18	2	2	2	1	36	extension_of_Qprime_by_multiplier	3
+72	23	(C6 x S3) : C2	false	false	12	18	2	2	2	1	36	extension_of_Qprime_by_multiplier	4
+72	24	(C3 x C3) : Q8	false	false	12	18	2	1		0	18	extension_of_Qprime_by_multiplier	7
+72	25	C3 x SL(2,3)	false	false	12	8	6	3	3	1	24	extension_of_Qprime_by_multiplier	7
+72	26	C3 x (C3 : Q8)	false	false	12	6	6	1		0	6	extension_of_Qprime_by_multiplier	4
+72	27	C12 x S3	false	false	12	3	12	2	2	1	6	extension_of_Qprime_by_multiplier	3
+72	28	C3 x D24	false	false	12	6	6	2	2	1	12	extension_of_Qprime_by_multiplier	5
+72	29	C6 x (C3 : C4)	false	false	12	3	12	2	2	1	6	extension_of_Qprime_by_multiplier	3
+72	30	C3 x ((C6 x C2) : C2)	false	false	12	6	6	2	2	1	12	extension_of_Qprime_by_multiplier	4
+72	31	(C3 x C3) : Q8	false	false	12	18	2	3	3	1	54	extension_of_Qprime_by_multiplier	7
+72	32	C4 x ((C3 x C3) : C2)	false	false	12	9	4	6	2,3	2	54	extension_of_Qprime_by_multiplier	7
+72	33	(C12 x C3) : C2	false	false	12	18	2	6	2,3	2	108	extension_of_Qprime_by_multiplier	4
+72	34	C2 x ((C3 x C3) : C4)	false	false	12	9	4	6	2,3	2	54	extension_of_Qprime_by_multiplier	7
+72	35	(C6 x C6) : C2	false	false	12	18	2	6	2,3	2	108	extension_of_Qprime_by_multiplier	3
+72	36	C12 x C6	true	false	12	1	72	6	2,3	2	6	multiplier_is_exact_exterior_structure	11
+72	37	C3 x C3 x D8	false	false	12	2	18	6	2,3	2	12	extension_of_Qprime_by_multiplier	3
+72	38	C3 x C3 x Q8	false	false	12	2	18	3	3	1	6	extension_of_Qprime_by_multiplier	3
+72	39	(C3 x C3) : C8	false	false	24	9	1	1		0	9	extension_of_Qprime_by_multiplier	5
+72	40	(S3 x S3) : C2	false	false	12	18	1	2	2	1	36	extension_of_Qprime_by_multiplier	3
+72	41	(C3 x C3) : Q8	false	false	12	18	1	3	3	1	54	extension_of_Qprime_by_multiplier	11
+72	42	C3 x S4	false	false	12	12	3	2	2	1	24	extension_of_Qprime_by_multiplier	3
+72	43	(C3 x A4) : C2	false	false	12	36	1	6	2,3	2	216	extension_of_Qprime_by_multiplier	6
+72	44	A4 x S3	false	false	6	12	1	2	2	1	24	extension_of_Qprime_by_multiplier	8
+72	45	C2 x ((C3 x C3) : C4)	false	false	12	9	2	6	2,3	2	54	extension_of_Qprime_by_multiplier	15
+72	46	C2 x S3 x S3	false	false	6	9	2	8	2,2,2	3	72	extension_of_Qprime_by_multiplier	5
+72	47	C6 x A4	false	false	6	4	6	6	2,3	2	24	extension_of_Qprime_by_multiplier	3
+72	48	C2 x C6 x S3	false	false	6	3	12	8	2,2,2	3	24	extension_of_Qprime_by_multiplier	3
+72	49	C2 x C2 x ((C3 x C3) : C2)	false	false	6	9	4	24	2,2,2,3	4	216	extension_of_Qprime_by_multiplier	7
+72	50	C6 x C6 x C2	true	false	6	1	72	24	2,2,2,3	4	24	multiplier_is_exact_exterior_structure	4
+73	1	C73	true	true	73	1	73	1		0	1	multiplier_is_exact_exterior_structure	1
+74	1	D74	false	false	74	37	1	1		0	37	extension_of_Qprime_by_multiplier	141
+74	2	C74	true	false	74	1	74	1		0	1	multiplier_is_exact_exterior_structure	1
+75	1	C75	true	false	75	1	75	1		0	1	multiplier_is_exact_exterior_structure	2
+75	2	(C5 x C5) : C3	false	false	15	25	1	5	5	1	125	extension_of_Qprime_by_multiplier	7
+75	3	C15 x C5	true	false	15	1	75	5	5	1	5	multiplier_is_exact_exterior_structure	2
+76	1	C19 : C4	false	false	76	19	2	1		0	19	extension_of_Qprime_by_multiplier	14
+76	2	C76	true	false	76	1	76	1		0	1	multiplier_is_exact_exterior_structure	2
+76	3	D76	false	false	38	19	2	2	2	1	38	extension_of_Qprime_by_multiplier	9
+76	4	C38 x C2	true	false	38	1	76	2	2	1	2	multiplier_is_exact_exterior_structure	4
+77	1	C77	true	false	77	1	77	1		0	1	multiplier_is_exact_exterior_structure	2
+78	1	C13 : C6	false	false	78	13	1	1		0	13	extension_of_Qprime_by_multiplier	3
+78	2	C2 x (C13 : C3)	false	false	78	13	2	1		0	13	extension_of_Qprime_by_multiplier	2
+78	3	C13 x S3	false	false	78	3	13	1		0	3	extension_of_Qprime_by_multiplier	1
+78	4	C3 x D26	false	false	78	13	3	1		0	13	extension_of_Qprime_by_multiplier	3
+78	5	D78	false	false	78	39	1	1		0	39	extension_of_Qprime_by_multiplier	1
+78	6	C78	true	false	78	1	78	1		0	1	multiplier_is_exact_exterior_structure	1
+79	1	C79	true	true	79	1	79	1		0	1	multiplier_is_exact_exterior_structure	1
+80	1	C5 : C16	false	false	80	5	8	1		0	5	extension_of_Qprime_by_multiplier	2
+80	2	C80	true	false	80	1	80	1		0	1	multiplier_is_exact_exterior_structure	3
+80	3	C5 : C16	false	false	80	5	4	1		0	5	extension_of_Qprime_by_multiplier	4
+80	4	C8 x D10	false	false	40	5	8	2	2	1	10	extension_of_Qprime_by_multiplier	8
+80	5	C40 : C2	false	false	40	10	4	1		0	10	extension_of_Qprime_by_multiplier	4
+80	6	C40 : C2	false	false	40	20	2	1		0	20	extension_of_Qprime_by_multiplier	3
+80	7	D80	false	false	40	20	2	2	2	1	40	extension_of_Qprime_by_multiplier	3
+80	8	C5 : Q16	false	false	40	20	2	1		0	20	extension_of_Qprime_by_multiplier	4
+80	9	C2 x (C5 : C8)	false	false	40	5	8	2	2	1	10	extension_of_Qprime_by_multiplier	3
+80	10	(C5 : C8) : C2	false	false	40	10	4	1		0	10	extension_of_Qprime_by_multiplier	5
+80	11	C4 x (C5 : C4)	false	false	20	5	8	4	4	1	20	extension_of_Qprime_by_multiplier	5
+80	12	(C5 : C4) : C4	false	false	20	10	4	2	2	1	20	extension_of_Qprime_by_multiplier	7
+80	13	C20 : C4	false	false	20	10	4	2	2	1	20	extension_of_Qprime_by_multiplier	4
+80	14	(C20 x C2) : C2	false	false	20	10	4	4	2,2	2	40	extension_of_Qprime_by_multiplier	3
+80	15	(C5 x D8) : C2	false	false	40	20	2	2	2	1	40	extension_of_Qprime_by_multiplier	3
+80	16	(C5 : Q8) : C2	false	false	40	20	2	1		0	20	extension_of_Qprime_by_multiplier	3
+80	17	(C5 x Q8) : C2	false	false	40	20	2	1		0	20	extension_of_Qprime_by_multiplier	3
+80	18	C5 : Q16	false	false	40	20	2	1		0	20	extension_of_Qprime_by_multiplier	3
+80	19	(C10 x C2) : C4	false	false	20	10	4	4	2,2	2	40	extension_of_Qprime_by_multiplier	4
+80	20	C20 x C4	true	false	20	1	80	4	4	1	4	multiplier_is_exact_exterior_structure	10
+80	21	C5 x ((C4 x C2) : C2)	false	false	20	2	20	4	2,2	2	8	extension_of_Qprime_by_multiplier	7
+80	22	C5 x (C4 : C4)	false	false	20	2	20	2	2	1	4	extension_of_Qprime_by_multiplier	4
+80	23	C40 x C2	true	false	40	1	80	2	2	1	2	multiplier_is_exact_exterior_structure	4
+80	24	C5 x (C8 : C2)	false	false	40	2	20	1		0	2	extension_of_Qprime_by_multiplier	11
+80	25	C5 x D16	false	false	40	4	10	2	2	1	8	extension_of_Qprime_by_multiplier	3
+80	26	C5 x QD16	false	false	40	4	10	1		0	4	extension_of_Qprime_by_multiplier	3
+80	27	C5 x Q16	false	false	40	4	10	1		0	4	extension_of_Qprime_by_multiplier	3
+80	28	C5 : (C8 x C2)	false	false	40	5	4	2	2	1	10	extension_of_Qprime_by_multiplier	2
+80	29	(C5 : C8) : C2	false	false	40	10	2	1		0	10	extension_of_Qprime_by_multiplier	6
+80	30	C4 x (C5 : C4)	false	false	20	5	4	4	4	1	20	extension_of_Qprime_by_multiplier	8
+80	31	C20 : C4	false	false	20	10	2	2	2	1	20	extension_of_Qprime_by_multiplier	3
+80	32	C2 x (C5 : C8)	false	false	40	5	4	2	2	1	10	extension_of_Qprime_by_multiplier	5
+80	33	(C5 : C8) : C2	false	false	40	10	2	1		0	10	extension_of_Qprime_by_multiplier	5
+80	34	(C10 x C2) : C4	false	false	20	10	2	4	2,2	2	40	extension_of_Qprime_by_multiplier	4
+80	35	C2 x (C5 : Q8)	false	false	20	10	4	4	2,2	2	40	extension_of_Qprime_by_multiplier	3
+80	36	C2 x C4 x D10	false	false	20	5	8	8	2,2,2	3	40	extension_of_Qprime_by_multiplier	8
+80	37	C2 x D40	false	false	20	10	4	8	2,2,2	3	80	extension_of_Qprime_by_multiplier	4
+80	38	(C20 x C2) : C2	false	false	20	10	4	4	2,2	2	40	extension_of_Qprime_by_multiplier	4
+80	39	D8 x D10	false	false	20	10	2	8	2,2,2	3	80	extension_of_Qprime_by_multiplier	5
+80	40	(C4 x D10) : C2	false	false	20	10	2	4	2,2	2	40	extension_of_Qprime_by_multiplier	7
+80	41	Q8 x D10	false	false	20	10	2	4	2,2	2	40	extension_of_Qprime_by_multiplier	3
+80	42	(C4 x D10) : C2	false	false	20	10	2	4	2,2	2	40	extension_of_Qprime_by_multiplier	6
+80	43	C2 x C2 x (C5 : C4)	false	false	20	5	8	8	2,2,2	3	40	extension_of_Qprime_by_multiplier	3
+80	44	C2 x ((C10 x C2) : C2)	false	false	20	10	4	8	2,2,2	3	80	extension_of_Qprime_by_multiplier	4
+80	45	C20 x C2 x C2	true	false	20	1	80	8	2,2,2	3	8	multiplier_is_exact_exterior_structure	6
+80	46	C10 x D8	false	false	20	2	20	8	2,2,2	3	16	extension_of_Qprime_by_multiplier	8
+80	47	C10 x Q8	false	false	20	2	20	4	2,2	2	8	extension_of_Qprime_by_multiplier	7
+80	48	C5 x ((C4 x C2) : C2)	false	false	20	2	20	4	2,2	2	8	extension_of_Qprime_by_multiplier	11
+80	49	(C2 x C2 x C2 x C2) : C5	false	false	10	16	1	4	2,2	2	64	extension_of_Qprime_by_multiplier	21
+80	50	C2 x C2 x (C5 : C4)	false	false	20	5	4	8	2,2,2	3	40	extension_of_Qprime_by_multiplier	4
+80	51	C2 x C2 x C2 x D10	false	false	10	5	8	64	2,2,2,2,2,2	6	320	extension_of_Qprime_by_multiplier	6
+80	52	C10 x C2 x C2 x C2	true	false	10	1	80	64	2,2,2,2,2,2	6	64	multiplier_is_exact_exterior_structure	8
+81	1	C81	true	false	81	1	81	1		0	1	multiplier_is_exact_exterior_structure	2
+81	2	C9 x C9	true	false	9	1	81	9	9	1	9	multiplier_is_exact_exterior_structure	3
+81	3	(C9 x C3) : C3	false	false	9	3	9	9	3,3	2	27	extension_of_Qprime_by_multiplier	3
+81	4	C9 : C9	false	false	9	3	9	3	3	1	9	extension_of_Qprime_by_multiplier	4
+81	5	C27 x C3	true	false	27	1	81	3	3	1	3	multiplier_is_exact_exterior_structure	4
+81	6	C27 : C3	false	false	27	3	9	1		0	3	extension_of_Qprime_by_multiplier	6
+81	7	(C3 x C3 x C3) : C3	false	false	9	9	3	3	3	1	27	extension_of_Qprime_by_multiplier	17
+81	8	(C9 x C3) : C3	false	false	9	9	3	3	3	1	27	extension_of_Qprime_by_multiplier	8
+81	9	(C9 x C3) : C3	false	false	9	9	3	9	3,3	2	81	extension_of_Qprime_by_multiplier	6
+81	10	C3 . ((C3 x C3) : C3) = (C3 x C3) . (C3 x C3)	false	false	9	9	3	3	3	1	27	extension_of_Qprime_by_multiplier	6
+81	11	C9 x C3 x C3	true	false	9	1	81	27	3,3,3	3	27	multiplier_is_exact_exterior_structure	6
+81	12	C3 x ((C3 x C3) : C3)	false	false	3	3	9	81	3,3,3,3	4	243	extension_of_Qprime_by_multiplier	10
+81	13	C3 x (C9 : C3)	false	false	9	3	9	9	3,3	2	27	extension_of_Qprime_by_multiplier	3
+81	14	(C9 x C3) : C3	false	false	9	3	9	9	3,3	2	27	extension_of_Qprime_by_multiplier	2
+81	15	C3 x C3 x C3 x C3	true	true	3	1	81	729	3,3,3,3,3,3	6	729	multiplier_is_exact_exterior_structure	6

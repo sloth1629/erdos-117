@@ -36,3 +36,39 @@ Version all search parameters and solver settings here.
   edge. It exports complete multiplication tables and exact maximal-subgroup
   masks for an independent Python verifier, avoiding the dissertation's
   inconsistent subgroup labels.
+- `h7_quotient_inventory.g`: a Schur-multiplier census of all 738
+  `SmallGroup` quotients of order at most 81. It does not construct Schur
+  covers or enumerate exterior-square kernels.
+- `h7_exterior_scan.g`: resumable chosen-Schur-cover kernel producer at clique
+  cutoff seven. Start/end orders, optional start/end SmallGroup IDs, and every
+  delegated quotient are explicit metadata; exclusions are emitted as rows,
+  never silently skipped.
+- `h7_capability_order64.g`: bounded-ID selected-cover center-image census for
+  order-64 quotients. It checks an injective pc conversion of the selected
+  2-Schur cover, its stem kernel, full quotient/cover pc presentations, and a
+  complete 64-entry exterior commutator row for every exported central lift.
+  The canonical analyzer uses the nonidentity zero rows only in the one-way
+  exclusion direction.
+- `h7_order64_dual_export.g`: compact character-dual exporter for the eleven
+  regular order-64 cases left after the exterior-zero exclusions. It exports
+  full quotient exponents and commutators, cover-conjugation actions, quotient
+  automorphism generators, and central/stem checks.
+- `h7_c2_3_d8_export.g`: dedicated affine-dual exporter for
+  `SmallGroup(64,261)=C2^3 x D8`, including the complete commutator table and
+  every cover-conjugation action needed to verify invariant annihilators.
+
+For a bounded cutoff-seven batch, set the GAP variables and then run the
+generic analyzer. For example, the independently audited 37--63 batch is:
+
+```bash
+work/gap-4.16.0/gap -q \
+  -c 'ERDOS117_OUTPUT:="experiments/logs/h7_exterior_37_63.tsv";; ERDOS117_STDOUT_LOG:="experiments/logs/h7_exterior_37_63_gap.stdout.txt";; ERDOS117_START_Q_ORDER:=37;; ERDOS117_END_Q_ORDER:=63;; ERDOS117_EXCLUDED_QUOTIENTS:=[];; Read("experiments/configs/h7_exterior_scan.g");'
+python3 src/python/analyze_h7_exterior_batch.py \
+  --input experiments/logs/h7_exterior_37_63.tsv \
+  --gap-script experiments/configs/h7_exterior_scan.g \
+  --inventory experiments/logs/h7_quotient_inventory.json \
+  --gap-stdout experiments/logs/h7_exterior_37_63_gap.stdout.txt \
+  --start-order 37 --end-order 63 \
+  --output experiments/logs/h7_exterior_37_63.json \
+  --stdout-log experiments/logs/h7_exterior_37_63.stdout.txt
+```

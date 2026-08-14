@@ -277,10 +277,12 @@ the optimized clique and coloring routines to naive enumeration for all 33,868
 labeled simple graphs on at most six vertices, and also checks group axioms,
 coset invariance, named records, direct-product/OR compatibility, witnesses,
 and the \(E_m\) symplectic model for \(m=1,2,3\). It also reparses and verifies
-every saved Python and GAP certificate. The latest 2026-08-13 run passed all
-18 tests under Python 3.9.6. The extended tests independently rebuild the
+every saved Python and GAP certificate. The latest 2026-08-14 run passed all
+25 tests in 227.135 seconds under Python 3.9.6. The extended tests independently rebuild the
 scalar graphs, four residual searches, strongly regular parameters, spreads,
-the order-128 prefilter survivors, and every exterior-square graph witness.
+the order-128 prefilter survivors, every exterior-square graph witness, the
+eleven cutoff-seven dual searches, all 26,387 ID-261 affine records, and the
+disjoint 738-type quotient partition.
 Exact output and timing are preserved in verification.txt.
 
 ## Reproduction records
@@ -408,3 +410,108 @@ do not affect SmallGrp table export.
 
 [UNVERIFIED] The exact clique value for \(p=7,m=2\) was not completed; only
 the certified interval \(33\le\nu\le50\) is claimed.
+
+## Cutoff-seven inventory and exact exterior certificates
+
+[COMPUTED] `h7_quotient_inventory.tsv` is a complete 738-row
+GAP 4.16.0 / SmallGrp 1.5.4 inventory of every `SmallGroup` quotient of order
+at most 81. The dependency-free analyzer validates the SmallGroup serials,
+Schur-multiplier invariant factors, and
+\(|Q\wedge Q|=|M(Q)|\,|Q'|\). The three exact raw elementary-exterior
+explosions are \(C_2^6\) (623,476,476,706,836,148 subspaces), \(C_2^5\), and
+\(C_4\times C_2^4\) (229,755,605 each).
+
+[COMPUTED] Four exact chosen-cover batches cover all 471 non-order-64
+quotients. Excluding the separately certified \(C_2^5\) and \(C_3^4\) rows,
+they inspect 43,368 action-invariant kernels: 32,058 have a nonzero common
+radical, 10,993 contain a verified 8-clique, and 317 reach exact optimization.
+The latter distribution is
+\((1,1):1,(3,3):1,(4,4):2,(5,5):93,(6,6):217,(7,7):3\), with no
+\(a>10\) at \(\nu\le7\). The three \((7,7)\) records are the first kernels of
+`SmallGroup(8,5)`, `(12,3)`, and `(12,4)`. The order-64 cases omitted from
+these ordinary batches are covered by the dedicated certificates below.
+
+[COMPUTED] For \(Q=C_3^4\), all 56,632 alternating-form subspaces were
+enumerated. Exactly 55,941 are faithful and form 16 checked coordinate-change
+orbits; the unique orbit with \(\nu\le7\) has \((\nu,a)=(7,10)\) and size
+234. Zero is isolated and every \(\mathbb F_3^\times\)-line is an independent
+twin class, so the 40-point projective graph and 81-vector graph have the same
+clique and chromatic numbers. Exact chromatic search and its witness use the
+same recorded DSATUR implementation and are not described as an independent
+second solver.
+
+[COMPUTED] The \(C_2^6\) rank-six certificate enumerates all 16,383
+normalized pencils containing a fixed nondegenerate form. Sixty-three explicit
+symplectic transvections give 14 raw-form orbits (including zero and the fixed
+form), hence six pencil orbits; exact orbit clique numbers are
+\(9,11,12,15,15,15\). Generator transport is checked directly.
+
+[COMPUTED] The complementary rank-four certificate directly checks all 5,471
+normalized pencils containing a fixed rank-four form and no rank-six form.
+It stores verified 8-cliques for 5,450; the remaining 21 have common radical
+exactly equal to the four-element radical of the fixed form. A separately
+verified 25-generator stabilizer partitions all 16,383 pencils into 12 orbits,
+seven of them covering the 5,471 relevant pencils. Only the two orbits of
+sizes 15 and 6 have clique number at most seven, and both are precisely among
+the common-radical cases. The passage from these pencil computations to the
+full \(C_2^6\) structural conclusion is kept in the structural proof rather
+than overclaimed here.
+
+[COMPUTED] A canonical bounded-ID order-64 batch completed and independently
+verified `SmallGroup(64,1)` through `(64,191)`: 12,602 kernels split into
+8,606 nonfaithful-radical records and 3,996 verified 8-clique records, with
+no cutoff-seven candidates. A later exploratory producer exposed a new
+`AllSubgroups` bottleneck at `(64,192)=C4 x C4 x C2 x C2`, whose exterior
+square has order 128. This shows that exterior order alone is not a safe
+enumeration threshold. A dedicated dependency-free producer subsequently
+classified all 5,276 subgroups of (C_4\times C_2^5) by their projection to
+the (C_4) factor. Exactly 2,925 kernels have nonzero radical; every one of
+the 2,351 faithful kernels has a saved and verified 8-clique. Thus this
+quotient has no cutoff-seven candidate. The interrupted generic fragment is
+not part of any exact aggregate above.
+
+[COMPUTED] A canonical selected-cover census covers all 76
+`SmallGroup(64,i)` for \(192\le i\le267\). Each 2-Schur cover is converted
+injectively to a pc group; its kernel is checked both central and contained in
+the derived subgroup. The image of its center in the quotient has size
+distribution \(1:14,2:30,4:32\). For each of the 62 nontrivial-image cases,
+the certificate stores at least one nonidentity quotient element together
+with all 64 universal exterior commutator coordinates \(q\wedge r\), each
+zero. There are 126 such witnesses in total. This is the load-bearing
+one-way exterior-zero exclusion; no converse capability assertion is used.
+For IDs 262--266, for example, the witness is position 7 with quotient
+exponent vector \((0,0,0,0,0,1)\).
+
+[COMPUTED] The eleven remaining regular order-64 IDs
+193, 195, 202, 203, 207, 211, 216, 226, 236, 242, and 250 have compact
+character-dual certificates. A no-automorphism-quotient BFS enumerates every
+action-invariant character subgroup whose union graph has no 8-clique. The
+eleven searches retain 5,206 subgroups and prune 24,551 boundary subgroups by
+saved verified 8-cliques. Every retained graph has a saved nonidentity
+radical; there are no faithful cutoff-seven candidates. The GAP exports also
+contain the complete 64-by-64 commutator table, cover conjugation transport,
+quotient automorphism permutations, and stem checks. The regression test
+freshly rebuilds all eleven searches and compares every saved record.
+
+[COMPUTED] For `SmallGroup(64,261)=C2^3 x D8`, the exterior dual is
+\(C_2^9\times C_4\). Exactly 1,152 of 2,048 scalar characters have clique
+number at most seven: all 1,024 even characters and an affine 7-space of 128
+odd characters. All-even subgroups annihilate a saved nonzero exterior
+element on an explicit quotient commutator row. The complete affine RREF
+parametrization gives 26,387 odd-containing subgroups: 26,323 have saved
+8-cliques and the other 64 have nontrivial radicals, leaving no candidate.
+The regression verifier independently reconstructs every saved subgroup and
+witness. IDs 192 and 267 are handled by the dedicated
+\(C_4^2\times C_2^2\) and \(C_2^6\) certificates above.
+
+[COMPUTED] A global partition assertion derives all 738 inventory keys and
+checks the pairwise-disjoint union
+
+\[
+660\text{ ordinary}+2\text{ delegated}+62\text{ exterior-zero}
++11\text{ generic dual}+3\text{ special}=738.
+\]
+
+Thus the computational quotient inventory has neither an omitted nor a
+multiply assigned isomorphism type. The group-theoretic use of this partition
+in the exact \(h(7)\) argument is stated separately in `notes/exact_h7.md`.

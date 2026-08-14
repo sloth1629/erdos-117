@@ -1,0 +1,4 @@
+[COMPUTED] exported order-64 character-dual chosen-cover data
+Q=SmallGroup(64,216) structure=((C4 x C2) : D8) : 1
+cover_order=4096 cover_kernel_order=64 exterior_order=256 exterior_orders=2,2,2,2,4,4
+actions=12 automorphisms=11 commutator_rows=64

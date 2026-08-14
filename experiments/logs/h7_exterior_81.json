@@ -1,0 +1,163 @@
+{
+  "candidate_records": [],
+  "delegated_certificates": [
+    {
+      "path": "experiments/logs/h7_c3_4.json",
+      "sha256": "78092bc9d4f2bb1cc59e139662bf7702b8fcac761d5529647c5248ae9295a043",
+      "small_group": [
+        81,
+        15
+      ]
+    }
+  ],
+  "exact_candidate_distribution": [],
+  "excluded_quotients": [
+    [
+      81,
+      15
+    ]
+  ],
+  "excluded_records": [
+    {
+      "exterior_order": 729,
+      "q_id": 15,
+      "q_order": 81,
+      "status": "delegated_outside_this_batch",
+      "structure": "C3 x C3 x C3 x C3"
+    }
+  ],
+  "failure_rows": [],
+  "gap_script": "experiments/configs/h7_exterior_scan.g",
+  "gap_script_sha256": "06cfa8333ffa1a8d3b09d3464037d025922280240bf4158aabb965d5aab122e0",
+  "gap_stdout": "experiments/logs/h7_exterior_81_gap.stdout.txt",
+  "gap_stdout_sha256": "3ea752a70bfe6019172106c8b345ee768b852a37424eaab610b2d6e2e7046100",
+  "generated_at_utc": "2026-08-13T22:58:27+00:00",
+  "input": "experiments/logs/h7_exterior_81.tsv",
+  "input_sha256": "624e304b568d41068bb38dbe3915b345be78b64be75be53f69ff4c6e783dadce",
+  "inventory": "experiments/logs/h7_quotient_inventory.json",
+  "inventory_sha256": "9d25ca77b3b931fd558d45a6f4afb5d9dbd6174f1725a87235c62803776b3941",
+  "kernel_record_count": 368,
+  "metadata": {
+    "CLIQUE_CUTOFF": "7",
+    "END_Q_ORDER": "81",
+    "EXCLUDED_QUOTIENTS": "81,15",
+    "GAP_VERSION": "4.16.0",
+    "SMALLGRP_VERSION": "1.5.4",
+    "START_Q_ID": "1",
+    "START_Q_ORDER": "81"
+  },
+  "quotient_row_count": 15,
+  "quotients": [
+    {
+      "exterior_order": 1,
+      "normal_kernel_count": 1,
+      "q_id": 1,
+      "q_order": 81,
+      "structure": "C81"
+    },
+    {
+      "exterior_order": 9,
+      "normal_kernel_count": 3,
+      "q_id": 2,
+      "q_order": 81,
+      "structure": "C9 x C9"
+    },
+    {
+      "exterior_order": 27,
+      "normal_kernel_count": 7,
+      "q_id": 3,
+      "q_order": 81,
+      "structure": "(C9 x C3) : C3"
+    },
+    {
+      "exterior_order": 9,
+      "normal_kernel_count": 3,
+      "q_id": 4,
+      "q_order": 81,
+      "structure": "C9 : C9"
+    },
+    {
+      "exterior_order": 3,
+      "normal_kernel_count": 2,
+      "q_id": 5,
+      "q_order": 81,
+      "structure": "C27 x C3"
+    },
+    {
+      "exterior_order": 3,
+      "normal_kernel_count": 2,
+      "q_id": 6,
+      "q_order": 81,
+      "structure": "C27 : C3"
+    },
+    {
+      "exterior_order": 27,
+      "normal_kernel_count": 7,
+      "q_id": 7,
+      "q_order": 81,
+      "structure": "(C3 x C3 x C3) : C3"
+    },
+    {
+      "exterior_order": 27,
+      "normal_kernel_count": 7,
+      "q_id": 8,
+      "q_order": 81,
+      "structure": "(C9 x C3) : C3"
+    },
+    {
+      "exterior_order": 81,
+      "normal_kernel_count": 11,
+      "q_id": 9,
+      "q_order": 81,
+      "structure": "(C9 x C3) : C3"
+    },
+    {
+      "exterior_order": 27,
+      "normal_kernel_count": 7,
+      "q_id": 10,
+      "q_order": 81,
+      "structure": "C3 . ((C3 x C3) : C3) = (C3 x C3) . (C3 x C3)"
+    },
+    {
+      "exterior_order": 27,
+      "normal_kernel_count": 28,
+      "q_id": 11,
+      "q_order": 81,
+      "structure": "C9 x C3 x C3"
+    },
+    {
+      "exterior_order": 243,
+      "normal_kernel_count": 234,
+      "q_id": 12,
+      "q_order": 81,
+      "structure": "C3 x ((C3 x C3) : C3)"
+    },
+    {
+      "exterior_order": 27,
+      "normal_kernel_count": 28,
+      "q_id": 13,
+      "q_order": 81,
+      "structure": "C3 x (C9 : C3)"
+    },
+    {
+      "exterior_order": 27,
+      "normal_kernel_count": 28,
+      "q_id": 14,
+      "q_order": 81,
+      "structure": "(C9 x C3) : C3"
+    }
+  ],
+  "scanned_quotient_count": 14,
+  "schema_version": 1,
+  "software": {
+    "external_dependencies": [],
+    "implementation": "CPython",
+    "python": "3.9.6"
+  },
+  "status": "[COMPUTED] exact bounded batch; no global h(7) upper bound claimed",
+  "status_distribution": {
+    "clique_ge_8": 197,
+    "nonfaithful_radical": 171
+  },
+  "unique_faithful_graph_count": 121
+}

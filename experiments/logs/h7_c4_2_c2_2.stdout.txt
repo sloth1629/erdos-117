@@ -1,0 +1,5 @@
+[COMPUTED] exact for Q=C4^2 x C2^2; no global h(7) upper bound claimed
+binary_subspaces=374 exterior_subgroups=5276 statuses={'clique_ge_8': 2351, 'nonfaithful_radical': 2925}
+unique_graphs=4494 unique_faithful_graphs=2038 candidates=0
+radical_sizes={'1': 2351, '2': 84, '4': 2685, '8': 120, '16': 35, '64': 1}
+wrote experiments/logs/h7_c4_2_c2_2.json

@@ -49,3 +49,59 @@ Store reproducible text logs here; large or licensed artifacts must not be commi
   record an independent Python reconstruction of all 5,257 subgroups, all
   maximal subgroups, and all 5,545,351 six-subsets across 48 isomorphism
   types. The GAP transcript is `f6_maximal_cover_gap.stdout.txt`.
+- `h7_quotient_inventory.{tsv,json}` and stdout: complete, pure inventory of
+  all 738 SmallGroups of order at most 81. The certificate identifies the
+  three raw elementary-exterior explosions and contains no dependency on
+  partial deep-scan fragments.
+- `h7_exterior_1_36`, `h7_exterior_37_63`, `h7_exterior_65_80`, and
+  `h7_exterior_81`: exact bounded batches covering every non-order-64 quotient.
+  They contain 43,368 scanned kernel rows: 32,058 nonfaithful radicals, 10,993
+  verified 8-cliques, and 317 exact candidates. The delegated rows are
+  \(C_2^5\) and \(C_3^4\), with checksummed certificate pointers in the JSON.
+- `h7_exterior_64_1_191`: canonical bounded-ID order-64 batch with 12,602
+  kernels (8,606 nonfaithful radicals and 3,996 verified 8-cliques), no exact
+  cutoff-seven candidates, and explicit `END_Q_ID=191` metadata.
+- `h7_c3_4.json` and stdout: all 56,632 subspaces of
+  \(\operatorname{Alt}(4,3)\), of which the 55,941 faithful subspaces form 16
+  coordinate-change orbits. The only cutoff-seven orbit has
+  \((\nu,a)=(7,10)\). Zero is isolated and each nonzero scalar line is an
+  independent twin class, so the 40-point projective graph preserves clique
+  and chromatic numbers from the 81-vector graph.
+- `h7_c2_6_rank6_pencils.json` and `h7_c2_6_rank4_pencils.json`: exhaustive
+  normalized-pencil certificates used in the structural \(C_2^6\) reduction.
+  The first has six exact symplectic pencil orbits and minimum clique number 9.
+  The second directly checks all 5,471 no-rank-six pencils, storing 5,450
+  8-cliques and 21 exact common-radical witnesses; its 12-orbit stabilizer
+  table is a supplementary cross-check.
+- `h7_c4_2_c2_2.json` and stdout: dependency-free exact exterior-kernel
+  certificate for `SmallGroup(64,192)`. The three-case projection
+  classification lists all 5,276 subgroups of (C_4\times C_2^5) once;
+  2,925 have nonzero radical, and all 2,351 faithful kernels have saved,
+  verified 8-cliques. Hence there is no cutoff-seven candidate for this
+  quotient.
+- `h7_capability_192_260.tsv` and `h7_capability_261_267.tsv`, their GAP
+  transcripts, and `h7_capability_order64.json`: exact selected-cover
+  center-image census for all 76 order-64 IDs from 192 through 267. The image
+  sizes have distribution (1:14,2:30,4:32). For the 62 nontrivial-image IDs,
+  126 saved nonidentity witnesses each include quotient/lift pc exponents and
+  a complete 64-entry universal exterior commutator row, verified identically
+  zero. These rows support the one-way exterior-zero exclusions; the artifact
+  does not use a converse capability assertion.
+- `h7_order64_dual_*.tsv`, their GAP transcripts, and
+  `h7_order64_dual.json`: compact exact character-dual certificates for IDs
+  193, 195, 202, 203, 207, 211, 216, 226, 236, 242, and 250. A transparent
+  no-orbit BFS retains all 5,206 invariant subgroups without an 8-clique and
+  prunes 24,551 boundary subgroups with saved 8-cliques. Every retained graph
+  has a nonidentity radical, so there are no faithful candidates.
+- `h7_c2_3_d8.{tsv,json}`, its GAP transcript, and concise stdout: dedicated
+  affine-dual certificate for `SmallGroup(64,261)`. It classifies all 2,047
+  nonzero scalar characters and all 26,387 odd-containing invariant
+  annihilators; 26,323 have a saved 8-clique and 64 have a saved nontrivial
+  radical. The all-even case has a separate explicit commutator-row
+  obstruction.
+
+The unit suite checks that the five disjoint families--660 ordinary scans,
+two delegated cases, 62 exterior-zero exclusions, eleven generic dual cases,
+and three special cases--are exactly the 738 inventory keys. The interrupted
+43 MB exploratory regular scan is preserved under ignored `work/` and is not
+a canonical log.

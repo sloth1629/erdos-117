@@ -177,3 +177,93 @@ python3 src/python/analyze_f6_maximal_cover_audit.py \
   --output experiments/logs/f6_maximal_cover.json \
   --stdout-log experiments/logs/f6_maximal_cover.stdout.txt
 ```
+
+For the cutoff-seven quotient inventory and elementary-abelian certificates:
+
+```bash
+work/gap-4.16.0/gap -q \
+  -c 'ERDOS117_OUTPUT:="experiments/logs/h7_quotient_inventory.tsv";; ERDOS117_MAX_Q_ORDER:=81;; Read("experiments/configs/h7_quotient_inventory.g");'
+python3 src/python/analyze_h7_quotient_inventory.py \
+  --inventory experiments/logs/h7_quotient_inventory.tsv \
+  --gap-script experiments/configs/h7_quotient_inventory.g \
+  --output experiments/logs/h7_quotient_inventory.json \
+  --stdout-log experiments/logs/h7_quotient_inventory.stdout.txt
+python3 src/python/run_h7_c3_4.py \
+  --inventory-certificate experiments/logs/h7_quotient_inventory.json \
+  --output experiments/logs/h7_c3_4.json \
+  --stdout-log experiments/logs/h7_c3_4.stdout.txt
+python3 src/python/run_h7_c2_6_pencils.py \
+  --output experiments/logs/h7_c2_6_rank6_pencils.json \
+  --stdout-log experiments/logs/h7_c2_6_rank6_pencils.stdout.txt
+python3 src/python/run_h7_c2_6_rank4_pencils.py \
+  --output experiments/logs/h7_c2_6_rank4_pencils.json \
+  --stdout-log experiments/logs/h7_c2_6_rank4_pencils.stdout.txt
+python3 src/python/run_h7_c4_2_c2_2.py \
+  --inventory-certificate experiments/logs/h7_quotient_inventory.json \
+  --output experiments/logs/h7_c4_2_c2_2.json \
+  --stdout-log experiments/logs/h7_c4_2_c2_2.stdout.txt
+python3 src/python/analyze_h7_capability_order64.py \
+  --input experiments/logs/h7_capability_192_260.tsv \
+  --gap-stdout experiments/logs/h7_capability_192_260_gap.stdout.txt \
+  --input experiments/logs/h7_capability_261_267.tsv \
+  --gap-stdout experiments/logs/h7_capability_261_267_gap.stdout.txt \
+  --gap-script experiments/configs/h7_capability_order64.g \
+  --inventory experiments/logs/h7_quotient_inventory.json \
+  --output experiments/logs/h7_capability_order64.json \
+  --stdout-log experiments/logs/h7_capability_order64.stdout.txt
+python3 src/python/run_h7_c2_3_d8.py \
+  --input experiments/logs/h7_c2_3_d8.tsv \
+  --gap-script experiments/configs/h7_c2_3_d8_export.g \
+  --gap-stdout experiments/logs/h7_c2_3_d8_gap.stdout.txt \
+  --inventory-certificate experiments/logs/h7_quotient_inventory.json \
+  --output experiments/logs/h7_c2_3_d8.json \
+  --stdout-log experiments/logs/h7_c2_3_d8.stdout.txt
+python3 src/python/run_h7_order64_dual.py \
+  --input experiments/logs/h7_order64_dual_193.tsv \
+  --input experiments/logs/h7_order64_dual_195.tsv \
+  --input experiments/logs/h7_order64_dual_202.tsv \
+  --input experiments/logs/h7_order64_dual_203.tsv \
+  --input experiments/logs/h7_order64_dual_207.tsv \
+  --input experiments/logs/h7_order64_dual_211.tsv \
+  --input experiments/logs/h7_order64_dual_216.tsv \
+  --input experiments/logs/h7_order64_dual_226.tsv \
+  --input experiments/logs/h7_order64_dual_236.tsv \
+  --input experiments/logs/h7_order64_dual_242.tsv \
+  --input experiments/logs/h7_order64_dual_250.tsv \
+  --gap-stdout experiments/logs/h7_order64_dual_193_gap.stdout.txt \
+  --gap-stdout experiments/logs/h7_order64_dual_195_gap.stdout.txt \
+  --gap-stdout experiments/logs/h7_order64_dual_202_gap.stdout.txt \
+  --gap-stdout experiments/logs/h7_order64_dual_203_gap.stdout.txt \
+  --gap-stdout experiments/logs/h7_order64_dual_207_gap.stdout.txt \
+  --gap-stdout experiments/logs/h7_order64_dual_211_gap.stdout.txt \
+  --gap-stdout experiments/logs/h7_order64_dual_216_gap.stdout.txt \
+  --gap-stdout experiments/logs/h7_order64_dual_226_gap.stdout.txt \
+  --gap-stdout experiments/logs/h7_order64_dual_236_gap.stdout.txt \
+  --gap-stdout experiments/logs/h7_order64_dual_242_gap.stdout.txt \
+  --gap-stdout experiments/logs/h7_order64_dual_250_gap.stdout.txt \
+  --gap-script experiments/configs/h7_order64_dual_export.g \
+  --inventory-certificate experiments/logs/h7_quotient_inventory.json \
+  --output experiments/logs/h7_order64_dual.json \
+  --stdout-log experiments/logs/h7_order64_dual.stdout.txt
+```
+
+`analyze_h7_exterior_batch.py` validates every raw adjacency, radical,
+clique, kernel serial, delegated-certificate hash, and exact candidate witness.
+Its reusable `verify_saved_batch` entry point performs the same full-row audit
+from a saved JSON record in the unit suite.
+
+`analyze_h7_capability_order64.py` combines the two bounded selected-cover
+TSVs. It checks pc presentation dimensions, orders, and triangularity; cover,
+kernel, exterior, and Schur-multiplier orders; central and stem flags;
+batch/ID completeness; center-image serials; and the complete zero exterior
+commutator row for every nonidentity exclusion witness. Its conclusion is
+deliberately one-way and does not require a capability converse.
+
+`h7_order64_dual.py` parses and verifies the full commutator/action exports,
+classifies scalar characters, and performs a no-automorphism-quotient BFS of
+every invariant character subgroup that can avoid an 8-clique. It saves all
+retained radical witnesses and all pruned-boundary 8-cliques for the eleven
+regular cases. `h7_c2_3_d8.py` supplies the separate affine parametrization
+for ID 261 and an independent saved-record verifier. The unit suite freshly
+rebuilds both certificate families and asserts their pairwise-disjoint global
+partition with the ordinary, delegated, exterior-zero, and special cases.

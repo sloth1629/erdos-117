@@ -1,0 +1,1381 @@
+{
+  "candidate_records": [],
+  "delegated_certificates": [],
+  "exact_candidate_distribution": [],
+  "excluded_quotients": [],
+  "excluded_records": [],
+  "failure_rows": [],
+  "gap_script": "experiments/configs/h7_exterior_scan.g",
+  "gap_script_sha256": "06cfa8333ffa1a8d3b09d3464037d025922280240bf4158aabb965d5aab122e0",
+  "gap_stdout": "experiments/logs/h7_exterior_64_1_191_gap.stdout.txt",
+  "gap_stdout_sha256": "407ad94395ea620c12798d31fbec261ad8a17b7f33753ef8188ac5a1b996b3ab",
+  "generated_at_utc": "2026-08-13T22:58:36+00:00",
+  "input": "experiments/logs/h7_exterior_64_1_191.tsv",
+  "input_sha256": "dee1fcdc02b633ac5eba9f708522e96117f1d997edbf3de38bee50ce984249d6",
+  "inventory": "experiments/logs/h7_quotient_inventory.json",
+  "inventory_sha256": "9d25ca77b3b931fd558d45a6f4afb5d9dbd6174f1725a87235c62803776b3941",
+  "kernel_record_count": 12602,
+  "metadata": {
+    "CLIQUE_CUTOFF": "7",
+    "END_Q_ID": "191",
+    "END_Q_ORDER": "64",
+    "EXCLUDED_QUOTIENTS": "",
+    "GAP_VERSION": "4.16.0",
+    "SMALLGRP_VERSION": "1.5.4",
+    "START_Q_ID": "1",
+    "START_Q_ORDER": "64"
+  },
+  "quotient_row_count": 191,
+  "quotients": [
+    {
+      "exterior_order": 1,
+      "normal_kernel_count": 1,
+      "q_id": 1,
+      "q_order": 64,
+      "structure": "C64"
+    },
+    {
+      "exterior_order": 8,
+      "normal_kernel_count": 4,
+      "q_id": 2,
+      "q_order": 64,
+      "structure": "C8 x C8"
+    },
+    {
+      "exterior_order": 8,
+      "normal_kernel_count": 4,
+      "q_id": 3,
+      "q_order": 64,
+      "structure": "C8 : C8"
+    },
+    {
+      "exterior_order": 16,
+      "normal_kernel_count": 9,
+      "q_id": 4,
+      "q_order": 64,
+      "structure": "(C2 x C2 x C2) : C8"
+    },
+    {
+      "exterior_order": 16,
+      "normal_kernel_count": 9,
+      "q_id": 5,
+      "q_order": 64,
+      "structure": "(C4 x C2) : C8"
+    },
+    {
+      "exterior_order": 16,
+      "normal_kernel_count": 9,
+      "q_id": 6,
+      "q_order": 64,
+      "structure": "D8 : C8"
+    },
+    {
+      "exterior_order": 8,
+      "normal_kernel_count": 6,
+      "q_id": 7,
+      "q_order": 64,
+      "structure": "Q8 : C8"
+    },
+    {
+      "exterior_order": 32,
+      "normal_kernel_count": 14,
+      "q_id": 8,
+      "q_order": 64,
+      "structure": "(C4 : C4) : C4"
+    },
+    {
+      "exterior_order": 16,
+      "normal_kernel_count": 9,
+      "q_id": 9,
+      "q_order": 64,
+      "structure": "(C2 x Q8) : C4"
+    },
+    {
+      "exterior_order": 16,
+      "normal_kernel_count": 7,
+      "q_id": 10,
+      "q_order": 64,
+      "structure": "(C8 : C4) : C2"
+    },
+    {
+      "exterior_order": 8,
+      "normal_kernel_count": 6,
+      "q_id": 11,
+      "q_order": 64,
+      "structure": "(C2 x C2) . ((C4 x C2) : C2) = (C4 x C2) . (C4 x C2)"
+    },
+    {
+      "exterior_order": 32,
+      "normal_kernel_count": 14,
+      "q_id": 12,
+      "q_order": 64,
+      "structure": "(C4 : C8) : C2"
+    },
+    {
+      "exterior_order": 16,
+      "normal_kernel_count": 9,
+      "q_id": 13,
+      "q_order": 64,
+      "structure": "(C2 x C2) . ((C4 x C2) : C2) = (C4 x C2) . (C4 x C2)"
+    },
+    {
+      "exterior_order": 16,
+      "normal_kernel_count": 7,
+      "q_id": 14,
+      "q_order": 64,
+      "structure": "(C2 x C2) . ((C4 x C2) : C2) = (C4 x C2) . (C4 x C2)"
+    },
+    {
+      "exterior_order": 8,
+      "normal_kernel_count": 4,
+      "q_id": 15,
+      "q_order": 64,
+      "structure": "C8 : C8"
+    },
+    {
+      "exterior_order": 8,
+      "normal_kernel_count": 4,
+      "q_id": 16,
+      "q_order": 64,
+      "structure": "C8 : C8"
+    },
+    {
+      "exterior_order": 16,
+      "normal_kernel_count": 17,
+      "q_id": 17,
+      "q_order": 64,
+      "structure": "(C4 x C2) : C8"
+    },
+    {
+      "exterior_order": 32,
+      "normal_kernel_count": 20,
+      "q_id": 18,
+      "q_order": 64,
+      "structure": "(C8 x C2) : C4"
+    },
+    {
+      "exterior_order": 16,
+      "normal_kernel_count": 17,
+      "q_id": 19,
+      "q_order": 64,
+      "structure": "C4 . (C4 x C4)"
+    },
+    {
+      "exterior_order": 16,
+      "normal_kernel_count": 17,
+      "q_id": 20,
+      "q_order": 64,
+      "structure": "(C8 : C2) : C4"
+    },
+    {
+      "exterior_order": 32,
+      "normal_kernel_count": 28,
+      "q_id": 21,
+      "q_order": 64,
+      "structure": "(C4 : C4) : C4"
+    },
+    {
+      "exterior_order": 16,
+      "normal_kernel_count": 17,
+      "q_id": 22,
+      "q_order": 64,
+      "structure": "(C4 x C2) . D8 = C4 . (C4 x C4)"
+    },
+    {
+      "exterior_order": 32,
+      "normal_kernel_count": 28,
+      "q_id": 23,
+      "q_order": 64,
+      "structure": "((C4 x C2) : C2) : C4"
+    },
+    {
+      "exterior_order": 16,
+      "normal_kernel_count": 17,
+      "q_id": 24,
+      "q_order": 64,
+      "structure": "(C8 : C2) : C4"
+    },
+    {
+      "exterior_order": 16,
+      "normal_kernel_count": 17,
+      "q_id": 25,
+      "q_order": 64,
+      "structure": "(C8 : C2) : C4"
+    },
+    {
+      "exterior_order": 4,
+      "normal_kernel_count": 3,
+      "q_id": 26,
+      "q_order": 64,
+      "structure": "C16 x C4"
+    },
+    {
+      "exterior_order": 4,
+      "normal_kernel_count": 3,
+      "q_id": 27,
+      "q_order": 64,
+      "structure": "C16 : C4"
+    },
+    {
+      "exterior_order": 4,
+      "normal_kernel_count": 3,
+      "q_id": 28,
+      "q_order": 64,
+      "structure": "C16 : C4"
+    },
+    {
+      "exterior_order": 8,
+      "normal_kernel_count": 6,
+      "q_id": 29,
+      "q_order": 64,
+      "structure": "(C2 x C2) : C16"
+    },
+    {
+      "exterior_order": 8,
+      "normal_kernel_count": 6,
+      "q_id": 30,
+      "q_order": 64,
+      "structure": "(C16 : C2) : C2"
+    },
+    {
+      "exterior_order": 8,
+      "normal_kernel_count": 6,
+      "q_id": 31,
+      "q_order": 64,
+      "structure": "(C16 : C2) : C2"
+    },
+    {
+      "exterior_order": 32,
+      "normal_kernel_count": 12,
+      "q_id": 32,
+      "q_order": 64,
+      "structure": "((C4 x C2) : C2) : C4"
+    },
+    {
+      "exterior_order": 16,
+      "normal_kernel_count": 9,
+      "q_id": 33,
+      "q_order": 64,
+      "structure": "((C4 x C2) : C2) : C4"
+    },
+    {
+      "exterior_order": 64,
+      "normal_kernel_count": 15,
+      "q_id": 34,
+      "q_order": 64,
+      "structure": "(C4 x C4) : C4"
+    },
+    {
+      "exterior_order": 32,
+      "normal_kernel_count": 12,
+      "q_id": 35,
+      "q_order": 64,
+      "structure": "(C4 x C4) : C4"
+    },
+    {
+      "exterior_order": 16,
+      "normal_kernel_count": 9,
+      "q_id": 36,
+      "q_order": 64,
+      "structure": "(C2 . ((C4 x C2) : C2) = (C2 x C2) . (C4 x C2)) : C2"
+    },
+    {
+      "exterior_order": 16,
+      "normal_kernel_count": 9,
+      "q_id": 37,
+      "q_order": 64,
+      "structure": "C2 . ((C2 x C2 x C2) : C4) = (C4 x C2) . (C4 x C2)"
+    },
+    {
+      "exterior_order": 32,
+      "normal_kernel_count": 12,
+      "q_id": 38,
+      "q_order": 64,
+      "structure": "D16 : C4"
+    },
+    {
+      "exterior_order": 16,
+      "normal_kernel_count": 9,
+      "q_id": 39,
+      "q_order": 64,
+      "structure": "Q16 : C4"
+    },
+    {
+      "exterior_order": 16,
+      "normal_kernel_count": 9,
+      "q_id": 40,
+      "q_order": 64,
+      "structure": "(C16 x C2) : C2"
+    },
+    {
+      "exterior_order": 16,
+      "normal_kernel_count": 9,
+      "q_id": 41,
+      "q_order": 64,
+      "structure": "Q16 : C4"
+    },
+    {
+      "exterior_order": 16,
+      "normal_kernel_count": 9,
+      "q_id": 42,
+      "q_order": 64,
+      "structure": "(C16 : C2) : C2"
+    },
+    {
+      "exterior_order": 16,
+      "normal_kernel_count": 9,
+      "q_id": 43,
+      "q_order": 64,
+      "structure": "C2 . ((C8 x C2) : C2) = C8 . (C4 x C2)"
+    },
+    {
+      "exterior_order": 4,
+      "normal_kernel_count": 3,
+      "q_id": 44,
+      "q_order": 64,
+      "structure": "C4 : C16"
+    },
+    {
+      "exterior_order": 4,
+      "normal_kernel_count": 3,
+      "q_id": 45,
+      "q_order": 64,
+      "structure": "C8 . D8 = C4 . (C8 x C2)"
+    },
+    {
+      "exterior_order": 8,
+      "normal_kernel_count": 4,
+      "q_id": 46,
+      "q_order": 64,
+      "structure": "C16 : C4"
+    },
+    {
+      "exterior_order": 16,
+      "normal_kernel_count": 5,
+      "q_id": 47,
+      "q_order": 64,
+      "structure": "C16 : C4"
+    },
+    {
+      "exterior_order": 16,
+      "normal_kernel_count": 5,
+      "q_id": 48,
+      "q_order": 64,
+      "structure": "C16 : C4"
+    },
+    {
+      "exterior_order": 8,
+      "normal_kernel_count": 4,
+      "q_id": 49,
+      "q_order": 64,
+      "structure": "C4 . D16 = C8 . (C4 x C2)"
+    },
+    {
+      "exterior_order": 2,
+      "normal_kernel_count": 2,
+      "q_id": 50,
+      "q_order": 64,
+      "structure": "C32 x C2"
+    },
+    {
+      "exterior_order": 2,
+      "normal_kernel_count": 2,
+      "q_id": 51,
+      "q_order": 64,
+      "structure": "C32 : C2"
+    },
+    {
+      "exterior_order": 32,
+      "normal_kernel_count": 6,
+      "q_id": 52,
+      "q_order": 64,
+      "structure": "D64"
+    },
+    {
+      "exterior_order": 16,
+      "normal_kernel_count": 5,
+      "q_id": 53,
+      "q_order": 64,
+      "structure": "QD64"
+    },
+    {
+      "exterior_order": 16,
+      "normal_kernel_count": 5,
+      "q_id": 54,
+      "q_order": 64,
+      "structure": "Q64"
+    },
+    {
+      "exterior_order": 64,
+      "normal_kernel_count": 129,
+      "q_id": 55,
+      "q_order": 64,
+      "structure": "C4 x C4 x C4"
+    },
+    {
+      "exterior_order": 64,
+      "normal_kernel_count": 385,
+      "q_id": 56,
+      "q_order": 64,
+      "structure": "C2 x ((C4 x C2) : C4)"
+    },
+    {
+      "exterior_order": 64,
+      "normal_kernel_count": 65,
+      "q_id": 57,
+      "q_order": 64,
+      "structure": "(C4 x C4) : C4"
+    },
+    {
+      "exterior_order": 64,
+      "normal_kernel_count": 137,
+      "q_id": 58,
+      "q_order": 64,
+      "structure": "C4 x ((C4 x C2) : C2)"
+    },
+    {
+      "exterior_order": 32,
+      "normal_kernel_count": 46,
+      "q_id": 59,
+      "q_order": 64,
+      "structure": "C4 x (C4 : C4)"
+    },
+    {
+      "exterior_order": 256,
+      "normal_kernel_count": 2983,
+      "q_id": 60,
+      "q_order": 64,
+      "structure": "(C2 x C2) : ((C4 x C2) : C2)"
+    },
+    {
+      "exterior_order": 64,
+      "normal_kernel_count": 137,
+      "q_id": 61,
+      "q_order": 64,
+      "structure": "C4 : ((C4 x C2) : C2)"
+    },
+    {
+      "exterior_order": 64,
+      "normal_kernel_count": 129,
+      "q_id": 62,
+      "q_order": 64,
+      "structure": "(C4 x C2 x C2) : C4"
+    },
+    {
+      "exterior_order": 64,
+      "normal_kernel_count": 49,
+      "q_id": 63,
+      "q_order": 64,
+      "structure": "(C4 x C4) : C4"
+    },
+    {
+      "exterior_order": 32,
+      "normal_kernel_count": 30,
+      "q_id": 64,
+      "q_order": 64,
+      "structure": "(C4 x C4) : C4"
+    },
+    {
+      "exterior_order": 64,
+      "normal_kernel_count": 65,
+      "q_id": 65,
+      "q_order": 64,
+      "structure": "C4 : (C4 : C4)"
+    },
+    {
+      "exterior_order": 64,
+      "normal_kernel_count": 105,
+      "q_id": 66,
+      "q_order": 64,
+      "structure": "(C2 x C2) : (C4 : C4)"
+    },
+    {
+      "exterior_order": 128,
+      "normal_kernel_count": 452,
+      "q_id": 67,
+      "q_order": 64,
+      "structure": "(C2 x C2) : ((C4 x C2) : C2)"
+    },
+    {
+      "exterior_order": 32,
+      "normal_kernel_count": 32,
+      "q_id": 68,
+      "q_order": 64,
+      "structure": "(C4 : C4) : C4"
+    },
+    {
+      "exterior_order": 64,
+      "normal_kernel_count": 59,
+      "q_id": 69,
+      "q_order": 64,
+      "structure": "((C4 x C2) : C2) : C4"
+    },
+    {
+      "exterior_order": 32,
+      "normal_kernel_count": 46,
+      "q_id": 70,
+      "q_order": 64,
+      "structure": "C4 : (C4 : C4)"
+    },
+    {
+      "exterior_order": 128,
+      "normal_kernel_count": 196,
+      "q_id": 71,
+      "q_order": 64,
+      "structure": "C4 : ((C4 x C2) : C2)"
+    },
+    {
+      "exterior_order": 64,
+      "normal_kernel_count": 89,
+      "q_id": 72,
+      "q_order": 64,
+      "structure": "(C4 x C2) : Q8"
+    },
+    {
+      "exterior_order": 256,
+      "normal_kernel_count": 603,
+      "q_id": 73,
+      "q_order": 64,
+      "structure": "(C4 x C2) : D8"
+    },
+    {
+      "exterior_order": 128,
+      "normal_kernel_count": 156,
+      "q_id": 74,
+      "q_order": 64,
+      "structure": "(C2 x C2 x C2) : Q8"
+    },
+    {
+      "exterior_order": 128,
+      "normal_kernel_count": 184,
+      "q_id": 75,
+      "q_order": 64,
+      "structure": "(C4 x C2) : D8"
+    },
+    {
+      "exterior_order": 64,
+      "normal_kernel_count": 105,
+      "q_id": 76,
+      "q_order": 64,
+      "structure": "(C4 x C2) : Q8"
+    },
+    {
+      "exterior_order": 64,
+      "normal_kernel_count": 79,
+      "q_id": 77,
+      "q_order": 64,
+      "structure": "((C4 x C2) : C4) : C2"
+    },
+    {
+      "exterior_order": 64,
+      "normal_kernel_count": 57,
+      "q_id": 78,
+      "q_order": 64,
+      "structure": "((C4 x C2) : C4) : C2"
+    },
+    {
+      "exterior_order": 32,
+      "normal_kernel_count": 46,
+      "q_id": 79,
+      "q_order": 64,
+      "structure": "(C2 x C2 x C2) . (C2 x C2 x C2)"
+    },
+    {
+      "exterior_order": 64,
+      "normal_kernel_count": 65,
+      "q_id": 80,
+      "q_order": 64,
+      "structure": "(C2 x (C4 : C4)) : C2"
+    },
+    {
+      "exterior_order": 32,
+      "normal_kernel_count": 30,
+      "q_id": 81,
+      "q_order": 64,
+      "structure": "(C2 x C2 x C2) . (C2 x C2 x C2)"
+    },
+    {
+      "exterior_order": 32,
+      "normal_kernel_count": 20,
+      "q_id": 82,
+      "q_order": 64,
+      "structure": "(C2 x C2 x C2) . (C2 x C2 x C2)"
+    },
+    {
+      "exterior_order": 16,
+      "normal_kernel_count": 27,
+      "q_id": 83,
+      "q_order": 64,
+      "structure": "C8 x C4 x C2"
+    },
+    {
+      "exterior_order": 16,
+      "normal_kernel_count": 27,
+      "q_id": 84,
+      "q_order": 64,
+      "structure": "C2 x (C8 : C4)"
+    },
+    {
+      "exterior_order": 16,
+      "normal_kernel_count": 27,
+      "q_id": 85,
+      "q_order": 64,
+      "structure": "C4 x (C8 : C2)"
+    },
+    {
+      "exterior_order": 16,
+      "normal_kernel_count": 27,
+      "q_id": 86,
+      "q_order": 64,
+      "structure": "(C8 : C2) : C4"
+    },
+    {
+      "exterior_order": 32,
+      "normal_kernel_count": 78,
+      "q_id": 87,
+      "q_order": 64,
+      "structure": "C2 x ((C8 x C2) : C2)"
+    },
+    {
+      "exterior_order": 32,
+      "normal_kernel_count": 78,
+      "q_id": 88,
+      "q_order": 64,
+      "structure": "(C2 x C2) : (C8 : C2)"
+    },
+    {
+      "exterior_order": 32,
+      "normal_kernel_count": 78,
+      "q_id": 89,
+      "q_order": 64,
+      "structure": "((C8 x C2) : C2) : C2"
+    },
+    {
+      "exterior_order": 64,
+      "normal_kernel_count": 129,
+      "q_id": 90,
+      "q_order": 64,
+      "structure": "C2 x ((C2 x C2 x C2) : C4)"
+    },
+    {
+      "exterior_order": 64,
+      "normal_kernel_count": 89,
+      "q_id": 91,
+      "q_order": 64,
+      "structure": "(C2 x Q8) : C4"
+    },
+    {
+      "exterior_order": 32,
+      "normal_kernel_count": 78,
+      "q_id": 92,
+      "q_order": 64,
+      "structure": "C2 x ((C8 : C2) : C2)"
+    },
+    {
+      "exterior_order": 32,
+      "normal_kernel_count": 78,
+      "q_id": 93,
+      "q_order": 64,
+      "structure": "C2 x (C2 . ((C4 x C2) : C2) = (C2 x C2) . (C4 x C2))"
+    },
+    {
+      "exterior_order": 32,
+      "normal_kernel_count": 78,
+      "q_id": 94,
+      "q_order": 64,
+      "structure": "(C2 . ((C4 x C2) : C2) = (C2 x C2) . (C4 x C2)) : C2"
+    },
+    {
+      "exterior_order": 64,
+      "normal_kernel_count": 129,
+      "q_id": 95,
+      "q_order": 64,
+      "structure": "C2 x ((C8 x C2) : C2)"
+    },
+    {
+      "exterior_order": 32,
+      "normal_kernel_count": 78,
+      "q_id": 96,
+      "q_order": 64,
+      "structure": "C2 x (Q8 : C4)"
+    },
+    {
+      "exterior_order": 32,
+      "normal_kernel_count": 78,
+      "q_id": 97,
+      "q_order": 64,
+      "structure": "((C4 x C2) : C2) : C4"
+    },
+    {
+      "exterior_order": 32,
+      "normal_kernel_count": 78,
+      "q_id": 98,
+      "q_order": 64,
+      "structure": "Q8 : (C4 x C2)"
+    },
+    {
+      "exterior_order": 64,
+      "normal_kernel_count": 89,
+      "q_id": 99,
+      "q_order": 64,
+      "structure": "(C2 x D8) : C4"
+    },
+    {
+      "exterior_order": 32,
+      "normal_kernel_count": 78,
+      "q_id": 100,
+      "q_order": 64,
+      "structure": "(C2 x Q8) : C4"
+    },
+    {
+      "exterior_order": 32,
+      "normal_kernel_count": 78,
+      "q_id": 101,
+      "q_order": 64,
+      "structure": "C2 x ((C4 x C4) : C2)"
+    },
+    {
+      "exterior_order": 32,
+      "normal_kernel_count": 78,
+      "q_id": 102,
+      "q_order": 64,
+      "structure": "(C2 x Q8) : C4"
+    },
+    {
+      "exterior_order": 16,
+      "normal_kernel_count": 27,
+      "q_id": 103,
+      "q_order": 64,
+      "structure": "C2 x (C4 : C8)"
+    },
+    {
+      "exterior_order": 16,
+      "normal_kernel_count": 27,
+      "q_id": 104,
+      "q_order": 64,
+      "structure": "C4 : (C8 : C2)"
+    },
+    {
+      "exterior_order": 16,
+      "normal_kernel_count": 27,
+      "q_id": 105,
+      "q_order": 64,
+      "structure": "(C4 : C8) : C2"
+    },
+    {
+      "exterior_order": 32,
+      "normal_kernel_count": 38,
+      "q_id": 106,
+      "q_order": 64,
+      "structure": "C2 x (C8 : C4)"
+    },
+    {
+      "exterior_order": 32,
+      "normal_kernel_count": 38,
+      "q_id": 107,
+      "q_order": 64,
+      "structure": "C2 x (C8 : C4)"
+    },
+    {
+      "exterior_order": 32,
+      "normal_kernel_count": 30,
+      "q_id": 108,
+      "q_order": 64,
+      "structure": "(C8 x C2) : C4"
+    },
+    {
+      "exterior_order": 16,
+      "normal_kernel_count": 27,
+      "q_id": 109,
+      "q_order": 64,
+      "structure": "C8 : (C4 x C2)"
+    },
+    {
+      "exterior_order": 16,
+      "normal_kernel_count": 27,
+      "q_id": 110,
+      "q_order": 64,
+      "structure": "C2 x (C4 . D8 = C4 . (C4 x C2))"
+    },
+    {
+      "exterior_order": 16,
+      "normal_kernel_count": 27,
+      "q_id": 111,
+      "q_order": 64,
+      "structure": "(C4 . D8 = C4 . (C4 x C2)) : C2"
+    },
+    {
+      "exterior_order": 16,
+      "normal_kernel_count": 19,
+      "q_id": 112,
+      "q_order": 64,
+      "structure": "(C4 x C2) : C8"
+    },
+    {
+      "exterior_order": 16,
+      "normal_kernel_count": 19,
+      "q_id": 113,
+      "q_order": 64,
+      "structure": "(C4 : C8) : C2"
+    },
+    {
+      "exterior_order": 16,
+      "normal_kernel_count": 19,
+      "q_id": 114,
+      "q_order": 64,
+      "structure": "(C4 : C8) : C2"
+    },
+    {
+      "exterior_order": 16,
+      "normal_kernel_count": 27,
+      "q_id": 115,
+      "q_order": 64,
+      "structure": "C8 x D8"
+    },
+    {
+      "exterior_order": 16,
+      "normal_kernel_count": 27,
+      "q_id": 116,
+      "q_order": 64,
+      "structure": "(C2 x C2) : (C8 : C2)"
+    },
+    {
+      "exterior_order": 16,
+      "normal_kernel_count": 27,
+      "q_id": 117,
+      "q_order": 64,
+      "structure": "C4 : (C8 : C2)"
+    },
+    {
+      "exterior_order": 32,
+      "normal_kernel_count": 38,
+      "q_id": 118,
+      "q_order": 64,
+      "structure": "C4 x D16"
+    },
+    {
+      "exterior_order": 16,
+      "normal_kernel_count": 27,
+      "q_id": 119,
+      "q_order": 64,
+      "structure": "C4 x QD16"
+    },
+    {
+      "exterior_order": 16,
+      "normal_kernel_count": 27,
+      "q_id": 120,
+      "q_order": 64,
+      "structure": "C4 x Q16"
+    },
+    {
+      "exterior_order": 16,
+      "normal_kernel_count": 27,
+      "q_id": 121,
+      "q_order": 64,
+      "structure": "C8 : (C4 x C2)"
+    },
+    {
+      "exterior_order": 16,
+      "normal_kernel_count": 27,
+      "q_id": 122,
+      "q_order": 64,
+      "structure": "Q16 : C4"
+    },
+    {
+      "exterior_order": 32,
+      "normal_kernel_count": 38,
+      "q_id": 123,
+      "q_order": 64,
+      "structure": "C8 : (C4 x C2)"
+    },
+    {
+      "exterior_order": 16,
+      "normal_kernel_count": 27,
+      "q_id": 124,
+      "q_order": 64,
+      "structure": "QD16 : C4"
+    },
+    {
+      "exterior_order": 16,
+      "normal_kernel_count": 27,
+      "q_id": 125,
+      "q_order": 64,
+      "structure": "Q16 : C4"
+    },
+    {
+      "exterior_order": 8,
+      "normal_kernel_count": 16,
+      "q_id": 126,
+      "q_order": 64,
+      "structure": "C8 x Q8"
+    },
+    {
+      "exterior_order": 8,
+      "normal_kernel_count": 16,
+      "q_id": 127,
+      "q_order": 64,
+      "structure": "C8 : Q8"
+    },
+    {
+      "exterior_order": 128,
+      "normal_kernel_count": 164,
+      "q_id": 128,
+      "q_order": 64,
+      "structure": "(C2 x C2) : D16"
+    },
+    {
+      "exterior_order": 64,
+      "normal_kernel_count": 105,
+      "q_id": 129,
+      "q_order": 64,
+      "structure": "(C2 x C2) : QD16"
+    },
+    {
+      "exterior_order": 64,
+      "normal_kernel_count": 105,
+      "q_id": 130,
+      "q_order": 64,
+      "structure": "Q8 : D8"
+    },
+    {
+      "exterior_order": 64,
+      "normal_kernel_count": 105,
+      "q_id": 131,
+      "q_order": 64,
+      "structure": "(C2 x C2) : QD16"
+    },
+    {
+      "exterior_order": 64,
+      "normal_kernel_count": 105,
+      "q_id": 132,
+      "q_order": 64,
+      "structure": "(C2 x C2) : Q16"
+    },
+    {
+      "exterior_order": 64,
+      "normal_kernel_count": 105,
+      "q_id": 133,
+      "q_order": 64,
+      "structure": "(Q8 : C4) : C2"
+    },
+    {
+      "exterior_order": 64,
+      "normal_kernel_count": 105,
+      "q_id": 134,
+      "q_order": 64,
+      "structure": "Q8 : D8"
+    },
+    {
+      "exterior_order": 64,
+      "normal_kernel_count": 105,
+      "q_id": 135,
+      "q_order": 64,
+      "structure": "((C4 x C4) : C2) : C2"
+    },
+    {
+      "exterior_order": 64,
+      "normal_kernel_count": 105,
+      "q_id": 136,
+      "q_order": 64,
+      "structure": "(C8 : C2) : (C2 x C2)"
+    },
+    {
+      "exterior_order": 64,
+      "normal_kernel_count": 105,
+      "q_id": 137,
+      "q_order": 64,
+      "structure": "((C4 x C4) : C2) : C2"
+    },
+    {
+      "exterior_order": 128,
+      "normal_kernel_count": 156,
+      "q_id": 138,
+      "q_order": 64,
+      "structure": "(C4 x C2) : D8"
+    },
+    {
+      "exterior_order": 64,
+      "normal_kernel_count": 105,
+      "q_id": 139,
+      "q_order": 64,
+      "structure": "((C4 x C2) : C2) : (C2 x C2)"
+    },
+    {
+      "exterior_order": 64,
+      "normal_kernel_count": 65,
+      "q_id": 140,
+      "q_order": 64,
+      "structure": "C4 : D16"
+    },
+    {
+      "exterior_order": 32,
+      "normal_kernel_count": 46,
+      "q_id": 141,
+      "q_order": 64,
+      "structure": "C4 : QD16"
+    },
+    {
+      "exterior_order": 32,
+      "normal_kernel_count": 46,
+      "q_id": 142,
+      "q_order": 64,
+      "structure": "C4 : QD16"
+    },
+    {
+      "exterior_order": 32,
+      "normal_kernel_count": 46,
+      "q_id": 143,
+      "q_order": 64,
+      "structure": "C4 : Q16"
+    },
+    {
+      "exterior_order": 32,
+      "normal_kernel_count": 46,
+      "q_id": 144,
+      "q_order": 64,
+      "structure": "(Q8 : C4) : C2"
+    },
+    {
+      "exterior_order": 32,
+      "normal_kernel_count": 46,
+      "q_id": 145,
+      "q_order": 64,
+      "structure": "(Q8 : C4) : C2"
+    },
+    {
+      "exterior_order": 32,
+      "normal_kernel_count": 46,
+      "q_id": 146,
+      "q_order": 64,
+      "structure": "(C2 x C2) : QD16"
+    },
+    {
+      "exterior_order": 64,
+      "normal_kernel_count": 65,
+      "q_id": 147,
+      "q_order": 64,
+      "structure": "(C2 x C2) : D16"
+    },
+    {
+      "exterior_order": 32,
+      "normal_kernel_count": 46,
+      "q_id": 148,
+      "q_order": 64,
+      "structure": "(C2 x C2) : Q16"
+    },
+    {
+      "exterior_order": 32,
+      "normal_kernel_count": 46,
+      "q_id": 149,
+      "q_order": 64,
+      "structure": "C8 : D8"
+    },
+    {
+      "exterior_order": 64,
+      "normal_kernel_count": 49,
+      "q_id": 150,
+      "q_order": 64,
+      "structure": "C8 : D8"
+    },
+    {
+      "exterior_order": 32,
+      "normal_kernel_count": 46,
+      "q_id": 151,
+      "q_order": 64,
+      "structure": "(Q8 : C4) : C2"
+    },
+    {
+      "exterior_order": 32,
+      "normal_kernel_count": 46,
+      "q_id": 152,
+      "q_order": 64,
+      "structure": "(C2 . ((C4 x C2) : C2) = (C2 x C2) . (C4 x C2)) : C2"
+    },
+    {
+      "exterior_order": 32,
+      "normal_kernel_count": 46,
+      "q_id": 153,
+      "q_order": 64,
+      "structure": "((C8 : C2) : C2) : C2"
+    },
+    {
+      "exterior_order": 32,
+      "normal_kernel_count": 46,
+      "q_id": 154,
+      "q_order": 64,
+      "structure": "(C2 . ((C4 x C2) : C2) = (C2 x C2) . (C4 x C2)) : C2"
+    },
+    {
+      "exterior_order": 32,
+      "normal_kernel_count": 38,
+      "q_id": 155,
+      "q_order": 64,
+      "structure": "D8 : Q8"
+    },
+    {
+      "exterior_order": 16,
+      "normal_kernel_count": 27,
+      "q_id": 156,
+      "q_order": 64,
+      "structure": "Q8 : Q8"
+    },
+    {
+      "exterior_order": 32,
+      "normal_kernel_count": 30,
+      "q_id": 157,
+      "q_order": 64,
+      "structure": "D8 : Q8"
+    },
+    {
+      "exterior_order": 16,
+      "normal_kernel_count": 27,
+      "q_id": 158,
+      "q_order": 64,
+      "structure": "Q8 : Q8"
+    },
+    {
+      "exterior_order": 16,
+      "normal_kernel_count": 27,
+      "q_id": 159,
+      "q_order": 64,
+      "structure": "(C8 : C4) : C2"
+    },
+    {
+      "exterior_order": 16,
+      "normal_kernel_count": 27,
+      "q_id": 160,
+      "q_order": 64,
+      "structure": "(C2 x C2) . (C2 x D8) = (C4 x C2) . (C2 x C2 x C2)"
+    },
+    {
+      "exterior_order": 32,
+      "normal_kernel_count": 38,
+      "q_id": 161,
+      "q_order": 64,
+      "structure": "(C8 : C4) : C2"
+    },
+    {
+      "exterior_order": 32,
+      "normal_kernel_count": 30,
+      "q_id": 162,
+      "q_order": 64,
+      "structure": "(C8 : C4) : C2"
+    },
+    {
+      "exterior_order": 32,
+      "normal_kernel_count": 28,
+      "q_id": 163,
+      "q_order": 64,
+      "structure": "(C8 : C4) : C2"
+    },
+    {
+      "exterior_order": 16,
+      "normal_kernel_count": 27,
+      "q_id": 164,
+      "q_order": 64,
+      "structure": "(C8 : C4) : C2"
+    },
+    {
+      "exterior_order": 16,
+      "normal_kernel_count": 27,
+      "q_id": 165,
+      "q_order": 64,
+      "structure": "(C8 : C4) : C2"
+    },
+    {
+      "exterior_order": 16,
+      "normal_kernel_count": 27,
+      "q_id": 166,
+      "q_order": 64,
+      "structure": "(C8 : C4) : C2"
+    },
+    {
+      "exterior_order": 64,
+      "normal_kernel_count": 43,
+      "q_id": 167,
+      "q_order": 64,
+      "structure": "(C4 : Q8) : C2"
+    },
+    {
+      "exterior_order": 32,
+      "normal_kernel_count": 30,
+      "q_id": 168,
+      "q_order": 64,
+      "structure": "(C2 x C2) . (C2 x D8) = (C4 x C2) . (C2 x C2 x C2)"
+    },
+    {
+      "exterior_order": 32,
+      "normal_kernel_count": 30,
+      "q_id": 169,
+      "q_order": 64,
+      "structure": "((C2 x C2) . (C2 x C2 x C2)) : C2"
+    },
+    {
+      "exterior_order": 32,
+      "normal_kernel_count": 30,
+      "q_id": 170,
+      "q_order": 64,
+      "structure": "(C4 : Q8) : C2"
+    },
+    {
+      "exterior_order": 32,
+      "normal_kernel_count": 30,
+      "q_id": 171,
+      "q_order": 64,
+      "structure": "((C2 x C2) . (C2 x C2 x C2)) : C2"
+    },
+    {
+      "exterior_order": 32,
+      "normal_kernel_count": 30,
+      "q_id": 172,
+      "q_order": 64,
+      "structure": "(C2 x C2) . (C2 x D8) = (C4 x C2) . (C2 x C2 x C2)"
+    },
+    {
+      "exterior_order": 64,
+      "normal_kernel_count": 65,
+      "q_id": 173,
+      "q_order": 64,
+      "structure": "C4 : QD16"
+    },
+    {
+      "exterior_order": 128,
+      "normal_kernel_count": 100,
+      "q_id": 174,
+      "q_order": 64,
+      "structure": "C4 : D16"
+    },
+    {
+      "exterior_order": 64,
+      "normal_kernel_count": 65,
+      "q_id": 175,
+      "q_order": 64,
+      "structure": "C4 : Q16"
+    },
+    {
+      "exterior_order": 64,
+      "normal_kernel_count": 65,
+      "q_id": 176,
+      "q_order": 64,
+      "structure": "(C2 x Q16) : C2"
+    },
+    {
+      "exterior_order": 64,
+      "normal_kernel_count": 65,
+      "q_id": 177,
+      "q_order": 64,
+      "structure": "C8 : D8"
+    },
+    {
+      "exterior_order": 64,
+      "normal_kernel_count": 65,
+      "q_id": 178,
+      "q_order": 64,
+      "structure": "(C2 x Q16) : C2"
+    },
+    {
+      "exterior_order": 32,
+      "normal_kernel_count": 28,
+      "q_id": 179,
+      "q_order": 64,
+      "structure": "C8 : Q8"
+    },
+    {
+      "exterior_order": 16,
+      "normal_kernel_count": 27,
+      "q_id": 180,
+      "q_order": 64,
+      "structure": "(C2 x C2) . (C2 x D8) = (C4 x C2) . (C2 x C2 x C2)"
+    },
+    {
+      "exterior_order": 32,
+      "normal_kernel_count": 38,
+      "q_id": 181,
+      "q_order": 64,
+      "structure": "C8 : Q8"
+    },
+    {
+      "exterior_order": 16,
+      "normal_kernel_count": 27,
+      "q_id": 182,
+      "q_order": 64,
+      "structure": "C8 : Q8"
+    },
+    {
+      "exterior_order": 8,
+      "normal_kernel_count": 16,
+      "q_id": 183,
+      "q_order": 64,
+      "structure": "C16 x C2 x C2"
+    },
+    {
+      "exterior_order": 8,
+      "normal_kernel_count": 16,
+      "q_id": 184,
+      "q_order": 64,
+      "structure": "C2 x (C16 : C2)"
+    },
+    {
+      "exterior_order": 8,
+      "normal_kernel_count": 16,
+      "q_id": 185,
+      "q_order": 64,
+      "structure": "(C16 : C2) : C2"
+    },
+    {
+      "exterior_order": 64,
+      "normal_kernel_count": 49,
+      "q_id": 186,
+      "q_order": 64,
+      "structure": "C2 x D32"
+    },
+    {
+      "exterior_order": 32,
+      "normal_kernel_count": 38,
+      "q_id": 187,
+      "q_order": 64,
+      "structure": "C2 x QD32"
+    },
+    {
+      "exterior_order": 32,
+      "normal_kernel_count": 38,
+      "q_id": 188,
+      "q_order": 64,
+      "structure": "C2 x Q32"
+    },
+    {
+      "exterior_order": 32,
+      "normal_kernel_count": 38,
+      "q_id": 189,
+      "q_order": 64,
+      "structure": "Q32 : C2"
+    },
+    {
+      "exterior_order": 32,
+      "normal_kernel_count": 38,
+      "q_id": 190,
+      "q_order": 64,
+      "structure": "C16 : (C2 x C2)"
+    },
+    {
+      "exterior_order": 32,
+      "normal_kernel_count": 38,
+      "q_id": 191,
+      "q_order": 64,
+      "structure": "Q32 : C2"
+    }
+  ],
+  "scanned_quotient_count": 191,
+  "schema_version": 1,
+  "software": {
+    "external_dependencies": [],
+    "implementation": "CPython",
+    "python": "3.9.6"
+  },
+  "status": "[COMPUTED] exact bounded batch; no global h(7) upper bound claimed",
+  "status_distribution": {
+    "clique_ge_8": 3996,
+    "nonfaithful_radical": 8606
+  },
+  "unique_faithful_graph_count": 3637
+}

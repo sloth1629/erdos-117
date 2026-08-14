@@ -1,0 +1,5 @@
+[COMPUTED] exact affine-dual cutoff-seven certificate for SmallGroup(64,261)
+characters=2048 good=1152 even_good=1024 odd_good=128
+rref_subspaces=2825 odd_subgroups=26387 statuses={'clique_ge_8': 26323, 'nonfaithful_radical': 64}
+faithful_subgroups=22641 unique_faithful_graphs=5870 candidates=0
+wrote experiments/logs/h7_c2_3_d8.json

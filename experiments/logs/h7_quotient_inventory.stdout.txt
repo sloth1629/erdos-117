@@ -1,0 +1,6 @@
+status=[COMPUTED] inventory only; no h(7) upper bound claimed
+quotients=738 abelian=150 elementary_abelian=33
+cumulative_exterior_tiers={'1': 81, '2': 111, '4': 162, '8': 265, '16': 395, '32': 542, '64': 662, '128': 710, '256': 724, '512': 727, '1024': 736, '4096': 737, '32768': 738}
+exact_raw_kernel_explosions=[(64, 267, 'C2 x C2 x C2 x C2 x C2 x C2', 623476476706836148), (32, 51, 'C2 x C2 x C2 x C2 x C2', 229755605), (64, 260, 'C4 x C2 x C2 x C2 x C2', 229755605)]
+C3^4_raw_kernels=56632; C2^6_raw_kernels=623476476706836148
+wrote experiments/logs/h7_quotient_inventory.json

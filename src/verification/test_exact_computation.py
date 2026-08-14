@@ -47,6 +47,30 @@ from analyze_f6_maximal_cover_audit import (  # noqa: E402
     parse_tsv as parse_f6_cover_tsv,
     verify_group_row as verify_f6_cover_group_row,
 )
+from analyze_h7_quotient_inventory import validate_inventory as validate_h7_inventory  # noqa: E402
+from analyze_h7_exterior_batch import verify_saved_batch as verify_h7_batch  # noqa: E402
+from analyze_h7_capability_order64 import (  # noqa: E402
+    validate_capability_batches as validate_h7_capability_batches,
+)
+from h7_c2_6_pencils import exact_certificate as fresh_h7_c2_6_rank6_certificate  # noqa: E402
+from h7_c2_6_rank4_pencils import exact_certificate as fresh_h7_c2_6_rank4_certificate  # noqa: E402
+from h7_c4_2_c2_2 import (  # noqa: E402
+    exact_certificate as fresh_h7_c4_2_c2_2_certificate,
+    verify_certificate as verify_h7_c4_2_c2_2_certificate,
+)
+from h7_c2_3_d8 import (  # noqa: E402
+    exact_certificate as fresh_h7_c2_3_d8_certificate,
+    verify_certificate as verify_h7_c2_3_d8_certificate,
+)
+from h7_order64_dual import (  # noqa: E402
+    exact_certificate as fresh_h7_order64_dual_certificate,
+)
+from h7_c3_4 import (  # noqa: E402
+    exact_certificate as fresh_h7_c3_4_certificate,
+    graph_from_subspace as h7_c3_4_graph,
+    projective_vectors as h7_c3_4_vectors,
+    scalar_form_graphs as h7_c3_4_scalar_graphs,
+)
 
 
 def brute_force_clique(adjacency):
@@ -938,6 +962,376 @@ class ScalarSymplecticLogTests(unittest.TestCase):
             document["total_irredundant_covers"],
             document["total_qualifying_covers"],
         ))
+
+    def test_h7_quotient_inventory_and_c3_4_orbits(self):
+        inventory_path = REPOSITORY / "experiments" / "logs" / "h7_quotient_inventory.json"
+        inventory = json.loads(inventory_path.read_text(encoding="utf-8"))
+        raw_inventory = REPOSITORY / inventory["inventory"]
+        gap_script = REPOSITORY / inventory["configuration"]
+        self.assertEqual(
+            inventory["inventory_sha256"], hashlib.sha256(raw_inventory.read_bytes()).hexdigest()
+        )
+        self.assertEqual(
+            inventory["configuration_sha256"], hashlib.sha256(gap_script.read_bytes()).hexdigest()
+        )
+        self.assertEqual((738, 150, 33), (
+            inventory["quotient_count"], inventory["abelian_quotient_count"],
+            inventory["elementary_abelian_quotient_count"],
+        ))
+        rebuilt_inventory = validate_h7_inventory(raw_inventory)
+        self.assertEqual(738, len(rebuilt_inventory["rows"]))
+        self.assertEqual(
+            inventory["cumulative_exterior_order_tiers"], rebuilt_inventory["tier_counts"]
+        )
+        self.assertEqual(
+            inventory["exterior_order_distribution"],
+            {str(key): value for key, value in sorted(rebuilt_inventory["exterior_distribution"].items())},
+        )
+        explosions = [
+            (record["q_order"], record["q_id"], record["exact_raw_kernel_count"])
+            for record in rebuilt_inventory["exact_explosions"]
+        ]
+        self.assertEqual([
+            (64, 267, 623476476706836148),
+            (32, 51, 229755605),
+            (64, 260, 229755605),
+        ], explosions)
+
+        log_path = REPOSITORY / "experiments" / "logs" / "h7_c3_4.json"
+        document = json.loads(log_path.read_text(encoding="utf-8"))
+        self.assertEqual(
+            document["inventory_certificate_sha256"],
+            hashlib.sha256((REPOSITORY / document["inventory_certificate"]).read_bytes()).hexdigest(),
+        )
+        certificate = document["certificate"]
+        # This fresh full reconstruction enumerates all 56,632 subspaces,
+        # repartitions all 55,941 faithful cases, checks every generator
+        # transport, and recomputes the 16 exact graph records.
+        self.assertEqual(certificate, fresh_h7_c3_4_certificate())
+        self.assertEqual((56632, 55941, 691, 16, 55941), (
+            certificate["raw_subspace_count"], certificate["faithful_subspace_count"],
+            certificate["nonfaithful_subspace_count"], certificate["orbit_count"],
+            certificate["orbit_size_sum"],
+        ))
+        self.assertEqual([4], certificate["eligible_orbit_indices"])
+        self.assertEqual(10, certificate["maximum_a_at_nu_at_most_7"])
+        scalar_graphs = h7_c3_4_scalar_graphs()
+        self.assertEqual(40, len(h7_c3_4_vectors()))
+        weighted = {}
+        for index, record in enumerate(certificate["orbits"]):
+            subspace = tuple(tuple(row) for row in record["representative_rref"])
+            adjacency = h7_c3_4_graph(subspace, scalar_graphs)
+            self.assertEqual(tuple(record["projective_adjacency"]), adjacency)
+            clique = tuple(record["clique_certificate"])
+            colors = tuple(record["coloring_certificate"])
+            self.assertTrue(verify_clique(adjacency, clique))
+            self.assertTrue(verify_coloring(adjacency, colors))
+            self.assertEqual(record["omega"], len(clique))
+            self.assertEqual(record["chi"], max(colors) + 1)
+            pair = (record["omega"], record["chi"])
+            weighted[pair] = weighted.get(pair, 0) + record["orbit_size"]
+            if index == 4:
+                self.assertEqual((7, 10, 234), (
+                    record["omega"], record["chi"], record["orbit_size"],
+                ))
+        self.assertEqual({
+            (7, 10): 234, (10, 10): 2106, (12, 12): 3120,
+            (16, 16): 5265, (25, 25): 9360, (28, 28): 21100,
+            (31, 31): 1560, (34, 34): 5265, (37, 37): 5590,
+            (40, 40): 2341,
+        }, weighted)
+
+    def test_h7_bounded_batches_and_c2_6_pencil_certificates(self):
+        expected_batches = {
+            "h7_exterior_1_36.json": (
+                162, 161, 23527,
+                {"candidate": 317, "clique_ge_8": 4979, "nonfaithful_radical": 18231},
+                4045,
+            ),
+            "h7_exterior_37_63.json": (
+                157, 157, 9657,
+                {"clique_ge_8": 2933, "nonfaithful_radical": 6724},
+                2419,
+            ),
+            "h7_exterior_65_80.json": (
+                137, 137, 9816,
+                {"clique_ge_8": 2884, "nonfaithful_radical": 6932},
+                2356,
+            ),
+            "h7_exterior_81.json": (
+                15, 14, 368,
+                {"clique_ge_8": 197, "nonfaithful_radical": 171},
+                121,
+            ),
+            "h7_exterior_64_1_191.json": (
+                191, 191, 12602,
+                {"clique_ge_8": 3996, "nonfaithful_radical": 8606},
+                3637,
+            ),
+        }
+        batch_documents = {}
+        for filename, expected in expected_batches.items():
+            path = REPOSITORY / "experiments" / "logs" / filename
+            batch_documents[filename] = json.loads(path.read_text(encoding="utf-8"))
+            rebuilt = verify_h7_batch(path, REPOSITORY)
+            self.assertEqual(expected, (
+                rebuilt["quotient_row_count"], rebuilt["scanned_quotient_count"],
+                rebuilt["kernel_record_count"], rebuilt["status_distribution"],
+                rebuilt["unique_faithful_graph_count"],
+            ))
+            self.assertEqual([], rebuilt["failure_rows"])
+        self.assertEqual([{
+            "small_group": [81, 15],
+            "path": "experiments/logs/h7_c3_4.json",
+            "sha256": hashlib.sha256(
+                (REPOSITORY / "experiments/logs/h7_c3_4.json").read_bytes()
+            ).hexdigest(),
+        }], batch_documents["h7_exterior_81.json"]["delegated_certificates"])
+        first_batch = batch_documents["h7_exterior_1_36.json"]
+        omega_seven = sorted(
+            (record["q_order"], record["q_id"], record["kernel_serial"])
+            for record in first_batch["candidate_records"] if record["nu"] == 7
+        )
+        self.assertEqual([(8, 5, 1), (12, 3, 1), (12, 4, 1)], omega_seven)
+
+        rank_six_path = REPOSITORY / "experiments/logs/h7_c2_6_rank6_pencils.json"
+        rank_six = json.loads(rank_six_path.read_text(encoding="utf-8"))["certificate"]
+        self.assertEqual(rank_six, fresh_h7_c2_6_rank6_certificate())
+        self.assertEqual((16383, 14, 6, 9), (
+            rank_six["normalized_pencil_count"],
+            rank_six["all_raw_form_orbit_count_including_zero_and_beta"],
+            rank_six["symplectic_pencil_orbit_count"], rank_six["minimum_omega"],
+        ))
+        self.assertEqual([9, 11, 12, 15, 15, 15], sorted(
+            record["omega"] for record in rank_six["pencil_orbits"]
+        ))
+
+        rank_four_path = REPOSITORY / "experiments/logs/h7_c2_6_rank4_pencils.json"
+        rank_four = json.loads(rank_four_path.read_text(encoding="utf-8"))["certificate"]
+        self.assertEqual(rank_four, fresh_h7_c2_6_rank4_certificate())
+        self.assertEqual((16383, 5471, 12, 7, [1, 76]), (
+            rank_four["normalized_pencil_count"], rank_four["no_rank_six_pencil_count"],
+            rank_four["stabilizer_orbit_count"], rank_four["relevant_orbit_count"],
+            rank_four["low_orbit_representatives"],
+        ))
+        self.assertEqual({
+            "clique_ge_8": 5450,
+            "common_radical_equals_beta_radical": 21,
+        }, rank_four["direct_dichotomy_distribution"])
+
+    def test_h7_c4_2_c2_2_exterior_kernel_certificate(self):
+        path = REPOSITORY / "experiments/logs/h7_c4_2_c2_2.json"
+        document = json.loads(path.read_text(encoding="utf-8"))
+        inventory_path = REPOSITORY / document["inventory_certificate"]
+        self.assertEqual(
+            document["inventory_certificate_sha256"],
+            hashlib.sha256(inventory_path.read_bytes()).hexdigest(),
+        )
+        for field in ("producer", "runner"):
+            source_path = REPOSITORY / document[field]
+            self.assertEqual(
+                document[field + "_sha256"],
+                hashlib.sha256(source_path.read_bytes()).hexdigest(),
+            )
+        certificate = document["certificate"]
+        # First rebuild the entire producer output. This independently repeats
+        # the RREF/coset subgroup classification and all 5,276 graph checks.
+        self.assertEqual(certificate, fresh_h7_c4_2_c2_2_certificate())
+        # Then parse every saved record again and reconstruct its subgroup,
+        # radical, and saved clique/radical witness without trusting aggregates.
+        rebuilt = verify_h7_c4_2_c2_2_certificate(certificate)
+        self.assertEqual((5276, 2351, 2925, 0), (
+            rebuilt["subgroup_count"],
+            rebuilt["status_distribution"]["clique_ge_8"],
+            rebuilt["status_distribution"]["nonfaithful_radical"],
+            rebuilt["cutoff_seven_candidate_count"],
+        ))
+        self.assertEqual({"full": 2451, "two": 2451, "zero": 374},
+                         rebuilt["subgroup_projection_distribution"])
+        self.assertEqual(2038, rebuilt["unique_faithful_graph_count"])
+
+    def test_h7_order64_capability_certificate(self):
+        path = REPOSITORY / "experiments/logs/h7_capability_order64.json"
+        document = json.loads(path.read_text(encoding="utf-8"))
+        gap_script = REPOSITORY / document["gap_script"]
+        inventory = REPOSITORY / document["inventory"]
+        self.assertEqual(document["gap_script_sha256"], hashlib.sha256(gap_script.read_bytes()).hexdigest())
+        self.assertEqual(document["inventory_sha256"], hashlib.sha256(inventory.read_bytes()).hexdigest())
+        inputs = []
+        for record in document["inputs"]:
+            input_path = REPOSITORY / record["path"]
+            self.assertEqual(record["sha256"], hashlib.sha256(input_path.read_bytes()).hexdigest())
+            inputs.append(input_path)
+        for record in document["gap_stdout"]:
+            stdout_path = REPOSITORY / record["path"]
+            self.assertEqual(record["sha256"], hashlib.sha256(stdout_path.read_bytes()).hexdigest())
+        rebuilt = validate_h7_capability_batches(inputs, inventory)
+        self.assertEqual(document["certificate"], rebuilt)
+        self.assertEqual((76, {"1": 14, "2": 30, "4": 32}), (
+            rebuilt["quotient_count"],
+            rebuilt["epicentre_size_distribution"],
+        ))
+        self.assertEqual([
+            192, 193, 195, 202, 203, 207, 211,
+            216, 226, 236, 242, 250, 261, 267,
+        ], rebuilt["trivial_center_image_ids"])
+        self.assertEqual(62, len(rebuilt["exterior_zero_excluded_ids"]))
+        self.assertTrue(all(
+            any(record["q_exponents"])
+            and all(
+                not any(vector)
+                for vector in record["universal_exterior_commutator_row"]
+            )
+            for record in rebuilt["nonidentity_epicentre_witnesses"]
+        ))
+        for q_id in range(262, 267):
+            witness = next(
+                record for record in rebuilt["nonidentity_epicentre_witnesses"]
+                if record["q_id"] == q_id
+            )
+            self.assertEqual((7, [0, 0, 0, 0, 0, 1]), (
+                witness["epicentre_position"], witness["q_exponents"],
+            ))
+            self.assertTrue(all(not any(vector) for vector in witness["cover_generator_commutators"]))
+
+    def test_h7_global_quotient_partition(self):
+        inventory_document = json.loads((
+            REPOSITORY / "experiments/logs/h7_quotient_inventory.json"
+        ).read_text(encoding="utf-8"))
+        inventory = validate_h7_inventory(
+            REPOSITORY / inventory_document["inventory"]
+        )
+        inventory_keys = set(inventory["indexed"])
+
+        ordinary = set()
+        for filename in (
+            "h7_exterior_1_36.json",
+            "h7_exterior_37_63.json",
+            "h7_exterior_64_1_191.json",
+            "h7_exterior_65_80.json",
+            "h7_exterior_81.json",
+        ):
+            document = json.loads((
+                REPOSITORY / "experiments/logs" / filename
+            ).read_text(encoding="utf-8"))
+            ordinary.update(
+                (record["q_order"], record["q_id"])
+                for record in document["quotients"]
+            )
+        delegates = {(32, 51), (81, 15)}
+
+        exterior_zero_document = json.loads((
+            REPOSITORY / "experiments/logs/h7_capability_order64.json"
+        ).read_text(encoding="utf-8"))
+        exterior_zero = {
+            (64, q_id) for q_id in
+            exterior_zero_document["certificate"]["exterior_zero_excluded_ids"]
+        }
+        generic_document = json.loads((
+            REPOSITORY / "experiments/logs/h7_order64_dual.json"
+        ).read_text(encoding="utf-8"))
+        generic = {
+            (64, int(certificate["metadata"]["Q_ID"]))
+            for certificate in generic_document["certificates"]
+        }
+        specials = {(64, 192), (64, 261), (64, 267)}
+
+        parts = (ordinary, delegates, exterior_zero, generic, specials)
+        self.assertEqual([660, 2, 62, 11, 3], list(map(len, parts)))
+        for left, right in itertools.combinations(parts, 2):
+            self.assertTrue(left.isdisjoint(right))
+        self.assertEqual(inventory_keys, set().union(*parts))
+
+    def test_h7_order64_generic_dual_certificates(self):
+        path = REPOSITORY / "experiments/logs/h7_order64_dual.json"
+        document = json.loads(path.read_text(encoding="utf-8"))
+        for field in ("gap_script", "inventory_certificate", "producer", "runner"):
+            source_path = REPOSITORY / document[field]
+            self.assertEqual(
+                document[field + "_sha256"],
+                hashlib.sha256(source_path.read_bytes()).hexdigest(),
+            )
+        input_paths = []
+        for record in document["inputs"]:
+            input_path = REPOSITORY / record["path"]
+            self.assertEqual(
+                record["sha256"], hashlib.sha256(input_path.read_bytes()).hexdigest()
+            )
+            input_paths.append(input_path)
+        for record in document["gap_stdout"]:
+            stdout_path = REPOSITORY / record["path"]
+            self.assertEqual(
+                record["sha256"], hashlib.sha256(stdout_path.read_bytes()).hexdigest()
+            )
+
+        expected = {
+            193: (192, 498, 4053, {"4": 334, "8": 128, "16": 35, "64": 1}),
+            195: (64, 450, 1765, {"4": 294, "8": 120, "16": 35, "64": 1}),
+            202: (224, 498, 2609, {"4": 330, "8": 132, "16": 35, "64": 1}),
+            203: (128, 482, 2141, {"4": 318, "8": 128, "16": 35, "64": 1}),
+            207: (96, 466, 1953, {"4": 306, "8": 124, "16": 35, "64": 1}),
+            211: (288, 498, 2453, {"4": 330, "8": 132, "16": 35, "64": 1}),
+            216: (96, 466, 1953, {"4": 306, "8": 124, "16": 35, "64": 1}),
+            226: (128, 482, 2141, {"4": 318, "8": 128, "16": 35, "64": 1}),
+            236: (64, 450, 1765, {"4": 294, "8": 120, "16": 35, "64": 1}),
+            242: (64, 450, 1765, {"4": 294, "8": 120, "16": 35, "64": 1}),
+            250: (96, 466, 1953, {"4": 306, "8": 124, "16": 35, "64": 1}),
+        }
+        self.assertEqual(11, len(document["certificates"]))
+        for input_path, saved in zip(input_paths, document["certificates"]):
+            # This fresh no-orbit BFS rechecks every retained subgroup and
+            # every saved scalar/boundary eight-clique before exact equality.
+            rebuilt = fresh_h7_order64_dual_certificate(input_path)
+            self.assertEqual(saved, rebuilt)
+            q_id = int(rebuilt["metadata"]["Q_ID"])
+            self.assertEqual(expected[q_id], (
+                rebuilt["good_character_count"],
+                rebuilt["retained_no_eight_subgroup_count"],
+                rebuilt["pruned_boundary_subgroup_count"],
+                rebuilt["radical_size_distribution"],
+            ))
+            self.assertEqual(
+                {"nonfaithful_radical": rebuilt["retained_no_eight_subgroup_count"]},
+                rebuilt["retained_status_distribution"],
+            )
+            self.assertEqual(0, rebuilt["faithful_candidate_count"])
+
+    def test_h7_c2_3_d8_affine_dual_certificate(self):
+        path = REPOSITORY / "experiments/logs/h7_c2_3_d8.json"
+        document = json.loads(path.read_text(encoding="utf-8"))
+        for field in (
+            "input", "gap_script", "gap_stdout", "inventory_certificate",
+            "producer", "runner",
+        ):
+            source_path = REPOSITORY / document[field]
+            self.assertEqual(
+                document[field + "_sha256"],
+                hashlib.sha256(source_path.read_bytes()).hexdigest(),
+            )
+        input_path = REPOSITORY / document["input"]
+        certificate = document["certificate"]
+        # Freshly repeat the complete affine RREF census and graph checks.
+        self.assertEqual(certificate, fresh_h7_c2_3_d8_certificate(input_path))
+        # Independently reconstruct every one of the 26,387 saved subgroups
+        # and its stored radical or eight-clique witness.
+        rebuilt = verify_h7_c2_3_d8_certificate(certificate, input_path)
+        self.assertEqual((26387, 22641), (
+            rebuilt["subgroup_count"], rebuilt["faithful_subgroup_count"],
+        ))
+        self.assertEqual({
+            "clique_ge_8": 26323,
+            "nonfaithful_radical": 64,
+        }, rebuilt["status_distribution"])
+        self.assertEqual((1152, 1024, 128, 0), (
+            certificate["good_character_count"],
+            certificate["even_good_character_count"],
+            certificate["odd_good_character_count"],
+            certificate["faithful_candidate_count"],
+        ))
+        obstruction = certificate["all_even_obstruction"]
+        self.assertTrue(any(obstruction["quotient_pc_exponents"]))
+        self.assertEqual([[0] * 10, [0] * 9 + [2]], obstruction["commutator_values"])
+
 
 if __name__ == "__main__":
     unittest.main()

@@ -1,0 +1,8 @@
+Q=SmallGroup(64,261) structure=C2 x C2 x C2 x D8 cover_order=65536 cover_kernel=1024 epicentre_size=1 positions=1 runtime_ms=65
+Q=SmallGroup(64,262) structure=C2 x C2 x C2 x Q8 cover_order=32768 cover_kernel=512 epicentre_size=2 positions=1,7 runtime_ms=34
+Q=SmallGroup(64,263) structure=C2 x C2 x ((C4 x C2) : C2) cover_order=32768 cover_kernel=512 epicentre_size=2 positions=1,7 runtime_ms=37
+Q=SmallGroup(64,264) structure=C2 x ((C2 x C2 x C2) : (C2 x C2)) cover_order=32768 cover_kernel=512 epicentre_size=2 positions=1,7 runtime_ms=47
+Q=SmallGroup(64,265) structure=C2 x ((C2 x Q8) : C2) cover_order=32768 cover_kernel=512 epicentre_size=2 positions=1,7 runtime_ms=49
+Q=SmallGroup(64,266) structure=(((C4 x C2) : C2) : (C2 x C2)) : 1 cover_order=32768 cover_kernel=512 epicentre_size=2 positions=1,7 runtime_ms=39
+Q=SmallGroup(64,267) structure=C2 x C2 x C2 x C2 x C2 x C2 cover_order=2097152 cover_kernel=32768 epicentre_size=1 positions=1 runtime_ms=72
+completed capability batch IDs=261..267

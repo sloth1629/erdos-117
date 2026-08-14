@@ -1,0 +1,16 @@
+Q=SmallGroup(81,1) exterior=1 all_subgroups=1 normal_kernels=1 runtime_ms=4 total_kernels=1
+Q=SmallGroup(81,2) exterior=9 all_subgroups=3 normal_kernels=3 runtime_ms=104 total_kernels=4
+Q=SmallGroup(81,3) exterior=27 all_subgroups=28 normal_kernels=7 runtime_ms=48 total_kernels=11
+Q=SmallGroup(81,4) exterior=9 all_subgroups=3 normal_kernels=3 runtime_ms=23 total_kernels=14
+Q=SmallGroup(81,5) exterior=3 all_subgroups=2 normal_kernels=2 runtime_ms=24 total_kernels=16
+Q=SmallGroup(81,6) exterior=3 all_subgroups=2 normal_kernels=2 runtime_ms=20 total_kernels=18
+Q=SmallGroup(81,7) exterior=27 all_subgroups=28 normal_kernels=7 runtime_ms=175 total_kernels=25
+Q=SmallGroup(81,8) exterior=27 all_subgroups=28 normal_kernels=7 runtime_ms=35 total_kernels=32
+Q=SmallGroup(81,9) exterior=81 all_subgroups=50 normal_kernels=11 runtime_ms=107 total_kernels=43
+Q=SmallGroup(81,10) exterior=27 all_subgroups=28 normal_kernels=7 runtime_ms=44 total_kernels=50
+Q=SmallGroup(81,11) exterior=27 all_subgroups=28 normal_kernels=28 runtime_ms=6638 total_kernels=78
+Q=SmallGroup(81,12) exterior=243 all_subgroups=2664 normal_kernels=234 runtime_ms=86345 total_kernels=312
+Q=SmallGroup(81,13) exterior=27 all_subgroups=28 normal_kernels=28 runtime_ms=434 total_kernels=340
+Q=SmallGroup(81,14) exterior=27 all_subgroups=28 normal_kernels=28 runtime_ms=259 total_kernels=368
+excluded Q=SmallGroup(81,15)
+completed h7 exterior batch; quotient_rows=15 scanned=14 excluded=1 kernels=368

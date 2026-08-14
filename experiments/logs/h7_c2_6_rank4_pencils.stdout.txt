@@ -1,0 +1,5 @@
+[COMPUTED] exact rank-four-pencil dichotomy; not by itself a full C2^6 proof
+normalized=16383 no_rank_six=5471 direct={'clique_ge_8': 5450, 'common_radical_equals_beta_radical': 21}
+stabilizer_generators=25 orbits=12 relevant_orbits=7 low_reps=[1, 76]
+orbit_table=[(1, 15, [2, 4, 4], 6, 4), (2, 360, [2, 4, 4], 11, 2), (4, 10, [2, 2, 4], 9, 4), (38, 1080, [4, 4, 4], 9, 2), (48, 1440, [4, 4, 4], 13, 1), (76, 6, [4, 4, 4], 5, 4), (528, 3840, [4, 4, 6], 15, 1), (776, 1440, [4, 6, 6], 11, 1), (2048, 256, [2, 4, 6], 15, 1), (2049, 3840, [4, 4, 6], 15, 1), (2052, 2560, [4, 4, 4], 15, 1), (2124, 1536, [4, 6, 6], 15, 1)]
+wrote experiments/logs/h7_c2_6_rank4_pencils.json

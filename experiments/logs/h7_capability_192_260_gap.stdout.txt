@@ -1,0 +1,70 @@
+Q=SmallGroup(64,192) structure=C4 x C4 x C2 x C2 cover_order=8192 cover_kernel=128 epicentre_size=1 positions=1 runtime_ms=42
+Q=SmallGroup(64,193) structure=C2 x C2 x ((C4 x C2) : C2) cover_order=8192 cover_kernel=128 epicentre_size=1 positions=1 runtime_ms=51
+Q=SmallGroup(64,194) structure=C2 x C2 x (C4 : C4) cover_order=4096 cover_kernel=64 epicentre_size=2 positions=1,7 runtime_ms=37
+Q=SmallGroup(64,195) structure=C2 x ((C4 x C4) : C2) cover_order=4096 cover_kernel=64 epicentre_size=1 positions=1 runtime_ms=31
+Q=SmallGroup(64,196) structure=C2 x C4 x D8 cover_order=4096 cover_kernel=64 epicentre_size=2 positions=1,7 runtime_ms=36
+Q=SmallGroup(64,197) structure=C2 x C4 x Q8 cover_order=2048 cover_kernel=32 epicentre_size=4 positions=1,6,7,22 runtime_ms=25
+Q=SmallGroup(64,198) structure=C4 x ((C4 x C2) : C2) cover_order=2048 cover_kernel=32 epicentre_size=4 positions=1,6,7,22 runtime_ms=27
+Q=SmallGroup(64,199) structure=(D8 : (C4 x C2)) : 1 cover_order=2048 cover_kernel=32 epicentre_size=4 positions=1,6,7,22 runtime_ms=30
+Q=SmallGroup(64,200) structure=((C2 x Q8) : C4) : 1 cover_order=2048 cover_kernel=32 epicentre_size=4 positions=1,6,7,22 runtime_ms=26
+Q=SmallGroup(64,201) structure=(Q8 : (C4 x C2)) : 1 cover_order=2048 cover_kernel=32 epicentre_size=4 positions=1,6,7,22 runtime_ms=35
+Q=SmallGroup(64,202) structure=C2 x ((C2 x C2 x C2 x C2) : C2) cover_order=8192 cover_kernel=128 epicentre_size=1 positions=1 runtime_ms=39
+Q=SmallGroup(64,203) structure=C2 x ((C4 x C2 x C2) : C2) cover_order=4096 cover_kernel=64 epicentre_size=1 positions=1 runtime_ms=36
+Q=SmallGroup(64,204) structure=C2 x ((C2 x Q8) : C2) cover_order=2048 cover_kernel=32 epicentre_size=2 positions=1,6 runtime_ms=29
+Q=SmallGroup(64,205) structure=C2 x ((C4 x C2 x C2) : C2) cover_order=2048 cover_kernel=32 epicentre_size=2 positions=1,6 runtime_ms=40
+Q=SmallGroup(64,206) structure=((C2 x C2) : ((C4 x C2) : C2)) : 1 cover_order=2048 cover_kernel=32 epicentre_size=2 positions=1,6 runtime_ms=30
+Q=SmallGroup(64,207) structure=C2 x ((C4 x C4) : C2) cover_order=4096 cover_kernel=64 epicentre_size=1 positions=1 runtime_ms=34
+Q=SmallGroup(64,208) structure=C2 x ((C2 x C2) . (C2 x C2 x C2)) cover_order=1024 cover_kernel=16 epicentre_size=4 positions=1,6,7,22 runtime_ms=31
+Q=SmallGroup(64,209) structure=C2 x ((C4 x C4) : C2) cover_order=1024 cover_kernel=16 epicentre_size=4 positions=1,6,7,22 runtime_ms=30
+Q=SmallGroup(64,210) structure=(((C4 x C4) : C2) : C2) : 1 cover_order=1024 cover_kernel=16 epicentre_size=4 positions=1,6,7,22 runtime_ms=27
+Q=SmallGroup(64,211) structure=C2 x ((C4 x C4) : C2) cover_order=8192 cover_kernel=128 epicentre_size=1 positions=1 runtime_ms=38
+Q=SmallGroup(64,212) structure=C2 x (C4 : Q8) cover_order=2048 cover_kernel=32 epicentre_size=2 positions=1,6 runtime_ms=33
+Q=SmallGroup(64,213) structure=(C4 : ((C4 x C2) : C2)) : 1 cover_order=2048 cover_kernel=32 epicentre_size=2 positions=1,6 runtime_ms=33
+Q=SmallGroup(64,214) structure=((C4 x C2) : Q8) : 1 cover_order=1024 cover_kernel=16 epicentre_size=4 positions=1,6,7,22 runtime_ms=24
+Q=SmallGroup(64,215) structure=((C2 x C2 x C2) : D8) : 1 cover_order=2048 cover_kernel=32 epicentre_size=2 positions=1,6 runtime_ms=34
+Q=SmallGroup(64,216) structure=((C4 x C2) : D8) : 1 cover_order=4096 cover_kernel=64 epicentre_size=1 positions=1 runtime_ms=45
+Q=SmallGroup(64,217) structure=(((C2 x Q8) : C2) : C2) : 1 cover_order=2048 cover_kernel=32 epicentre_size=2 positions=1,6 runtime_ms=35
+Q=SmallGroup(64,218) structure=((C4 x C2) : D8) : 1 cover_order=2048 cover_kernel=32 epicentre_size=2 positions=1,6 runtime_ms=47
+Q=SmallGroup(64,219) structure=((C2 x Q8) : (C2 x C2)) : 1 cover_order=1024 cover_kernel=16 epicentre_size=4 positions=1,6,7,22 runtime_ms=31
+Q=SmallGroup(64,220) structure=(((C4 x C4) : C2) : C2) : 1 cover_order=1024 cover_kernel=16 epicentre_size=4 positions=1,6,7,22 runtime_ms=27
+Q=SmallGroup(64,221) structure=(((C4 x C2 x C2) : C2) : C2) : 1 cover_order=1024 cover_kernel=16 epicentre_size=4 positions=1,6,7,22 runtime_ms=28
+Q=SmallGroup(64,222) structure=(((C2 x C2) . (C2 x C2 x C2)) : C2) : 1 cover_order=1024 cover_kernel=16 epicentre_size=4 positions=1,6,7,22 runtime_ms=25
+Q=SmallGroup(64,223) structure=(((C2 x Q8) : C2) : C2) : 1 cover_order=1024 cover_kernel=16 epicentre_size=4 positions=1,6,7,22 runtime_ms=26
+Q=SmallGroup(64,224) structure=((C2 x C2 x C2) : Q8) : 1 cover_order=1024 cover_kernel=16 epicentre_size=4 positions=1,6,7,22 runtime_ms=31
+Q=SmallGroup(64,225) structure=((C4 x C2) : Q8) : 1 cover_order=1024 cover_kernel=16 epicentre_size=4 positions=1,6,7,22 runtime_ms=36
+Q=SmallGroup(64,226) structure=D8 x D8 cover_order=4096 cover_kernel=64 epicentre_size=1 positions=1 runtime_ms=42
+Q=SmallGroup(64,227) structure=(D8 : D8) : 1 cover_order=2048 cover_kernel=32 epicentre_size=2 positions=1,6 runtime_ms=37
+Q=SmallGroup(64,228) structure=(D8 : D8) : 1 cover_order=2048 cover_kernel=32 epicentre_size=2 positions=1,6 runtime_ms=40
+Q=SmallGroup(64,229) structure=(Q8 : D8) : 1 cover_order=2048 cover_kernel=32 epicentre_size=2 positions=1,6 runtime_ms=40
+Q=SmallGroup(64,230) structure=Q8 x D8 cover_order=2048 cover_kernel=32 epicentre_size=2 positions=1,6 runtime_ms=34
+Q=SmallGroup(64,231) structure=(Q8 : D8) : 1 cover_order=2048 cover_kernel=32 epicentre_size=2 positions=1,6 runtime_ms=29
+Q=SmallGroup(64,232) structure=((C4 : C4) : (C2 x C2)) : 1 cover_order=1024 cover_kernel=16 epicentre_size=4 positions=1,6,7,22 runtime_ms=25
+Q=SmallGroup(64,233) structure=(((C4 x C4) : C2) : C2) : 1 cover_order=1024 cover_kernel=16 epicentre_size=4 positions=1,6,7,22 runtime_ms=28
+Q=SmallGroup(64,234) structure=(((C4 x C4) : C2) : C2) : 1 cover_order=1024 cover_kernel=16 epicentre_size=4 positions=1,6,7,22 runtime_ms=26
+Q=SmallGroup(64,235) structure=(D8 : Q8) : 1 cover_order=1024 cover_kernel=16 epicentre_size=4 positions=1,6,7,22 runtime_ms=35
+Q=SmallGroup(64,236) structure=(((C4 x C4) : C2) : C2) : 1 cover_order=2048 cover_kernel=32 epicentre_size=1 positions=1 runtime_ms=28
+Q=SmallGroup(64,237) structure=(((C4 x C4) : C2) : C2) : 1 cover_order=1024 cover_kernel=16 epicentre_size=4 positions=1,6,7,22 runtime_ms=25
+Q=SmallGroup(64,238) structure=(Q8 : Q8) : 1 cover_order=1024 cover_kernel=16 epicentre_size=4 positions=1,6,7,22 runtime_ms=21
+Q=SmallGroup(64,239) structure=Q8 x Q8 cover_order=1024 cover_kernel=16 epicentre_size=4 positions=1,6,7,22 runtime_ms=28
+Q=SmallGroup(64,240) structure=(((C4 x C2 x C2) : C2) : C2) : 1 cover_order=1024 cover_kernel=16 epicentre_size=4 positions=1,6,7,22 runtime_ms=24
+Q=SmallGroup(64,241) structure=((C4 : C4) : (C2 x C2)) : 1 cover_order=1024 cover_kernel=16 epicentre_size=4 positions=1,6,7,22 runtime_ms=35
+Q=SmallGroup(64,242) structure=(((C4 x C2) : C2) : (C2 x C2)) : 1 cover_order=4096 cover_kernel=64 epicentre_size=1 positions=1 runtime_ms=38
+Q=SmallGroup(64,243) structure=(((C2 x C2) . (C2 x C2 x C2)) : C2) : 1 cover_order=1024 cover_kernel=16 epicentre_size=4 positions=1,6,7,22 runtime_ms=58
+Q=SmallGroup(64,244) structure=(((C4 x C4) : C2) : C2) : 1 cover_order=1024 cover_kernel=16 epicentre_size=4 positions=1,6,7,22 runtime_ms=29
+Q=SmallGroup(64,245) structure=((C2 x C2) . (C2 x C2 x C2 x C2)) : 1 cover_order=1024 cover_kernel=16 epicentre_size=4 positions=1,6,7,22 runtime_ms=32
+Q=SmallGroup(64,246) structure=C8 x C2 x C2 x C2 cover_order=4096 cover_kernel=64 epicentre_size=4 positions=1,6,7,22 runtime_ms=41
+Q=SmallGroup(64,247) structure=C2 x C2 x (C8 : C2) cover_order=2048 cover_kernel=32 epicentre_size=4 positions=1,6,7,22 runtime_ms=36
+Q=SmallGroup(64,248) structure=C2 x ((C8 x C2) : C2) cover_order=2048 cover_kernel=32 epicentre_size=4 positions=1,6,7,22 runtime_ms=29
+Q=SmallGroup(64,249) structure=((C8 x C2) : (C2 x C2)) : 1 cover_order=2048 cover_kernel=32 epicentre_size=4 positions=1,6,7,22 runtime_ms=37
+Q=SmallGroup(64,250) structure=C2 x C2 x D16 cover_order=4096 cover_kernel=64 epicentre_size=1 positions=1 runtime_ms=45
+Q=SmallGroup(64,251) structure=C2 x C2 x QD16 cover_order=2048 cover_kernel=32 epicentre_size=2 positions=1,7 runtime_ms=31
+Q=SmallGroup(64,252) structure=C2 x C2 x Q16 cover_order=2048 cover_kernel=32 epicentre_size=2 positions=1,7 runtime_ms=37
+Q=SmallGroup(64,253) structure=C2 x ((C8 x C2) : C2) cover_order=2048 cover_kernel=32 epicentre_size=2 positions=1,7 runtime_ms=32
+Q=SmallGroup(64,254) structure=C2 x (C8 : (C2 x C2)) cover_order=2048 cover_kernel=32 epicentre_size=2 positions=1,7 runtime_ms=37
+Q=SmallGroup(64,255) structure=C2 x ((C2 x Q8) : C2) cover_order=2048 cover_kernel=32 epicentre_size=2 positions=1,7 runtime_ms=39
+Q=SmallGroup(64,256) structure=(QD16 : (C2 x C2)) : 1 cover_order=2048 cover_kernel=32 epicentre_size=2 positions=1,7 runtime_ms=74
+Q=SmallGroup(64,257) structure=(Q16 : (C2 x C2)) : 1 cover_order=2048 cover_kernel=32 epicentre_size=2 positions=1,7 runtime_ms=34
+Q=SmallGroup(64,258) structure=(QD16 : (C2 x C2)) : 1 cover_order=2048 cover_kernel=32 epicentre_size=2 positions=1,7 runtime_ms=31
+Q=SmallGroup(64,259) structure=((C2 x Q16) : C2) : 1 cover_order=2048 cover_kernel=32 epicentre_size=2 positions=1,7 runtime_ms=28
+Q=SmallGroup(64,260) structure=C4 x C2 x C2 x C2 x C2 cover_order=65536 cover_kernel=1024 epicentre_size=2 positions=1,7 runtime_ms=46
+completed capability batch IDs=192..260

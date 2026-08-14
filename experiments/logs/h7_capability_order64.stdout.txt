@@ -1,0 +1,5 @@
+[COMPUTED] exact selected-cover exterior-zero census for SmallGroups(64,192..267)
+quotients=76 epicentre_sizes={'1': 14, '2': 30, '4': 32}
+trivial_center_image_ids=[192, 193, 195, 202, 203, 207, 211, 216, 226, 236, 242, 250, 261, 267]
+exterior_zero_excluded_count=62 witness_count=126
+wrote experiments/logs/h7_capability_order64.json

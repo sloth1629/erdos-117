@@ -1,0 +1,5 @@
+status=[COMPUTED] exact for Q=C3^4; no global h(7) upper bound claimed
+subspaces=56632 faithful=55941 nonfaithful=691 orbits=16
+weighted_distribution=[(7, 10, 234), (10, 10, 2106), (12, 12, 3120), (16, 16, 5265), (25, 25, 9360), (28, 28, 21100), (31, 31, 1560), (34, 34, 5265), (37, 37, 5590), (40, 40, 2341)]
+eligible_orbits=[4] maximum_a=10
+wrote experiments/logs/h7_c3_4.json

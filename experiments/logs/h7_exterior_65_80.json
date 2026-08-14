@@ -1,0 +1,1002 @@
+{
+  "candidate_records": [],
+  "delegated_certificates": [],
+  "exact_candidate_distribution": [],
+  "excluded_quotients": [],
+  "excluded_records": [],
+  "failure_rows": [],
+  "gap_script": "experiments/configs/h7_exterior_scan.g",
+  "gap_script_sha256": "06cfa8333ffa1a8d3b09d3464037d025922280240bf4158aabb965d5aab122e0",
+  "gap_stdout": "experiments/logs/h7_exterior_65_80_gap.stdout.txt",
+  "gap_stdout_sha256": "df8cce83d3d1804e8779ed533dcb5192ff50b4bb5e56460fe7dd491b5fa3e577",
+  "generated_at_utc": "2026-08-13T22:58:38+00:00",
+  "input": "experiments/logs/h7_exterior_65_80.tsv",
+  "input_sha256": "c058a7caddde85cf8cfbc4482e015c73a2a8e868daf517777aad4d6ad7ee6521",
+  "inventory": "experiments/logs/h7_quotient_inventory.json",
+  "inventory_sha256": "9d25ca77b3b931fd558d45a6f4afb5d9dbd6174f1725a87235c62803776b3941",
+  "kernel_record_count": 9816,
+  "metadata": {
+    "CLIQUE_CUTOFF": "7",
+    "END_Q_ORDER": "80",
+    "EXCLUDED_QUOTIENTS": "",
+    "GAP_VERSION": "4.16.0",
+    "SMALLGRP_VERSION": "1.5.4",
+    "START_Q_ID": "1",
+    "START_Q_ORDER": "65"
+  },
+  "quotient_row_count": 137,
+  "quotients": [
+    {
+      "exterior_order": 1,
+      "normal_kernel_count": 1,
+      "q_id": 1,
+      "q_order": 65,
+      "structure": "C65"
+    },
+    {
+      "exterior_order": 3,
+      "normal_kernel_count": 2,
+      "q_id": 1,
+      "q_order": 66,
+      "structure": "C11 x S3"
+    },
+    {
+      "exterior_order": 11,
+      "normal_kernel_count": 2,
+      "q_id": 2,
+      "q_order": 66,
+      "structure": "C3 x D22"
+    },
+    {
+      "exterior_order": 33,
+      "normal_kernel_count": 4,
+      "q_id": 3,
+      "q_order": 66,
+      "structure": "D66"
+    },
+    {
+      "exterior_order": 1,
+      "normal_kernel_count": 1,
+      "q_id": 4,
+      "q_order": 66,
+      "structure": "C66"
+    },
+    {
+      "exterior_order": 1,
+      "normal_kernel_count": 1,
+      "q_id": 1,
+      "q_order": 67,
+      "structure": "C67"
+    },
+    {
+      "exterior_order": 17,
+      "normal_kernel_count": 2,
+      "q_id": 1,
+      "q_order": 68,
+      "structure": "C17 : C4"
+    },
+    {
+      "exterior_order": 1,
+      "normal_kernel_count": 1,
+      "q_id": 2,
+      "q_order": 68,
+      "structure": "C68"
+    },
+    {
+      "exterior_order": 17,
+      "normal_kernel_count": 2,
+      "q_id": 3,
+      "q_order": 68,
+      "structure": "C17 : C4"
+    },
+    {
+      "exterior_order": 34,
+      "normal_kernel_count": 4,
+      "q_id": 4,
+      "q_order": 68,
+      "structure": "D68"
+    },
+    {
+      "exterior_order": 2,
+      "normal_kernel_count": 2,
+      "q_id": 5,
+      "q_order": 68,
+      "structure": "C34 x C2"
+    },
+    {
+      "exterior_order": 1,
+      "normal_kernel_count": 1,
+      "q_id": 1,
+      "q_order": 69,
+      "structure": "C69"
+    },
+    {
+      "exterior_order": 5,
+      "normal_kernel_count": 2,
+      "q_id": 1,
+      "q_order": 70,
+      "structure": "C7 x D10"
+    },
+    {
+      "exterior_order": 7,
+      "normal_kernel_count": 2,
+      "q_id": 2,
+      "q_order": 70,
+      "structure": "C5 x D14"
+    },
+    {
+      "exterior_order": 35,
+      "normal_kernel_count": 4,
+      "q_id": 3,
+      "q_order": 70,
+      "structure": "D70"
+    },
+    {
+      "exterior_order": 1,
+      "normal_kernel_count": 1,
+      "q_id": 4,
+      "q_order": 70,
+      "structure": "C70"
+    },
+    {
+      "exterior_order": 1,
+      "normal_kernel_count": 1,
+      "q_id": 1,
+      "q_order": 71,
+      "structure": "C71"
+    },
+    {
+      "exterior_order": 9,
+      "normal_kernel_count": 3,
+      "q_id": 1,
+      "q_order": 72,
+      "structure": "C9 : C8"
+    },
+    {
+      "exterior_order": 1,
+      "normal_kernel_count": 1,
+      "q_id": 2,
+      "q_order": 72,
+      "structure": "C72"
+    },
+    {
+      "exterior_order": 8,
+      "normal_kernel_count": 3,
+      "q_id": 3,
+      "q_order": 72,
+      "structure": "Q8 : C9"
+    },
+    {
+      "exterior_order": 18,
+      "normal_kernel_count": 6,
+      "q_id": 4,
+      "q_order": 72,
+      "structure": "C9 : Q8"
+    },
+    {
+      "exterior_order": 18,
+      "normal_kernel_count": 6,
+      "q_id": 5,
+      "q_order": 72,
+      "structure": "C4 x D18"
+    },
+    {
+      "exterior_order": 36,
+      "normal_kernel_count": 9,
+      "q_id": 6,
+      "q_order": 72,
+      "structure": "D72"
+    },
+    {
+      "exterior_order": 18,
+      "normal_kernel_count": 6,
+      "q_id": 7,
+      "q_order": 72,
+      "structure": "C2 x (C9 : C4)"
+    },
+    {
+      "exterior_order": 36,
+      "normal_kernel_count": 9,
+      "q_id": 8,
+      "q_order": 72,
+      "structure": "(C18 x C2) : C2"
+    },
+    {
+      "exterior_order": 2,
+      "normal_kernel_count": 2,
+      "q_id": 9,
+      "q_order": 72,
+      "structure": "C36 x C2"
+    },
+    {
+      "exterior_order": 4,
+      "normal_kernel_count": 3,
+      "q_id": 10,
+      "q_order": 72,
+      "structure": "C9 x D8"
+    },
+    {
+      "exterior_order": 2,
+      "normal_kernel_count": 2,
+      "q_id": 11,
+      "q_order": 72,
+      "structure": "C9 x Q8"
+    },
+    {
+      "exterior_order": 3,
+      "normal_kernel_count": 2,
+      "q_id": 12,
+      "q_order": 72,
+      "structure": "C3 x (C3 : C8)"
+    },
+    {
+      "exterior_order": 27,
+      "normal_kernel_count": 7,
+      "q_id": 13,
+      "q_order": 72,
+      "structure": "(C3 x C3) : C8"
+    },
+    {
+      "exterior_order": 3,
+      "normal_kernel_count": 2,
+      "q_id": 14,
+      "q_order": 72,
+      "structure": "C24 x C3"
+    },
+    {
+      "exterior_order": 72,
+      "normal_kernel_count": 7,
+      "q_id": 15,
+      "q_order": 72,
+      "structure": "((C2 x C2) : C9) : C2"
+    },
+    {
+      "exterior_order": 8,
+      "normal_kernel_count": 3,
+      "q_id": 16,
+      "q_order": 72,
+      "structure": "C2 x ((C2 x C2) : C9)"
+    },
+    {
+      "exterior_order": 72,
+      "normal_kernel_count": 48,
+      "q_id": 17,
+      "q_order": 72,
+      "structure": "C2 x C2 x D18"
+    },
+    {
+      "exterior_order": 8,
+      "normal_kernel_count": 16,
+      "q_id": 18,
+      "q_order": 72,
+      "structure": "C18 x C2 x C2"
+    },
+    {
+      "exterior_order": 27,
+      "normal_kernel_count": 3,
+      "q_id": 19,
+      "q_order": 72,
+      "structure": "(C3 x C3) : C8"
+    },
+    {
+      "exterior_order": 18,
+      "normal_kernel_count": 8,
+      "q_id": 20,
+      "q_order": 72,
+      "structure": "(C3 : C4) x S3"
+    },
+    {
+      "exterior_order": 18,
+      "normal_kernel_count": 8,
+      "q_id": 21,
+      "q_order": 72,
+      "structure": "(C3 x C3) : (C4 x C2)"
+    },
+    {
+      "exterior_order": 36,
+      "normal_kernel_count": 12,
+      "q_id": 22,
+      "q_order": 72,
+      "structure": "(C6 x S3) : C2"
+    },
+    {
+      "exterior_order": 36,
+      "normal_kernel_count": 12,
+      "q_id": 23,
+      "q_order": 72,
+      "structure": "(C6 x S3) : C2"
+    },
+    {
+      "exterior_order": 18,
+      "normal_kernel_count": 8,
+      "q_id": 24,
+      "q_order": 72,
+      "structure": "(C3 x C3) : Q8"
+    },
+    {
+      "exterior_order": 24,
+      "normal_kernel_count": 6,
+      "q_id": 25,
+      "q_order": 72,
+      "structure": "C3 x SL(2,3)"
+    },
+    {
+      "exterior_order": 6,
+      "normal_kernel_count": 4,
+      "q_id": 26,
+      "q_order": 72,
+      "structure": "C3 x (C3 : Q8)"
+    },
+    {
+      "exterior_order": 6,
+      "normal_kernel_count": 4,
+      "q_id": 27,
+      "q_order": 72,
+      "structure": "C12 x S3"
+    },
+    {
+      "exterior_order": 12,
+      "normal_kernel_count": 6,
+      "q_id": 28,
+      "q_order": 72,
+      "structure": "C3 x D24"
+    },
+    {
+      "exterior_order": 6,
+      "normal_kernel_count": 4,
+      "q_id": 29,
+      "q_order": 72,
+      "structure": "C6 x (C3 : C4)"
+    },
+    {
+      "exterior_order": 12,
+      "normal_kernel_count": 6,
+      "q_id": 30,
+      "q_order": 72,
+      "structure": "C3 x ((C6 x C2) : C2)"
+    },
+    {
+      "exterior_order": 54,
+      "normal_kernel_count": 14,
+      "q_id": 31,
+      "q_order": 72,
+      "structure": "(C3 x C3) : Q8"
+    },
+    {
+      "exterior_order": 54,
+      "normal_kernel_count": 14,
+      "q_id": 32,
+      "q_order": 72,
+      "structure": "C4 x ((C3 x C3) : C2)"
+    },
+    {
+      "exterior_order": 108,
+      "normal_kernel_count": 21,
+      "q_id": 33,
+      "q_order": 72,
+      "structure": "(C12 x C3) : C2"
+    },
+    {
+      "exterior_order": 54,
+      "normal_kernel_count": 14,
+      "q_id": 34,
+      "q_order": 72,
+      "structure": "C2 x ((C3 x C3) : C4)"
+    },
+    {
+      "exterior_order": 108,
+      "normal_kernel_count": 21,
+      "q_id": 35,
+      "q_order": 72,
+      "structure": "(C6 x C6) : C2"
+    },
+    {
+      "exterior_order": 6,
+      "normal_kernel_count": 4,
+      "q_id": 36,
+      "q_order": 72,
+      "structure": "C12 x C6"
+    },
+    {
+      "exterior_order": 12,
+      "normal_kernel_count": 6,
+      "q_id": 37,
+      "q_order": 72,
+      "structure": "C3 x C3 x D8"
+    },
+    {
+      "exterior_order": 6,
+      "normal_kernel_count": 4,
+      "q_id": 38,
+      "q_order": 72,
+      "structure": "C3 x C3 x Q8"
+    },
+    {
+      "exterior_order": 9,
+      "normal_kernel_count": 2,
+      "q_id": 39,
+      "q_order": 72,
+      "structure": "(C3 x C3) : C8"
+    },
+    {
+      "exterior_order": 36,
+      "normal_kernel_count": 5,
+      "q_id": 40,
+      "q_order": 72,
+      "structure": "(S3 x S3) : C2"
+    },
+    {
+      "exterior_order": 54,
+      "normal_kernel_count": 4,
+      "q_id": 41,
+      "q_order": 72,
+      "structure": "(C3 x C3) : Q8"
+    },
+    {
+      "exterior_order": 24,
+      "normal_kernel_count": 4,
+      "q_id": 42,
+      "q_order": 72,
+      "structure": "C3 x S4"
+    },
+    {
+      "exterior_order": 216,
+      "normal_kernel_count": 13,
+      "q_id": 43,
+      "q_order": 72,
+      "structure": "(C3 x A4) : C2"
+    },
+    {
+      "exterior_order": 24,
+      "normal_kernel_count": 6,
+      "q_id": 44,
+      "q_order": 72,
+      "structure": "A4 x S3"
+    },
+    {
+      "exterior_order": 54,
+      "normal_kernel_count": 6,
+      "q_id": 45,
+      "q_order": 72,
+      "structure": "C2 x ((C3 x C3) : C4)"
+    },
+    {
+      "exterior_order": 72,
+      "normal_kernel_count": 64,
+      "q_id": 46,
+      "q_order": 72,
+      "structure": "C2 x S3 x S3"
+    },
+    {
+      "exterior_order": 24,
+      "normal_kernel_count": 6,
+      "q_id": 47,
+      "q_order": 72,
+      "structure": "C6 x A4"
+    },
+    {
+      "exterior_order": 24,
+      "normal_kernel_count": 32,
+      "q_id": 48,
+      "q_order": 72,
+      "structure": "C2 x C6 x S3"
+    },
+    {
+      "exterior_order": 216,
+      "normal_kernel_count": 112,
+      "q_id": 49,
+      "q_order": 72,
+      "structure": "C2 x C2 x ((C3 x C3) : C2)"
+    },
+    {
+      "exterior_order": 24,
+      "normal_kernel_count": 32,
+      "q_id": 50,
+      "q_order": 72,
+      "structure": "C6 x C6 x C2"
+    },
+    {
+      "exterior_order": 1,
+      "normal_kernel_count": 1,
+      "q_id": 1,
+      "q_order": 73,
+      "structure": "C73"
+    },
+    {
+      "exterior_order": 37,
+      "normal_kernel_count": 2,
+      "q_id": 1,
+      "q_order": 74,
+      "structure": "D74"
+    },
+    {
+      "exterior_order": 1,
+      "normal_kernel_count": 1,
+      "q_id": 2,
+      "q_order": 74,
+      "structure": "C74"
+    },
+    {
+      "exterior_order": 1,
+      "normal_kernel_count": 1,
+      "q_id": 1,
+      "q_order": 75,
+      "structure": "C75"
+    },
+    {
+      "exterior_order": 125,
+      "normal_kernel_count": 3,
+      "q_id": 2,
+      "q_order": 75,
+      "structure": "(C5 x C5) : C3"
+    },
+    {
+      "exterior_order": 5,
+      "normal_kernel_count": 2,
+      "q_id": 3,
+      "q_order": 75,
+      "structure": "C15 x C5"
+    },
+    {
+      "exterior_order": 19,
+      "normal_kernel_count": 2,
+      "q_id": 1,
+      "q_order": 76,
+      "structure": "C19 : C4"
+    },
+    {
+      "exterior_order": 1,
+      "normal_kernel_count": 1,
+      "q_id": 2,
+      "q_order": 76,
+      "structure": "C76"
+    },
+    {
+      "exterior_order": 38,
+      "normal_kernel_count": 4,
+      "q_id": 3,
+      "q_order": 76,
+      "structure": "D76"
+    },
+    {
+      "exterior_order": 2,
+      "normal_kernel_count": 2,
+      "q_id": 4,
+      "q_order": 76,
+      "structure": "C38 x C2"
+    },
+    {
+      "exterior_order": 1,
+      "normal_kernel_count": 1,
+      "q_id": 1,
+      "q_order": 77,
+      "structure": "C77"
+    },
+    {
+      "exterior_order": 13,
+      "normal_kernel_count": 2,
+      "q_id": 1,
+      "q_order": 78,
+      "structure": "C13 : C6"
+    },
+    {
+      "exterior_order": 13,
+      "normal_kernel_count": 2,
+      "q_id": 2,
+      "q_order": 78,
+      "structure": "C2 x (C13 : C3)"
+    },
+    {
+      "exterior_order": 3,
+      "normal_kernel_count": 2,
+      "q_id": 3,
+      "q_order": 78,
+      "structure": "C13 x S3"
+    },
+    {
+      "exterior_order": 13,
+      "normal_kernel_count": 2,
+      "q_id": 4,
+      "q_order": 78,
+      "structure": "C3 x D26"
+    },
+    {
+      "exterior_order": 39,
+      "normal_kernel_count": 4,
+      "q_id": 5,
+      "q_order": 78,
+      "structure": "D78"
+    },
+    {
+      "exterior_order": 1,
+      "normal_kernel_count": 1,
+      "q_id": 6,
+      "q_order": 78,
+      "structure": "C78"
+    },
+    {
+      "exterior_order": 1,
+      "normal_kernel_count": 1,
+      "q_id": 1,
+      "q_order": 79,
+      "structure": "C79"
+    },
+    {
+      "exterior_order": 5,
+      "normal_kernel_count": 2,
+      "q_id": 1,
+      "q_order": 80,
+      "structure": "C5 : C16"
+    },
+    {
+      "exterior_order": 1,
+      "normal_kernel_count": 1,
+      "q_id": 2,
+      "q_order": 80,
+      "structure": "C80"
+    },
+    {
+      "exterior_order": 5,
+      "normal_kernel_count": 2,
+      "q_id": 3,
+      "q_order": 80,
+      "structure": "C5 : C16"
+    },
+    {
+      "exterior_order": 10,
+      "normal_kernel_count": 4,
+      "q_id": 4,
+      "q_order": 80,
+      "structure": "C8 x D10"
+    },
+    {
+      "exterior_order": 10,
+      "normal_kernel_count": 4,
+      "q_id": 5,
+      "q_order": 80,
+      "structure": "C40 : C2"
+    },
+    {
+      "exterior_order": 20,
+      "normal_kernel_count": 6,
+      "q_id": 6,
+      "q_order": 80,
+      "structure": "C40 : C2"
+    },
+    {
+      "exterior_order": 40,
+      "normal_kernel_count": 8,
+      "q_id": 7,
+      "q_order": 80,
+      "structure": "D80"
+    },
+    {
+      "exterior_order": 20,
+      "normal_kernel_count": 6,
+      "q_id": 8,
+      "q_order": 80,
+      "structure": "C5 : Q16"
+    },
+    {
+      "exterior_order": 10,
+      "normal_kernel_count": 4,
+      "q_id": 9,
+      "q_order": 80,
+      "structure": "C2 x (C5 : C8)"
+    },
+    {
+      "exterior_order": 10,
+      "normal_kernel_count": 4,
+      "q_id": 10,
+      "q_order": 80,
+      "structure": "(C5 : C8) : C2"
+    },
+    {
+      "exterior_order": 20,
+      "normal_kernel_count": 6,
+      "q_id": 11,
+      "q_order": 80,
+      "structure": "C4 x (C5 : C4)"
+    },
+    {
+      "exterior_order": 20,
+      "normal_kernel_count": 6,
+      "q_id": 12,
+      "q_order": 80,
+      "structure": "(C5 : C4) : C4"
+    },
+    {
+      "exterior_order": 20,
+      "normal_kernel_count": 6,
+      "q_id": 13,
+      "q_order": 80,
+      "structure": "C20 : C4"
+    },
+    {
+      "exterior_order": 40,
+      "normal_kernel_count": 12,
+      "q_id": 14,
+      "q_order": 80,
+      "structure": "(C20 x C2) : C2"
+    },
+    {
+      "exterior_order": 40,
+      "normal_kernel_count": 8,
+      "q_id": 15,
+      "q_order": 80,
+      "structure": "(C5 x D8) : C2"
+    },
+    {
+      "exterior_order": 20,
+      "normal_kernel_count": 6,
+      "q_id": 16,
+      "q_order": 80,
+      "structure": "(C5 : Q8) : C2"
+    },
+    {
+      "exterior_order": 20,
+      "normal_kernel_count": 6,
+      "q_id": 17,
+      "q_order": 80,
+      "structure": "(C5 x Q8) : C2"
+    },
+    {
+      "exterior_order": 20,
+      "normal_kernel_count": 6,
+      "q_id": 18,
+      "q_order": 80,
+      "structure": "C5 : Q16"
+    },
+    {
+      "exterior_order": 40,
+      "normal_kernel_count": 12,
+      "q_id": 19,
+      "q_order": 80,
+      "structure": "(C10 x C2) : C4"
+    },
+    {
+      "exterior_order": 4,
+      "normal_kernel_count": 3,
+      "q_id": 20,
+      "q_order": 80,
+      "structure": "C20 x C4"
+    },
+    {
+      "exterior_order": 8,
+      "normal_kernel_count": 6,
+      "q_id": 21,
+      "q_order": 80,
+      "structure": "C5 x ((C4 x C2) : C2)"
+    },
+    {
+      "exterior_order": 4,
+      "normal_kernel_count": 3,
+      "q_id": 22,
+      "q_order": 80,
+      "structure": "C5 x (C4 : C4)"
+    },
+    {
+      "exterior_order": 2,
+      "normal_kernel_count": 2,
+      "q_id": 23,
+      "q_order": 80,
+      "structure": "C40 x C2"
+    },
+    {
+      "exterior_order": 2,
+      "normal_kernel_count": 2,
+      "q_id": 24,
+      "q_order": 80,
+      "structure": "C5 x (C8 : C2)"
+    },
+    {
+      "exterior_order": 8,
+      "normal_kernel_count": 4,
+      "q_id": 25,
+      "q_order": 80,
+      "structure": "C5 x D16"
+    },
+    {
+      "exterior_order": 4,
+      "normal_kernel_count": 3,
+      "q_id": 26,
+      "q_order": 80,
+      "structure": "C5 x QD16"
+    },
+    {
+      "exterior_order": 4,
+      "normal_kernel_count": 3,
+      "q_id": 27,
+      "q_order": 80,
+      "structure": "C5 x Q16"
+    },
+    {
+      "exterior_order": 10,
+      "normal_kernel_count": 4,
+      "q_id": 28,
+      "q_order": 80,
+      "structure": "C5 : (C8 x C2)"
+    },
+    {
+      "exterior_order": 10,
+      "normal_kernel_count": 4,
+      "q_id": 29,
+      "q_order": 80,
+      "structure": "(C5 : C8) : C2"
+    },
+    {
+      "exterior_order": 20,
+      "normal_kernel_count": 6,
+      "q_id": 30,
+      "q_order": 80,
+      "structure": "C4 x (C5 : C4)"
+    },
+    {
+      "exterior_order": 20,
+      "normal_kernel_count": 6,
+      "q_id": 31,
+      "q_order": 80,
+      "structure": "C20 : C4"
+    },
+    {
+      "exterior_order": 10,
+      "normal_kernel_count": 4,
+      "q_id": 32,
+      "q_order": 80,
+      "structure": "C2 x (C5 : C8)"
+    },
+    {
+      "exterior_order": 10,
+      "normal_kernel_count": 4,
+      "q_id": 33,
+      "q_order": 80,
+      "structure": "(C5 : C8) : C2"
+    },
+    {
+      "exterior_order": 40,
+      "normal_kernel_count": 12,
+      "q_id": 34,
+      "q_order": 80,
+      "structure": "(C10 x C2) : C4"
+    },
+    {
+      "exterior_order": 40,
+      "normal_kernel_count": 32,
+      "q_id": 35,
+      "q_order": 80,
+      "structure": "C2 x (C5 : Q8)"
+    },
+    {
+      "exterior_order": 40,
+      "normal_kernel_count": 32,
+      "q_id": 36,
+      "q_order": 80,
+      "structure": "C2 x C4 x D10"
+    },
+    {
+      "exterior_order": 80,
+      "normal_kernel_count": 54,
+      "q_id": 37,
+      "q_order": 80,
+      "structure": "C2 x D40"
+    },
+    {
+      "exterior_order": 40,
+      "normal_kernel_count": 32,
+      "q_id": 38,
+      "q_order": 80,
+      "structure": "(C20 x C2) : C2"
+    },
+    {
+      "exterior_order": 80,
+      "normal_kernel_count": 54,
+      "q_id": 39,
+      "q_order": 80,
+      "structure": "D8 x D10"
+    },
+    {
+      "exterior_order": 40,
+      "normal_kernel_count": 32,
+      "q_id": 40,
+      "q_order": 80,
+      "structure": "(C4 x D10) : C2"
+    },
+    {
+      "exterior_order": 40,
+      "normal_kernel_count": 32,
+      "q_id": 41,
+      "q_order": 80,
+      "structure": "Q8 x D10"
+    },
+    {
+      "exterior_order": 40,
+      "normal_kernel_count": 32,
+      "q_id": 42,
+      "q_order": 80,
+      "structure": "(C4 x D10) : C2"
+    },
+    {
+      "exterior_order": 40,
+      "normal_kernel_count": 32,
+      "q_id": 43,
+      "q_order": 80,
+      "structure": "C2 x C2 x (C5 : C4)"
+    },
+    {
+      "exterior_order": 80,
+      "normal_kernel_count": 54,
+      "q_id": 44,
+      "q_order": 80,
+      "structure": "C2 x ((C10 x C2) : C2)"
+    },
+    {
+      "exterior_order": 8,
+      "normal_kernel_count": 16,
+      "q_id": 45,
+      "q_order": 80,
+      "structure": "C20 x C2 x C2"
+    },
+    {
+      "exterior_order": 16,
+      "normal_kernel_count": 27,
+      "q_id": 46,
+      "q_order": 80,
+      "structure": "C10 x D8"
+    },
+    {
+      "exterior_order": 8,
+      "normal_kernel_count": 16,
+      "q_id": 47,
+      "q_order": 80,
+      "structure": "C10 x Q8"
+    },
+    {
+      "exterior_order": 8,
+      "normal_kernel_count": 16,
+      "q_id": 48,
+      "q_order": 80,
+      "structure": "C5 x ((C4 x C2) : C2)"
+    },
+    {
+      "exterior_order": 64,
+      "normal_kernel_count": 6,
+      "q_id": 49,
+      "q_order": 80,
+      "structure": "(C2 x C2 x C2 x C2) : C5"
+    },
+    {
+      "exterior_order": 40,
+      "normal_kernel_count": 32,
+      "q_id": 50,
+      "q_order": 80,
+      "structure": "C2 x C2 x (C5 : C4)"
+    },
+    {
+      "exterior_order": 320,
+      "normal_kernel_count": 5650,
+      "q_id": 51,
+      "q_order": 80,
+      "structure": "C2 x C2 x C2 x D10"
+    },
+    {
+      "exterior_order": 64,
+      "normal_kernel_count": 2825,
+      "q_id": 52,
+      "q_order": 80,
+      "structure": "C10 x C2 x C2 x C2"
+    }
+  ],
+  "scanned_quotient_count": 137,
+  "schema_version": 1,
+  "software": {
+    "external_dependencies": [],
+    "implementation": "CPython",
+    "python": "3.9.6"
+  },
+  "status": "[COMPUTED] exact bounded batch; no global h(7) upper bound claimed",
+  "status_distribution": {
+    "clique_ge_8": 2884,
+    "nonfaithful_radical": 6932
+  },
+  "unique_faithful_graph_count": 2356
+}

@@ -1,0 +1,5 @@
+[COMPUTED] exact normalized rank-six-pencil certificate; not a full C2^6 scan
+normalized_pencils=16383 raw_form_orbits=14 pencil_orbits=6 minimum_omega=9
+rank_profiles=[([2, 4, 6], 336), ([2, 6, 6], 315), ([4, 4, 6], 5040), ([4, 6, 6], 7812), ([6, 6, 6], 2880)]
+orbit_omegas=[(1, 315, 12), (4, 336, 15), (36, 5040, 15), (40, 3780, 11), (76, 4032, 15), (728, 2880, 9)]
+wrote experiments/logs/h7_c2_6_rank6_pencils.json

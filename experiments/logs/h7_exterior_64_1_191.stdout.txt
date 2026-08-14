@@ -1,0 +1,6 @@
+status=[COMPUTED] exact bounded batch; no global h(7) upper bound claimed
+quotient_rows=191 scanned=191 excluded=0 kernels=12602 statuses=[('clique_ge_8', 3996), ('nonfaithful_radical', 8606)]
+faithful_unique_graphs=3637 exact_candidates=0 distribution=[]
+failure_rows=[]
+largest_kernel_counts=[(2983, 64, 60, '(C2 x C2) : ((C4 x C2) : C2)'), (603, 64, 73, '(C4 x C2) : D8'), (452, 64, 67, '(C2 x C2) : ((C4 x C2) : C2)'), (385, 64, 56, 'C2 x ((C4 x C2) : C4)'), (196, 64, 71, 'C4 : ((C4 x C2) : C2)'), (184, 64, 75, '(C4 x C2) : D8'), (164, 64, 128, '(C2 x C2) : D16'), (156, 64, 138, '(C4 x C2) : D8'), (156, 64, 74, '(C2 x C2 x C2) : Q8'), (137, 64, 61, 'C4 : ((C4 x C2) : C2)'), (137, 64, 58, 'C4 x ((C4 x C2) : C2)'), (129, 64, 95, 'C2 x ((C8 x C2) : C2)')]
+wrote experiments/logs/h7_exterior_64_1_191.json

@@ -1,0 +1,13 @@
+[COMPUTED] exact character-dual cutoff-seven certificate for eleven order-64 quotients
+ID=193 characters=256 good=192 retained=498 boundary=4053 radicals={'4': 334, '8': 128, '16': 35, '64': 1}
+ID=195 characters=128 good=64 retained=450 boundary=1765 radicals={'4': 294, '8': 120, '16': 35, '64': 1}
+ID=202 characters=512 good=224 retained=498 boundary=2609 radicals={'4': 330, '8': 132, '16': 35, '64': 1}
+ID=203 characters=256 good=128 retained=482 boundary=2141 radicals={'4': 318, '8': 128, '16': 35, '64': 1}
+ID=207 characters=256 good=96 retained=466 boundary=1953 radicals={'4': 306, '8': 124, '16': 35, '64': 1}
+ID=211 characters=512 good=288 retained=498 boundary=2453 radicals={'4': 330, '8': 132, '16': 35, '64': 1}
+ID=216 characters=256 good=96 retained=466 boundary=1953 radicals={'4': 306, '8': 124, '16': 35, '64': 1}
+ID=226 characters=256 good=128 retained=482 boundary=2141 radicals={'4': 318, '8': 128, '16': 35, '64': 1}
+ID=236 characters=128 good=64 retained=450 boundary=1765 radicals={'4': 294, '8': 120, '16': 35, '64': 1}
+ID=242 characters=256 good=64 retained=450 boundary=1765 radicals={'4': 294, '8': 120, '16': 35, '64': 1}
+ID=250 characters=256 good=96 retained=466 boundary=1953 radicals={'4': 306, '8': 124, '16': 35, '64': 1}
+wrote experiments/logs/h7_order64_dual.json
