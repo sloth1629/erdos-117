@@ -21,6 +21,12 @@ normalizing independent hyperplane normals to the coordinate points, it
 exhausts every torus-covering subfamily in dimensions two through four and
 checks that each cover contains all six normals of a projective line.
 
+`test_h8_sg261_target9_scalar_bridge.py` repairs and independently checks the
+scalar-completeness link for `SmallGroup(64,261)`: it exact-solves all 2,048
+scalar graphs, rechecks the 896 saved nine-cliques, and verifies that the
+target-nine good set is exactly the 1,152-character affine universe used by
+the cutoff-seven and cutoff-eight subgroup certificates.
+
 ```bash
 PYTHONPYCACHEPREFIX=/tmp/erdos117-pycache \
 python3 -m unittest discover -s src/verification -p 'test_*.py' -v

@@ -85,6 +85,18 @@ gives minimum clique number 12.
 from the 22,641 faithful affine-dual subgroups for
 \(\operatorname{SmallGroup}(64,261)\) gives minimum clique number 13.
 
+`[COMPUTED]` The companion scalar-completeness bridge
+`experiments/logs/h8_sg261_target9_scalar_bridge.json` independently
+exact-solves all 2,048 scalar-character graphs for this quotient.  Their
+clique-number distribution is
+\(1^1,3^{155},5^{884},6^{112},11^{448},12^{448}\).  In particular there is
+no scalar graph of clique number eight or nine.  The 1,152 characters with
+no nine-clique are exactly both the scalar-good set saved by the cutoff-seven
+certificate and the explicit union of its 1,024 even characters with its
+128-character odd affine space.  The other 896 records carry rechecked
+nine-cliques.  This is the completeness bridge from the scalar census to the
+26,387 affine-dual subgroup records used above.
+
 `[COMPUTED]` The delegated hashes and their internal records give the
 following remaining cutoff-eight dispositions:
 

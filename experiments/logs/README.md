@@ -105,6 +105,14 @@ Store reproducible text logs here; large or licensed artifacts must not be commi
   `052036975d9a6d30d920873ae8f171dbaa010eec6c7852b3180a918050b0ae61`.
   The exact scope string is “center quotients |Q|<=81 only; no global h(8)
   upper bound.”
+- `h8_sg261_target9_scalar_bridge.json`: `[COMPUTED]` companion repair for
+  the ID-261 scalar-universe completeness link.  It exact-solves all 2,048
+  scalar graphs, records the distribution
+  \(1^1,3^{155},5^{884},6^{112},11^{448},12^{448}\), stores 896 verified
+  nine-cliques, and proves that the cutoff-seven scalar-good set, the saved
+  even-plus-affine universe, and the target-nine and target-ten good sets are
+  identical.  Its SHA-256 is
+  `c0686cf7afd668be0f6c61593b963761bf748be97f521cf213d8b063eadf366b`.
 - `h8_literature_candidate_inventory.{tsv,json}` and the two stdout files:
   `[COMPUTED]` feasibility-only records for the three named post-81
   quotients. The raw TSV and analyzed JSON SHA-256 values are respectively

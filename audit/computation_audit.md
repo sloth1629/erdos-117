@@ -540,6 +540,22 @@ bound by their recorded SHA-256 values and independently rechecked. In this
 bounded inventory, the maximum cover number at \(\nu\le8\) remains ten and
 there is no example with \(a>10\).
 
+[COMPUTED] The original ID-261 cutoff-eight aggregate inherited its scalar
+universe from the cutoff-seven certificate.  The dedicated repair artifact
+`experiments/logs/h8_sg261_target9_scalar_bridge.json`, SHA-256
+`c0686cf7afd668be0f6c61593b963761bf748be97f521cf213d8b063eadf366b`,
+now supplies the omitted target-nine completeness bridge.  Its verifier
+exact-solves all 2,048 scalar graphs and obtains
+\(1^1,3^{155},5^{884},6^{112},11^{448},12^{448}\).  It stores and rechecks a
+nine-clique for each of the 896 excluded characters, and proves equality of
+three independently rebuilt 1,152-element index sets: the saved
+cutoff-seven scalar-good set, the 1,024-even-plus-128-odd affine universe,
+and the target-nine scalar-good set.  Their common index-list SHA-256 is
+`a20bc2a9d502e1ceabebeb3b9f57bfcb7ad029d13980d15d2a082e2ad893e965`.
+The same equality holds at target ten.  Thus the existing 26,387 affine
+subgroup parametrization is complete for the cutoff-eight use; this repairs
+an evidence link and does not change the mathematical conclusion.
+
 [COMPUTED] The feasibility-only post-81 inventory JSON has SHA-256
 `14b10618cb4c1edae5c706420e2eec18d883ddde405057217a7d2bf85daccac3`;
 its raw TSV SHA-256 is

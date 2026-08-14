@@ -453,6 +453,14 @@ Continue auditing quantifiers, finite/infinite scope, central-coset arguments, p
   passed in 211.839 seconds.  The later release worktree, including the
   cutoff-eight and local-counterexample additions, followed by the binary
   rank-three order-64 tail, passed all 34 tests in 517.555 seconds.
+- [COMPUTED] A dedicated ID-261 companion closes the previously implicit
+  scalar-universe link in the cutoff-eight aggregate.  It exact-solves all
+  2,048 scalar graphs, finds no clique number eight or nine, stores verified
+  nine-cliques for the 896 excluded characters, and directly identifies the
+  remaining 1,152 characters with the saved even-plus-affine universe that
+  underlies the complete 26,387-subgroup parametrization.  The companion
+  artifact has SHA-256
+  `c0686cf7afd668be0f6c61593b963761bf748be97f521cf213d8b063eadf366b`.
 - [PROVED] Subject to the explicitly identified [CITED-VERIFIED]
   \(f(7)=81\) input and the exact [COMPUTED] certificates above, the case
   split proves \(a(G)\le10\) for every arbitrary group with
