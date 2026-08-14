@@ -18,9 +18,9 @@ here is now \(1\le n\le7\).
       |     +-- finite-index center for arbitrary G
       |     +-- self-contained 4^(n^2) center-index bound
       |     +-- 4 nu(G)^2 BFC bound
-      |           +-- Guralnick--Maroti derived-subgroup bound [external; CFSG]
+      |           +-- Guralnick--Maroti derived-subgroup bound [CITED-VERIFIED] (CFSG)
       |           +-- C=C_G(G'), with C/Z(C) abelian
-      |                 +-- Nagy--Pach--Tomon abelian coset-cover bound [external]
+      |                 +-- Nagy--Pach--Tomon abelian coset-cover bound [CITED-VERIFIED]
       |                 +-- elementary automorphism and commutator indices
       |                       +-- [G:Z(G)] and h(n) <= 2^O(n log log n)
       |
@@ -50,39 +50,51 @@ here is now \(1\le n\le7\).
             |                 +-- binary exact candidate is false
             +-- pi(q,m) >= mq+1
 
-      +-- Bryce--Fedri--Serena irredundant-cover theorem f(5)=16 [external]
+      +-- Bryce--Fedri--Serena irredundant-cover theorem f(5)=16 [CITED-VERIFIED]
             +-- nu(G)=5 implies [G:Z(G)] <= 16
             +-- central-extension commutators factor through Q wedge Q
-                  +-- Schur-cover normal-kernel enumeration [computer]
+                  +-- Schur-cover normal-kernel enumeration [COMPUTED]
                         +-- omega <= 5 implies chi <= 5 for |Q| <= 16
                               +-- h(5)=5
 
       +-- six-cover theorem f(6)=36
-            |-- maximal/nonmaximal structural reduction [proved/audited]
-            |-- finite maximal-cover leaves [computer + independent verifier]
+            |-- maximal/nonmaximal structural reduction [PROVED]
+            |-- finite maximal-cover leaves [COMPUTED]
             `-- nu(G)=6 implies [G:Z(G)] <= 36
-                  +-- C2^5 zero-radical obstruction [proved]
-                  +-- Schur-cover normal-kernel enumeration [computer]
+                  +-- C2^5 zero-radical obstruction [PROVED]
+                  +-- Schur-cover normal-kernel enumeration [COMPUTED]
                         +-- omega <= 6 implies chi <= 6 for |Q| <= 36
                               +-- h(6)=6
 
-      +-- Abdollahi--Jafarian Amiri seven-cover theorem f(7)=81 [external]
+      +-- Abdollahi--Jafarian Amiri seven-cover theorem f(7)=81 [CITED-VERIFIED]
             +-- self-contained finite center-index bound for arbitrary G
             +-- maximum-clique centralizers descend to a finite irredundant
             |   seven-cover with trivial intersection
             +-- nu(G)=7 implies |G:Z(G)| <= 81
-                  +-- complete 738-type SmallGroups inventory [computer]
+                  +-- complete 738-type SmallGroups inventory [COMPUTED]
                   |     +-- 660 ordinary types / 55,970 normal kernels
-                  |     +-- C2^5 nine-clique obstruction [proved]
-                  |     +-- C3^4 exact GL(4,3)-orbit certificate [computer]
+                  |     +-- C2^5 nine-clique obstruction [PROVED]
+                  |     +-- C3^4 exact GL(4,3)-orbit certificate [COMPUTED]
                   |     +-- 62 explicit nonidentity zero exterior rows
                   |     +-- 11 complete character-annihilator BFS scans
-                  |     +-- C4^2 x C2^2 subgroup certificate [computer]
-                  |     +-- C2^3 x D8 affine-dual certificate [computer]
+                  |     +-- C4^2 x C2^2 subgroup certificate [COMPUTED]
+                  |     +-- C2^3 x D8 affine-dual certificate [COMPUTED]
                   |     +-- C2^6 alternating-pencil classification
                   |           +-- every cutoff-seven graph is 9-colorable
-                  +-- S(3,2) has (nu,a)=(7,10) [proved]
+                  +-- S(3,2) has (nu,a)=(7,10) [PROVED]
                         +-- h(7)=10
+
+      +-- [PROVED] finite 5-group branch at cutoff eight
+            +-- [CITED-VERIFIED] Berkovich finite p-group cover and
+            |   structure theorems
+            +-- [PROVED] at most eight F5-hyperplanes imply a six-pencil
+            |     +-- [PROVED] torus count excludes normal-span dimension
+            |     |   at least five
+            |     +-- [COMPUTED] dimensions two through four
+            +-- [PROVED] an eight-centralizer cover would cover a pencil member by
+            |   at most four proper subgroups, an impossibility
+            +-- [PROVED] nu(P) <= 8 implies
+                (nu(P),a(P))=(1,1) or (6,6)
 
 The \(h(5)\), \(h(6)\), and \(h(7)\) branches are explicitly
 computer-assisted.  Their
@@ -91,9 +103,12 @@ and the standard nonabelian-exterior-square/Schur-cover construction; the
 repository contains repaired structural reductions and independent finite
 certificates for the six-cover leaves.  At seven, the external dependency is
 Theorem B (p. 292, proof pp. 299--300) of Abdollahi--Jafarian Amiri; the
-repository independently certifies every post-reduction finite case.  All
-other branches displayed above are computation-independent. Neumann (1976) is
-primary-verified historical corroboration.  The displayed subfactorial
+repository independently certifies every post-reduction finite case. All
+other branches displayed above are computation-independent except for the
+explicitly marked small-dimensional hyperplane-cover check in the finite
+\(5\)-group cutoff-eight branch. That branch does not determine \(h(8)\).
+Neumann (1976) is primary-verified historical corroboration. The displayed
+subfactorial
 branch uses the proof-audited Guralnick--Maróti and Nagy--Pach--Tomon
 theorems and retains the former's CFSG dependence.  Pyber's stronger
 fixed-base exponential upper bound remains inaccessible at proof level and

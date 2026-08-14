@@ -413,25 +413,33 @@ that \(\gamma(G)=p+1\) exactly when
 \(G=H Z(G)\), where \(H\) is any minimal nonabelian subgroup and
 \(H\cap Z(G)=Z(H)\).  Theorem 4.4, stated on p. 424 and proved on p. 425,
 says that a finite \(p\)-group with an irredundant cover by \(p+2\) proper
-subgroups must have \(p=2\).
+subgroups must have \(p=2\).  Proposition 4.5, printed pp. 425--426, proves
+that a cover by \(k\le2p\) proper subgroups has at least \(p\) maximal
+members, and, when \(p>3\) and \(p+2<k<2p\), at least \(p+1\) maximal
+members.
 
-[PROVED] These results give only the following cutoff-eight consequences.
+[PROVED] These results, together with the repository's small
+\(\mathbf F _5\)-hyperplane lemma, give the following cutoff-eight
+consequences.
 A nonabelian finite \(p\)-group with \(\nu\le8\) has \(p\le7\), and an odd
 \(p\)-group cannot have \(\nu=p+2\).  For \(p=7\), necessarily
 \(\nu=8=p+1\), so \(G=H Z(G)\) as above; the \(p+1\) abelian maximal
 subgroups of \(H\), enlarged by \(Z(G)\), cover \(G\), and therefore
 \(a(G)=\nu(G)=8\).  For \(p=5\), the \(\nu=6\) branch has the same
 description and \(a=6\), the value \(\nu=7\) is impossible, and
-\(\nu=8\) is not settled by this paper.  For \(p=3\), the \(\nu=4\) branch
-is described likewise with \(a=4\), the value \(\nu=5\) is impossible, and
+Proposition 4.5 plus the certified hyperplane lemma exclude \(\nu=8\).
+Thus a finite \(5\)-group with \(\nu\le8\) has
+\((\nu,a)\in\{(1,1),(6,6)\}\).  For \(p=3\), the \(\nu=4\) branch is
+described likewise with \(a=4\), the value \(\nu=5\) is impossible, and
 \(\nu\in\{6,7,8\}\) remains outside these theorems.  The result gives no
-complete classification for \(p=2\).
+complete classification for \(p=2\).  The complete computer-assisted
+five-group proof is in `notes/five_group_nu8.md`.
 
 [UNVERIFIED] No accessible primary source located through the 2026-08-14
 continuation search gives a complete classification of all finite
 \(p\)-groups, all solvable groups, or all stem/isoclinism families with
 \(\nu\le8\), nor an exact general value of \(f(8)\).  Berkovich's verified
-theorems are therefore useful pruning only and are not load-bearing for a
+theorems and the repository's finite \(5\)-group closure still do not give a
 global value of \(h(8)\).
 
 ## Forward citations and possible later resolutions

@@ -21,7 +21,7 @@ coverage.
 The verifier compares both optimized graph solvers with naive exhaustive
 enumeration for every one of the \(33{,}868\) labeled simple graphs having at
 most six vertices. It also reconstructs every saved group and certificate.
-The final audit on Python 3.9.6 passed all 32 tests in 598.056 seconds.
+The final audit on Python 3.9.6 passed all 33 tests in 863.720 seconds.
 
 \subsection{Saved exact records}
 
@@ -178,6 +178,23 @@ The corresponding JSON filenames are, respectively,
 \path{h7_c2_6_*_pencils} files, and \path{h7_c3_4}, all under
 \path{experiments/logs/} with extension \path{.json}.
 
+The finite \(5\)-group cutoff-eight theorem uses one additional small exact
+certificate.  After independent normal vectors are changed to the coordinate
+points, the verifier exhausts every torus-covering subfamily in dimensions
+two, three, and four.  It checks respectively \(16\), \(122{,}438\), and
+\(10{,}626\) subfamilies, finds \(1\), \(87\), and \(6\) covers, and verifies
+that every cover contains all six points of a projective line.  In dimension
+four, all \(152\) noncoordinate normals are checked before cardinality
+reduces the enumeration to the \(24\) maximum masks.  Dimensions at least
+five are excluded by the proof's torus-incidence bound.  The theorem note,
+verifier, regression test, and targeted transcript have SHA-256 values
+\begin{verbatim}
+3a0d4f0ab36884b5ad6c28a2a284e569f07f374eabf0c4cea08bafb855ebf650
+c7d517132291ef64246ec9c1329065006c73dad6c668f46310281f2f2bc4430c
+b16bf07e4302f09bd55713e6a5a9c6919e838993aa2e62cfe94224abecf931c7
+be8395740edd31494450c250af06a5fbd37889a7cafe187d8da953c494158caa
+\end{verbatim}
+
 \subsection{Commands}
 
 From the repository root, the canonical computations are
@@ -212,6 +229,9 @@ python3 src/python/run_scalar_symplectic_bounds.py \
 
 PYTHONPYCACHEPREFIX=/tmp/erdos117-pycache \
 python3 -m unittest discover -s src/verification -p 'test_*.py' -v
+
+PYTHONPYCACHEPREFIX=/tmp/erdos117-f5-hyperplane-pycache \
+python3 -m unittest src.verification.test_f5_small_hyperplane_cover -v
 \end{verbatim}
 
 The complete cutoff-seven regeneration commands, including all GAP batch

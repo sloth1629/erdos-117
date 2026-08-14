@@ -15,6 +15,12 @@ graph, reruns exact clique and coloring, independently excludes an 8-clique on
 the 40 projective twin classes, and checks every finite-field spread subspace
 and both saved abelian subgroup covers.
 
+`test_f5_small_hyperplane_cover.py` independently rebuilds the finite
+certificate used to close the \(5\)-group branch at cutoff eight.  After
+normalizing independent hyperplane normals to the coordinate points, it
+exhausts every torus-covering subfamily in dimensions two through four and
+checks that each cover contains all six normals of a projective line.
+
 ```bash
 PYTHONPYCACHEPREFIX=/tmp/erdos117-pycache \
 python3 -m unittest discover -s src/verification -p 'test_*.py' -v

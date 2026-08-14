@@ -25,7 +25,7 @@ Research cut-off: 2026-08-14.  Source PDFs, extracted text, and rendered page im
 | [UNVERIFIED] | Saccochi (2015), DOI `10.26512/2015.12.D.22224` | Theorem 4.1.1 p. 34; Pyber formula p. 36; Theorem 4.3.2 pp. 48–50; Theorem 5.2.7 pp. 56–59 | Full dissertation PDF read and critical formulas visually rendered.  It is secondary evidence for Pyber/Isaacs. |
 | [CITED-VERIFIED] | Darafsheh–Ghorbani–Prajapati (2015), DOI `10.1017/S0004972715000830` | Extraspecial/Isaacs attribution and Theorems 1.2–1.3 p. 381; Lemma 2.4 p. 382; proofs and Remark 5.2 pp. 387–388 | Full official Cambridge PDF read. |
 | [CITED-VERIFIED] | Abdollahi–Azad–Mohammadi Hassanabadi–Zarrin (2010), DOI `10.1142/S1005386710000581`, arXiv `0903.0692` | Theorem 1.1 p. 2 and complete finite nonsoluble-classification proof pp. 4–9 | Full primary arXiv manuscript read; published metadata cross-checked through Crossref. |
-| [CITED-VERIFIED] | Berkovich (2010), DOI `10.3336/gm.45.2.09` | Finite scope p. 415; Lemmas 1.2–1.3 pp. 416–417; Theorem 2.3 pp. 419–420; Theorem 4.4 pp. 424–425 | Complete open primary PDF acquired from the journal site; each cited statement and its proof was read. |
+| [CITED-VERIFIED] | Berkovich (2010), DOI `10.3336/gm.45.2.09` | Finite scope p. 415; Lemmas 1.2–1.3 pp. 416–417; Theorem 2.3 pp. 419–420; Theorem 4.4 pp. 424–425; Proposition 4.5 pp. 425–426 | Complete open primary PDF acquired from the journal site; each cited statement and its proof was read. |
 | [CITED-VERIFIED] | Zarrin (2016), DOI `10.1017/S0004972715000696` | Theorems 1.1–1.2 and Lemma 2.1, pp. 43–44; centralizer distinction and Theorem 3.5 p. 45 | Full official Cambridge PDF read. |
 | [CITED-VERIFIED] | Jafarian Amiri–Madadi–Rostami (2018), DOI `10.1007/s41980-018-0079-9` | Definition and Theorem 1.1; Lemma 3.1 and its proof in §3, especially the explicit scope “10-centralizer” plus \(\omega\in\{5,6,7,8\}\) | Publisher's complete open HTML article read; it is marked Open Access and exposes the full theorem/proof text. |
 | [CITED-VERIFIED] | Maróti–Martínez–Moretó (2025), DOI `10.1016/j.jcta.2024.105954` | Pyber discussion p. 2 and the scope of the full paper | Full primary PDF read. |
@@ -284,22 +284,44 @@ pp. 419--420, characterizes \(\nu=p+1\) by
 \(G=H Z(G)\), with \(H\) any minimal nonabelian subgroup and
 \(H\cap Z(G)=Z(H)\).  Theorem 4.4, stated p. 424 and proved p. 425, says that
 an irredundant cover of a finite \(p\)-group by \(p+2\) proper subgroups
-forces \(p=2\).
+forces \(p=2\).  Proposition 4.5, printed pp. 425--426, says that a cover by
+\(k\le2p\) proper subgroups contains at least \(p\) maximal members and,
+when \(p>3\) and \(p+2<k<2p\), at least \(p+1\) maximal members.  Its
+statement explicitly does not require irredundancy.
 
 [PROVED] Lemma 1.3 and Theorem 4.4 therefore exclude \(\nu=p+2\) for every
 odd finite \(p\)-group.  At cutoff eight, Lemma 1.2 first forces \(p\le7\).
 For \(p=7\), necessarily \(\nu=8\), Theorem 2.3 applies, and the abelian
 maximal subgroups of \(H\), enlarged by the center, prove \(a=8\).  For
 \(p=5\), the \(\nu=6\) branch is described by Theorem 2.3 and has \(a=6\),
-\(\nu=7\) is excluded, and \(\nu=8\) remains.  For \(p=3\), the analogous
-\(\nu=4\) branch has \(a=4\), \(\nu=5\) is excluded, and
+\(\nu=7\) is excluded, and the repository now excludes \(\nu=8\) by
+combining Proposition 4.5 with the certified small
+\(\mathbf F _5\)-hyperplane-cover lemma.  Hence finite \(5\)-groups at this
+cutoff have exactly \((\nu,a)=(1,1)\) or \((6,6)\).  For \(p=3\), the
+analogous \(\nu=4\) branch has \(a=4\), \(\nu=5\) is excluded, and
 \(\nu=6,7,8\) remain.  No complete \(p=2\) classification follows.
+
+[COMPUTED] The hyperplane certificate in
+`src/verification/verify_f5_small_hyperplane_cover.py` checks every
+normalized low-dimensional blocker: \(16\), \(122{,}438\), and \(10{,}626\)
+subfamilies in dimensions two, three, and four, with respectively
+\(1,87,6\) covers and no cover lacking a six-point projective line.
+Dimensions at least five are excluded by the proved torus-incidence bound.
+Two independent reconstructions reported no blocker.
+
+[PROVED] The complete group-theoretic bridge is in
+`notes/five_group_nu8.md`.  At least six members of the irredundant
+eight-centralizer cover are maximal.  After the other members are enlarged,
+the hyperplane lemma gives a six-pencil.  A genuinely new pencil member is
+then covered by the pencil intersection and at most three proper subgroup
+intersections, contradicting the elementary \(p+1\) lower bound for a
+proper-subgroup cover of a finite \(p\)-group.
 
 [UNVERIFIED] The accessible primary cutoff-eight sources audited through
 2026-08-14 contain no complete classification of all finite \(p\)-groups,
 all solvable groups, or all finite stem/isoclinism families with
-\(\nu\le8\), and no exact general value of \(f(8)\).  The Berkovich edge is
-partial pruning and cannot support a global upper bound for \(h(8)\).
+\(\nu\le8\), and no exact general value of \(f(8)\).  Closing the finite
+\(5\)-group branch does not support a global upper bound for \(h(8)\).
 
 ## Exact-formula and alternate-terminology search
 

@@ -297,15 +297,28 @@ Berkovich 2010 (finite groups only) [CITED-VERIFIED]
   |     Lem.1.3 pp.416--417
   |-- nu=p+1 iff G=H Z(G) with H minimal nonabelian,
   |     Thm.2.3 pp.419--420
-  `-- irredundant (p+2)-cover => p=2, Thm.4.4 pp.424--425
+  |-- irredundant (p+2)-cover => p=2, Thm.4.4 pp.424--425
+  `-- p+2<k<2p and p>3 => at least p+1 maximal cover members,
+        Prop.4.5 pp.425--426
+
+small F5 hyperplane-cover lemma [PROVED] (computer-assisted)
+  |-- dimensions 2,3,4: complete normalized certificate [COMPUTED]
+  |-- dimensions >=5: torus-incidence union bound [PROVED]
+  `-- every <=8 hyperplane cover contains a six-pencil
+        +-- Prop.4.5 at p=5,k=8
+              +-- no finite 5-group has nu=8
+                    `-- finite 5-group cutoff:
+                          (nu,a)=(1,1) or (6,6) [PROVED]
 ```
 
 [PROVED] The Berkovich nodes imply that a nonabelian finite \(p\)-group
 with \(\nu\le8\) has \(p\le7\), and that an odd \(p\)-group cannot have
 \(\nu=p+2\).  Thus the \(p=7\) branch is exactly the \(\nu=8=p+1\)
 branch and has \(a=8\); for \(p=5\), \(\nu=7\) is excluded but \(\nu=8\)
-remains; for \(p=3\), \(\nu=5\) is excluded but \(\nu=6,7,8\) remain.
-The \(p=2\) branch is not classified by these results.
+is now excluded by the separate hyperplane node, so the only finite
+\(5\)-group values at cutoff eight are \((1,1)\) and \((6,6)\).  For
+\(p=3\), \(\nu=5\) is excluded but \(\nu=6,7,8\) remain.  The \(p=2\)
+branch is not classified by these results.
 
 [UNVERIFIED] These are partial finite-\(p\)-group pruning nodes, not an
 exact \(f(8)\), a complete solvable eight-cover classification, or a global

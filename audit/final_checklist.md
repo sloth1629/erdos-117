@@ -36,6 +36,11 @@ These boxes remain open, so no complete solution is claimed.
   seven-cover input, the complete 738-type partition, all ordinary and
   character-dual scans, explicit exterior-zero rows, special quotient
   certificates, final hashes, and independent reconstruction tests.
+- [x] The finite \(5\)-group cutoff-eight theorem records Berkovich
+  Proposition 4.5 at its exact pages, the complete normalized
+  \(\mathbf F _5\) hyperplane certificate, the arbitrary-dimensional
+  incidence reduction, and two independent audits.  Its scope is explicitly
+  separated from the still-open global value of \(h(8)\).
 - [x] Product and limit assertions audited without assuming one-shot
   multiplicativity.
 - [x] Computational witnesses, configurations, versions, hashes, and

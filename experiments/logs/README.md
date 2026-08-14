@@ -118,6 +118,13 @@ Store reproducible text logs here; large or licensed artifacts must not be commi
   `d7b5cb95e07bab5286131316d76d258a3cfd668dee8e1009632f868f094f316e`.
 - `h8_verification.txt`: `[COMPUTED]` focused saved-record tests and the full
   28-test discovery run, including exact commands and timings.
+- `f5_small_hyperplane_cover_verification.txt`: `[COMPUTED]` targeted
+  standard-library reconstruction of the normalized \(\mathbf F _5\)
+  hyperplane-cover certificate.  It checks 16, 122,438, and 10,626
+  subfamilies in dimensions two, three, and four and finds zero covers
+  without a six-point projective line.  Together with the proved
+  high-dimensional incidence bound, this is the finite computational input
+  to `notes/five_group_nu8.md`.
 - `rank3_order64_tail_verification.txt`: `[COMPUTED]` independent join of the
   cutoff-eight binary rank-three normal form with the complete order-64
   certificates.  The verifier derives 44 base and 39 theorem-forced quotient

@@ -454,6 +454,36 @@ The cutoff-seven proof exhausts a disjoint 738-type quotient inventory; its
 finite certificates and final verification hashes are recorded in
 `proof/computational_appendix.tex`.
 
+## A closed finite \(5\)-group branch at cutoff eight
+
+### [PROVED] Finite \(5\)-groups with \(\nu\leq8\)
+
+If \(P\) is a finite \(5\)-group with \(\nu(P)\leq8\), then either \(P\) is
+abelian and
+
+\[
+  (\nu(P),a(P))=(1,1),
+\]
+
+or
+
+\[
+  (\nu(P),a(P))=(6,6).
+\]
+
+The proof is computer-assisted. Berkovich's primary-verified lower and
+structure theorems reduce the nonabelian case to excluding clique numbers
+seven and eight; his Proposition 4.5 also forces at least six maximal
+members in an eight-centralizer cover. After enlarging the other at most
+two members and passing to \(P/\Phi(P)\), a self-contained reduction plus an
+exact enumeration in dimensions two, three, and four shows that every cover
+by at most eight \(\mathbf F _5\)-hyperplanes contains a full six-member
+pencil. A genuinely new pencil member would then be covered by at most four
+proper subgroups, which is impossible for a finite \(5\)-group. The complete
+proof, source audit, certificate, and reproduction command are in
+notes/five_group_nu8.md. This closes only the finite \(5\)-group branch; it
+does not determine \(h(8)\).
+
 ## Stronger reported bounds still under audit
 
 ### [UNVERIFIED] Pyber's exponential center-index theorem

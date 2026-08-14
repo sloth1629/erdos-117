@@ -47,9 +47,12 @@ $(\nuG,\aG)=(7,10)$, disproving the candidate formula considered here,
 $h(n)=\max\{n,2^{\lfloor(n-1)/2\rfloor}+1\}$.  The three
 computer-assisted values use the subgroup-cover bounds $f(5)=16$,
 $f(6)=36$, and $f(7)=81$, followed by complete
-Schur-cover/exterior-square analyses.  The remaining structural results and
-the counterexample have computation-independent proofs.  Finally, combining
-two audited published inputs gives the CFSG-dependent universal estimate
+Schur-cover/exterior-square analyses. We also prove that a finite $5$-group
+with $\nuG(P)\le8$ has $(\nuG(P),\aG(P))=(1,1)$ or $(6,6)$; this uses an audited
+finite-group theorem and a small exact hyperplane-cover check. Apart from
+these explicitly computer-assisted statements, the remaining structural
+results and the counterexample have computation-independent proofs. Finally,
+combining two audited published inputs gives the CFSG-dependent universal estimate
 $h(n)\le2^{O(n\log\log n)}$; the withdrawn fixed-base coset-cover preprint
 is not used.
 \end{abstract}
@@ -931,6 +934,69 @@ Lemma~\ref{lem:h7-enumeration}, so $\aG(G)\le10$.  Theorem~\ref{thm:counterexamp
 gives $\nuG(S(3,2))=7$ and $\aG(S(3,2))=10$, proving equality.
 \end{proof}
 
+\section{A closed finite five-group branch at cutoff eight}
+
+\begin{theorem}[Finite $5$-groups at cutoff eight]
+\label{thm:five-group-cutoff-eight}
+Let $P$ be a finite $5$-group with $\nuG(P)\le8$. Then either $P$ is
+abelian and
+\[
+  (\nuG(P),\aG(P))=(1,1),
+\]
+or
+\[
+  (\nuG(P),\aG(P))=(6,6).
+\]
+\end{theorem}
+
+\begin{proof}
+This proof has one computer-assisted finite step. For finite $p$-groups,
+Berkovich proves the lower bound $\nuG(P)\ge p+1$ in the nonabelian case,
+describes equality, and excludes $\nuG(P)=p+2$ for $p>2$
+\cite[Lemma~1.2, p.~416; Theorem~2.3, pp.~419--420;
+Theorem~4.4, pp.~424--425]{berkovich_2010_covers}. His Proposition~4.5
+shows that an eight-member proper subgroup cover of a $5$-group has at
+least six maximal members
+\cite[Proposition~4.5, pp.~425--426]{berkovich_2010_covers}.
+
+It remains to exclude $\nuG(P)=8$.  For a maximum eight-clique
+$x_1,\ldots,x_8$, put $H_i=\CG_P(x_i)$.  These centralizers are distinct
+proper subgroups and form an irredundant cover.
+Enlarge its at most two nonmaximal members to maximal subgroups and pass to
+the Frattini quotient. This gives a cover of the $\F_5$-space
+$P/\Phi(P)$ by at most eight hyperplanes. The following finite
+hyperplane-cover lemma is verified exactly: such a cover contains the six
+hyperplanes through a common codimension-two subspace. To see why only a
+small finite calculation is needed, normalize a basis among the projective
+normal vectors and let their span have dimension $d$. The coordinate
+hyperplanes miss a projective torus of size $4^{d-1}$, while each remaining
+hyperplane covers at most $4^{d-2}$ torus points; hence $d\ge5$ is
+impossible. The cases $d=2,3,4$ are exhausted by
+\texttt{src/verification/verify\_f5\_small\_hyperplane\_cover.py}, which
+finds no cover without a six-pencil.
+
+At least one member $M$ of that pencil is a genuinely new enlargement, for
+otherwise six members of the original irredundant cover already cover $P$.
+If $D$ is the pencil's common intersection, choose one distinct original
+source index for each of the other five pencil hyperplanes.  The five
+corresponding intersections with $M$ lie in $D$, leaving at most three
+original indices.  Thus intersecting the original eight-member cover with
+$M$ gives
+\[
+  M=D\cup\bigcup_{i\in I}(M\cap H_i),\qquad |I|\le3,
+\]
+where every displayed subgroup is proper in $M$. This would cover the
+finite $5$-group $M$ by at most four proper subgroups, whereas even five
+proper subgroups contain at most
+$1+5(|M|/5-1)=|M|-4$ elements. Thus $\nuG(P)\ne8$.
+
+The cited results now leave only $\nuG(P)=6$ in the nonabelian case and give
+$P=H\Z(P)$ with $H$ minimal nonabelian. The centralizers in $H$ of a
+maximum six-clique are proper, hence abelian, and cover $H$. Adjoining
+$\Z(P)$ gives six abelian subgroups covering $P$, while every abelian cover
+has at least $\nuG(P)=6$ members. Therefore $\aG(P)=6$.
+\end{proof}
+
 \section{Direct products and why they do not settle the problem}
 
 For graphs $X,Y$, their OR product $X\vee Y$ joins two product vertices
@@ -986,6 +1052,9 @@ larger scalar cases do not improve the lower-bound efficiency of $S(3,2)$.
 
 The manuscript does not determine $h(n)$ beyond $n=7$, does not determine
 the optimal exponential base, and does not prove that such a base exists.
+Theorem~\ref{thm:five-group-cutoff-eight} closes only the finite
+$5$-group branch at cutoff eight; the $2$-group, $3$-group, and
+nonnilpotent solvable branches needed to determine $h(8)$ remain open.
 The most concrete geometric subproblem is to control $\pi(q,m)$, the maximum
 partial-ovoid size in a symplectic polar space, relative to the exact cover
 number $q^m+1$.  More generally one must decide whether odd-characteristic

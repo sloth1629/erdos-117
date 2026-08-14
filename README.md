@@ -56,6 +56,12 @@ No complete resolution is claimed. The strongest repository results are:
   and \(A\ge Z(P)\) is abelian, then
   \([A:Z(P)]\le p^{\nu(P)/p}\); a relative version charges the exponent to
   \(\nu(P)-\nu(H)\) for \(A=Z(H)\).
+- [PROVED] The finite \(5\)-group branch at cutoff eight is closed.  A
+  certified small-\(\mathbf F _5\) hyperplane theorem, combined with
+  Berkovich's verified maximal-member bound, proves that
+  \(\nu(P)\le8\) forces \((\nu(P),a(P))=(1,1)\) or \((6,6)\).  This removes
+  finite \(5\)-groups from the unresolved \(h(8)\) cases but does not settle
+  the \(2\)-group, \(3\)-group, or nonnilpotent solvable branches.
 - [COMPUTED] Exact, independently verified certificates cover explicit
   families, every SmallGroup of orders 8, 32, and 64, all order-128 groups
   surviving a rigorous \(\nu\le6\) prefilter, all 2,986 exterior-square
@@ -95,7 +101,7 @@ PYTHONPYCACHEPREFIX=/tmp/erdos117-pycache \
 python3 -m unittest discover -s src/verification -p 'test_*.py' -v
 ```
 
-The saved final run passed all 32 tests in 598.056 seconds under Python
+The saved final run passed all 33 tests in 863.720 seconds under Python
 3.9.6.
 
 The canonical experiment commands are documented in

@@ -30,4 +30,9 @@
 - `[DISPROVED]` The simplest binary-symplectic exact formula fails: \(S(3,2)\) has \((\nu,a)=(7,10)\).
 - `[UNVERIFIED]` Determine whether odd-characteristic scalar forms, higher-codomain alternating maps, solvable groups, or semisimple groups beat the asymptotic binary efficiency.
 - `[UNVERIFIED]` Prove an upper bound with base \(\sqrt2\), or find a construction disproving that candidate constant.
-- `[UNVERIFIED]` Determine \(h(8)\) and subsequent exact values.
+- `[PROVED]` The finite \(5\)-group branch at cutoff eight is closed:
+  \(\nu(P)\le8\) implies \((\nu(P),a(P))=(1,1)\) or \((6,6)\). The proof
+  combines Berkovich's audited finite \(p\)-group theorems with a
+  computer-assisted exact \(\mathbf F _5\)-hyperplane-cover lemma.
+- `[UNVERIFIED]` Determine \(h(8)\) and subsequent exact values; the
+  \(2\)-group, \(3\)-group, and nonnilpotent solvable branches remain open.

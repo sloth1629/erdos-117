@@ -60,10 +60,18 @@ gives 9 at seven.
    \([A:Z(P)]\le p^{\nu(P)/p}\), with a drop-sensitive relative-center
    form.  These are structural reductions, not a determination of \(h(8)\)
    or a fixed-base global upper bound.
+10. The finite \(5\)-group branch at cutoff eight is completely eliminated:
+    a computer-assisted small-\(\mathbf F _5\) hyperplane lemma and
+    Berkovich's verified Proposition 4.5 prove that
+    \(\nu(P)\le8\) implies
+    \((\nu(P),a(P))\in\{(1,1),(6,6)\}\).  The independent low-dimensional
+    certificate checks 16, 122,438, and 10,626 normalized subfamilies in
+    dimensions two, three, and four.  The \(2\)-group, \(3\)-group, and
+    nonnilpotent solvable branches remain open.
 
 ## Computation status
 
-- The complete verification suite passes: 32 tests in 598.056 seconds under
+- The complete verification suite passes: 33 tests in 863.720 seconds under
   Python 3.9.6, with the transcript saved for this milestone.
 - Both optimized graph algorithms agree with brute force on all 33,868
   labeled graphs with at most six vertices.

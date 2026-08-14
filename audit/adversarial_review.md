@@ -261,6 +261,39 @@ Continue auditing quantifiers, finite/infinite scope, central-coset arguments, p
   residual implementation-independence limitation, not a detected logical or
   coverage gap.
 
+### Finite \(5\)-groups at cutoff eight
+
+- [CITED-VERIFIED] Berkovich Proposition 4.5, printed pp. 425--426, applies
+  exactly to an eight-member cover of a finite \(5\)-group: because
+  \(7<8<10\), at least six cover members are maximal.  The standing finite
+  scope is explicit on p. 415, and the proposition does not assume
+  irredundancy.
+- [COMPUTED] Two independent reconstructions of
+  `verify_f5_small_hyperplane_cover.py` reproduced the normalized
+  dimension-two, -three, and -four censuses:
+  \(16/122{,}438/10{,}626\) tested subfamilies,
+  \(1/87/6\) covers, and zero covers without a six-point projective line.
+  The independent dimension-four implementation separately recovered all
+  152 noncoordinate normals, the mask-size distribution
+  \(12^{64},13^{64},16^{24}\), and all six pencil covers.
+- [PROVED] The arbitrary-dimensional hyperplane reduction was reconstructed.
+  Once independent normals are normalized to the coordinate points, each
+  extra hyperplane covers at most \(4^{d-2}\) of the \(4^{d-1}\) torus
+  points.  Thus \(d\ge5\) is impossible, while the exact certificate covers
+  \(d=2,3,4\).
+- [PROVED] The group bridge remains valid when the two nonmaximal
+  centralizers have duplicate maximal enlargements.  Choose a genuinely new
+  pencil member \(M\) and source indices for the other five pencil members.
+  Their intersections with \(M\) lie in the common pencil intersection
+  \(D\); only three original indices remain.  Hence \(M\) is covered by
+  \(D\) and at most three proper intersections, impossible for a finite
+  \(5\)-group.  No finite \(5\)-group has \(\nu=8\), and the verified
+  \(\nu=p+1\) and \(\nu\ne p+2\) results give exactly
+  \((\nu,a)=(1,1)\) or \((6,6)\) at cutoff eight.
+- [UNVERIFIED] This audit closes only the finite \(5\)-group branch.  It
+  supplies no classification of the \(2\)- or \(3\)-group branches and no
+  global value of \(h(8)\).
+
 ### Verdict
 
 - [COMPUTED] A final independent rerun of all seven cutoff-seven regression
@@ -272,7 +305,7 @@ Continue auditing quantifiers, finite/infinite scope, central-coset arguments, p
   final serialization-only normalization, the then-complete 25-test suite
   passed in 211.839 seconds.  The later release worktree, including the
   cutoff-eight and local-counterexample additions, followed by the binary
-  rank-three order-64 tail, passed all 32 tests in 598.056 seconds.
+  rank-three order-64 tail, passed all 33 tests in 863.720 seconds.
 - [PROVED] Subject to the explicitly identified [CITED-VERIFIED]
   \(f(7)=81\) input and the exact [COMPUTED] certificates above, the case
   split proves \(a(G)\le10\) for every arbitrary group with

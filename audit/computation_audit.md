@@ -278,7 +278,7 @@ labeled simple graphs on at most six vertices, and also checks group axioms,
 coset invariance, named records, direct-product/OR compatibility, witnesses,
 and the \(E_m\) symplectic model for \(m=1,2,3\). It also reparses and verifies
 every saved Python and GAP certificate. The latest 2026-08-14 run passed all
-32 tests in 598.056 seconds under Python 3.9.6. The extended tests independently rebuild the
+33 tests in 863.720 seconds under Python 3.9.6. The extended tests independently rebuild the
 scalar graphs, four residual searches, strongly regular parameters, spreads,
 the order-128 prefilter survivors, every exterior-square graph witness, the
 eleven cutoff-seven dual searches, all 26,387 ID-261 affine records, and the
@@ -687,8 +687,54 @@ Python, and log READMEs.
 
 [CITED-VERIFIED] Berkovich (2010), finite scope p. 415, Lemmas 1.2--1.3
 pp. 416--417, Theorem 2.3 pp. 419--420, and Theorem 4.4 pp. 424--425 provide
-only external motivation and partial \(p=5\) pruning here. They are not used
-to extrapolate the computation beyond the four scanned orders.
+the earlier \(p=5\) pruning.  Proposition 4.5 pp. 425--426 supplies the
+additional maximal-member input used by the separate all-orders proof below.
 
-[UNVERIFIED] This bounded inventory is not a classification of all finite
-5-groups with \(\nu\le8\), and it gives no global upper bound for \(h(8)\).
+[COMPUTED] This bounded inventory by itself remains an exact census of the
+four displayed orders only.  No extrapolation from those 781 SmallGroups is
+used in the all-orders proof.
+
+## Small \(\mathbf F _5\) hyperplane covers and all finite \(5\)-groups
+
+[COMPUTED] The dependency-free verifier
+`src/verification/verify_f5_small_hyperplane_cover.py` normalizes a
+hyperplane cover to contain the coordinate normals and exhausts the
+remaining torus masks in dimensions two through four.  The exact census is
+\[
+\begin{array}{c|r|r|r}
+d&\text{subfamilies}&\text{covers}&\text{without a projective line}\\ \hline
+2&16&1&0\\
+3&122438&87&0\\
+4&10626&6&0.
+\end{array}
+\]
+In dimension four it first checks all 152 noncoordinate normals; exactly 24
+attain the maximum mask size 16, and cardinality forces any four-member
+torus cover to use only those maximizers.  The targeted regression test
+rebuilds the enumeration in under one second.
+
+[COMPUTED] A second implementation independently recovered the
+dimension-four mask distribution
+\(12^{64},13^{64},16^{24}\), all
+\(\binom{24}{4}=10626\) candidate quadruples, and the six covers, each
+containing exactly one projective line.  A separate structural audit checked
+the dual-span normalization, the dimensions-at-least-five union bound, and
+the group-theoretic reduction, including duplicate maximal enlargements.
+
+[PROVED] The resulting computer-assisted theorem is not a SmallGroups
+extrapolation.  Berkovich Proposition 4.5 forces at least six maximal
+members in the eight-centralizer cover.  Maximalizing the other at most two
+members and applying the hyperplane certificate gives a six-pencil.  A
+genuinely new pencil member is then covered by the common pencil
+intersection and at most three proper subgroup intersections, contradicting
+the elementary lower bound of six for a proper-subgroup cover of a finite
+\(5\)-group.  Therefore finite \(5\)-groups with \(\nu\le8\) have exactly
+\((\nu,a)=(1,1)\) or \((6,6)\).
+
+[COMPUTED] The theorem note, verifier, regression test, and saved targeted
+transcript have SHA-256 values respectively
+`3a0d4f0ab36884b5ad6c28a2a284e569f07f374eabf0c4cea08bafb855ebf650`,
+`c7d517132291ef64246ec9c1329065006c73dad6c668f46310281f2f2bc4430c`,
+`b16bf07e4302f09bd55713e6a5a9c6919e838993aa2e62cfe94224abecf931c7`,
+and
+`be8395740edd31494450c250af06a5fbd37889a7cafe187d8da953c494158caa`.
