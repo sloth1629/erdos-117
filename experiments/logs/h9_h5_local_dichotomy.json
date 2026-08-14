@@ -1,0 +1,42 @@
+{
+  "claim": "Every exact-center q_order=16, nu=5 exterior row is C2^4 and is scalar or determinant/spread.",
+  "exact_center_record_count": 84,
+  "exact_quotient": {
+    "order": 16,
+    "q_id": 14,
+    "structure": "C2 x C2 x C2 x C2"
+  },
+  "sources": {
+    "json": {
+      "path": "experiments/logs/h5_exterior.json",
+      "sha256": "a1bf70f195391ee47e4acb5da3fd3a1f5175a9ca847fd80baae5c51c65a5d50d"
+    },
+    "tsv": {
+      "path": "experiments/logs/h5_exterior.tsv",
+      "sha256": "5a326a69d96c57c48f9b0751d001ab8156089c776927c8c33cd4ab640660b55f"
+    }
+  },
+  "status": "[COMPUTED]",
+  "target_record_count": 225,
+  "types": [
+    {
+      "commutator_image_order": 2,
+      "count": 28,
+      "degree_profile": {
+        "0": 1,
+        "8": 15
+      },
+      "name": "scalar"
+    },
+    {
+      "commutator_image_order": 4,
+      "commuting_nonzero_partition": "five triples",
+      "count": 56,
+      "degree_profile": {
+        "0": 1,
+        "12": 15
+      },
+      "name": "determinant"
+    }
+  ]
+}
