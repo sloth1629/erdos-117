@@ -334,6 +334,73 @@ order-64 certificates.  The group \(S(3,2)\) supplies the matching lower
 witness \((\nu,a)=(7,10)\).  The complete proof and dependency labels are in
 `notes/exact_h7.md`.
 
+## Primary stem reduction and finite \(p\)-groups at cutoff eight
+
+[CITED-VERIFIED] Hall's 1940 isoclinism argument is not restricted to finite
+groups.  On printed p. 135 he says that the classification applies formally
+to all groups, lets an arbitrary generating set index a free abelian group,
+and proves that every isoclinism family contains a **stem group** \(S\) with
+\(Z(S)\le S'\).  Only the following minimal-order characterization is
+finite-specific: among finite members of a family, the stem groups are
+exactly those of minimal order.
+
+[CITED-VERIFIED] Wiegold's Theorem 2.1(i), printed p. 345 with the proof
+completed on p. 346, applies to an arbitrary group whose central factor has
+order \(p^n\) and gives \(|G'|\le p^{n(n-1)/2}\).  Section 3.3 on p. 346 then
+uses Hall's theorem to show that every arbitrary group with finite central
+factor is isoclinic to a finite stem group.  The final estimate on p. 347 is,
+for \(q=|G/Z(G)|<\infty\),
+\[
+ |G'|\le q^{(\log_2 q-1)/2}.
+\]
+The arbitrary-group scope here is explicit; the finite group enters only
+after the Hall stem reduction.
+
+[PROVED] Combining those primary results with the repository's exact
+isoclinism/commutation translation gives a quantitative finite-model lemma.
+If \(q=|G/Z(G)|<\infty\), choose the finite stem representative \(S\).  It has
+the same \((\nu,a)\) and the same central quotient order \(q\), while
+\(Z(S)\le S'\).  Hence
+\[
+ |S|=q|Z(S)|\le q|S'|
+      \le q^{(\log_2 q+1)/2}.
+\]
+This verifies a finite stem model once a finite bound for \(q\) is already
+available; it is not Pyber's exponential center-index theorem and supplies
+no value of \(f(8)\).
+
+[CITED-VERIFIED] Berkovich's 2010 paper is explicitly restricted to finite
+groups (p. 415).  With \(\gamma(G)\) denoting the maximum size of a
+maximal-by-inclusion pairwise noncommuting set, hence \(\gamma(G)=\nu(G)\),
+Lemma 1.2 on p. 416 proves \(\gamma(G)\ge p+1\) for every nonabelian finite
+\(p\)-group and equality for every minimal nonabelian one.  Lemma 1.3 on
+pp. 416--417 proves that the element-centralizers belonging to any such
+maximal set form an irredundant cover.  Theorem 2.3 on pp. 419--420 proves
+that \(\gamma(G)=p+1\) exactly when
+\(G=H Z(G)\), where \(H\) is any minimal nonabelian subgroup and
+\(H\cap Z(G)=Z(H)\).  Theorem 4.4, stated on p. 424 and proved on p. 425,
+says that a finite \(p\)-group with an irredundant cover by \(p+2\) proper
+subgroups must have \(p=2\).
+
+[PROVED] These results give only the following cutoff-eight consequences.
+A nonabelian finite \(p\)-group with \(\nu\le8\) has \(p\le7\), and an odd
+\(p\)-group cannot have \(\nu=p+2\).  For \(p=7\), necessarily
+\(\nu=8=p+1\), so \(G=H Z(G)\) as above; the \(p+1\) abelian maximal
+subgroups of \(H\), enlarged by \(Z(G)\), cover \(G\), and therefore
+\(a(G)=\nu(G)=8\).  For \(p=5\), the \(\nu=6\) branch has the same
+description and \(a=6\), the value \(\nu=7\) is impossible, and
+\(\nu=8\) is not settled by this paper.  For \(p=3\), the \(\nu=4\) branch
+is described likewise with \(a=4\), the value \(\nu=5\) is impossible, and
+\(\nu\in\{6,7,8\}\) remains outside these theorems.  The result gives no
+complete classification for \(p=2\).
+
+[UNVERIFIED] No accessible primary source located through the 2026-08-14
+continuation search gives a complete classification of all finite
+\(p\)-groups, all solvable groups, or all stem/isoclinism families with
+\(\nu\le8\), nor an exact general value of \(f(8)\).  Berkovich's verified
+theorems are therefore useful pruning only and are not load-bearing for a
+global value of \(h(8)\).
+
 ## Forward citations and possible later resolutions
 
 [CITED-VERIFIED] Maróti, Martínez and Moretó (2025), printed p. 2, cite Pyber while defining the coclique/abelian-cover number of a noncommuting graph, but the paper's new theorems concern covers of the set of \(p\)-elements by proper subgroups.  Its full text contains no new universal estimate for \(h(n)\), \([G:Z(G)]\) in terms of \(\omega(G)\), or the exponential base.

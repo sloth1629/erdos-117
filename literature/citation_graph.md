@@ -258,3 +258,36 @@ partition is pairwise disjoint and exhaustive,
 verification suite.  The cited seven-cover theorem supplies only the finite
 center-index cutoff; all coloring work is performed by repository proofs and
 certificates.
+
+## Primary stem and cutoff-eight \(p\)-group nodes
+
+```text
+Hall 1940, p.135 [CITED-VERIFIED] (arbitrary groups)
+  `-- every isoclinism family has a stem S with Z(S)<=S'
+
+Wiegold 1965, Thm.2.1 and section 3.3, pp.345--347 [CITED-VERIFIED]
+  |-- q=|G/Z(G)| finite => |G'|<=q^((log_2 q-1)/2)
+  `-- Hall stem representative S is finite
+       `-- same compressed commutation graph [PROVED]
+            `-- same (nu,a), and |S|<=q^((log_2 q+1)/2) [PROVED]
+
+Berkovich 2010 (finite groups only) [CITED-VERIFIED]
+  |-- nonabelian p-group => nu>=p+1, Lem.1.2 p.416
+  |-- maximum-clique centralizers give an irredundant cover,
+  |     Lem.1.3 pp.416--417
+  |-- nu=p+1 iff G=H Z(G) with H minimal nonabelian,
+  |     Thm.2.3 pp.419--420
+  `-- irredundant (p+2)-cover => p=2, Thm.4.4 pp.424--425
+```
+
+[PROVED] The Berkovich nodes imply that a nonabelian finite \(p\)-group
+with \(\nu\le8\) has \(p\le7\), and that an odd \(p\)-group cannot have
+\(\nu=p+2\).  Thus the \(p=7\) branch is exactly the \(\nu=8=p+1\)
+branch and has \(a=8\); for \(p=5\), \(\nu=7\) is excluded but \(\nu=8\)
+remains; for \(p=3\), \(\nu=5\) is excluded but \(\nu=6,7,8\) remain.
+The \(p=2\) branch is not classified by these results.
+
+[UNVERIFIED] These are partial finite-\(p\)-group pruning nodes, not an
+exact \(f(8)\), a complete solvable eight-cover classification, or a global
+upper bound for \(h(8)\).  No such complete primary edge was located in the
+2026-08-14 continuation search.

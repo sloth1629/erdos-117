@@ -1,6 +1,6 @@
 # Source and Novelty Audit
 
-Research cut-off: 2026-08-13.  Source PDFs, extracted text, and rendered page images were kept only under ignored `work/literature/`; no copyrighted source PDF is tracked by Git.
+Research cut-off: 2026-08-14.  Source PDFs, extracted text, and rendered page images were kept only under ignored `work/literature/` or `/tmp`; no copyrighted source PDF is tracked by Git.
 
 ## Access and exact-page matrix
 
@@ -9,6 +9,8 @@ Research cut-off: 2026-08-13.  Source PDFs, extracted text, and rendered page im
 | [CITED-VERIFIED] | Erdős–Straus (1976), DOI `10.1080/03081087608817122` | Printed p. 311: Isaacs factorial upper report and \(2^{M/2}\)-type examples | Full author-hosted PDF read; formula checked against a rendered page because OCR lost the comparison glyphs and exponent. |
 | [CITED-VERIFIED] | B. H. Neumann (1976), DOI `10.1017/S1446788700019303` | Lemmas 1, 2, 4; Corollary 5; Theorem 6, pp. 468–470; quantitative remarks p. 471 | Full official Cambridge PDF read. |
 | [CITED-VERIFIED] | Faber–Laver–McKenzie (1978), DOI `10.4153/CJM-1978-081-1` | Graph/cover bridge p. 933; Theorem 3, pp. 936–937 | Full journal PDF read. |
+| [CITED-VERIFIED] | Hall (1940), DOI `10.1515/crll.1940.182.130` | Arbitrary-group scope, stem existence proof, and finite minimal-order characterization, printed p. 135 | Exact primary page read from the public GDZ digitization; the proof allows an arbitrary generating set and constructs a free abelian auxiliary group. |
+| [CITED-VERIFIED] | Wiegold (1965), DOI `10.1007/BF01112166` | Theorem 2.1(i), pp. 345–346; Hall reduction §3.3 p. 346; general derived-order estimate p. 347 | All three pages of the public primary scan were read.  The theorem starts with arbitrary groups having finite central factor; finiteness of the ambient representative is introduced only after passing to a stem group. |
 | [UNVERIFIED] | Mason (1978), DOI `10.1017/S0305004100054463` | Publisher extract and metadata only, pp. 205–209 | Official page is paywalled; no theorem from it is used as load-bearing evidence.  This DOI corrects a wrong DOI encountered in secondary search results. |
 | [CITED-VERIFIED] | Bertram (1983), DOI `10.1016/0012-365X(83)90004-3` | Official metadata and reference [6] = Isaacs, personal communication | Printed p. 40/full article remained inaccessible; ScienceDirect PDF returned 403 and the located ResearchGate PDF endpoint did not yield a file. |
 | [CITED-VERIFIED] | Pyber (1987), DOI `10.1112/jlms/s2-35.2.287` | Official publisher abstract and bibliographic data | Full paper remained inaccessible through Wiley/OUP, OpenAlex OA locations, CiteSeer, and archive/mirror searches; the exact Theorem 6.1 was not verified. |
@@ -21,6 +23,7 @@ Research cut-off: 2026-08-13.  Source PDFs, extracted text, and rendered page im
 | [UNVERIFIED] | Saccochi (2015), DOI `10.26512/2015.12.D.22224` | Theorem 4.1.1 p. 34; Pyber formula p. 36; Theorem 4.3.2 pp. 48–50; Theorem 5.2.7 pp. 56–59 | Full dissertation PDF read and critical formulas visually rendered.  It is secondary evidence for Pyber/Isaacs. |
 | [CITED-VERIFIED] | Darafsheh–Ghorbani–Prajapati (2015), DOI `10.1017/S0004972715000830` | Extraspecial/Isaacs attribution and Theorems 1.2–1.3 p. 381; Lemma 2.4 p. 382; proofs and Remark 5.2 pp. 387–388 | Full official Cambridge PDF read. |
 | [CITED-VERIFIED] | Abdollahi–Azad–Mohammadi Hassanabadi–Zarrin (2010), DOI `10.1142/S1005386710000581`, arXiv `0903.0692` | Theorem 1.1 p. 2 and complete finite nonsoluble-classification proof pp. 4–9 | Full primary arXiv manuscript read; published metadata cross-checked through Crossref. |
+| [CITED-VERIFIED] | Berkovich (2010), DOI `10.3336/gm.45.2.09` | Finite scope p. 415; Lemmas 1.2–1.3 pp. 416–417; Theorem 2.3 pp. 419–420; Theorem 4.4 pp. 424–425 | Complete open primary PDF acquired from the journal site; each cited statement and its proof was read. |
 | [CITED-VERIFIED] | Zarrin (2016), DOI `10.1017/S0004972715000696` | Theorems 1.1–1.2 and Lemma 2.1, pp. 43–44; centralizer distinction and Theorem 3.5 p. 45 | Full official Cambridge PDF read. |
 | [CITED-VERIFIED] | Jafarian Amiri–Madadi–Rostami (2018), DOI `10.1007/s41980-018-0079-9` | Definition and Theorem 1.1; Lemma 3.1 and its proof in §3, especially the explicit scope “10-centralizer” plus \(\omega\in\{5,6,7,8\}\) | Publisher's complete open HTML article read; it is marked Open Access and exposes the full theorem/proof text. |
 | [CITED-VERIFIED] | Maróti–Martínez–Moretó (2025), DOI `10.1016/j.jcta.2024.105954` | Pyber discussion p. 2 and the scope of the full paper | Full primary PDF read. |
@@ -183,6 +186,70 @@ pairwise-disjoint partition assertion are verified by
 `src/verification/test_exact_computation.py`; canonical commands and hashes
 are listed in `proof/computational_appendix.tex`.
 
+## Primary stem and cutoff-eight \(p\)-group audit
+
+[CITED-VERIFIED] Hall, *J. reine angew. Math.* 182 (1940), 130--141,
+DOI `10.1515/crll.1940.182.130`, was checked on the public primary scan.
+Printed p. 135 explicitly says that isoclinism applies to all groups, then
+proves for an arbitrary group that its family contains a stem representative
+\(S\) with \(Z(S)\le S'\).  The proof indexes a free abelian auxiliary group
+by an arbitrary generating set, so no finite-generation hypothesis is
+hidden.  The statement that stem groups are precisely the minimal-order
+members of the family is explicitly restricted on that page to finite
+groups.
+
+[CITED-VERIFIED] Wiegold, *Math. Z.* 89 (1965), 345--347,
+DOI `10.1007/BF01112166`, was read in full from the public scan.  Theorem
+2.1(i), p. 345 with proof completed p. 346, states for an arbitrary group
+with \(|G/Z(G)|=p^n\) that \(G'\) is a finite \(p\)-group of order at most
+\(p^{n(n-1)/2}\).  Section 3.3, p. 346, combines finiteness of the derived
+group with Hall's stem theorem to pass every arbitrary group with finite
+central factor to a finite isoclinic stem group.  The concluding bound on
+p. 347 is
+\[
+ |G'|\le q^{(\log_2q-1)/2},\qquad q=|G/Z(G)|<\infty.
+\]
+This source does not prove Pyber's later implication \(q\le c^{\nu(G)}\).
+
+[PROVED] Isoclinism preserves the repository's compressed commutation graph,
+so the Hall--Wiegold finite stem representative has the same \((\nu,a)\) and
+the same \(q\).  Since \(Z(S)\le S'\), the displayed Wiegold bound gives the
+complete repository corollary
+\[
+ |S|=q|Z(S)|\le q|S'|
+      \le q^{(\log_2q+1)/2}.
+\]
+This closes the primary arbitrary-to-finite stem step whenever \(q\) is
+already known finite, but it supplies neither an exact \(f(8)\) nor a center
+index bound from \(\nu\le8\).
+
+[CITED-VERIFIED] Berkovich, *Glasnik Mat.* 45(2) (2010), 415--429,
+DOI `10.3336/gm.45.2.09`, is finite-only by the standing convention on
+p. 415.  Lemma 1.2, p. 416, proves \(\nu(G)\ge p+1\) for a nonabelian finite
+\(p\)-group, with equality for a minimal nonabelian group.  Lemma 1.3,
+pp. 416--417, proves that centralizers attached to any maximal-by-inclusion
+pairwise noncommuting set form an irredundant cover.  Theorem 2.3,
+pp. 419--420, characterizes \(\nu=p+1\) by
+\(G=H Z(G)\), with \(H\) any minimal nonabelian subgroup and
+\(H\cap Z(G)=Z(H)\).  Theorem 4.4, stated p. 424 and proved p. 425, says that
+an irredundant cover of a finite \(p\)-group by \(p+2\) proper subgroups
+forces \(p=2\).
+
+[PROVED] Lemma 1.3 and Theorem 4.4 therefore exclude \(\nu=p+2\) for every
+odd finite \(p\)-group.  At cutoff eight, Lemma 1.2 first forces \(p\le7\).
+For \(p=7\), necessarily \(\nu=8\), Theorem 2.3 applies, and the abelian
+maximal subgroups of \(H\), enlarged by the center, prove \(a=8\).  For
+\(p=5\), the \(\nu=6\) branch is described by Theorem 2.3 and has \(a=6\),
+\(\nu=7\) is excluded, and \(\nu=8\) remains.  For \(p=3\), the analogous
+\(\nu=4\) branch has \(a=4\), \(\nu=5\) is excluded, and
+\(\nu=6,7,8\) remain.  No complete \(p=2\) classification follows.
+
+[UNVERIFIED] The accessible primary cutoff-eight sources audited through
+2026-08-14 contain no complete classification of all finite \(p\)-groups,
+all solvable groups, or all finite stem/isoclinism families with
+\(\nu\le8\), and no exact general value of \(f(8)\).  The Berkovich edge is
+partial pruning and cannot support a global upper bound for \(h(8)\).
+
 ## Exact-formula and alternate-terminology search
 
 [UNVERIFIED] Exact searches were run for `2^{floor((n-1)/2)}+1`, `2^{(n-1)/2}+1`, `max(n,2^{floor((n-1)/2)}+1)`, and plain-text/OCR variants of those expressions.
@@ -237,6 +304,11 @@ then uses all \(\binom n2\) pair intersections to obtain \(f(n)=n+\binom n2f(n-1
 
 [UNVERIFIED] Priority 3 is a primary proof of the extraspecial maximum abelian-subgroup order and central-coset covering count for both extraspecial 2-group isomorphism types.  Işık closes only the explicit-group clique-number subclaim.
 
-[UNVERIFIED] Priority 4 is a proof-level audit of the Macdonald finite reduction, because a final arbitrary-group theorem cannot silently import a finite-group Pyber theorem.
+[PROVED] The former finite-reduction Priority 4 is closed by Hall
+(1940), p. 135, and Wiegold (1965), pp. 345--347: once an arbitrary group is
+known to have finite central quotient, it has a finite isoclinic stem
+representative.  This removes Macdonald as a load-bearing source for that
+step, but it does not verify Pyber's finite-group exponential center-index
+bound or extend that bound to arbitrary groups.
 
 [UNVERIFIED] No global novelty claim is authorized by this audit.  The binary candidate is disproved; the proved centralizer-drop recurrence still requires broader citation review before any claim of originality.
