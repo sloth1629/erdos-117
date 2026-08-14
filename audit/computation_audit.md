@@ -278,7 +278,7 @@ labeled simple graphs on at most six vertices, and also checks group axioms,
 coset invariance, named records, direct-product/OR compatibility, witnesses,
 and the \(E_m\) symplectic model for \(m=1,2,3\). It also reparses and verifies
 every saved Python and GAP certificate. The latest 2026-08-14 run passed all
-31 tests in 400.418 seconds under Python 3.9.6. The extended tests independently rebuild the
+32 tests in 598.056 seconds under Python 3.9.6. The extended tests independently rebuild the
 scalar graphs, four residual searches, strongly regular parameters, spreads,
 the order-128 prefilter survivors, every exterior-square graph witness, the
 eleven cutoff-seven dual searches, all 26,387 ID-261 affine records, and the
@@ -571,6 +571,36 @@ command and result are preserved in `experiments/logs/h8_verification.txt`.
 groups form a literature-motivated feasibility list, not a complete list of
 center quotients possible at cutoff eight. No global conclusion about
 \(h(8)\) is drawn from these computations.
+
+## Binary rank-three order-64 tail
+
+[COMPUTED] The structural reduction in `notes/structural_reductions.md`,
+(SR.12i), forces a hypothetical binary rank-three case to have an order-64
+center quotient \(Q\) that is nonabelian, has class at most two,
+\(|\Omega_1(Z(Q))|=8\), and
+\(Q/\Omega_1(Z(Q))\cong C_2^3\).  The dependency-free verifier evaluates
+these predicates on all 267 committed Cayley tables.  The first three select
+44 IDs; the elementary quotient condition removes exactly
+`17,84,87,103,247`, leaving 39.
+
+[COMPUTED] The verifier joins those 39 to the complete extension artifacts.
+They split into 19 ordinary IDs whose faithful records have minimum exact
+clique number 12, seven ordinary IDs with no faithful normal kernel, five
+generic-dual IDs with no faithful cutoff-nine candidate, and eight IDs with
+nonidentity universal exterior-zero witnesses.  The four parts are disjoint
+and exhaustive.  No claim that all 39 quotient types are capable is made;
+the nonfaithful and exterior-zero parts are precisely where exact center
+quotients fail.
+
+[COMPUTED] The canonical test reparses every order-64 table, checks full
+associativity, rebuilds the entire dependent cutoff-eight certificate, and
+then performs the structural join.  It passed in 150.840 seconds.  The
+verifier, test, and transcript SHA-256 values are respectively
+`5a4f6f6bf152a495ac9753fd04f15402fe16ef7caef75c39a80b8b18513106be`,
+`4d29a897d542e6078a669eac0b3817809e089195f03c17592b4f7f24271058cf`,
+and `926765379528a0460763befddb6464e9f668c279ec7c2ef7543793ce750410c7`.
+An independent audit obtained the same ID partition and separately verified
+all ordinary, generic-frontier, and exterior-zero witnesses used here.
 
 ## Local centralizer-index counterexample
 

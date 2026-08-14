@@ -708,7 +708,7 @@ Indeed, the Sylow \(3\)- and \(5\)-subgroups of \(Z(Q)\) have exponent
 \(3\) and \(5\), respectively, so they are exactly the elementary abelian
 spaces \(A_3\) and \(A_5\) just bounded.
 
-### [PROVED] The binary central layer has rank at most three
+### [PROVED] The binary central layer has rank at most two
 
 Assume that \(Q=G/Z(G)\) is finite and nonabelian and that
 \(\nu(G)\leq8\). Put
@@ -718,11 +718,11 @@ A=A_2=\{a\in Z(Q):a^2=1\},
 \qquad d_2=\dim_{\mathbf F_2}A.
 \]
 
-Then
+Then, by the computer-assisted final step below,
 
 \[
-d_2\leq3,
-\qquad |Z(Q)_2|\leq2^6.
+d_2\leq2,
+\qquad |Z(Q)_2|\leq2^4.
 \tag{SR.12}
 \]
 
@@ -1044,17 +1044,62 @@ perfect, and \(Q\) is a nonabelian group of class at most two. No claim
 that the remaining class-three central cocycle can be removed by a global
 change of lifts is needed here.
 
+#### [COMPUTED] The order-64 rank-three tail is empty at cutoff eight
+
+The verifier `src/verification/verify_rank3_order64_tail.py` derives the
+finite tail directly from all 267 committed order-64 Cayley tables.  The
+first three quotient-level conditions in (SR.12i)--nonabelian, class at most
+two, and \(|\Omega_1(Z(Q))|=8\)--select 44 isomorphism types.  The additional
+condition forced by (SR.12i),
+
+\[
+Q/\Omega_1(Z(Q))\cong C_2^3,
+\]
+
+removes five and leaves exactly 39 structural candidates.  These 39 are
+partitioned without overlap as follows:
+
+\[
+19\text{ ordinary faithful}
++7\text{ ordinary nonfaithful}
++5\text{ generic dual}
++8\text{ exterior-zero}=39.
+\]
+
+For the first family every faithful extension record has exact clique number
+at least 12; in the second every normal exterior kernel has nontrivial
+commutation radical; in the third the complete cutoff-nine dual searches
+have no faithful retained candidate; and in the fourth a nonidentity
+universal exterior-zero row makes an exact center quotient impossible.  The
+universal lifted-commutator reduction in `notes/exact_h7.md`, (H7.11), shows
+that these action-invariant kernel and annihilator records overcount every
+central extension with center quotient \(Q\), so no extension is omitted.
+
+The saved test rebuilds the entire dependent cutoff-eight certificate before
+performing this join and passed in 150.840 seconds.  Its verifier, test, and
+transcript SHA-256 values are, respectively,
+`5a4f6f6bf152a495ac9753fd04f15402fe16ef7caef75c39a80b8b18513106be`,
+`4d29a897d542e6078a669eac0b3817809e089195f03c17592b4f7f24271058cf`,
+and `926765379528a0460763befddb6464e9f668c279ec7c2ef7543793ce750410c7`.
+An independent reconstruction obtained the same 39 IDs and separately
+rechecked all 5,965 ordinary kernel rows, all generic invariant-closure
+frontiers, and all relevant exterior-zero rows.
+
+Consequently the hypothetical case \(d_2=3\) obtained in (SR.12i) cannot
+occur.  This completes the computer-assisted proof of \(d_2\leq2\) in
+(SR.12).
+
 The central-exponent restriction gives \(\exp Z(Q)_2\leq4\). Therefore
 \(Z(Q)_2\cong C_4^u\times C_2^v\), with \(u+v=d_2\), and
 
 \[
-|Z(Q)_2|=2^{2u+v}\leq2^{2d_2}\leq2^6.
+|Z(Q)_2|=2^{2u+v}\leq2^{2d_2}\leq2^4.
 \]
 
 Together with (SR.11), this also gives
 
 \[
-|Z(Q)|\leq225\cdot2^6=14\,400.
+|Z(Q)|\leq225\cdot2^4=3\,600.
 \]
 
 ### [PROVED] Coprime abelian central direct factors cross cutoff nine

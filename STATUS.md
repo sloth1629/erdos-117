@@ -50,9 +50,10 @@ gives 9 at seven.
 8. Direct-product OR identity and correct direct-power rates via fractional
    chromatic number and complementary Shannon capacity.
 9. At cutoff eight, every nonabelian exact center quotient satisfies
-   \(|Z(G/Z(G))|\le14{,}400\); the binary elementary central layer has rank
-   at most three, with an additional abelian-centralizer restriction in the
-   rank-three case.  For finite class-two \(p\)-groups,
+   \(|Z(G/Z(G))|\le3{,}600\); the binary elementary central layer has rank
+   at most two.  The intermediate structural branch at rank three reduces
+   to 39 order-64 quotient types, all of which are eliminated by complete
+   exact-extension certificates.  For finite class-two \(p\)-groups,
    every abelian \(A\ge Z(P)\) satisfies
    \([A:Z(P)]\le p^{\nu(P)/p}\), with a drop-sensitive relative-center
    form.  These are structural reductions, not a determination of \(h(8)\)
@@ -60,7 +61,7 @@ gives 9 at seven.
 
 ## Computation status
 
-- The complete verification suite passes: 31 tests in 400.418 seconds under
+- The complete verification suite passes: 32 tests in 598.056 seconds under
   Python 3.9.6, with the transcript saved for this milestone.
 - Both optimized graph algorithms agree with brute force on all 33,868
   labeled graphs with at most six vertices.

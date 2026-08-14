@@ -71,6 +71,21 @@ Continue auditing quantifiers, finite/infinite scope, central-coset arguments, p
   \(|G/Z(G)|=64\).  This conclusion does not use the unproved possibility
   of absorbing the remaining class-three central cocycle by a global
   change of lifts.
+- [COMPUTED] The ensuing order-64 tail was independently reconstructed from
+  all 267 committed Cayley tables.  The theorem's quotient-level predicates
+  select exactly 39 types: 26 ordinary IDs, five generic-dual IDs, and eight
+  exterior-zero IDs.  A separate audit recomputed the radicals of all 5,965
+  ordinary kernel rows, verified a nine-clique in every one of the 3,488
+  faithful rows, checked 226,481 generic invariant-closure frontier steps,
+  and reconstructed all 14 relevant nonidentity exterior-zero rows.  The
+  frozen regression test independently rebuilds the same dependency chain
+  and passed in 150.840 seconds.
+- [PROVED] Combining that complete finite tail with (SR.12i) eliminates the
+  rank-three equality case.  Hence
+  \(\dim_{\mathbf F_2}\Omega_1(Z(G/Z(G)))\le2\),
+  \(|Z(G/Z(G))_2|\le16\), and the odd-layer bound gives
+  \(|Z(G/Z(G))|\le3{,}600\).  This is a computer-assisted conclusion; it is
+  not a determination of \(h(8)\).
 - [UNVERIFIED] As a redundant scratch stress check rather than a proof
   dependency, all
   nonzero three-space alternating maps with codomain dimensions one, two,
@@ -248,8 +263,8 @@ Continue auditing quantifiers, finite/infinite scope, central-coset arguments, p
   generic-dual searches, and the ID-261 affine reconstruction.  After the
   final serialization-only normalization, the then-complete 25-test suite
   passed in 211.839 seconds.  The later release worktree, including the
-  cutoff-eight and local-counterexample additions, passed all 31 tests in
-  400.418 seconds.
+  cutoff-eight and local-counterexample additions, followed by the binary
+  rank-three order-64 tail, passed all 32 tests in 598.056 seconds.
 - [PROVED] Subject to the explicitly identified [CITED-VERIFIED]
   \(f(7)=81\) input and the exact [COMPUTED] certificates above, the case
   split proves \(a(G)\le10\) for every arbitrary group with
