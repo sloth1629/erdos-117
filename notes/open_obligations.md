@@ -34,5 +34,15 @@
   \(\nu(P)\le8\) implies \((\nu(P),a(P))=(1,1)\) or \((6,6)\). The proof
   combines Berkovich's audited finite \(p\)-group theorems with a
   computer-assisted exact \(\mathbf F _5\)-hyperplane-cover lemma.
+- `[PROVED]` The finite \(3\)-group branch at cutoff eight is closed:
+  \(\nu(P)=8\) implies \(a(P)=8\), and the maximum of \(a(P)\) over finite
+  \(3\)-groups with \(\nu(P)\le8\) is ten, attained by \(S(3,2)\).  The
+  complete structural proof is in `notes/three_group_nu8.md`.
+- `[PROVED]` If \(P\) is a finite \(2\)-group with \(\nu(P)=8\), then
+  \([P:Z(P)]\le2048\).  Maximalizing the clique-centralizer cover also gives
+  an odd circuit of size \(3\), \(5\), or \(7\) in the dual of
+  \(P/\Phi(P)\), so the eight original centralizers cannot all be maximal.
+  These reductions are proved in `notes/two_group_nu8.md`.
 - `[UNVERIFIED]` Determine \(h(8)\) and subsequent exact values; the
-  \(2\)-group, \(3\)-group, and nonnilpotent solvable branches remain open.
+  finite \(2\)-group classification and the nonnilpotent solvable branch
+  remain open.

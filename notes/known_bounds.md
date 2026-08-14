@@ -484,6 +484,106 @@ proof, source audit, certificate, and reproduction command are in
 notes/five_group_nu8.md. This closes only the finite \(5\)-group branch; it
 does not determine \(h(8)\).
 
+## A closed finite \(3\)-group branch at cutoff eight
+
+### [PROVED] Finite \(3\)-groups with \(\nu=8\)
+
+If \(P\) is a finite \(3\)-group and \(\nu(P)=8\), then
+
+\[
+  a(P)=8.
+\]
+
+For a maximum clique \(x_1,\ldots,x_8\), choose a maximal member
+\(H=C_P(x_1)\) of the irredundant centralizer cover.  A conjugation
+amplification lemma shows that a nonabelian such \(H\) has \(\nu(H)=4\).
+Berkovich's verified equality structure then gives
+\(H/Z(H)\cong\mathbf F _3^2\), \(H'\le Z(H)\), and \(|H'|=3\).
+If an outer intersection
+\(C_H(x_i)=H\cap C_P(x_i)\) were nonabelian, its image would fill
+\(H/Z(H)\).  Writing \(J=[Z(H),x_i]\), amplification gives \(|J|=3\).
+If \(J\ne H'\), a four-clique in the intersection and a three-clique from
+the \(J\)-action multiply to a twelve-clique.  If \(J=H'\), then
+\(P/Z(P)\) carries a nondegenerate scalar symplectic form over
+\(\mathbf F _3\); the proved values give clique number seven in dimension
+four and at least ten in every higher even dimension.  Both cases
+contradict \(\nu(P)=8\).
+
+Thus all seven outer intersections are abelian.  The private cell of \(H\)
+is pairwise commuting and generates an abelian subgroup, while
+\(C_P(x_i)=\langle x_i,C_H(x_i)\rangle\) is abelian for \(i>1\).  These
+eight abelian subgroups cover \(P\), and the clique lower bound gives
+equality.  The complete argument, including the amplification calculation
+and the twelve-clique check, is in notes/three_group_nu8.md.
+
+### [PROVED] Exact finite-\(3\)-group cutoff contribution
+
+\[
+  \max\{a(P):P\text{ a finite \(3\)-group},\ \nu(P)\le8\}=10.
+\]
+
+The new \(\nu=8\) theorem gives \(a=8\).  Berkovich's verified results
+handle \(\nu=4,5\), the exact global values \(h(6)=6\) and \(h(7)=10\)
+bound the remaining branches, and \(S(3,2)\) attains
+\((\nu,a)=(7,10)\).  This is a finite-\(3\)-group statement, not a
+determination of \(h(8)\).
+
+## A finite \(2\)-group reduction at cutoff eight
+
+### [PROVED] Center quotient of order at most \(2048\)
+
+If \(P\) is a finite \(2\)-group with \(\nu(P)=8\), then
+
+\[
+  [P:Z(P)]\le2^{11}=2048.
+\]
+
+Indeed, quotient the irredundant eight-centralizer cover by its intersection
+\(Z(P)\), and call the resulting core-free cover of the \(2\)-group \(Q\)
+by proper subgroups \(A_1,\ldots,A_8\).  The factorial intersection lemma,
+rounded down to powers of two, bounds a \(t\)-fold intersection for
+\(t=1,\ldots,8\) by
+
+\[
+  4096,\ 512,\ 64,\ 16,\ 4,\ 2,\ 1,\ 1.
+\]
+
+Elementary union counting gives two members of index at most four, so
+\(|Q|\le8192\).  At order \(8192\), they both have index four, the other
+six have index at least eight, and their contributions outside the first
+two are at most \(576\) each; this cannot cover the complement of size
+\(4608\).  At order \(4096\), an index-two member would leave a complement
+of size \(1536\) against an upper contribution \(6\cdot192\).  Otherwise
+there are at least four index-four members.  Fixing two of them leaves
+exactly \(2304\) points.  Pair, triple, fourfold, and fivefold intersections
+of index-four members have orders \(256,64,16,4\); hence the residual sets
+have one-, two-, and threefold intersection sizes \(576,144,36\).
+The three-term Bonferroni upper bounds for respectively
+\(4,5,6,7,8\) index-four members are
+
+\[
+  2288,\ 2292,\ 2224,\ 2120,\ 2016,
+\]
+
+all below \(2304\).  Since \(|Q|\) is a power of two, this excludes
+\(8192\) and \(4096\) and proves the bound.
+
+### [PROVED] Odd-circuit maximalization
+
+After enlarging the eight centralizers to maximal subgroups and passing to
+\(P/\Phi(P)\), a minimal hyperplane subcover has size \(3\), \(5\), or
+\(7\), and its normal vectors form a circuit.  A family of
+\(\mathbf F _2\)-hyperplanes \(\ker b_i\) covers exactly when the affine
+system \(b_i(v)=1\) is inconsistent, equivalently when the normals have an
+odd zero-sum subfamily.  A support-minimal such relation is an odd circuit
+of size at most eight.  At least one corresponding original centralizer is
+strictly smaller than its maximal enlargement, since otherwise at most
+seven members of the original irredundant cover would cover \(P\).
+Consequently the eight clique-centralizers cannot all be maximal.
+
+The full proof is in notes/two_group_nu8.md.  These statements do not
+classify the finite \(2\)-group branch or determine \(h(8)\).
+
 ## Stronger reported bounds still under audit
 
 ### [UNVERIFIED] Pyber's exponential center-index theorem

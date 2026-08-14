@@ -49,9 +49,13 @@ computer-assisted values use the subgroup-cover bounds $f(5)=16$,
 $f(6)=36$, and $f(7)=81$, followed by complete
 Schur-cover/exterior-square analyses. We also prove that a finite $5$-group
 with $\nuG(P)\le8$ has $(\nuG(P),\aG(P))=(1,1)$ or $(6,6)$; this uses an audited
-finite-group theorem and a small exact hyperplane-cover check. Apart from
-these explicitly computer-assisted statements, the remaining structural
-results and the counterexample have computation-independent proofs. Finally,
+finite-group theorem and a small exact hyperplane-cover check.  For finite
+$3$-groups we prove that $\nuG(P)=8$ forces $\aG(P)=8$, and that the largest
+cover number at clique cutoff eight is ten.  For finite $2$-groups with
+$\nuG(P)=8$ we prove $[P:\Z(P)]\le2048$ and an odd-circuit reduction in the
+Frattini quotient, without claiming a classification.  Apart from the
+explicitly computer-assisted statements, the remaining structural results
+and the counterexample have computation-independent proofs. Finally,
 combining two audited published inputs gives the CFSG-dependent universal estimate
 $h(n)\le2^{O(n\log\log n)}$; the withdrawn fixed-base coset-cover preprint
 is not used.
@@ -997,6 +1001,304 @@ $\Z(P)$ gives six abelian subgroups covering $P$, while every abelian cover
 has at least $\nuG(P)=6$ members. Therefore $\aG(P)=6$.
 \end{proof}
 
+\section{The finite three-group branch at cutoff eight}
+
+We first isolate the amplification used in the finite $3$-group proof.
+
+\begin{lemma}[Maximal-centralizer amplification]
+\label{lem:three-amplification}
+Let $P$ be a finite $3$-group with $\nuG(P)=8$, let
+$H=\CG_P(x)$ be maximal, and choose $y\notin H$.  Suppose that
+$K\le\Z(H)$ is $y$-invariant and that $y$ acts nontrivially on $K$.  If
+\[
+ q=\bigl|\operatorname{im}(\delta_y:K\longrightarrow K)\bigr|,
+ \qquad \delta_y(k)=k^{-1}k^y,
+\]
+then
+\begin{equation}
+ \nuG(H)+q\le8.
+\label{eq:three-amplification}
+\end{equation}
+\end{lemma}
+
+\begin{proof}
+The subgroup $H$ is normal of index three, and $\delta_y$ is a homomorphism
+on the abelian group $K$.  If $T$ is a transversal of
+$\ker\delta_y$ in $K$, direct multiplication gives
+\[
+ yt\text{ commutes with }yu
+ \quad\Longleftrightarrow\quad
+ \delta_y(t)=\delta_y(u).
+\]
+Thus $\{yt:t\in T\}$ is a $q$-clique.
+
+Let $h_1,\ldots,h_r$ be a maximum clique in $H$.  Since $K\le\Z(H)$,
+\[
+ h_jk\text{ commutes with }yt
+ \quad\Longleftrightarrow\quad
+ (h_j^{-1}h_j^y)\delta_y(k)=1,
+\]
+independently of $t$.  For each $j$ at most one value of
+$\operatorname{im}\delta_y$ causes commutation.  Since $q$ is a nontrivial
+power of three, choose $k_j\in K$ avoiding it.  Multiplication by these
+central elements preserves the edges among the $h_j$, so the modified
+$r$-clique together with $\{yt:t\in T\}$ is an $(r+q)$-clique in $P$.
+\end{proof}
+
+\begin{theorem}[Finite $3$-groups at cutoff eight]
+\label{thm:three-group-cutoff-eight}
+If $P$ is a finite $3$-group with $\nuG(P)=8$, then
+\[
+ \aG(P)=8.
+\]
+\end{theorem}
+
+\begin{proof}
+Choose a maximum clique $x_1,\ldots,x_8$ and put
+$H_i=\CG_P(x_i)$.  These eight distinct proper subgroups form an
+irredundant cover: an element outside their union enlarges the clique, and
+$x_i$ belongs only to $H_i$.  Some $H_i$ is maximal, since otherwise all
+eight have index at least nine and cannot cover $P$.  Relabel so that
+$H=H_1$ is maximal.
+
+The amplification lemma always has a suitable subgroup.  For $y\notin H$,
+\[
+ K_0=\langle x_1,x_1^y,x_1^{y^2}\rangle\le\Z(H)
+\]
+is $y$-invariant, because $H\mathrel{\triangleleft}P$ and $y^3\in H$.
+Moreover $y$ acts nontrivially on $K_0$, since it does not centralize
+$x_1$.  Hence, if $H$ is nonabelian, Lemma~\ref{lem:three-amplification}
+gives $\nuG(H)\le5$.  Berkovich proves that a nonabelian finite
+$3$-group has clique number at least four and excludes clique number five
+\cite[Lemma~1.2, p.~416; Theorem~4.4, pp.~424--425]
+{berkovich_2010_covers}.  Thus
+\begin{equation}
+ \nuG(H)=4.
+\label{eq:three-H-clique}
+\end{equation}
+His equality structure gives $H=M\Z(H)$ for a minimal nonabelian $M$
+\cite[Theorem~2.3, pp.~419--420]{berkovich_2010_covers}.  For completeness,
+choose noncommuting $a,b\in M$.  Minimal nonabelianness gives
+$M=\langle a,b\rangle$, and every maximal subgroup of $M$ is abelian.
+Every $g\in M$ therefore centralizes $\Phi(M)$, so
+$\Phi(M)\le\Z(M)$.  The two-generator Frattini quotient and
+noncyclicity of $M/\Z(M)$ give $M/\Z(M)\cong\F_3^2$.  Moreover
+$M'\le\Phi(M)\le\Z(M)$, $M'=\langle[a,b]\rangle$, and
+$a^3\in\Phi(M)$ gives $[a,b]^3=[a^3,b]=1$; hence $|M'|=3$.
+Finally, $H=M\Z(H)$ and $M\cap\Z(H)=\Z(M)$ give
+\begin{equation}
+ H/\Z(H)\cong\F_3^2,\qquad |H'|=3,\qquad H'\le\Z(H).
+\label{eq:three-H-structure}
+\end{equation}
+
+For $i>1$, set
+\[
+ L_i=H\cap H_i=\CG_H(x_i).
+\]
+We claim that every $L_i$ is abelian.  Suppose instead that
+$L=\CG_H(y)$ is nonabelian for $y=x_i$.  Then $H$ is nonabelian and
+\eqref{eq:three-H-clique}--\eqref{eq:three-H-structure} apply.  The image of $L$ in the symplectic plane
+$H/\Z(H)$ cannot have dimension at most one, since such a subspace is
+isotropic.  Therefore $L\Z(H)=H$.  With $Z=\Z(H)$, put
+\[
+ J=[Z,y]=\operatorname{im}(\delta_y:Z\longrightarrow Z).
+\]
+Because $L$ centralizes $y$,
+\begin{equation}
+ [H,y]=J.
+\label{eq:three-H-y}
+\end{equation}
+The subgroup $J$ is nontrivial: $x_1\in Z$ and $y$ does not centralize
+$x_1$.  Applying Lemma~\ref{lem:three-amplification} with $K=Z$ and
+using \eqref{eq:three-H-clique} yields $4+|J|\le8$, whence $|J|=3$.
+
+Both $H'$ and $J$ are central in $P$.  Indeed, each lies in $\Z(H)$ and is
+$y$-invariant.  Conjugation by $y$ has order dividing three on each,
+because $y^3\in H$, whereas the automorphism group of a group of order
+three has order two.  Since $P=\langle H,y\rangle$, both are central.
+If $J\ne H'$, choose a four-clique $R$ in the nonabelian subgroup $L$ and
+a transversal $T$ of $\ker\delta_y$ in $Z$.  Then
+$F=\{yt:t\in T\}$ is a three-clique.  Every member of $R$ commutes with
+every member of $F$, and for $r,s\in R$, $f,g\in F$,
+\[
+ [rf,sg]=[r,s][f,g].
+\]
+The first factor lies nontrivially in $H'$ when $r\ne s$, and the second
+lies nontrivially in $J$ when $f\ne g$.  Distinct subgroups of order three
+intersect trivially.  The products are distinct as well: if $rf=sg$, then
+$r^{-1}s=fg^{-1}\in Z(H)$, so the clique property forces $r=s$ and then
+$f=g$.  Hence the twelve products
+\[
+ \{rf:r\in R,\ f\in F\}
+\]
+are pairwise noncommuting, a contradiction.  Consequently
+\begin{equation}
+ J=H'.
+\label{eq:three-J-derived}
+\end{equation}
+
+Equations~\eqref{eq:three-H-y}--\eqref{eq:three-J-derived} show that
+$P'=H'$ is central of order three.  Thus
+$g^3\in\Z(P)$ for every $g\in P$, and commutation induces a nondegenerate
+alternating scalar form
+\begin{equation}
+ b:P/\Z(P)\times P/\Z(P)\longrightarrow H'\cong\F_3.
+\label{eq:three-scalar-form}
+\end{equation}
+Write $\dim_{\F_3}P/\Z(P)=2m$.  The centralizer $H$ is nonabelian, so
+$m\ne1$: in a symplectic plane the perpendicular space of a nonzero vector
+is a line and its full preimage is abelian.  If $m=2$, the compressed
+commutation graph is the one for $S(3,2)$, whose clique number is seven by
+Theorem~\ref{thm:counterexample}.  If $m\ge3$, decompose
+\eqref{eq:three-scalar-form} into
+symplectic planes.  A plane has four pairwise nonorthogonal projective
+points.  More generally, if $A$ and $C$ are nonorthogonal sets in
+orthogonal summands $V_1,V_2$, fix $c_0\in C$; then
+\[
+ \{(a,c_0):a\in A\}\ \cup\
+ \{(0,c):c\in C\setminus\{c_0\}\}
+\]
+is nonorthogonal, since every cross-pair has pairing
+$b_2(c_0,c)\ne0$.  Iterating this construction over the $m$ planes gives
+a clique of size $m(3+1)-(m-1)=3m+1\ge10$.  Both alternatives contradict
+$\nuG(P)=8$.  This proves that every $L_i$ is abelian.
+
+It remains to convert these intersections into an abelian cover.  Let
+\[
+ Q_1=H_1\mathbin{\backslash}\bigcup_{i=2}^8H_i,
+ \qquad A_1=\langle Q_1\rangle.
+\]
+Two noncommuting elements of $Q_1$, together with
+$x_2,\ldots,x_8$, would form a nine-clique.  Hence $Q_1$ is pairwise
+commuting and $A_1$ is abelian.  Since $H$ is normal of index three and
+$x_i\in H_i\setminus H$,
+\[
+ H_i=\langle x_i,L_i\rangle
+\]
+for $i>1$; this is abelian because $L_i$ is abelian and centralized by
+$x_i$.  Finally,
+\[
+ P=A_1\cup H_2\cup\cdots\cup H_8:
+\]
+outside $H$ this is the original cover, while inside $H$ an element lies
+in some $L_i$ or in $Q_1$.  Thus $\aG(P)\le8$, and every abelian cover
+has at least one member for each point of an eight-clique.  Equality follows.
+\end{proof}
+
+\begin{corollary}[Exact finite $3$-group contribution]
+\label{cor:three-group-cutoff-eight}
+\[
+ \max\{\aG(P):P\text{ a finite $3$-group},\ \nuG(P)\le8\}=10.
+\]
+\end{corollary}
+
+\begin{proof}
+For nonabelian finite $3$-groups, Berkovich's cited results give the
+$\nuG=4$ branch with $\aG=4$ and exclude $\nuG=5$.  The exact global values
+$h(6)=6$ and $h(7)=10$ bound the next two branches, and
+Theorem~\ref{thm:three-group-cutoff-eight} gives $\aG=8$ when
+$\nuG=8$.  The group $S(3,2)$ attains $(\nuG,\aG)=(7,10)$ by
+Theorem~\ref{thm:counterexample}.
+\end{proof}
+
+\section{A finite two-group reduction at cutoff eight}
+
+\begin{proposition}[Center index and odd-circuit reduction]
+\label{prop:two-group-cutoff-eight}
+Let $P$ be a finite $2$-group with $\nuG(P)=8$.  Then
+\begin{equation}
+ [P:\Z(P)]\le2048.
+\label{eq:two-center-index}
+\end{equation}
+After the eight clique-centralizers are enlarged to maximal subgroups, some
+minimal subcover of $P/\Phi(P)$ has $3$, $5$, or $7$ hyperplanes, and their
+normal vectors form a circuit.  In particular, the eight original
+centralizers cannot all be maximal.
+\end{proposition}
+
+\begin{proof}
+Quotient the irredundant clique-centralizer cover by its intersection
+$\Z(P)$, obtaining a core-free cover
+$Q=A_1\cup\cdots\cup A_8$ of the finite $2$-group $Q=P/\Z(P)$.
+The factorial intersection argument in the proof of
+Proposition~\ref{prop:factorial-center} bounds a $t$-fold intersection by
+$(8-t)!$.  Rounding down to powers of two, for $t=1,\ldots,8$ the bounds are
+\begin{equation}
+ 4096,\ 512,\ 64,\ 16,\ 4,\ 2,\ 1,\ 1.
+\label{eq:two-intersections}
+\end{equation}
+
+Write $N=|Q|$.  Counting the identity only once shows that a largest cover
+member has index two or four.  There is a second member of index at most
+four: if all seven others had index at least eight, irredundancy and the
+intersection-index inequality would bound their total contribution outside
+the largest member by $7N/16<N/2$ in the index-two case, and the whole
+union by
+\[
+ N/4+7(3N/32)=29N/32
+\]
+in the index-four case.  The two-member intersection bounds in
+\eqref{eq:two-intersections} now give $N\le8192$.
+
+If $N=8192$, the two small-index members $A,B$ both have index four and
+$|A\cap B|=512$; all other members have index at least eight, since a third
+would force a triple intersection of order at least $128>64$.  Each of
+the other six members contributes at most $576$ points outside
+$A\cup B$, but
+\[
+ |Q\setminus(A\cup B)|=4608>6\cdot576,
+\]
+a contradiction.
+
+Suppose $N=4096$.  If one member has index two, a second has index four,
+their intersection has order $512$, and each remaining member contributes
+at most $192$ points outside their union.  This cannot cover the complement
+of size $1536>6\cdot192$.  Hence every small-index member has index four.
+Let $t$ be their number.  Fix two, $A,B$.  Their complement has at least
+$2304$ points; each further index-four member contributes at most $576$,
+and each of the other members at most $320$.  The cases $t=2,3$ are too
+small, so $t\ge4$.
+
+For these index-four members,
+\eqref{eq:two-intersections} and the intersection-index lower bound force
+the triple, fourfold, and fivefold intersections, whenever present, to have
+orders $64,16,4$.  Intersecting any pair with a third index-four member has
+index at most four, so every pair intersection has order $256$.  Thus the
+successive intersection orders are
+\[
+ 256,\quad64,\quad16,\quad4.
+\]
+Thus $|Q\setminus(A\cup B)|=2304$.  If
+$S_K=K\setminus(A\cup B)$ for a remaining index-four member, then
+\[
+ |S_K|=576,\qquad |S_K\cap S_L|=144,\qquad
+ |S_K\cap S_L\cap S_M|=36.
+\]
+The three-term Bonferroni upper bound, together with the $320$ contribution
+from every remaining index-at-least-eight member, gives respectively
+\[
+ 2288,\ 2292,\ 2224,\ 2120,\ 2016
+\]
+for $t=4,5,6,7,8$.  Every number is below $2304$, excluding $N=4096$.
+Since $N$ is a power of two, \eqref{eq:two-center-index} follows.
+
+For the final assertion, enlarge the original centralizers to maximal
+subgroups and pass to $V=P/\Phi(P)$.  Write the resulting distinct
+hyperplanes as $\ker b_i$ for nonzero $b_i\in V^*$.  They cover $V$
+exactly when the affine system $b_i(v)=1$ has no solution.  Linear
+consistency over $\F_2$ says that this occurs exactly when the normals have
+an odd zero-sum subfamily.  A support-minimal such relation has size
+$3$, $5$, or $7$ and is a circuit: a proper even dependency would combine
+with it to give a smaller odd dependency.  For each circuit hyperplane,
+choose one original centralizer whose chosen maximal enlargement is that
+hyperplane, using an equal source whenever one exists.  If every chosen
+inclusion were equality, these at most seven original centralizers would
+already cover $P$, contradicting irredundancy.
+\end{proof}
+
+Proposition~\ref{prop:two-group-cutoff-eight} is a finite reduction, not a
+classification of the $2$-group branch and not a determination of $h(8)$.
+
 \section{Direct products and why they do not settle the problem}
 
 For graphs $X,Y$, their OR product $X\vee Y$ joins two product vertices
@@ -1052,9 +1354,13 @@ larger scalar cases do not improve the lower-bound efficiency of $S(3,2)$.
 
 The manuscript does not determine $h(n)$ beyond $n=7$, does not determine
 the optimal exponential base, and does not prove that such a base exists.
-Theorem~\ref{thm:five-group-cutoff-eight} closes only the finite
-$5$-group branch at cutoff eight; the $2$-group, $3$-group, and
-nonnilpotent solvable branches needed to determine $h(8)$ remain open.
+Theorems~\ref{thm:five-group-cutoff-eight} and
+\ref{thm:three-group-cutoff-eight} close the finite $5$- and $3$-group
+branches at cutoff eight.  Proposition~\ref{prop:two-group-cutoff-eight}
+reduces the finite $2$-group branch to center quotient order at most $2048$
+and an odd-circuit configuration, but does not classify it.  The remaining
+binary and nonnilpotent solvable cases needed to determine $h(8)$ remain
+open.
 The most concrete geometric subproblem is to control $\pi(q,m)$, the maximum
 partial-ovoid size in a symplectic polar space, relative to the exact cover
 number $q^m+1$.  More generally one must decide whether odd-characteristic

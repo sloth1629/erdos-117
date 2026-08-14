@@ -96,6 +96,34 @@ here is now \(1\le n\le7\).
             +-- [PROVED] nu(P) <= 8 implies
                 (nu(P),a(P))=(1,1) or (6,6)
 
+      +-- [PROVED] finite 3-group branch at cutoff eight
+            +-- [CITED-VERIFIED] Berkovich lower bound, equality structure,
+            |   and exclusion of clique number five
+            +-- [PROVED] maximal-centralizer amplification
+            |     +-- a nonabelian maximal centralizer has clique number four
+            +-- [PROVED] a nonabelian outer intersection forces
+            |     J=[Z(H),y] of order three
+            |     +-- J != H' gives a twelve-clique
+            |     +-- J = H' gives a scalar symplectic central quotient
+            |           +-- pi(3,2)=7 and pi(3,m)>=3m+1 for m>=3
+            |                 +-- contradiction to nu(P)=8
+            +-- [PROVED] all outer intersections are abelian
+            |     +-- private-cell subgroup plus seven centralizers
+            |           +-- nu(P)=8 implies a(P)=8
+            +-- [PROVED] max a(P) for finite 3-groups with nu(P)<=8 is 10
+
+      +-- [PROVED] finite 2-group reduction at cutoff eight
+            +-- [PROVED] factorial t-fold intersection bounds rounded to
+            |   powers of two
+            |     +-- two cover members have index at most four
+            |     +-- order 8192 excluded by complement counting
+            |     +-- order 4096 excluded by exact intersections and
+            |           three-term Bonferroni bounds
+            |           +-- [P:Z(P)] <= 2048 when nu(P)=8
+            +-- [PROVED] maximalized Frattini hyperplanes contain a minimal
+                  odd circuit of size 3, 5, or 7
+                  +-- the eight clique-centralizers cannot all be maximal
+
 The \(h(5)\), \(h(6)\), and \(h(7)\) branches are explicitly
 computer-assisted.  Their
 load-bearing external dependencies are the audited subgroup-cover theorems
@@ -106,7 +134,9 @@ Theorem B (p. 292, proof pp. 299--300) of Abdollahi--Jafarian Amiri; the
 repository independently certifies every post-reduction finite case. All
 other branches displayed above are computation-independent except for the
 explicitly marked small-dimensional hyperplane-cover check in the finite
-\(5\)-group cutoff-eight branch. That branch does not determine \(h(8)\).
+\(5\)-group cutoff-eight branch.  The finite \(3\)- and \(5\)-group
+branches are closed and the finite \(2\)-group branch is reduced, but these
+results do not determine \(h(8)\).
 Neumann (1976) is primary-verified historical corroboration. The displayed
 subfactorial
 branch uses the proof-audited Guralnick--Maróti and Nagy--Pach--Tomon

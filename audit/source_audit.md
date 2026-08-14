@@ -298,8 +298,12 @@ maximal subgroups of \(H\), enlarged by the center, prove \(a=8\).  For
 combining Proposition 4.5 with the certified small
 \(\mathbf F _5\)-hyperplane-cover lemma.  Hence finite \(5\)-groups at this
 cutoff have exactly \((\nu,a)=(1,1)\) or \((6,6)\).  For \(p=3\), the
-analogous \(\nu=4\) branch has \(a=4\), \(\nu=5\) is excluded, and
-\(\nu=6,7,8\) remain.  No complete \(p=2\) classification follows.
+analogous \(\nu=4\) branch has \(a=4\), and \(\nu=5\) is excluded.  The
+repository's independently audited structural proof in
+`notes/three_group_nu8.md` gives \(a=8\) when \(\nu=8\); the exact global
+cutoffs six and seven then show that the maximum finite-\(3\)-group
+contribution for \(\nu\le8\) is ten.  No complete \(p=2\) classification
+follows.
 
 [COMPUTED] The hyperplane certificate in
 `src/verification/verify_f5_small_hyperplane_cover.py` checks every
@@ -321,7 +325,8 @@ proper-subgroup cover of a finite \(p\)-group.
 2026-08-14 contain no complete classification of all finite \(p\)-groups,
 all solvable groups, or all finite stem/isoclinism families with
 \(\nu\le8\), and no exact general value of \(f(8)\).  Closing the finite
-\(5\)-group branch does not support a global upper bound for \(h(8)\).
+finite \(3\)- and \(5\)-group branches does not support a global upper bound
+for \(h(8)\).
 
 ## Exact-formula and alternate-terminology search
 

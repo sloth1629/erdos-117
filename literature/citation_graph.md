@@ -309,6 +309,13 @@ small F5 hyperplane-cover lemma [PROVED] (computer-assisted)
               +-- no finite 5-group has nu=8
                     `-- finite 5-group cutoff:
                           (nu,a)=(1,1) or (6,6) [PROVED]
+
+finite 3-group cutoff theorem [PROVED]
+  |-- maximal-centralizer amplification + Berkovich equality branch
+  |-- nonabelian outer intersection => 12-clique or scalar-symplectic contradiction
+  `-- nu=8 => a=8
+        +-- exact h(6)=6 and h(7)=10
+        `-- max finite-3-group contribution at cutoff eight is 10
 ```
 
 [PROVED] The Berkovich nodes imply that a nonabelian finite \(p\)-group
@@ -317,7 +324,8 @@ with \(\nu\le8\) has \(p\le7\), and that an odd \(p\)-group cannot have
 branch and has \(a=8\); for \(p=5\), \(\nu=7\) is excluded but \(\nu=8\)
 is now excluded by the separate hyperplane node, so the only finite
 \(5\)-group values at cutoff eight are \((1,1)\) and \((6,6)\).  For
-\(p=3\), \(\nu=5\) is excluded but \(\nu=6,7,8\) remain.  The \(p=2\)
+\(p=3\), the repository theorem additionally proves \(a=8\) at \(\nu=8\),
+and the exact lower cutoffs give maximum contribution ten.  The \(p=2\)
 branch is not classified by these results.
 
 [UNVERIFIED] These are partial finite-\(p\)-group pruning nodes, not an

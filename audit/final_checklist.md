@@ -41,6 +41,16 @@ These boxes remain open, so no complete solution is claimed.
   \(\mathbf F _5\) hyperplane certificate, the arbitrary-dimensional
   incidence reduction, and two independent audits.  Its scope is explicitly
   separated from the still-open global value of \(h(8)\).
+- [x] The finite \(3\)-group cutoff-eight theorem records the exact
+  Berkovich inputs, maximal-centralizer amplification, the \(J\)-versus-\(H'\)
+  twelve-clique dichotomy, the scalar-symplectic obstruction, and the final
+  private-cell abelian cover.  It proves \(\nu(P)=8\Rightarrow a(P)=8\)
+  only for finite \(3\)-groups and explicitly does not determine \(h(8)\).
+- [x] The finite \(2\)-group cutoff-eight reduction records the rounded
+  factorial intersection bounds, exact order-\(8192\) and order-\(4096\)
+  exclusions, the Bonferroni arithmetic, and the Frattini odd-circuit
+  argument.  Its conclusion \([P:Z(P)]\le2048\) is finite-only, and the
+  binary classification remains open.
 - [x] Product and limit assertions audited without assuming one-shot
   multiplicativity.
 - [x] Computational witnesses, configurations, versions, hashes, and

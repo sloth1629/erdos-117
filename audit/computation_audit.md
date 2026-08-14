@@ -278,7 +278,7 @@ labeled simple graphs on at most six vertices, and also checks group axioms,
 coset invariance, named records, direct-product/OR compatibility, witnesses,
 and the \(E_m\) symplectic model for \(m=1,2,3\). It also reparses and verifies
 every saved Python and GAP certificate. The latest 2026-08-14 run passed all
-33 tests in 863.720 seconds under Python 3.9.6. The extended tests independently rebuild the
+34 tests in 683.411 seconds under Python 3.9.6. The extended tests independently rebuild the
 scalar graphs, four residual searches, strongly regular parameters, spreads,
 the order-128 prefilter survivors, every exterior-square graph witness, the
 eleven cutoff-seven dual searches, all 26,387 ID-261 affine records, and the
@@ -738,3 +738,47 @@ transcript have SHA-256 values respectively
 `b16bf07e4302f09bd55713e6a5a9c6919e838993aa2e62cfe94224abecf931c7`,
 and
 `be8395740edd31494450c250af06a5fbd37889a7cafe187d8da953c494158caa`.
+
+## Finite 3-groups through order \(3^6\) at cutoff eight
+
+[COMPUTED] GAP 4.16.0 / SmallGrp 1.5.4 enumerated all 594 SmallGroups of
+orders \(3,9,27,81,243,729\). The exact partition is 502 groups with a saved
+nine-clique and 92 groups with a complete eligible central-coset graph. Their
+exact distributions by order are
+
+\[
+\begin{array}{c|c}
+|G|&(\nu,a)\text{ distribution}\cr
+3&(1,1)^1\cr
+9&(1,1)^2\cr
+27&(1,1)^3,(4,4)^2\cr
+81&(1,1)^5,(4,4)^6\cr
+243&(1,1)^7,(4,4)^{15},(7,10)^2\cr
+729&(1,1)^{11},(4,4)^{31},(7,10)^7.
+\end{array}
+\]
+
+[COMPUTED] No scanned group has \(\nu=8\), and no eligible scanned group has
+\(a>10\). The nine non-AC eligible groups are exactly the nine records with
+\((\nu,a)=(7,10)\). Every maximum-clique member centralizer in each eligible
+nonabelian scanned group has index three.
+
+[COMPUTED] A fresh GAP producer rerun took 6 minutes 8.72 seconds and
+reproduced the canonical TSV and progress log byte for byte. The independent
+audit separately parsed all 594 rows, checked every one of the 502 saved
+nine-cliques, and recomputed every eligible clique/coloring certificate. The
+targeted unit test passed in 1.271 seconds after the final wording-only edits.
+
+[COMPUTED] The config, raw TSV, analyzed JSON, analyzer, test, and explanatory
+note SHA-256 values are respectively
+`138e6479414b6cd6c6610b771125a1e3788f92f7b2a9091f92238a2aaff858bb`,
+`d3abec3c9391c0809fd76d0f2a384d0cd3936e258730e4c4dbdc2ee33265782b`,
+`f5d7bf5b53d5b981acd774ce4b23f7cd9899a419acfb7753326e3d3060c7fd16`,
+`362d1f83d01ddd09fe92af8fe1f18b2c5f45c92862af79417460a71df9b12938`,
+`356df635e4426ce4af2bccbf7ac99019bbba61b118f0ef7cabe1c855544b41b3`,
+and
+`e93f7d7168f630bc2bff3d4ecb1df71a3c8d2f416f7fe43395a3bc8961b92c3e`.
+
+[UNVERIFIED] This certificate stops at order \(3^6\); the installed catalogue
+contains 9,310 groups at order \(3^7\). The independent all-orders finite
+3-group conclusion is structural and is not inferred from this bounded scan.

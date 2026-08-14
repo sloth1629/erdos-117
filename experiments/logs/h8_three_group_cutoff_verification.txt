@@ -14,7 +14,7 @@ completed h8 finite 3-group cutoff-eight inventory through order 729
 Fresh GAP reproducibility rerun command:
 work/gap-4.16.0/gap -l 'work/gap-4.16.0;' -q -c 'ERDOS117_OUTPUT:="/tmp/h8_three_group_cutoff_rerun.tsv";; ERDOS117_STDOUT_LOG:="/tmp/h8_three_group_cutoff_rerun.stdout.txt";; Read("experiments/configs/h8_three_group_cutoff.g");'
 
-Independent rerun elapsed time: 6 minutes 8.72 seconds.
+Fresh rerun elapsed time: 6 minutes 8.72 seconds.
 
 Comparison commands:
 cmp experiments/logs/h8_three_group_cutoff.tsv /tmp/h8_three_group_cutoff_rerun.tsv

@@ -66,12 +66,26 @@ gives 9 at seven.
     \(\nu(P)\le8\) implies
     \((\nu(P),a(P))\in\{(1,1),(6,6)\}\).  The independent low-dimensional
     certificate checks 16, 122,438, and 10,626 normalized subfamilies in
-    dimensions two, three, and four.  The \(2\)-group, \(3\)-group, and
-    nonnilpotent solvable branches remain open.
+    dimensions two, three, and four.
+11. [PROVED] The finite \(3\)-group branch at cutoff eight is closed.
+    A maximal-centralizer amplification argument, Berkovich's verified
+    small-\(3\)-group structure, a scalar-symplectic obstruction, and the
+    private cells of an irredundant centralizer cover prove
+    \(\nu(P)=8\Rightarrow a(P)=8\).  Consequently the maximum of \(a(P)\)
+    over finite \(3\)-groups with \(\nu(P)\le8\) is ten, attained by
+    \(S(3,2)\).
+12. [PROVED] If \(P\) is a finite \(2\)-group with \(\nu(P)=8\), then
+    \([P:Z(P)]\le2048\).  The proof sharpens the factorial intersection
+    bounds using exact power-of-two arithmetic and Bonferroni counting.
+    In the Frattini quotient, any minimal subcover obtained by maximalizing
+    the clique-centralizers has \(3\), \(5\), or \(7\) hyperplanes whose
+    normals form an odd circuit.  This reduces but does not classify the
+    finite \(2\)-group branch; it and the nonnilpotent solvable branch remain
+    open, so the unrestricted value \(h(8)\) is not determined.
 
 ## Computation status
 
-- The complete verification suite passes: 33 tests in 863.720 seconds under
+- The complete verification suite passes: 34 tests in 683.411 seconds under
   Python 3.9.6, with the transcript saved for this milestone.
 - Both optimized graph algorithms agree with brute force on all 33,868
   labeled graphs with at most six vertices.
@@ -144,7 +158,10 @@ gives 9 at seven.
    a larger exponential constant.
 4. Establish existence and value of an asymptotic exponential rate, or
    formulate the correct limsup/liminf answer.
-5. Determine \(h(8)\) and the next exact values.
+5. Determine \(h(8)\) and the next exact values.  At cutoff eight the finite
+   \(3\)- and \(5\)-group branches are closed, while the finite \(2\)-group
+   branch is reduced to center quotient order at most \(2048\); the binary
+   classification and the nonnilpotent solvable branch remain open.
 6. Acquire and audit Pyber's full primary proof for historical completeness.
 
 ## Environment

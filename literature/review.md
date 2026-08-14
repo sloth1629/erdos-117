@@ -430,17 +430,20 @@ description and \(a=6\), the value \(\nu=7\) is impossible, and
 Proposition 4.5 plus the certified hyperplane lemma exclude \(\nu=8\).
 Thus a finite \(5\)-group with \(\nu\le8\) has
 \((\nu,a)\in\{(1,1),(6,6)\}\).  For \(p=3\), the \(\nu=4\) branch is
-described likewise with \(a=4\), the value \(\nu=5\) is impossible, and
-\(\nu\in\{6,7,8\}\) remains outside these theorems.  The result gives no
-complete classification for \(p=2\).  The complete computer-assisted
-five-group proof is in `notes/five_group_nu8.md`.
+described likewise with \(a=4\), and \(\nu=5\) is impossible.  The
+repository's independently audited structural theorem additionally proves
+that \(\nu=8\) forces \(a=8\); together with the exact values at cutoffs six
+and seven, the maximum finite-\(3\)-group contribution is therefore ten.
+The result gives no complete classification for \(p=2\).  The complete
+finite-5 and finite-3 arguments are in `notes/five_group_nu8.md` and
+`notes/three_group_nu8.md`, respectively.
 
 [UNVERIFIED] No accessible primary source located through the 2026-08-14
 continuation search gives a complete classification of all finite
 \(p\)-groups, all solvable groups, or all stem/isoclinism families with
 \(\nu\le8\), nor an exact general value of \(f(8)\).  Berkovich's verified
-theorems and the repository's finite \(5\)-group closure still do not give a
-global value of \(h(8)\).
+theorems and the repository's finite \(3\)- and \(5\)-group closures still do
+not give a global value of \(h(8)\).
 
 ## Forward citations and possible later resolutions
 

@@ -176,6 +176,27 @@ Store reproducible text logs here; large or licensed artifacts must not be commi
   88b9b6696e7c62baaa470357556aa8b3b7a878be48285c664dd77fc05ef06cff  src/verification/test_h8_five_group_cutoff.py
   b3445ae48aafbcccdf054e72777b7ac2b508eeb3d1d892c9873b511738bab401  notes/h8_five_group_cutoff.md
   ```
+- `h8_three_group_cutoff.{tsv,json}`, stdout files, and verification
+  transcript: `[COMPUTED]` exact cutoff-eight inventory of all 594
+  SmallGroups of orders \(3\) through \(3^6=729\). It contains 502 saved
+  nine-clique exclusions and 92 exact eligible graphs. The eligible values
+  are \((1,1)\), \((4,4)\), and \((7,10)\); none has \(\nu=8\). A fresh GAP
+  rerun reproduced the TSV and progress log byte for byte, and the saved
+  Python test independently rechecks every serialized witness and graph.
+  `[UNVERIFIED]` This bounded artifact does not scan order \(3^7\) or prove
+  the separate all-orders finite 3-group theorem. The current manifest is:
+
+  ```text
+  138e6479414b6cd6c6610b771125a1e3788f92f7b2a9091f92238a2aaff858bb  experiments/configs/h8_three_group_cutoff.g
+  d3abec3c9391c0809fd76d0f2a384d0cd3936e258730e4c4dbdc2ee33265782b  experiments/logs/h8_three_group_cutoff.tsv
+  79cbdf0b71859056753a590a7f033d529d80ccd566136ad9ac7aef7bfb703c7c  experiments/logs/h8_three_group_cutoff_gap.stdout.txt
+  f5d7bf5b53d5b981acd774ce4b23f7cd9899a419acfb7753326e3d3060c7fd16  experiments/logs/h8_three_group_cutoff.json
+  8f83f8bbecd2c3d40e6f9219250633c57ed9a99c7ef4c453c94accf02f2306da  experiments/logs/h8_three_group_cutoff.stdout.txt
+  99c715d45454bf71cbfb26a4c0ed14f756fdedfc745f9a5866c1ccc2124e8dd9  experiments/logs/h8_three_group_cutoff_verification.txt
+  362d1f83d01ddd09fe92af8fe1f18b2c5f45c92862af79417460a71df9b12938  src/python/analyze_h8_three_group_cutoff.py
+  356df635e4426ce4af2bccbf7ac99019bbba61b118f0ef7cabe1c855544b41b3  src/verification/test_h8_three_group_cutoff.py
+  e93f7d7168f630bc2bff3d4ecb1df71a3c8d2f416f7fe43395a3bc8961b92c3e  notes/h8_three_group_cutoff.md
+  ```
 
 The unit suite checks that the five disjoint families--660 ordinary scans,
 two delegated cases, 62 exterior-zero exclusions, eleven generic dual cases,

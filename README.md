@@ -60,8 +60,22 @@ No complete resolution is claimed. The strongest repository results are:
   certified small-\(\mathbf F _5\) hyperplane theorem, combined with
   Berkovich's verified maximal-member bound, proves that
   \(\nu(P)\le8\) forces \((\nu(P),a(P))=(1,1)\) or \((6,6)\).  This removes
-  finite \(5\)-groups from the unresolved \(h(8)\) cases but does not settle
-  the \(2\)-group, \(3\)-group, or nonnilpotent solvable branches.
+  finite \(5\)-groups from the unresolved \(h(8)\) cases.
+- [PROVED] The finite \(3\)-group branch at cutoff eight is closed:
+  \(\nu(P)=8\) forces \(a(P)=8\), and
+  \[
+    \max\{a(P):P\text{ a finite \(3\)-group},\ \nu(P)\le8\}=10,
+  \]
+  with equality supplied by \(S(3,2)\).
+- [PROVED] The finite \(2\)-group branch has been reduced substantially.
+  If \(P\) is a finite \(2\)-group with \(\nu(P)=8\), then
+  \([P:Z(P)]\le2^{11}=2048\).  Moreover, maximalizing its eight
+  clique-centralizers in \(P/\Phi(P)\) produces a minimal hyperplane
+  subcover whose normals form an odd circuit of size \(3\), \(5\), or \(7\);
+  in particular, the original centralizers cannot all be maximal.
+- [UNVERIFIED] These binary reductions do not classify the finite
+  \(2\)-group branch.  That branch and the nonnilpotent solvable branch
+  remain open, so \(h(8)\) is not determined.
 - [COMPUTED] Exact, independently verified certificates cover explicit
   families, every SmallGroup of orders 8, 32, and 64, all order-128 groups
   surviving a rigorous \(\nu\le6\) prefilter, all 2,986 exterior-square
@@ -101,7 +115,7 @@ PYTHONPYCACHEPREFIX=/tmp/erdos117-pycache \
 python3 -m unittest discover -s src/verification -p 'test_*.py' -v
 ```
 
-The saved final run passed all 33 tests in 863.720 seconds under Python
+The saved final run passed all 34 tests in 683.411 seconds under Python
 3.9.6.
 
 The canonical experiment commands are documented in

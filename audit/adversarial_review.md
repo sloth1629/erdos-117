@@ -305,7 +305,7 @@ Continue auditing quantifiers, finite/infinite scope, central-coset arguments, p
   final serialization-only normalization, the then-complete 25-test suite
   passed in 211.839 seconds.  The later release worktree, including the
   cutoff-eight and local-counterexample additions, followed by the binary
-  rank-three order-64 tail, passed all 33 tests in 863.720 seconds.
+  rank-three order-64 tail, passed all 34 tests in 683.411 seconds.
 - [PROVED] Subject to the explicitly identified [CITED-VERIFIED]
   \(f(7)=81\) input and the exact [COMPUTED] certificates above, the case
   split proves \(a(G)\le10\) for every arbitrary group with

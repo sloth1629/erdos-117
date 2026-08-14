@@ -401,3 +401,31 @@ python3 -m unittest src.verification.test_h8_five_group_cutoff -v
 `[COMPUTED]` The eligible distributions are exact for the four scanned
 orders. `[UNVERIFIED]` The analyzer does not infer a classification of finite
 5-groups at higher orders or a global statement about \(h(8)\).
+
+## Finite 3-groups through order \(3^6\)
+
+`analyze_h8_three_group_cutoff.py` checks the exact 594-row GAP serial
+sequence, all 502 saved nine-clique exclusions, and all 92 complete eligible
+central-coset graphs. It verifies product-coordinate inequalities, graph
+symmetry, exact clique/coloring witnesses after twin compression, AC flags,
+and the saved centralizer-index signatures. Its SHA-256 is
+`362d1f83d01ddd09fe92af8fe1f18b2c5f45c92862af79417460a71df9b12938`.
+
+After running the GAP command in `experiments/configs/README.md`, regenerate
+and verify the analyzed record with:
+
+```bash
+PYTHONPYCACHEPREFIX=/tmp/erdos117-h8-three-group-pycache \
+python3 src/python/analyze_h8_three_group_cutoff.py \
+  --input experiments/logs/h8_three_group_cutoff.tsv \
+  --gap-script experiments/configs/h8_three_group_cutoff.g \
+  --gap-stdout experiments/logs/h8_three_group_cutoff_gap.stdout.txt \
+  --output experiments/logs/h8_three_group_cutoff.json \
+  --stdout-log experiments/logs/h8_three_group_cutoff.stdout.txt
+PYTHONPYCACHEPREFIX=/tmp/erdos117-h8-three-group-test-pycache \
+python3 -m unittest src.verification.test_h8_three_group_cutoff -v
+```
+
+`[COMPUTED]` These commands certify exactly the six scanned orders through
+729. `[UNVERIFIED]` They do not replace the separate structural proof for all
+finite 3-groups and do not scan the 9,310 groups of order 2,187.
