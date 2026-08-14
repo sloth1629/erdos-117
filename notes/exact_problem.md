@@ -25,6 +25,10 @@ notes/known_bounds.md.
   certificates in `notes/exact_h5.md` and `notes/exact_h6.md`.
 - [PROVED] \(h(7)=10\), by the computer-assisted proof in
   `notes/exact_h7.md`; the lower witness is \(S(3,2)\).
+- [PROVED] \(h(8)=10\), by the computer-assisted exhaustive reduction and
+  the independently audited final semidirect closure in
+  `notes/common_core_coprime_closure.md`; the same group \(S(3,2)\) supplies
+  the lower bound.
 - [PROVED] Central elements remain vertices of the full noncommuting graph
   and are isolated. This makes the abelian case agree exactly with
   \(a(G)=\nu(G)=1\).
@@ -41,9 +45,9 @@ reformulation, with matching constructions and universal upper bounds. It
 must include arbitrary groups, all boundary cases, and every constant.
 
 [UNVERIFIED] This repository has not achieved that objective. It determines
-\(h(n)\) through \(n=7\), proves new general reductions and bounds, and
+\(h(n)\) through \(n=8\), proves new general reductions and bounds, and
 disproves one natural exact candidate.  Its strongest audited universal
 upper bound is the CFSG-dependent estimate
 \(h(n)\le2^{O(n\log\log n)}\), but the optimal exponential rate and
-the values \(h(n)\) for \(n\geq8\) remain open except for lower and upper
+the values \(h(n)\) for \(n\geq9\) remain open except for lower and upper
 bounds.

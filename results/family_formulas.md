@@ -299,6 +299,21 @@ special IDs 192, 261, and 267 are disposed of by the
 h(7)=10.
 \]
 
+[PROVED] The later exhaustive cutoff-eight partition, finite prime-power
+closures, and independently audited coprime semidirect argument give the
+computer-assisted exact value
+
+\[
+h(8)=10.
+\]
+
+The final branch has exact finite model \(C_3\rtimes_\chi U\).  With
+\(K=\ker\chi\) and \(\Omega=U\setminus K\), its clique number is
+\(\nu(K)+3\omega(\Omega)\); clique number eight forces
+\((\nu(K),\omega(\Omega))=(5,1)\), and the resulting five even-fiber plus
+three odd-fiber abelian subgroups close the upper bound.  See
+`notes/common_core_coprime_closure.md`.
+
 ### Direct SmallGroups scans
 
 [COMPUTED] GAP 4.16.0 with SmallGrp 1.5.4 exported all finite groups of orders

@@ -38,20 +38,18 @@
   \(\nu(P)=8\) implies \(a(P)=8\), and the maximum of \(a(P)\) over finite
   \(3\)-groups with \(\nu(P)\le8\) is ten, attained by \(S(3,2)\).  The
   complete structural proof is in `notes/three_group_nu8.md`.
-- `[PROVED]` If \(P\) is a finite \(2\)-group with \(\nu(P)=8\), then
-  \([P:Z(P)]\le2048\).  Maximalizing the clique-centralizer cover also gives
-  an odd circuit of size \(3\), \(5\), or \(7\) in the dual of
-  \(P/\Phi(P)\), so the eight original centralizers cannot all be maximal.
-  If one maximum-clique centralizer is maximal, the exact cutoff-six and
-  cutoff-eight certificates further give \([P:Z(P)]\le64\) and
-  \(a(P)\le10\).  These reductions are proved in `notes/two_group_nu8.md`
-  and `notes/two_group_nu8_next.md`.
-- `[UNVERIFIED]` Determine \(h(8)\) and subsequent exact values; the
-  all-nonmaximal finite \(2\)-group branch and the nonnilpotent solvable
-  branch with nontrivial maximalization core remain open.  In the latter,
-  `notes/h8_nonnilpotent_reduction.md` proves that the core-free case has
-  \(a(G)\le10\) and identifies the exact abelian-or-affine Frattini-free
-  skeleton of the residual quotient.  [PROVED] These two branches are
-  exhaustive: the verified, finite-simple-group-classification-dependent
-  solvability theorem and the nilpotent Sylow-product reduction leave no
-  semisimple or mixed-prime branch.
+- `[PROVED]` (computer-assisted) No finite \(2\)-group has \(\nu(P)=8\).
+  The inclusion-maximal-centralizer reduction proves
+  \([P:Z(P)]\le128\); the independently audited scalar-symplectic boundary
+  proof eliminates equality.  See
+  `notes/two_group_inclusion_maximal_centralizers.md` and
+  `notes/two_group_q128_symplectic_attack.md`.
+- `[PROVED]` A computer-assisted proof gives \(h(8)=10\).  The verified,
+  finite-simple-group-classification-dependent solvability theorem,
+  nilpotent Sylow-product reduction, and finite \(p\)-group closures leave
+  only \(Q=C_3\rtimes_\chi S\).  Coprime action reduces its exact finite
+  model to \(C_3\rtimes_\chi U\), and the identity
+  \(\nu=\nu(\ker\chi)+3\omega(U\setminus\ker\chi)\) gives an exact
+  five-plus-three abelian cover.  See
+  `notes/common_core_coprime_closure.md`.
+- `[UNVERIFIED]` Determine \(h(9)\) and the subsequent exact values.

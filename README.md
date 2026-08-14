@@ -60,25 +60,20 @@ No complete resolution is claimed. The strongest repository results are:
   certified small-\(\mathbf F _5\) hyperplane theorem, combined with
   Berkovich's verified maximal-member bound, proves that
   \(\nu(P)\le8\) forces \((\nu(P),a(P))=(1,1)\) or \((6,6)\).  This removes
-  finite \(5\)-groups from the unresolved \(h(8)\) cases.
+  the finite \(5\)-group branch in the exhaustive proof of \(h(8)=10\).
 - [PROVED] The finite \(3\)-group branch at cutoff eight is closed:
   \(\nu(P)=8\) forces \(a(P)=8\), and
   \[
     \max\{a(P):P\text{ a finite \(3\)-group},\ \nu(P)\le8\}=10,
   \]
   with equality supplied by \(S(3,2)\).
-- [PROVED] The finite \(2\)-group branch has been reduced substantially.
-  If \(P\) is a finite \(2\)-group with \(\nu(P)=8\), then
-  \([P:Z(P)]\le2^{11}=2048\).  Moreover, maximalizing its eight
-  clique-centralizers in \(P/\Phi(P)\) produces a minimal hyperplane
-  subcover whose normals form an odd circuit of size \(3\), \(5\), or \(7\);
-  in particular, the original centralizers cannot all be maximal.
-- [PROVED] By a computer-assisted argument, the maximal-member subbranch is
-  closed: if even one centralizer
-  belonging to a maximum eight-clique is maximal, then
-  \([P:Z(P)]\le64\) and \(a(P)\le10\).  Thus any finite \(2\)-group
-  \(P\) with \(\nu(P)=8\) and \(a(P)>10\) must have every such centralizer
-  nonmaximal.
+- [PROVED] (computer-assisted) No finite \(2\)-group has clique number
+  eight.  Inclusion-maximal proper element-centralizers first sharpen the
+  center quotient to order at most \(128\); the exact cutoff-eight
+  certificate removes all smaller powers of two.  At order \(128\), an
+  index-two subgroup is forced to have the scalar symplectic
+  \(C_2^6\) graph.  The four ranks of the induced symplectic involution
+  each give a nine-clique or a forbidden maximal element-centralizer.
 - [PROVED] The solvable nonnilpotent branch has an exact common-core
   reduction.  After maximalizing the exact eight-member cover and taking a
   minimal irredundant subcover, let \(R\) be the core of the maximal-member
@@ -88,18 +83,40 @@ No complete resolution is claimed. The strongest repository results are:
   by \(R\) is abelian or has form \(C\times H\), where \(C\) is central and
   is a direct product of elementary abelian \(2\)-, \(3\)-, \(5\)-, and
   \(7\)-components, and \(H\) is one of seven explicit affine groups.
+- [PROVED] The common-core residual has a canonical Frattini form.  A
+  hypothetical counterexample has
+  \(1\ne\Phi(Q)=\Phi(S)\), where \(S\) is a finite \(2\)-group, and
+  \[
+    Q\cong C_3\rtimes_\chi S,\qquad \chi:S\twoheadrightarrow C_2,
+    \qquad |S|\le8192.
+  \]
+  Every abelian minimal-maximalization quotient is exactly
+  \(C_2^2,C_2^4\), or \(C_2^6\); no commutator pairing is descended through
+  the Frattini or common-core quotient.
+- [PROVED] The canonical semidirect branch is closed without descending a
+  commutator pairing.  After deleting central direct factors, the finite
+  exact model is \(C_3\rtimes_\chi U\), where \(U\) is a finite \(2\)-group.
+  For \(K=\ker\chi\) and the odd coset \(\Omega=U\setminus K\),
+  \[
+    \nu(C_3\rtimes_\chi U)=\nu(K)+3\omega(\Omega).
+  \]
+  At clique cutoff eight this forces \((\nu(K),\omega(\Omega))=(5,1)\);
+  five abelian subgroups cover the even fibers and three abelian subgroups
+  cover the odd fibers.  Thus the putative residual has \(a=8\), not
+  \(a>10\).
 - [PROVED] These are exhaustive at cutoff eight.  The exact finite model is
   solvable by the verified, finite-simple-group-classification-dependent
   finite nonsoluble classification.  If its center
   quotient is nilpotent, a Sylow direct-product argument reduces it without
-  loss to one finite \(p\)-group, and the closed \(3\)-, \(5\)-, and
-  \(7\)-branches leave only \(p=2\).  If the quotient is nonnilpotent, the
-  common-core proposition applies.  In the binary residual, every minimal
-  maximalization also has nontrivial intersection; otherwise its quotient
-  has order at most \(64\) and the bounded certificate closes it.
-- [UNVERIFIED] Eliminating the all-nonmaximal binary common core or the
-  nonnilpotent solvable common core remains open, so \(h(8)\) is not
-  determined.
+  loss to one finite \(p\)-group; the odd-prime results and the binary
+  closure eliminate the nilpotent alternative completely, while the
+  preceding semidirect calculation eliminates the nonnilpotent alternative.
+- [PROVED] Consequently, by a computer-assisted proof for arbitrary groups,
+  \[
+    h(8)=10.
+  \]
+  The upper bound is the exhaustive reduction above, and the lower bound is
+  already supplied by \(S(3,2)\), which has \((\nu,a)=(7,10)\).
 - [COMPUTED] Exact, independently verified certificates cover explicit
   families, every SmallGroup of orders 8, 32, and 64, all order-128 groups
   surviving a rigorous \(\nu\le6\) prefilter, all 2,986 exterior-square
@@ -139,15 +156,15 @@ PYTHONPYCACHEPREFIX=/tmp/erdos117-pycache \
 python3 -m unittest discover -s src/verification -p 'test_*.py' -v
 ```
 
-The saved final run passed all 34 tests in 683.411 seconds under Python
+The saved final run passed all 34 tests in 517.555 seconds under Python
 3.9.6.
 
 The canonical experiment commands are documented in
 [`src/python/README.md`](src/python/README.md). GAP is needed only to
 regenerate the SmallGroups and exterior-square exports; the committed
 exports and all Python certificate checks are self-contained.  The proofs of
-\(h(5)=5\), \(h(6)=6\), and \(h(7)=10\) are explicitly computer-assisted:
-their exhaustiveness also relies
+\(h(5)=5\), \(h(6)=6\), \(h(7)=10\), and \(h(8)=10\) are explicitly
+computer-assisted: their exhaustiveness also relies
 on GAP's SmallGroups, Schur-cover, and subgroup-enumeration algorithms.
 
 To build the manuscript when a TeX distribution is available:

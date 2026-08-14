@@ -396,4 +396,4 @@ by Theorem SS.3 and the proved value \(\pi(3,2)=7\) in
 notes/scalar_symplectic_family.md. Hence the finite-\(3\)-group maximum at
 this cutoff is attained and equals ten. This conclusion does not classify
 all finite \(3\)-groups in the \(\nu=6\) or \(\nu=7\) branches, and it is
-not a determination of the unrestricted value \(h(8)\).
+only one branch of the later unrestricted proof of \(h(8)=10\).

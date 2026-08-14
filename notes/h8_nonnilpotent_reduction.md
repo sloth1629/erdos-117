@@ -16,9 +16,13 @@ capability criterion and no value of \(\nu(Q)\) is substituted for the
 commutation data of \(G\).
 
 The main reduction below closes the branch in which maximalizing the
-clique-centralizer cover introduces no common normal core.  In the remaining
-branch it identifies that core, rather than a large affine chief factor, as
-the precise obstruction.
+clique-centralizer cover introduces no common normal core.  At this
+intermediate stage, the other branch identified that core, rather than a
+large affine chief factor, as the precise obstruction.  The later notes
+`common_core_frattini_reduction.md`,
+`common_core_binary_semidirect.md`, and
+`common_core_coprime_closure.md` close that obstruction without descending
+the exact commutator pairing through the core quotient.
 
 ## [PROVED] The exact cover and its maximal skeleton
 
@@ -531,9 +535,9 @@ R=1\quad\Longrightarrow\quad a(G)\leq10.
 This invokes only the already certified bounded census; it does not turn
 that census into a global \(|Q|\leq81\) reduction.
 
-## [PROVED] Exact description of the surviving obstruction
+## [PROVED] Exact description of the intermediate obstruction
 
-The only unresolved solvable nonnilpotent branch has
+At this stage, the only unresolved solvable nonnilpotent branch had
 
 \[
 1\ne R=\left(\bigcap_{i=1}^kM_i\right)_Q,
@@ -596,15 +600,20 @@ descend through the generally noncentral quotient \(Q\to Q/R\).  Quotienting
 can kill a nontrivial commutator and create a commuting pair.  If \(Q/R\) is
 abelian, all nonnilpotence can also be hidden in \(R\) and its conjugation
 action.  These are the exact reasons that (NR.28), rather than any of the
-small affine factors, is the remaining load-bearing gap.
+small affine factors, was the load-bearing gap left by this intermediate
+reduction.
 
-## [UNVERIFIED] Remaining task
+## [PROVED] Subsequent closure of the historical remaining task
 
-It remains to control the nontrivial common core \(R\) in (NR.28), using the
-eight exact fixed-subgroup intersections (NR.30)--(NR.31), strongly enough
-either to prove \(a(G)\leq10\) or to reduce \(Q\) to a certified finite
-inventory.  No such control is claimed here, and this note does not determine
-\(h(8)\).
+This note alone did not control the nontrivial common core \(R\) in
+(NR.28).  The later Frattini and binary-semidir reductions force the exact
+center quotient into the form \(C_3\rtimes_\chi S\), with \(S\) a finite
+\(2\)-group.  The coprime closure then removes central direct factors and
+proves the exact identity
+\(\nu(C_3\rtimes_\chi U)=\nu(\ker\chi)+3\omega(U\setminus\ker\chi)\).
+At clique number eight this gives a five-plus-three abelian cover and closes
+the branch.  Together with the exhaustive nilpotent alternatives, the later
+argument proves \(h(8)=10\).
 
 ## [PROVED] Adversarial scope checks
 

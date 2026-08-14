@@ -132,9 +132,9 @@ covering \(H\); every proper subgroup of the minimal nonabelian group \(H\)
 is abelian. Adjoining the central subgroup \(Z(P)\) therefore gives six
 abelian subgroups covering \(P\). Since every abelian cover has at least
 \(\nu(P)=6\) members, this proves \(a(P)=6\). This closes the finite
-\(5\)-group branch only. It does not determine \(h(8)\), classify the
-finite \(2\)-group branch, or control the remaining nonnilpotent solvable
-branch.
+\(5\)-group branch only; by itself it neither classified the finite
+\(2\)-group branch nor controlled the nonnilpotent solvable branch.  Those
+later branches are closed separately in the exact proof of \(h(8)=10\).
 
 ## Reproduction
 

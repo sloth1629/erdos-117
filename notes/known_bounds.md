@@ -274,13 +274,15 @@ all \(G\) with \(\nu(G)\leq n\) proves the recurrence. The argument applies to
 arbitrary groups; the abelian and trivial cases were separated at the start,
 and no finiteness or choice of coset representatives is used. \(\square\)
 
-For example, the exact value \(h(6)=6\) gives the unconditional improvement
+For example, the exact value \(h(6)=6\) gives the unconditional recurrence
+bound
 
 \[
 h(8)\leq1+7h(6)=43,
 \]
 
-in place of the preceding recurrence's bound \(h(8)\leq8h(6)=48\).
+in place of the preceding recurrence's bound \(h(8)\leq8h(6)=48\).  The
+exact cutoff-eight theorem below sharpens both bounds to \(h(8)=10\).
 
 ## Specialized class-two bounds
 
@@ -437,13 +439,14 @@ subgroups, giving an abelian cover of size four. Its three reflections
 together with a nonidentity rotation are pairwise noncommuting, so
 \(\nu(S_3)=a(S_3)=4\). Hence \(h(4)=4\).
 
-### [PROVED] Exact values through seven
+### [PROVED] Exact values through eight
 
 The computer-assisted proofs in `notes/exact_h5.md`, `notes/exact_h6.md`,
-and `notes/exact_h7.md` give
+and `notes/exact_h7.md` give the first three values below; the cutoff-eight
+chain assembled later in this note gives the fourth:
 
 \[
-h(5)=5,\qquad h(6)=6,\qquad h(7)=10.
+h(5)=5,\qquad h(6)=6,\qquad h(7)=10,\qquad h(8)=10.
 \]
 
 At cutoffs five, six, and seven, audited irredundant-cover bounds reduce the
@@ -452,7 +455,8 @@ Schur-cover/exterior-square certificates then give the upper bounds.  The
 matching witnesses are the scalar symplectic groups used in those notes.
 The cutoff-seven proof exhausts a disjoint 738-type quotient inventory; its
 finite certificates and final verification hashes are recorded in
-`proof/computational_appendix.tex`.
+`proof/computational_appendix.tex`.  The cutoff-eight proof is assembled
+from the finite \(p\)-group and nonnilpotent closures below.
 
 ## A closed finite \(5\)-group branch at cutoff eight
 
@@ -481,8 +485,8 @@ by at most eight \(\mathbf F _5\)-hyperplanes contains a full six-member
 pencil. A genuinely new pencil member would then be covered by at most four
 proper subgroups, which is impossible for a finite \(5\)-group. The complete
 proof, source audit, certificate, and reproduction command are in
-notes/five_group_nu8.md. This closes only the finite \(5\)-group branch; it
-does not determine \(h(8)\).
+notes/five_group_nu8.md. This is the finite \(5\)-group input to the exact
+cutoff-eight theorem below.
 
 ## A closed finite \(3\)-group branch at cutoff eight
 
@@ -525,8 +529,8 @@ and the twelve-clique check, is in notes/three_group_nu8.md.
 The new \(\nu=8\) theorem gives \(a=8\).  Berkovich's verified results
 handle \(\nu=4,5\), the exact global values \(h(6)=6\) and \(h(7)=10\)
 bound the remaining branches, and \(S(3,2)\) attains
-\((\nu,a)=(7,10)\).  This is a finite-\(3\)-group statement, not a
-determination of \(h(8)\).
+\((\nu,a)=(7,10)\).  This is the finite \(3\)-group input to the exact
+cutoff-eight theorem below.
 
 ## A finite \(2\)-group reduction at cutoff eight
 
@@ -581,8 +585,9 @@ strictly smaller than its maximal enlargement, since otherwise at most
 seven members of the original irredundant cover would cover \(P\).
 Consequently the eight clique-centralizers cannot all be maximal.
 
-The full proof is in notes/two_group_nu8.md.  These statements do not
-classify the finite \(2\)-group branch or determine \(h(8)\).
+The full proof is in notes/two_group_nu8.md.  These are preliminary
+reductions; the stronger inclusion-maximal-centralizer argument below closes
+the branch.
 
 ### [PROVED] Closure when a maximum-clique centralizer is maximal
 
@@ -630,10 +635,85 @@ to powers of two, while the last row uses the order-32 elimination above.
 Thus \([P:Z(P)]\le64\), and the complete cutoff-eight certificate for center
 quotients of order at most 81 gives \(a(P)\le10\).
 
-Thus a finite \(2\)-group with \(\nu(P)=8\) and \(a(P)>10\), if one exists,
-has no maximal centralizer in any maximum eight-clique. The complete proof
-and exact certificate ledger are in `notes/two_group_nu8_next.md`. This does
-not eliminate the all-nonmaximal residual branch.
+Thus a finite \(2\)-group with \(\nu(P)=8\) would have no maximal centralizer
+in any maximum eight-clique unless its center quotient already has order at
+most \(64\). The complete proof and exact certificate ledger are in
+`notes/two_group_nu8_next.md`.  The remaining case is eliminated next.
+
+### [PROVED] Inclusion-maximal centralizers give order at most \(128\)
+
+Let \(P\) be a finite \(2\)-group with \(\nu(P)=8\).  Ascend each member of
+an eight-centralizer cover only inside the poset of proper element
+centralizers.  If an inclusion-maximal element centralizer \(C=C_P(y)\) is
+not a maximal subgroup, the normalizer condition gives
+
+\[
+ C\mathrel{\triangleleft}K<P,\qquad [K:C]=2,\qquad Z(K)=Z(P).
+\]
+
+The last equality follows because an element of \(Z(K)\setminus Z(P)\)
+would have a proper element centralizer strictly containing \(C\).  The
+index-two twist inside \(K\), together with the exact center-quotient bounds
+through clique number six, gives \([C:Z(P)]\le32\).  If \(C\) is a maximal
+subgroup instead, the preceding maximal-member theorem gives
+\([P:Z(P)]\le64\).  Otherwise eight images of order at most \(32\) cover
+\(P/Z(P)\), whence
+
+\[
+ [P:Z(P)]\le1+8(32-1)=249.
+\]
+
+Since this index is a power of two,
+
+\[
+ [P:Z(P)]\le128.
+\]
+
+The complete cutoff-eight exact-center certificate excludes every binary
+quotient of order at most \(64\) with clique number eight.  Thus a
+hypothetical example must have center quotient of exact order \(128\).
+
+### [PROVED] (computer-assisted) No finite \(2\)-group has clique number eight
+
+At the order-\(128\) boundary, the union count forces one inclusion-maximal
+centralizer \(C\triangleleft K<P\) with
+\([C:Z(P)]=32\) and \([K:Z(P)]=64\).  The exact order-\(64\) certificate
+forces \(K/Z(P)\cong\mathbf F _2^6\) with the scalar nondegenerate
+symplectic commutation graph and \(\nu(K)=7\).  Since \([P:K]=2\), conjugation
+by \(t\in P\setminus K\) induces a symplectic involution \(\alpha\).  Put
+\(N=\alpha-I\), \(F=\ker N\), and \(s=\operatorname{rank}N\).  Then
+\(0\le s\le3\), \(F=(\operatorname{im}N)^\perp\), and direct multiplication
+in the possibly nonsplit quotient gives
+
+\[
+t\widehat u\sim t\widehat v\Longleftrightarrow u+v\in F,\qquad
+\widehat x\sim t\widehat u\Longleftrightarrow x\in F,
+\]
+
+where \(\sim\) denotes commutation.  For ranks three and two this produces,
+respectively, an outer eight-clique plus an inner vertex and an outer
+four-clique joined to a six-clique in the symplectic layer.  At rank one,
+the central commutator map on \(F\) either produces a maximal element
+centralizer or an outer three-clique joined to a symplectic six-clique.  At
+rank zero, the center-layer map \(T(v)=[t,\widehat v]\) cannot be confined
+to the scalar commutator line: that would give a radical-free alternating
+form on \(P/Z(P)\), which has odd dimension seven.  Scalarizing a
+nontrivial complementary component of \(T\) again gives an outer
+three-clique joined to a symplectic six-clique.  Every rank therefore gives
+a nine-clique or contradicts the order-\(128\) boundary.
+
+Consequently
+
+\[
+\boxed{\text{there is no finite \(2\)-group \(P\) with \(\nu(P)=8\).}}
+\]
+
+The computational inputs are exactly the binary cutoff-six order-\(32\)
+certificate and the universal cutoff-eight exact-center certificate through
+order \(81\); the four-rank boundary argument is proof-theoretic.  Full
+details and the independent audit are in
+notes/two_group_inclusion_maximal_centralizers.md and
+notes/two_group_q128_symplectic_attack.md.
 
 ## A common-core reduction for the solvable nonnilpotent branch
 
@@ -684,61 +764,158 @@ eliminate every nontrivial central factor except a single \(C_2\) beside
 so \(|Q|\le42\). The complete exact cutoff-eight certificate through order
 81 then proves \(a(G)\le10\). This last implication is computer-assisted.
 
-The exact remaining nonnilpotent obstruction is \(R\ne1\). The quotient
+The exact intermediate nonnilpotent obstruction was \(R\ne1\). The quotient
 \(Q/R\) has the skeleton above, but no descent of the exact commutator
-pairing through the generally noncentral quotient by \(R\) is used. The
-detailed structural proof and independent audit are in
+pairing through the generally noncentral quotient by \(R\) is used in that
+reduction. The detailed structural proof and independent audit are in
 `notes/h8_nonnilpotent_reduction.md`; the rank-free core-free pairing proof
 is also written out in `proof/main.tex`, Proposition
 `prop:nonnilpotent-core`.
 
-## Exhaustiveness of the two cutoff-eight residuals
+### [PROVED] Canonical \(C_3\)-by-\(2\) residual
 
-### [PROVED] Every hypothetical \(a>10\) case lies in one of them
-
-Let \(G\) be arbitrary with \(\nu(G)\le8\) and \(a(G)>10\). The exact finite
-model gives a finite \(K\) with the same two invariants. Since \(h(7)=10\),
-\(\nu(K)=8\). The primary-verified finite nonsoluble classification of
-Abdollahi--Azad--Mohammadi Hassanabadi--Zarrin, Theorem 1.1 on
-author-manuscript p. 2 with proof on pp. 4--9, shows that every finite
-nonsoluble group in its
-\(\nu\le57\) range has clique number at least \(21\). This input is
-finite-simple-group-classification-dependent: the source's simple-group
-step invokes Blyth--Robinson Proposition 4 and Thompson's classification of
-finite minimal simple groups. Hence \(K\), and \(Q=K/Z(K)\), are solvable.
-
-If \(Q\) is nilpotent, then \(K\) is nilpotent: prepend \(Z(K)\) to the
-inverse images of an upper central series for \(Q\). Decompose \(K\) into
-its Sylow direct factors. Two nonabelian factors would each contain a
-three-clique \(\{x,y,xy\}\), and their Cartesian product would be a
-nine-clique. Thus exactly one Sylow factor \(P\) is nonabelian and all
-others form a central abelian factor \(A\). Restriction and extension give
+Suppose in addition that \(a(G)>10\).  A chief-factor refinement of the
+maximal-cover argument gives
 
 \[
- K=P\times A,\qquad \nu(K)=\nu(P),\qquad a(K)=a(P).
+1\ne P=\Phi(Q),\qquad
+P\text{ a \(2\)-group},\qquad
+Q/P\cong C_2^a\times C_3^b\times S_3,
 \]
 
-Berkovich's lower bound \(\nu(P)\ge p+1\) leaves
-\(p\in\{2,3,5,7\}\). The finite \(3\)- and \(5\)-group theorems close their
-branches, and the equality theorem at \(p=7\) gives \(a(P)=8\). Therefore a
-hypothetical \(a>10\) case has \(p=2\). Its maximum-clique centralizers are
-all nonmaximal by the maximal-member closure. After their images in
-\(P/Z(P)\) are enlarged to maximal subgroups, any retained minimal cover
-has size \(k\in\{3,5,7\}\); its maximal members are normal and their
-intersection \(D\) is the common core. If \(D=1\), then
-\(P/Z(P)\cong C_2^{k-1}\) has order at most \(64\), and the exact
-cutoff-eight certificate gives \(a(P)\le10\). Thus every such
-maximalization has \(D\ne1\).
+and every minimal \(Q\)-normal subgroup in \(P\) is central of order two.
+Refine \(P\) to a \(Q\)-chief series.  A noncentral factor would be
+\(C_2^2\) with an induced \(C_3\)-action; four-point affine fiber cliques
+over a four-clique in \(S_3\) would give a \(16\)-clique.  Thus all the
+chief factors are central.  The automorphisms of \(P\) acting trivially on
+this series form a \(2\)-group, so every odd-order subgroup of \(Q\)
+centralizes \(P\).
 
-If \(Q\) is nonnilpotent, the common-core proposition above applies.
-For every choice of maximal overgroups and every retained minimal subcover,
-the case \(R=1\) gives \(a(K)\le10\); hence every hypothetical counterexample
-has \(R\ne1\).
+The normal Sylow \(3\)-subgroup of \(Q/P\) therefore lifts to a normal
+Sylow \(3\)-subgroup of \(Q\).  Its \(C_3^b\)-part would supply a central
+minimal normal subgroup of order three, contrary to the central-layer
+forcing above; hence \(b=0\).  Taking a Sylow \(2\)-subgroup \(S\) gives
 
-The nilpotent and nonnilpotent cases are exhaustive. Consequently the
-all-nonmaximal finite \(2\)-group branch and the solvable nonnilpotent
-common-core branch are the exact remaining cutoff-eight obligations. This
-does not resolve either nontrivial core.
+\[
+\boxed{Q\cong C_3\rtimes_\chi S,\qquad
+\chi:S\twoheadrightarrow C_2,\qquad
+\Phi(Q)=\Phi(S)\ne1,}
+\]
+
+with inversion action and \(|S|\le8192\).  The Frattini equality follows by
+testing maximal subgroups that contain the normal \(C_3\) and the conjugate
+Sylow-\(2\) complements.  The order bound is \(3|S|=|Q|\le8!\).
+
+### [PROVED] Exact semidirect clique formula and \(5+3\) cover
+
+More generally, let \(E\) be finite with \(\nu(E)=8\) and exact center
+quotient \(E/Z(E)\cong C_3\rtimes_\chi S\) as above.  Let \(N/Z(E)=C_3\).
+The group \(N\) is abelian because its central quotient is cyclic.  Central
+Hall factors at primes other than two and three split off.  If \(A\) is the
+normal Hall \(3\)-subgroup and \(U\) a Sylow \(2\)-complement, then
+
+\[
+E=A\rtimes U,\qquad C_A(U)=A\cap Z(E),\qquad
+|A:C_A(U)|=3.
+\]
+
+The coprime averaging idempotent gives
+\(A=C_A(U)\times[A,U]\), with \([A,U]\cong C_3\).  Hence central direct
+factors reduce both invariants exactly to
+
+\[
+H=\mathbf F _3\rtimes_{\chi_0}U,\qquad
+\chi_0:U\twoheadrightarrow C_2.
+\]
+
+Put \(K=\ker\chi_0\), \(\Omega=U\setminus K\), and let
+\(\omega_\Omega\) be the largest size of a pairwise noncommuting subset of
+\(U\) contained in \(\Omega\).  Writing
+\(\varepsilon(u)=(-1)^{\chi_0(u)}\), multiplication is
+
+\[
+(a,u)(b,v)=(a+\varepsilon(u)b,uv),
+\]
+
+and commutation holds exactly when
+
+\[
+uv=vu,\qquad
+(1-\varepsilon(v))a=(1-\varepsilon(u))b.
+\]
+
+Splitting a clique into its even part and the three fixed-coordinate odd
+layers proves the upper bound in
+
+\[
+\boxed{\nu(H)=\nu(K)+3\omega_\Omega.}
+\]
+
+For the reverse bound, take maximum cliques \(X\subseteq K\) and
+\(Y\subseteq\Omega\); then
+
+\[
+\{(1,x):x\in X\}\cup
+\{(a,y):a\in\mathbf F _3,\ y\in Y\}
+\]
+
+is a clique.  This explicitly includes the three allowed projection
+collisions over each odd element.
+
+At clique number eight the unique arithmetic possibility is
+
+\[
+\nu(K)=5,\qquad \omega_\Omega=1.
+\]
+
+Indeed, \(\omega_\Omega=2\) would force the impossible group clique number
+two, and larger values exceed eight.  Since \(h(5)=5\), five abelian
+subgroups of \(K\), enlarged by the normal \(C_3\), cover the even fibers.
+The set \(\Omega\) is pairwise commuting; for each of the three
+\(\mathbf F _3\)-coordinates, the corresponding odd layer is pairwise
+commuting and therefore generates an abelian subgroup.  These \(5+3\)
+subgroups cover \(H\), so
+
+\[
+a(E)=a(H)=8.
+\]
+
+No new computation enters this coprime closure.
+
+## Exact cutoff eight
+
+### [PROVED] (computer-assisted; CFSG-dependent) \(h(8)=10\)
+
+\[
+\boxed{h(8)=10.}
+\]
+
+The lower bound is \(S(3,2)\), which has
+\((\nu,a)=(7,10)\).  For the upper bound, suppose that an arbitrary group
+\(G\) has \(\nu(G)\le8\) and \(a(G)>10\).  The exact finite-model theorem
+preserves both invariants, and \(h(7)=10\) makes the finite model's clique
+number exactly eight.  The primary-verified theorem of
+Abdollahi--Azad--Mohammadi Hassanabadi--Zarrin implies that this finite
+model is solvable; this step depends on finite simple group classification
+through the source's use of Thompson's classification of finite minimal
+simple groups.
+
+If its center quotient is nilpotent, the finite model is nilpotent.
+Two nonabelian Sylow factors would give a \(3\times3\) nine-clique, so only
+one Sylow factor \(P\) is nonabelian and all others are central abelian
+factors.  Berkovich's lower bound leaves
+\(p\in\{2,3,5,7\}\).  The finite \(3\)- and \(5\)-group results above close
+their cases, the equality case at \(p=7\) gives an eight-subgroup cover, and
+the binary closure proves that \(p=2\) cannot have clique number eight.
+
+If the center quotient is nonnilpotent, the canonical residual and its
+coprime closure above give \(a=8\).  Both alternatives contradict
+\(a(G)>10\).  The computer-assisted dependencies are the exact values
+\(h(5)\) and \(h(7)\), the finite \(5\)-group cutoff-eight certificate, and
+the binary cutoff-six and universal order-at-most-\(81\) cutoff-eight
+certificates.  The finite \(3\)-group theorem, arbitrary-to-finite model,
+and semidirect \(5+3\) cover introduce no new computation.  This determines the
+single cutoff \(h(8)\), not the full function for \(n\ge9\).
 
 ## Stronger reported bounds still under audit
 

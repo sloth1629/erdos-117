@@ -1,7 +1,7 @@
 # Proof Dependency Graph
 
 No complete solution of Erdos Problem 117 is claimed; the exact range proved
-here is now \(1\le n\le7\).
+here is now \(1\le n\le8\).
 
     elementary group and graph definitions
       +-- graph/group dictionary: omega(Gamma_G)=nu(G), chi(Gamma_G)=a(G)
@@ -128,7 +128,17 @@ here is now \(1\le n\le7\).
                   +-- exact cutoff-six order-32 elimination
                   +-- [P:Z(P)] <= 64
                   +-- cutoff-eight |Q|<=81 certificate => a(P) <= 10
-                  +-- residual: every maximum-clique centralizer nonmaximal
+                  +-- intermediate consequence: every maximum-clique
+                  |   centralizer is nonmaximal
+            +-- [PROVED] inclusion-maximal element-centralizers
+            |     +-- internal index-two twist and cutoff-six certificate
+            |     +-- eight subgroups of center-image order <=32
+            |           +-- [P:Z(P)] <=128
+            +-- [PROVED] computer-assisted order-128 closure
+                  +-- [COMPUTED] order-64 exact graph is scalar C2^6
+                  +-- [PROVED] symplectic involution ranks 3,2,1,0
+                        +-- nine-clique or maximal-centralizer contradiction
+                        +-- no finite 2-group has nu=8
 
       +-- [PROVED] solvable nonnilpotent common-core reduction
             +-- minimal maximalization of exact centralizer cover
@@ -143,10 +153,26 @@ here is now \(1\le n\le7\).
             +-- [PROVED] if R=1, exact pairing leaves eight Q of order <=42
             |     +-- [COMPUTED] cutoff-eight |Q|<=81 certificate
             |           +-- a(G)<=10
-            +-- [PROVED] every still-open case has R nontrivial
-                  +-- [UNVERIFIED] control or eliminate that residual
+            +-- [PROVED] every case not closed at this stage has R nontrivial
+            +-- [PROVED] canonical Frattini refinement
+                  +-- Phi(Q) is a nontrivial 2-group
+                  +-- Q/Phi(Q) = C2^a x C3^b x S3
+                  +-- [PROVED] odd conjugation centralizes Phi(Q)
+                  +-- [PROVED] Q = C3 semidirect S, chi:S->C2 onto
+                        +-- Phi(Q)=Phi(S) and |S|<=8192
+                        +-- abelian common quotient is C2^2, C2^4, or C2^6
+            +-- [PROVED] coprime removal of the exact central extension
+                  +-- split central Hall factors at primes other than 2,3
+                  +-- A=C_A(U) x [A,U], with [A,U]=C3
+                  +-- H=C3 semidirect U and K=ker(chi)
+                  +-- exact formula nu(H)=nu(K)+3 omega(U minus K)
+                        +-- nu(H)=8 forces (nu(K),omega)=(5,1)
+                        +-- h(5)=5 gives five even-fiber abelian subgroups
+                        +-- three fixed-coordinate odd layers generate
+                        |   abelian subgroups
+                        +-- a(H)=8
 
-      +-- [PROVED] exhaustive cutoff-eight residual partition
+      +-- [PROVED] exact cutoff-eight theorem h(8)=10
             +-- [PROVED] exact arbitrary-to-finite commutation model
             +-- [CITED-VERIFIED] finite nu<=8 implies solvable
             |     +-- finite-simple-group-classification-dependent
@@ -154,16 +180,19 @@ here is now \(1\le n\le7\).
             |     +-- [PROVED] two nonabelian Sylow factors give a 3 x 3 clique
             |     +-- [PROVED] discard central abelian Sylow factors
             |     +-- [PROVED] finite p-group branches p=3,5,7 closed
-            |     +-- [PROVED] residual p=2 has all clique-centralizers nonmaximal
-            |           +-- [PROVED] core-free maximalization has order <=64
-            |                 +-- [COMPUTED] bounded certificate => a<=10
+            |     +-- [PROVED] finite p=2 has no clique number eight
+            |           +-- [COMPUTED] bounded scalar-symplectic boundary
             +-- [PROVED] nonnilpotent center quotient
                   +-- [PROVED] common-core reduction above
-                        +-- [PROVED] residual R nontrivial
+                        +-- [PROVED] intermediate common core R nontrivial
+                        +-- [PROVED] canonical C3-by-2 Frattini skeleton
+                        +-- [PROVED] exact semidirect clique formula
+                        +-- [PROVED] 5+3 abelian-subgroup cover gives a=8
+            +-- [PROVED] lower witness S(3,2) has (nu,a)=(7,10)
 
-The \(h(5)\), \(h(6)\), and \(h(7)\) branches are explicitly
-computer-assisted.  Their
-load-bearing external dependencies are the audited subgroup-cover theorems
+The exact values \(h(5)\), \(h(6)\), \(h(7)\), and \(h(8)\) are explicitly
+computer-assisted.  For the first three, the load-bearing external
+dependencies are the audited subgroup-cover theorems
 and the standard nonabelian-exterior-square/Schur-cover construction; the
 repository contains repaired structural reductions and independent finite
 certificates for the six-cover leaves.  At seven, the external dependency is
@@ -173,12 +202,13 @@ other branches displayed above are computation-independent except for the
 explicitly marked small-dimensional hyperplane-cover check in the finite
 \(5\)-group cutoff-eight branch and the order-32/order-at-most-81
 certificates in the finite \(2\)-group maximal-member branch and the
-order-at-most-81 certificate in the nonnilpotent core-free branch.  The
-finite \(3\)-, \(5\)-, and \(7\)-group branches are closed, while the finite
-\(2\)-group and nonnilpotent solvable branches are sharply reduced.  The
-exhaustive partition proves that they are the only remaining cutoff-eight
-branches, but does not eliminate either nontrivial core and therefore does
-not determine \(h(8)\).
+order-at-most-81 certificate in the nonnilpotent core-free branch and the
+binary order-128 closure.  The finite \(2\)-, \(3\)-, \(5\)-, and
+\(7\)-group branches are closed.  The solvable nonnilpotent
+\(C_3\)-by-\(2\) Frattini branch is closed by the computation-free exact
+clique formula and the \(5+3\) cover.  Together with the finite-model theorem,
+the CFSG-dependent finite solvability input, and the witness \(S(3,2)\), this
+proves \(h(8)=10\).  It does not determine \(h(n)\) for \(n\ge9\).
 Neumann (1976) is primary-verified historical corroboration. The displayed
 subfactorial
 branch uses the proof-audited Guralnick--Maróti and Nagy--Pach--Tomon

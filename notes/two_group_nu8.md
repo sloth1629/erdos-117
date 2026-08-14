@@ -1,7 +1,9 @@
 # The finite \(2\)-group branch at cutoff eight
 
-This note records two finite-only reductions for the still-open \(2\)-group
-branch.  They do not classify the branch or determine \(h(8)\).
+This note records two finite-only reductions that were intermediate steps in
+the \(2\)-group branch.  By themselves they neither classify the branch nor
+determine \(h(8)\); the later closure is in
+`notes/two_group_q128_symplectic_attack.md`.
 
 ## A core bound for an eight-subgroup cover
 
