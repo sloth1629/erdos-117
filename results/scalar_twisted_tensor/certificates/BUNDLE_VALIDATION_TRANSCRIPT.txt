@@ -1,0 +1,67 @@
+ERDOS117_GLOBAL_PRO_RESULT bundle validation
+date=2026-08-14
+python=Python 3.13.5
+
+[1] Python syntax
+PASS: all scripts compile
+
+[2] Twisted-tensor certificate
+PASS: twisted-tensor certificate is internally valid
+file=certificates/W73_Q3_TWISTED_TENSOR_28.json
+field=F_3
+ambient_dimension=8
+form_rank=8
+projective_points=28
+unordered_pairs_checked=378
+nonzero_pairing_value_counts={1: 225, 2: 153}
+
+[3] Auxiliary norm-one certificate
+PASS: certificate is internally valid
+file=certificates/W53_Q3_NORM_ONE_13.json
+field=F_3
+ambient_dimension=6
+form_rank=6
+projective_points=13
+unordered_pairs_checked=78
+nonzero_pairing_value_counts={1: 32, 2: 46}
+
+[4] Pointwise arithmetic audit
+PASS: scalar pointwise boundary audit
+q=2 cases checked: m=1..500 (m=1 confirmed exceptional)
+q=3 cases checked: m=1..500 (unique equality at m=1)
+q>=4 integer cases checked: 25300
+all arithmetic used exact integers
+
+[5] Required report sections
+# 1. Outcome first
+# 2. Phase I — generate and kill ideas
+# 3. Phase II — selection by leverage
+# 4. Complete proof of the selected result
+# 6. Adversarial audit
+# 7. Dependency graph
+# 8. Exact remaining gap
+# 9. Final solve-status declaration
+
+[6] Phase-I candidate count
+candidate_rows=10
+PASS: ten candidates
+
+[7] Required files
+PASS: GLOBAL_RESEARCH_REPORT.md
+PASS: EVIDENCE_LEDGER.md
+PASS: NEXT_ATTACK.md
+PASS: README.md
+PASS: REPRODUCE.md
+
+[8] JSON parse
+PASS: certificates/W53_Q3_NORM_ONE_13.json
+PASS: certificates/W73_Q3_TWISTED_TENSOR_28.json
+
+[9] Markdown render smoke test
+PASS: GLOBAL_RESEARCH_REPORT.md
+PASS: EVIDENCE_LEDGER.md
+PASS: NEXT_ATTACK.md
+PASS: README.md
+PASS: REPRODUCE.md
+
+ALL NON-MANIFEST CHECKS PASSED

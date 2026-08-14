@@ -1,0 +1,4 @@
+wrote certificates/W73_Q3_TWISTED_TENSOR_28.json
+points=28
+pairings=378
+value_counts={'1': 225, '2': 153}

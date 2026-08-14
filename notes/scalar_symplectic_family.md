@@ -153,16 +153,49 @@ Consequently,
 (\nu,a)(S(3,2))=(7,10).
 \]
 
-## What remains open in this family
+## Twisted-tensor scalar barrier
 
-[UNVERIFIED] Determining \(\pi(q,m)\) in general is already a difficult
-finite-polar-space problem. Thus even within scalar-valued class-two
-commutator maps, optimizing
+### Theorem SS.5 [PROVED]
+
+For every prime power \(q\) and every odd \(t\ge1\),
 
 \[
-\frac{\log(q^m+1)}{\pi(q,m)}
+\pi(q,2^{t-1})\ge q^t+1.
 \]
 
-requires more than the binary calculation. The order-\(3^5\) example
-beats the proposed exact binary formula at \(n=7\), but it does not beat
-the binary family's asymptotic lower base \(\sqrt2\).
+The proof in
+`results/scalar_twisted_tensor/GLOBAL_RESEARCH_REPORT.md` descends the
+\(t\)-fold tensor power of the determinant form from
+\(\mathbb F_{q^t}\) to a \(2^t\)-dimensional \(\mathbb F_q\)-space.  The
+Frobenius-twisted image of \(\operatorname{PG}(1,q^t)\) has pairings
+\(N_{\mathbb F_{q^t}/\mathbb F_q}(ad-bc)\), so its \(q^t+1\) points are
+pairwise nonorthogonal.  The characteristic-two zero-diagonal issue and the
+fixed-space dimension are handled explicitly there.
+
+Combining these seeds with Proposition SS.4's orthogonal gluing gives the
+following exact asymptotic conclusion for the scalar family:
+
+\[
+\log h_{\mathrm{sc},\ne2}(n)=o(n),
+\qquad
+\lim_{n\to\infty}h_{\mathrm{sc}}(n)^{1/n}=\sqrt2.
+\]
+
+Moreover, except for \((q,m)=(2,1)\),
+
+\[
+q^m+1\le2^{\pi(q,m)/2}.
+\]
+
+Thus the order-\(3^5\) example beats the proposed exact binary formula at the
+finite cutoff seven, but no scalar-valued field-linear symplectic family can
+beat the binary asymptotic base.  Any asymptotic improvement must leave this
+class.
+
+## What remains open in this family
+
+[UNVERIFIED] Exact values of \(\pi(q,m)\) remain difficult in general.  The
+new theorem determines the exponential optimization of the whole scalar
+envelope, but it does not determine the full finite table or provide a
+universal upper bound for higher-codomain commutator maps or arbitrary
+groups.

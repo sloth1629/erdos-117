@@ -1,0 +1,4 @@
+wrote certificates/W53_Q3_NORM_ONE_13.json
+points=13
+pairings=78
+value_counts={'1': 32, '2': 46}

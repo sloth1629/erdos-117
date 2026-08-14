@@ -1,0 +1,8 @@
+PASS: twisted-tensor certificate is internally valid
+file=certificates/W73_Q3_TWISTED_TENSOR_28.json
+field=F_3
+ambient_dimension=8
+form_rank=8
+projective_points=28
+unordered_pairs_checked=378
+nonzero_pairing_value_counts={1: 225, 2: 153}

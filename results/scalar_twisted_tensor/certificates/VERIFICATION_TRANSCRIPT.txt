@@ -1,0 +1,8 @@
+PASS: certificate is internally valid
+file=certificates/W53_Q3_NORM_ONE_13.json
+field=F_3
+ambient_dimension=6
+form_rank=6
+projective_points=13
+unordered_pairs_checked=78
+nonzero_pairing_value_counts={1: 32, 2: 46}

@@ -63,7 +63,13 @@ semidirect Frattini branch has an exact \(5+3\) abelian cover.
    exhaust every one.
 7. Exact scalar symplectic cover formula
    \(a(S(q,m))=q^m+1\), binary lower construction, and the
-   \(S(3,2)\) counterexample.
+   \(S(3,2)\) counterexample.  A self-contained Frobenius-twisted tensor
+   construction proves
+   \(\pi(q,2^{t-1})\ge q^t+1\) for every prime power \(q\) and odd \(t\).
+   It follows that all nonbinary scalar models are jointly subexponential
+   in their clique cutoff and that the full scalar-symplectic envelope has
+   exact exponential base \(\sqrt2\).  This is a constructional barrier,
+   not a universal upper bound for arbitrary groups.
 8. Direct-product OR identity and correct direct-power rates via fractional
    chromatic number and complementary Shannon capacity.
 9. At cutoff eight, every nonabelian exact center quotient satisfies

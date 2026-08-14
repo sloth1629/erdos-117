@@ -1,0 +1,25 @@
+[COMPUTED] Scalar twisted-tensor bundle integration
+
+Date: 2026-08-14
+Runtime: /usr/bin/python3 3.9.6, standard library only
+Source ZIP SHA-256:
+  920a8f03d55d0eb5fe608dd3e05c363c5c01e0fffe19893507d4af0e4b6fbd9f
+
+Command:
+  PYTHONPYCACHEPREFIX=/tmp/e117-scalar-pycache /usr/bin/python3 -m unittest src.verification.test_scalar_twisted_tensor_bundle -v
+
+Result:
+  test_generators_reproduce_saved_certificates ... ok
+  test_manifest ... ok
+  test_saved_certificates ... ok
+  Ran 3 tests in 0.550s
+  OK
+
+The tests regenerated both JSON certificates byte for byte, independently
+verified the full alternating matrices and every exported pairing, ran the
+exact-integer pointwise audit, and checked every integrated bundle hash.
+
+Integrated artifact hashes:
+  0efc1ec47e895e31f6250c2c8fc66bdaba9e9fcc41af02edf9d9ce9f34f932b4  results/scalar_twisted_tensor/MANIFEST.sha256
+  51cbb745a6428d459b6ae261b769eb0bc5bd5691ba5949f1a9f593af04b8b8c5  src/verification/test_scalar_twisted_tensor_bundle.py
+  f0177b62f5f878fc5715c0c762d1047ce1c60cbaafe9dbf81898c499614a0b92  audit/scalar_twisted_tensor_audit.md

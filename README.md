@@ -46,13 +46,19 @@ No complete resolution is claimed. The strongest repository results are:
   certificates exhaust them.  The matching lower witness is \(S(3,2)\).
 - [PROVED] Scalar symplectic groups satisfy
   \(a(S(q,m))=q^m+1\), with clique number equal to a partial-ovoid
-  parameter.
+  parameter.  A Frobenius-twisted tensor construction proves
+  \(\pi(q,2^{t-1})\ge q^t+1\) for odd \(t\).  Consequently all nonbinary
+  scalar models are jointly subexponential in their clique cutoff, while the
+  full scalar-symplectic envelope has exact exponential base \(\sqrt2\),
+  supplied only by the binary field.
 - [DISPROVED] The proposed exact formula
   \(h(n)=\max\{n,2^{\lfloor(n-1)/2\rfloor}+1\}\) is false:
   \(S(3,2)\) has \((\nu,a)=(7,10)\), while the formula gives 9.
 - [PROVED] Binary symplectic groups give
   \(h(2m+1)\ge2^m+1\) and
-  \(\liminf h(n)^{1/n}\ge\sqrt2\).
+  \(\liminf h(n)^{1/n}\ge\sqrt2\).  The scalar theorem shows that beating
+  this base requires a higher-codomain, non-field-linear, higher-class, or
+  nonnilpotent mechanism.
 - [PROVED] Two cutoff-eight structural obstructions are now explicit.  If
   \(Q=G/Z(G)\) is nonabelian and \(\nu(G)\le8\), then
   \(|Z(Q)|\le3{,}600\).  More precisely, the binary elementary layer of

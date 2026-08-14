@@ -1,0 +1,5 @@
+PASS: scalar pointwise boundary audit
+q=2 cases checked: m=1..500 (m=1 confirmed exceptional)
+q=3 cases checked: m=1..500 (unique equality at m=1)
+q>=4 integer cases checked: 25300
+all arithmetic used exact integers
