@@ -1,0 +1,44 @@
+[COMPUTED] finite 3-group cutoff-eight reproducibility transcript
+
+Canonical GAP command:
+work/gap-4.16.0/gap -l 'work/gap-4.16.0;' -q -c 'ERDOS117_OUTPUT:="experiments/logs/h8_three_group_cutoff.tsv";; ERDOS117_STDOUT_LOG:="experiments/logs/h8_three_group_cutoff_gap.stdout.txt";; Read("experiments/configs/h8_three_group_cutoff.g");'
+
+order=3 total=1 candidate=1 clique_ge_9=0
+order=9 total=2 candidate=2 clique_ge_9=0
+order=27 total=5 candidate=5 clique_ge_9=0
+order=81 total=15 candidate=15 clique_ge_9=0
+order=243 total=67 candidate=67 clique_ge_9=0
+order=729 total=504 candidate=431 clique_ge_9=73
+completed h8 finite 3-group cutoff-eight inventory through order 729
+
+Fresh GAP reproducibility rerun command:
+work/gap-4.16.0/gap -l 'work/gap-4.16.0;' -q -c 'ERDOS117_OUTPUT:="/tmp/h8_three_group_cutoff_rerun.tsv";; ERDOS117_STDOUT_LOG:="/tmp/h8_three_group_cutoff_rerun.stdout.txt";; Read("experiments/configs/h8_three_group_cutoff.g");'
+
+Independent rerun elapsed time: 6 minutes 8.72 seconds.
+
+Comparison commands:
+cmp experiments/logs/h8_three_group_cutoff.tsv /tmp/h8_three_group_cutoff_rerun.tsv
+cmp experiments/logs/h8_three_group_cutoff_gap.stdout.txt /tmp/h8_three_group_cutoff_rerun.stdout.txt
+
+Both comparisons exited zero with byte-for-byte equality.
+
+Python verifier command:
+PYTHONPYCACHEPREFIX=/tmp/erdos117-h8-three-group-test-pycache python3 -m unittest src.verification.test_h8_three_group_cutoff -v
+
+test_saved_three_group_inventory (src.verification.test_h8_three_group_cutoff.H8ThreeGroupCutoffTests) ... ok
+
+----------------------------------------------------------------------
+Ran 1 test in 1.157s
+
+OK
+
+SHA-256:
+138e6479414b6cd6c6610b771125a1e3788f92f7b2a9091f92238a2aaff858bb  experiments/configs/h8_three_group_cutoff.g
+362d1f83d01ddd09fe92af8fe1f18b2c5f45c92862af79417460a71df9b12938  src/python/analyze_h8_three_group_cutoff.py
+1cb011e26f0d1048f83a7f64d500fa427ac826cd0ac7cb153ff3d10d12891164  src/python/exact_invariants.py
+356df635e4426ce4af2bccbf7ac99019bbba61b118f0ef7cabe1c855544b41b3  src/verification/test_h8_three_group_cutoff.py
+e93f7d7168f630bc2bff3d4ecb1df71a3c8d2f416f7fe43395a3bc8961b92c3e  notes/h8_three_group_cutoff.md
+d3abec3c9391c0809fd76d0f2a384d0cd3936e258730e4c4dbdc2ee33265782b  experiments/logs/h8_three_group_cutoff.tsv
+79cbdf0b71859056753a590a7f033d529d80ccd566136ad9ac7aef7bfb703c7c  experiments/logs/h8_three_group_cutoff_gap.stdout.txt
+f5d7bf5b53d5b981acd774ce4b23f7cd9899a419acfb7753326e3d3060c7fd16  experiments/logs/h8_three_group_cutoff.json
+8f83f8bbecd2c3d40e6f9219250633c57ed9a99c7ef4c453c94accf02f2306da  experiments/logs/h8_three_group_cutoff.stdout.txt

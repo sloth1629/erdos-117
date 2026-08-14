@@ -1,0 +1,6 @@
+order=3 total=1 candidate=1 clique_ge_9=0
+order=9 total=2 candidate=2 clique_ge_9=0
+order=27 total=5 candidate=5 clique_ge_9=0
+order=81 total=15 candidate=15 clique_ge_9=0
+order=243 total=67 candidate=67 clique_ge_9=0
+order=729 total=504 candidate=431 clique_ge_9=73

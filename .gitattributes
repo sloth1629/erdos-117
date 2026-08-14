@@ -1,2 +1,3 @@
 # The final tab in exclusion rows encodes an empty last TSV schema field.
 experiments/logs/h8_five_group_cutoff.tsv whitespace=-blank-at-eol
+experiments/logs/h8_three_group_cutoff.tsv whitespace=-blank-at-eol
