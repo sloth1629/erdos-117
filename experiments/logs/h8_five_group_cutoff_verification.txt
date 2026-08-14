@@ -1,0 +1,28 @@
+[COMPUTED] finite 5-group cutoff-eight verification transcript
+
+Command:
+work/gap-4.16.0/gap -q -c 'ERDOS117_OUTPUT:="/tmp/h8_five_group_cutoff_rerun.tsv";; ERDOS117_STDOUT_LOG:="/tmp/h8_five_group_cutoff_rerun.stdout.txt";; Read("experiments/configs/h8_five_group_cutoff.g");'
+
+order=125 total=5 candidate=5 clique_ge_9=0
+order=625 total=15 candidate=11 clique_ge_9=4
+order=3125 total=77 candidate=22 clique_ge_9=55
+order=15625 total=684 candidate=42 clique_ge_9=642
+completed h8 finite 5-group cutoff-eight inventory
+
+Ran in 23.897 seconds.
+
+Commands:
+cmp experiments/logs/h8_five_group_cutoff.tsv /tmp/h8_five_group_cutoff_rerun.tsv
+cmp experiments/logs/h8_five_group_cutoff_gap.stdout.txt /tmp/h8_five_group_cutoff_rerun.stdout.txt
+
+Both comparisons succeeded with byte-for-byte equality.
+
+Command:
+PYTHONPYCACHEPREFIX=/tmp/erdos117-h8-five-group-test-pycache python3 -m unittest src.verification.test_h8_five_group_cutoff -v
+
+test_saved_five_group_inventory (src.verification.test_h8_five_group_cutoff.H8FiveGroupCutoffTests) ... ok
+
+----------------------------------------------------------------------
+Ran 1 test in 0.096s
+
+OK

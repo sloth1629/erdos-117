@@ -372,3 +372,32 @@ python3 -m unittest src.verification.test_h8_local_inequality_counterexample -v
 `[DISPROVED]` The certificate gives left side 12 and right side 11 for the
 proposed inequality. `[UNVERIFIED]` Neither producer nor test claims that the
 example has least possible order.
+
+## Finite 5-groups through order \(5^6\)
+
+`analyze_h8_five_group_cutoff.py` checks the complete 781-row GAP partition,
+all 701 saved nine-clique product witnesses, and all 80 complete
+central-coset graphs. It independently compresses equal-neighborhood twins,
+computes exact maximum cliques and colorings, lifts and checks the witnesses,
+and reconstructs the AC-centralizer condition from each eligible graph. Its
+SHA-256 is
+`9c5115d3eec8d4b22995f6a2108d121c8131cf7101984460f254cc1e11239ed2`.
+
+After running the GAP command in `experiments/configs/README.md`, regenerate
+and verify the analyzed record with:
+
+```bash
+PYTHONPYCACHEPREFIX=/tmp/erdos117-h8-five-group-pycache \
+python3 src/python/analyze_h8_five_group_cutoff.py \
+  --input experiments/logs/h8_five_group_cutoff.tsv \
+  --gap-script experiments/configs/h8_five_group_cutoff.g \
+  --gap-stdout experiments/logs/h8_five_group_cutoff_gap.stdout.txt \
+  --output experiments/logs/h8_five_group_cutoff.json \
+  --stdout-log experiments/logs/h8_five_group_cutoff.stdout.txt
+PYTHONPYCACHEPREFIX=/tmp/erdos117-h8-five-group-test-pycache \
+python3 -m unittest src.verification.test_h8_five_group_cutoff -v
+```
+
+`[COMPUTED]` The eligible distributions are exact for the four scanned
+orders. `[UNVERIFIED]` The analyzer does not infer a classification of finite
+5-groups at higher orders or a global statement about \(h(8)\).

@@ -1,0 +1,7 @@
+[COMPUTED] finite SmallGroups of orders 5^3 through 5^6 only; no classification beyond scanned orders
+order=125 total=5 eligible=5 excluded_by_K9=0 distribution=[(1, 1, 3), (6, 6, 2)]
+order=625 total=15 eligible=11 excluded_by_K9=4 distribution=[(1, 1, 5), (6, 6, 6)]
+order=3125 total=77 eligible=22 excluded_by_K9=55 distribution=[(1, 1, 7), (6, 6, 15)]
+order=15625 total=684 eligible=42 excluded_by_K9=642 distribution=[(1, 1, 11), (6, 6, 31)]
+nu8_count=0 maximum_eligible_a=6 all_eligible_ac=True
+wrote experiments/logs/h8_five_group_cutoff.json

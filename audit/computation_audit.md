@@ -606,3 +606,59 @@ passed in 0.028 seconds.
 
 [UNVERIFIED] This certificate establishes the stated counterexample only. It
 does not establish that order 48 is the least possible counterexample order.
+
+## Finite 5-groups through order \(5^6\) at cutoff eight
+
+[COMPUTED] GAP 4.16.0 / SmallGrp 1.5.4 enumerated all 5, 15, 77, and 684
+SmallGroups of orders \(5^3,5^4,5^5,5^6\). A deterministic witness-first
+scan partitions the 781 types into 701 groups with a saved nine-clique and 80
+full central-coset graphs. A byte-for-byte independent producer rerun took
+23.897 seconds and reproduced the complete TSV and GAP progress log.
+
+[COMPUTED] Exact twin-compressed clique and coloring searches give the
+following eligible distributions:
+
+\[
+\begin{array}{c|c|c|c}
+|G|&\#\{\nu\le8\}&\#\{\nu\ge9\}&(\nu,a)\text{ distribution}\cr
+125&5&0&(1,1)^3,(6,6)^2\cr
+625&11&4&(1,1)^5,(6,6)^6\cr
+3125&22&55&(1,1)^7,(6,6)^{15}\cr
+15625&42&642&(1,1)^{11},(6,6)^{31}.
+\end{array}
+\]
+
+Thus the four scanned orders contain no group with \(\nu=8\). Their 80
+eligible groups comprise 26 abelian and 54 nonabelian groups; every
+nonabelian eligible graph is AC, has center index 25 and twin quotient order
+7, and has \((\nu,a)=(6,6)\). No eligible group has \(a>\nu\).
+
+[COMPUTED] Each excluded row stores nine pc exponent vectors and all 36
+forward/reverse product vectors; GAP checks the actual group elements
+pairwise, while Python checks the saved product-vector inequalities. Python
+does not implement a second pc collector, so that part of the certificate
+retains an explicit GAP dependency. Every eligible row instead stores the
+complete central-coset adjacency, on which Python independently checks
+symmetry, twin compression, clique, coloring, and AC witnesses. The saved
+regression test passed in 0.096 seconds, and an independent package audit
+reported no blocker.
+
+[COMPUTED] The GAP script, raw TSV, analyzed JSON, Python producer, regression
+test, and explanatory note have SHA-256 values respectively
+`b7201ee828a95a9d26264d7d0fab5d658b945e30dd6bf312ef908afa47f8975f`,
+`40490e97f6f4156c608184334d5d975c695cfff682479902f2e39dd518a8aaeb`,
+`889713f240cdf73276fd2d398a290558337f4a80737f654b89226d77cac73dfa`,
+`9c5115d3eec8d4b22995f6a2108d121c8131cf7101984460f254cc1e11239ed2`,
+`88b9b6696e7c62baaa470357556aa8b3b7a878be48285c664dd77fc05ef06cff`,
+and
+`b3445ae48aafbcccdf054e72777b7ac2b508eeb3d1d892c9873b511738bab401`.
+Exact commands and the full manifest are indexed in the configuration,
+Python, and log READMEs.
+
+[CITED-VERIFIED] Berkovich (2010), finite scope p. 415, Lemmas 1.2--1.3
+pp. 416--417, Theorem 2.3 pp. 419--420, and Theorem 4.4 pp. 424--425 provide
+only external motivation and partial \(p=5\) pruning here. They are not used
+to extrapolate the computation beyond the four scanned orders.
+
+[UNVERIFIED] This bounded inventory is not a classification of all finite
+5-groups with \(\nu\le8\), and it gives no global upper bound for \(h(8)\).

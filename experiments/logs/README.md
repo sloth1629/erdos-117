@@ -137,6 +137,25 @@ Store reproducible text logs here; large or licensed artifacts must not be commi
   35385c634cbd4ab06fa5c5c5c82971a04fafb32b8c13eb56cff7f40b29b83459  src/verification/test_h8_local_inequality_counterexample.py
   7e6718ba7c720a6b29bdfc6c3f6d90d31e1a2e42c77a9aec9e6b882bdeec4f35  notes/h8_local_inequality_counterexample.md
   ```
+- `h8_five_group_cutoff.{tsv,json}`, stdout files, and verification
+  transcript: `[COMPUTED]` exact cutoff-eight inventory of all 781
+  SmallGroups of orders \(5^3\) through \(5^6\). The raw record stores 701
+  nine-clique exclusions and 80 complete candidate adjacencies. No candidate
+  has \(\nu=8\); the exact eligible values are only \((1,1)\) and \((6,6)\).
+  `[UNVERIFIED]` No unscanned-order classification is claimed. The current
+  SHA-256 manifest is:
+
+  ```text
+  b7201ee828a95a9d26264d7d0fab5d658b945e30dd6bf312ef908afa47f8975f  experiments/configs/h8_five_group_cutoff.g
+  40490e97f6f4156c608184334d5d975c695cfff682479902f2e39dd518a8aaeb  experiments/logs/h8_five_group_cutoff.tsv
+  7cd05a480c05e7096ac3116b6fa13fbb2a371030d53c5a5828251068ce5476ae  experiments/logs/h8_five_group_cutoff_gap.stdout.txt
+  889713f240cdf73276fd2d398a290558337f4a80737f654b89226d77cac73dfa  experiments/logs/h8_five_group_cutoff.json
+  5caec96ef98b4b76f55108256a83808745779aaeecdaeecec9eb464eddcb4e92  experiments/logs/h8_five_group_cutoff.stdout.txt
+  cba329928eff08de400ef375f4e59354c04be13553106c3b5a4848e754f07799  experiments/logs/h8_five_group_cutoff_verification.txt
+  9c5115d3eec8d4b22995f6a2108d121c8131cf7101984460f254cc1e11239ed2  src/python/analyze_h8_five_group_cutoff.py
+  88b9b6696e7c62baaa470357556aa8b3b7a878be48285c664dd77fc05ef06cff  src/verification/test_h8_five_group_cutoff.py
+  b3445ae48aafbcccdf054e72777b7ac2b508eeb3d1d892c9873b511738bab401  notes/h8_five_group_cutoff.md
+  ```
 
 The unit suite checks that the five disjoint families--660 ordinary scans,
 two delegated cases, 62 exterior-zero exclusions, eleven generic dual cases,

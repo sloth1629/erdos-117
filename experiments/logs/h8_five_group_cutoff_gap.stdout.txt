@@ -1,0 +1,4 @@
+order=125 total=5 candidate=5 clique_ge_9=0
+order=625 total=15 candidate=11 clique_ge_9=4
+order=3125 total=77 candidate=22 clique_ge_9=55
+order=15625 total=684 candidate=42 clique_ge_9=642
