@@ -69,6 +69,25 @@ Research cut-off: 2026-08-14.  Source PDFs, extracted text, and rendered page im
 \]
 The dissertation's preceding page specifies base-2 logarithms.  This transcription should be compared directly with Pyber Theorem 6.1 once access is obtained.
 
+## Withdrawn exponential coset-cover false lead
+
+[CITED-VERIFIED] The current official arXiv record for
+Nagy--Pach--Tomon, *Irredundant hyperplane covers*, arXiv:2205.03389v2,
+marks the paper withdrawn on 31 October 2022.  The authors' comment says
+that Claim 4.5 in Section 4.2 contains an error that invalidates most of the
+paper.  The v1 PDF remains accessible, but its Theorem 1.1 and Appendix A
+are not verified results.
+
+[DISPROVED] A repository draft briefly attempted to combine that v1
+Theorem 1.1 with the valid Guralnick--Maróti BFC bound.  The draft was
+deleted before staging, committing, or pushing.  No claim based on
+\(2^{O(k)}\) or the advertised \(20^k\) survives in the worktree.
+
+[UNVERIFIED] The distinct, unwithdrawn arXiv:2111.13658 gives a weaker
+\(\exp(O(k\log\log k))\) abelian coset-cover statement.  Its full proof is
+being audited separately; the later 2026 Transactions article is also
+weaker and does not repair the withdrawn fixed-base theorem.
+
 ## Finite-geometry acquisition and terminology audit
 
 [PROVED] In \(W(2m-1,q)\), a repository set of pairwise nonorthogonal projective points is exactly a partial ovoid.  The equivalence was checked in both directions from the alternating-form definition: every point is isotropic, collinearity is orthogonality, and an isotropic line extends to a generator.  Bamberg–Bishnoi–Ihringer–Ravi, §2, p. 4, explicitly corroborates that a partial ovoid is a set of pairwise nonorthogonal points.

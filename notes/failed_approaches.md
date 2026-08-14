@@ -200,3 +200,28 @@ intersections.
 The intersection terms cannot be discarded without additional structure;
 in the binary symplectic example they can themselves retain the full
 \(m-2\) clique bound.
+
+## A withdrawn exponential abelian-cover theorem
+
+[DISPROVED] Theorem 1.1 of Nagy--Pach--Tomon,
+*Irredundant hyperplane covers*, arXiv:2205.03389v1, cannot be used as a
+proof that every irredundant \(k\)-coset cover of an abelian group has
+intersection index \(2^{O(k)}\).  The official current arXiv record is v2,
+withdrawn on 31 October 2022.  Its comments identify an error in Claim 4.5
+of Section 4.2 and state that the error invalidates most of the paper.
+Consequently neither the theorem nor the appendix's proposed numerical
+base 20 is load-bearing.
+
+This false lead was especially tempting because, combined with the valid
+Guralnick--Maróti BFC derived-subgroup theorem and the repository's
+class-two centralizer reduction, it would have reproduced a fixed-base
+exponential center-index bound.  Reading only the still-accessible v1 PDF
+is insufficient; current withdrawal metadata must be checked before a
+preprint is promoted.
+
+Reusable replacement: the authors' earlier, unwithdrawn manuscript
+*Additive bases, coset covers, and non-vanishing linear maps*,
+arXiv:2111.13658, states only the weaker
+\(\exp(O(k\log\log k))\) abelian intersection bound.  That separate theorem
+requires its own proof audit before use and cannot yield a fixed-base
+constant by itself.
