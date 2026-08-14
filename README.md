@@ -19,6 +19,10 @@ No complete resolution is claimed. The strongest repository results are:
 - [PROVED] For noncentral \(x\),
   \(\nu(C_G(x))\le\nu(G)-2\), hence
   \(h(n)\le n h(n-2)\).
+- [PROVED] The irredundant maximum-clique centralizer cover and a
+  self-contained factorial coset lemma give
+  \([G:Z(G)]\le\nu(G)!\) for arbitrary groups.  In particular, every
+  cutoff-eight center quotient has order at most \(8!=40{,}320\).
 - [PROVED] Combining the audited Guralnick--Maróti BFC theorem with the
   published Nagy--Pach--Tomon abelian coset-cover theorem gives the
   CFSG-dependent universal bounds

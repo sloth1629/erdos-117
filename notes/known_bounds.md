@@ -58,6 +58,76 @@ h(n)\leq r_n^n-1<4^{n^2}.
 
 This also proves directly, without Pyber's theorem, that \(h(n)\) is finite.
 
+## A self-contained factorial center-index bound
+
+### [PROVED] Maximum-clique centralizers give \([G:Z(G)]\leq\nu(G)!\)
+
+Let \(G\) be any group with \(m=\nu(G)<\infty\). Then
+
+\[
+[G:Z(G)]\leq m!.
+\tag{KB.1}
+\]
+
+We first recall and prove the required factorial cover lemma. Suppose
+
+\[
+G=H_1g_1\cup\cdots\cup H_sg_s
+\]
+
+is an irredundant right-coset cover and \(D=\bigcap_iH_i\). For every
+\(r\in\{0,\ldots,s-1\}\), every intersection \(K\) of \(s-r\) of the
+subgroups \(H_i\) satisfies
+
+\[
+[K:D]\leq r!.
+\tag{KB.2}
+\]
+
+The proof is by induction on \(r\). The case \(r=0\) is immediate. After
+relabeling, let \(K=H_1\cap\cdots\cap H_{s-r}\). Irredundancy gives an
+element \(x\) outside the first \(s-r\) covering cosets. Then the whole
+coset \(Kx\) is outside them and is covered by the remaining \(r\) cosets.
+Every nonempty intersection of \(Kx\) with \(H_jg_j\) has the form
+\((K\cap H_j)z\). By induction,
+\([K\cap H_j:D]\leq(r-1)!\). Thus \(Kx\) is covered by at most \(r\)
+sets, each containing at most \((r-1)!\) left \(D\)-cosets, and (KB.2)
+follows.
+
+Now let \(X=\{x_1,\ldots,x_m\}\) be a maximum pairwise noncommuting set in
+\(G\). Its centralizers cover \(G\), because an element outside all of them
+could be adjoined to \(X\). The cover is irredundant: \(x_i\) belongs to
+\(C_G(x_i)\) and to no \(C_G(x_j)\) with \(j\ne i\). The proved
+common-centralizer lemma gives
+
+\[
+\bigcap_{i=1}^m C_G(x_i)=Z(G).
+\]
+
+Take \(r=m-1\) in (KB.2). Each centralizer is a union of at most
+\((m-1)!\) left \(Z(G)\)-cosets. Their union is all of \(G\), so
+
+\[
+[G:Z(G)]
+\leq\sum_{i=1}^m[C_G(x_i):Z(G)]
+\leq m(m-1)!=m!.
+\]
+
+This proof does not assume that \(G\) is finite; the finite index is a
+conclusion. In particular,
+
+\[
+\nu(G)\leq8\quad\Longrightarrow\quad
+[G:Z(G)]\leq8!=40\,320.
+\tag{KB.3}
+\]
+
+For a nonabelian group, the usual one subgroup
+\(\langle t,Z(G)\rangle\) per nonidentity central coset also gives
+\(a(G)\leq m!-1\). The stronger centralizer recurrences below give better
+bounds for \(a(G)\), but (KB.1) is useful because it directly bounds the
+complete list of possible center quotients.
+
 ## A CFSG-dependent subfactorial bound
 
 ### [PROVED] Published-input center-index bound

@@ -26,6 +26,9 @@ here is now \(1\le n\le7\).
       |
       +-- maximum-clique centralizer arguments
       |     +-- C_G(maximum clique)=Z(G)
+      |     +-- factorial coset-cover lemma
+      |     |     +-- [G:Z(G)] <= nu(G)!
+      |     |     +-- nu(G) <= 8 implies |G/Z(G)| <= 40,320
       |     +-- nu(C_G(x)) <= nu(G)-2 for x noncentral
       |     |     +-- h(n) <= n h(n-2)
       |     |     +-- h(1)=h(2)=1, h(3)=3, h(4)=4

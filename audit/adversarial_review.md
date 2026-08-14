@@ -14,6 +14,14 @@ independent audit recorded below.
 - `[PROVED]` A finite reduction cannot be inferred merely by replacing \(G\) with \(G/Z(G)\). The repository instead constructs a finite group preserving the exact central-coset commutation graph. A finite stem representative remains an unnecessary separate source obligation.
 - `[PROVED]` The improved centralizer lemma \(\nu(C_G(x))\leq\nu(G)-2\) was reconstructed independently and gives \(h(n)\leq n h(n-2)\); its algebraic branches were checked explicitly.
 
+- [PROVED] The factorial coset argument was independently reconstructed.
+  In an irredundant \(m\)-subgroup cover with intersection \(D\), each
+  member contains at most \((m-1)!\) left \(D\)-cosets, so the whole group
+  contains at most \(m!\).  Maximum-clique centralizers form such a cover
+  with intersection \(Z(G)\).  Thus \([G:Z(G)]\le\nu(G)!\) for arbitrary
+  groups, and cutoff eight reduces to center quotients of order at most
+  \(40{,}320\).  No maximal-subgroup or finite-group hypothesis is used.
+
 Continue auditing quantifiers, finite/infinite scope, central-coset arguments, product claims, source dependence, and computational certificates.
 
 ## Independent audit of the subfactorial upper bound (2026-08-14)

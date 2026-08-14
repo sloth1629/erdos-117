@@ -31,8 +31,10 @@ gives 9 at seven.
    commutation graph, \(\nu\), and \(a\); finite attainment of \(h(n)\).
 3. Universal two-step centralizer drop and recurrence
    \(h(n)\le n h(n-2)\).
-4. Self-contained conjugacy-class bound \(4n^2\) and
-   \([G:Z(G)]\le(4n^2)^n\).
+4. A self-contained factorial cover argument gives
+   \([G:Z(G)]\le n!\), hence the explicit cutoff-eight reduction
+   \(|G/Z(G)|\le8!=40{,}320\).  Independently, every conjugacy class has
+   size at most \(4n^2\), the BFC input used below.
 5. A stronger CFSG-dependent universal bound
    \([G:Z(G)]\le2^{O(\nu(G)\log\log\nu(G))}\), hence
    \(h(n)\le2^{O(n\log\log n)}\), obtained from the audited

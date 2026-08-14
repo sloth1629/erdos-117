@@ -267,9 +267,48 @@ A nonabelian group contains the pairwise noncommuting triple $x,y,xy$;
 hence $h(1)=h(2)=1$.  Iteration proves the stated bounds.
 \end{proof}
 
-We also record a second, independent quantitative route.  It is weaker than
-Theorem~\ref{thm:recurrence} as a bound for $h$, but gives useful structural
-control of conjugacy classes.
+We first record a self-contained center-index consequence of the same
+maximum-clique cover.
+
+\begin{proposition}[Factorial center index]\label{prop:factorial-center}
+If $\nuG(G)=n<\infty$, then
+\[
+ [G:\Z(G)]\le n!.
+\]
+In particular, $\nuG(G)\le8$ implies $[G:\Z(G)]\le8!=40{,}320$.
+\end{proposition}
+
+\begin{proof}
+We use the following elementary factorial-cover lemma.  If
+$G=H_1g_1\cup\cdots\cup H_sg_s$ is an irredundant right-coset cover,
+$D=\bigcap_iH_i$, and $K$ is the intersection of any $s-r$ of the
+$H_i$, then
+\[
+ [K:D]\le r!\qquad(0\le r\le s-1).
+\tag{*}
+\]
+Induct on $r$.  After relabeling, choose $x$ outside the first $s-r$
+covering cosets.  The coset $Kx$ is still outside those cosets and is
+covered by the other $r$.  Every nonempty intersection with one of them has
+the form $(K\cap H_j)z$; by induction it contains at most $(r-1)!$ left
+$D$-cosets.  Hence $Kx$, and therefore $K$, contains at most
+$r(r-1)!=r!$ left $D$-cosets.
+
+For a maximum noncommuting set $X=\{x_1,\ldots,x_n\}$, the subgroups
+$\CG_G(x_i)$ form an irredundant cover: maximality gives the cover, and
+$x_i$ is private to its own member.  Lemma~\ref{lem:center} says that their
+intersection is $\Z(G)$.  Taking $r=n-1$ in (*) gives
+$[\CG_G(x_i):\Z(G)]\le(n-1)!$ for every $i$.  Since their union is $G$,
+\[
+ [G:\Z(G)]\le\sum_{i=1}^n[\CG_G(x_i):\Z(G)]\le n!.
+\]
+No finiteness assumption on $G$ was used.
+\end{proof}
+
+We also record an independent quantitative route controlling conjugacy
+classes.  Its center-index corollary is weaker than
+Proposition~\ref{prop:factorial-center}, but its BFC conclusion is used in
+Theorem~\ref{thm:subfactorial}.
 
 \begin{proposition}[Conjugacy and center index]\label{prop:conjugacy}
 If $\nuG(G)=n<\infty$, then every conjugacy class has size at most $4n^2$ and
