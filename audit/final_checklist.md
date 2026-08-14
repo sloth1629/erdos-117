@@ -52,12 +52,19 @@ These boxes remain open, so no complete solution is claimed.
   argument.  Its conclusion \([P:Z(P)]\le2048\) is finite-only, and the
   binary classification remains open.  The separately audited maximal-member
   lemma closes that subbranch with \([P:Z(P)]\le64\) and \(a(P)\le10\),
-  leaving only the all-nonmaximal binary residual.
+  leaving only the all-nonmaximal binary residual; every minimal
+  maximalization in that residual has nontrivial intersection.
 - [x] The solvable nonnilpotent reduction keeps the exact center quotient
   separate from its abstract quotients, proves the private-coset and
   Frattini-free Fitting reductions, audits all seven affine factors, invokes
   exact pairing only when the common core is trivial, and leaves the
   nontrivial-core branch explicitly unresolved.
+- [x] The exhaustive cutoff-eight partition passes through the exact finite
+  model, the primary-verified finite solvability theorem (with its
+  finite-simple-group-classification dependence explicit), and the
+  nilpotent Sylow decomposition.  It proves that the all-nonmaximal binary
+  nontrivial-intersection branch and the solvable nonnilpotent
+  nontrivial-core branch are the only remaining obligations.
 - [x] Product and limit assertions audited without assuming one-shot
   multiplicativity.
 - [x] Computational witnesses, configurations, versions, hashes, and

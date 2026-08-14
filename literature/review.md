@@ -350,7 +350,7 @@ This is a center-index bound, not an abelian-cover theorem; it does not contradi
 
 [PROVED] The repository's exact central-coset graph translation strengthens that source statement for the present problem: the isoclinism isomorphism \(G/Z(G)\cong K/Z(K)\), together with the compatible commutator maps in Zarrin's definition on p. 43, preserves commutation in both directions.  It is therefore an isomorphism of the compressed noncommuting graphs, so it preserves both \(\nu=\omega\) and \(a=\chi\).  Hence every arbitrary group with finite \(\nu\), in particular with \(\nu=7\), has a finite isoclinic representative with the same pair \((\nu,a)\).  This makes the finite reduction valid for \(h(7)\), although it supplies no classification of the resulting finite groups.
 
-[CITED-VERIFIED] Zarrin, Theorem 1.2, stated on p. 43 and proved on p. 44, says that every arbitrary group with \(\nu\le20\) is soluble, with sharp threshold \(21=\nu(A_5)\).  Its finite load-bearing input is Endimioni's 1994 theorem, whose original three-page article was not acquired here.  The independently accessible primary paper of Abdollahi--Azad--Mohammadi Hassanabadi--Zarrin gives a stronger finite classification at cutoff 57: Theorem 1.1, printed p. 2 with proof on pp. 4--9, lists every finite nonsoluble group with \(\nu\le57\); every listed family has clique number at least 21.  Consequently the solvability conclusion at \(\nu=7\) has a proof-bearing accessible primary route, although it does not bound \(a(G)\) or the derived length sharply enough to determine \(h(7)\).
+[CITED-VERIFIED] Zarrin, Theorem 1.2, stated on p. 43 and proved on p. 44, says that every arbitrary group with \(\nu\le20\) is soluble, with sharp threshold \(21=\nu(A_5)\).  Its finite load-bearing input is Endimioni's 1994 theorem, whose original three-page article was not acquired here.  The independently accessible primary paper of Abdollahi--Azad--Mohammadi Hassanabadi--Zarrin gives a stronger finite classification at cutoff 57: Theorem 1.1, author-manuscript p. 2 with proof on pp. 4--9, lists every finite nonsoluble group with \(\nu\le57\); every listed family has clique number at least 21.  Consequently the solvability conclusion throughout \(\nu\le20\), including the cutoff-eight partition below, has a proof-bearing accessible primary route.  By itself it does not bound \(a(G)\) or the derived length sharply enough to determine the corresponding values of \(h\).
 
 [CITED-VERIFIED] Darafsheh--Ghorbani--Prajapati give useful but conditional small-central-quotient pruning.  Theorems 1.2 and 1.3, printed p. 381 and proved on pp. 387--388, show that if \(p\) is the smallest prime dividing a finite nonabelian group and \(|G/Z(G)|=p^2\) or \(p^3\), then \(G\) is an AC-group; the respective clique numbers are \(p+1\) and \(p^2+(1-\delta)p+1\).  For a \(p\)-group with quotient \(p^3\), Remark 5.2, p. 388, specializes this to \(p^2+p+1\) when there is no abelian maximal subgroup and \(p^2+1\) when there is one.  Thus, within the \(p\)-group cases of quotient order \(p^3\le81\), \(\nu=7\) occurs only at \(p=2\), quotient order eight, with no abelian maximal subgroup; the order-27 \(p\)-group branches have clique number 13 or 10.  The more general theorem leaves the parameter \(\delta\) and is not by itself a full order-27 classification.  Lemma 2.4, p. 382, also shows that an AC-group's distinct proper element-centralizers are abelian and give both a maximum noncommuting set and an abelian cover, so \(a(G)=\nu(G)\) in this AC slice.  These results do not cover central quotients of orders 16, 32, 64, 72, 80, or 81, and do not cover the repository's non-AC group \(S(3,2)\).
 
@@ -451,6 +451,21 @@ and is a direct product of elementary abelian \(2\)-, \(3\)-, \(5\)-, and
 core-free case \(R=1\) leaves eight quotients of order at
 most 42 and is closed by the bounded certificate.  These are repository
 theorems LIT-083 and LIT-084, not claims found in the external literature.
+
+[PROVED] LIT-085 proves that these two residuals are exhaustive.  The exact
+finite model, followed by the primary-verified finite nonsoluble
+classification, reduces every hypothetical cutoff-eight counterexample to
+a finite solvable group.  The cited solvability input is
+finite-simple-group-classification-dependent through Blyth--Robinson
+Proposition 4 and Thompson's minimal-simple classification.  A nilpotent
+center quotient makes the finite
+model nilpotent; a Sylow direct-product nine-clique eliminates two
+nonabelian Sylow factors, and the closed odd-prime branches leave only the
+finite \(2\)-group all-nonmaximal case.  A core-free minimal maximalization
+there has quotient order at most \(64\) and is already covered by the exact
+certificate.  The nonnilpotent alternative is exactly LIT-084.  Thus no
+semisimple or mixed-prime nilpotent branch remains, although neither
+nontrivial common core has been eliminated.
 
 [UNVERIFIED] No accessible primary source located through the 2026-08-14
 continuation search gives a complete classification of all finite

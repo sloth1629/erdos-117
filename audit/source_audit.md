@@ -24,7 +24,7 @@ Research cut-off: 2026-08-14.  Source PDFs, extracted text, and rendered page im
 | [CITED-VERIFIED] | Azad–Iranmanesh–Praeger–Spiga (2011), DOI `10.1007/s10801-011-0288-2`, arXiv `1004.3402` | Historical bound/Isaacs attribution, printed p. 685; scope of Theorems 1.1–1.5 | Full primary PDF read. |
 | [UNVERIFIED] | Saccochi (2015), DOI `10.26512/2015.12.D.22224` | Theorem 4.1.1 p. 34; Pyber formula p. 36; Theorem 4.3.2 pp. 48–50; Theorem 5.2.7 pp. 56–59 | Full dissertation PDF read and critical formulas visually rendered.  It is secondary evidence for Pyber/Isaacs. |
 | [CITED-VERIFIED] | Darafsheh–Ghorbani–Prajapati (2015), DOI `10.1017/S0004972715000830` | Extraspecial/Isaacs attribution and Theorems 1.2–1.3 p. 381; Lemma 2.4 p. 382; proofs and Remark 5.2 pp. 387–388 | Full official Cambridge PDF read. |
-| [CITED-VERIFIED] | Abdollahi–Azad–Mohammadi Hassanabadi–Zarrin (2010), DOI `10.1142/S1005386710000581`, arXiv `0903.0692` | Theorem 1.1 p. 2 and complete finite nonsoluble-classification proof pp. 4–9 | Full primary arXiv manuscript read; published metadata cross-checked through Crossref. |
+| [CITED-VERIFIED] | Abdollahi–Azad–Mohammadi Hassanabadi–Zarrin (2010), DOI `10.1142/S1005386710000581`, arXiv `0903.0692` | Theorem 1.1 author-manuscript p. 2 and complete proof pp. 4–9 | Full primary arXiv manuscript read; published metadata cross-checked through Crossref; finite-simple-group-classification dependence retained. |
 | [CITED-VERIFIED] | Berkovich (2010), DOI `10.3336/gm.45.2.09` | Finite scope p. 415; Lemmas 1.2–1.3 pp. 416–417; Theorem 2.3 pp. 419–420; Theorem 4.4 pp. 424–425; Proposition 4.5 pp. 425–426 | Complete open primary PDF acquired from the journal site; each cited statement and its proof was read. |
 | [CITED-VERIFIED] | Zarrin (2016), DOI `10.1017/S0004972715000696` | Theorems 1.1–1.2 and Lemma 2.1, pp. 43–44; centralizer distinction and Theorem 3.5 p. 45 | Full official Cambridge PDF read. |
 | [CITED-VERIFIED] | Jafarian Amiri–Madadi–Rostami (2018), DOI `10.1007/s41980-018-0079-9` | Definition and Theorem 1.1; Lemma 3.1 and its proof in §3, especially the explicit scope “10-centralizer” plus \(\omega\in\{5,6,7,8\}\) | Publisher's complete open HTML article read; it is marked Open Access and exposes the full theorem/proof text. |
@@ -196,7 +196,7 @@ conclusion \(a(G)\le7\) by itself.
 
 [PROVED] The source's commutator-compatible isomorphism \(G/Z(G)\cong K/Z(K)\) is an isomorphism of the repository's compressed noncommuting graphs.  The exact graph/group translation therefore gives \(a(G)=\chi(\Delta_G)=\chi(\Delta_K)=a(K)\) as well as \(\nu(G)=\nu(K)\).  Thus the finite isoclinic representative preserves the complete pair \((\nu,a)\) and is a valid reduction for \(h(7)\); this strengthening is a repository proof, not a theorem explicitly stated by Zarrin.
 
-[CITED-VERIFIED] Zarrin Theorem 1.2, pp. 43--44, says that an arbitrary group with \(\nu\le20\) is soluble and that \(A_5\), with \(\nu=21\), makes the threshold sharp.  Its finite input is Endimioni (1994), whose primary full paper was not acquired.  A separate proof-bearing finite route was checked in Abdollahi--Azad--Mohammadi Hassanabadi--Zarrin, *Algebra Colloq.* 17 (2010), 611--620, DOI `10.1142/S1005386710000581`, arXiv `0903.0692`: Theorem 1.1, printed p. 2 and proved on pp. 4--9, classifies all finite nonsoluble groups with clique number at most 57, and every listed family begins at clique number 21.  Therefore \(\nu=7\) implies solubility, but neither source supplies \(a(G)\le10\).
+[CITED-VERIFIED] Zarrin Theorem 1.2, pp. 43--44, says that an arbitrary group with \(\nu\le20\) is soluble and that \(A_5\), with \(\nu=21\), makes the threshold sharp.  Its finite input is Endimioni (1994), whose primary full paper was not acquired.  A separate proof-bearing finite route was checked in Abdollahi--Azad--Mohammadi Hassanabadi--Zarrin, *Algebra Colloq.* 17 (2010), 611--620, DOI `10.1142/S1005386710000581`, arXiv `0903.0692`: Theorem 1.1, author-manuscript p. 2 and proved on pp. 4--9, classifies all finite nonsoluble groups with clique number at most 57, and every listed family begins at clique number 21.  Therefore \(\nu=7\) implies solubility, but neither source supplies \(a(G)\le10\).
 
 [CITED-VERIFIED] Darafsheh--Ghorbani--Prajapati (2015), official Cambridge PDF, gives only conditional central-quotient pruning.  Theorems 1.2--1.3, p. 381, with proofs pp. 387--388, make groups with \(|G/Z(G)|=p^2\) or \(p^3\) AC when \(p\) is the least prime divisor, and compute the clique number.  Remark 5.2, p. 388, specializes the \(p^3\) formula for \(p\)-groups.  Lemma 2.4, p. 382, makes the proper centralizers an abelian partition/cover, hence \(a=\nu\), only inside the AC class.  At \(\nu=7\) this fully identifies the order-eight \(p\)-group slice but leaves the larger central quotients under the bound 81, including the non-AC repository example.
 
@@ -338,6 +338,20 @@ seven affine groups.  If \(R=1\), a
 rank-free exact-pairing argument leaves eight center quotients of order at
 most 42; the existing bounded certificate then proves \(a(G)\le10\).
 The exact unresolved task is to control \(R\ne1\).
+
+[PROVED] LIT-085 is the repository's exhaustive cutoff-eight partition.
+The finite-model step is self-contained, and the solvability bridge uses the
+already primary-verified Abdollahi--Azad--Mohammadi Hassanabadi--Zarrin
+Theorem 1.1, author-manuscript p. 2 with proof on pp. 4--9.  That bridge is
+finite-simple-group-classification-dependent: the source's Theorem 2.3
+invokes Blyth--Robinson Proposition 4 and explicitly uses Thompson's
+minimal-simple classification.  The remaining nilpotent argument is
+self-contained: a central extension of a nilpotent group is nilpotent,
+two nonabelian Sylow factors give a Cartesian nine-clique, central abelian
+Sylow factors do not change either invariant, and the verified finite
+\(p\)-group branches leave only \(p=2\).  Hence the binary all-nonmaximal
+nontrivial-intersection branch and the solvable nonnilpotent
+nontrivial-core branch are the only unresolved cutoff-eight cases.
 
 [UNVERIFIED] The accessible primary cutoff-eight sources audited through
 2026-08-14 contain no complete classification of all finite \(p\)-groups,

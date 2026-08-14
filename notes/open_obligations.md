@@ -51,4 +51,7 @@
   branch with nontrivial maximalization core remain open.  In the latter,
   `notes/h8_nonnilpotent_reduction.md` proves that the core-free case has
   \(a(G)\le10\) and identifies the exact abelian-or-affine Frattini-free
-  skeleton of the residual quotient.
+  skeleton of the residual quotient.  [PROVED] These two branches are
+  exhaustive: the verified, finite-simple-group-classification-dependent
+  solvability theorem and the nilpotent Sylow-product reduction leave no
+  semisimple or mixed-prime branch.

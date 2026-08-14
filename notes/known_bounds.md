@@ -692,6 +692,54 @@ detailed structural proof and independent audit are in
 is also written out in `proof/main.tex`, Proposition
 `prop:nonnilpotent-core`.
 
+## Exhaustiveness of the two cutoff-eight residuals
+
+### [PROVED] Every hypothetical \(a>10\) case lies in one of them
+
+Let \(G\) be arbitrary with \(\nu(G)\le8\) and \(a(G)>10\). The exact finite
+model gives a finite \(K\) with the same two invariants. Since \(h(7)=10\),
+\(\nu(K)=8\). The primary-verified finite nonsoluble classification of
+Abdollahi--Azad--Mohammadi Hassanabadi--Zarrin, Theorem 1.1 on
+author-manuscript p. 2 with proof on pp. 4--9, shows that every finite
+nonsoluble group in its
+\(\nu\le57\) range has clique number at least \(21\). This input is
+finite-simple-group-classification-dependent: the source's simple-group
+step invokes Blyth--Robinson Proposition 4 and Thompson's classification of
+finite minimal simple groups. Hence \(K\), and \(Q=K/Z(K)\), are solvable.
+
+If \(Q\) is nilpotent, then \(K\) is nilpotent: prepend \(Z(K)\) to the
+inverse images of an upper central series for \(Q\). Decompose \(K\) into
+its Sylow direct factors. Two nonabelian factors would each contain a
+three-clique \(\{x,y,xy\}\), and their Cartesian product would be a
+nine-clique. Thus exactly one Sylow factor \(P\) is nonabelian and all
+others form a central abelian factor \(A\). Restriction and extension give
+
+\[
+ K=P\times A,\qquad \nu(K)=\nu(P),\qquad a(K)=a(P).
+\]
+
+Berkovich's lower bound \(\nu(P)\ge p+1\) leaves
+\(p\in\{2,3,5,7\}\). The finite \(3\)- and \(5\)-group theorems close their
+branches, and the equality theorem at \(p=7\) gives \(a(P)=8\). Therefore a
+hypothetical \(a>10\) case has \(p=2\). Its maximum-clique centralizers are
+all nonmaximal by the maximal-member closure. After their images in
+\(P/Z(P)\) are enlarged to maximal subgroups, any retained minimal cover
+has size \(k\in\{3,5,7\}\); its maximal members are normal and their
+intersection \(D\) is the common core. If \(D=1\), then
+\(P/Z(P)\cong C_2^{k-1}\) has order at most \(64\), and the exact
+cutoff-eight certificate gives \(a(P)\le10\). Thus every such
+maximalization has \(D\ne1\).
+
+If \(Q\) is nonnilpotent, the common-core proposition above applies.
+For every choice of maximal overgroups and every retained minimal subcover,
+the case \(R=1\) gives \(a(K)\le10\); hence every hypothetical counterexample
+has \(R\ne1\).
+
+The nilpotent and nonnilpotent cases are exhaustive. Consequently the
+all-nonmaximal finite \(2\)-group branch and the solvable nonnilpotent
+common-core branch are the exact remaining cutoff-eight obligations. This
+does not resolve either nontrivial core.
+
 ## Stronger reported bounds still under audit
 
 ### [UNVERIFIED] Pyber's exponential center-index theorem

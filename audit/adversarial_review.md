@@ -352,6 +352,30 @@ Continue auditing quantifiers, finite/infinite scope, central-coset arguments, p
   precise remaining nonnilpotent obstruction; no capability converse or
   quotient-clique substitution is asserted.
 
+### Exhaustive cutoff-eight partition
+
+- [PROVED] The arbitrary-to-finite reduction preserves both invariants, and
+  the primary-verified finite nonsoluble classification forces the resulting
+  clique-eight group to be solvable.  This edge is explicitly retained as
+  finite-simple-group-classification-dependent through Blyth--Robinson
+  Proposition 4 and Thompson's minimal-simple classification.
+- [PROVED] If its center quotient is nilpotent, the finite model itself is
+  nilpotent.  The audit reconstructed the Sylow decomposition, the
+  \(3\times3\) clique from two nonabelian factors, and the preservation of
+  \((\nu,a)\) after discarding central abelian Sylow factors.  Berkovich and
+  the closed \(3\)-, \(5\)-, and \(7\)-branches therefore leave only
+  \(p=2\).
+- [PROVED] In the binary branch every maximum-clique centralizer is
+  nonmaximal.  For any chosen maximal overgroups, a minimal cover has
+  \(k\in\{3,5,7\}\); its maximal members are normal, so a trivial
+  intersection would make the center quotient \(C_2^{k-1}\) of order at
+  most \(64\), already closed by the bounded certificate.
+- [PROVED] In the nonnilpotent branch, any maximalization with trivial core
+  is closed by the preceding common-core proposition.  Hence a hypothetical
+  \(a>10\) group lies in exactly one of the two nontrivial-core residuals.
+- [UNVERIFIED] This proves exhaustion, not elimination.  Both nontrivial
+  common cores remain open and \(h(8)\) is not determined.
+
 ### Verdict
 
 - [COMPUTED] A final independent rerun of all seven cutoff-seven regression

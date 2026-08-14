@@ -146,6 +146,21 @@ here is now \(1\le n\le7\).
             +-- [PROVED] every still-open case has R nontrivial
                   +-- [UNVERIFIED] control or eliminate that residual
 
+      +-- [PROVED] exhaustive cutoff-eight residual partition
+            +-- [PROVED] exact arbitrary-to-finite commutation model
+            +-- [CITED-VERIFIED] finite nu<=8 implies solvable
+            |     +-- finite-simple-group-classification-dependent
+            +-- [PROVED] nilpotent center quotient => finite model nilpotent
+            |     +-- [PROVED] two nonabelian Sylow factors give a 3 x 3 clique
+            |     +-- [PROVED] discard central abelian Sylow factors
+            |     +-- [PROVED] finite p-group branches p=3,5,7 closed
+            |     +-- [PROVED] residual p=2 has all clique-centralizers nonmaximal
+            |           +-- [PROVED] core-free maximalization has order <=64
+            |                 +-- [COMPUTED] bounded certificate => a<=10
+            +-- [PROVED] nonnilpotent center quotient
+                  +-- [PROVED] common-core reduction above
+                        +-- [PROVED] residual R nontrivial
+
 The \(h(5)\), \(h(6)\), and \(h(7)\) branches are explicitly
 computer-assisted.  Their
 load-bearing external dependencies are the audited subgroup-cover theorems
@@ -159,9 +174,11 @@ explicitly marked small-dimensional hyperplane-cover check in the finite
 \(5\)-group cutoff-eight branch and the order-32/order-at-most-81
 certificates in the finite \(2\)-group maximal-member branch and the
 order-at-most-81 certificate in the nonnilpotent core-free branch.  The
-finite \(3\)- and \(5\)-group branches are closed, while the finite
-\(2\)-group and nonnilpotent solvable branches are sharply reduced, but these
-results do not determine \(h(8)\).
+finite \(3\)-, \(5\)-, and \(7\)-group branches are closed, while the finite
+\(2\)-group and nonnilpotent solvable branches are sharply reduced.  The
+exhaustive partition proves that they are the only remaining cutoff-eight
+branches, but does not eliminate either nontrivial core and therefore does
+not determine \(h(8)\).
 Neumann (1976) is primary-verified historical corroboration. The displayed
 subfactorial
 branch uses the proof-audited Guralnick--Maróti and Nagy--Pach--Tomon

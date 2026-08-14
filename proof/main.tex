@@ -56,7 +56,11 @@ $\nuG(P)=8$ we prove $[P:\Z(P)]\le2048$ and an odd-circuit reduction in the
 Frattini quotient; if a maximum-clique centralizer is maximal, a complete
 finite certificate sharpens this to $[P:\Z(P)]\le64$ and $\aG(P)\le10$.
 For solvable nonnilpotent center quotients, we reduce the unresolved branch
-to a nontrivial common normal core and close the core-free case.  Apart from
+to a nontrivial common normal core and close the core-free case.  A verified,
+finite-simple-group-classification-dependent solvability theorem and a
+Sylow-product argument show that this
+branch and the all-nonmaximal finite $2$-group branch exhaust the cutoff-eight
+obstructions.  Apart from
 the explicitly computer-assisted statements, the remaining structural results
 and the counterexample have computation-independent proofs. Finally,
 combining two audited published inputs gives the CFSG-dependent universal estimate
@@ -1525,6 +1529,84 @@ The exact commutator pairing need not descend through the generally
 noncentral quotient $Q\to Q/R$; controlling this common core is the precise
 remaining nonnilpotent obstruction.
 
+\begin{theorem}[Exhaustive cutoff-eight residual partition]
+\label{thm:h8-residual-partition}
+Let $G$ be an arbitrary group with $\nuG(G)\le8$ and $\aG(G)>10$.
+Then Theorem~\ref{thm:finite-model} gives a finite group $K$ with the same
+two invariants, $\nuG(K)=8$, and exactly one of the following two alternatives.
+\begin{enumerate}
+\item $Q=K/\Z(K)$ is nilpotent, and
+  $K=P\times A$ where $P$ is a finite nonabelian $2$-group and
+  $A\le\Z(K)$ is abelian.  Replacing $K$ by $P$ changes neither invariant.
+  Every centralizer belonging to every maximum eight-clique in $P$ is
+  nonmaximal.  For every such clique and every choice of maximal overgroups
+  of its centralizer images in $P/\Z(P)$, every inclusion-minimal retained
+  subcover has nontrivial intersection.
+\item The quotient $Q=K/\Z(K)$ is solvable and nonnilpotent.  For every
+  minimal maximalization in Proposition~\ref{prop:nonnilpotent-core}, the
+  associated core $R$ is nontrivial.
+\end{enumerate}
+Thus these are an exhaustive pair of residual branches, not merely two
+families left by separate partial arguments.
+\end{theorem}
+
+\begin{proof}
+Since $\aG(G)>10=h(7)$, the finite model has $\nuG(K)=8$.  Abdollahi,
+Azad, Mohammadi Hassanabadi and Zarrin classify all finite nonsoluble groups
+with clique number at most $57$; their list and proof show that every such
+group has clique number at least $21$
+\cite[Theorem~1.1, author-manuscript p.~2; proof pp.~4--9]
+{abdollahi_azad_hassanabadi_zarrin_2010}.  Hence $K$, and therefore
+$Q=K/\Z(K)$, is solvable.
+This input is finite-simple-group-classification-dependent: the cited
+paper's simple-group step invokes Blyth--Robinson Proposition~4 and
+explicitly retains Thompson's classification of finite minimal simple
+groups.
+
+Suppose first that $Q$ is nilpotent.  A central extension of a nilpotent
+group is nilpotent: the inverse images of an upper central series for $Q$,
+preceded by $\Z(K)$, form a central series for $K$.  Since $K$ is finite,
+write it as the direct product of its Sylow subgroups.  Every nonabelian
+group contains a three-clique $\{x,y,xy\}$ for suitable noncommuting $x,y$.
+If two Sylow factors of $K$ were nonabelian, the Cartesian product of a
+three-clique in each would be a nine-clique in $K$.  Thus exactly one Sylow
+factor $P$ is nonabelian; all other Sylow factors form a central abelian
+direct factor $A$, so $K=P\times A$.  Restriction to $P$ and extension by
+$A$ show
+\[
+ \nuG(K)=\nuG(P),\qquad \aG(K)=\aG(P).
+\]
+For a nonabelian finite $p$-group, Berkovich's lower bound gives
+$\nuG(P)\ge p+1$ \cite[Lemma~1.2, p.~416]{berkovich_2010_covers}; hence
+$p\in\{2,3,5,7\}$.  Theorems~\ref{thm:five-group-cutoff-eight} and
+\ref{thm:three-group-cutoff-eight} close $p=5$ and $p=3$.  For $p=7$,
+equality $\nuG(P)=p+1$ and Berkovich's equality theorem give
+$P=H\Z(P)$ with $H$ minimal nonabelian
+\cite[Theorem~2.3, pp.~419--420]{berkovich_2010_covers}.  A maximum
+eight-clique in $H$ has proper, hence abelian, centralizers in $H$; they
+cover $H$, and adjoining $\Z(P)$ gives eight abelian subgroups covering
+$P=H\Z(P)$.  Thus $\aG(P)=8$.  Therefore $p=2$.
+Proposition~\ref{prop:two-group-maximal-member} says that every
+maximum-clique centralizer is nonmaximal.
+
+Fix an arbitrary maximum eight-clique and arbitrary maximal overgroups of
+its centralizer images.  Put $Q_2=P/\Z(P)$.  Retain an
+inclusion-minimal cover of $Q_2$ of size $k$.  Maximal subgroups of a finite
+$2$-group are normal, so their intersection $D$ is already the common core.
+The hyperplane argument in Proposition~\ref{prop:two-group-cutoff-eight}
+gives $k\in\{3,5,7\}$ and
+$Q_2/D\cong C_2^{\,k-1}$.  If $D=1$, then
+$|P/\Z(P)|\le2^6=64$, and the complete cutoff-eight certificate through
+order $81$ gives $\aG(P)\le10$, a contradiction.  Thus every such minimal
+maximalization has $D\ne1$.
+
+If $Q$ is nonnilpotent, Proposition~\ref{prop:nonnilpotent-core} applies.
+For any choice of maximal overgroups and any retained minimal subcover,
+the case $R=1$ gives $\aG(K)\le10$.  Hence the assumed counterexample
+forces $R\ne1$ for every such choice.  The nilpotent and nonnilpotent cases
+are mutually exclusive and exhaustive.
+\end{proof}
+
 \section{Direct products and why they do not settle the problem}
 
 For graphs $X,Y$, their OR product $X\vee Y$ joins two product vertices
@@ -1588,13 +1670,16 @@ and an odd-circuit configuration.  Proposition~\ref{prop:two-group-maximal-membe
 closes the subbranch having a maximal maximum-clique centralizer, so only the
 all-nonmaximal binary configuration remains.  Proposition~\ref{prop:nonnilpotent-core}
 closes the core-free maximalization subbranch of the solvable nonnilpotent
-case and identifies the nontrivial common core as its exact residual.  These
-two residual branches remain open, so $h(8)$ is not determined.
+case and identifies the nontrivial common core as its exact residual.
+Theorem~\ref{thm:h8-residual-partition} proves that this and the
+all-nonmaximal finite $2$-group branch are exhaustive.  Both remain open,
+so $h(8)$ is not determined.
 The most concrete geometric subproblem is to control $\pi(q,m)$, the maximum
 partial-ovoid size in a symplectic polar space, relative to the exact cover
 number $q^m+1$.  More generally one must decide whether odd-characteristic
-scalar forms, vector-valued commutator maps, solvable groups, or semisimple
-groups can improve the efficiency achieved by the constructions above. An
+scalar forms, vector-valued commutator maps, or the two explicit solvable
+common-core residuals can improve the efficiency achieved by the
+constructions above. An
 upper bound near $2^{n/2}$ would require substantial new structure beyond
 the recurrence in Theorem~\ref{thm:recurrence} and the CFSG-dependent
 subfactorial estimate in Theorem~\ref{thm:subfactorial}.

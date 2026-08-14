@@ -211,3 +211,29 @@ Consequently, if a finite \(2\)-group \(P\) with \(\nu(P)=8\) satisfies
 \(a(P)>10\), then no centralizer belonging to any maximum eight-clique is a
 maximal subgroup of \(P\).  This leaves a single structural residual branch;
 it does not prove that the branch is empty.
+
+### [PROVED] Every residual maximalization has nontrivial intersection
+
+Fix any maximum eight-clique, enlarge its centralizer images in
+\(Q=P/Z(P)\) to arbitrary maximal overgroups, and retain any
+inclusion-minimal subcover \(M_1,\ldots,M_k\).  The hyperplane argument in
+notes/two_group_nu8.md gives \(k\in\{3,5,7\}\).  Because every maximal
+subgroup of a finite \(2\)-group is normal,
+
+\[
+ D=\bigcap_{i=1}^k M_i
+\]
+
+is already the common core.  The normal vectors of the \(k\) hyperplanes
+form a minimal odd circuit, so
+
+\[
+ Q/D\cong C_2^{\,k-1}.
+\]
+
+If \(D=1\), then \(|Q|\le2^6=64\), and the same exact cutoff-eight
+certificate used in (T2N.8) gives \(a(P)\le10\).  Therefore every
+hypothetical \(a(P)>10\) case has \(D\ne1\) for every maximum clique and
+every choice of maximal overgroups.  The binary residual is thus a
+nontrivial-common-core problem, parallel to the solvable nonnilpotent
+residual.

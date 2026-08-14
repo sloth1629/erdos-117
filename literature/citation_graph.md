@@ -367,3 +367,27 @@ are recorded in `notes/h8_nonnilpotent_reduction.md`.  The common-core
 quotient is used only for the maximal-cover skeleton; exact commutator data
 are invoked only in the core-free case.  Thus this node sharply reduces but
 does not close the solvable nonnilpotent branch or determine \(h(8)\).
+
+## Exhaustive cutoff-eight residual node
+
+[PROVED] LIT-085 connects the previously separate finite-\(p\) and
+nonnilpotent reductions.  The exact finite model preserves both invariants,
+and the primary-verified finite nonsoluble classification forces that model
+to be solvable at clique cutoff eight.  This edge is
+finite-simple-group-classification-dependent through Blyth--Robinson
+Proposition 4 and Thompson's minimal-simple classification.  If its center
+quotient is nilpotent,
+then the model itself is nilpotent.  Two nonabelian Sylow factors would give
+a Cartesian \(3\times3\) nine-clique, so central abelian Sylow factors may
+be discarded and exactly one finite \(p\)-group remains.  The closed
+\(p=3,5,7\) branches and the maximal-member theorem leave only the
+all-nonmaximal \(p=2\) case.  A core-free minimal maximalization there has
+elementary abelian quotient of order at most \(64\), so the bounded
+certificate closes it.
+
+[PROVED] If the center quotient is nonnilpotent, LIT-084 applies and a
+hypothetical \(a>10\) case has nontrivial common core for every minimal
+maximalization.  Hence the binary all-nonmaximal nontrivial-intersection
+branch and the solvable nonnilpotent nontrivial-core branch are exhaustive.
+[UNVERIFIED] Neither common core has been eliminated, so this node does not
+determine \(h(8)\).

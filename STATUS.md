@@ -95,6 +95,16 @@ gives 9 at seven.
     \(H\) is one of seven explicit affine groups.  Controlling
     \(R\ne1\), together with the all-nonmaximal binary branch, remains open,
     so the unrestricted value \(h(8)\) is not determined.
+14. [PROVED] The two residuals in items 12--13 are exhaustive for arbitrary
+    groups at cutoff eight.  The exact finite model is solvable by the
+    primary-verified, finite-simple-group-classification-dependent
+    nonsoluble classification.  A nilpotent center
+    quotient makes the finite model nilpotent; two nonabelian Sylow factors
+    would give a \(3\times3\) nine-clique, so central abelian factors may be
+    discarded and the closed finite \(p\)-group branches leave only \(p=2\).
+    In that branch a core-free minimal maximalization would have quotient
+    order at most \(64\) and is already closed by the bounded certificate.
+    The nonnilpotent alternative is exactly item 13.
 
 ## Computation status
 
@@ -172,10 +182,10 @@ gives 9 at seven.
 4. Establish existence and value of an asymptotic exponential rate, or
    formulate the correct limsup/liminf answer.
 5. Determine \(h(8)\) and the next exact values.  At cutoff eight the finite
-   \(3\)- and \(5\)-group branches are closed, while the finite \(2\)-group
-   branch is reduced to an all-nonmaximal centralizer configuration, and the
-   solvable nonnilpotent branch is reduced to a nontrivial maximalization
-   core.  These two residual branches remain open.
+   \(3\)-, \(5\)-, and \(7\)-group branches are closed.  The proved exhaustive
+   partition leaves exactly an all-nonmaximal finite \(2\)-group branch with
+   nontrivial maximalization intersection and a solvable nonnilpotent branch
+   with nontrivial maximalization core.
 6. Acquire and audit Pyber's full primary proof for historical completeness.
 
 ## Environment

@@ -88,9 +88,18 @@ No complete resolution is claimed. The strongest repository results are:
   by \(R\) is abelian or has form \(C\times H\), where \(C\) is central and
   is a direct product of elementary abelian \(2\)-, \(3\)-, \(5\)-, and
   \(7\)-components, and \(H\) is one of seven explicit affine groups.
-- [UNVERIFIED] The remaining all-nonmaximal binary branch and the
-  nontrivial-common-core solvable branch
-  remain open, so \(h(8)\) is not determined.
+- [PROVED] These are exhaustive at cutoff eight.  The exact finite model is
+  solvable by the verified, finite-simple-group-classification-dependent
+  finite nonsoluble classification.  If its center
+  quotient is nilpotent, a Sylow direct-product argument reduces it without
+  loss to one finite \(p\)-group, and the closed \(3\)-, \(5\)-, and
+  \(7\)-branches leave only \(p=2\).  If the quotient is nonnilpotent, the
+  common-core proposition applies.  In the binary residual, every minimal
+  maximalization also has nontrivial intersection; otherwise its quotient
+  has order at most \(64\) and the bounded certificate closes it.
+- [UNVERIFIED] Eliminating the all-nonmaximal binary common core or the
+  nonnilpotent solvable common core remains open, so \(h(8)\) is not
+  determined.
 - [COMPUTED] Exact, independently verified certificates cover explicit
   families, every SmallGroup of orders 8, 32, and 64, all order-128 groups
   surviving a rigorous \(\nu\le6\) prefilter, all 2,986 exterior-square
