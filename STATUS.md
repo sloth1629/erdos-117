@@ -147,8 +147,9 @@ semidirect Frattini branch has an exact \(5+3\) abelian cover.
 
 ## Computation status
 
-- The complete verification suite passes: 34 tests in 517.555 seconds under
-  Python 3.9.6, with the transcript saved for this milestone.
+- The complete verification suite passes: 41 tests in 735.057 seconds under
+  Python 3.9.6, from an isolated archive of commit `bbb2f41`; the transcript
+  is saved for this milestone.
 - Both optimized graph algorithms agree with brute force on all 33,868
   labeled graphs with at most six vertices.
 - All SmallGroups of orders 8, 32, and 64 were exported by GAP 4.16.0 /

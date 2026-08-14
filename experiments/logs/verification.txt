@@ -1,7 +1,8 @@
 Python 3.9.6
-COMMAND: PYTHONPYCACHEPREFIX=/tmp/erdos117-h8-exact-release-pycache python3 -m unittest discover -s src/verification -p 'test_*.py' -v
-..................................
+SNAPSHOT: bbb2f41
+COMMAND: PYTHONPYCACHEPREFIX=/tmp/e117-integration-pycache /usr/bin/python3 -m unittest discover -s src/verification -p 'test_*.py' -v
+.........................................
 ----------------------------------------------------------------------
-Ran 34 tests in 517.555s
+Ran 41 tests in 735.057s
 
 OK
