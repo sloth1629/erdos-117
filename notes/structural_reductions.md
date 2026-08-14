@@ -904,6 +904,146 @@ d_2=3\quad\Longrightarrow\quad C_G\bigl(\pi^{-1}(A)\bigr)
 \tag{SR.12f}
 \]
 
+In fact, the rank-three case has a finite normal form. Assume
+\(d_2=3\), put \(H=\pi^{-1}(A)\), and set \(C=C_G(H)\). Thus \(H\) and
+\(C\) are abelian and \(H\leq C\). Moreover,
+\(C_G(C)\leq C_G(H)=C\), while abelianness gives the reverse containment;
+hence \(C_G(C)=C\). Define the evaluation homomorphism
+
+\[
+\tau:G\longrightarrow\operatorname{Hom}_{\mathbf F_2}(A,W),
+\qquad \tau(g)=T_{gZ(G)}.
+\]
+
+Its kernel is exactly \(C\), so \(C\) is normal and
+\(G/C\cong\mathcal M:=\tau(G)\) is elementary abelian. The common kernel
+of the linear space \(\mathcal M\) is zero by (SR.2). Every member of
+\(\mathcal M\) has rank at most two. Indeed, a rank-three \(T_q\) has
+zero kernel on \(A\). A lift of \(q\) then has centralizer exactly
+\(Z(G)\) in \(H\), so the charged-chain construction with this single
+index-eight block attached to its one-vertex seed would give a nine-clique.
+
+We claim that \(\mathcal M\) contains no rank-two map. First observe that
+
+\[
+q s\ne s q
+\quad\Longrightarrow\quad
+2^{\operatorname{rank}T_q}
++2^{\operatorname{rank}T_s}
++2^{\operatorname{rank}(T_q+T_s)}\leq8.
+\tag{SR.12g}
+\]
+
+For the three pairwise noncommuting quotient elements \(q,s,qs\), take
+one representative from every kernel coset in each of the three
+\(A\)-fibers. Equation (SR.3) makes each selected part a clique, and
+different parts are completely joined because their images already fail
+to commute in \(Q\). This proves (SR.12g).
+
+Suppose \(T=T_q\) has rank two and put \(K=\ker T\). If \(s\) does not
+commute with \(q\), (SR.12g) forces both \(S=T_s\) and \(T+S\) to have
+rank one. It follows that \(S(K)=0\): otherwise \(S(K)\) is contained in
+the one-dimensional images of both \(S\) and \(T+S\), forcing the image
+of their sum \(T\) to be one-dimensional. By (SR.2), choose \(d\in Q\)
+with \(T_d(K)\ne0\). The preceding implication says that \(d\) commutes
+with \(q\). If any \(s\) failed to commute with \(q\), then \(sd\) would
+also lie outside the subgroup \(C_Q(q)\), while both \(T_s\) and
+\(T_{sd}=T_s+T_d\) would annihilate \(K\), a contradiction. Hence every
+rank-two evaluation represents a central element of \(Q\).
+
+Let \(\mathcal Z=\tau(Z(Q))\), where \(\tau\) is viewed as a map on
+\(Q\), and suppose that \(T\in\mathcal Z\) has rank two. If
+\(N=\ker(\tau:Q\to\mathcal M)=C/Z(G)\), then \(qn\) has the same
+rank-two evaluation as \(q\) for every \(n\in N\). Thus both \(q\) and
+\(qn\) are central, so \(N\leq Z(Q)\). Consequently
+
+\[
+\tau^{-1}(\mathcal Z)=Z(Q),
+\qquad Q/Z(Q)\cong\mathcal M/\mathcal Z.
+\]
+
+The latter elementary abelian quotient has dimension at least two,
+because a central quotient of a nonabelian group cannot be cyclic. Choose
+\(S,R\in\mathcal M\) independent modulo \(\mathcal Z\). All six maps
+
+\[
+S,\ S+T,\ R,\ R+T,\ S+R,\ S+R+T
+\]
+
+lie outside \(\mathcal Z\), and therefore have rank one. Since \(T\) has
+rank two, choose independent image vectors \(e_1,e_2\) and independent
+functionals \(f_1,f_2\) so that
+
+\[
+S=e_1\otimes f_1,\qquad S+T=e_2\otimes f_2,\qquad
+T=e_1\otimes f_1+e_2\otimes f_2.
+\]
+
+Write \(R=w\otimes\theta\). The condition
+\(\operatorname{rank}(R+T)=1\) says that the image lines of \(R\) and
+\(R+T\), and likewise their defining functional lines, span the two
+corresponding spaces for \(T\). The determinant of the resulting
+two-by-two matrix therefore gives
+
+\[
+w=\alpha e_1+\beta e_2,\qquad
+\theta=\gamma f_1+\delta f_2,\qquad
+\alpha\gamma+\beta\delta=1.
+\]
+
+The two other rank-one sums force, respectively,
+
+\[
+(w=e_1\ \text{or}\ \theta=f_1),
+\qquad
+(w=e_2\ \text{or}\ \theta=f_2).
+\]
+
+The four resulting combinations are impossible: either two independent
+vectors or functionals would be equal, or the displayed scalar
+\(\alpha\gamma+\beta\delta\) would be zero. This contradiction proves
+that every map in \(\mathcal M\) has rank at most one.
+
+The rank-one linear-space dichotomy proved above (SR.6) now applies.
+The common-kernel alternative contradicts (SR.2), so all images lie in
+one fixed line \(L\leq W\). Since \(\dim A=3\), zero common kernel then
+forces
+
+\[
+\mathcal M=\operatorname{Hom}_{\mathbf F_2}(A,L)\cong A^*,
+\qquad [G:C]=8.
+\tag{SR.12h}
+\]
+
+It remains to determine \([C:Z(G)]\). The charged-chain proof extends
+verbatim from a second-center layer to this metabelian setting: \(C\) is
+normal and abelian, \(G/C\) is abelian, and hence
+\(G'\leq C\) and \([C,G']=1\). Starting with a singleton in
+\(C_G(C)=C\), take a centralizer chain from \(C\) down to \(Z(G)\).
+If its successive indices are the integers \(q_i\geq2\), the same
+block-replacement induction gives
+
+\[
+1+\sum_iq_i\leq8,
+\qquad [C:Z(G)]=\prod_iq_i.
+\]
+
+The largest product of integers at least two whose sum is at most seven
+is twelve. Since \(H/Z(G)=A\) has order eight and \(H\leq C\), it follows
+that \([C:Z(G)]=8\) and \(C=H\). Together with (SR.12h), this proves the
+normal form
+
+\[
+C_G(H)=H,\qquad H/Z(G)\cong C_2^3,\qquad G/H\cong C_2^3,
+\qquad |Q|=64.
+\tag{SR.12i}
+\]
+
+Moreover, the pairing \(b:(H/Z(G))\times(G/H)\to L\cong C_2\) is
+perfect, and \(Q\) is a nonabelian group of class at most two. No claim
+that the remaining class-three central cocycle can be removed by a global
+change of lifts is needed here.
+
 The central-exponent restriction gives \(\exp Z(Q)_2\leq4\). Therefore
 \(Z(Q)_2\cong C_4^u\times C_2^v\), with \(u+v=d_2\), and
 
@@ -999,14 +1139,21 @@ lemma, this finite stem group has the same \((\nu,a)\) and an isomorphic
 central quotient.  The independent finite commutation-model theorem above
 remains useful because it avoids isoclinism theory entirely.
 
-### [UNVERIFIED] Quantitative BFC citation obligation
+### [CITED-VERIFIED] Quantitative BFC theorem
 
-The exact quantitative form and primary-source hypotheses of the BFC theorem
-“uniformly finite conjugacy classes imply finite derived subgroup” have not
-been checked here and are not used above. The needed uniform conjugacy-class
-bound and the exact finite commutation model are proved directly in this
-note. Finite central factor, by contrast, is covered by the verified
-Hall--Wiegold result in the preceding paragraph.
+Guralnick--Maróti (2011), Theorem 1.8, was checked in the proof-bearing
+primary article.  Every \(b\)-BFC group with \(b>1\) satisfies
+
+\[
+|G'|<b^{(7+\log_2b)/2}.
+\]
+
+The source explicitly retains a CFSG dependency through Segal--Shalev.
+Together with the published Nagy--Pach--Tomon abelian coset-cover theorem,
+this input yields the CFSG-dependent bound
+\([G:Z(G)]\le2^{O(\nu(G)\log\log\nu(G))}\).  The complete bridge and the
+small-parameter normalization are in `notes/subfactorial_upper.md`; the
+withdrawn fixed-base coset-cover preprint is not used.
 
 ## Adversarial checks on tempting reductions
 

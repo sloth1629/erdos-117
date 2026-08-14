@@ -16,6 +16,29 @@ independent audit recorded below.
 
 Continue auditing quantifiers, finite/infinite scope, central-coset arguments, product claims, source dependence, and computational certificates.
 
+## Independent audit of the subfactorial upper bound (2026-08-14)
+
+- [CITED-VERIFIED] Guralnick--Maróti, Theorem 1.8, was read in the
+  proof-bearing 2011 article.  It applies to arbitrary \(b\)-BFC groups and
+  gives \(|G'|<b^{(7+\log_2b)/2}\); the CFSG dependence is explicit.
+- [CITED-VERIFIED] Nagy--Pach--Tomon, Theorem 1.11 and its Section 8 proof
+  in the 2026 Transactions article, were reconstructed through the
+  elementary-abelian and finite-abelian reductions.  The last witness in
+  Lemma 5.4 has a harmless subscript typo, and the final
+  \(\log\log p\) notation needs a harmless normalization at \(p=2,3\).
+  Neither affects the stated \(\exp(O(k\log\log k))\) theorem.
+- [PROVED] The repository bridge was independently checked.  With
+  \(D=G'\), \(C=C_G(D)\), and \(A=Z(C)\), one has
+  \(G/C\hookrightarrow\operatorname{Aut}(D)\), \(C'\le A\), and an
+  irredundant centralizer cover of the abelian group \(C/A\).  The map
+  \(a\mapsto([a,g_1],\ldots,[a,g_t])\) has kernel exactly \(Z(G)\).
+  These give
+  \([G:Z(G)]\le2^{O(\nu(G)\log\log\nu(G))}\), and the exact finite model
+  transfers the result to arbitrary groups.
+- [DISPROVED] The argument does not use the distinct withdrawn
+  arXiv:2205.03389 theorem and does not yield a fixed-base exponential
+  bound.  Any such interpretation is rejected.
+
 ## Independent structural audits at cutoff eight (2026-08-14)
 
 ### Binary central layer
@@ -37,6 +60,17 @@ Continue auditing quantifiers, finite/infinite scope, central-coset arguments, p
   when the full preimage of this binary layer has abelian centralizer.  The
   exponent-four restriction consequently gives
   \(|Z(G/Z(G))_2|\le2^6\).
+- [PROVED] The rank-three equality case was independently reconstructed as
+  well.  The exact evaluation space has no rank-two member: weighted
+  three-fiber cliques first force any such member to represent a central
+  quotient element, and a six-map rank-one tensor argument then gives a
+  contradiction.  The evaluation space is therefore the scalar dual of
+  the binary layer.  A second charged chain in its abelian self-centralizing
+  kernel gives the exact normal form
+  \(H/Z(G)\cong G/H\cong C_2^3\), with \(H=C_G(H)\), and hence
+  \(|G/Z(G)|=64\).  This conclusion does not use the unproved possibility
+  of absorbing the remaining class-three central cocycle by a global
+  change of lifts.
 - [UNVERIFIED] As a redundant scratch stress check rather than a proof
   dependency, all
   nonzero three-space alternating maps with codomain dimensions one, two,
@@ -212,8 +246,10 @@ Continue auditing quantifiers, finite/infinite scope, central-coset arguments, p
   certificates, ID 192, the selected-cover zero rows, the global partition,
   all eleven
   generic-dual searches, and the ID-261 affine reconstruction.  After the
-  final serialization-only normalization, the complete 25-test suite was
-  rerun on the release worktree and passed in 211.839 seconds.
+  final serialization-only normalization, the then-complete 25-test suite
+  passed in 211.839 seconds.  The later release worktree, including the
+  cutoff-eight and local-counterexample additions, passed all 31 tests in
+  400.418 seconds.
 - [PROVED] Subject to the explicitly identified [CITED-VERIFIED]
   \(f(7)=81\) input and the exact [COMPUTED] certificates above, the case
   split proves \(a(G)\le10\) for every arbitrary group with
