@@ -571,3 +571,38 @@ command and result are preserved in `experiments/logs/h8_verification.txt`.
 groups form a literature-motivated feasibility list, not a complete list of
 center quotients possible at cutoff eight. No global conclusion about
 \(h(8)\) is drawn from these computations.
+
+## Local centralizer-index counterexample
+
+[DISPROVED] The proposed local inequality
+
+\[
+[G:C_G(x)]\leq\nu(G)-\nu(C_G(x))
+\]
+
+fails for `SmallGroup(48,15)`, with GAP structure description
+`(C3 x D8) : C2`, and the order-two element `AsList(G)[2]=f1`. The complete
+GAP table and independent Python reconstruction give an abelian centralizer
+of order four and index 12. Exact clique and coloring witnesses give
+\((\nu(G),a(G))=(12,12)\), while the centralizer has
+\((\nu(C_G(x)),a(C_G(x)))=(1,1)\). Hence the displayed sides are 12 and 11.
+
+[COMPUTED] The GAP script, raw TSV, analyzed JSON, concise Python output, GAP
+progress log, verification transcript, Python producer, regression test, and
+explanatory note have SHA-256 values respectively
+`ec13967916aa1c3c0d5b602f207a76b51e0839b279052030a54d88b8fda4a4ea`,
+`d3826b1d038f91c5415a5b454495bb8f52648590e542a67cacd6ea2285feac8e`,
+`a071e4d6ace21968b23a60487093ad76dc5c00678743c7f94bab4147d825ef9b`,
+`43f983a19a49032f934b0ccc5fce02dcab93ed70856d513859d0c63e4d674267`,
+`737b8871fb0a71164bd7f219bdd4e645b9451574dba67f00a4495a350a835861`,
+`48f23aed6cd229b26613c5c661c7402d6b31b9d2b2e3162ee9d81313c019d4ad`,
+`e437d1b95c8999d59450785447423519ab09ce70defd681be826cf3ef39db06e`,
+`35385c634cbd4ab06fa5c5c5c82971a04fafb32b8c13eb56cff7f40b29b83459`,
+and
+`7e6718ba7c720a6b29bdfc6c3f6d90d31e1a2e42c77a9aec9e6b882bdeec4f35`.
+The exact regeneration and test commands are indexed in
+`experiments/configs/README.md` and `src/python/README.md`; the saved test
+passed in 0.028 seconds.
+
+[UNVERIFIED] This certificate establishes the stated counterexample only. It
+does not establish that order 48 is the least possible counterexample order.

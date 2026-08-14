@@ -265,6 +265,72 @@ this supremum is a finite integer. A bounded nonempty set of integers attains
 its supremum; applying the finite-model theorem if necessary shows that
 \(h(n)\) is attained by a finite group.
 
+## Central fibers in an exact center quotient
+
+### [PROVED] Prime-order central fiber lemma
+
+Let \(Q=G/Z(G)\) be nonabelian, and suppose that
+\(c\in Z(Q)\) has prime order \(p\). Then
+
+\[
+\nu(G)\geq p+2.
+\]
+
+**Proof.** Let \(\pi:G\to Q\) be the quotient map. Choose a lift
+\(\widetilde c\) of \(c\). For \(q\in Q\), choose any lift
+\(\widetilde q\) and define
+
+\[
+\phi_c(q)=[\widetilde c,\widetilde q].
+\]
+
+Because \(c\in Z(Q)\), the displayed commutator lies in \(Z(G)\).
+Multiplying either lift by an element of \(Z(G)\) does not change it, so
+\(\phi_c\) is well-defined. The centrality of all its values makes the
+usual commutator identities multiplicative without conjugation terms;
+hence \(\phi_c:Q\to Z(G)\) is a homomorphism. It is nontrivial. Otherwise
+\(\widetilde c\) would commute with a lift of every element of \(Q\), as
+well as with the kernel \(Z(G)\), and would itself lie in \(Z(G)\). This
+would give \(c=1\), contrary to the choice of \(c\).
+
+Put \(K=\ker\phi_c\). There is a noncentral element \(q\in Q\setminus K\).
+Indeed, if every element outside \(K\) were central, choose
+\(z\in Q\setminus K\). For every \(k\in K\), the element \(zk\) also lies
+outside \(K\), so both \(z\) and \(zk\) would be central. It would follow
+that \(k=z^{-1}(zk)\) is central. Thus \(K\leq Z(Q)\), while the assumed
+containment \(Q\setminus K\subseteq Z(Q)\) would make all of \(Q\)
+abelian, a contradiction.
+
+Choose \(r\in Q\) with \(qr\ne rq\), and choose lifts
+\(\widetilde q,\widetilde r\). For \(0\leq i<p\), put
+
+\[
+y_i=\widetilde c^{\,i}\widetilde q.
+\]
+
+The \(p\) images \(c^iq\) are distinct. Since \(\phi_c(q)\ne1\), and its
+order divides \(p\), it has order exactly \(p\). Central commutator
+calculus gives, for \(i\ne j\),
+
+\[
+[y_i,y_j]=\phi_c(q)^{\,i-j}\ne1.
+\]
+
+Thus the \(y_i\) are pairwise noncommuting. In \(Q\), the three elements
+\(q,r,qr\) are pairwise noncommuting. Consequently arbitrary lifts of
+\(r\) and \(qr\) fail to commute with one another and with every \(y_i\):
+for the cross pairs this is already detected by their images in \(Q\).
+These \(p+2\) elements form a noncommuting set in \(G\). \(\square\)
+
+### [PROVED] Cutoff-eight central-prime restriction
+
+If \(Q=G/Z(G)\) is nonabelian and \(\nu(G)\leq8\), every prime-order
+element of \(Z(Q)\) has order in \(\{2,3,5\}\). In particular,
+\(Z(Q)\) has no element of order \(7\).
+
+This is immediate from the prime-order central fiber lemma:
+\(p+2\leq8\), and the only primes at most six are \(2,3,5\).
+
 ## Isoclinism and stem groups
 
 ### [PROVED] Isoclinism preserves exactly the two invariants

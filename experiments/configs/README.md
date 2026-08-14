@@ -66,6 +66,13 @@ Version all search parameters and solver settings here.
   normal exterior kernels for the single quotient `SmallGroup(108,41)`. It
   records every full adjacency together with either a nonfaithful radical or
   a nine-clique witness. It makes no global claim about \(h(8)\).
+- `h8_local_inequality_counterexample.g`: `[DISPROVED]` single-group
+  complete multiplication-table export for the proposed inequality
+  \([G:C_G(x)]\leq\nu(G)-\nu(C_G(x))\). It selects `AsList(G)[2]` in
+  `SmallGroup(48,15)` and exports its complete centralizer data. The script
+  SHA-256 is
+  `ec13967916aa1c3c0d5b602f207a76b51e0839b279052030a54d88b8fda4a4ea`;
+  it makes no minimal-counterexample claim.
 
 For a bounded cutoff-seven batch, set the GAP variables and then run the
 generic analyzer. For example, the independently audited 37--63 batch is:
@@ -95,3 +102,13 @@ work/gap-4.16.0/gap -q \
 `[UNVERIFIED]` These two configurations dispose only of the three named
 post-81 candidates; they do not prove that those candidates exhaust the
 possible center quotients at clique cutoff eight.
+
+The local-inequality counterexample export is regenerated separately by:
+
+```bash
+work/gap-4.16.0/gap -q \
+  -c 'ERDOS117_OUTPUT:="experiments/logs/h8_local_inequality_counterexample.tsv";; ERDOS117_STDOUT_LOG:="experiments/logs/h8_local_inequality_counterexample_gap.stdout.txt";; Read("experiments/configs/h8_local_inequality_counterexample.g");'
+```
+
+`[UNVERIFIED]` This command covers only the displayed group and element; it
+does not verify that order 48 is the least possible counterexample order.

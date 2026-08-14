@@ -1,0 +1,11 @@
+[COMPUTED] saved local-inequality counterexample verification transcript
+
+Command:
+PYTHONPYCACHEPREFIX=/tmp/erdos117-h8-local-test-pycache python3 -m unittest src.verification.test_h8_local_inequality_counterexample -v
+
+test_saved_counterexample (src.verification.test_h8_local_inequality_counterexample.H8LocalInequalityCounterexampleTests) ... ok
+
+----------------------------------------------------------------------
+Ran 1 test in 0.028s
+
+OK

@@ -1,0 +1,1 @@
+SmallGroup(48,15) target_serial=2 target=f1 centralizer_order=4 centralizer_index=12 centralizer_abelian=true

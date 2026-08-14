@@ -118,6 +118,25 @@ Store reproducible text logs here; large or licensed artifacts must not be commi
   `d7b5cb95e07bab5286131316d76d258a3cfd668dee8e1009632f868f094f316e`.
 - `h8_verification.txt`: `[COMPUTED]` focused saved-record tests and the full
   28-test discovery run, including exact commands and timings.
+- `h8_local_inequality_counterexample.{tsv,json}` and its stdout,
+  GAP-transcript, and verification files: `[DISPROVED]` exact
+  `SmallGroup(48,15)` counterexample to
+  \([G:C_G(x)]\leq\nu(G)-\nu(C_G(x))\). The record contains the complete
+  multiplication table, independently reconstructed centralizer, exact
+  12-clique, and proper 12-coloring. `[UNVERIFIED]` It makes no least-order
+  or minimal-counterexample claim. The complete current SHA-256 manifest is:
+
+  ```text
+  ec13967916aa1c3c0d5b602f207a76b51e0839b279052030a54d88b8fda4a4ea  experiments/configs/h8_local_inequality_counterexample.g
+  d3826b1d038f91c5415a5b454495bb8f52648590e542a67cacd6ea2285feac8e  experiments/logs/h8_local_inequality_counterexample.tsv
+  a071e4d6ace21968b23a60487093ad76dc5c00678743c7f94bab4147d825ef9b  experiments/logs/h8_local_inequality_counterexample.json
+  43f983a19a49032f934b0ccc5fce02dcab93ed70856d513859d0c63e4d674267  experiments/logs/h8_local_inequality_counterexample.stdout.txt
+  737b8871fb0a71164bd7f219bdd4e645b9451574dba67f00a4495a350a835861  experiments/logs/h8_local_inequality_counterexample_gap.stdout.txt
+  48f23aed6cd229b26613c5c661c7402d6b31b9d2b2e3162ee9d81313c019d4ad  experiments/logs/h8_local_inequality_counterexample_verification.txt
+  e437d1b95c8999d59450785447423519ab09ce70defd681be826cf3ef39db06e  src/python/analyze_h8_local_inequality_counterexample.py
+  35385c634cbd4ab06fa5c5c5c82971a04fafb32b8c13eb56cff7f40b29b83459  src/verification/test_h8_local_inequality_counterexample.py
+  7e6718ba7c720a6b29bdfc6c3f6d90d31e1a2e42c77a9aec9e6b882bdeec4f35  notes/h8_local_inequality_counterexample.md
+  ```
 
 The unit suite checks that the five disjoint families--660 ordinary scans,
 two delegated cases, 62 exterior-zero exclusions, eleven generic dual cases,

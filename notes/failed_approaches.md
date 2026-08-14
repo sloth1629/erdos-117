@@ -98,3 +98,26 @@ displayed witness extension, a \((p+1)\)-clique in \(E_p\) and a four-clique
 in \(S_3\) have Cartesian product a \(4(p+1)\)-clique in \(E_p\times S_3\).
 This is only the general OR-product lower bound obtained by multiplying two
 explicit cliques, not a claim of clique-number multiplicativity.
+
+## A local centralizer-index drop
+
+[DISPROVED] The tempting inequality
+
+\[
+[G:C_G(x)]\leq \nu(G)-\nu(C_G(x))
+\]
+
+does not hold in general.  The canonical complete-table certificate in
+`notes/h8_local_inequality_counterexample.md` takes
+\(G=\operatorname{SmallGroup}(48,15)\) and an involution \(x\) whose
+centralizer is abelian of order four.  It verifies
+
+\[
+\nu(G)=12,\qquad \nu(C_G(x))=1,
+\qquad [G:C_G(x)]=12>11.
+\]
+
+Reusable lesson: a centralizer chain cannot obtain a multiplicative
+center-index bound by charging the whole index at a step to the decrease in
+noncommuting clique number.  Any replacement needs additional hypotheses or
+a different local quantity.  No minimal-counterexample claim is made.

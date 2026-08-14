@@ -343,3 +343,32 @@ python3 -m unittest src.verification.test_h8_bounded_cutoff -v
 `[COMPUTED]` These commands certify the stated bounded slice and the three
 individual post-81 dispositions only. `[UNVERIFIED]` They do not give a
 global upper bound for \(h(8)\) or a complete post-81 quotient inventory.
+
+## Local centralizer-index counterexample
+
+`analyze_h8_local_inequality_counterexample.py` reparses the complete GAP
+multiplication table for `SmallGroup(48,15)`, exhaustively checks the group
+axioms, independently reconstructs the selected element's centralizer, and
+computes exact clique/coloring certificates for both graphs. Its SHA-256 is
+`e437d1b95c8999d59450785447423519ab09ce70defd681be826cf3ef39db06e`;
+the saved regression test SHA-256 is
+`35385c634cbd4ab06fa5c5c5c82971a04fafb32b8c13eb56cff7f40b29b83459`.
+
+After running the GAP command in `experiments/configs/README.md`, regenerate
+the JSON and run its independent saved-record test with:
+
+```bash
+PYTHONPYCACHEPREFIX=/tmp/erdos117-h8-local-pycache \
+python3 src/python/analyze_h8_local_inequality_counterexample.py \
+  --input experiments/logs/h8_local_inequality_counterexample.tsv \
+  --gap-script experiments/configs/h8_local_inequality_counterexample.g \
+  --gap-stdout experiments/logs/h8_local_inequality_counterexample_gap.stdout.txt \
+  --output experiments/logs/h8_local_inequality_counterexample.json \
+  --stdout-log experiments/logs/h8_local_inequality_counterexample.stdout.txt
+PYTHONPYCACHEPREFIX=/tmp/erdos117-h8-local-test-pycache \
+python3 -m unittest src.verification.test_h8_local_inequality_counterexample -v
+```
+
+`[DISPROVED]` The certificate gives left side 12 and right side 11 for the
+proposed inequality. `[UNVERIFIED]` Neither producer nor test claims that the
+example has least possible order.
