@@ -42,7 +42,13 @@
   \([P:Z(P)]\le2048\).  Maximalizing the clique-centralizer cover also gives
   an odd circuit of size \(3\), \(5\), or \(7\) in the dual of
   \(P/\Phi(P)\), so the eight original centralizers cannot all be maximal.
-  These reductions are proved in `notes/two_group_nu8.md`.
+  If one maximum-clique centralizer is maximal, the exact cutoff-six and
+  cutoff-eight certificates further give \([P:Z(P)]\le64\) and
+  \(a(P)\le10\).  These reductions are proved in `notes/two_group_nu8.md`
+  and `notes/two_group_nu8_next.md`.
 - `[UNVERIFIED]` Determine \(h(8)\) and subsequent exact values; the
-  finite \(2\)-group classification and the nonnilpotent solvable branch
-  remain open.
+  all-nonmaximal finite \(2\)-group branch and the nonnilpotent solvable
+  branch with nontrivial maximalization core remain open.  In the latter,
+  `notes/h8_nonnilpotent_reduction.md` proves that the core-free case has
+  \(a(G)\le10\) and identifies the exact abelian-or-affine Frattini-free
+  skeleton of the residual quotient.

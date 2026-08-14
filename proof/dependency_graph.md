@@ -121,8 +121,30 @@ here is now \(1\le n\le7\).
             |           three-term Bonferroni bounds
             |           +-- [P:Z(P)] <= 2048 when nu(P)=8
             +-- [PROVED] maximalized Frattini hyperplanes contain a minimal
-                  odd circuit of size 3, 5, or 7
-                  +-- the eight clique-centralizers cannot all be maximal
+            |     odd circuit of size 3, 5, or 7
+            |     +-- the eight clique-centralizers cannot all be maximal
+            +-- [PROVED] computer-assisted maximal-member subbranch
+                  +-- center-layer amplification: q + nu(H) <= 8
+                  +-- exact cutoff-six order-32 elimination
+                  +-- [P:Z(P)] <= 64
+                  +-- cutoff-eight |Q|<=81 certificate => a(P) <= 10
+                  +-- residual: every maximum-clique centralizer nonmaximal
+
+      +-- [PROVED] solvable nonnilpotent common-core reduction
+            +-- minimal maximalization of exact centralizer cover
+            |     +-- R = core of the maximal-member intersection
+            |     +-- L=Q/R is Frattini-free
+            +-- [PROVED] private coset => every minimal normal U has |U|<=8
+            +-- [PROVED] F(L)=Soc(L) is abelian and self-centralizing
+            +-- [PROVED] abelian-normal fiber cliques
+            |     +-- seven possible noncentral affine factors
+            |     +-- at most one noncentral minimal factor
+            |     +-- L abelian or C x H
+            +-- [PROVED] if R=1, exact pairing leaves eight Q of order <=42
+            |     +-- [COMPUTED] cutoff-eight |Q|<=81 certificate
+            |           +-- a(G)<=10
+            +-- [PROVED] every still-open case has R nontrivial
+                  +-- [UNVERIFIED] control or eliminate that residual
 
 The \(h(5)\), \(h(6)\), and \(h(7)\) branches are explicitly
 computer-assisted.  Their
@@ -134,8 +156,11 @@ Theorem B (p. 292, proof pp. 299--300) of Abdollahi--Jafarian Amiri; the
 repository independently certifies every post-reduction finite case. All
 other branches displayed above are computation-independent except for the
 explicitly marked small-dimensional hyperplane-cover check in the finite
-\(5\)-group cutoff-eight branch.  The finite \(3\)- and \(5\)-group
-branches are closed and the finite \(2\)-group branch is reduced, but these
+\(5\)-group cutoff-eight branch and the order-32/order-at-most-81
+certificates in the finite \(2\)-group maximal-member branch and the
+order-at-most-81 certificate in the nonnilpotent core-free branch.  The
+finite \(3\)- and \(5\)-group branches are closed, while the finite
+\(2\)-group and nonnilpotent solvable branches are sharply reduced, but these
 results do not determine \(h(8)\).
 Neumann (1976) is primary-verified historical corroboration. The displayed
 subfactorial

@@ -53,8 +53,11 @@ finite-group theorem and a small exact hyperplane-cover check.  For finite
 $3$-groups we prove that $\nuG(P)=8$ forces $\aG(P)=8$, and that the largest
 cover number at clique cutoff eight is ten.  For finite $2$-groups with
 $\nuG(P)=8$ we prove $[P:\Z(P)]\le2048$ and an odd-circuit reduction in the
-Frattini quotient, without claiming a classification.  Apart from the
-explicitly computer-assisted statements, the remaining structural results
+Frattini quotient; if a maximum-clique centralizer is maximal, a complete
+finite certificate sharpens this to $[P:\Z(P)]\le64$ and $\aG(P)\le10$.
+For solvable nonnilpotent center quotients, we reduce the unresolved branch
+to a nontrivial common normal core and close the core-free case.  Apart from
+the explicitly computer-assisted statements, the remaining structural results
 and the counterexample have computation-independent proofs. Finally,
 combining two audited published inputs gives the CFSG-dependent universal estimate
 $h(n)\le2^{O(n\log\log n)}$; the withdrawn fixed-base coset-cover preprint
@@ -1299,6 +1302,229 @@ already cover $P$, contradicting irredundancy.
 Proposition~\ref{prop:two-group-cutoff-eight} is a finite reduction, not a
 classification of the $2$-group branch and not a determination of $h(8)$.
 
+The subbranch with a maximal clique-centralizer can be closed exactly.
+
+\begin{proposition}[Computer-assisted maximal-member closure]
+\label{prop:two-group-maximal-member}
+Let $P$ be a finite $2$-group with $\nuG(P)=8$.  If
+$H=\CG_P(x)$ is maximal for some member $x$ of a maximum clique, then
+\[
+ [P:\Z(P)]\le64
+ \qquad\text{and}\qquad
+ \aG(P)\le10.
+\]
+Consequently, if $\aG(P)>10$, every centralizer belonging to every maximum
+eight-clique is nonmaximal.
+\end{proposition}
+
+\begin{proof}
+Put $r=\nuG(H)$; Lemma~\ref{lem:drop} gives $r\le6$.  Since $H$ has index
+two, it is normal.  Set $A=\Z(H)$, choose $g\notin H$, and define
+$\delta(a)=[a,g]=a^{-1}a^g$.  Since $A$ is abelian, $\delta$ is a
+homomorphism.  The action of $g$ on $A$ is an involution, and
+\[
+ \ker\delta=C_A(g)=\Z(P).
+\]
+Hence $q=|\operatorname{im}\delta|=[A:\Z(P)]$.  Moreover $q\ge2$:
+$x\in A$ but $x\notin\Z(P)$, because $g\notin\CG_P(x)=H$.  A transversal $T$ for
+$\ker\delta$ in $A$ gives a $q$-clique $\{gt:t\in T\}$, since two such
+elements commute exactly when their $\delta$-values agree.
+
+Let $s_1,\ldots,s_r$ be a maximum clique in $H$.  For each $j$, choose
+$a_j\in A$ so that $[s_ja_j,g]=[s_j,g]\delta(a_j)\ne1$; at most one of the
+$q\ge2$ image values is forbidden.  Multiplication by $A\le\Z(H)$ preserves
+the old clique, and direct cancellation shows that every $s_ja_j$ fails to
+commute with every $gt$.  Thus $r+q\le8$.
+
+The exact cutoff-six certificate gives
+\[
+ \nuG(K)\le6\quad\Longrightarrow\quad[K:\Z(K)]\le16
+\]
+for every finite $2$-group $K$.  For $\nuG(K)\le5$ this follows from the
+lower exact cover bounds.  At six, the cover bound leaves only center
+quotient order 32 above 16; the complete exterior-square scan has no
+faithful cutoff-six candidate among all normal kernels for its 50
+non-$C_2^5$ types, while $C_2^5$ is handled by the separate nine-clique
+argument.  The exact lower-cutoff cover bounds,
+rounded to powers of two, now give the complete table
+\[
+\begin{array}{c|cc|c}
+r&[H:\Z(H)]&[\Z(H):\Z(P)]&[P:\Z(P)]\\ \hline
+1&1&4&8\\
+3&4&4&32\\
+4&8&4&64\\
+5&16&2&64\\
+6&16&2&64.
+\end{array}
+\]
+There is no $r=2$ row: an abelian group has $r=1$, while a nonabelian group
+contains a three-clique $\{u,v,uv\}$ for suitable noncommuting $u,v$.
+The final row uses the order-32 elimination; the other rows use the exact
+cover bounds at their own cutoffs.  Thus $[P:\Z(P)]\le64$.
+
+Finally, the complete cutoff-eight certificate for every exact center
+quotient of order at most 81 has maximum abelian-cover number ten.  It
+therefore gives $\aG(P)\le10$.  The final assertion follows by applying the
+same argument to any maximal member of any maximum clique.
+\end{proof}
+
+\section{A solvable nonnilpotent common-core reduction at cutoff eight}
+
+\begin{proposition}[Computer-assisted core-free closure]
+\label{prop:nonnilpotent-core}
+Let $G$ be finite with $\nuG(G)=8$, put $Q=G/\Z(G)$, and suppose that $Q$
+is solvable and nonnilpotent.  Maximalize the eight exact
+clique-centralizer images, retain a minimal irredundant maximal subcover
+$M_1,\ldots,M_k$, and set
+\[
+ D=\bigcap_{i=1}^kM_i,
+ \qquad R=\operatorname{core}_Q(D)=\bigcap_{q\in Q}D^q,
+ \qquad L=Q/R.
+\]
+Then $L$ is either abelian or
+\[
+ L=C\times H,
+\]
+where $C\le Z(L)$ is a direct product of elementary abelian
+$2$-, $3$-, $5$-, and $7$-groups and
+\[
+ H\in\{S_3,A_4,C_5{:}C_2,C_5{:}C_4,
+        C_7{:}C_2,C_7{:}C_3,C_7{:}C_6\}.
+\]
+If $R=1$, then
+\[
+ Q\in\{S_3,A_4,C_5{:}C_2,C_5{:}C_4,C_7{:}C_2,C_7{:}C_3,
+        C_7{:}C_6,C_2\times S_3\},
+\]
+and $\aG(G)\le10$.
+\end{proposition}
+
+\begin{proof}
+Let $H_i=C_G(x_i)/\Z(G)$ for a maximum clique
+$x_1,\ldots,x_8$.  These subgroups form an irredundant cover of $Q$ with
+intersection one.  The selected maximal images form an irredundant cover of
+$L$ whose intersection has trivial core.  Since the Frattini subgroup is
+normal and lies in every maximal subgroup, $\Phi(L)=1$.
+Every noncommuting set in a quotient lifts to a noncommuting set, so
+\[
+ \nuG(L)\le\nuG(Q)\le\nuG(G)=8.
+\]
+
+Let $U$ be a minimal normal subgroup of $L$.  It is elementary abelian.
+If $s$ cover members contain $U$, each of the other $k-s$ members is a
+complement to $U$.  A private point $y$ of one such member determines a
+coset $Uy$: members containing $U$ miss the coset, while every complement
+meets it in at most one point.  Therefore
+\[
+ |U|\le k-s\le8.
+\]
+Thus $|U|\in\{2,3,4,5,7,8\}$.
+
+Set $F=F(L)$.  Because $L$ is solvable and Frattini-free, its Fitting
+subgroup is the abelian socle and is self-centralizing.  Indeed, a minimal normal subgroup
+$U$ lies centrally in the relevant Sylow subgroup of $F(L)$ and has a
+complement; iterating splits $F(L)$ into minimal normal factors.  If
+$C_L(F)>F$, choose $F<N\le C_L(F)$ with $N/F$ minimal normal in $L/F$.
+Then $N/F$ is an elementary abelian $p$-group and $F\le Z(N)$.  A Sylow
+$p$-subgroup of $N$, together with the central Sylow subgroups of $F$ at
+the other primes, makes $N$ nilpotent.  This contradicts maximality of
+$F=F(L)$.
+
+For an abelian normal subgroup $V$ and an element $g$ moving it, the map
+$v\mapsto v^{-1}v^g$ shows that one coset $gV$ contains a clique of size
+$[V:C_V(g)]$.  Any moved $u\in V$ is noncommuting with every element of
+that fiber clique, so the bound strengthens to $[V:C_V(g)]+1$.  This fiber
+bound restricts every faithful irreducible action
+on a noncentral minimal normal factor.  The order-six action on $C_2^2$
+gives $S_4$, where
+\[
+ (12),(13),(14),\ (123),(124),(134),(234),\
+ (1234),(1243),(1324)
+\]
+form a ten-clique.  The $C_2^3$ case is also impossible.  Indeed, a
+solvable irreducible subgroup of $\mathrm{GL}(3,2)$ without an element of
+order seven has a minimal normal elementary abelian subgroup of order a
+power of two or three.  A normal $2$-subgroup fixes a nonzero vector, while
+a normal $3$-subgroup has order three and fixes a line; either fixed space
+is invariant, contradicting irreducibility.  Thus an order-seven element
+occurs.  A nonzero-vector stabilizer has order $24$, so that element acts
+fixed-point-freely, and the fiber bound gives a nine-clique.  In the
+displayed $S_4$ set, each $3$- or $4$-cycle has its own cyclic centralizer,
+none centralizes a displayed transposition, and the three transpositions
+are pairwise noncommuting; hence all 45 pairs are edges.
+The group $C_2$ has no nontrivial automorphism; for $C_3,C_5,C_7$, the
+automorphism group is cyclic; and for $C_2^2$, the only irreducible actions
+have order three or six.  Together with the two exclusions just proved,
+these cases leave precisely the seven displayed affine groups.  An element
+acting on two noncentral factors gives a fiber clique of size at least
+$3\cdot3=9$.  If different elements act on two different factors, their
+product acts on both, so again there is a nine-clique.  Thus at most one
+factor is noncentral.  A central minimal factor is outside $\Phi(L)$, so a
+maximal subgroup avoiding it is a direct complement; iterating splits all
+central minimal factors.  This gives the asserted form $L=C\times H$, or
+an abelian $L$.
+
+Suppose finally that $R=1$.  The exact central-extension commutator pairing
+is then still available on $Q=L$.  If $A\le\Z(Q)$ is elementary abelian,
+choose lifts to $G$ and put
+\[
+ \kappa(a,q)=[\widetilde a,\widetilde q].
+\]
+Because $a$ is central in $Q$, these commutators lie in $\Z(G)$; changing a
+lift does not change them, and the map is multiplicative in both variables.
+If $\kappa(a,q)=1$ for every $q\in Q$, then $\widetilde a\in\Z(G)$ and hence
+$a=1$.  Thus the left radical is zero.  Values coming from an element of
+order $p$ in $A$ have order dividing $p$, so the relevant part of the map is
+$\mathbf F_p$-bilinear.
+
+Let $A$ be a full central Sylow component whose prime does not divide
+$|H_{\rm ab}|$.  All cross commutators between $A$ and the complementary
+direct factor vanish, since the second variable factors through its
+abelianization and there is no matching $p$-torsion.  Exactness therefore
+makes the internal alternating pairing on $A$ radical-free.  Choose
+$a,a'$ with $\kappa(a,a')\ne1$; then $a,a',aa'$ are pairwise noncommuting.
+Their Cartesian products with a four-clique in $H$ form a twelve-clique,
+so no such component occurs.
+Write $H=V{:}B$, choose a generator $b$ of the cyclic complement, and let
+$A=C_p^r$ be a remaining full central Sylow component.  For lifts to $G$,
+write the $p$-torsion values additively and set
+\[
+ \beta(a,a')=[\widetilde a,\widetilde {a'}],
+ \qquad T_q(a)=\kappa(a,q)=[\widetilde a,\widetilde q].
+\]
+The second variable factors through the abelianization; since $V=H'$, one
+has $T_{vb}=T_b$ for every $v\in V$.  Exactness says that the common left
+kernel of $\beta(a,A)$ and $T_b(a)$ is zero.  The same-fiber formula is
+\[
+ [\widetilde a\widetilde q,\widetilde {a'}\widetilde q]
+ =\beta(a,a')+T_q(a)-T_q(a')
+\].
+If $\beta=0$, then $T_b$ is injective and each of the $|V|$ completely
+joined fibers $A(vb)$ contains a $p^r$-clique.  If $\beta\ne0$, choose a
+two-space and a scalar functional for which the scalarized restriction is
+nondegenerate; translating by the vector representing the scalarized
+$T_b$ gives a $(p+1)$-clique in every fiber.  Thus every nontrivial $A$
+gives at least $p|V|$, while rank at least two gives at least
+$(p+1)|V|$ or $p^2|V|$.
+Here the elements $vb$ are pairwise noncommuting as $v$ varies: their
+commutation would give a nonzero fixed vector for the fixed-point-free
+action of $b$ on $V$.  Hence different $A(vb)$ fibers are completely joined
+already in the quotient.
+The values $12,10,10,14,21,14$ (or $21$) eliminate every nontrivial central
+factor in the six rows after $S_3$; in the $S_3$ row only one $C_2$
+survives, since rank two gives $3\cdot3=9$.  This proves the eight-element
+list for $Q$, all of whose orders are at most $42$.
+
+The complete cutoff-eight certificate for exact center quotients of order
+at most $81$ gives $\aG(G)\le10$ for all eight cases.  This final step is the
+only computational input to the proposition.
+\end{proof}
+
+Proposition~\ref{prop:nonnilpotent-core} does not dispose of $R\ne1$.
+The exact commutator pairing need not descend through the generally
+noncentral quotient $Q\to Q/R$; controlling this common core is the precise
+remaining nonnilpotent obstruction.
+
 \section{Direct products and why they do not settle the problem}
 
 For graphs $X,Y$, their OR product $X\vee Y$ joins two product vertices
@@ -1358,9 +1584,12 @@ Theorems~\ref{thm:five-group-cutoff-eight} and
 \ref{thm:three-group-cutoff-eight} close the finite $5$- and $3$-group
 branches at cutoff eight.  Proposition~\ref{prop:two-group-cutoff-eight}
 reduces the finite $2$-group branch to center quotient order at most $2048$
-and an odd-circuit configuration, but does not classify it.  The remaining
-binary and nonnilpotent solvable cases needed to determine $h(8)$ remain
-open.
+and an odd-circuit configuration.  Proposition~\ref{prop:two-group-maximal-member}
+closes the subbranch having a maximal maximum-clique centralizer, so only the
+all-nonmaximal binary configuration remains.  Proposition~\ref{prop:nonnilpotent-core}
+closes the core-free maximalization subbranch of the solvable nonnilpotent
+case and identifies the nontrivial common core as its exact residual.  These
+two residual branches remain open, so $h(8)$ is not determined.
 The most concrete geometric subproblem is to control $\pi(q,m)$, the maximum
 partial-ovoid size in a symplectic polar space, relative to the exact cover
 number $q^m+1$.  More generally one must decide whether odd-characteristic

@@ -146,7 +146,7 @@ column.  Finally,
 
 which proves the last column and (T2N.6).
 
-### [COMPUTED] The exact binary cutoff-six scan removes the boundary
+### [PROVED] The exact binary cutoff-six scan removes the boundary
 
 If \(K\) is a finite \(2\)-group with \(\nu(K)\le6\), then
 
@@ -179,7 +179,7 @@ python3 -m unittest \
   -v
 ```
 
-### [COMPUTED] Closure of the maximal-centralizer branch
+### [PROVED] Closure of the maximal-centralizer branch
 
 Under the hypotheses of (T2N.6), one always has
 

@@ -79,9 +79,22 @@ gives 9 at seven.
     bounds using exact power-of-two arithmetic and Bonferroni counting.
     In the Frattini quotient, any minimal subcover obtained by maximalizing
     the clique-centralizers has \(3\), \(5\), or \(7\) hyperplanes whose
-    normals form an odd circuit.  This reduces but does not classify the
-    finite \(2\)-group branch; it and the nonnilpotent solvable branch remain
-    open, so the unrestricted value \(h(8)\) is not determined.
+    normals form an odd circuit.  If one maximum-clique centralizer is itself
+    maximal, an independently audited exact argument sharpens the quotient
+    bound to \(64\), and the complete cutoff-eight certificate gives
+    \(a(P)\le10\).  Thus only the all-nonmaximal binary branch remains on
+    the nilpotent side.
+13. [PROVED] The nonnilpotent solvable branch is reduced to a nontrivial
+    common core.  For a minimal maximalization of the exact eight-centralizer
+    cover, let \(R\) be the core of the maximal-member intersection.  The
+    core-free case \(R=1\) leaves eight center quotients of order at most
+    \(42\), all closed by the exact cutoff-eight certificate with
+    \(a(G)\le10\).  In general, \(Q/R\) is abelian or has form
+    \(C\times H\), where \(C\) is central and is a direct product of
+    elementary abelian \(2\)-, \(3\)-, \(5\)-, and \(7\)-components, and
+    \(H\) is one of seven explicit affine groups.  Controlling
+    \(R\ne1\), together with the all-nonmaximal binary branch, remains open,
+    so the unrestricted value \(h(8)\) is not determined.
 
 ## Computation status
 
@@ -160,8 +173,9 @@ gives 9 at seven.
    formulate the correct limsup/liminf answer.
 5. Determine \(h(8)\) and the next exact values.  At cutoff eight the finite
    \(3\)- and \(5\)-group branches are closed, while the finite \(2\)-group
-   branch is reduced to center quotient order at most \(2048\); the binary
-   classification and the nonnilpotent solvable branch remain open.
+   branch is reduced to an all-nonmaximal centralizer configuration, and the
+   solvable nonnilpotent branch is reduced to a nontrivial maximalization
+   core.  These two residual branches remain open.
 6. Acquire and audit Pyber's full primary proof for historical completeness.
 
 ## Environment

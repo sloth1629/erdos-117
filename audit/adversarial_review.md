@@ -290,9 +290,67 @@ Continue auditing quantifiers, finite/infinite scope, central-coset arguments, p
   \(5\)-group.  No finite \(5\)-group has \(\nu=8\), and the verified
   \(\nu=p+1\) and \(\nu\ne p+2\) results give exactly
   \((\nu,a)=(1,1)\) or \((6,6)\) at cutoff eight.
-- [UNVERIFIED] This audit closes only the finite \(5\)-group branch.  It
-  supplies no classification of the \(2\)- or \(3\)-group branches and no
-  global value of \(h(8)\).
+- [UNVERIFIED] This audit closes only the finite \(5\)-group branch.  The
+  finite \(3\)-group branch is closed separately below, while the finite
+  \(2\)-group branch is only reduced; no global value of \(h(8)\) follows.
+
+### Finite \(3\)-groups at cutoff eight
+
+- [PROVED] The proof in `notes/three_group_nu8.md` was independently
+  reconstructed line by line.  The maximal-centralizer amplification,
+  Berkovich equality branch, two-central-line twelve-clique, scalar
+  symplectic contradiction, and final private-cell abelian cover all pass.
+  Hence \(\nu(P)=8\) forces \(a(P)=8\), and the exact lower cutoffs show
+  that the maximum finite \(3\)-group contribution for \(\nu(P)\le8\) is
+  ten.
+- [COMPUTED] The separate 594-type SmallGroups package through order 729
+  is corroboration, not a completeness input to the all-orders theorem.
+  Its exact distribution contains no \(\nu=8\) group and its dedicated
+  producer, analyzer, witnesses, and independent verifier were reproduced.
+
+### Finite \(2\)-group maximal-member branch
+
+- [PROVED] The center-layer twist in `notes/two_group_nu8_next.md` was
+  independently reconstructed.  If \(H=C_P(x)\) is maximal for a member of
+  a maximum eight-clique, then a transversal in \(Z(H)\) joins, after
+  central twisting, to a maximum clique in \(H\), giving
+  \(\nu(H)+[Z(H):Z(P)]\le8\).
+- [COMPUTED] For the 50 non-\(C_2^5\) center-quotient types of order 32,
+  all 20,278 normal exterior-kernel rows are nonfaithful or have a saved
+  seven-clique.  The h6 exterior and cutoff-eight verifiers were rerun and
+  passed.
+- [PROVED] The omitted \(C_2^5\) type is closed by the separate theorem that
+  every exact-center alternating map has a nine-clique; its verifier also
+  passed.
+- [PROVED] Combining these inputs gives \([P:Z(P)]\le64\), and the complete
+  order-at-most-81 cutoff-eight certificate gives \(a(P)\le10\).  Therefore
+  any finite \(2\)-group \(P\) with \(\nu(P)=8\) and \(a(P)>10\) has every
+  centralizer in every maximum eight-clique nonmaximal.  This is a
+  computer-assisted closure of one subbranch, not a classification of
+  finite \(2\)-groups.
+
+### Solvable nonnilpotent common-core branch
+
+- [PROVED] The maximal-cover reduction in
+  `notes/h8_nonnilpotent_reduction.md` was independently reconstructed.
+  After quotienting by the core \(R\) of the maximal-member intersection,
+  the Frattini-free quotient has abelian self-centralizing socle, minimal
+  normal factors of order at most eight, at most one noncentral factor, and
+  is abelian or has form \(C\times H\), where \(C\) is central and is a
+  direct product of elementary abelian \(2\)-, \(3\)-, \(5\)-, and
+  \(7\)-components, and \(H\) is one of seven explicit affine groups.
+- [PROVED] When \(R=1\), the exact center-extension pairing remains
+  available.  The coprime-factor and same-fiber arguments reduce the center
+  quotient to eight groups of order at most 42.  The audit separately
+  checked the explicit \(S_4\) ten-clique and all affine-fiber inequalities.
+- [COMPUTED] The saved cutoff-eight certificate for all center quotients of
+  order at most 81 was independently rerun and passed.
+- [PROVED] Consequently, any still-open nonnilpotent case has \(R\ne1\).
+  The common-core quotient is used only for the maximal-cover skeleton; no
+  descent of the exact commutator pairing through \(Q\to Q/R\) is used.
+- [UNVERIFIED] Controlling or eliminating this nontrivial common core is the
+  precise remaining nonnilpotent obstruction; no capability converse or
+  quotient-clique substitution is asserted.
 
 ### Verdict
 

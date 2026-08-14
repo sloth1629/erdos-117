@@ -1,6 +1,6 @@
 # Citation Graph
 
-Research cut-off: 2026-08-13.  An arrow means “cites or explicitly attributes to,” not “supplies a checked proof of.”
+Research cut-off: 2026-08-14.  An arrow means “cites or explicitly attributes to,” not “supplies a checked proof of.”
 
 ## Main provenance map
 
@@ -316,6 +316,16 @@ finite 3-group cutoff theorem [PROVED]
   `-- nu=8 => a=8
         +-- exact h(6)=6 and h(7)=10
         `-- max finite-3-group contribution at cutoff eight is 10
+
+finite 2-group maximal-member branch [PROVED] (computer-assisted)
+  |-- maximal H=C_P(x) => nu(H)+[Z(H):Z(P)]<=8 [PROVED]
+  |-- finite binary K with nu(K)<=6 => [K:Z(K)]<=16 [PROVED]
+  |     |-- 50 non-C2^5 order-32 types / 20,278 rows [COMPUTED]
+  |     `-- every exact-center C2^5 form has a nine-clique [PROVED]
+  |-- [P:Z(P)]<=64 [PROVED]
+  `-- cutoff-eight |Q|<=81 certificate [COMPUTED]
+        `-- a(P)<=10 [PROVED]
+              `-- eliminate all-nonmaximal residual [UNVERIFIED]
 ```
 
 [PROVED] The Berkovich nodes imply that a nonabelian finite \(p\)-group
@@ -332,3 +342,28 @@ branch is not classified by these results.
 exact \(f(8)\), a complete solvable eight-cover classification, or a global
 upper bound for \(h(8)\).  No such complete primary edge was located in the
 2026-08-14 continuation search.
+
+## Solvable nonnilpotent common-core node
+
+```text
+exact eight-centralizer cover + minimal maximalization [PROVED]
+  `-- R=core(intersection), L=Q/R, Phi(L)=1 [PROVED]
+        |-- private cosets => every minimal normal U has |U|<=8 [PROVED]
+        |-- F(L)=Soc(L) abelian and self-centralizing [PROVED]
+        |-- abelian-normal fiber cliques [PROVED]
+        |     `-- L abelian or C x H for seven explicit affine H [PROVED]
+        `-- if R=1, exact center-extension pairing remains available
+              |-- eight possible Q, all of order <=42 [PROVED]
+              `-- cutoff-eight |Q|<=81 certificate [COMPUTED]
+                    `-- a(G)<=10 [PROVED] (computer-assisted)
+
+any still-open a(G)>10 case has R nontrivial [PROVED]
+  |-- no descent of the exact pairing through Q/R is used [PROVED]
+  `-- control or eliminate this residual [UNVERIFIED]
+```
+
+[PROVED] The full reduction and its finite/arbitrary-quotient distinctions
+are recorded in `notes/h8_nonnilpotent_reduction.md`.  The common-core
+quotient is used only for the maximal-cover skeleton; exact commutator data
+are invoked only in the core-free case.  Thus this node sharply reduces but
+does not close the solvable nonnilpotent branch or determine \(h(8)\).

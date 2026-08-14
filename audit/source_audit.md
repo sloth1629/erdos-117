@@ -321,11 +321,29 @@ then covered by the pencil intersection and at most three proper subgroup
 intersections, contradicting the elementary \(p+1\) lower bound for a
 proper-subgroup cover of a finite \(p\)-group.
 
+[PROVED] The repository now also closes the finite binary subbranch in
+which one centralizer belonging to a maximum eight-clique is maximal.
+The independently reconstructed center-layer twist gives
+\(\nu(H)+[Z(H):Z(P)]\le8\); the exact cutoff-six order-32 certificate and
+the separate \(C_2^5\) theorem then give \([P:Z(P)]\le64\), and the bounded
+cutoff-eight certificate gives \(a(P)\le10\).  This is LIT-083 and leaves
+the all-nonmaximal branch explicit.
+
+[PROVED] The repository's solvable nonnilpotent common-core reduction is
+LIT-084.  The structural part is computation-independent: after minimal
+maximalization, \(L=Q/R\) is Frattini-free and is abelian or has form
+\(C\times H\), where \(C\) is central and is a direct product of elementary
+abelian \(2\)-, \(3\)-, \(5\)-, and \(7\)-components, and \(H\) is one of
+seven affine groups.  If \(R=1\), a
+rank-free exact-pairing argument leaves eight center quotients of order at
+most 42; the existing bounded certificate then proves \(a(G)\le10\).
+The exact unresolved task is to control \(R\ne1\).
+
 [UNVERIFIED] The accessible primary cutoff-eight sources audited through
 2026-08-14 contain no complete classification of all finite \(p\)-groups,
 all solvable groups, or all finite stem/isoclinism families with
 \(\nu\le8\), and no exact general value of \(f(8)\).  Closing the finite
-finite \(3\)- and \(5\)-group branches does not support a global upper bound
+\(3\)- and \(5\)-group branches does not support a global upper bound
 for \(h(8)\).
 
 ## Exact-formula and alternate-terminology search

@@ -50,7 +50,14 @@ These boxes remain open, so no complete solution is claimed.
   factorial intersection bounds, exact order-\(8192\) and order-\(4096\)
   exclusions, the Bonferroni arithmetic, and the Frattini odd-circuit
   argument.  Its conclusion \([P:Z(P)]\le2048\) is finite-only, and the
-  binary classification remains open.
+  binary classification remains open.  The separately audited maximal-member
+  lemma closes that subbranch with \([P:Z(P)]\le64\) and \(a(P)\le10\),
+  leaving only the all-nonmaximal binary residual.
+- [x] The solvable nonnilpotent reduction keeps the exact center quotient
+  separate from its abstract quotients, proves the private-coset and
+  Frattini-free Fitting reductions, audits all seven affine factors, invokes
+  exact pairing only when the common core is trivial, and leaves the
+  nontrivial-core branch explicitly unresolved.
 - [x] Product and limit assertions audited without assuming one-shot
   multiplicativity.
 - [x] Computational witnesses, configurations, versions, hashes, and

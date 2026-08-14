@@ -438,6 +438,20 @@ The result gives no complete classification for \(p=2\).  The complete
 finite-5 and finite-3 arguments are in `notes/five_group_nu8.md` and
 `notes/three_group_nu8.md`, respectively.
 
+[PROVED] Two later repository reductions sharpen the remaining cutoff-eight
+scope without importing an external classification.  First, if a finite
+\(2\)-group has \(\nu=8\) and one centralizer belonging to a maximum clique
+is maximal, the center-layer twist and the exact cutoff-six/eight
+certificates give \([P:Z(P)]\le64\) and \(a(P)\le10\).  Hence only the
+all-nonmaximal binary configuration remains.  Second, in the solvable
+nonnilpotent branch, a minimal maximalization has a common core \(R\) such
+that \(Q/R\) is abelian or has form \(C\times H\), where \(C\) is central
+and is a direct product of elementary abelian \(2\)-, \(3\)-, \(5\)-, and
+\(7\)-components, and \(H\) is one of seven explicit affine groups.  The
+core-free case \(R=1\) leaves eight quotients of order at
+most 42 and is closed by the bounded certificate.  These are repository
+theorems LIT-083 and LIT-084, not claims found in the external literature.
+
 [UNVERIFIED] No accessible primary source located through the 2026-08-14
 continuation search gives a complete classification of all finite
 \(p\)-groups, all solvable groups, or all stem/isoclinism families with

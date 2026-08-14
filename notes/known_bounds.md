@@ -584,6 +584,114 @@ Consequently the eight clique-centralizers cannot all be maximal.
 The full proof is in notes/two_group_nu8.md.  These statements do not
 classify the finite \(2\)-group branch or determine \(h(8)\).
 
+### [PROVED] Closure when a maximum-clique centralizer is maximal
+
+Let \(P\) be a finite \(2\)-group with \(\nu(P)=8\). If
+\(H=C_P(x)\) is maximal for some member \(x\) of a maximum clique, then
+
+\[
+  [P:Z(P)]\le64
+  \qquad\text{and}\qquad
+  a(P)\le10.
+\]
+
+Indeed, put \(A=Z(H)\), choose \(g\notin H\), and set
+\(\delta(a)=[a,g]\). Then \(\ker\delta=Z(P)\). A transversal for this
+kernel gives a \([A:Z(P)]\)-clique in \(gA\); after multiplying a maximum
+clique of \(H\) by suitable elements of \(A\), the two cliques join.
+Consequently
+
+\[
+  [Z(H):Z(P)]+\nu(H)\le8.
+\]
+
+The exact cutoff-six exterior certificate shows that every finite binary
+group \(K\) with \(\nu(K)\le6\) has \([K:Z(K)]\le16\): the only possible
+larger power of two is 32. For each of the 50 non-\(C_2^5\) quotient types,
+every enumerated normal exterior-kernel graph is either nonfaithful or has a
+saved clique of size at least seven; \(C_2^5\) is handled by the separate
+nine-clique theorem. Combining the two bounds gives
+the following worst-case factors as \(r=\nu(H)\) runs through
+\(1,3,4,5,6\):
+
+\[
+\begin{array}{c|cc|c}
+r&[H:Z(H)]&[Z(H):Z(P)]&[P:Z(P)]\\ \hline
+1&1&4&8\\
+3&4&4&32\\
+4&8&4&64\\
+5&16&2&64\\
+6&16&2&64.
+\end{array}
+\]
+
+Here the rows through five use the exact lower-cutoff cover bounds, rounded
+to powers of two, while the last row uses the order-32 elimination above.
+Thus \([P:Z(P)]\le64\), and the complete cutoff-eight certificate for center
+quotients of order at most 81 gives \(a(P)\le10\).
+
+Thus a finite \(2\)-group with \(\nu(P)=8\) and \(a(P)>10\), if one exists,
+has no maximal centralizer in any maximum eight-clique. The complete proof
+and exact certificate ledger are in `notes/two_group_nu8_next.md`. This does
+not eliminate the all-nonmaximal residual branch.
+
+## A common-core reduction for the solvable nonnilpotent branch
+
+### [PROVED] Frattini-free maximal-cover skeleton
+
+Let \(G\) be finite with \(\nu(G)=8\), put \(Q=G/Z(G)\), and suppose that
+\(Q\) is solvable and nonnilpotent. Maximalize the eight exact
+clique-centralizer images, take a minimal irredundant maximal subcover
+\(M_1,\ldots,M_k\), and set
+
+\[
+ D=\bigcap_{i=1}^kM_i,
+ \qquad R=\operatorname{core}_Q(D)=\bigcap_{q\in Q}D^q,
+ \qquad L=Q/R.
+\]
+
+Then \(\Phi(L)=1\). A private coset in the maximal cover shows that every
+minimal normal subgroup \(U\) of \(L\) has \(|U|\le8\). The Fitting subgroup
+is the abelian socle and is self-centralizing. The abelian-normal fiber
+clique excludes irreducible \(C_2^3\) actions and the \(S_4\) action on
+\(C_2^2\), and it shows that at most one minimal normal factor is
+noncentral. Splitting off the central minimal factors gives
+
+\[
+ L\text{ abelian},\quad\text{or}\quad L=C\times H,
+\]
+
+where \(C\le Z(L)\) is a direct product of elementary abelian \(2\)-,
+\(3\)-, \(5\)-, and \(7\)-parts and
+
+\[
+ H\in\{S_3,A_4,C_5{:}C_2,C_5{:}C_4,
+        C_7{:}C_2,C_7{:}C_3,C_7{:}C_6\}.
+\]
+
+### [PROVED] The core-free subbranch has \(a(G)\le10\)
+
+If \(R=1\), the exact central-extension pairing is still available on
+\(Q=L\). The coprime direct-factor lemma and rank-free same-fiber bounds
+eliminate every nontrivial central factor except a single \(C_2\) beside
+\(S_3\). Thus
+
+\[
+ Q\in\{S_3,A_4,C_5{:}C_2,C_5{:}C_4,C_7{:}C_2,C_7{:}C_3,
+ C_7{:}C_6,C_2\times S_3\},
+\]
+
+so \(|Q|\le42\). The complete exact cutoff-eight certificate through order
+81 then proves \(a(G)\le10\). This last implication is computer-assisted.
+
+The exact remaining nonnilpotent obstruction is \(R\ne1\). The quotient
+\(Q/R\) has the skeleton above, but no descent of the exact commutator
+pairing through the generally noncentral quotient by \(R\) is used. The
+detailed structural proof and independent audit are in
+`notes/h8_nonnilpotent_reduction.md`; the rank-free core-free pairing proof
+is also written out in `proof/main.tex`, Proposition
+`prop:nonnilpotent-core`.
+
 ## Stronger reported bounds still under audit
 
 ### [UNVERIFIED] Pyber's exponential center-index theorem

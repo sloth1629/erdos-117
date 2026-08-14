@@ -73,8 +73,23 @@ No complete resolution is claimed. The strongest repository results are:
   clique-centralizers in \(P/\Phi(P)\) produces a minimal hyperplane
   subcover whose normals form an odd circuit of size \(3\), \(5\), or \(7\);
   in particular, the original centralizers cannot all be maximal.
-- [UNVERIFIED] These binary reductions do not classify the finite
-  \(2\)-group branch.  That branch and the nonnilpotent solvable branch
+- [PROVED] By a computer-assisted argument, the maximal-member subbranch is
+  closed: if even one centralizer
+  belonging to a maximum eight-clique is maximal, then
+  \([P:Z(P)]\le64\) and \(a(P)\le10\).  Thus any finite \(2\)-group
+  \(P\) with \(\nu(P)=8\) and \(a(P)>10\) must have every such centralizer
+  nonmaximal.
+- [PROVED] The solvable nonnilpotent branch has an exact common-core
+  reduction.  After maximalizing the exact eight-member cover and taking a
+  minimal irredundant subcover, let \(R\) be the core of the maximal-member
+  intersection.  If \(R=1\), the
+  center quotient is one of eight groups of order at most \(42\), and the
+  certified bounded scan gives \(a(G)\le10\).  For \(R\ne1\), the quotient
+  by \(R\) is abelian or has form \(C\times H\), where \(C\) is central and
+  is a direct product of elementary abelian \(2\)-, \(3\)-, \(5\)-, and
+  \(7\)-components, and \(H\) is one of seven explicit affine groups.
+- [UNVERIFIED] The remaining all-nonmaximal binary branch and the
+  nontrivial-common-core solvable branch
   remain open, so \(h(8)\) is not determined.
 - [COMPUTED] Exact, independently verified certificates cover explicit
   families, every SmallGroup of orders 8, 32, and 64, all order-128 groups
