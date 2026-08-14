@@ -19,6 +19,12 @@ No complete resolution is claimed. The strongest repository results are:
 - [PROVED] For noncentral \(x\),
   \(\nu(C_G(x))\le\nu(G)-2\), hence
   \(h(n)\le n h(n-2)\).
+- [PROVED] Combining the audited Guralnick--Maróti BFC theorem with the
+  published Nagy--Pach--Tomon abelian coset-cover theorem gives the
+  CFSG-dependent universal bounds
+  \([G:Z(G)]\le2^{O(\nu(G)\log\log\nu(G))}\) and
+  \(h(n)\le2^{O(n\log\log n)}\).  This uses neither the withdrawn
+  arXiv:2205.03389 claim nor Pyber's unaudited fixed-base proof.
 - [PROVED] By a computer-assisted proof, \(h(n)=n\) for \(3\le n\le6\), while
   \(h(1)=h(2)=1\).  The values at five and six combine audited
   irredundant-cover bounds \(f(5)=16\), \(f(6)=36\) with complete
@@ -84,7 +90,7 @@ PYTHONPYCACHEPREFIX=/tmp/erdos117-pycache \
 python3 -m unittest discover -s src/verification -p 'test_*.py' -v
 ```
 
-The saved final run passed all 25 tests in 211.839 seconds under Python
+The saved final run passed all 31 tests in 400.418 seconds under Python
 3.9.6.
 
 The canonical experiment commands are documented in

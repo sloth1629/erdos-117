@@ -42,6 +42,8 @@ must include arbitrary groups, all boundary cases, and every constant.
 
 [UNVERIFIED] This repository has not achieved that objective. It determines
 \(h(n)\) through \(n=7\), proves new general reductions and bounds, and
-disproves one natural exact candidate, but the optimal exponential rate and
+disproves one natural exact candidate.  Its strongest audited universal
+upper bound is the CFSG-dependent estimate
+\(h(n)\le2^{O(n\log\log n)}\), but the optimal exponential rate and
 the values \(h(n)\) for \(n\geq8\) remain open except for lower and upper
 bounds.

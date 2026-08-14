@@ -122,6 +122,21 @@ center-index bound by charging the whole index at a step to the decrease in
 noncommuting clique number.  Any replacement needs additional hypotheses or
 a different local quantity.  No minimal-counterexample claim is made.
 
+[DISPROVED] Even restricting to finite class-two (2)-groups does not save
+the linear estimate or its one-unit relaxation.  The explicit order-(512)
+group in `notes/class_two_local_drop_counterexample.md` has an element (x)
+with
+
+\[
+[P:C_P(x)]=16,qquad \nu(P)=15,qquad \nu(C_P(x))=1.
+\]
+
+A displayed (15)-clique and (15)-coloring certify the clique number, and
+a dependency-free verifier checks the cocycle, center, and centralizer.
+Thus both (q\le m-r) and (q\le m-r+1) fail.
+
+[UNVERIFIED] The quadratic candidate (q\le4(m-r+1)^2) remains open.
+
 ## Forcing an extra drop among clique-member centralizers
 
 [DISPROVED] Even when \(x_1,\ldots,x_m\) form a maximum noncommuting set,
@@ -221,7 +236,10 @@ preprint is promoted.
 
 Reusable replacement: the authors' earlier, unwithdrawn manuscript
 *Additive bases, coset covers, and non-vanishing linear maps*,
-arXiv:2111.13658, states only the weaker
-\(\exp(O(k\log\log k))\) abelian intersection bound.  That separate theorem
-requires its own proof audit before use and cannot yield a fixed-base
-constant by itself.
+arXiv:2111.13658, is now contained in the peer-reviewed paper
+*Hyperplane covers of finite spaces and applications*, Trans. AMS 379
+(2026).  Theorem 1.11 and its Section 8 proof were audited and give only the
+weaker \(\exp(O(k\log\log k))\) abelian intersection bound.  Together with
+the valid Guralnick--Maróti BFC theorem it yields the repository's
+CFSG-dependent \(2^{O(n\log\log n)}\) upper bound, not a fixed-base
+constant.  See `notes/subfactorial_upper.md`.

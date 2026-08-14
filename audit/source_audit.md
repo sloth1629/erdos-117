@@ -14,6 +14,8 @@ Research cut-off: 2026-08-14.  Source PDFs, extracted text, and rendered page im
 | [UNVERIFIED] | Mason (1978), DOI `10.1017/S0305004100054463` | Publisher extract and metadata only, pp. 205–209 | Official page is paywalled; no theorem from it is used as load-bearing evidence.  This DOI corrects a wrong DOI encountered in secondary search results. |
 | [CITED-VERIFIED] | Bertram (1983), DOI `10.1016/0012-365X(83)90004-3` | Official metadata and reference [6] = Isaacs, personal communication | Printed p. 40/full article remained inaccessible; ScienceDirect PDF returned 403 and the located ResearchGate PDF endpoint did not yield a file. |
 | [CITED-VERIFIED] | Pyber (1987), DOI `10.1112/jlms/s2-35.2.287` | Official publisher abstract and bibliographic data | Full paper remained inaccessible through Wiley/OUP, OpenAlex OA locations, CiteSeer, and archive/mirror searches; the exact Theorem 6.1 was not verified. |
+| [CITED-VERIFIED] | Guralnick--Maróti (2011), DOI `10.1016/j.aim.2010.06.023` | Theorem 1.8, author/arXiv PDF p. 4: \(|G'|<b^{(7+\log_2b)/2}\) for a \(b\)-BFC group | Full article and theorem read; the stated CFSG dependence through Segal--Shalev is retained. |
+| [CITED-VERIFIED] | Nagy--Pach--Tomon (2026), DOI `10.1090/tran/9483` | Theorem 1.11 author PDF p. 4 and full proof in Section 8, author-manuscript pp. 14--16 | Author PDF read through Theorems 5.1 and 8.1; a witness typo and small-prime notation have direct repairs recorded in `notes/subfactorial_upper.md`. |
 | [CITED-VERIFIED] | Brown–Johnson–Robertson (1987), DOI `10.1016/0021-8693(87)90248-1` | Exterior-square/commutator map p. 181; Proposition 7 p. 182; Corollary 2 pp. 182–183 | Complete author-hosted primary PDF read.  Corollary 2 gives \(Q\wedge Q\cong S'\) for a covering group when \(H_2(Q)\) is finitely generated, hence for finite \(Q\). |
 | [CITED-VERIFIED] | Erdős (1997), DOI `10.1017/CBO9780511662034.004` | Problem 26, printed p. 8 | Full scanned volume read; formula checked on rendered physical PDF page 31. |
 | [CITED-VERIFIED] | Pakianathan–Yalçın (2001), DOI `10.1006/jabr.1999.8501`, arXiv `math/0005301` | Introductory Isaacs/Pyber claims, pp. 396–397; bibliography | Full primary text read; the Isaacs pointer `[J]` was checked and found to be Jacobson. |
@@ -83,10 +85,40 @@ Theorem 1.1 with the valid Guralnick--Maróti BFC bound.  The draft was
 deleted before staging, committing, or pushing.  No claim based on
 \(2^{O(k)}\) or the advertised \(20^k\) survives in the worktree.
 
-[UNVERIFIED] The distinct, unwithdrawn arXiv:2111.13658 gives a weaker
-\(\exp(O(k\log\log k))\) abelian coset-cover statement.  Its full proof is
-being audited separately; the later 2026 Transactions article is also
-weaker and does not repair the withdrawn fixed-base theorem.
+[CITED-VERIFIED] The valid weaker replacement is now contained in
+Nagy--Pach--Tomon, *Hyperplane covers of finite spaces and applications*,
+*Trans. Amer. Math. Soc.* 379 (2026), 137--156, DOI
+10.1090/tran/9483.  Theorem 1.11 (author PDF p. 4; full proof in
+Section 8, pp. 14--16) gives
+\(\exp(O(k\log\log k))\) for an irredundant coset cover of an abelian
+group.  The proof through Theorems 5.1 and 8.1 was read.  A witness typo in
+Lemma 5.4 and the normalization of \(\log\log p\) at \(p=2,3\) have direct
+repairs recorded in notes/subfactorial_upper.md.  The authors' publication
+page says that the unwithdrawn arXiv:2111.13658 is now contained in this
+article.
+
+[CITED-VERIFIED] Guralnick--Maróti, *Adv. Math.* 226 (2011), 298--308,
+Theorem 1.8, states for every \(b\)-BFC group, \(b>1\), that
+\[
+|G'|<b^{(7+\log_2b)/2}.
+\]
+The article explicitly records the CFSG dependence through Segal--Shalev.
+Combining this theorem with the preceding published coset-cover theorem is
+load-bearing only for the weaker bound below; it does not rehabilitate the
+withdrawn \(2^{O(k)}\) claim.
+
+[PROVED] The complete repository bridge in notes/subfactorial_upper.md
+uses the self-contained \(b\le4\nu(G)^2\) bound, puts
+\(C=C_G(G')\), applies Theorem 1.11 to the irredundant centralizer cover of
+the abelian group \(C/Z(C)\), and controls the other two center indices
+through \(G/C\hookrightarrow\operatorname{Aut}(G')\) and a commutator map
+on \(Z(C)\).  It proves, for arbitrary groups,
+\[
+[G:Z(G)]\le2^{O(\nu(G)\log\log\nu(G))},
+\qquad
+h(n)\le2^{O(n\log\log n)}.
+\]
+This argument is CFSG-dependent and is not a fixed-base exponential bound.
 
 ## Finite-geometry acquisition and terminology audit
 
@@ -311,7 +343,12 @@ then uses all \(\binom n2\) pair intersections to obtain \(f(n)=n+\binom n2f(n-1
 
 [UNVERIFIED] Almeida–Moghaddamfar–Nakaoka, *International Journal of Algebra and Computation* 35(2) (2025), DOI `10.1142/S0218196725500018`, concerns pseudo-conjugation actions and isoclinism.
 
-[UNVERIFIED] Nagy–Pach–Tomon, *Transactions of the AMS* 379 (2026), 137–156, DOI `10.1090/tran/9483`, concerns hyperplane covers and a different Pyber conjecture on irredundant coset covers of finite abelian groups.
+[CITED-VERIFIED] Nagy–Pach–Tomon, *Transactions of the AMS* 379 (2026),
+137–156, DOI 10.1090/tran/9483, Theorem 1.11 and Section 8, supplies the
+abelian irredundant-coset bound used in the repository's
+\(2^{O(n\log\log n)}\) center-index theorem.  The paper explicitly says its
+hyperplane estimate is insufficient for the conjectural \(2^{O(k)}\)
+coset-cover bound.
 
 [UNVERIFIED] No 2025/2026 forward item located in this audit claims a solution of Erdős Problem 117, the corrected exact formula, or determination/improvement of the asymptotic exponential constant.  This conclusion is bounded by database coverage and terminology.
 

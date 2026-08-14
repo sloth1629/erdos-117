@@ -58,6 +58,31 @@ h(n)\leq r_n^n-1<4^{n^2}.
 
 This also proves directly, without Pyber's theorem, that \(h(n)\) is finite.
 
+## A CFSG-dependent subfactorial bound
+
+### [PROVED] Published-input center-index bound
+
+There is an absolute constant \(C>0\) such that every group with
+\(n=\nu(G)\ge3\) satisfies
+
+\[
+[G:Z(G)]\le \exp\!\bigl(Cn\log\log n\bigr),
+\qquad
+h(n)\le2^{O(n\log\log n)}.
+\]
+
+The complete proof, including the arbitrary-to-finite transfer and all
+intermediate index estimates, is in `notes/subfactorial_upper.md`.  Its two
+external premises were read at proof level: Guralnick--Maróti, Theorem 1.8,
+bounds the derived subgroup of a BFC group, and Nagy--Pach--Tomon,
+Theorem 1.11 with Section 8, bounds the intersection index of an irredundant
+coset cover of an abelian group.  The former premise is CFSG-dependent.
+
+This theorem is strictly weaker than the fixed-base \(c^n\) estimate stated
+in Pyber's official abstract.  It does, however, improve all self-contained
+repository upper bounds asymptotically.  It does not use the distinct
+withdrawn arXiv:2205.03389 claim of a \(2^{O(k)}\) abelian cover theorem.
+
 ### [PROVED] First recursive cover bound
 
 For every \(n\geq2\),
@@ -93,8 +118,8 @@ Iterating from \(h(2)=1\) gives the standalone bound
 h(n)\leq n!/2\qquad(n\geq2).
 \]
 
-This is weaker asymptotically than a verified fixed-base exponential bound
-would be.
+This is weaker asymptotically than the CFSG-dependent subfactorial bound
+above.
 
 ### [PROVED] Strengthened recursive cover bound
 
@@ -119,8 +144,9 @@ h(2r)\leq\frac{(2r)!!}{2}=2^{r-1}r!.
 \]
 
 This strictly improves the preceding factorial recurrence. It is still
-superexponential and hence weaker asymptotically than Pyber's reported
-fixed-base exponential theorem, whose primary proof remains inaccessible.
+superexponential and hence weaker asymptotically than both the proved
+CFSG-dependent subfactorial bound above and Pyber's reported fixed-base
+exponential theorem, whose primary proof remains inaccessible.
 
 ### [PROVED] Private-cell recurrence
 
@@ -391,7 +417,8 @@ does not verify those primary quantitative ingredients.
 
 ### [UNVERIFIED] Remaining quantitative structural obligations
 
-Exact bounds for Schur's theorem, the BFC derived-subgroup theorem, and the
-best constants obtainable from isoclinism or stem reduction remain unaudited.
-None is needed for the proved \(4^{n^2}\) and \((4n^2)^n\) bounds or the
-exact finite reduction.
+The Guralnick--Maróti BFC derived-subgroup theorem is now audited and used in
+the CFSG-dependent subfactorial bound above.  Pyber's fixed-base argument,
+its constants, and any sharper CFSG-free replacement remain unaudited.
+None is needed for the self-contained \(4^{n^2}\) and \((4n^2)^n\) bounds
+or the exact finite reduction.

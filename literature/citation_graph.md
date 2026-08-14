@@ -54,7 +54,27 @@ Isik 2005, Thm.12 pp.6--7 [CITED-VERIFIED] (independent accessible proof)
 
 [CITED-VERIFIED] Maróti–Martínez–Moretó (2025) was read in full.  Its Pyber edge is introductory; its results cover \(p\)-elements by proper subgroups and do not change \(h(n)\).
 
-[UNVERIFIED] The other located 2024–2026 branches are Almeida–Moghaddamfar–Nakaoka (pseudo-conjugation/isoclinism), Yang–Zarrin (numbers of noncommuting sets), Gao–Garonzi (cyclic-subgroup counts), Guralnick et al. (fixed-point ratios and \(p\)-element covers), and Nagy–Pach–Tomon (hyperplane/coset covers).  Their available abstracts or texts expose no claim about the universal \(h(n)\) or its exponential constant.
+[CITED-VERIFIED] Guralnick--Maróti (2011), Theorem 1.8, gives the
+CFSG-dependent BFC estimate
+\(|G'|<b^{(7+\log_2b)/2}\).  Nagy--Pach--Tomon (2026), Theorem 1.11 with
+its Section 8 proof, gives intersection index
+\(\exp(O(k\log\log k))\) for an irredundant coset cover of an abelian
+group.  The proof graph relevant here is
+
+```text
+4 nu(G)^2 conjugacy bound
+  +-- Guralnick--Maroti BFC theorem controls D=G'
+  +-- C=C_G(D), so C/Z(C) is abelian
+        +-- Nagy--Pach--Tomon controls [C:Z(C)]
+        +-- elementary maps control [G:C] and [Z(C):Z(G)]
+              `-- [G:Z(G)], h(n) <= 2^O(n log log n) [PROVED]
+```
+
+[DISPROVED] This edge does not use the distinct withdrawn
+arXiv:2205.03389 fixed-base claim.  The surviving published theorem is
+weaker and does not recover Pyber's reported \(2^{O(n)}\) bound.
+
+[UNVERIFIED] The other located 2024–2026 branches are Almeida–Moghaddamfar–Nakaoka (pseudo-conjugation/isoclinism), Yang–Zarrin (numbers of noncommuting sets), Gao–Garonzi (cyclic-subgroup counts), and Guralnick et al. (fixed-point ratios and \(p\)-element covers).  Their available abstracts or texts expose no stronger claim about the universal \(h(n)\) or its exponential constant.
 
 ## Finite-geometry branch
 

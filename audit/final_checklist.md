@@ -18,8 +18,11 @@ These boxes remain open, so no complete solution is claimed.
   exact finite commutation model.
 - [x] Central elements, central cosets, and the false quotient shortcut
   handled explicitly.
-- [x] Every paper-level theorem has an internal proof; inaccessible sources
-  are not load-bearing.
+- [x] Every load-bearing external theorem has a proof-bearing primary source
+  read at the stated pages; inaccessible sources are not load-bearing.
+- [x] The CFSG-dependent subfactorial upper bound records the exact
+  Guralnick--Maróti and Nagy--Pach--Tomon inputs, retains the CFSG
+  dependency, and excludes the withdrawn fixed-base preprint.
 - [x] The \(S(3,2)\) counterexample has a full structural proof and an
   independent exact computation.
 - [x] The computer-assisted proof of \(h(5)=5\) records its primary-source

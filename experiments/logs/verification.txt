@@ -1,7 +1,7 @@
 Python 3.9.6
-COMMAND: PYTHONPYCACHEPREFIX=/tmp/erdos117-h7-final-pycache python3 -m unittest discover -s src/verification -p 'test_*.py' -v
-.........................
+COMMAND: PYTHONPYCACHEPREFIX=/tmp/erdos117-subfactorial-pycache python3 -m unittest discover -s src/verification -p 'test_*.py' -v
+...............................
 ----------------------------------------------------------------------
-Ran 25 tests in 211.839s
+Ran 31 tests in 400.418s
 
 OK

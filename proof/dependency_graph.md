@@ -17,6 +17,12 @@ here is now \(1\le n\le7\).
       |     +-- uniform centralizer-index bound
       |     +-- finite-index center for arbitrary G
       |     +-- self-contained 4^(n^2) center-index bound
+      |     +-- 4 nu(G)^2 BFC bound
+      |           +-- Guralnick--Maroti derived-subgroup bound [external; CFSG]
+      |           +-- C=C_G(G'), with C/Z(C) abelian
+      |                 +-- Nagy--Pach--Tomon abelian coset-cover bound [external]
+      |                 +-- elementary automorphism and commutator indices
+      |                       +-- [G:Z(G)] and h(n) <= 2^O(n log log n)
       |
       +-- maximum-clique centralizer arguments
       |     +-- C_G(maximum clique)=Z(G)
@@ -84,6 +90,8 @@ certificates for the six-cover leaves.  At seven, the external dependency is
 Theorem B (p. 292, proof pp. 299--300) of Abdollahi--Jafarian Amiri; the
 repository independently certifies every post-reduction finite case.  All
 other branches displayed above are computation-independent. Neumann (1976) is
-primary-verified historical corroboration. Pyber's fixed-base exponential
-upper bound remains inaccessible at proof level and therefore lies outside
-the proved dependency graph.
+primary-verified historical corroboration.  The displayed subfactorial
+branch uses the proof-audited Guralnick--Maróti and Nagy--Pach--Tomon
+theorems and retains the former's CFSG dependence.  Pyber's stronger
+fixed-base exponential upper bound remains inaccessible at proof level and
+therefore lies outside the proved dependency graph.

@@ -1,6 +1,6 @@
 # Verified Literature Review
 
-Research cut-off: 2026-08-13.  Here \(\omega(G)=\nu(G)\) is the largest size of a pairwise noncommuting subset and \(a(G)\) is the least number of abelian subgroups covering \(G\).  Statements about what a paper *reports* are kept separate from the truth of the reported theorem when the proof-bearing source was not available.
+Research cut-off: 2026-08-14.  Here \(\omega(G)=\nu(G)\) is the largest size of a pairwise noncommuting subset and \(a(G)\) is the least number of abelian subgroups covering \(G\).  Statements about what a paper *reports* are kept separate from the truth of the reported theorem when the proof-bearing source was not available.
 
 ## External problem-status snapshot
 
@@ -35,6 +35,39 @@ primary mathematical source.
  [G:Z(G)]\le 2^{2^{25}m}\,2^{3(2+2\log_2 m)^5},\qquad m=\omega(G).
 \]
 The same page sketches the mechanism: take \(C=C_G(G')\), a finite nilpotent group of class at most two; bound \([G:C]\) and \([Z(C):Z(G)]\) using BFC/derived-group estimates; bound \([C:Z(C)]\) Sylow subgroup by Sylow subgroup, using \(\omega(A\times B)\ge\omega(A)\omega(B)\); then multiply the three indices.  This is a useful acquisition target but remains secondary evidence until Pyber's paper is read.
+
+[CITED-VERIFIED] Guralnick--Maróti, *Advances in Mathematics* 226 (2011),
+Theorem 1.8, states that every \(b\)-BFC group with \(b>1\) satisfies
+\[
+ |G'|<b^{(7+\log_2b)/2}.
+\]
+The authors explicitly identify the CFSG dependence through the
+Segal--Shalev BFC estimate.
+
+[CITED-VERIFIED] Nagy--Pach--Tomon, *Transactions of the American
+Mathematical Society* 379 (2026), Theorem 1.11 (author PDF p. 4; proof in
+Section 8, pp. 14--16), proves that an irredundant \(k\)-coset cover of an
+abelian group has subgroup-intersection index at most
+\(\exp(O(k\log\log k))\).  The proof through its elementary-abelian
+hyperplane bound and Theorem 8.1 was read.  The witness typo in Lemma 5.4
+and the small-prime normalization of \(\log\log p\) have direct repairs.
+This is the peer-reviewed successor containing the unwithdrawn
+arXiv:2111.13658 result; it is distinct from and weaker than the withdrawn
+arXiv:2205.03389 claim.
+
+[PROVED] Combining those two primary theorems with the repository's exact
+finite model and conjugacy-class bound gives
+\[
+ [G:Z(G)]\le2^{O(\nu(G)\log\log\nu(G))},
+ \qquad
+ h(n)\le2^{O(n\log\log n)}
+\]
+for arbitrary groups.  The complete bridge is in
+notes/subfactorial_upper.md: with \(D=G'\) and \(C=C_G(D)\), the BFC
+theorem controls \(D\), the published abelian-cover theorem controls
+\(C/Z(C)\), and elementary automorphism and commutator maps control
+\([G:C]\) and \([Z(C):Z(G)]\).  This is CFSG-dependent and remains weaker
+than Pyber's reported fixed-base bound.
 
 [UNVERIFIED] Saccochi, Theorem 4.1.1, p. 34, states that if \(\omega(G)<\infty\), then there is a finite group \(H\) with \(H/Z(H)\cong G/Z(G)\) and \(\omega(H)=\omega(G)\), citing Macdonald [13, §2].  Macdonald's proof was not acquired, so this finite-reduction step is not yet available as a load-bearing citation.
 
@@ -405,7 +438,13 @@ global value of \(h(8)\).
 
 [CITED-VERIFIED] Maróti, Martínez and Moretó (2025), printed p. 2, cite Pyber while defining the coclique/abelian-cover number of a noncommuting graph, but the paper's new theorems concern covers of the set of \(p\)-elements by proper subgroups.  Its full text contains no new universal estimate for \(h(n)\), \([G:Z(G)]\) in terms of \(\omega(G)\), or the exponential base.
 
-[UNVERIFIED] The 2024–2026 forward items located through OpenAlex and DOI/title searches—work on pseudo-conjugation/isoclinism, numbers of pairwise noncommuting sets, cyclic-subgroup counts, fixed-point ratios and covers of \(p\)-elements, and hyperplane/coset covers—have abstracts or full texts whose stated scope is different from Erdős Problem 117.  In particular, the 2026 hyperplane-cover paper concerns a different Pyber conjecture about irredundant coset covers of finite abelian groups.
+[CITED-VERIFIED] The 2026 Nagy--Pach--Tomon hyperplane-cover paper does not
+claim a resolution of Erdős Problem 117, but its Theorem 1.11 is relevant:
+combined with the 2011 BFC theorem, it supplies the repository's
+\(2^{O(n\log\log n)}\) upper bound above.  The other located 2024--2026
+branches on pseudo-conjugation/isoclinism, numbers of pairwise noncommuting
+sets, cyclic-subgroup counts, fixed-point ratios, and covers of
+\(p\)-elements do not expose a stronger universal \(h(n)\) estimate.
 
 [UNVERIFIED] The forward search found no 2025 or 2026 paper claiming a resolution of Problem 117, the candidate exact formula, or an improved/determined asymptotic exponential constant.  This is an index-bounded negative result, not proof that no such paper exists.
 

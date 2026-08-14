@@ -2,6 +2,10 @@
 
 - `[PROVED]` Complete graph-theoretic reformulation and central-coset compression.
 - `[PROVED]` Exact arbitrary-to-finite commutation-model reduction; \(h(n)\) is attained by a finite group.
+- `[PROVED]` The audited Guralnick--Maróti and Nagy--Pach--Tomon theorems
+  give the CFSG-dependent universal estimate
+  \(h(n)\le2^{O(n\log\log n)}\).  This is not the withdrawn fixed-base
+  claim and does not settle the optimal exponential rate.
 - `[UNVERIFIED]` Pyber theorem statement, constants, and quantitative proof audit.
 - `[UNVERIFIED]` Isaacs lower-bound construction and attribution chain.
 - `[PROVED]` Direct-product OR-product identity and invariant behavior.

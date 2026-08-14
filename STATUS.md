@@ -33,17 +33,23 @@ gives 9 at seven.
    \(h(n)\le n h(n-2)\).
 4. Self-contained conjugacy-class bound \(4n^2\) and
    \([G:Z(G)]\le(4n^2)^n\).
-5. Exact values \(h(1)=h(2)=1\), \(h(n)=n\) for \(3\le n\le6\), and
+5. A stronger CFSG-dependent universal bound
+   \([G:Z(G)]\le2^{O(\nu(G)\log\log\nu(G))}\), hence
+   \(h(n)\le2^{O(n\log\log n)}\), obtained from the audited
+   Guralnick--Maróti derived-subgroup theorem and the published
+   Nagy--Pach--Tomon abelian coset-cover theorem.  The withdrawn
+   fixed-base preprint is not used.
+6. Exact values \(h(1)=h(2)=1\), \(h(n)=n\) for \(3\le n\le6\), and
    \(h(7)=10\).  The values at five through seven are computer-assisted.
    At seven, the primary-verified theorem \(f(7)=81\) reduces the problem to
    738 center quotients; structural and exact exterior-square certificates
    exhaust every one.
-6. Exact scalar symplectic cover formula
+7. Exact scalar symplectic cover formula
    \(a(S(q,m))=q^m+1\), binary lower construction, and the
    \(S(3,2)\) counterexample.
-7. Direct-product OR identity and correct direct-power rates via fractional
+8. Direct-product OR identity and correct direct-power rates via fractional
    chromatic number and complementary Shannon capacity.
-8. At cutoff eight, every nonabelian exact center quotient satisfies
+9. At cutoff eight, every nonabelian exact center quotient satisfies
    \(|Z(G/Z(G))|\le14{,}400\); the binary elementary central layer has rank
    at most three, with an additional abelian-centralizer restriction in the
    rank-three case.  For finite class-two \(p\)-groups,
@@ -54,7 +60,7 @@ gives 9 at seven.
 
 ## Computation status
 
-- The complete verification suite passes: 25 tests in 211.839 seconds under
+- The complete verification suite passes: 31 tests in 400.418 seconds under
   Python 3.9.6, with the transcript saved for this milestone.
 - Both optimized graph algorithms agree with brute force on all 33,868
   labeled graphs with at most six vertices.
@@ -108,6 +114,11 @@ gives 9 at seven.
 - Pyber's official abstract verifies a finite-group fixed-base exponential
   center-index bound, but the full paper, exact constants, and proof were not
   accessible; no repository proof depends on them.
+- Guralnick--Maróti (2011), Theorem 1.8, and Nagy--Pach--Tomon (2026),
+  Theorem 1.11 with its Section 8 proof, were read and audited.  Their
+  combination supplies the repository's CFSG-dependent
+  \(2^{O(n\log\log n)}\) upper bound.  The distinct arXiv:2205.03389
+  fixed-base claim is withdrawn and is not used.
 - The current online OPEN status was visible only through an indexed
   snapshot because the direct page returned HTTP 403; it remains an
   explicitly bounded status check, not a mathematical premise.
