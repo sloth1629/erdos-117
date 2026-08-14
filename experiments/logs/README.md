@@ -118,6 +118,19 @@ Store reproducible text logs here; large or licensed artifacts must not be commi
   `d7b5cb95e07bab5286131316d76d258a3cfd668dee8e1009632f868f094f316e`.
 - `h8_verification.txt`: `[COMPUTED]` focused saved-record tests and the full
   28-test discovery run, including exact commands and timings.
+- `rank3_order64_tail_verification.txt`: `[COMPUTED]` independent join of the
+  cutoff-eight binary rank-three normal form with the complete order-64
+  certificates.  The verifier derives 44 base and 39 theorem-forced quotient
+  IDs directly from all 267 committed Cayley tables, then partitions the 39
+  into 19 ordinary faithful cases of exact clique number at least 12, seven
+  all-nonfaithful cases, five generic dual searches with no faithful candidate,
+  and eight exterior-zero exclusions.  The canonical command is
+  `PYTHONPYCACHEPREFIX=/tmp/erdos117-rank3-tail-pycache python3 -m unittest
+  src.verification.test_rank3_order64_tail -v`; the saved run passed in
+  150.840 seconds.  The verifier, test, and transcript SHA-256 values are
+  respectively `5a4f6f6bf152a495ac9753fd04f15402fe16ef7caef75c39a80b8b18513106be`,
+  `4d29a897d542e6078a669eac0b3817809e089195f03c17592b4f7f24271058cf`,
+  and `926765379528a0460763befddb6464e9f668c279ec7c2ef7543793ce750410c7`.
 - `h8_local_inequality_counterexample.{tsv,json}` and its stdout,
   GAP-transcript, and verification files: `[DISPROVED]` exact
   `SmallGroup(48,15)` counterexample to

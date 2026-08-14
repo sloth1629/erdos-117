@@ -1,0 +1,41 @@
+[COMPUTED] exact order-64 structural-tail verification; no global h(8) claim
+
+Scope: all 267 committed order-64 Cayley tables and the canonical h7/h8
+exact-center extension records.  The independently evaluated predicate is:
+Q nonabelian; Q has class at most two; A=Omega_1(Z(Q)) has order 8; and Q/A
+is elementary abelian of order 8.  The first three conditions select 44 IDs;
+the theorem-forced Q/A condition removes 17,84,87,103,247 and leaves 39.
+
+Exact 39-ID partition:
+- ordinary faithful, minimum exact omega at least 12 (19 IDs):
+  57,58,59,60,61,62,63,64,67,68,69,71,72,73,74,75,77,78,82
+- ordinary all-normal-kernels nonfaithful (7 IDs):
+  65,66,70,76,79,80,81
+- generic cutoff-nine BFS, faithful_candidate_count=0 (5 IDs):
+  195,202,203,207,211
+- exterior-zero/nontrivial-epicentre exclusion (8 IDs):
+  196,197,204,205,208,209,212,263
+
+Load-bearing source SHA256:
+4047bc195b59a9e3c631a31499bf93bf0f4c577dbbded558249bc5f3dda54b27  experiments/logs/gap_smallgroups_order64.tsv
+6e134f170949c437b8a0c640f27a86c465fa6d3807f2a2e109301503d1c32576  experiments/logs/gap_smallgroups_order64.json
+69f3e4e39543ffb316798dec5df3dd220bdbd61b11a67c0bd07bdccdbdaa70a0  experiments/logs/h7_exterior_64_1_191.json
+dee1fcdc02b633ac5eba9f708522e96117f1d997edbf3de38bee50ce984249d6  experiments/logs/h7_exterior_64_1_191.tsv
+bb8e8f416e6b19ec0fdb9586b7fa1e04579aa66baa5554769c62a4fcdbd6198e  experiments/logs/h7_capability_order64.json
+4ee0f3c9807f07f69200fad377566c5a1aee1abba85513c75122e704e5d99db6  experiments/logs/h7_order64_dual_195.tsv
+2c8e09f73162c3b55db2525406407ec8dad7328db7eaa968419c3722bcc8e040  experiments/logs/h7_order64_dual_202.tsv
+c33dba5d4a53c191efe3a767e7b5f04a8e16be8ec30be67c81adb9578d200949  experiments/logs/h7_order64_dual_203.tsv
+08667e416c98cdf4314d9faeeabc8e574f55d635aa73890dbb1aa9d419036dc7  experiments/logs/h7_order64_dual_207.tsv
+c73de1ce8c01a2248059dcbf39f2b35b681cb6d345f841d232095fe094c2d967  experiments/logs/h7_order64_dual_211.tsv
+052036975d9a6d30d920873ae8f171dbaa010eec6c7852b3180a918050b0ae61  experiments/logs/h8_bounded_cutoff.json
+
+Command:
+PYTHONPYCACHEPREFIX=/tmp/erdos117-rank3-tail-pycache python3 -m unittest src.verification.test_rank3_order64_tail -v
+
+Output:
+test_complete_order64_tail (src.verification.test_rank3_order64_tail.RankThreeOrder64TailTests) ... ok
+
+----------------------------------------------------------------------
+Ran 1 test in 150.840s
+
+OK
