@@ -59,7 +59,7 @@ characteristic can outperform the binary family at finite parameters.
 
 ## Using inaccessible quantitative sources as proof
 
-[DISPROVED AS METHODOLOGY] The official abstract of Pyber's 1987 paper
+[DISPROVED] The official abstract of Pyber's 1987 paper
 supports a fixed-base finite-group center-index bound, but not its detailed
 constant or proof. The explicit expression found in a dissertation remains
 secondary evidence and is not a load-bearing repository theorem.
@@ -121,3 +121,82 @@ Reusable lesson: a centralizer chain cannot obtain a multiplicative
 center-index bound by charging the whole index at a step to the decrease in
 noncommuting clique number.  Any replacement needs additional hypotheses or
 a different local quantity.  No minimal-counterexample claim is made.
+
+## Forcing an extra drop among clique-member centralizers
+
+[DISPROVED] Even when \(x_1,\ldots,x_m\) form a maximum noncommuting set,
+it need not be true that one of their centralizers has clique number below
+the universal bound \(m-2\).  In the binary scalar symplectic group
+\(E_3\), the repository proves \(\nu(G)=7\).  Write
+\(V=G/Z(G)\cong\mathbf F_2^6\) with its nondegenerate alternating form.
+For every noncentral \(x\), represented by \(0\ne v\in V\),
+
+\[
+C_G(x)/Z(G)=v^\perp.
+\]
+
+The restriction to \(v^\perp\) has radical \(\langle v\rangle\), and the
+quotient is a four-dimensional nondegenerate binary symplectic space.
+The proved formula \(\nu(E_r)=2r+1\) in
+`notes/class_two_geometry.md` therefore gives
+
+\[
+\nu(C_G(x))=5=\nu(G)-2.
+\]
+
+Thus every member of every maximum seven-clique has the simultaneously
+sharp signature \((5,5,5,5,5,5,5)\).  Any useful sum or product constraint
+at cutoff eight must exploit something special to that cutoff; it cannot
+follow merely by summing strengthened individual centralizer drops.
+
+## Replacing several centralizers by their private cells for free
+
+[DISPROVED] The one-private-cell cover does not extend by simply replacing
+an arbitrary collection of centralizers with the abelian subgroups generated
+by their private cells.  The same group \(E_3\) gives a transparent
+counterexample.  Choose its standard seven-clique
+\(v_1,\ldots,v_7\) with
+
+\[
+B(v_i,v_j)=1\quad(i\ne j),
+\qquad \sum_{i=1}^7v_i=0.
+\]
+
+The injective signature map
+
+\[
+V\longrightarrow\mathbf F_2^7,
+\qquad
+u\longmapsto\bigl(B(u,v_1),\ldots,B(u,v_7)\bigr)
+\]
+
+has image exactly the even-weight subspace.  A private cell for index \(i\)
+has the signature that is zero at \(i\) and one elsewhere, so its generated
+subgroup maps to the line \(\langle v_i\rangle\).  For any prescribed
+three-element set \(J\), however, the vector that is zero on \(J\) and one
+off \(J\) has even weight four and therefore is the signature of some
+\(u\in V\).  This element commutes with exactly the three clique members
+indexed by \(J\), lies in none of their private generated lines, and lies
+outside all the other centralizers.
+
+### [PROVED] Reusable multi-private-cell cover
+
+Let \(P_j=C_G(x_j)\setminus\bigcup_{k\ne j}C_G(x_k)\). For every
+\(J\subseteq\{1,\ldots,m\}\), the valid cover is
+
+\[
+G=\bigcup_{i\notin J}C_G(x_i)
+ \ \cup\ \bigcup_{j\in J}\langle P_j\rangle
+ \ \cup\ \bigcup_{\{j,k\}\subseteq J}
+       \bigl(C_G(x_j)\cap C_G(x_k)\bigr).
+\]
+
+Indeed, an element outside every \(C_G(x_i)\) with \(i\notin J\) commutes
+with at least one \(x_j\), since otherwise it would extend the maximum
+clique. If it commutes with exactly one such member, it lies in \(P_j\); if
+it commutes with at least two, it lies in one of the displayed pairwise
+intersections.
+
+The intersection terms cannot be discarded without additional structure;
+in the binary symplectic example they can themselves retain the full
+\(m-2\) clique bound.
