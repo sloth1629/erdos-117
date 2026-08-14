@@ -317,15 +317,19 @@ finite 3-group cutoff theorem [PROVED]
         +-- exact h(6)=6 and h(7)=10
         `-- max finite-3-group contribution at cutoff eight is 10
 
-finite 2-group maximal-member branch [PROVED] (computer-assisted)
-  |-- maximal H=C_P(x) => nu(H)+[Z(H):Z(P)]<=8 [PROVED]
-  |-- finite binary K with nu(K)<=6 => [K:Z(K)]<=16 [PROVED]
-  |     |-- 50 non-C2^5 order-32 types / 20,278 rows [COMPUTED]
-  |     `-- every exact-center C2^5 form has a nine-clique [PROVED]
-  |-- [P:Z(P)]<=64 [PROVED]
-  `-- cutoff-eight |Q|<=81 certificate [COMPUTED]
-        `-- a(P)<=10 [PROVED]
-              `-- eliminate all-nonmaximal residual [UNVERIFIED]
+finite 2-group exact cutoff-eight closure [PROVED] (computer-assisted)
+  |-- maximal element-centralizer branch, LIT-083 [PROVED]
+  |     |-- finite binary K with nu(K)<=6 => [K:Z(K)]<=16 [PROVED]
+  |     |     |-- 50 non-C2^5 order-32 types / 20,278 rows [COMPUTED]
+  |     |     `-- every exact-center C2^5 form has a nine-clique [PROVED]
+  |     `-- maximal C_P(x) => [P:Z(P)]<=64 and a(P)<=10 [PROVED]
+  `-- all-nonmaximal branch, LIT-086 [PROVED]
+        |-- ascend inside inclusion-maximal element centralizers [PROVED]
+        |     `-- eight-set union count => [P:Z(P)]<=128 [PROVED]
+        |-- cutoff-eight |Q|<=81 certificate excludes |Q|<=64 [COMPUTED]
+        |-- |Q|=128 forces scalar symplectic C2^6 index-two section [PROVED]
+        `-- outer symplectic ranks 0,1,2,3 give a nine-clique or LIT-083
+              `-- no finite 2-group has nu=8 [PROVED]
 ```
 
 [PROVED] The Berkovich nodes imply that a nonabelian finite \(p\)-group
@@ -335,15 +339,18 @@ branch and has \(a=8\); for \(p=5\), \(\nu=7\) is excluded but \(\nu=8\)
 is now excluded by the separate hyperplane node, so the only finite
 \(5\)-group values at cutoff eight are \((1,1)\) and \((6,6)\).  For
 \(p=3\), the repository theorem additionally proves \(a=8\) at \(\nu=8\),
-and the exact lower cutoffs give maximum contribution ten.  The \(p=2\)
-branch is not classified by these results.
+and the exact lower cutoffs give maximum contribution ten.  LIT-086 closes
+the exact \(p=2,\nu=8\) branch: no such finite \(2\)-group exists.
 
-[UNVERIFIED] These are partial finite-\(p\)-group pruning nodes, not an
-exact \(f(8)\), a complete solvable eight-cover classification, or a global
-upper bound for \(h(8)\).  No such complete primary edge was located in the
-2026-08-14 continuation search.
+[PROVED] The finite nilpotent branches are closed.  The nonnilpotent branch
+displayed below is also closed by the repository coprime argument LIT-089,
+which completes the global upper bound \(h(8)\le10\).
 
-## Solvable nonnilpotent common-core node
+[UNVERIFIED] No complete external primary classification at cutoff eight or
+exact value of \(f(8)\) was located in the 2026-08-14 continuation search.
+Neither is a dependency of LIT-089.
+
+## Solvable nonnilpotent common-core and coprime-closure node
 
 ```text
 exact eight-centralizer cover + minimal maximalization [PROVED]
@@ -357,18 +364,39 @@ exact eight-centralizer cover + minimal maximalization [PROVED]
               `-- cutoff-eight |Q|<=81 certificate [COMPUTED]
                     `-- a(G)<=10 [PROVED] (computer-assisted)
 
-any still-open a(G)>10 case has R nontrivial [PROVED]
-  |-- no descent of the exact pairing through Q/R is used [PROVED]
-  `-- control or eliminate this residual [UNVERIFIED]
+any pre-LIT-089 hypothetical a(G)>10 case has R nontrivial [PROVED]
+  |-- canonical P=Phi(Q) is a nontrivial 2-group [PROVED]
+  |-- Q/P = C2^a x C3^b x S3 [PROVED]
+  |     |-- P lies in every common core R [PROVED]
+  |     |-- nonabelian Q/R = C2^a' x C3^b' x S3 [PROVED]
+  |     `-- abelian Q/R = C3^d (2<=d<=7) or C2^2,C2^4,C2^6 [PROVED]
+  `-- binary semidirect sharpening, LIT-088 [PROVED]
+        |-- b=0 and Q = C3 :_chi S, chi:S->C2 onto [PROVED]
+        |-- Phi(Q)=Phi(S)!=1 and |S|<=8192 [PROVED]
+        |-- abelian common quotients only C2^2,C2^4,C2^6 [PROVED]
+        `-- coprime closure, LIT-089 [PROVED]
+              |-- delete central factors: E has same (nu,a) as C3 : U
+              |-- nu(C3 : U) = nu(ker chi) + 3 omega(U setminus ker chi)
+              |-- nu=8 forces (nu(ker chi),omega)=(5,1)
+              `-- five even-fiber + three odd-layer abelian subgroups
+                    `-- a(E)=8 [PROVED]
 ```
 
 [PROVED] The full reduction and its finite/arbitrary-quotient distinctions
-are recorded in `notes/h8_nonnilpotent_reduction.md`.  The common-core
-quotient is used only for the maximal-cover skeleton; exact commutator data
-are invoked only in the core-free case.  Thus this node sharply reduces but
-does not close the solvable nonnilpotent branch or determine \(h(8)\).
+begin in `notes/h8_nonnilpotent_reduction.md`.  LIT-087 makes the residual
+canonical by proving \(1\ne\Phi(Q)\), classifying \(Q/\Phi(Q)\), and
+classifying every common quotient.  LIT-088 removes the ternary central
+factor and proves the displayed \(C_3\)-by-\(2\) semidirect form.  The
+common-core quotient is used only for the maximal-cover skeleton; exact
+commutator data are invoked only where their availability is proved, and no
+pairing is descended through \(Q/\Phi(Q)\) or \(Q/R\).  LIT-089 instead
+removes the exact central extension by central direct factors and proves the
+displayed clique formula directly in an actual semidirect product.  Its two
+independent audits include a frozen pre-clarification payload at SHA-256
+`d99f47b8b28eb78bbe5e1b7012852124f3525c8a618666035c3857e826f9b3e6`;
+both returned PASS with no mathematical blocker.
 
-## Exhaustive cutoff-eight residual node
+## Exhaustive cutoff-eight closure node
 
 [PROVED] LIT-085 connects the previously separate finite-\(p\) and
 nonnilpotent reductions.  The exact finite model preserves both invariants,
@@ -380,14 +408,22 @@ quotient is nilpotent,
 then the model itself is nilpotent.  Two nonabelian Sylow factors would give
 a Cartesian \(3\times3\) nine-clique, so central abelian Sylow factors may
 be discarded and exactly one finite \(p\)-group remains.  The closed
-\(p=3,5,7\) branches and the maximal-member theorem leave only the
-all-nonmaximal \(p=2\) case.  A core-free minimal maximalization there has
-elementary abelian quotient of order at most \(64\), so the bounded
-certificate closes it.
+\(p=3,5,7\) branches and the maximal-member theorem first leave only the
+all-nonmaximal \(p=2\) case.  LIT-086 now eliminates that case as well.
+Thus every nilpotent center-quotient branch is closed.
 
-[PROVED] If the center quotient is nonnilpotent, LIT-084 applies and a
-hypothetical \(a>10\) case has nontrivial common core for every minimal
-maximalization.  Hence the binary all-nonmaximal nontrivial-intersection
-branch and the solvable nonnilpotent nontrivial-core branch are exhaustive.
-[UNVERIFIED] Neither common core has been eliminated, so this node does not
-determine \(h(8)\).
+[PROVED] If the center quotient is nonnilpotent, LIT-084 applies; LIT-087
+identifies the canonical nontrivial binary Frattini kernel, and LIT-088
+reduces the quotient to
+\(Q=C_3\rtimes_\chi S\) with
+\(1\ne\Phi(Q)=\Phi(S)\) and \(|S|\le8192\).  LIT-089 closes this final
+branch by the exact coprime clique formula and an eight-subgroup abelian
+cover.  Together with the \(S(3,2)\) lower witness, the exhaustive graph now
+ends at
+\[
+ \boxed{h(8)=10}.
+\]
+This last edge is computer-assisted through the upstream exact certificates
+and finite-simple-group-classification-dependent through the solvability
+reduction.  It determines only the cutoff \(n=8\); Erdős Problem 117 remains
+open for \(n\ge9\) and at the asymptotic level.

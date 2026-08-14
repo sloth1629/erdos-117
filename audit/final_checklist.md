@@ -13,7 +13,7 @@ These boxes remain open, so no complete solution is claimed.
 
 ## Passed release checks
 
-- [x] Definitions, boundary conventions, and \(n=1,2,3,4,5,6,7\) checked.
+- [x] Definitions, boundary conventions, and \(n=1,2,3,4,5,6,7,8\) checked.
 - [x] Arbitrary and finite groups distinguished and connected by a proved
   exact finite commutation model.
 - [x] Central elements, central cosets, and the false quotient shortcut
@@ -39,32 +39,38 @@ These boxes remain open, so no complete solution is claimed.
 - [x] The finite \(5\)-group cutoff-eight theorem records Berkovich
   Proposition 4.5 at its exact pages, the complete normalized
   \(\mathbf F _5\) hyperplane certificate, the arbitrary-dimensional
-  incidence reduction, and two independent audits.  Its scope is explicitly
-  separated from the still-open global value of \(h(8)\).
+  incidence reduction, and two independent audits.  Its finite scope is
+  connected to the global cutoff-eight theorem only through the exhaustive
+  finite-model partition.
 - [x] The finite \(3\)-group cutoff-eight theorem records the exact
   Berkovich inputs, maximal-centralizer amplification, the \(J\)-versus-\(H'\)
   twelve-clique dichotomy, the scalar-symplectic obstruction, and the final
   private-cell abelian cover.  It proves \(\nu(P)=8\Rightarrow a(P)=8\)
-  only for finite \(3\)-groups and explicitly does not determine \(h(8)\).
+  for finite \(3\)-groups and supplies one branch of the global theorem.
 - [x] The finite \(2\)-group cutoff-eight reduction records the rounded
   factorial intersection bounds, exact order-\(8192\) and order-\(4096\)
   exclusions, the Bonferroni arithmetic, and the Frattini odd-circuit
-  argument.  Its conclusion \([P:Z(P)]\le2048\) is finite-only, and the
-  binary classification remains open.  The separately audited maximal-member
-  lemma closes that subbranch with \([P:Z(P)]\le64\) and \(a(P)\le10\),
-  leaving only the all-nonmaximal binary residual; every minimal
-  maximalization in that residual has nontrivial intersection.
+  argument.  The later inclusion-maximal-centralizer theorem sharpens the
+  quotient to order at most \(128\), and the independently audited
+  scalar-symplectic rank analysis eliminates the equality case.  Thus no
+  finite \(2\)-group has clique number eight.
 - [x] The solvable nonnilpotent reduction keeps the exact center quotient
   separate from its abstract quotients, proves the private-coset and
   Frattini-free Fitting reductions, audits all seven affine factors, invokes
-  exact pairing only when the common core is trivial, and leaves the
-  nontrivial-core branch explicitly unresolved.
+  exact pairing only when the common core is trivial.  The canonical
+  Frattini refinements reduce the nontrivial-core branch to
+  \(Q=C_3\rtimes_\chi S\), with \(1\ne\Phi(Q)=\Phi(S)\) and
+  \(|S|\le8192\); no pairing is descended through the core.
 - [x] The exhaustive cutoff-eight partition passes through the exact finite
   model, the primary-verified finite solvability theorem (with its
   finite-simple-group-classification dependence explicit), and the
-  nilpotent Sylow decomposition.  It proves that the all-nonmaximal binary
-  nontrivial-intersection branch and the solvable nonnilpotent
-  nontrivial-core branch are the only remaining obligations.
+  nilpotent Sylow decomposition.  The binary closure removes the last
+  nilpotent branch.
+- [x] The remaining semidirect/Frattini branch is independently closed by a
+  finite Hall/coprime decomposition, an exact commutation formula, the
+  identity \(\nu=\nu(K)+3\omega(\Omega)\), and the resulting five-plus-three
+  abelian cover.  Together with the lower witness \(S(3,2)\), this proves
+  \(h(8)=10\) for arbitrary groups.
 - [x] Product and limit assertions audited without assuming one-shot
   multiplicativity.
 - [x] Computational witnesses, configurations, versions, hashes, and

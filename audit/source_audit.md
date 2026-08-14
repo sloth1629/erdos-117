@@ -321,13 +321,27 @@ then covered by the pencil intersection and at most three proper subgroup
 intersections, contradicting the elementary \(p+1\) lower bound for a
 proper-subgroup cover of a finite \(p\)-group.
 
-[PROVED] The repository now also closes the finite binary subbranch in
-which one centralizer belonging to a maximum eight-clique is maximal.
+[PROVED] The repository first closed the finite binary subbranch in which
+one centralizer belonging to a maximum eight-clique is maximal.
 The independently reconstructed center-layer twist gives
 \(\nu(H)+[Z(H):Z(P)]\le8\); the exact cutoff-six order-32 certificate and
 the separate \(C_2^5\) theorem then give \([P:Z(P)]\le64\), and the bounded
-cutoff-eight certificate gives \(a(P)\le10\).  This is LIT-083 and leaves
-the all-nonmaximal branch explicit.
+cutoff-eight certificate gives \(a(P)\le10\).  This is LIT-083; its
+all-nonmaximal residual is subsequently closed by LIT-086.
+
+[PROVED] LIT-086 proves, by a computer-assisted argument, that no finite
+\(2\)-group has \(\nu=8\).  The inclusion-maximal element-centralizer
+argument uses the exact binary cutoff-six certificate and an eight-set union
+count to give \([P:Z(P)]\le128\).  The order-at-most-81 cutoff-eight
+certificate excludes quotient order at most 64, while its surviving
+order-64 section forces the scalar nondegenerate symplectic graph on
+\(C_2^6\).  At quotient order 128, conjugation by the outer coset induces
+an involutory symplectic automorphism.  The fixed-hash audit reconstructed
+the rank-zero through rank-three cases, including the nonsplit square and
+center-layer commutator calculations; every case gives a nine-clique or a
+maximal element centralizer already excluded by LIT-083.  The saved
+cutoff-six and cutoff-eight certificate tests passed, and no exploratory
+SmallGroups scan enters this proof.
 
 [PROVED] The repository's solvable nonnilpotent common-core reduction is
 LIT-084.  The structural part is computation-independent: after minimal
@@ -337,7 +351,78 @@ abelian \(2\)-, \(3\)-, \(5\)-, and \(7\)-components, and \(H\) is one of
 seven affine groups.  If \(R=1\), a
 rank-free exact-pairing argument leaves eight center quotients of order at
 most 42; the existing bounded certificate then proves \(a(G)\le10\).
-The exact unresolved task is to control \(R\ne1\).
+This was the first common-core reduction; LIT-087--088 sharpen its
+choice-dependent residual canonically.
+
+[PROVED] LIT-087 shows that every hypothetical remaining nonnilpotent exact
+center quotient has
+
+\[
+ 1\ne P=\Phi(Q),\qquad P\text{ a }2\text{-group},\qquad
+ Q/P\cong C_2^a\times C_3^b\times S_3.
+\]
+
+Every minimal \(Q\)-normal subgroup in \(P\) is central of order two and
+\(P\) lies in every minimal-maximalization core \(R\).  Nonabelian common
+quotients are \(C_2^{a'}\times C_3^{b'}\times S_3\); abelian common
+quotients are \(C_3^d\), \(2\le d\le7\), or
+\(C_2^2,C_2^4,C_2^6\).  The independent audit checked the
+complement-free affine chief-factor lemma, the one-noncentral-minimal-factor
+argument, exact central-fiber forcing, the Frattini/Fitting steps, and the
+private-vector classification.  The implication \(P\ne1\) inherits the
+bounded `[COMPUTED]` dependency from LIT-084.  No exact pairing is asserted
+to descend through \(Q/P\) or \(Q/R\).
+
+[PROVED] LIT-088 further proves
+
+\[
+ Q\cong C_3\rtimes_\chi S,\qquad
+ \chi:S\twoheadrightarrow C_2,\qquad
+ \Phi(Q)=\Phi(S)\ne1,qquad |S|\le8192,
+\]
+
+with \(S\) a finite \(2\)-group acting on \(C_3\) by inversion.  The audit
+checked that every chief factor inside the Frattini kernel is central, that
+odd-order conjugation centralizes the kernel, that the extra central
+\(C_3^b\)-factor vanishes, and that Sylow splitting and the maximal-subgroup
+argument give \(\Phi(Q)=\Phi(S)\).  The factorial center-index bound gives
+\(|S|\le8192\).  Abelian common quotients are now only
+\(C_2^2,C_2^4,C_2^6\), and nonabelian ones have form
+\(C_2^{a'}\times S_3\).  This step uses no new computational classification
+beyond the inherited LIT-084/LIT-087 certificate dependency.  It was the
+last structural residual before LIT-089.
+
+[PROVED] LIT-089 closes that residual in
+`notes/common_core_coprime_closure.md`.  For an exact finite model
+\(E/Z(E)\cong C_3\rtimes_\chi S\), central Hall-factor deletion and the
+coprime decomposition of the normal abelian Sylow \(3\)-subgroup give an
+actual factor
+\[
+ H=C_3\rtimes_{\chi_0}U
+\]
+with \((\nu(E),a(E))=(\nu(H),a(H))\).  If
+\(K=\ker\chi_0\), \(\Omega=U\setminus K\), and \(\omega_\Omega\) is the
+induced odd-coset clique number, direct multiplication proves
+\[
+ \nu(H)=\nu(K)+3\omega_\Omega.
+\]
+At clique number eight the only possibility is
+\((\nu(K),\omega_\Omega)=(5,1)\): clique number two is impossible.  The
+proved value \(h(5)=5\) covers the even fibers with five abelian subgroups,
+and each of the three fixed-coordinate odd layers is internally pairwise
+commuting and generates one more abelian subgroup.  Thus
+\(a(E)=8\).  The closure itself adds no computation.
+
+[PROVED] Two independent audits reconstructed this closure.  One checked the
+frozen pre-clarification payload at SHA-256
+`d99f47b8b28eb78bbe5e1b7012852124f3525c8a618666035c3857e826f9b3e6`;
+the other independently reconstructed the full argument.  Both returned
+PASS with no mathematical blocker.  The current note includes the requested
+explicit averaging-idempotent proof of the noncyclic coprime decomposition
+and the explicit proof that the Sylow \(3\)-subgroup maps onto the normal
+\(C_3\)-factor.  A final no-edit delta audit returned PASS at SHA-256
+`cff76aec929917a4b2bfc85e60cb89b0373c464ea8c2c0bab4d2f658ee250b3b`.
+No audit timing is asserted.
 
 [PROVED] LIT-085 is the repository's exhaustive cutoff-eight partition.
 The finite-model step is self-contained, and the solvability bridge uses the
@@ -349,16 +434,27 @@ minimal-simple classification.  The remaining nilpotent argument is
 self-contained: a central extension of a nilpotent group is nilpotent,
 two nonabelian Sylow factors give a Cartesian nine-clique, central abelian
 Sylow factors do not change either invariant, and the verified finite
-\(p\)-group branches leave only \(p=2\).  Hence the binary all-nonmaximal
-nontrivial-intersection branch and the solvable nonnilpotent
-nontrivial-core branch are the only unresolved cutoff-eight cases.
+\(p\)-group branches first leave only \(p=2\), and LIT-086 now eliminates
+that binary branch.  LIT-087--088 reduce the nonnilpotent alternative to the
+single \(C_3\)-by-\(2\) semidirect/Frattini configuration above.
+
+[PROVED] Combining LIT-089 with the exact finite model, the solvability
+bridge, LIT-064/075/081--088, and the lower witness \(S(3,2)\) gives the
+repository theorem
+\[
+ \boxed{h(8)=10}
+\]
+for arbitrary groups.  This global proof is computer-assisted through the
+upstream exact cutoff certificates and depends on finite-simple-group
+classification through the primary-verified solvability input.  It does not
+claim a complete classification of cutoff-eight groups.
 
 [UNVERIFIED] The accessible primary cutoff-eight sources audited through
 2026-08-14 contain no complete classification of all finite \(p\)-groups,
 all solvable groups, or all finite stem/isoclinism families with
-\(\nu\le8\), and no exact general value of \(f(8)\).  Closing the finite
-\(3\)- and \(5\)-group branches does not support a global upper bound
-for \(h(8)\).
+\(\nu\le8\), and no exact general value of \(f(8)\).  Those external-source
+gaps are not dependencies of LIT-089.  Erdős Problem 117 remains open for
+\(n\ge9\) and for the optimal asymptotic exponential behavior.
 
 ## Exact-formula and alternate-terminology search
 

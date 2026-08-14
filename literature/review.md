@@ -9,8 +9,9 @@ Research cut-off: 2026-08-14.  Here \(\omega(G)=\nu(G)\) is the largest size of 
 [UNVERIFIED] The indexed snapshot of the Erdős Problems page for Problem 117,
 last edited 23 January 2026, labels the problem OPEN and says that no complete
 or partial solution is claimed in its comments.  This is a historical
-external-index snapshot predating the repository's exact-seven proof, not a
-current audit of this repository.  The page itself returned HTTP 403, so the
+external-index snapshot predating the repository's exact-seven and
+exact-eight proofs, not a current audit of those results.  The page itself
+returned HTTP 403, so the
 status is recorded as a search-index observation rather than a verified
 primary mathematical source.
 
@@ -434,16 +435,18 @@ described likewise with \(a=4\), and \(\nu=5\) is impossible.  The
 repository's independently audited structural theorem additionally proves
 that \(\nu=8\) forces \(a=8\); together with the exact values at cutoffs six
 and seven, the maximum finite-\(3\)-group contribution is therefore ten.
-The result gives no complete classification for \(p=2\).  The complete
-finite-5 and finite-3 arguments are in `notes/five_group_nu8.md` and
+At this stage the result gave no complete cutoff-eight classification for
+\(p=2\); that branch is closed below by LIT-086.  The complete finite-5 and
+finite-3 arguments are in `notes/five_group_nu8.md` and
 `notes/three_group_nu8.md`, respectively.
 
 [PROVED] Two later repository reductions sharpen the remaining cutoff-eight
 scope without importing an external classification.  First, if a finite
 \(2\)-group has \(\nu=8\) and one centralizer belonging to a maximum clique
 is maximal, the center-layer twist and the exact cutoff-six/eight
-certificates give \([P:Z(P)]\le64\) and \(a(P)\le10\).  Hence only the
-all-nonmaximal binary configuration remains.  Second, in the solvable
+certificates give \([P:Z(P)]\le64\) and \(a(P)\le10\).  This left the
+all-nonmaximal binary configuration as an intermediate residual.  Second,
+in the solvable
 nonnilpotent branch, a minimal maximalization has a common core \(R\) such
 that \(Q/R\) is abelian or has form \(C\times H\), where \(C\) is central
 and is a direct product of elementary abelian \(2\)-, \(3\)-, \(5\)-, and
@@ -465,14 +468,105 @@ finite \(2\)-group all-nonmaximal case.  A core-free minimal maximalization
 there has quotient order at most \(64\) and is already covered by the exact
 certificate.  The nonnilpotent alternative is exactly LIT-084.  Thus no
 semisimple or mixed-prime nilpotent branch remains, although neither
-nontrivial common core has been eliminated.
+nontrivial common core had yet been eliminated at that stage.
+
+[PROVED] LIT-086 eliminates the binary residual completely by a
+computer-assisted proof.  Ascending the eight clique centralizers only
+inside the poset of proper element centralizers gives inclusion-maximal
+element centralizers and the universal bound
+\([P:Z(P)]\le128\).  This step uses the exact binary cutoff-six certificate.
+The order-at-most-81 cutoff-eight certificate excludes quotient orders at
+most 64, so a hypothetical group lies on the order-128 boundary and
+contains an exact order-64 scalar symplectic subgroup.  Conjugation by an
+outer coset induces an involution on its nondegenerate
+\(\mathbf F _2^6\)-space.  The independently audited rank-zero through
+rank-three analysis produces either a nine-clique or a maximal element
+centralizer already closed by LIT-083.  Thus no finite \(2\)-group has
+\(\nu=8\).  No exploratory SmallGroups scan is used in this closure.
+
+[PROVED] LIT-087 replaces the choice-dependent nonnilpotent core by a
+canonical one.  For any hypothetical remaining finite quotient
+\(Q=G/Z(G)\),
+
+\[
+  1\ne P=\Phi(Q),\qquad P\text{ is a }2\text{-group},\qquad
+  Q/P\cong C_2^a\times C_3^b\times S_3.
+\]
+
+Every minimal \(Q\)-normal subgroup in \(P\) is central of order two, and
+\(P\) lies in the core of every minimal maximalization.  The resulting
+nonabelian common quotients are exactly
+\(C_2^{a'}\times C_3^{b'}\times S_3\); the abelian ones are
+\(C_3^d\) for \(2\le d\le7\), or
+\(C_2^2,C_2^4,C_2^6\).  The proof uses the complement-free affine
+chief-factor lemma, exact central-fiber forcing, and the private-vector
+calculation.  The assertion \(P\ne1\) inherits the bounded
+`[COMPUTED]` dependency from LIT-084; no commutator pairing is descended
+through \(Q/P\) or a common-core quotient.
+
+[PROVED] LIT-088 sharpens this canonical skeleton to
+
+\[
+ Q\cong C_3\rtimes_\chi S,qquad
+ \chi:S\twoheadrightarrow C_2,qquad
+ \Phi(Q)=\Phi(S)\ne1,qquad |S|\le8192,
+\]
+
+where the finite \(2\)-group \(S\) acts on \(C_3\) by inversion.  Odd-order
+conjugation centralizes the Frattini kernel, which removes the extra central
+\(C_3^b\)-factor; Sylow splitting identifies the displayed semidirect
+product and its Frattini subgroup.  Abelian common quotients are now only
+\(C_2^2,C_2^4,C_2^6\), while nonabelian ones are
+\(C_2^{a'}\times S_3\).  This was the final branch in the then-open
+cutoff-eight partition before the coprime closure LIT-089 below.
+
+[PROVED] LIT-089 closes that branch without descending commutation through
+the Frattini quotient.  If a finite exact model \(E\) has
+\(E/Z(E)\cong C_3\rtimes_\chi S\), central Hall-factor deletion and the
+coprime-action decomposition replace it, without changing either invariant,
+by
+\[
+ H=C_3\rtimes_{\chi_0}U,
+\]
+where \(U\) is a finite \(2\)-group.  With
+\(K=\ker\chi_0\) and \(\Omega=U\setminus K\), direct multiplication gives
+the exact formula
+\[
+ \nu(H)=\nu(K)+3\omega_\Omega,
+\]
+where \(\omega_\Omega\) is the largest size of a pairwise noncommuting
+subset of \(U\) contained in \(\Omega\).  Since a group cannot have clique
+number two, \(\nu(H)=8\) forces
+\((\nu(K),\omega_\Omega)=(5,1)\).  The proved value \(h(5)=5\) gives five
+abelian subgroups covering the even fibers, while each of the three fixed
+\(C_3\)-coordinate odd layers is internally pairwise commuting and therefore
+generates an abelian subgroup.  Hence \(a(H)=8\), and therefore \(a(E)=8\).
+
+[PROVED] Combining LIT-089 with the exact arbitrary-to-finite model,
+LIT-064/075/081--088, and the proved \(h(7)=10\) gives
+\[
+ \boxed{h(8)=10}.
+\]
+The lower bound is supplied by the existing group \(S(3,2)\), with
+\((\nu,a)=(7,10)\).  The global upper proof is computer-assisted through
+its saved exact cutoff certificates and depends on finite-simple-group
+classification through the primary-verified solvability reduction.  The
+coprime closure itself introduces no new computation.  One independent
+audit reconstructed the frozen pre-clarification payload at SHA-256
+`d99f47b8b28eb78bbe5e1b7012852124f3525c8a618666035c3857e826f9b3e6`,
+and a second independent from-scratch audit reconstructed the same closure;
+both returned PASS with no mathematical blocker.  The subsequently inserted
+averaging and Sylow-image details make explicit two clarifications requested
+by the audits.
 
 [UNVERIFIED] No accessible primary source located through the 2026-08-14
 continuation search gives a complete classification of all finite
 \(p\)-groups, all solvable groups, or all stem/isoclinism families with
-\(\nu\le8\), nor an exact general value of \(f(8)\).  Berkovich's verified
-theorems and the repository's finite \(3\)- and \(5\)-group closures still do
-not give a global value of \(h(8)\).
+\(\nu\le8\), nor an exact general value of \(f(8)\).  This external-source
+and \(f(8)\) gap does not reopen the repository proof of \(h(8)=10\), which
+avoids such a classification.  Erdős Problem 117 remains open beyond this
+exact cutoff: in particular, the values for \(n\ge9\) and the optimal
+asymptotic exponential behavior are not determined here.
 
 ## Forward citations and possible later resolutions
 

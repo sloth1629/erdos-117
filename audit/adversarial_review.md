@@ -1,8 +1,9 @@
 # Adversarial Review
 
 [DISPROVED] The proposed global closed formula has not survived review.
-The separate cutoff-seven theorem \(h(7)=10\), however, has now survived the
-independent audit recorded below.
+The separate exact-cutoff theorems \(h(7)=10\) and \(h(8)=10\), however,
+have survived the independent audits recorded below.  They do not resolve
+Erdős Problem 117 for \(n\ge9\) or determine its asymptotic behavior.
 
 ## Workstream D findings
 
@@ -290,9 +291,10 @@ Continue auditing quantifiers, finite/infinite scope, central-coset arguments, p
   \(5\)-group.  No finite \(5\)-group has \(\nu=8\), and the verified
   \(\nu=p+1\) and \(\nu\ne p+2\) results give exactly
   \((\nu,a)=(1,1)\) or \((6,6)\) at cutoff eight.
-- [UNVERIFIED] This audit closes only the finite \(5\)-group branch.  The
-  finite \(3\)-group branch is closed separately below, while the finite
-  \(2\)-group branch is only reduced; no global value of \(h(8)\) follows.
+- [PROVED] This audit closes only the finite \(5\)-group branch.  The finite
+  \(3\)-group branch is closed separately below, the finite \(2\)-group
+  exact-cutoff branch is closed by LIT-086, and the nonnilpotent branch is
+  subsequently closed by LIT-089.
 
 ### Finite \(3\)-groups at cutoff eight
 
@@ -308,7 +310,7 @@ Continue auditing quantifiers, finite/infinite scope, central-coset arguments, p
   Its exact distribution contains no \(\nu=8\) group and its dedicated
   producer, analyzer, witnesses, and independent verifier were reproduced.
 
-### Finite \(2\)-group maximal-member branch
+### Finite \(2\)-group exact cutoff-eight closure
 
 - [PROVED] The center-layer twist in `notes/two_group_nu8_next.md` was
   independently reconstructed.  If \(H=C_P(x)\) is maximal for a member of
@@ -325,9 +327,29 @@ Continue auditing quantifiers, finite/infinite scope, central-coset arguments, p
 - [PROVED] Combining these inputs gives \([P:Z(P)]\le64\), and the complete
   order-at-most-81 cutoff-eight certificate gives \(a(P)\le10\).  Therefore
   any finite \(2\)-group \(P\) with \(\nu(P)=8\) and \(a(P)>10\) has every
-  centralizer in every maximum eight-clique nonmaximal.  This is a
-  computer-assisted closure of one subbranch, not a classification of
-  finite \(2\)-groups.
+  centralizer in every maximum eight-clique nonmaximal.  This is the
+  intermediate LIT-083 subbranch.
+- [PROVED] The inclusion-maximal element-centralizer proof was independently
+  reconstructed.  Ascending inside the finite poset of proper element
+  centralizers, rather than to arbitrary maximal subgroups, gives
+  \([C:Z(P)]\le32\) in the all-nonmaximal case.  The eight images cover
+  \(P/Z(P)\), so the union count gives \([P:Z(P)]\le128\).  The only
+  computational input at this step is the exact binary cutoff-six
+  certificate used in the local table.
+- [COMPUTED] The saved order-at-most-81 cutoff-eight certificate excludes
+  every binary exact center quotient of order at most 64 at clique number
+  eight.  On its order-64 boundary it leaves only the scalar nondegenerate
+  symplectic graph on \(C_2^6\), whose clique number is seven.  The focused
+  cutoff-six tests and saved cutoff-eight verifier were rerun successfully.
+- [PROVED] At the forced order-128 boundary, an index-two scalar symplectic
+  section is normal and outer conjugation induces an involution of its
+  six-dimensional symplectic space.  The fixed-hash audit checked the
+  quotient commutation identities without assuming a split extension, all
+  thirty pairings in the two six-cliques, both center-layer commutator
+  identities, and every rank \(0,1,2,3\).  Each rank gives a nine-clique or
+  the LIT-083 maximal-centralizer contradiction.  Therefore no finite
+  \(2\)-group has \(\nu=8\).  No exploratory SmallGroups scan is a proof
+  input.
 
 ### Solvable nonnilpotent common-core branch
 
@@ -345,12 +367,53 @@ Continue auditing quantifiers, finite/infinite scope, central-coset arguments, p
   checked the explicit \(S_4\) ten-clique and all affine-fiber inequalities.
 - [COMPUTED] The saved cutoff-eight certificate for all center quotients of
   order at most 81 was independently rerun and passed.
-- [PROVED] Consequently, any still-open nonnilpotent case has \(R\ne1\).
+- [PROVED] Consequently, at that intermediate stage any hypothetical
+  nonnilpotent case had \(R\ne1\).
   The common-core quotient is used only for the maximal-cover skeleton; no
   descent of the exact commutator pairing through \(Q\to Q/R\) is used.
-- [UNVERIFIED] Controlling or eliminating this nontrivial common core is the
-  precise remaining nonnilpotent obstruction; no capability converse or
-  quotient-clique substitution is asserted.
+- [PROVED] The canonical Frattini reduction was independently reconstructed.
+  In every hypothetical remaining case,
+  \(1\ne P=\Phi(Q)\) is a \(2\)-group and
+  \(Q/P\cong C_2^a\times C_3^b\times S_3\).  Every minimal
+  \(Q\)-normal subgroup in \(P\) is central of order two, and \(P\) lies
+  in every minimal-maximalization core \(R\).  The nonabelian common
+  quotients are \(C_2^{a'}\times C_3^{b'}\times S_3\); the abelian ones
+  are \(C_3^d\), \(2\le d\le7\), or
+  \(C_2^2,C_2^4,C_2^6\).  Nontriviality of \(P\) retains the bounded
+  `[COMPUTED]` dependency above.
+- [PROVED] The sharper binary semidirect-product audit gives
+  \(Q=C_3\rtimes_\chi S\), where \(S\) is a finite \(2\)-group,
+  \(\chi:S\twoheadrightarrow C_2\) acts by inversion,
+  \(\Phi(Q)=\Phi(S)\ne1\), and \(|S|\le8192\).  The audit checked the
+  central chief factors, odd-order centralization of the Frattini kernel,
+  elimination of \(C_3^b\), Sylow splitting, the equality of Frattini
+  subgroups, and the factorial order bound.  Abelian common quotients are
+  now only \(C_2^2,C_2^4,C_2^6\); nonabelian ones are
+  \(C_2^{a'}\times S_3\).
+- [PROVED] LIT-089 removes the exact central extension by central direct
+  factors rather than descending a commutator pairing through a quotient.
+  It reduces to \(H=C_3\rtimes_{\chi_0}U\), sets
+  \(K=\ker\chi_0\) and \(\Omega=U\setminus K\), and derives directly
+  \[
+    \nu(H)=\nu(K)+3\omega_\Omega.
+  \]
+  Both directions were checked, including repeated projections above an odd
+  element and all even--odd pairs.
+- [PROVED] At \(\nu(H)=8\), the impossibility of clique number two forces
+  \((\nu(K),\omega_\Omega)=(5,1)\).  Five abelian subgroups from
+  \(h(5)=5\) cover the even fibers.  Each of the three fixed-coordinate odd
+  layers is pairwise commuting, so the subgroup it generates is abelian;
+  these three subgroups cover the odd fibers.  Therefore \(a(H)=8\), and the
+  central factor reduction gives \(a(E)=8\).
+- [PROVED] Two independent audits returned PASS with no mathematical
+  blocker.  One checked the frozen pre-clarification payload at SHA-256
+  `d99f47b8b28eb78bbe5e1b7012852124f3525c8a618666035c3857e826f9b3e6`;
+  the other reconstructed the closure independently.  The final note adds
+  the requested explicit averaging-idempotent proof and the Sylow-image
+  justification.  A separate no-edit delta audit returned PASS for that
+  final note at SHA-256
+  `cff76aec929917a4b2bfc85e60cb89b0373c464ea8c2c0bab4d2f658ee250b3b`.
+  No audit timing is recorded or inferred.
 
 ### Exhaustive cutoff-eight partition
 
@@ -365,16 +428,18 @@ Continue auditing quantifiers, finite/infinite scope, central-coset arguments, p
   \((\nu,a)\) after discarding central abelian Sylow factors.  Berkovich and
   the closed \(3\)-, \(5\)-, and \(7\)-branches therefore leave only
   \(p=2\).
-- [PROVED] In the binary branch every maximum-clique centralizer is
-  nonmaximal.  For any chosen maximal overgroups, a minimal cover has
-  \(k\in\{3,5,7\}\); its maximal members are normal, so a trivial
-  intersection would make the center quotient \(C_2^{k-1}\) of order at
-  most \(64\), already closed by the bounded certificate.
+- [PROVED] The earlier exhaustive partition left an all-nonmaximal binary
+  residual.  LIT-086 eliminates it completely: inclusion-maximal element
+  centralizers force quotient order at most 128, and the audited symplectic
+  boundary argument excludes the sole remaining order.
 - [PROVED] In the nonnilpotent branch, any maximalization with trivial core
-  is closed by the preceding common-core proposition.  Hence a hypothetical
-  \(a>10\) group lies in exactly one of the two nontrivial-core residuals.
-- [UNVERIFIED] This proves exhaustion, not elimination.  Both nontrivial
-  common cores remain open and \(h(8)\) is not determined.
+  is closed by the preceding common-core proposition.  LIT-087 identifies a
+  canonical nontrivial binary Frattini kernel, and LIT-088 reduces its exact
+  quotient to \(C_3\rtimes_\chi S\) with
+  \(1\ne\Phi(Q)=\Phi(S)\) and \(|S|\le8192\).
+- [PROVED] LIT-089 closes that last semidirect/Frattini branch by the exact
+  coprime clique formula and the five-plus-three abelian cover.  Thus the
+  exhaustive cutoff-eight partition has no residual branch.
 
 ### Verdict
 
@@ -387,14 +452,25 @@ Continue auditing quantifiers, finite/infinite scope, central-coset arguments, p
   final serialization-only normalization, the then-complete 25-test suite
   passed in 211.839 seconds.  The later release worktree, including the
   cutoff-eight and local-counterexample additions, followed by the binary
-  rank-three order-64 tail, passed all 34 tests in 683.411 seconds.
+  rank-three order-64 tail, passed all 34 tests in 517.555 seconds.
 - [PROVED] Subject to the explicitly identified [CITED-VERIFIED]
   \(f(7)=81\) input and the exact [COMPUTED] certificates above, the case
   split proves \(a(G)\le10\) for every arbitrary group with
   \(\nu(G)\le7\). The independently proved group \(S(3,2)\), with
   \((\nu,a)=(7,10)\), supplies the reverse inequality. Hence the audited
   conclusion is \(h(7)=10\).
+- [PROVED] The exact finite-model reduction, the primary-verified solvability
+  bridge, the complete nilpotent closures, and LIT-089 together prove
+  \(a(G)\le10\) for every arbitrary group with \(\nu(G)\le8\).  The same
+  group \(S(3,2)\) supplies equality, so the audited conclusion is
+  \(h(8)=10\).  This proof is computer-assisted through the upstream saved
+  exact certificates and finite-simple-group-classification-dependent
+  through the solvability bridge; LIT-089 itself uses no new computation.
+- [UNVERIFIED] No conclusion for \(h(n)\) with \(n\ge9\), no optimal
+  exponential constant, and no complete solution of Erdős Problem 117 is
+  established by the cutoff-eight theorem.
 - [UNVERIFIED] No blocking mathematical, direction-of-duality,
   faithfulness, action-invariance, enumeration-completeness, or global
-  coverage defect was found. This statement records the scope of the audit,
-  not a claim that arbitrary future implementation changes are defect-free.
+  coverage defect was found in the audited cutoff-seven and cutoff-eight
+  chains. This statement records the scope of the audit, not a claim that
+  arbitrary future implementation changes are defect-free.

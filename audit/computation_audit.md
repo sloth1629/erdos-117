@@ -278,7 +278,7 @@ labeled simple graphs on at most six vertices, and also checks group axioms,
 coset invariance, named records, direct-product/OR compatibility, witnesses,
 and the \(E_m\) symplectic model for \(m=1,2,3\). It also reparses and verifies
 every saved Python and GAP certificate. The latest 2026-08-14 run passed all
-34 tests in 683.411 seconds under Python 3.9.6. The extended tests independently rebuild the
+34 tests in 517.555 seconds under Python 3.9.6. The extended tests independently rebuild the
 scalar graphs, four residual searches, strongly regular parameters, spreads,
 the order-128 prefilter survivors, every exterior-square graph witness, the
 eleven cutoff-seven dual searches, all 26,387 ID-261 affine records, and the
