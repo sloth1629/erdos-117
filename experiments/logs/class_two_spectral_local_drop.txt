@@ -1,0 +1,29 @@
+[COMPUTED] Spectral local-drop refinement certificates
+
+Date: 2026-08-14
+Runtime: /usr/bin/python3 3.9.6, standard library only
+Command:
+  PYTHONPYCACHEPREFIX=/tmp/e117-qld-pycache /usr/bin/python3 -m unittest src.verification.test_class_two_spectral_local_drop -v
+
+Result:
+  test_refinement_certificates ... ok
+  Ran 1 test in 0.050s
+  OK
+
+The verifier checks:
+
+- the normalized triangular cocycle on basis pairs and the radical-free
+  ten-by-five alternating map defining the order-32768 example;
+- the exact five-clique and exhaustive absence of a six-clique in its
+  compressed centralizer;
+- the spectral distribution {0:1, 1:5, 2:10, 3:10, 5:5}, weighted sum
+  237/32, and oriented lower bound five;
+- the 32-point affine clique;
+- every row of the oriented threshold table for dimensions 4 through 15;
+- the pair-capacity and incidence contradictions forcing at least 41
+  saturated operators in the q=64, delta=2 residual.
+
+Artifact SHA-256:
+  6de413c5062d978bd12b9a37750c98c1ed7deb60aafdd8a711a57bf0018889e0  notes/class_two_spectral_local_drop.md
+  c319ee89c7aab966099cc77e9b07c7c155356a75c1a9b391d5e01dba71b33b5d  src/verification/verify_class_two_spectral_local_drop.py
+  6851af8e3f1be86208806f07db847f70995112bc2f0d2f04d1bd2da980fb8059  src/verification/test_class_two_spectral_local_drop.py

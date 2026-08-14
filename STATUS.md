@@ -79,8 +79,13 @@ semidirect Frattini branch has an exact \(5+3\) abelian cover.
    exact-extension certificates.  For finite class-two \(p\)-groups,
    every abelian \(A\ge Z(P)\) satisfies
    \([A:Z(P)]\le p^{\nu(P)/p}\), with a drop-sensitive relative-center
-   form.  These are structural inputs to the exact cutoff-eight theorem,
-   not a fixed-base global upper bound.
+   form.  A separate weighted spectral-shift theorem controls elementary
+   commutator images even when the centralizer is nonabelian and the group
+   has arbitrary exponent.  In the faithful binary slice it proves
+   quadratic local drop for \(|[x,P]|\le32\), and for \(|[x,P]|=64\) when
+   \(\nu(C_P(x))\le40\).  The full quadratic inequality and invisible
+   higher-exponent layers remain open.  These are structural inputs, not a
+   fixed-base global upper bound.
 10. The finite \(5\)-group branch at cutoff eight is completely eliminated:
     a computer-assisted small-\(\mathbf F _5\) hyperplane lemma and
     Berkovich's verified Proposition 4.5 prove that

@@ -338,6 +338,47 @@ or to \(m-r\) in the relative form.  It does not bound the complementary
 index \([P:H]\); that is the explicitly recorded remaining local obstacle
 to a fixed-base class-two theorem.
 
+### [PROVED] A spectral partial result toward quadratic local drop
+
+Let \(x\notin Z(P)\), put
+
+\[
+H=C_P(x),\qquad
+\delta=\nu(P)-\nu(H),\qquad
+D=[x,P],\qquad q=|D|=[P:H].
+\]
+
+The full candidate
+
+\[
+q\le4(\delta+1)^2
+\]
+
+remains `[UNVERIFIED]`.  Nevertheless, the weighted spectral-shift theorem in
+`class_two_spectral_local_drop.md` gives a rigorous partial range.  It sends
+the actual commutators to an arbitrary elementary quotient, linearizes each
+member of a maximum \(H\)-clique, and combines independent \(x\)-shifts with
+a Caro--Wei bound on an affine layer.  No exponent-\(p\) hypothesis on \(P\)
+and no abelianness hypothesis on \(H\) is used.
+
+If the elementary quotient is faithful on \(D\), equivalently
+
+\[
+D\cap(P')^p=1,
+\]
+
+then in the binary case the candidate is proved whenever \(q\le32\).  For
+\(q=64\) it is also proved when \(\nu(H)\le40\).  Any remaining faithful
+binary \(q=64\) counterexample must have
+
+\[
+\delta=2,qquad \nu(H)\ge41,
+\]
+
+and its saturated eigenspace pairs must separate every pair of the 63 nonzero
+directions with opposite eigenvalue labels.  Higher-rank faithful systems and
+commutator layers invisible in every elementary quotient remain open.
+
 ## The quadratic conjugacy-class mechanism
 
 ### [PROVED] Finite-group conjugacy-class bound

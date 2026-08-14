@@ -68,6 +68,12 @@ No complete resolution is claimed. The strongest repository results are:
   and \(A\ge Z(P)\) is abelian, then
   \([A:Z(P)]\le p^{\nu(P)/p}\); a relative version charges the exponent to
   \(\nu(P)-\nu(H)\) for \(A=Z(H)\).
+- [PROVED] A weighted spectral-shift theorem now controls the visible
+  elementary part of a class-two local centralizer index without assuming an
+  exponent-\(p\) group or an abelian centralizer.  In the faithful binary
+  slice it proves the quadratic local-drop bound for commutator-image order at
+  most 32, and for order 64 when the centralizer clique number is at most 40.
+  Full quadratic local drop remains unproved.
 - [PROVED] The finite \(5\)-group branch at cutoff eight is closed.  A
   certified small-\(\mathbf F _5\) hyperplane theorem, combined with
   Berkovich's verified maximal-member bound, proves that
