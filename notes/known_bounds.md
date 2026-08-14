@@ -122,6 +122,70 @@ This strictly improves the preceding factorial recurrence. It is still
 superexponential and hence weaker asymptotically than Pyber's reported
 fixed-base exponential theorem, whose primary proof remains inaccessible.
 
+### [PROVED] Private-cell recurrence
+
+For every \(n\geq3\),
+
+\[
+h(n)\leq 1+(n-1)h(n-2).
+\]
+
+**Proof.** Let \(G\) satisfy \(\nu(G)=m\leq n\). If \(G\) is abelian, then
+\(a(G)=1\), so suppose that \(G\) is nonabelian. Thus \(m\geq3\). Choose a
+maximum noncommuting set \(X=\{x_1,\ldots,x_m\}\), put
+\(C_i=C_G(x_i)\), and define the private cell
+
+\[
+P_i=C_i\mathbin{\big\backslash}\bigcup_{k\ne i}C_k.
+\]
+
+Each \(P_i\) is nonempty: \(x_i\in P_i\), because the members of \(X\) are
+pairwise noncommuting. Moreover, \(P_i\) is a pairwise commuting set. Indeed,
+if \(y,z\in P_i\) did not commute, then each of \(y,z\) would fail to commute
+with every \(x_k\) for \(k\ne i\), and hence
+
+\[
+(X\setminus\{x_i\})\cup\{y,z\}
+\]
+
+would be a noncommuting set of size \(m+1\), a contradiction. Consequently
+\(A_i=\langle P_i\rangle\) is an abelian subgroup: all generators in \(P_i\)
+commute pairwise, so all words in those generators and their inverses commute.
+This is the step for which treating a commuting set itself as a subgroup would
+not suffice.
+
+Fix an index \(j\). The usual maximum-clique argument gives
+\(G=\bigcup_i C_i\). If an element \(g\) lies outside every \(C_i\) with
+\(i\ne j\), it must therefore lie in \(C_j\), and then the definition gives
+\(g\in P_j\subseteq A_j\). Thus the following is an actual subgroup cover:
+
+\[
+G=A_j\cup\bigcup_{i\ne j}C_i.
+\]
+
+Every \(x_i\) is noncentral, and the proved two-step centralizer drop gives
+\(\nu(C_i)\leq m-2\). Covering each of the \(m-1\) displayed centralizers by
+at most \(h(m-2)\) abelian subgroups, while retaining the single abelian
+subgroup \(A_j\), yields
+
+\[
+a(G)\leq1+(m-1)h(m-2)
+      \leq1+(n-1)h(n-2).
+\]
+
+Here the last inequality uses monotonicity of \(h\). Taking the supremum over
+all \(G\) with \(\nu(G)\leq n\) proves the recurrence. The argument applies to
+arbitrary groups; the abelian and trivial cases were separated at the start,
+and no finiteness or choice of coset representatives is used. \(\square\)
+
+For example, the exact value \(h(6)=6\) gives the unconditional improvement
+
+\[
+h(8)\leq1+7h(6)=43,
+\]
+
+in place of the preceding recurrence's bound \(h(8)\leq8h(6)=48\).
+
 ## The quadratic conjugacy-class mechanism
 
 ### [PROVED] Finite-group conjugacy-class bound

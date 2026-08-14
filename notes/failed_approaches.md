@@ -63,3 +63,38 @@ characteristic can outperform the binary family at finite parameters.
 supports a fixed-base finite-group center-index bound, but not its detailed
 constant or proof. The explicit expression found in a dissertation remains
 secondary evidence and is not a load-bearing repository theorem.
+
+## Bounding a capable quotient from its own clique number
+
+[DISPROVED] The proposed cutoff-eight reduction
+
+\[
+Q\text{ finite, solvable and capable},\quad \nu(Q)\leq8
+\quad\Longrightarrow\quad |Q|\leq108
+\]
+
+is false, even with \(8\) replaced by \(4\). For any prime \(p\), let \(E_p\)
+be an extraspecial group of order \(p^3\). Then
+
+\[
+Z(E_p)\cong C_p,\qquad E_p/Z(E_p)\cong C_p^2.
+\]
+
+Since \(S_3\) is centerless, the group \(E_p\times S_3\) has central quotient
+
+\[
+(E_p\times S_3)/Z(E_p\times S_3)\cong C_p^2\times S_3.
+\]
+
+Thus \(Q_p=C_p^2\times S_3\) is finite, solvable, and capable for every
+prime \(p\). Its abelian direct factor has no effect on commutation, so
+\(\nu(Q_p)=\nu(S_3)=4\), whereas \(|Q_p|=6p^2\) is unbounded.
+
+Reusable replacement: a cutoff argument must retain the commutator map of
+the **particular exact central extension** \(G\to Q=G/Z(G)\) and the
+hypothesis \(\nu(G)\leq8\); capability and \(\nu(Q)\) alone discard precisely
+the information that can control central chief factors. For example, in the
+displayed witness extension, a \((p+1)\)-clique in \(E_p\) and a four-clique
+in \(S_3\) have Cartesian product a \(4(p+1)\)-clique in \(E_p\times S_3\).
+This is only the general OR-product lower bound obtained by multiplying two
+explicit cliques, not a claim of clique-number multiplicativity.
