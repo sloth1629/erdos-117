@@ -267,3 +267,79 @@ regular cases. `h7_c2_3_d8.py` supplies the separate affine parametrization
 for ID 261 and an independent saved-record verifier. The unit suite freshly
 rebuilds both certificate families and asserts their pairwise-disjoint global
 partition with the ordinary, delegated, exterior-zero, and special cases.
+
+## Cutoff-eight bounded slice
+
+`h8_bounded_cutoff.py` and `h8_order64_dual.py` exactly reanalyze the saved
+cutoff-seven ordinary, delegated, and order-64 records at target clique nine.
+`run_h8_bounded_cutoff.py` writes only repository-relative source and input
+paths, hashes every dependency, and builds the canonical bounded certificate.
+`analyze_h8_literature_candidate_inventory.py` verifies the separate
+three-quotient post-81 feasibility export, while
+`analyze_h8_sg108_exterior_scan.py` verifies every one of the 84 normal
+exterior kernels for `SmallGroup(108,41)`.
+
+From the repository root, regenerate the bounded \(|Q|\le81\) JSON with:
+
+```bash
+PYTHONPYCACHEPREFIX=/tmp/erdos117-h8-pycache \
+python3 src/python/run_h8_bounded_cutoff.py \
+  --ordinary-batch experiments/logs/h7_exterior_1_36.json \
+  --ordinary-batch experiments/logs/h7_exterior_37_63.json \
+  --ordinary-batch experiments/logs/h7_exterior_64_1_191.json \
+  --ordinary-batch experiments/logs/h7_exterior_65_80.json \
+  --ordinary-batch experiments/logs/h7_exterior_81.json \
+  --generic-export experiments/logs/h7_order64_dual_193.tsv \
+  --generic-export experiments/logs/h7_order64_dual_195.tsv \
+  --generic-export experiments/logs/h7_order64_dual_202.tsv \
+  --generic-export experiments/logs/h7_order64_dual_203.tsv \
+  --generic-export experiments/logs/h7_order64_dual_207.tsv \
+  --generic-export experiments/logs/h7_order64_dual_211.tsv \
+  --generic-export experiments/logs/h7_order64_dual_216.tsv \
+  --generic-export experiments/logs/h7_order64_dual_226.tsv \
+  --generic-export experiments/logs/h7_order64_dual_236.tsv \
+  --generic-export experiments/logs/h7_order64_dual_242.tsv \
+  --generic-export experiments/logs/h7_order64_dual_250.tsv \
+  --sg192-document experiments/logs/h7_c4_2_c2_2.json \
+  --sg261-document experiments/logs/h7_c2_3_d8.json \
+  --sg261-export experiments/logs/h7_c2_3_d8.tsv \
+  --delegation c2_5=experiments/logs/h6_c2_5.json \
+  --delegation c2_6_rank4=experiments/logs/h7_c2_6_rank4_pencils.json \
+  --delegation c2_6_rank6=experiments/logs/h7_c2_6_rank6_pencils.json \
+  --delegation c3_4=experiments/logs/h7_c3_4.json \
+  --delegation order64_zero_rows=experiments/logs/h7_capability_order64.json \
+  --output experiments/logs/h8_bounded_cutoff.json \
+  --stdout-log experiments/logs/h8_bounded_cutoff.stdout.txt
+```
+
+After running the two GAP configurations documented in
+`experiments/configs/README.md`, regenerate their analyzed records with:
+
+```bash
+PYTHONPYCACHEPREFIX=/tmp/erdos117-h8-pycache \
+python3 src/python/analyze_h8_literature_candidate_inventory.py \
+  --input experiments/logs/h8_literature_candidate_inventory.tsv \
+  --gap-script experiments/configs/h8_literature_candidate_inventory.g \
+  --gap-stdout experiments/logs/h8_literature_candidate_inventory_gap.stdout.txt \
+  --output experiments/logs/h8_literature_candidate_inventory.json \
+  --stdout-log experiments/logs/h8_literature_candidate_inventory.stdout.txt
+PYTHONPYCACHEPREFIX=/tmp/erdos117-h8-pycache \
+python3 src/python/analyze_h8_sg108_exterior_scan.py \
+  --input experiments/logs/h8_sg108_exterior_scan.tsv \
+  --gap-script experiments/configs/h8_sg108_exterior_scan.g \
+  --gap-stdout experiments/logs/h8_sg108_exterior_scan_gap.stdout.txt \
+  --inventory experiments/logs/h8_literature_candidate_inventory.json \
+  --output experiments/logs/h8_sg108_exterior_scan.json \
+  --stdout-log experiments/logs/h8_sg108_exterior_scan.stdout.txt
+```
+
+The independent saved-record verifier is:
+
+```bash
+PYTHONPYCACHEPREFIX=/tmp/erdos117-h8-test-pycache \
+python3 -m unittest src.verification.test_h8_bounded_cutoff -v
+```
+
+`[COMPUTED]` These commands certify the stated bounded slice and the three
+individual post-81 dispositions only. `[UNVERIFIED]` They do not give a
+global upper bound for \(h(8)\) or a complete post-81 quotient inventory.

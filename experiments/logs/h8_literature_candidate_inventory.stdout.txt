@@ -1,0 +1,5 @@
+[COMPUTED] feasibility-only post-81 candidate inventory; no cutoff graph scan or h(8) completeness claim
+Q=SmallGroup(96,227) abstract_omega=29 exterior=384 normal_kernels=24 disposition=excluded_by_abstract_quotient_clique feasibility=direct_small
+Q=SmallGroup(108,41) abstract_omega=5 exterior=216 normal_kernels=84 disposition=requires_exterior_kernel_scan feasibility=direct_small
+Q=SmallGroup(144,196) abstract_omega=10 exterior=1728 normal_kernels=19775 disposition=excluded_by_abstract_quotient_clique feasibility=direct_batched
+wrote experiments/logs/h8_literature_candidate_inventory.json

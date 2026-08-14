@@ -99,6 +99,25 @@ Store reproducible text logs here; large or licensed artifacts must not be commi
   annihilators; 26,323 have a saved 8-clique and 64 have a saved nontrivial
   radical. The all-even case has a separate explicit commutator-row
   obstruction.
+- `h8_bounded_cutoff.json` and stdout: `[COMPUTED]` canonical cutoff-eight
+  reanalysis of the already certified 738 quotient types with \(|Q|\le81\).
+  Its SHA-256 is
+  `052036975d9a6d30d920873ae8f171dbaa010eec6c7852b3180a918050b0ae61`.
+  The exact scope string is “center quotients |Q|<=81 only; no global h(8)
+  upper bound.”
+- `h8_literature_candidate_inventory.{tsv,json}` and the two stdout files:
+  `[COMPUTED]` feasibility-only records for the three named post-81
+  quotients. The raw TSV and analyzed JSON SHA-256 values are respectively
+  `cdc74d7e60f70793b6df40821dd6522f7488306f9737ebe4964adcca6c37c790`
+  and
+  `14b10618cb4c1edae5c706420e2eec18d883ddde405057217a7d2bf85daccac3`.
+- `h8_sg108_exterior_scan.{tsv,json}` and the two stdout files:
+  `[COMPUTED]` complete normal-kernel scan for `SmallGroup(108,41)`. The raw
+  TSV and analyzed JSON SHA-256 values are respectively
+  `03287666fc42ddce444754d8d7e1b82e223ff724597fe0a881ab62f52` and
+  `d7b5cb95e07bab5286131316d76d258a3cfd668dee8e1009632f868f094f316e`.
+- `h8_verification.txt`: `[COMPUTED]` focused saved-record tests and the full
+  28-test discovery run, including exact commands and timings.
 
 The unit suite checks that the five disjoint families--660 ordinary scans,
 two delegated cases, 62 exterior-zero exclusions, eleven generic dual cases,

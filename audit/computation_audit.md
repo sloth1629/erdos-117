@@ -515,3 +515,59 @@ checks the pairwise-disjoint union
 Thus the computational quotient inventory has neither an omitted nor a
 multiply assigned isomorphism type. The group-theoretic use of this partition
 in the exact \(h(7)\) argument is stated separately in `notes/exact_h7.md`.
+
+## Cutoff-eight bounded slice and post-81 feasibility checks
+
+[COMPUTED] The repository-relative certificate
+`experiments/logs/h8_bounded_cutoff.json` has SHA-256
+`052036975d9a6d30d920873ae8f171dbaa010eec6c7852b3180a918050b0ae61`.
+It reuses the checksummed cutoff-seven inventory and saved exports to analyze
+all center-quotient graphs with \(|Q|\le81\) at clique cutoff eight. Among
+14,989 ordinary boundary rows, representing 12,266 distinct adjacencies,
+exact twin-compressed optimization leaves precisely four rows with
+\((\omega,\chi)=(8,8)\), for `SmallGroup(14,1)`, `(21,1)`, `(42,1)`, and
+`(49,2)` with kernel serial one. Every other distinct ordinary adjacency has
+a saved verified nine-clique.
+
+[COMPUTED] A fresh target-nine no-orbit BFS for the eleven generic order-64
+dual cases retains all 5,206 invariant character subgroups without a
+nine-clique and prunes 24,551 boundary subgroups with saved nine-cliques.
+Every retained subgroup has a checked nonidentity radical, hence none is an
+exact-center candidate. The dedicated `SmallGroup(64,192)` and `(64,261)`
+records have minimum faithful clique numbers 12 and 13. The delegated
+\(C_2^5\), \(C_2^6\), \(C_3^4\), and 62 universal exterior-zero records are
+bound by their recorded SHA-256 values and independently rechecked. In this
+bounded inventory, the maximum cover number at \(\nu\le8\) remains ten and
+there is no example with \(a>10\).
+
+[COMPUTED] The feasibility-only post-81 inventory JSON has SHA-256
+`14b10618cb4c1edae5c706420e2eec18d883ddde405057217a7d2bf85daccac3`;
+its raw TSV SHA-256 is
+`cdc74d7e60f70793b6df40821dd6522f7488306f9737ebe4964adcca6c37c790`.
+The named constructions are checked to be `SmallGroup(96,227)`, `(108,41)`,
+and `(144,196)`, with exact abstract quotient clique numbers 29, 5, and 10.
+The first and third are excluded at cutoff eight because pairwise
+noncommuting quotient elements remain pairwise noncommuting under arbitrary
+lifts.
+
+[COMPUTED] The complete `(108,41)` scan JSON has SHA-256
+`d7b5cb95e07bab5286131316d76d258a3cfd668dee8e1009632f868f094f316e`;
+its 84-row raw TSV SHA-256 is
+`03287666fc42ddce444754d8d7e1b82e223ff724597fe0a881ab62f52`. Exactly
+38 normal kernels have a saved nonfaithful radical. The other 46 are distinct
+faithful graphs, with exact clique distribution
+\(20^9,28^9,32^{12},37^1,39^1,40^{13},48^1\). Thus the minimum faithful
+clique number is 20 and there is no cutoff-eight candidate for this quotient.
+
+[COMPUTED] Every serialized source and input path in the three h8 JSON files
+is repository-relative, and every recorded source/input hash is rechecked by
+the saved-record verifier. The focused bounded verifier passed in 150.447
+seconds and the two post-81 tests passed in 0.303 seconds. A subsequent full
+discovery run on 2026-08-14 passed all 28 tests in 382.173 seconds; its exact
+command and result are preserved in `experiments/logs/h8_verification.txt`.
+
+[UNVERIFIED] The bounded certificate proves only the exact statement
+“center quotients |Q|<=81 only; no global h(8) upper bound.” The three post-81
+groups form a literature-motivated feasibility list, not a complete list of
+center quotients possible at cutoff eight. No global conclusion about
+\(h(8)\) is drawn from these computations.

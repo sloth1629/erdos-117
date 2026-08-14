@@ -1,0 +1,5 @@
+[COMPUTED] center quotients |Q|<=81 only; no global h(8) upper bound
+ordinary_boundary_rows=14989 distinct_adjacencies=12266 omega8_rows=4 omega_ge9_distinct=12262
+generic_quotients=11 retained_no9=5206 boundary9=24551 faithful=0
+special_minimum_omega=[12, 13] bounded_maximum_a=10 examples_a_gt_10=0
+wrote experiments/logs/h8_bounded_cutoff.json

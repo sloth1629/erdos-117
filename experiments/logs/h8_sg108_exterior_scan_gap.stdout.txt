@@ -1,0 +1,1 @@
+Q=SmallGroup(108,41) exterior=216 all_subgroups=168 normal_kernels=84 runtime_ms=5468

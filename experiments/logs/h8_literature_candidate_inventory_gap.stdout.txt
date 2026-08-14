@@ -1,0 +1,3 @@
+Q=SmallGroup(96,227) exterior=384 all_subgroups=777 normal_kernels=24 feasibility=direct_small
+Q=SmallGroup(108,41) exterior=216 all_subgroups=168 normal_kernels=84 feasibility=direct_small
+Q=SmallGroup(144,196) exterior=1728 all_subgroups=53675 normal_kernels=19775 feasibility=direct_batched

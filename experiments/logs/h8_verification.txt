@@ -1,0 +1,30 @@
+[COMPUTED] saved cutoff-eight verification transcripts
+
+Command:
+PYTHONPYCACHEPREFIX=/tmp/erdos117-h8-final-test-pycache python3 -m unittest src.verification.test_h8_bounded_cutoff.H8BoundedCertificateTests.test_h8_bounded_cutoff_saved_certificate -v
+
+test_h8_bounded_cutoff_saved_certificate (src.verification.test_h8_bounded_cutoff.H8BoundedCertificateTests) ... ok
+
+----------------------------------------------------------------------
+Ran 1 test in 150.447s
+
+OK
+
+Command:
+PYTHONPYCACHEPREFIX=/tmp/erdos117-h8-final-test-pycache python3 -m unittest src.verification.test_h8_bounded_cutoff.H8BoundedCertificateTests.test_h8_post_81_candidate_inventory src.verification.test_h8_bounded_cutoff.H8BoundedCertificateTests.test_h8_sg108_complete_normal_kernel_scan -v
+
+test_h8_post_81_candidate_inventory (src.verification.test_h8_bounded_cutoff.H8BoundedCertificateTests) ... ok
+test_h8_sg108_complete_normal_kernel_scan (src.verification.test_h8_bounded_cutoff.H8BoundedCertificateTests) ... ok
+
+----------------------------------------------------------------------
+Ran 2 tests in 0.303s
+
+OK
+
+Command:
+PYTHONPYCACHEPREFIX=/tmp/erdos117-h8-discovery-pycache python3 -m unittest discover -s src/verification -p 'test_*.py' -v
+
+----------------------------------------------------------------------
+Ran 28 tests in 382.173s
+
+OK

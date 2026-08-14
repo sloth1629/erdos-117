@@ -1,0 +1,4 @@
+[COMPUTED] complete SG(108,41) cutoff-eight normal-kernel scan; no global h(8) claim
+normal_kernels=84 statuses=[('clique_ge_9', 46), ('nonfaithful_radical', 38)] faithful_unique=46 minimum_faithful_omega=20
+candidate_count=0
+wrote experiments/logs/h8_sg108_exterior_scan.json

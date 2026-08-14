@@ -56,6 +56,16 @@ Version all search parameters and solver settings here.
 - `h7_c2_3_d8_export.g`: dedicated affine-dual exporter for
   `SmallGroup(64,261)=C2^3 x D8`, including the complete commutator table and
   every cover-conjugation action needed to verify invariant annihilators.
+- `h8_literature_candidate_inventory.g`: `[COMPUTED]` feasibility-only
+  Schur-cover/exterior inventory for the three literature-motivated post-81
+  quotients `SmallGroup(96,227)`, `(108,41)`, and `(144,196)`. It exports
+  each complete quotient noncommuting adjacency, named-construction check,
+  multiplier/exterior orders, and normal-kernel count; it is not a complete
+  cutoff-eight quotient inventory.
+- `h8_sg108_exterior_scan.g`: `[COMPUTED]` complete raw scan of the 84
+  normal exterior kernels for the single quotient `SmallGroup(108,41)`. It
+  records every full adjacency together with either a nonfaithful radical or
+  a nine-clique witness. It makes no global claim about \(h(8)\).
 
 For a bounded cutoff-seven batch, set the GAP variables and then run the
 generic analyzer. For example, the independently audited 37--63 batch is:
@@ -72,3 +82,16 @@ python3 src/python/analyze_h7_exterior_batch.py \
   --output experiments/logs/h7_exterior_37_63.json \
   --stdout-log experiments/logs/h7_exterior_37_63.stdout.txt
 ```
+
+The two post-81 GAP exports are regenerated from the repository root by:
+
+```bash
+work/gap-4.16.0/gap -q \
+  -c 'ERDOS117_OUTPUT:="experiments/logs/h8_literature_candidate_inventory.tsv";; ERDOS117_STDOUT_LOG:="experiments/logs/h8_literature_candidate_inventory_gap.stdout.txt";; Read("experiments/configs/h8_literature_candidate_inventory.g");'
+work/gap-4.16.0/gap -q \
+  -c 'ERDOS117_OUTPUT:="experiments/logs/h8_sg108_exterior_scan.tsv";; ERDOS117_STDOUT_LOG:="experiments/logs/h8_sg108_exterior_scan_gap.stdout.txt";; Read("experiments/configs/h8_sg108_exterior_scan.g");'
+```
+
+`[UNVERIFIED]` These two configurations dispose only of the three named
+post-81 candidates; they do not prove that those candidates exhaust the
+possible center quotients at clique cutoff eight.

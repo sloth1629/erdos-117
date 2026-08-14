@@ -1,0 +1,204 @@
+{
+  "certificate": {
+    "candidate_count": 3,
+    "metadata": {
+      "CUTOFF8_GRAPH_SCAN_PERFORMED": "false",
+      "GAP_VERSION": "4.16.0",
+      "NAMED_CONSTRUCTIONS_VERIFIED": "true",
+      "SCOPE": "literature_candidates_beyond_order_81_only",
+      "SMALLGRP_VERSION": "1.5.4"
+    },
+    "records": [
+      {
+        "abstract_q_adjacency_sha256": "dce6932d66e46ad5928bb7c2d29500dc3b02a99b43e833988888b90b1c00d732",
+        "abstract_q_clique": [
+          2,
+          13,
+          14,
+          15,
+          16,
+          35,
+          36,
+          39,
+          40,
+          41,
+          42,
+          63,
+          65,
+          66,
+          69,
+          70,
+          1,
+          8,
+          10,
+          29,
+          7,
+          24,
+          27,
+          54,
+          18,
+          23,
+          49,
+          50,
+          76
+        ],
+        "abstract_q_clique_search_nodes": 1,
+        "abstract_q_omega": 29,
+        "abstract_q_twin_quotient_order": 33,
+        "all_exterior_subgroup_count": 777,
+        "center_order": 1,
+        "cover_kernel_order": 8,
+        "cover_order": 768,
+        "cutoff8_disposition": "excluded_by_abstract_quotient_clique",
+        "derived_order": 48,
+        "direct_cutoff8_scan_feasibility": "direct_small",
+        "explicit_nonidentity_zero_row_available": false,
+        "exterior_abelian": false,
+        "exterior_generator_count": 3,
+        "exterior_order": 384,
+        "exterior_structure": "((C2 x Q8) : Q8) : C3",
+        "label": "diagonal_C2_4_semidirect_S3",
+        "multiplier_invariants": [
+          2,
+          2,
+          2
+        ],
+        "multiplier_order": 8,
+        "nonidentity_center_image_positions": [],
+        "normal_kernel_count": 24,
+        "runtime_ms": {
+          "all_exterior_subgroups": 276,
+          "normal_kernel_filter": 4,
+          "pc_conversion": 76,
+          "schur_cover": 0
+        },
+        "selected_cover_center_image_size": 1,
+        "small_group": [
+          96,
+          227
+        ],
+        "structure": "(C2 x C2) : S4"
+      },
+      {
+        "abstract_q_adjacency_sha256": "c49a6f2fd04d3702cacff9cf3237982dfef8b35c539c082d62d19f26c94c7edd",
+        "abstract_q_clique": [
+          1,
+          4,
+          9,
+          10,
+          22
+        ],
+        "abstract_q_clique_search_nodes": 1,
+        "abstract_q_omega": 5,
+        "abstract_q_twin_quotient_order": 6,
+        "all_exterior_subgroup_count": 168,
+        "center_order": 9,
+        "cover_kernel_order": 54,
+        "cover_order": 5832,
+        "cutoff8_disposition": "requires_exterior_kernel_scan",
+        "derived_order": 4,
+        "direct_cutoff8_scan_feasibility": "direct_small",
+        "explicit_nonidentity_zero_row_available": false,
+        "exterior_abelian": false,
+        "exterior_generator_count": 3,
+        "exterior_order": 216,
+        "exterior_structure": "C3 x C3 x C3 x Q8",
+        "label": "C3_2_times_A4",
+        "multiplier_invariants": [
+          2,
+          3,
+          3,
+          3
+        ],
+        "multiplier_order": 54,
+        "nonidentity_center_image_positions": [],
+        "normal_kernel_count": 84,
+        "runtime_ms": {
+          "all_exterior_subgroups": 145,
+          "normal_kernel_filter": 3,
+          "pc_conversion": 5124,
+          "schur_cover": 0
+        },
+        "selected_cover_center_image_size": 1,
+        "small_group": [
+          108,
+          41
+        ],
+        "structure": "C3 x C3 x A4"
+      },
+      {
+        "abstract_q_adjacency_sha256": "73876ccdfb1f7f3cd6ee3a2f1d872fb3df8aac50c270300ba01290a5c760006b",
+        "abstract_q_clique": [
+          1,
+          5,
+          10,
+          11,
+          33,
+          34,
+          35,
+          70,
+          71,
+          107
+        ],
+        "abstract_q_clique_search_nodes": 1,
+        "abstract_q_omega": 10,
+        "abstract_q_twin_quotient_order": 11,
+        "all_exterior_subgroup_count": 53675,
+        "center_order": 8,
+        "cover_kernel_order": 192,
+        "cover_order": 27648,
+        "cutoff8_disposition": "excluded_by_abstract_quotient_clique",
+        "derived_order": 9,
+        "direct_cutoff8_scan_feasibility": "direct_batched",
+        "explicit_nonidentity_zero_row_available": false,
+        "exterior_abelian": false,
+        "exterior_generator_count": 6,
+        "exterior_order": 1728,
+        "exterior_structure": "C2 x C2 x C2 x C2 x C2 x C2 x ((C3 x C3) : C3)",
+        "label": "C2_3_times_generalized_dihedral_C3_2",
+        "multiplier_invariants": [
+          2,
+          2,
+          2,
+          2,
+          2,
+          2,
+          3
+        ],
+        "multiplier_order": 192,
+        "nonidentity_center_image_positions": [],
+        "normal_kernel_count": 19775,
+        "runtime_ms": {
+          "all_exterior_subgroups": 43895,
+          "normal_kernel_filter": 2135,
+          "pc_conversion": 12978,
+          "schur_cover": 0
+        },
+        "selected_cover_center_image_size": 1,
+        "small_group": [
+          144,
+          196
+        ],
+        "structure": "C2 x C2 x C2 x ((C3 x C3) : C2)"
+      }
+    ],
+    "scope_limitation": "These are three literature-motivated quotient candidates beyond order 81. The inventory constructs their chosen Schur covers and first solves each abstract quotient noncommuting graph exactly, checks the image of each selected cover center, then counts normal exterior kernels. It performs no central-extension cutoff-eight graph scan and is not a complete inventory for nu<=8. A trivial selected-cover center image is recorded only as complementary feasibility data; no converse capability assertion is made.",
+    "total_normal_kernel_count": 19883
+  },
+  "gap_script": "experiments/configs/h8_literature_candidate_inventory.g",
+  "gap_script_sha256": "4c4d95ce06f9445a5b42a46c865fbf2fc0b059b8bc27ab2ecb566f2451e40988",
+  "gap_stdout": "experiments/logs/h8_literature_candidate_inventory_gap.stdout.txt",
+  "gap_stdout_sha256": "a7d552c3020d795d72b3abfc7a07fa75b9cdac69fc1adbaad0fd3c10e2ff6f95",
+  "generated_at_utc": "2026-08-14T01:59:05+00:00",
+  "input": "experiments/logs/h8_literature_candidate_inventory.tsv",
+  "input_sha256": "cdc74d7e60f70793b6df40821dd6522f7488306f9737ebe4964adcca6c37c790",
+  "producer": "src/python/analyze_h8_literature_candidate_inventory.py",
+  "producer_sha256": "f1d83cc3dc204cd899f809c751aa9623340503f3c58b65ff098b3e3a9a5a1141",
+  "schema_version": 1,
+  "software": {
+    "external_dependencies": [],
+    "implementation": "CPython",
+    "python": "3.9.6"
+  },
+  "status": "[COMPUTED] feasibility-only post-81 candidate inventory; no cutoff graph scan or h(8) completeness claim"
+}
