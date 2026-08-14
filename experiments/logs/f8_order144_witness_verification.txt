@@ -1,0 +1,25 @@
+[COMPUTED] Explicit order-144 irredundant eight-cover verification
+
+Date: 2026-08-14
+Runtime: /usr/bin/python3 3.9.6, standard library only
+Command:
+  PYTHONPYCACHEPREFIX=/tmp/e117-f8-pycache /usr/bin/python3 src/verification/verify_f8_order144_witness.py
+
+{
+  "associativity_triples_checked": 2985984,
+  "audit_clique_number": 10,
+  "group_order": 144,
+  "intersection_order": 1,
+  "private_set_sizes": [2, 2, 2, 2, 2, 2, 2, 2],
+  "status": "[COMPUTED] order-144 eight-cover witness",
+  "subgroup_indices": [2, 2, 2, 2, 3, 3, 3, 3],
+  "subgroup_orders": [72, 72, 72, 72, 48, 48, 48, 48],
+  "union_order": 144
+}
+
+Regression command:
+  PYTHONPYCACHEPREFIX=/tmp/e117-f8-pycache /usr/bin/python3 -m unittest src.verification.test_f8_eight_cover_frontier -v
+
+Result:
+  Ran 1 test in 3.007s
+  OK

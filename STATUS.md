@@ -44,7 +44,10 @@ semidirect Frattini branch has an exact \(5+3\) abelian cover.
    \(h(n)\le n h(n-2)\).
 4. A self-contained factorial cover argument gives
    \([G:Z(G)]\le n!\), hence the explicit cutoff-eight reduction
-   \(|G/Z(G)|\le8!=40{,}320\).  Independently, every conjugacy class has
+   \(|G/Z(G)|\le8!=40{,}320\).  A separately audited eight-cover argument
+   proves \(144\le f(8)\le25{,}920\), sharpening this cutoff alone to
+   \(|G/Z(G)|\le25{,}920\); its central minimal-normal \(C_2\) branch has
+   the sharp index bound \(144\).  Independently, every conjugacy class has
    size at most \(4n^2\), the BFC input used below.
 5. A stronger CFSG-dependent universal bound
    \([G:Z(G)]\le2^{O(\nu(G)\log\log\nu(G))}\), hence

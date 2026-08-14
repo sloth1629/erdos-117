@@ -284,6 +284,35 @@ h(8)\leq1+7h(6)=43,
 in place of the preceding recurrence's bound \(h(8)\leq8h(6)=48\).  The
 exact cutoff-eight theorem below sharpens both bounds to \(h(8)=10\).
 
+## The eight-subgroup cover frontier
+
+### [PROVED] \(144\le f(8)\le25{,}920\)
+
+Let \(f(k)\) be the maximum possible index of the intersection in an
+irredundant cover by \(k\) subgroups, whenever the maximum is finite.  The
+independently audited argument in `f8_eight_cover_frontier.md` proves
+
+\[
+144\le f(8)\le25{,}920.
+\]
+
+The upper proof first reduces a nonmaximal cover either to the bound
+\(f(j)(8-j+1)!\le2{,}880\), or to a maximal core-free eight-cover.  A
+minimal-normal-subgroup fiber count then gives the universal \(25{,}920\)
+bound.  In the central minimal-normal \(C_2\) branch it gives the sharp bound
+\(144\), attained by the explicit order-144 witness verified in
+`src/verification/verify_f8_order144_witness.py`.
+
+For a maximum eight-clique, its irredundant centralizer cover has intersection
+\(Z(G)\), so this also gives the unconditional cutoff-eight refinement
+
+\[
+\nu(G)=8\quad\Longrightarrow\quad [G:Z(G)]\le25{,}920.
+\]
+
+This does not determine the exact value of \(f(8)\), and it is no longer a
+load-bearing input to the stronger exact theorem \(h(8)=10\) below.
+
 ## Specialized class-two bounds
 
 ### [PROVED] Charged abelian and relative-center layers

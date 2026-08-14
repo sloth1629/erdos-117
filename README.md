@@ -23,6 +23,12 @@ No complete resolution is claimed. The strongest repository results are:
   self-contained factorial coset lemma give
   \([G:Z(G)]\le\nu(G)!\) for arbitrary groups.  In particular, every
   cutoff-eight center quotient has order at most \(8!=40{,}320\).
+- [PROVED] A separate cutoff-eight subgroup-cover argument gives
+  \(144\le f(8)\le25{,}920\), and therefore sharpens the universal
+  cutoff-eight center-index bound to \([G:Z(G)]\le25{,}920\).  In the
+  central-minimal-normal \(C_2\) branch the exact bound is \(144\), attained
+  by an explicit independently verified cover.  The exact value of \(f(8)\)
+  remains open.
 - [PROVED] Combining the audited Guralnick--Maróti BFC theorem with the
   published Nagy--Pach--Tomon abelian coset-cover theorem gives the
   CFSG-dependent universal bounds
