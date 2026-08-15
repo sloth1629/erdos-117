@@ -144,7 +144,23 @@ No complete resolution is claimed. The strongest repository results are:
   At cutoff seven they additionally cover all 738 possible center quotients
   of order at most 81, including 55,970 ordinary normal-kernel records and
   eleven complete character-dual searches.
+- [PROVED] The integrated asymptotic pass reduces the candidate
+  \(\sqrt2\)-base upper bound to a prime-uniform p-group interface.  It
+  proves active binary codomain dimension \(O((\log\nu)^2)\), the half-rate
+  on regular commuting/triangular operator pencils and several critical
+  p-group ranges, asymptotically lossless fractional rounding, and
+  conditional nilpotent-to-global transfer.  The p-group antecedent and the
+  rate amplifier remain [UNVERIFIED]; no complete solution is claimed.
+- [COMPUTED] A new dependency-free dynamic-centralizer bundle checks exact
+  order-32 and order-64 LP models, the binary chain-ring Heisenberg family,
+  and all 28,672 natural one-pair extensions.  It supports an exact entropy
+  telescope and refutes two naive nodewise inductions without refuting the
+  global half-rate target.
 
+The integrated Pro-pass asymptotic frontier is in
+[`notes/asymptotic_reductions_integrated.md`](notes/asymptotic_reductions_integrated.md),
+with its evidence ledger in
+[`audit/pro_asymptotic_integration_audit.md`](audit/pro_asymptotic_integration_audit.md).
 The publication-style synthesis is in
 [`proof/main.tex`](proof/main.tex), and the concise state of the problem is
 in [`STATUS.md`](STATUS.md).
@@ -174,7 +190,7 @@ PYTHONPYCACHEPREFIX=/tmp/erdos117-pycache \
 python3 -m unittest discover -s src/verification -p 'test_*.py' -v
 ```
 
-The saved final run passed all 34 tests in 517.555 seconds under Python
+The saved integrated run passed all 43 tests in 690.066 seconds under Python
 3.9.6.
 
 The canonical experiment commands are documented in

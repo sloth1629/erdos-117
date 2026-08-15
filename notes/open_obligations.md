@@ -53,3 +53,28 @@
   five-plus-three abelian cover.  See
   `notes/common_core_coprime_closure.md`.
 - `[UNVERIFIED]` Determine \(h(9)\) and the subsequent exact values.
+- `[PROVED]` Binary higher-codomain alternating maps have active codomain
+  dimension \(O((\log\nu)^2)\).  With a regular scalarization whose
+  self-adjoint operator algebra commutes or is simultaneously triangular,
+  a common invariant Lagrangian proves
+  \(\log_2a\le\nu/2+O((\log\nu)^2)\).
+- `[PROVED]` Greedy set-cover rounding and
+  \(|G:Z(G)|\le\nu(G)!\) give a uniform \(O(\log\nu)\) logarithmic gap
+  between integral and fractional abelian-cover numbers.
+- `[PROVED]` A prime-uniform p-group half-rate center-index estimate would
+  propagate to nilpotent groups and then, through the audited Fitting and
+  semisimple interfaces, to the universal
+  \(\log_2a(G)\le\nu(G)/2+o(\nu(G))\) bound.
+- `[UNVERIFIED]` Prove that prime-uniform p-group input.  The residual is
+  mixed high-rank shared-output operator entropy with scalar-kernel
+  concentration and possible higher-class layers.
+- `[PROVED]` The dynamic centralizer recursion admits an exact KL-corrected
+  entropy telescope, and exact finite models disprove the two strongest
+  naive nodewise inequalities.
+- `[UNVERIFIED]` Bound the expected accumulated dynamic node charge by
+  \(o(\nu)\), or replace it with a valid amortized potential.
+- `[PROVED]` Existence of the exponential rate is equivalent to mesh-dense
+  near-realization of the limsup slope; fractionalization changes the
+  exponent by only \(o(\nu)\).
+- `[UNVERIFIED]` Construct the required group-theoretic amplifier or
+  mesh-dense near-extremizer family.

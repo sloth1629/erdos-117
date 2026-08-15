@@ -1,0 +1,588 @@
+{
+  "chain_ring_family": {
+    "canonical_dual_number_forms": {
+      "B0": [
+        [
+          0,
+          0,
+          1,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          1,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0
+        ]
+      ],
+      "B1": [
+        [
+          0,
+          0,
+          0,
+          1
+        ],
+        [
+          0,
+          0,
+          1,
+          0
+        ],
+        [
+          0,
+          1,
+          0,
+          0
+        ],
+        [
+          1,
+          0,
+          0,
+          0
+        ]
+      ]
+    },
+    "domain_basis_change_P": [
+      [
+        0,
+        0,
+        1,
+        0
+      ],
+      [
+        1,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        1,
+        1,
+        1
+      ],
+      [
+        0,
+        0,
+        0,
+        1
+      ]
+    ],
+    "formulae": {
+      "P_cen": "3^m",
+      "R_cen": "3*2^(m-1)",
+      "defect": "m*log2(3) - 3*2^(m-2)",
+      "nu_and_af": "3*2^(m-1)",
+      "tau_cen": "3"
+    },
+    "mixed_output_change": "M0=P^T B1 P; M1=P^T (B0+B1) P",
+    "name": "binary_chain_ring_heisenberg",
+    "ring": "F2[pi]/(pi^m)",
+    "verified_lengths": [
+      1,
+      2,
+      3,
+      4
+    ]
+  },
+  "conventions": {
+    "abelian_clique_number": 0,
+    "field": "F_2",
+    "group_law": "(v,z)(w,t)=(v+w,z+t+c(v,w)), where c uses the strict upper triangle of each alternating matrix",
+    "vector_encoding": "little-endian bit mask"
+  },
+  "extension_search": {
+    "base_model": "mixed_order_64",
+    "conclusion": "Every case contains a 10-clique; hence every such extension has clique drop at least 4 over C(u).",
+    "description": "All elementary class-two one-pair extensions beta' on V0+<u,v>, after projection to a 3-dimensional codomain: beta'(u,V0)=0, beta'(u,v)=z!=0, beta'(v,a)=L(a).",
+    "linear_map_codes_per_z": 4096,
+    "required_clique_size": 10,
+    "retained_child_nu": 6,
+    "total_cases": 28672,
+    "witness_digest_sha256": "51350b8afcaae75d302efbf08522c6f9b5a77a29f939d1212d07e1f8ecbc9140",
+    "z_values": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7
+    ]
+  },
+  "models": {
+    "mixed_order_64": {
+      "abelian_cover": [
+        [
+          0,
+          1,
+          6,
+          7
+        ],
+        [
+          0,
+          1,
+          12,
+          13
+        ],
+        [
+          0,
+          2,
+          8,
+          10
+        ],
+        [
+          0,
+          3,
+          9,
+          10
+        ],
+        [
+          0,
+          4,
+          11,
+          15
+        ],
+        [
+          0,
+          5,
+          11,
+          14
+        ]
+      ],
+      "alternating_matrices": [
+        [
+          [
+            0,
+            1,
+            1,
+            1
+          ],
+          [
+            1,
+            0,
+            0,
+            0
+          ],
+          [
+            1,
+            0,
+            0,
+            1
+          ],
+          [
+            1,
+            0,
+            1,
+            0
+          ]
+        ],
+        [
+          [
+            0,
+            1,
+            1,
+            1
+          ],
+          [
+            1,
+            0,
+            1,
+            0
+          ],
+          [
+            1,
+            1,
+            0,
+            0
+          ],
+          [
+            1,
+            0,
+            0,
+            0
+          ]
+        ]
+      ],
+      "centralizers_abelian": [
+        [
+          0,
+          1,
+          6,
+          7
+        ],
+        [
+          0,
+          1,
+          12,
+          13
+        ],
+        [
+          0,
+          2,
+          8,
+          10
+        ],
+        [
+          0,
+          3,
+          9,
+          10
+        ],
+        [
+          0,
+          4,
+          11,
+          15
+        ],
+        [
+          0,
+          5,
+          11,
+          14
+        ]
+      ],
+      "centralizers_nonabelian": [
+        [
+          0,
+          1,
+          2,
+          3,
+          8,
+          9,
+          10,
+          11
+        ],
+        [
+          0,
+          1,
+          4,
+          5,
+          10,
+          11,
+          14,
+          15
+        ],
+        [
+          0,
+          1,
+          6,
+          7,
+          10,
+          11,
+          12,
+          13
+        ]
+      ],
+      "clique": [
+        7,
+        8,
+        9,
+        13,
+        14,
+        15
+      ],
+      "codomain_dimension": 2,
+      "dimension": 4,
+      "dynamic_dual": [
+        {
+          "vector": 2,
+          "weight": "1"
+        },
+        {
+          "vector": 3,
+          "weight": "1"
+        },
+        {
+          "vector": 4,
+          "weight": "1"
+        },
+        {
+          "vector": 5,
+          "weight": "1"
+        },
+        {
+          "vector": 6,
+          "weight": "1"
+        },
+        {
+          "vector": 12,
+          "weight": "1"
+        }
+      ],
+      "dynamic_primal": [
+        {
+          "set": [
+            0,
+            1,
+            6,
+            7
+          ],
+          "weight": "1"
+        },
+        {
+          "set": [
+            0,
+            1,
+            12,
+            13
+          ],
+          "weight": "1"
+        },
+        {
+          "set": [
+            0,
+            2,
+            8,
+            10
+          ],
+          "weight": "1"
+        },
+        {
+          "set": [
+            0,
+            3,
+            9,
+            10
+          ],
+          "weight": "1"
+        },
+        {
+          "set": [
+            0,
+            4,
+            11,
+            15
+          ],
+          "weight": "1"
+        },
+        {
+          "set": [
+            0,
+            5,
+            11,
+            14
+          ],
+          "weight": "1"
+        }
+      ],
+      "expected_center_order": 4,
+      "expected_dynamic_value": "6",
+      "expected_fractional_abelian_cover": "6",
+      "expected_group_order": 64,
+      "expected_kappa": "3/4",
+      "expected_max_child_value": "3",
+      "expected_nu": 6,
+      "expected_path_majorant": "9",
+      "expected_tau": "3",
+      "kappa_dual_support": [
+        2,
+        3,
+        4,
+        5,
+        6,
+        12
+      ],
+      "kappa_dual_weight": "1/8",
+      "kappa_primal_abelian_centralizers_weight": "1",
+      "maximal_isotropic_subspaces": [
+        [
+          0,
+          1,
+          6,
+          7
+        ],
+        [
+          0,
+          1,
+          10,
+          11
+        ],
+        [
+          0,
+          1,
+          12,
+          13
+        ],
+        [
+          0,
+          2,
+          8,
+          10
+        ],
+        [
+          0,
+          3,
+          9,
+          10
+        ],
+        [
+          0,
+          4,
+          11,
+          15
+        ],
+        [
+          0,
+          5,
+          11,
+          14
+        ]
+      ],
+      "tau_dual": [
+        {
+          "vector": 2,
+          "weight": "1"
+        },
+        {
+          "vector": 5,
+          "weight": "1"
+        },
+        {
+          "vector": 6,
+          "weight": "1"
+        }
+      ],
+      "tau_primal": [
+        {
+          "set": [
+            0,
+            1,
+            2,
+            3,
+            8,
+            9,
+            10,
+            11
+          ],
+          "weight": "1"
+        },
+        {
+          "set": [
+            0,
+            1,
+            4,
+            5,
+            10,
+            11,
+            14,
+            15
+          ],
+          "weight": "1"
+        },
+        {
+          "set": [
+            0,
+            1,
+            6,
+            7,
+            10,
+            11,
+            12,
+            13
+          ],
+          "weight": "1"
+        }
+      ]
+    },
+    "scalar_symplectic_d2": {
+      "alternating_matrices": [
+        [
+          [
+            0,
+            0,
+            1,
+            0
+          ],
+          [
+            0,
+            0,
+            0,
+            1
+          ],
+          [
+            1,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            1,
+            0,
+            0
+          ]
+        ]
+      ],
+      "child_dynamic_value": "3",
+      "clique": [
+        2,
+        8,
+        11,
+        14,
+        15
+      ],
+      "codomain_dimension": 1,
+      "dimension": 4,
+      "dynamic_dual_weight_all_nonzero": "3/7",
+      "expected_center_order": 2,
+      "expected_child_nu": 3,
+      "expected_dynamic_value": "45/7",
+      "expected_fractional_abelian_cover": "5",
+      "expected_group_order": 32,
+      "expected_kappa": "15/14",
+      "expected_nu": 5,
+      "expected_tau": "15/7",
+      "kappa_dual_weight_all_nonzero": "1/14",
+      "kappa_primal_weight_all_nonzero": "1/7",
+      "spread": [
+        [
+          0,
+          1,
+          2,
+          3
+        ],
+        [
+          0,
+          4,
+          8,
+          12
+        ],
+        [
+          0,
+          5,
+          10,
+          15
+        ],
+        [
+          0,
+          6,
+          11,
+          13
+        ],
+        [
+          0,
+          7,
+          9,
+          14
+        ]
+      ],
+      "tau_dual_weight_all_nonzero": "1/7",
+      "tau_primal_weight_all_nonzero": "1/7"
+    }
+  },
+  "schema_version": 1,
+  "title": "Erdos 117 Pro 24 exact fractional-centralizer certificates"
+}

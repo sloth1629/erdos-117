@@ -1,0 +1,17 @@
+Integration milestone: audited Pro asymptotic reductions and dynamic-centralizer certificate
+Date: 2026-08-15
+Python: 3.9.6
+
+Command:
+PYTHONPYCACHEPREFIX=/tmp/erdos117-integrated-pycache python3 -m unittest discover -s src/verification -p 'test_*.py' -v
+
+Result:
+----------------------------------------------------------------------
+Ran 43 tests in 690.066s
+
+OK
+
+Additional checks:
+- dedicated dynamic-centralizer test: PASS (1 test in 27.929s)
+- git diff --check: PASS
+- Python byte compilation of the new verifier and test: PASS

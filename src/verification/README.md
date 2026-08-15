@@ -27,6 +27,13 @@ scalar graphs, rechecks the 896 saved nine-cliques, and verifies that the
 target-nine good set is exactly the 1,152-character affine universe used by
 the cutoff-seven and cutoff-eight subgroup certificates.
 
+`test_dynamic_fractional_centralizer.py` verifies the saved exact
+dynamic-centralizer bundle using only the Python standard library.  It
+reconstructs both finite class-two multiplication tables and centers,
+checks the clique and rational primal/dual certificates, verifies the
+chain-ring family through length four, and reruns all 28,672 one-pair
+extension target-clique searches with a fixed witness digest.
+
 ```bash
 PYTHONPYCACHEPREFIX=/tmp/erdos117-pycache \
 python3 -m unittest discover -s src/verification -p 'test_*.py' -v

@@ -24,7 +24,7 @@
 \title{Abelian Covers and Pairwise Noncommuting Sets in Groups:\\
        Structural Reductions, Exact Values Through Eight, and a Counterexample}
 \author{Research draft}
-\date{14 August 2026}
+\date{15 August 2026}
 
 \begin{document}
 \maketitle
@@ -66,7 +66,10 @@ the explicitly computer-assisted statements, the remaining structural results
 and the counterexample have computation-independent proofs. Finally,
 combining two audited published inputs gives the CFSG-dependent universal estimate
 $h(n)\le2^{O(n\log\log n)}$; the withdrawn fixed-base coset-cover preprint
-is not used.
+is not used.  An integrated asymptotic reduction proves the candidate
+half-rate for regular commuting or triangularizable binary operator pencils
+and shows that a prime-uniform $p$-group half-rate estimate would propagate
+to all finite groups; that $p$-group antecedent remains open.
 \end{abstract}
 
 \section{Problem and status}
@@ -1868,6 +1871,62 @@ Thus powers of any fixed finite nonabelian group have both $\aG(G^k)$ and
 $\nuG(G^k)$ exponential in $k$, making $\aG(G^k)$ only a power of
 $\nuG(G^k)$.  Fixed-seed direct powers cannot produce a lower bound
 $h(n)\ge c^n$; the varying scalar commutator geometry above can.
+
+\section{Integrated asymptotic reductions}
+
+Let $\beta:V\times V\to W$ be a binary alternating map, with unused output
+coordinates removed, and put $N=\nuG(\beta)$.  If
+$b(x)=\operatorname{rank}\beta(x,-)$, the random-order independent-set
+argument applied to the commuting graph gives
+\[
+ N\ge\sum_{x\ne0}\frac{1}{2^{\dim V-b(x)}-1}.
+\]
+Writing $T=\lceil\log_2(4N)\rceil$, the vectors with $b(x)\ge T$ have
+density less than one quarter.  The complementary set has density greater
+than one half and therefore sums to all of $V$; rank subadditivity gives
+$\max_xb(x)\le2T-2$.  Skutin's characteristic-two breadth theorem
+\cite[Theorem~1.3]{skutin_2020}, applied to the two-step Lie algebra
+$V\oplus W$, then yields
+\[
+ \dim W\le(T-1)(2T-1)=O((\log N)^2).
+\]
+
+Suppose, in addition, that some scalarization $b_0$ is nondegenerate and
+that the corresponding $b_0$-self-adjoint operators are commuting or
+simultaneously triangularizable.  A minimal invariant-module induction
+produces a common invariant Lagrangian $L$.  Splitting each affine coset of
+$L$ by the fibres of $u\mapsto\beta(x,u)$ gives
+\[
+ \log_2 a(\beta)\le\frac{N}{2}+O((\log N)^2).
+\]
+This proves the candidate half-rate in a substantial regular
+higher-codomain range, but not for singular or noncommuting operator pencils.
+
+Two general transfer facts further isolate the remaining burden.  First,
+greedy set-cover rounding and $|G:\Z(G)|\le\nuG(G)!$ show that integral and
+fractional abelian covering differ by only $O(\log\nuG(G))$ in the
+logarithm.  Second, a single prime-uniform estimate
+\[
+ \log_2|P:\Z(P)|\le\frac12\nuG(P)+o(\nuG(P))
+\]
+for finite $p$-groups composes over Sylow factors and then passes through
+the audited Fitting and semisimple reductions to
+\[
+ \log_2a(G)\le\frac12\nuG(G)+o(\nuG(G))
+\]
+for every finite group.  This implication is proved, but its $p$-group
+antecedent remains open.  The surviving local regime consists of mixed
+high-rank operator directions with shared output, large scalar kernels, and
+possibly higher-class commutator layers.  The complete statements and
+error envelopes are recorded in
+\texttt{notes/asymptotic\_reductions\_integrated.md}.
+
+Finally, the exact dynamic-centralizer LP admits a KL-corrected entropy
+telescope.  Exact order-$32$ and order-$64$ models disprove the strongest
+nodewise versions of the desired inequality, while the chain-ring
+Heisenberg family and a $28{,}672$-case extension census show that these
+local defects need not accumulate.  Controlling the expected accumulated
+charge by $o(\nuG)$ remains open.
 
 \section{Computational corroboration}
 

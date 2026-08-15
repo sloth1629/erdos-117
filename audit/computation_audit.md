@@ -802,3 +802,47 @@ and
 [UNVERIFIED] This certificate stops at order \(3^6\); the installed catalogue
 contains 9,310 groups at order \(3^7\). The independent all-orders finite
 3-group conclusion is structural and is not inferred from this bounded scan.
+
+## Dynamic-centralizer exact models and extension census
+
+[COMPUTED] The dependency-free verifier reconstructs the complete
+multiplication tables, centers, and compressed commutation relations of the
+order-32 scalar symplectic and order-64 mixed class-two models.  It checks
+their exact clique certificates and rational primal/dual LP witnesses,
+obtaining respectively
+
+\[
+ (\nu,\tau,\kappa,R)=(5,15/7,15/14,45/7)
+\]
+
+and
+
+\[
+ (\nu,\tau,R,P,\kappa)=(6,3,6,9,3/4).
+\]
+
+[COMPUTED] The same verifier checks the binary chain-ring Heisenberg family
+through lengths one to four and exhausts all 28,672 natural one-pair
+extensions of the mixed order-64 model.  Every extension contains an
+explicit ten-clique; the ordered witness stream has SHA-256
+`51350b8afcaae75d302efbf08522c6f9b5a77a29f939d1212d07e1f8ecbc9140`.
+
+[COMPUTED] The saved JSON, integrated verifier, unit test, and direct-run
+transcript have SHA-256 values respectively
+`8cf00aa198d090a464076965185791cfcc0cfe3b0c7a7060ec5a94e43bb7129e`,
+`5fa2e9a04e311d096ef36d0eb6a8212682225800c14d0b79ef96e6b6d01d33fa`,
+`4cd68c24c93d8c5fae626a833b71cdc09f83cb40b7ca7c2f9347eaa8fb26411b`,
+and
+`905ee078d67cafe6abd4caba824e95f3066af741752ace24a6fd014aa0acf271`.
+
+[PROVED] The exact KL-corrected recursion and chain-ring family formulas are
+proved separately in `notes/dynamic_fractional_centralizer.md` and
+`notes/chain_ring_heisenberg_family.md`; the finite computation is not used
+to infer their general statements.
+
+[COMPUTED] After integration, the canonical discovery command passed all 43
+tests in 690.066 seconds under Python 3.9.6.  This run includes every prior
+certificate plus the new dynamic-centralizer regression.  Its summary is
+saved at `experiments/logs/pro_asymptotic_integration_verification.txt`,
+SHA-256
+`fd8525fc368a09a3d0d2c29468904562c735fec79d15d365c8da7033d3ae708a`.

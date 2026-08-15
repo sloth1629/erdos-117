@@ -456,6 +456,45 @@ all solvable groups, or all finite stem/isoclinism families with
 gaps are not dependencies of LIT-089.  Erdős Problem 117 remains open for
 \(n\ge9\) and for the optimal asymptotic exponential behavior.
 
+## Asymptotic Pro-pass source additions
+
+[CITED-VERIFIED] Alexander A. Skutin, *Proof of a Conjecture of Wiegold
+for Nilpotent Lie Algebras*, Sbornik: Mathematics 211 (2020), 1795--1800,
+DOI `10.1070/SM9350`, Theorem 1.3, was checked in the arXiv v2 text.  Applied
+to the two-step Lie algebra attached to a binary alternating map, its
+high-breadth covering statement gives
+\(\dim[V,V]\le b(b+1)/2\).  The ambiguous introductory finite-group
+summary is not used.
+
+[CITED-VERIFIED] The conditional global stitching note uses the following
+primary inputs at their stated scope: Gaschütz's faithful completely
+reducible action of \(G/F(G)\) on \(F(G)/\Phi(G)\) for finite solvable
+groups; Guralnick--Maróti, *Average dimension of fixed point spaces with
+applications*, Advances in Mathematics 226 (2011), Theorem 1.1; and
+Gill--Pyber--Short--Szabó, *On the product decomposition conjecture for
+finite simple groups*, Groups, Geometry, and Dynamics 7 (2013), Proposition
+2.3.  The last two inputs, and the radical-free family exhaustion, are
+treated conservatively as CFSG-dependent.
+
+[CITED-VERIFIED] Ceria--De Beule--Pavese--Smaldore, *On Large Partial
+Ovoids of Symplectic and Hermitian Polar Spaces*, Journal of Combinatorial
+Designs 31 (2023), 5--22, Theorem 3.7, supplies a
+\(q^2+q+1\)-point partial ovoid in \(W(5,q)\).  Only the \(q=3\), 13-point
+seed is used in the scalar-visible p-group ledger, and that seed is also
+independently certified by the repository's \(S(3,3)\) computation.
+
+[PROVED] All additional steps used with those sources--the local-rank
+profile inequality, density-more-than-one-half sum argument, rank
+subadditivity, nilpotent prime-composition envelope, elementary
+automorphism bound, component-dispersion estimate, and exact radical
+preimage cover--are proved internally in
+`notes/asymptotic_reductions_integrated.md` or the audited Pro-pass proof
+reconstruction recorded in `audit/pro_asymptotic_integration_audit.md`.
+
+[UNVERIFIED] No source supplies the missing prime-uniform p-group
+half-rate estimate.  Pyber's inaccessible fixed-base proof and the
+withdrawn arXiv:2205.03389 exponential coset-cover claim remain excluded.
+
 ## Exact-formula and alternate-terminology search
 
 [UNVERIFIED] Exact searches were run for `2^{floor((n-1)/2)}+1`, `2^{(n-1)/2}+1`, `max(n,2^{floor((n-1)/2)}+1)`, and plain-text/OCR variants of those expressions.

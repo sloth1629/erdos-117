@@ -1,6 +1,6 @@
 # Status
 
-Updated: 2026-08-14
+Updated: 2026-08-15
 
 ## Current outcome
 
@@ -144,12 +144,45 @@ semidirect Frattini branch has an exact \(5+3\) abelian cover.
     The proof is computer-assisted only through the already audited bounded
     exact-extension certificates; the final coprime and semidirect argument
     is structural.  Two independent reconstructions found no blocker.
+16. [PROVED] For every binary alternating map with clique number \(N\), the
+    active commutator codomain has dimension \(O((\log N)^2)\).  If a
+    regular scalarization has a commuting or simultaneously triangularizable
+    self-adjoint operator algebra, a common invariant Lagrangian gives
+    \(\log_2a\le N/2+O((\log N)^2)\).  This is a substantial
+    higher-codomain range, not a general class-two theorem.
+17. [PROVED] Integral and fractional abelian covering differ by only
+    \(O(\log\nu)\) in the logarithm, uniformly over finite groups.  Thus
+    fractionalization is asymptotically lossless, but it does not construct
+    an amplifier or prove existence of the exponential rate.
+18. [PROVED] Several critical \(p\)-group residual ranges now satisfy the
+    target half-rate: orthogonally split full-evaluation blocks, elementary
+    action--cocycle sections separated by one scalar output, and the
+    abelian-centralizer side of a normal-\(C_p^2\) dichotomy.  The action
+    ledger also proves \(\exp(P/A)\le\nu(P)\) and logarithmic
+    single-operator depth.  Mixed high-rank shared-output entropy remains.
+19. [PROVED] A prime-uniform \(p\)-group half-rate center-index estimate
+    propagates first to nilpotent groups and then, through audited Fitting
+    and semisimple reductions, to
+    \(\log_2a(G)\le\nu(G)/2+o(\nu(G))\) for every finite group.
+    The antecedent is [UNVERIFIED], so this implication is not a solution.
+20. [PROVED] The exact dynamic-centralizer LP has a KL-corrected entropy
+    telescope.  [COMPUTED] Exact order-32 and order-64 models disprove two
+    tempting nodewise inequalities, while a complete 28,672-case extension
+    census and the chain-ring Heisenberg family show that those local
+    defects need not accumulate.  [UNVERIFIED] The global sublinear charge
+    remains open.
 
 ## Computation status
 
-- The complete verification suite passes: 41 tests in 735.057 seconds under
-  Python 3.9.6, from an isolated archive of commit `bbb2f41`; the transcript
-  is saved for this milestone.
+- The complete verification suite passes: 43 tests in 690.066 seconds under
+  Python 3.9.6 on the integrated working tree; the transcript summary is
+  saved for this milestone.  The earlier isolated `bbb2f41` baseline passed
+  41 tests in 735.057 seconds.
+- The dynamic-centralizer certificate independently checks two complete
+  finite multiplication-table models, exact primal/dual LP witnesses, the
+  chain-ring family through length four, and all 28,672 natural one-pair
+  extensions.  Its witness digest is
+  `51350b8afcaae75d302efbf08522c6f9b5a77a29f939d1212d07e1f8ecbc9140`.
 - Both optimized graph algorithms agree with brute force on all 33,868
   labeled graphs with at most six vertices.
 - All SmallGroups of orders 8, 32, and 64 were exported by GAP 4.16.0 /
@@ -215,12 +248,14 @@ semidirect Frattini branch has an exact \(5+3\) abelian cover.
 
 1. Determine or sharply bound the partial-ovoid parameter
    \(\pi(q,m)=\nu(S(q,m))\) across finite fields.
-2. Decide whether higher-codomain class-two maps or nonnilpotent groups beat
-   the binary asymptotic lower efficiency.
-3. Prove an upper bound near \(2^{n/2}\), or produce a construction showing
-   a larger exponential constant.
-4. Establish existence and value of an asymptotic exponential rate, or
-   formulate the correct limsup/liminf answer.
+2. Close the prime-uniform \(p\)-group half-rate residual: mixed high-rank
+   operator directions with shared output, scalar-kernel concentration, and
+   higher-class commutator entropy.
+3. Use the proved nilpotent-to-global transfer to obtain the universal
+   \(2^{n/2+o(n)}\) upper bound, or construct a genuine higher-codomain or
+   higher-class family that beats \(\sqrt2\).
+4. Construct mesh-dense near-extremizers or another valid amplifier to
+   establish existence and value of the asymptotic exponential rate.
 5. Determine \(h(9)\) and the subsequent exact values; the repository now
    determines every value through cutoff eight.
 6. Acquire and audit Pyber's full primary proof for historical completeness.

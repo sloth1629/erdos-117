@@ -1,0 +1,6 @@
+Python 3.9.6
+[OK] scalar_symplectic_d2: |G|=32, |Z|=2, nu=5, tau=15/7, kappa=15/14, R=45/7
+[OK] mixed_order_64: |G|=64, |Z|=4, nu=6, tau=3, R=a_f=6, P=9, kappa=3/4
+[OK] binary chain-ring Heisenberg family: m=1..4, nu=R=a_f=3*2^(m-1), tau=3, P=3^m
+[OK] one-pair extension census: 28672 / 28672 cases contain a 10-clique, digest=51350b8afcaae75d302efbf08522c6f9b5a77a29f939d1212d07e1f8ecbc9140
+[OK] all exact certificates verified with the Python standard library only

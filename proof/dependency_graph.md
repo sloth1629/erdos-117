@@ -190,6 +190,36 @@ here is now \(1\le n\le8\).
                         +-- [PROVED] 5+3 abelian-subgroup cover gives a=8
             +-- [PROVED] lower witness S(3,2) has (nu,a)=(7,10)
 
+      +-- [PROVED] integrated asymptotic reductions
+            +-- [PROVED] binary local-rank profile inequality
+            |     +-- max local rank O(log nu)
+            |     +-- [CITED-VERIFIED] Skutin breadth theorem
+            |           +-- active codomain dimension O((log nu)^2)
+            +-- [PROVED] regular scalarization
+            |     +-- commuting or triangular self-adjoint operators
+            |     +-- common invariant Lagrangian
+            |     +-- log2 a <= nu/2 + O((log nu)^2)
+            +-- [PROVED] integral/fractional logarithmic gap O(log nu)
+            +-- [PROVED] critical p-group ranges
+            |     +-- movement-weighted quotient clique budget
+            |     +-- exponent and single-operator depth <= logarithmic
+            |     +-- scalar-visible action-cocycle rank identity
+            |     +-- full-evaluation and one-scalar-separable half-rate
+            +-- [UNVERIFIED] prime-uniform p-group half-rate interface
+                  +-- [PROVED] p-groups imply nilpotent half-rate
+                  +-- [PROVED] nilpotent half-rate implies global half-rate
+                  |     +-- Fitting-action reduction
+                  |     +-- CFSG-dependent semisimple envelope
+                  +-- [UNVERIFIED] mixed high-rank shared-output entropy
+
+      +-- [PROVED] dynamic-centralizer entropy telescope
+            +-- exact KL-corrected node charge
+            +-- [COMPUTED] order-32 and order-64 exact LP models
+            +-- [DISPROVED] nodewise kappa <= 1
+            +-- [COMPUTED] 28,672 natural one-pair extensions
+            +-- [PROVED] natural chain-ring repetition is not an obstruction
+            +-- [UNVERIFIED] expected total charge is o(nu)
+
 The exact values \(h(5)\), \(h(6)\), \(h(7)\), and \(h(8)\) are explicitly
 computer-assisted.  For the first three, the load-bearing external
 dependencies are the audited subgroup-cover theorems
