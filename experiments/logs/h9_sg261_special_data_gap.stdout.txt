@@ -1,0 +1,2 @@
+[COMPUTED] exported SG261 abelianization and automorphisms: abelianization=
+32 automorphism_group=688128 generators=2
